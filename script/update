@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Update the project's dependencies.
+#
+# Copyright (c) 2021 Cisco and/or its affiliates.
+# License: MIT
+
+
+set -e
+cd "$(dirname "$0")/.."
+
+
+echo "==> Updating project dependencies"
+
+echo "Update installed packages"
+pipenv update --dev
+
+echo "Freeze package requirements"
+pipenv run pip freeze > requirements.lock
