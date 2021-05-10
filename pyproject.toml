@@ -12,7 +12,7 @@ classifiers = [
 readme = "README.rst"
 
 [tool.poetry.dependencies]
-python = "^3.5"
+python = "^3.6"
 requests = "^2.24.0"
 fastjsonschema = "^2.14.5"
 future = "^0.18.2"
