@@ -72,10 +72,10 @@ def test_create_network_access_dictionary_attribute_for_dictionary(api, validato
 def create_network_access_dictionary_attribute_for_dictionary_default(api):
     endpoint_result = api.network_access_dictionary_attribute.create_network_access_dictionary_attribute_for_dictionary(
         active_validation=False,
+        dictionary_name='string',
         allowed_values=None,
         data_type=None,
         description=None,
-        dictionary_name=None,
         direction_type=None,
         id=None,
         internal_name=None,
@@ -110,7 +110,8 @@ def is_valid_get_network_access_dictionary_attribute_by_name(json_schema_validat
 
 def get_network_access_dictionary_attribute_by_name(api):
     endpoint_result = api.network_access_dictionary_attribute.get_network_access_dictionary_attribute_by_name(
-
+        attribute_name='string',
+        dictionary_name='string'
     )
     return endpoint_result
 
@@ -130,7 +131,8 @@ def test_get_network_access_dictionary_attribute_by_name(api, validator):
 
 def get_network_access_dictionary_attribute_by_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.get_network_access_dictionary_attribute_by_name(
-
+        attribute_name='string',
+        dictionary_name='string'
     )
     return endpoint_result
 
@@ -162,6 +164,7 @@ def update_network_access_dictionary_attribute_by_name(api):
     endpoint_result = api.network_access_dictionary_attribute.update_network_access_dictionary_attribute_by_name(
         active_validation=False,
         allowed_values=[{'key': 'string', 'value': 'string', 'isDefault': True}],
+        attribute_name='string',
         data_type='string',
         description='string',
         dictionary_name='string',
@@ -190,10 +193,11 @@ def test_update_network_access_dictionary_attribute_by_name(api, validator):
 def update_network_access_dictionary_attribute_by_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.update_network_access_dictionary_attribute_by_name(
         active_validation=False,
+        attribute_name='string',
+        dictionary_name='string',
         allowed_values=None,
         data_type=None,
         description=None,
-        dictionary_name=None,
         direction_type=None,
         id=None,
         internal_name=None,
@@ -228,7 +232,8 @@ def is_valid_delete_network_access_dictionary_attribute_by_name(json_schema_vali
 
 def delete_network_access_dictionary_attribute_by_name(api):
     endpoint_result = api.network_access_dictionary_attribute.delete_network_access_dictionary_attribute_by_name(
-
+        attribute_name='string',
+        dictionary_name='string'
     )
     return endpoint_result
 
@@ -248,7 +253,8 @@ def test_delete_network_access_dictionary_attribute_by_name(api, validator):
 
 def delete_network_access_dictionary_attribute_by_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.delete_network_access_dictionary_attribute_by_name(
-
+        attribute_name='string',
+        dictionary_name='string'
     )
     return endpoint_result
 

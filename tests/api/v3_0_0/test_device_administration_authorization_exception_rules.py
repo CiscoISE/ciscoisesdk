@@ -42,7 +42,7 @@ def is_valid_get_device_admin_local_exception(json_schema_validate, obj):
 
 def get_device_admin_local_exception(api):
     endpoint_result = api.device_administration_authorization_exception_rules.get_device_admin_local_exception(
-
+        policy_id='string'
     )
     return endpoint_result
 
@@ -62,7 +62,7 @@ def test_get_device_admin_local_exception(api, validator):
 
 def get_device_admin_local_exception_default(api):
     endpoint_result = api.device_administration_authorization_exception_rules.get_device_admin_local_exception(
-
+        policy_id='string'
     )
     return endpoint_result
 
@@ -95,6 +95,7 @@ def create_device_admin_local_exception(api):
         active_validation=False,
         commands=['string'],
         payload=None,
+        policy_id='string',
         profile='string',
         rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
     )
@@ -117,6 +118,7 @@ def test_create_device_admin_local_exception(api, validator):
 def create_device_admin_local_exception_default(api):
     endpoint_result = api.device_administration_authorization_exception_rules.create_device_admin_local_exception(
         active_validation=False,
+        policy_id='string',
         commands=None,
         payload=None,
         profile=None,
@@ -150,7 +152,8 @@ def is_valid_get_device_admin_local_exception_by_rule_id(json_schema_validate, o
 
 def get_device_admin_local_exception_by_rule_id(api):
     endpoint_result = api.device_administration_authorization_exception_rules.get_device_admin_local_exception_by_rule_id(
-
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
@@ -170,7 +173,8 @@ def test_get_device_admin_local_exception_by_rule_id(api, validator):
 
 def get_device_admin_local_exception_by_rule_id_default(api):
     endpoint_result = api.device_administration_authorization_exception_rules.get_device_admin_local_exception_by_rule_id(
-
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
@@ -203,8 +207,10 @@ def update_device_admin_local_exception_by_rule_id(api):
         active_validation=False,
         commands=['string'],
         payload=None,
+        policy_id='string',
         profile='string',
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
+        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}},
+        rule_id='string'
     )
     return endpoint_result
 
@@ -225,6 +231,8 @@ def test_update_device_admin_local_exception_by_rule_id(api, validator):
 def update_device_admin_local_exception_by_rule_id_default(api):
     endpoint_result = api.device_administration_authorization_exception_rules.update_device_admin_local_exception_by_rule_id(
         active_validation=False,
+        policy_id='string',
+        rule_id='string',
         commands=None,
         payload=None,
         profile=None,
@@ -258,7 +266,8 @@ def is_valid_delete_device_admin_local_exception_by_rule_id(json_schema_validate
 
 def delete_device_admin_local_exception_by_rule_id(api):
     endpoint_result = api.device_administration_authorization_exception_rules.delete_device_admin_local_exception_by_rule_id(
-
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
@@ -278,7 +287,8 @@ def test_delete_device_admin_local_exception_by_rule_id(api, validator):
 
 def delete_device_admin_local_exception_by_rule_id_default(api):
     endpoint_result = api.device_administration_authorization_exception_rules.delete_device_admin_local_exception_by_rule_id(
-
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 

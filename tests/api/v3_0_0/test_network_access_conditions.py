@@ -330,7 +330,7 @@ def is_valid_get_network_access_condition_by_condition_id(json_schema_validate, 
 
 def get_network_access_condition_by_condition_id(api):
     endpoint_result = api.network_access_conditions.get_network_access_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -350,7 +350,7 @@ def test_get_network_access_condition_by_condition_id(api, validator):
 
 def get_network_access_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_conditions.get_network_access_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -385,6 +385,7 @@ def update_network_access_condition_by_condition_id(api):
         attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True}],
+        condition_id='string',
         condition_type='string',
         dates_range={'startDate': 'string', 'endDate': 'string'},
         dates_range_exception={'startDate': 'string', 'endDate': 'string'},
@@ -420,6 +421,7 @@ def test_update_network_access_condition_by_condition_id(api, validator):
 def update_network_access_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_conditions.update_network_access_condition_by_condition_id(
         active_validation=False,
+        condition_id='string',
         attribute_id=None,
         attribute_name=None,
         attribute_value=None,
@@ -468,7 +470,7 @@ def is_valid_delete_network_access_condition_by_condition_id(json_schema_validat
 
 def delete_network_access_condition_by_condition_id(api):
     endpoint_result = api.network_access_conditions.delete_network_access_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -488,7 +490,7 @@ def test_delete_network_access_condition_by_condition_id(api, validator):
 
 def delete_network_access_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_conditions.delete_network_access_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -518,7 +520,7 @@ def is_valid_get_network_access_condition_by_condition_name(json_schema_validate
 
 def get_network_access_condition_by_condition_name(api):
     endpoint_result = api.network_access_conditions.get_network_access_condition_by_condition_name(
-
+        condition_name='string'
     )
     return endpoint_result
 
@@ -538,7 +540,7 @@ def test_get_network_access_condition_by_condition_name(api, validator):
 
 def get_network_access_condition_by_condition_name_default(api):
     endpoint_result = api.network_access_conditions.get_network_access_condition_by_condition_name(
-
+        condition_name='string'
     )
     return endpoint_result
 
@@ -568,7 +570,7 @@ def is_valid_delete_network_access_condition_by_condition_name(json_schema_valid
 
 def delete_network_access_condition_by_condition_name(api):
     endpoint_result = api.network_access_conditions.delete_network_access_condition_by_condition_name(
-
+        condition_name='string'
     )
     return endpoint_result
 
@@ -588,7 +590,7 @@ def test_delete_network_access_condition_by_condition_name(api, validator):
 
 def delete_network_access_condition_by_condition_name_default(api):
     endpoint_result = api.network_access_conditions.delete_network_access_condition_by_condition_name(
-
+        condition_name='string'
     )
     return endpoint_result
 
@@ -623,6 +625,7 @@ def update_network_access_condition_by_condition_name(api):
         attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True}],
+        condition_name='string',
         condition_type='string',
         dates_range={'startDate': 'string', 'endDate': 'string'},
         dates_range_exception={'startDate': 'string', 'endDate': 'string'},
@@ -658,6 +661,7 @@ def test_update_network_access_condition_by_condition_name(api, validator):
 def update_network_access_condition_by_condition_name_default(api):
     endpoint_result = api.network_access_conditions.update_network_access_condition_by_condition_name(
         active_validation=False,
+        condition_name='string',
         attribute_id=None,
         attribute_name=None,
         attribute_value=None,

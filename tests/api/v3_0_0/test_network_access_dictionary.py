@@ -104,7 +104,7 @@ def is_valid_get_network_access_dictionary(json_schema_validate, obj):
 
 def get_network_access_dictionary(api):
     endpoint_result = api.network_access_dictionary.get_network_access_dictionary(
-
+        name='string'
     )
     return endpoint_result
 
@@ -124,7 +124,7 @@ def test_get_network_access_dictionary(api, validator):
 
 def get_network_access_dictionary_default(api):
     endpoint_result = api.network_access_dictionary.get_network_access_dictionary(
-
+        name='string'
     )
     return endpoint_result
 
@@ -181,10 +181,10 @@ def test_update_network_access_dictionaries_by_name(api, validator):
 def update_network_access_dictionaries_by_name_default(api):
     endpoint_result = api.network_access_dictionary.update_network_access_dictionaries_by_name(
         active_validation=False,
+        name='string',
         description=None,
         dictionary_attr_type=None,
         id=None,
-        name=None,
         payload=None,
         version=None
     )
@@ -216,7 +216,7 @@ def is_valid_delete_network_access_dictionaries_by_name(json_schema_validate, ob
 
 def delete_network_access_dictionaries_by_name(api):
     endpoint_result = api.network_access_dictionary.delete_network_access_dictionaries_by_name(
-
+        name='string'
     )
     return endpoint_result
 
@@ -236,7 +236,7 @@ def test_delete_network_access_dictionaries_by_name(api, validator):
 
 def delete_network_access_dictionaries_by_name_default(api):
     endpoint_result = api.network_access_dictionary.delete_network_access_dictionaries_by_name(
-
+        name='string'
     )
     return endpoint_result
 

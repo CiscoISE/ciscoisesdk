@@ -150,7 +150,7 @@ def is_valid_get_network_access_global_exception_rule_by_id(json_schema_validate
 
 def get_network_access_global_exception_rule_by_id(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.get_network_access_global_exception_rule_by_id(
-
+        rule_id='string'
     )
     return endpoint_result
 
@@ -170,7 +170,7 @@ def test_get_network_access_global_exception_rule_by_id(api, validator):
 
 def get_network_access_global_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.get_network_access_global_exception_rule_by_id(
-
+        rule_id='string'
     )
     return endpoint_result
 
@@ -204,6 +204,7 @@ def update_network_access_global_exception_rule_by_id(api):
         payload=None,
         profile=['string'],
         rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}},
+        rule_id='string',
         security_group='string'
     )
     return endpoint_result
@@ -225,6 +226,7 @@ def test_update_network_access_global_exception_rule_by_id(api, validator):
 def update_network_access_global_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.update_network_access_global_exception_rule_by_id(
         active_validation=False,
+        rule_id='string',
         payload=None,
         profile=None,
         rule=None,
@@ -258,7 +260,7 @@ def is_valid_delete_network_access_global_exception_rule_by_id(json_schema_valid
 
 def delete_network_access_global_exception_rule_by_id(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.delete_network_access_global_exception_rule_by_id(
-
+        rule_id='string'
     )
     return endpoint_result
 
@@ -278,7 +280,7 @@ def test_delete_network_access_global_exception_rule_by_id(api, validator):
 
 def delete_network_access_global_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.delete_network_access_global_exception_rule_by_id(
-
+        rule_id='string'
     )
     return endpoint_result
 

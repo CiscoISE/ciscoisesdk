@@ -138,6 +138,14 @@ class SponsoredGuestPortal(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -149,13 +157,6 @@ class SponsoredGuestPortal(object):
         check_type(filter_type, basestring)
         check_type(sortasc, basestring)
         check_type(sortdec, basestring)
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
 
         _params = {
             'page':
@@ -235,6 +236,14 @@ class SponsoredGuestPortal(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -245,13 +254,6 @@ class SponsoredGuestPortal(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
 
         _params = {
         }
@@ -328,13 +330,6 @@ class SponsoredGuestPortal(object):
         """
         check_type(headers, dict)
 
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
@@ -342,6 +337,14 @@ class SponsoredGuestPortal(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -411,6 +414,14 @@ class SponsoredGuestPortal(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -423,13 +434,6 @@ class SponsoredGuestPortal(object):
             check_type(payload, dict)
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
 
         _params = {
         }
@@ -508,13 +512,6 @@ class SponsoredGuestPortal(object):
         """
         check_type(headers, dict)
 
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
@@ -522,6 +519,14 @@ class SponsoredGuestPortal(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
 
         _params = {
         }

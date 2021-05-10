@@ -98,13 +98,16 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -168,6 +171,11 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -178,8 +186,6 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -221,11 +227,13 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         return self._object_factory('bpm_c5c9b7ab72b5442ae7026a5dcc0fec3_v3_0_0', _api_response)
 
     def get_network_access_global_exception_rule_by_id(self,
+                                                       rule_id,
                                                        headers=None,
                                                        **query_parameters):
         """Network Access - Get global exception rule attributes.
 
         Args:
+            rule_id(basestring): ruleId path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -246,13 +254,18 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(rule_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -260,6 +273,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'ruleId': rule_id,
         }
 
         e_url = ('/api/v1/policy/network-access/policy-set/global-'
@@ -274,6 +288,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         return self._object_factory('bpm_ac3aa12d3b5551638c3867aa9584f87b_v3_0_0', _api_response)
 
     def update_network_access_global_exception_rule_by_id(self,
+                                                          rule_id,
                                                           profile=None,
                                                           rule=None,
                                                           security_group=None,
@@ -292,6 +307,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             security_group(string): Security group used in
                 authorization policies, property of the
                 request body.
+            rule_id(basestring): ruleId path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -316,6 +332,11 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -326,8 +347,8 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
+        check_type(rule_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -335,6 +356,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'ruleId': rule_id,
         }
         if is_xml_payload:
             _payload = payload
@@ -370,11 +392,13 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         return self._object_factory('bpm_d6be8d877485969954d2574f0448247_v3_0_0', _api_response)
 
     def delete_network_access_global_exception_rule_by_id(self,
+                                                          rule_id,
                                                           headers=None,
                                                           **query_parameters):
         """Network Access - Delete global exception authorization rule.
 
         Args:
+            rule_id(basestring): ruleId path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -395,13 +419,18 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(rule_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -409,6 +438,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'ruleId': rule_id,
         }
 
         e_url = ('/api/v1/policy/network-access/policy-set/global-'

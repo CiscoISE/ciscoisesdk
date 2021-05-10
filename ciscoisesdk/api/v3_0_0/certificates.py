@@ -148,6 +148,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -158,8 +161,6 @@ class Certificates(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -315,6 +316,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -325,8 +329,6 @@ class Certificates(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -490,6 +492,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -500,8 +505,6 @@ class Certificates(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -614,6 +617,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -624,8 +630,6 @@ class Certificates(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -743,6 +747,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -754,8 +761,6 @@ class Certificates(object):
         check_type(sort_by, basestring)
         check_type(filter, (basestring, list, set, tuple))
         check_type(filter_type, basestring)
-        if headers is not None:
-            pass
 
         _params = {
             'page':
@@ -816,6 +821,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -823,8 +831,6 @@ class Certificates(object):
             with_custom_headers = True
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -976,6 +982,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -988,8 +997,6 @@ class Certificates(object):
             check_type(payload, dict)
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -1100,6 +1107,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1107,8 +1117,6 @@ class Certificates(object):
             with_custom_headers = True
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -1208,6 +1216,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1221,8 +1232,6 @@ class Certificates(object):
         check_type(filter_type, basestring)
         check_type(host_name, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
             'page':
@@ -1289,6 +1298,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1298,8 +1310,6 @@ class Certificates(object):
                    may_be_none=False)
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -1355,6 +1365,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1364,8 +1377,6 @@ class Certificates(object):
                    may_be_none=False)
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -1477,6 +1488,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1491,8 +1505,6 @@ class Certificates(object):
                    may_be_none=False)
         check_type(host_name, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -1629,6 +1641,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1640,8 +1655,6 @@ class Certificates(object):
         check_type(sort_by, basestring)
         check_type(filter, (basestring, list, set, tuple))
         check_type(filter_type, basestring)
-        if headers is not None:
-            pass
 
         _params = {
             'page':
@@ -1764,6 +1777,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1774,8 +1790,6 @@ class Certificates(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -1879,6 +1893,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1888,8 +1905,6 @@ class Certificates(object):
                    may_be_none=False)
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -1947,6 +1962,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -1956,8 +1974,6 @@ class Certificates(object):
                    may_be_none=False)
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -2007,13 +2023,14 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -2068,6 +2085,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -2077,8 +2097,6 @@ class Certificates(object):
                    may_be_none=False)
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -2140,6 +2158,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -2150,8 +2171,6 @@ class Certificates(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -2224,6 +2243,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -2234,8 +2256,6 @@ class Certificates(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -2301,6 +2321,9 @@ class Certificates(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -2308,8 +2331,6 @@ class Certificates(object):
             with_custom_headers = True
         check_type(id, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }

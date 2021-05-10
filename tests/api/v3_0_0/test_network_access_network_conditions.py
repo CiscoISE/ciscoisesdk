@@ -162,7 +162,7 @@ def is_valid_get_network_access_network_condition_by_condition_id(json_schema_va
 
 def get_network_access_network_condition_by_condition_id(api):
     endpoint_result = api.network_access_network_conditions.get_network_access_network_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -182,7 +182,7 @@ def test_get_network_access_network_condition_by_condition_id(api, validator):
 
 def get_network_access_network_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_network_conditions.get_network_access_network_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -214,6 +214,7 @@ def update_network_access_network_condition_by_condition_id(api):
     endpoint_result = api.network_access_network_conditions.update_network_access_network_condition_by_condition_id(
         active_validation=False,
         cli_dnis_list=['string'],
+        condition_id='string',
         condition_type='string',
         description='string',
         device_group_list=['string'],
@@ -243,6 +244,7 @@ def test_update_network_access_network_condition_by_condition_id(api, validator)
 def update_network_access_network_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_network_conditions.update_network_access_network_condition_by_condition_id(
         active_validation=False,
+        condition_id='string',
         cli_dnis_list=None,
         condition_type=None,
         description=None,
@@ -282,7 +284,7 @@ def is_valid_delete_network_access_network_condition_by_condition_id(json_schema
 
 def delete_network_access_network_condition_by_condition_id(api):
     endpoint_result = api.network_access_network_conditions.delete_network_access_network_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -302,7 +304,7 @@ def test_delete_network_access_network_condition_by_condition_id(api, validator)
 
 def delete_network_access_network_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_network_conditions.delete_network_access_network_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 

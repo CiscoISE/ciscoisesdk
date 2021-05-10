@@ -98,13 +98,16 @@ class DeviceAdministrationNetworkConditions(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -183,6 +186,11 @@ class DeviceAdministrationNetworkConditions(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -193,8 +201,6 @@ class DeviceAdministrationNetworkConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -247,11 +253,14 @@ class DeviceAdministrationNetworkConditions(object):
         return self._object_factory('bpm_b95cf8c9aed95518b38be1fa4b514b67_v3_0_0', _api_response)
 
     def get_device_admin_network_condition_by_condition_id(self,
+                                                           condition_id,
                                                            headers=None,
                                                            **query_parameters):
         """Device Admin - Returns a network condition.
 
         Args:
+            condition_id(basestring): conditionId path parameter.
+                Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -272,13 +281,18 @@ class DeviceAdministrationNetworkConditions(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(condition_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -286,6 +300,7 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'conditionId': condition_id,
         }
 
         e_url = ('/api/v1/policy/device-admin/network-'
@@ -300,6 +315,7 @@ class DeviceAdministrationNetworkConditions(object):
         return self._object_factory('bpm_a62af279ca25af0a1837f2cbf10a04d_v3_0_0', _api_response)
 
     def update_device_admin_network_condition_by_condition_id(self,
+                                                              condition_id,
                                                               cli_dnis_list=None,
                                                               condition_type=None,
                                                               description=None,
@@ -334,6 +350,8 @@ class DeviceAdministrationNetworkConditions(object):
             macAddrList(list): macAddrList, property of the request
                 body (list of strings).
             name(string): name, property of the request body.
+            condition_id(basestring): conditionId path parameter.
+                Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -358,6 +376,11 @@ class DeviceAdministrationNetworkConditions(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -368,8 +391,8 @@ class DeviceAdministrationNetworkConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
+        check_type(condition_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -377,6 +400,7 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'conditionId': condition_id,
         }
         if is_xml_payload:
             _payload = payload
@@ -424,11 +448,14 @@ class DeviceAdministrationNetworkConditions(object):
         return self._object_factory('bpm_c8acebd86a8151aeb2c17d973696fdfa_v3_0_0', _api_response)
 
     def delete_device_admin_network_condition_by_condition_id(self,
+                                                              condition_id,
                                                               headers=None,
                                                               **query_parameters):
         """Device Admin - Delete network condition.
 
         Args:
+            condition_id(basestring): conditionId path parameter.
+                Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -449,13 +476,18 @@ class DeviceAdministrationNetworkConditions(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(condition_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -463,6 +495,7 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'conditionId': condition_id,
         }
 
         e_url = ('/api/v1/policy/device-admin/network-'

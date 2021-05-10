@@ -164,7 +164,7 @@ def is_valid_get_device_admin_policy_set_by_id(json_schema_validate, obj):
 
 def get_device_admin_policy_set_by_id(api):
     endpoint_result = api.device_administration_policy_set.get_device_admin_policy_set_by_id(
-
+        policy_id='string'
     )
     return endpoint_result
 
@@ -184,7 +184,7 @@ def test_get_device_admin_policy_set_by_id(api, validator):
 
 def get_device_admin_policy_set_by_id_default(api):
     endpoint_result = api.device_administration_policy_set.get_device_admin_policy_set_by_id(
-
+        policy_id='string'
     )
     return endpoint_result
 
@@ -223,6 +223,7 @@ def update_device_admin_policy_set_by_id(api):
         is_proxy=True,
         name='string',
         payload=None,
+        policy_id='string',
         rank=0,
         service_name='string',
         state='string'
@@ -246,6 +247,7 @@ def test_update_device_admin_policy_set_by_id(api, validator):
 def update_device_admin_policy_set_by_id_default(api):
     endpoint_result = api.device_administration_policy_set.update_device_admin_policy_set_by_id(
         active_validation=False,
+        policy_id='string',
         condition=None,
         default=None,
         description=None,
@@ -286,7 +288,7 @@ def is_valid_delete_device_admin_policy_set_by_id(json_schema_validate, obj):
 
 def delete_device_admin_policy_set_by_id(api):
     endpoint_result = api.device_administration_policy_set.delete_device_admin_policy_set_by_id(
-
+        policy_id='string'
     )
     return endpoint_result
 
@@ -306,7 +308,7 @@ def test_delete_device_admin_policy_set_by_id(api, validator):
 
 def delete_device_admin_policy_set_by_id_default(api):
     endpoint_result = api.device_administration_policy_set.delete_device_admin_policy_set_by_id(
-
+        policy_id='string'
     )
     return endpoint_result
 

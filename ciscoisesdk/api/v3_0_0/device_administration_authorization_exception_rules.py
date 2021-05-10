@@ -73,11 +73,14 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         self._request_validator = request_validator
 
     def get_device_admin_local_exception(self,
+                                         policy_id,
                                          headers=None,
                                          **query_parameters):
         """Device Admin - Get local exception rules.
 
         Args:
+            policy_id(basestring): policyId path parameter. Policy
+                id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -98,13 +101,18 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(policy_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -112,6 +120,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'policyId': policy_id,
         }
 
         e_url = ('/api/v1/policy/device-admin/policy-'
@@ -126,6 +135,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         return self._object_factory('bpm_bba3187f0be4563aa8b6ff5931a123e7_v3_0_0', _api_response)
 
     def create_device_admin_local_exception(self,
+                                            policy_id,
                                             commands=None,
                                             profile=None,
                                             rule=None,
@@ -147,6 +157,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             rule(object): Common attributes in rule
                 authentication/authorization, property
                 of the request body.
+            policy_id(basestring): policyId path parameter. Policy
+                id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -171,6 +183,11 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -181,8 +198,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
+        check_type(policy_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -190,6 +207,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'policyId': policy_id,
         }
         if is_xml_payload:
             _payload = payload
@@ -224,11 +242,16 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         return self._object_factory('bpm_ebcdc835e9b8d6844c1da6cf252_v3_0_0', _api_response)
 
     def get_device_admin_local_exception_by_rule_id(self,
+                                                    policy_id,
+                                                    rule_id,
                                                     headers=None,
                                                     **query_parameters):
         """Device Admin - Get local exception rule attributes.
 
         Args:
+            policy_id(basestring): policyId path parameter. Policy
+                id.
+            rule_id(basestring): ruleId path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -249,13 +272,20 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(policy_id, basestring,
+                   may_be_none=False)
+        check_type(rule_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -263,6 +293,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'policyId': policy_id,
+            'ruleId': rule_id,
         }
 
         e_url = ('/api/v1/policy/device-admin/policy-'
@@ -277,6 +309,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         return self._object_factory('bpm_eddb567508080061e51d5f40c4c_v3_0_0', _api_response)
 
     def update_device_admin_local_exception_by_rule_id(self,
+                                                       policy_id,
+                                                       rule_id,
                                                        commands=None,
                                                        profile=None,
                                                        rule=None,
@@ -298,6 +332,9 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             rule(object): Common attributes in rule
                 authentication/authorization, property
                 of the request body.
+            policy_id(basestring): policyId path parameter. Policy
+                id.
+            rule_id(basestring): ruleId path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -322,6 +359,11 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -332,8 +374,10 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
+        check_type(policy_id, basestring,
+                   may_be_none=False)
+        check_type(rule_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -341,6 +385,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'policyId': policy_id,
+            'ruleId': rule_id,
         }
         if is_xml_payload:
             _payload = payload
@@ -376,11 +422,16 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         return self._object_factory('bpm_ad47b73307755749ca8182a34affb38_v3_0_0', _api_response)
 
     def delete_device_admin_local_exception_by_rule_id(self,
+                                                       policy_id,
+                                                       rule_id,
                                                        headers=None,
                                                        **query_parameters):
         """Device Admin - Delete local exception rule.
 
         Args:
+            policy_id(basestring): policyId path parameter. Policy
+                id.
+            rule_id(basestring): ruleId path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -401,13 +452,20 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(policy_id, basestring,
+                   may_be_none=False)
+        check_type(rule_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -415,6 +473,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'policyId': policy_id,
+            'ruleId': rule_id,
         }
 
         e_url = ('/api/v1/policy/device-admin/policy-'

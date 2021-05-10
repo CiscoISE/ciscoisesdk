@@ -42,7 +42,7 @@ def is_valid_get_device_admin_authentication_rules(json_schema_validate, obj):
 
 def get_device_admin_authentication_rules(api):
     endpoint_result = api.device_administration_authentication_rules.get_device_admin_authentication_rules(
-
+        policy_id='string'
     )
     return endpoint_result
 
@@ -62,7 +62,7 @@ def test_get_device_admin_authentication_rules(api, validator):
 
 def get_device_admin_authentication_rules_default(api):
     endpoint_result = api.device_administration_authentication_rules.get_device_admin_authentication_rules(
-
+        policy_id='string'
     )
     return endpoint_result
 
@@ -98,6 +98,7 @@ def create_device_admin_authentication_rules(api):
         if_process_fail='string',
         if_user_not_found='string',
         payload=None,
+        policy_id='string',
         rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
     )
     return endpoint_result
@@ -119,6 +120,7 @@ def test_create_device_admin_authentication_rules(api, validator):
 def create_device_admin_authentication_rules_default(api):
     endpoint_result = api.device_administration_authentication_rules.create_device_admin_authentication_rules(
         active_validation=False,
+        policy_id='string',
         identity_source_id=None,
         if_auth_fail=None,
         if_process_fail=None,
@@ -154,7 +156,8 @@ def is_valid_get_device_admin_authentication_rule_by_id(json_schema_validate, ob
 
 def get_device_admin_authentication_rule_by_id(api):
     endpoint_result = api.device_administration_authentication_rules.get_device_admin_authentication_rule_by_id(
-
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
@@ -174,7 +177,8 @@ def test_get_device_admin_authentication_rule_by_id(api, validator):
 
 def get_device_admin_authentication_rule_by_id_default(api):
     endpoint_result = api.device_administration_authentication_rules.get_device_admin_authentication_rule_by_id(
-
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
@@ -210,7 +214,9 @@ def update_device_admin_authentication_rule_by_id(api):
         if_process_fail='string',
         if_user_not_found='string',
         payload=None,
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
+        policy_id='string',
+        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}},
+        rule_id='string'
     )
     return endpoint_result
 
@@ -231,6 +237,8 @@ def test_update_device_admin_authentication_rule_by_id(api, validator):
 def update_device_admin_authentication_rule_by_id_default(api):
     endpoint_result = api.device_administration_authentication_rules.update_device_admin_authentication_rule_by_id(
         active_validation=False,
+        policy_id='string',
+        rule_id='string',
         identity_source_id=None,
         if_auth_fail=None,
         if_process_fail=None,
@@ -266,7 +274,8 @@ def is_valid_delete_device_admin_authentication_rule_by_id(json_schema_validate,
 
 def delete_device_admin_authentication_rule_by_id(api):
     endpoint_result = api.device_administration_authentication_rules.delete_device_admin_authentication_rule_by_id(
-
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
@@ -286,7 +295,8 @@ def test_delete_device_admin_authentication_rule_by_id(api, validator):
 
 def delete_device_admin_authentication_rule_by_id_default(api):
     endpoint_result = api.device_administration_authentication_rules.delete_device_admin_authentication_rule_by_id(
-
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 

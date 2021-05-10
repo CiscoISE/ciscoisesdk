@@ -101,6 +101,9 @@ class ReplicationStatus(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -108,8 +111,6 @@ class ReplicationStatus(object):
             with_custom_headers = True
         check_type(node, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }

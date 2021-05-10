@@ -98,13 +98,16 @@ class DeviceAdministrationPolicySet(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -197,6 +200,11 @@ class DeviceAdministrationPolicySet(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -207,8 +215,6 @@ class DeviceAdministrationPolicySet(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -263,11 +269,14 @@ class DeviceAdministrationPolicySet(object):
         return self._object_factory('bpm_cc909c2717cf55f1863a04a785166fe0_v3_0_0', _api_response)
 
     def get_device_admin_policy_set_by_id(self,
+                                          policy_id,
                                           headers=None,
                                           **query_parameters):
         """Device Admin - Get policy set attributes.
 
         Args:
+            policy_id(basestring): policyId path parameter. Policy
+                id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -288,13 +297,18 @@ class DeviceAdministrationPolicySet(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(policy_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -302,6 +316,7 @@ class DeviceAdministrationPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'policyId': policy_id,
         }
 
         e_url = ('/api/v1/policy/device-admin/policy-set/{policyId}')
@@ -315,6 +330,7 @@ class DeviceAdministrationPolicySet(object):
         return self._object_factory('bpm_b305804a95e2fb51ab50c039e6c66_v3_0_0', _api_response)
 
     def update_device_admin_policy_set_by_id(self,
+                                             policy_id,
                                              condition=None,
                                              default=None,
                                              description=None,
@@ -363,6 +379,8 @@ class DeviceAdministrationPolicySet(object):
                 property of the request body. Available
                 values are 'enabled', 'disabled' and
                 'monitor'.
+            policy_id(basestring): policyId path parameter. Policy
+                id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -387,6 +405,11 @@ class DeviceAdministrationPolicySet(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -397,8 +420,8 @@ class DeviceAdministrationPolicySet(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        if headers is not None:
-            pass
+        check_type(policy_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -406,6 +429,7 @@ class DeviceAdministrationPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'policyId': policy_id,
         }
         if is_xml_payload:
             _payload = payload
@@ -454,11 +478,14 @@ class DeviceAdministrationPolicySet(object):
         return self._object_factory('bpm_c67c56a249ce5721863328be9da81573_v3_0_0', _api_response)
 
     def delete_device_admin_policy_set_by_id(self,
+                                             policy_id,
                                              headers=None,
                                              **query_parameters):
         """Device Admin - Delete a policy set.
 
         Args:
+            policy_id(basestring): policyId path parameter. Policy
+                id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -479,13 +506,18 @@ class DeviceAdministrationPolicySet(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
+        check_type(policy_id, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -493,6 +525,7 @@ class DeviceAdministrationPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'policyId': policy_id,
         }
 
         e_url = ('/api/v1/policy/device-admin/policy-set/{policyId}')

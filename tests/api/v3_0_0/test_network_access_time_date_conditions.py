@@ -180,7 +180,7 @@ def is_valid_get_network_access_time_condition_by_condition_id(json_schema_valid
 
 def get_network_access_time_condition_by_condition_id(api):
     endpoint_result = api.network_access_time_date_conditions.get_network_access_time_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -200,7 +200,7 @@ def test_get_network_access_time_condition_by_condition_id(api, validator):
 
 def get_network_access_time_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_time_date_conditions.get_network_access_time_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -235,6 +235,7 @@ def update_network_access_time_condition_by_condition_id(api):
         attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True}],
+        condition_id='string',
         condition_type='string',
         dates_range={'startDate': 'string', 'endDate': 'string'},
         dates_range_exception={'startDate': 'string', 'endDate': 'string'},
@@ -270,6 +271,7 @@ def test_update_network_access_time_condition_by_condition_id(api, validator):
 def update_network_access_time_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_time_date_conditions.update_network_access_time_condition_by_condition_id(
         active_validation=False,
+        condition_id='string',
         attribute_id=None,
         attribute_name=None,
         attribute_value=None,
@@ -318,7 +320,7 @@ def is_valid_delete_network_access_time_condition_by_condition_id(json_schema_va
 
 def delete_network_access_time_condition_by_condition_id(api):
     endpoint_result = api.network_access_time_date_conditions.delete_network_access_time_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 
@@ -338,7 +340,7 @@ def test_delete_network_access_time_condition_by_condition_id(api, validator):
 
 def delete_network_access_time_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_time_date_conditions.delete_network_access_time_condition_by_condition_id(
-
+        condition_id='string'
     )
     return endpoint_result
 

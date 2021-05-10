@@ -104,13 +104,14 @@ class NodeGroup(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -160,6 +161,9 @@ class NodeGroup(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -167,8 +171,6 @@ class NodeGroup(object):
             with_custom_headers = True
         check_type(node_group_name, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -235,6 +237,9 @@ class NodeGroup(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -247,8 +252,6 @@ class NodeGroup(object):
             check_type(payload, dict)
         check_type(node_group_name, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -330,6 +333,9 @@ class NodeGroup(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -342,8 +348,6 @@ class NodeGroup(object):
             check_type(payload, dict)
         check_type(node_group_name, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
@@ -413,6 +417,9 @@ class NodeGroup(object):
         """
         check_type(headers, dict)
 
+        if headers is not None:
+            pass
+
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
@@ -420,8 +427,6 @@ class NodeGroup(object):
             with_custom_headers = True
         check_type(node_group_name, basestring,
                    may_be_none=False)
-        if headers is not None:
-            pass
 
         _params = {
         }
