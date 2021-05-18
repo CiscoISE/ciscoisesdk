@@ -42,7 +42,7 @@ api = IdentityServicesEngineAPI(verify=False, debug=True)
 logging.getLogger('ciscoisesdk').addHandler(logging.StreamHandler())
 # logging.getLogger('ciscoisesdk').addHandler(ch)
 
-# api.devices.get_device_list()
+# api.network_device.get_all_network_device().response
 
 # CONFIGURE logger correctly following
 # https://docs.python.org/3.7/howto/logging.html#configuring-logging

@@ -238,7 +238,7 @@ ready to start making API calls.
 
 .. code-block:: python
 
-    >>> api.network_device.network_device(page=1,size=3).response.SearchResult.resources
+    >>> api.network_device.get_all_network_device(page=1,size=3).response.SearchResult.resources
     [{'id': '4969bc30-ad2a-11eb-95af-f263cf05f605',
       'name': 'ISE_EST_Local_Host_19',
       'description': '',
@@ -287,7 +287,7 @@ You can easily access and call any of these methods directly from your
 
 .. code-block:: python
 
-    >>> api.network_access_policy_set.get_network_access_policy_set_list().response.response
+    >>> api.network_access_policy_set.get_all_network_access_policy_sets().response.response
     [{'default': False,
       'id': 'f22b6a01-759b-47e2-99ea-2e062abdb6ed',
       'name': 'Test Policy Set 1',
@@ -427,7 +427,7 @@ attributes using '.' notation)? ciscoisesdk enables you to do just that:
 
 .. code-block:: python
 
-    >>> policy_set = api.network_access_policy_set.get_network_access_policy_set_list().response.response
+    >>> policy_set = api.network_access_policy_set.get_all_network_access_policy_sets().response.response
     >>> policy_set[0].id
     'f22b6a01-759b-47e2-99ea-2e062abdb6ed'
     >>> policy_set[0].condition.conditionType
@@ -444,14 +444,14 @@ help clean up your code and make coding easier:
         .. code-block:: python
 
             >>> # Do this
-            >>> device_list_response = api.network_device.network_device(filter='name.EQ.ISE_EST_Local_Host_19')
+            >>> device_list_response = api.network_device.get_all_network_device(filter='name.EQ.ISE_EST_Local_Host_19')
             >>> device_response = device_list_response.response.SearchResult.resources[0]
-            >>> device_response_detail = api.network_device.network_device_by_id(device_response.id).response.NetworkDevice
+            >>> device_response_detail = api.network_device.get_network_device_by_id(device_response.id).response.NetworkDevice
 
             >>> # or even this
             >>> filter_query = 'name.EQ.ISE_EST_Local_Host_19'
-            >>> device_response_id = api.network_device.network_device(filter=filter_query).response.SearchResult.resources[0].id
-            >>> device_response_detail = api.network_device.network_device_by_id(device_response_id).response.NetworkDevice
+            >>> device_response_id = api.network_device.get_all_network_device(filter=filter_query).response.SearchResult.resources[0].id
+            >>> device_response_detail = api.network_device.get_network_device_by_id(device_response_id).response.NetworkDevice
 
     2.  When accessing 'optional' attributes, like ``device_list_response.response.SearchResult.resources[0].id``
         attribute of Identity Services Engine NetworkDevice object, the response object will return ``None`` when
@@ -461,7 +461,7 @@ help clean up your code and make coding easier:
 
         .. code-block:: python
 
-            >>> devices_response = api.network_device.network_device().response
+            >>> devices_response = api.network_device.get_all_network_device().response
             >>> # Instead of doing this
             >>> if hasattr(devices_response, 'SearchResult') and hasattr(devices_response.SearchResult, 'resources'):
             ...     devices = devices_response.SearchResult.resources
@@ -543,7 +543,7 @@ So you can add your logging handlers according to your needs.
     logging.getLogger('ciscoisesdk').addHandler(ch_)
 
     logger.debug('simple message')
-    api.network_device.network_device().response
+    api.network_device.get_all_network_device().response
 
 
 Adding API call definitions

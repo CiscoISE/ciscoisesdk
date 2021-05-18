@@ -12,20 +12,29 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
 
     api = IdentityServicesEngineAPI(verify=False, debug=False)
 
-    # Get allowed protocols
-    search_result = api.allowed_protocols.allowed_protocols().response.SearchResult
+    # Get allowed protocols (first page)
+    search_result = api.allowed_protocols.get_all_allowed_protocols().response.SearchResult
     if search_result and search_result.resources:
       for resource in search_result.resources:
-        resource_detail = api.allowed_protocols.allowed_protocols_by_id(resource.id).response.AllowedProtocols
+        resource_detail = api.allowed_protocols.get_allowed_protocol_by_id(resource.id).response.AllowedProtocols
+        print("Id {}\nName {}\nallowChap {}\n".format(resource_detail.id, resource_detail.name, resource_detail.allowChap))
+    print("----------")
+
+    # Handle pagination with a generator
+    allowed_protols_gen = api.allowed_protocols.get_all_allowed_protocols_generator()
+    for allowed_protocols_page_resp in allowed_protols_gen:
+      allowed_protols_result = allowed_protocols_page_resp.response.SearchResult
+      for resource in allowed_protols_result.resources:
+        resource_detail = api.allowed_protocols.get_allowed_protocol_by_id(resource.id).response.AllowedProtocols
         print("Id {}\nName {}\nallowChap {}\n".format(resource_detail.id, resource_detail.name, resource_detail.allowChap))
 
     # Filter network device
-    device_list_response = api.network_device.network_device(filter='name.EQ.ISE_EST_Local_Host_19')
+    device_list_response = api.network_device.get_all_network_device(filter='name.EQ.ISE_EST_Local_Host_19')
     device_responses = device_list_response.response.SearchResult.resources
     device_response = device_responses[0]
 
     # Get network device detail
-    device_response_detail = api.network_device.network_device_by_id(device_response.id).response.NetworkDevice
+    device_response_detail = api.network_device.get_network_device_by_id(device_response.id).response.NetworkDevice
 
     # Delete network device
     delete_device = api.network_device.delete_network_device_by_id(device_response.id)
