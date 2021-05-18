@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NetworkAccessProfiles(object):
@@ -72,9 +73,9 @@ class NetworkAccessProfiles(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_profiles(self,
-                                    headers=None,
-                                    **query_parameters):
+    def get_all_network_access_profiles(self,
+                                        headers=None,
+                                        **query_parameters):
         """Network Access - Returns list of profiles.
 
         Args:

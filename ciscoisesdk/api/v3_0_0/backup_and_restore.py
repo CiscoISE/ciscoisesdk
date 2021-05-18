@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class BackupAndRestore(object):

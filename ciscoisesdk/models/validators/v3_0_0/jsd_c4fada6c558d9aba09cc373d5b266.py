@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateSelfRegPortalById data model.
+"""Identity Services Engine updateSelfRegisteredPortalById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC4FadA6C558D9Aba09Cc373D5B266(object):
-    """updateSelfRegPortalById request schema definition."""
+    """updateSelfRegisteredPortalById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC4FadA6C558D9Aba09Cc373D5B266, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

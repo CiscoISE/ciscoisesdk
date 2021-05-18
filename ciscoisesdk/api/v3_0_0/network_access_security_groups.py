@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NetworkAccessSecurityGroups(object):
@@ -72,9 +73,9 @@ class NetworkAccessSecurityGroups(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_security_groups(self,
-                                           headers=None,
-                                           **query_parameters):
+    def get_all_network_access_security_groups(self,
+                                               headers=None,
+                                               **query_parameters):
         """Network Access - Return list of available security groups for
         authorization policy definition.
 

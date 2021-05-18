@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NetworkAccessPolicySet(object):
@@ -72,9 +73,9 @@ class NetworkAccessPolicySet(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_policy_sets(self,
-                                       headers=None,
-                                       **query_parameters):
+    def get_all_network_access_policy_sets(self,
+                                           headers=None,
+                                           **query_parameters):
         """Get all network access policy sets.
 
         Args:
@@ -269,14 +270,13 @@ class NetworkAccessPolicySet(object):
         return self._object_factory('bpm_dfe1db8729d541fb3a17d31d47d1881_v3_0_0', _api_response)
 
     def get_network_access_policy_set_by_id(self,
-                                            policy_id,
+                                            id,
                                             headers=None,
                                             **query_parameters):
         """Network Access - Get policy set attributes.
 
         Args:
-            policy_id(basestring): policyId path parameter. Policy
-                id.
+            id(basestring): id path parameter. Policy id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -307,7 +307,7 @@ class NetworkAccessPolicySet(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(policy_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -316,10 +316,10 @@ class NetworkAccessPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'policyId': policy_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/network-access/policy-set/{policyId}')
+        e_url = ('/api/v1/policy/network-access/policy-set/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -327,15 +327,14 @@ class NetworkAccessPolicySet(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b58a72c9ff567896a15555ecc9564f_v3_0_0', _api_response)
+        return self._object_factory('bpm_d9f17adde53e2a08a650b9fe1714c_v3_0_0', _api_response)
 
     def update_network_access_policy_set_by_id(self,
-                                               policy_id,
+                                               id,
                                                condition=None,
                                                default=None,
                                                description=None,
                                                hit_counts=None,
-                                               id=None,
                                                is_proxy=None,
                                                name=None,
                                                rank=None,
@@ -379,8 +378,7 @@ class NetworkAccessPolicySet(object):
                 property of the request body. Available
                 values are 'enabled', 'disabled' and
                 'monitor'.
-            policy_id(basestring): policyId path parameter. Policy
-                id.
+            id(basestring): id path parameter. Policy id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -420,7 +418,7 @@ class NetworkAccessPolicySet(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(policy_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -429,7 +427,7 @@ class NetworkAccessPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'policyId': policy_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -459,10 +457,10 @@ class NetworkAccessPolicySet(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_d5e00a8e6aa0577ea81e11e796912053_v3_0_0')\
+            self._request_validator('jsd_ff0055f9ef115a42bea6ffdd8e57d41b_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/network-access/policy-set/{policyId}')
+        e_url = ('/api/v1/policy/network-access/policy-set/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -475,17 +473,16 @@ class NetworkAccessPolicySet(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_d5e00a8e6aa0577ea81e11e796912053_v3_0_0', _api_response)
+        return self._object_factory('bpm_ff0055f9ef115a42bea6ffdd8e57d41b_v3_0_0', _api_response)
 
     def delete_network_access_policy_set_by_id(self,
-                                               policy_id,
+                                               id,
                                                headers=None,
                                                **query_parameters):
         """Network Access - Delete a policy set.
 
         Args:
-            policy_id(basestring): policyId path parameter. Policy
-                id.
+            id(basestring): id path parameter. Policy id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -516,7 +513,7 @@ class NetworkAccessPolicySet(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(policy_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -525,10 +522,10 @@ class NetworkAccessPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'policyId': policy_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/network-access/policy-set/{policyId}')
+        e_url = ('/api/v1/policy/network-access/policy-set/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -536,4 +533,4 @@ class NetworkAccessPolicySet(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f5175ff711535ff2b1b85a3a4525e886_v3_0_0', _api_response)
+        return self._object_factory('bpm_fd4b5a56f8bd5f8f919e9fffc172e72f_v3_0_0', _api_response)

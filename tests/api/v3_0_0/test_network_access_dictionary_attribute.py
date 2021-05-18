@@ -104,14 +104,14 @@ def is_valid_get_network_access_dictionary_attribute_by_name(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0462fbd7ec7052709e5d0e0a46dc7f68_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c77600d349fc5c259dbd22d65b3ffa1d_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_dictionary_attribute_by_name(api):
     endpoint_result = api.network_access_dictionary_attribute.get_network_access_dictionary_attribute_by_name(
-        attribute_name='string',
-        dictionary_name='string'
+        dictionary_name='string',
+        name='string'
     )
     return endpoint_result
 
@@ -131,8 +131,8 @@ def test_get_network_access_dictionary_attribute_by_name(api, validator):
 
 def get_network_access_dictionary_attribute_by_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.get_network_access_dictionary_attribute_by_name(
-        attribute_name='string',
-        dictionary_name='string'
+        dictionary_name='string',
+        name='string'
     )
     return endpoint_result
 
@@ -156,7 +156,7 @@ def is_valid_update_network_access_dictionary_attribute_by_name(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_fda64cd1ab7d53448962f61de0f76948_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_a60b29bfe2b055299e4360d84380ddd4_v3_0_0').validate(obj.response)
     return True
 
 
@@ -164,7 +164,6 @@ def update_network_access_dictionary_attribute_by_name(api):
     endpoint_result = api.network_access_dictionary_attribute.update_network_access_dictionary_attribute_by_name(
         active_validation=False,
         allowed_values=[{'key': 'string', 'value': 'string', 'isDefault': True}],
-        attribute_name='string',
         data_type='string',
         description='string',
         dictionary_name='string',
@@ -193,15 +192,14 @@ def test_update_network_access_dictionary_attribute_by_name(api, validator):
 def update_network_access_dictionary_attribute_by_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.update_network_access_dictionary_attribute_by_name(
         active_validation=False,
-        attribute_name='string',
         dictionary_name='string',
+        name='string',
         allowed_values=None,
         data_type=None,
         description=None,
         direction_type=None,
         id=None,
         internal_name=None,
-        name=None,
         payload=None
     )
     return endpoint_result
@@ -226,14 +224,14 @@ def is_valid_delete_network_access_dictionary_attribute_by_name(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_15257c813c9b5a73b6d00cac1ca5a41f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_dd6c2553ae0053c1bbbdbd46c1df0ef9_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_dictionary_attribute_by_name(api):
     endpoint_result = api.network_access_dictionary_attribute.delete_network_access_dictionary_attribute_by_name(
-        attribute_name='string',
-        dictionary_name='string'
+        dictionary_name='string',
+        name='string'
     )
     return endpoint_result
 
@@ -253,8 +251,8 @@ def test_delete_network_access_dictionary_attribute_by_name(api, validator):
 
 def delete_network_access_dictionary_attribute_by_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.delete_network_access_dictionary_attribute_by_name(
-        attribute_name='string',
-        dictionary_name='string'
+        dictionary_name='string',
+        name='string'
     )
     return endpoint_result
 

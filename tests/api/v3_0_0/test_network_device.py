@@ -463,7 +463,7 @@ def test_update_network_device_by_name_default(api, validator):
             raise original_e
 
 
-def is_valid_delete_networkdevice_by_name(json_schema_validate, obj):
+def is_valid_delete_network_device_by_name(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -474,19 +474,19 @@ def is_valid_delete_networkdevice_by_name(json_schema_validate, obj):
     return True
 
 
-def delete_networkdevice_by_name(api):
-    endpoint_result = api.network_device.delete_networkdevice_by_name(
+def delete_network_device_by_name(api):
+    endpoint_result = api.network_device.delete_network_device_by_name(
         name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_device
-def test_delete_networkdevice_by_name(api, validator):
+def test_delete_network_device_by_name(api, validator):
     try:
-        assert is_valid_delete_networkdevice_by_name(
+        assert is_valid_delete_network_device_by_name(
             validator,
-            delete_networkdevice_by_name(api)
+            delete_network_device_by_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -494,19 +494,19 @@ def test_delete_networkdevice_by_name(api, validator):
             raise original_e
 
 
-def delete_networkdevice_by_name_default(api):
-    endpoint_result = api.network_device.delete_networkdevice_by_name(
+def delete_network_device_by_name_default(api):
+    endpoint_result = api.network_device.delete_network_device_by_name(
         name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_device
-def test_delete_networkdevice_by_name_default(api, validator):
+def test_delete_network_device_by_name_default(api, validator):
     try:
-        assert is_valid_delete_networkdevice_by_name(
+        assert is_valid_delete_network_device_by_name(
             validator,
-            delete_networkdevice_by_name_default(api)
+            delete_network_device_by_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

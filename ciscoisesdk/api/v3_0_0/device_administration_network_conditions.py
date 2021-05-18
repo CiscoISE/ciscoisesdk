@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class DeviceAdministrationNetworkConditions(object):
@@ -72,9 +73,9 @@ class DeviceAdministrationNetworkConditions(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_device_admin_network_conditions(self,
-                                            headers=None,
-                                            **query_parameters):
+    def get_all_device_admin_network_conditions(self,
+                                                headers=None,
+                                                **query_parameters):
         """Device Admin - Returns a list of network conditions.
 
         Args:
@@ -252,15 +253,14 @@ class DeviceAdministrationNetworkConditions(object):
 
         return self._object_factory('bpm_b95cf8c9aed95518b38be1fa4b514b67_v3_0_0', _api_response)
 
-    def get_device_admin_network_condition_by_condition_id(self,
-                                                           condition_id,
-                                                           headers=None,
-                                                           **query_parameters):
+    def get_device_admin_network_condition_by_id(self,
+                                                 id,
+                                                 headers=None,
+                                                 **query_parameters):
         """Device Admin - Returns a network condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -291,7 +291,7 @@ class DeviceAdministrationNetworkConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -300,11 +300,10 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/device-admin/network-'
-                 + 'condition/{conditionId}')
+        e_url = ('/api/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -312,23 +311,22 @@ class DeviceAdministrationNetworkConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a62af279ca25af0a1837f2cbf10a04d_v3_0_0', _api_response)
+        return self._object_factory('bpm_e9cc593c395c48b31b30149467c846_v3_0_0', _api_response)
 
-    def update_device_admin_network_condition_by_condition_id(self,
-                                                              condition_id,
-                                                              cli_dnis_list=None,
-                                                              condition_type=None,
-                                                              description=None,
-                                                              device_group_list=None,
-                                                              device_list=None,
-                                                              id=None,
-                                                              ip_addr_list=None,
-                                                              mac_addr_list=None,
-                                                              name=None,
-                                                              headers=None,
-                                                              payload=None,
-                                                              active_validation=True,
-                                                              **query_parameters):
+    def update_device_admin_network_condition_by_id(self,
+                                                    id,
+                                                    cli_dnis_list=None,
+                                                    condition_type=None,
+                                                    description=None,
+                                                    device_group_list=None,
+                                                    device_list=None,
+                                                    ip_addr_list=None,
+                                                    mac_addr_list=None,
+                                                    name=None,
+                                                    headers=None,
+                                                    payload=None,
+                                                    active_validation=True,
+                                                    **query_parameters):
         """Device Admin - Update network condition.
 
         Args:
@@ -350,8 +348,7 @@ class DeviceAdministrationNetworkConditions(object):
             macAddrList(list): macAddrList, property of the request
                 body (list of strings).
             name(string): name, property of the request body.
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -391,7 +388,7 @@ class DeviceAdministrationNetworkConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -400,7 +397,7 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -428,11 +425,10 @@ class DeviceAdministrationNetworkConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_c8acebd86a8151aeb2c17d973696fdfa_v3_0_0')\
+            self._request_validator('jsd_f78898b7d655b2b81085dc7c0a964e_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/device-admin/network-'
-                 + 'condition/{conditionId}')
+        e_url = ('/api/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -445,17 +441,16 @@ class DeviceAdministrationNetworkConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_c8acebd86a8151aeb2c17d973696fdfa_v3_0_0', _api_response)
+        return self._object_factory('bpm_f78898b7d655b2b81085dc7c0a964e_v3_0_0', _api_response)
 
-    def delete_device_admin_network_condition_by_condition_id(self,
-                                                              condition_id,
-                                                              headers=None,
-                                                              **query_parameters):
+    def delete_device_admin_network_condition_by_id(self,
+                                                    id,
+                                                    headers=None,
+                                                    **query_parameters):
         """Device Admin - Delete network condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -486,7 +481,7 @@ class DeviceAdministrationNetworkConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -495,11 +490,10 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/device-admin/network-'
-                 + 'condition/{conditionId}')
+        e_url = ('/api/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -507,4 +501,4 @@ class DeviceAdministrationNetworkConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e3c94fb105cd4a6eac4ace8c87f9f_v3_0_0', _api_response)
+        return self._object_factory('bpm_c0b4d1bbda75355912f208521362a41_v3_0_0', _api_response)

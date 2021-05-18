@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateInternaluserById data model.
+"""Identity Services Engine updateInternalUserById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF7227B280B745B94Bb801369B168A529(object):
-    """updateInternaluserById request schema definition."""
+    """updateInternalUserById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF7227B280B745B94Bb801369B168A529, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_device_admin_profiles(json_schema_validate, obj):
+def is_valid_get_all_device_admin_profiles(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_device_admin_profiles(json_schema_validate, obj):
     return True
 
 
-def get_device_admin_profiles(api):
-    endpoint_result = api.device_administration_profiles.get_device_admin_profiles(
+def get_all_device_admin_profiles(api):
+    endpoint_result = api.device_administration_profiles.get_all_device_admin_profiles(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_profiles
-def test_get_device_admin_profiles(api, validator):
+def test_get_all_device_admin_profiles(api, validator):
     try:
-        assert is_valid_get_device_admin_profiles(
+        assert is_valid_get_all_device_admin_profiles(
             validator,
-            get_device_admin_profiles(api)
+            get_all_device_admin_profiles(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_device_admin_profiles(api, validator):
             raise original_e
 
 
-def get_device_admin_profiles_default(api):
-    endpoint_result = api.device_administration_profiles.get_device_admin_profiles(
+def get_all_device_admin_profiles_default(api):
+    endpoint_result = api.device_administration_profiles.get_all_device_admin_profiles(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_profiles
-def test_get_device_admin_profiles_default(api, validator):
+def test_get_all_device_admin_profiles_default(api, validator):
     try:
-        assert is_valid_get_device_admin_profiles(
+        assert is_valid_get_all_device_admin_profiles(
             validator,
-            get_device_admin_profiles_default(api)
+            get_all_device_admin_profiles_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

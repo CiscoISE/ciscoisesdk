@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class DownloadableAcl(object):
@@ -116,8 +117,8 @@ class DownloadableAcl(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, int)
-        check_type(size, int)
+        check_type(page, (int, basestring, list))
+        check_type(size, (int, basestring, list))
 
         _params = {
             'page':
@@ -140,6 +141,85 @@ class DownloadableAcl(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_bc200af85d598885a990ff9bcbf8_v3_0_0', _api_response)
+
+    def get_all_downloadable_acl_generator(self,
+                                           page=None,
+                                           size=None,
+                                           headers=None,
+                                           **query_parameters):
+        """Get all DownloadableACL.
+
+        Args:
+            page(int): page query parameter. Page number.
+            size(int): size query parameter. Number of objects
+                returned per page.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            Generator: A generator object containing the following object.
+              + RestResponse: REST response with following properties:
+                  - headers(MyDict): response headers.
+                  - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                        or the bracket notation.
+                  - content(bytes): representation of the request's response
+                  - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(page, (int, basestring, list))
+        check_type(size, (int, basestring, list))
+
+        _params = {
+            'page':
+                page,
+            'size':
+                size,
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/ers/config/downloadableacl')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        yield self._object_factory('bpm_bc200af85d598885a990ff9bcbf8_v3_0_0', _api_response)
+        if _api_response.response and _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", ""):
+            url = _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", "")
+            _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
+            _size = _query_params.get('size')
+            _page = _query_params.get('page')
+            yield from self.get_all_downloadable_acl_generator(headers=headers,
+                                                               page=_page,
+                                                               size=_size,
+                                                               **query_parameters)
 
     def create_downloadable_acl(self,
                                 dacl=None,

@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class AncPolicy(object):
@@ -225,8 +226,8 @@ class AncPolicy(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(page, int)
-        check_type(size, int)
+        check_type(page, (int, basestring, list))
+        check_type(size, (int, basestring, list))
         check_type(sortasc, basestring)
         check_type(sortdec, basestring)
         check_type(filter, (basestring, list, set, tuple))

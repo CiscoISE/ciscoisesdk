@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NetworkAccessAuthenticationRules(object):
@@ -72,10 +73,10 @@ class NetworkAccessAuthenticationRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_authentication_rules(self,
-                                                policy_id,
-                                                headers=None,
-                                                **query_parameters):
+    def get_all_network_access_authentication_rules(self,
+                                                    policy_id,
+                                                    headers=None,
+                                                    **query_parameters):
         """Network Access - Get authentication rules.
 
         Args:
@@ -253,8 +254,8 @@ class NetworkAccessAuthenticationRules(object):
         return self._object_factory('bpm_f2fcf04554db9ea4cdc3a7024322_v3_0_0', _api_response)
 
     def get_network_access_authentication_rule_by_id(self,
+                                                     id,
                                                      policy_id,
-                                                     rule_id,
                                                      headers=None,
                                                      **query_parameters):
         """Network Access - Get rule attributes.
@@ -262,7 +263,7 @@ class NetworkAccessAuthenticationRules(object):
         Args:
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -295,7 +296,7 @@ class NetworkAccessAuthenticationRules(object):
             with_custom_headers = True
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -305,11 +306,11 @@ class NetworkAccessAuthenticationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/api/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/authentication/{ruleId}')
+                 + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -317,11 +318,11 @@ class NetworkAccessAuthenticationRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_da4bb24b7e4d594cb026335a75248e1a_v3_0_0', _api_response)
+        return self._object_factory('bpm_a588d29d5a527388ee8498f746d1f5_v3_0_0', _api_response)
 
     def update_network_access_authentication_rule_by_id(self,
+                                                        id,
                                                         policy_id,
-                                                        rule_id,
                                                         identity_source_id=None,
                                                         if_auth_fail=None,
                                                         if_process_fail=None,
@@ -352,7 +353,7 @@ class NetworkAccessAuthenticationRules(object):
                 of the request body.
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -394,7 +395,7 @@ class NetworkAccessAuthenticationRules(object):
             check_type(payload, dict)
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -404,7 +405,7 @@ class NetworkAccessAuthenticationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -424,11 +425,11 @@ class NetworkAccessAuthenticationRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ed8575d86539534082d6e83ced01c40b_v3_0_0')\
+            self._request_validator('jsd_aa4daefaa3b95ecca521188a43eacbd9_v3_0_0')\
                 .validate(_payload)
 
         e_url = ('/api/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/authentication/{ruleId}')
+                 + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -441,11 +442,11 @@ class NetworkAccessAuthenticationRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_ed8575d86539534082d6e83ced01c40b_v3_0_0', _api_response)
+        return self._object_factory('bpm_aa4daefaa3b95ecca521188a43eacbd9_v3_0_0', _api_response)
 
     def delete_network_access_authentication_rule_by_id(self,
+                                                        id,
                                                         policy_id,
-                                                        rule_id,
                                                         headers=None,
                                                         **query_parameters):
         """Network Access - Delete rule.
@@ -453,7 +454,7 @@ class NetworkAccessAuthenticationRules(object):
         Args:
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -486,7 +487,7 @@ class NetworkAccessAuthenticationRules(object):
             with_custom_headers = True
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -496,11 +497,11 @@ class NetworkAccessAuthenticationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/api/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/authentication/{ruleId}')
+                 + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -508,4 +509,4 @@ class NetworkAccessAuthenticationRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f4bceb4d5500fa2bab08326fd66cb_v3_0_0', _api_response)
+        return self._object_factory('bpm_af104d12b5c5e668af1504feca5c9b1_v3_0_0', _api_response)

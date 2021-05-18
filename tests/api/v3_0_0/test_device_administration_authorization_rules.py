@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_device_admin_authorization_rules(json_schema_validate, obj):
+def is_valid_get_all_device_admin_authorization_rules(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_device_admin_authorization_rules(json_schema_validate, obj):
     return True
 
 
-def get_device_admin_authorization_rules(api):
-    endpoint_result = api.device_administration_authorization_rules.get_device_admin_authorization_rules(
+def get_all_device_admin_authorization_rules(api):
+    endpoint_result = api.device_administration_authorization_rules.get_all_device_admin_authorization_rules(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authorization_rules
-def test_get_device_admin_authorization_rules(api, validator):
+def test_get_all_device_admin_authorization_rules(api, validator):
     try:
-        assert is_valid_get_device_admin_authorization_rules(
+        assert is_valid_get_all_device_admin_authorization_rules(
             validator,
-            get_device_admin_authorization_rules(api)
+            get_all_device_admin_authorization_rules(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_device_admin_authorization_rules(api, validator):
             raise original_e
 
 
-def get_device_admin_authorization_rules_default(api):
-    endpoint_result = api.device_administration_authorization_rules.get_device_admin_authorization_rules(
+def get_all_device_admin_authorization_rules_default(api):
+    endpoint_result = api.device_administration_authorization_rules.get_all_device_admin_authorization_rules(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authorization_rules
-def test_get_device_admin_authorization_rules_default(api, validator):
+def test_get_all_device_admin_authorization_rules_default(api, validator):
     try:
-        assert is_valid_get_device_admin_authorization_rules(
+        assert is_valid_get_all_device_admin_authorization_rules(
             validator,
-            get_device_admin_authorization_rules_default(api)
+            get_all_device_admin_authorization_rules_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -146,14 +146,14 @@ def is_valid_get_device_admin_authorization_rule_by_id(json_schema_validate, obj
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_294f59cbefb9504fb36b3e50c355f1c0_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_51dc966c73c65649a244d507bd53fd19_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_authorization_rule_by_id(api):
     endpoint_result = api.device_administration_authorization_rules.get_device_admin_authorization_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -173,8 +173,8 @@ def test_get_device_admin_authorization_rule_by_id(api, validator):
 
 def get_device_admin_authorization_rule_by_id_default(api):
     endpoint_result = api.device_administration_authorization_rules.get_device_admin_authorization_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -198,7 +198,7 @@ def is_valid_update_device_admin_authorization_rule_by_id(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_cd04558011d055b1ac3386e24728083d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f92e61297eb05379bd9b92bc60735912_v3_0_0').validate(obj.response)
     return True
 
 
@@ -206,11 +206,11 @@ def update_device_admin_authorization_rule_by_id(api):
     endpoint_result = api.device_administration_authorization_rules.update_device_admin_authorization_rule_by_id(
         active_validation=False,
         commands=['string'],
+        id='string',
         payload=None,
         policy_id='string',
         profile='string',
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}},
-        rule_id='string'
+        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
     )
     return endpoint_result
 
@@ -231,8 +231,8 @@ def test_update_device_admin_authorization_rule_by_id(api, validator):
 def update_device_admin_authorization_rule_by_id_default(api):
     endpoint_result = api.device_administration_authorization_rules.update_device_admin_authorization_rule_by_id(
         active_validation=False,
+        id='string',
         policy_id='string',
-        rule_id='string',
         commands=None,
         payload=None,
         profile=None,
@@ -260,14 +260,14 @@ def is_valid_delete_device_admin_authorization_rule_by_id(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f130b53af83c5b7baa2acd190b57fd75_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_60fb4ef0633057a1acdc47e23b120073_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_authorization_rule_by_id(api):
     endpoint_result = api.device_administration_authorization_rules.delete_device_admin_authorization_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -287,8 +287,8 @@ def test_delete_device_admin_authorization_rule_by_id(api, validator):
 
 def delete_device_admin_authorization_rule_by_id_default(api):
     endpoint_result = api.device_administration_authorization_rules.delete_device_admin_authorization_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 

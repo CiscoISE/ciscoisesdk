@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getNetworkAccessDictionariesAuthentication data model.
+"""Identity Services Engine getAllNetworkAccessDictionariesAuthentication data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorAb96D3D76De5D05Bbac1F27Feacb7B0(object):
-    """getNetworkAccessDictionariesAuthentication request schema
+    """getAllNetworkAccessDictionariesAuthentication request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorAb96D3D76De5D05Bbac1F27Feacb7B0, self).__init__()

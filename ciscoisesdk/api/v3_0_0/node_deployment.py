@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NodeDeployment(object):
@@ -72,9 +73,9 @@ class NodeDeployment(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_nodes(self,
-                  headers=None,
-                  **query_parameters):
+    def get_all_nodes(self,
+                      headers=None,
+                      **query_parameters):
         """Discovers all deployment nodes in the cluster. It provides basic
         information about each of deployed nodes in the cluster
         like Hostname, personas, status, roles and services. .

@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NetworkAccessDictionaryAttributesList(object):
@@ -72,9 +73,9 @@ class NetworkAccessDictionaryAttributesList(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_dictionaries_authentication(self,
-                                                       headers=None,
-                                                       **query_parameters):
+    def get_all_network_access_dictionaries_authentication(self,
+                                                           headers=None,
+                                                           **query_parameters):
         """Network Access - Returns list of dictionary attributes for
         authentication.
 
@@ -129,9 +130,9 @@ class NetworkAccessDictionaryAttributesList(object):
 
         return self._object_factory('bpm_ab96d3d76de5d05bbac1f27feacb7b0_v3_0_0', _api_response)
 
-    def get_network_access_dictionaries_authorization(self,
-                                                      headers=None,
-                                                      **query_parameters):
+    def get_all_network_access_dictionaries_authorization(self,
+                                                          headers=None,
+                                                          **query_parameters):
         """Network Access - Returns list of dictionary attributes for
         authorization.
 
@@ -185,9 +186,9 @@ class NetworkAccessDictionaryAttributesList(object):
 
         return self._object_factory('bpm_f68aee0cdb425390b3ca90b0b46e6e2c_v3_0_0', _api_response)
 
-    def get_network_access_dictionaries_policyset(self,
-                                                  headers=None,
-                                                  **query_parameters):
+    def get_all_network_access_dictionaries_policyset(self,
+                                                      headers=None,
+                                                      **query_parameters):
         """Network Access - Returns list of dictionary attributes for
         policyset.
 

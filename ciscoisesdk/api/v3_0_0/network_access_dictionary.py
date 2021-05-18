@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NetworkAccessDictionary(object):
@@ -179,10 +180,10 @@ class NetworkAccessDictionary(object):
 
         return self._object_factory('bpm_a57687cef65891a6f48dd17f456c4e_v3_0_0', _api_response)
 
-    def get_network_access_dictionary(self,
-                                      name,
-                                      headers=None,
-                                      **query_parameters):
+    def get_network_access_dictionary_by_name(self,
+                                              name,
+                                              headers=None,
+                                              **query_parameters):
         """GET a dictionary by name.
 
         Args:

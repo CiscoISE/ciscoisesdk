@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class DeviceAdministrationConditions(object):
@@ -72,9 +73,9 @@ class DeviceAdministrationConditions(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_device_admin_conditions(self,
-                                    headers=None,
-                                    **query_parameters):
+    def get_all_device_admin_conditions(self,
+                                        headers=None,
+                                        **query_parameters):
         """Device Admin - Returns list of library conditions.
 
         Args:
@@ -326,9 +327,9 @@ class DeviceAdministrationConditions(object):
 
         return self._object_factory('bpm_abc25887a5daab1216195e08cbd49_v3_0_0', _api_response)
 
-    def get_device_admin_conditions_for_policy_set(self,
-                                                   headers=None,
-                                                   **query_parameters):
+    def get_all_device_admin_conditions_for_policy_set(self,
+                                                       headers=None,
+                                                       **query_parameters):
         """Device Admin - Returns list of library conditions for policy
         sets.
 
@@ -382,9 +383,9 @@ class DeviceAdministrationConditions(object):
 
         return self._object_factory('bpm_a40f9e169a95d6dbf3ebbb020291007_v3_0_0', _api_response)
 
-    def get_device_admin_conditions_for_authentication_rule(self,
-                                                            headers=None,
-                                                            **query_parameters):
+    def get_all_device_admin_conditions_for_authentication_rule(self,
+                                                                headers=None,
+                                                                **query_parameters):
         """Device Admin - Returns list of library conditions for
         authentication rules.
 
@@ -438,9 +439,9 @@ class DeviceAdministrationConditions(object):
 
         return self._object_factory('bpm_f1b8eaf23e795f1a8525eb5905187aa9_v3_0_0', _api_response)
 
-    def get_device_admin_conditions_for_authorization_rule(self,
-                                                           headers=None,
-                                                           **query_parameters):
+    def get_all_device_admin_conditions_for_authorization_rule(self,
+                                                               headers=None,
+                                                               **query_parameters):
         """Device Admin - Returns list of library conditions for
         authorization rules.
 
@@ -494,15 +495,14 @@ class DeviceAdministrationConditions(object):
 
         return self._object_factory('bpm_ecff2eb67fe5591f8d9026f928a0d8aa_v3_0_0', _api_response)
 
-    def get_device_admin_condition_by_condition_id(self,
-                                                   condition_id,
-                                                   headers=None,
-                                                   **query_parameters):
+    def get_device_admin_condition_by_id(self,
+                                         id,
+                                         headers=None,
+                                         **query_parameters):
         """Device Admin - Returns a library condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -533,7 +533,7 @@ class DeviceAdministrationConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -542,10 +542,10 @@ class DeviceAdministrationConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/device-admin/condition/{conditionId}')
+        e_url = ('/api/v1/policy/device-admin/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -553,32 +553,31 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_cc6dfd258c49529db4c580411afe868b_v3_0_0', _api_response)
+        return self._object_factory('bpm_dec8e9d819b5bc088e351b69efd0369_v3_0_0', _api_response)
 
-    def update_device_admin_condition_by_condition_id(self,
-                                                      condition_id,
-                                                      attribute_id=None,
-                                                      attribute_name=None,
-                                                      attribute_value=None,
-                                                      children=None,
-                                                      condition_type=None,
-                                                      dates_range=None,
-                                                      dates_range_exception=None,
-                                                      description=None,
-                                                      dictionary_name=None,
-                                                      dictionary_value=None,
-                                                      hours_range=None,
-                                                      hours_range_exception=None,
-                                                      id=None,
-                                                      is_negate=None,
-                                                      name=None,
-                                                      operator=None,
-                                                      week_days=None,
-                                                      week_days_exception=None,
-                                                      headers=None,
-                                                      payload=None,
-                                                      active_validation=True,
-                                                      **query_parameters):
+    def update_device_admin_condition_by_id(self,
+                                            id,
+                                            attribute_id=None,
+                                            attribute_name=None,
+                                            attribute_value=None,
+                                            children=None,
+                                            condition_type=None,
+                                            dates_range=None,
+                                            dates_range_exception=None,
+                                            description=None,
+                                            dictionary_name=None,
+                                            dictionary_value=None,
+                                            hours_range=None,
+                                            hours_range_exception=None,
+                                            is_negate=None,
+                                            name=None,
+                                            operator=None,
+                                            week_days=None,
+                                            week_days_exception=None,
+                                            headers=None,
+                                            payload=None,
+                                            active_validation=True,
+                                            **query_parameters):
         """Device Admin - Update library condition.
 
         Args:
@@ -647,8 +646,7 @@ class DeviceAdministrationConditions(object):
                 Available values are 'Sunday', 'Monday',
                 'Tuesday', 'Wednesday', 'Thursday',
                 'Friday' and 'Saturday').
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -688,7 +686,7 @@ class DeviceAdministrationConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -697,7 +695,7 @@ class DeviceAdministrationConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -743,10 +741,10 @@ class DeviceAdministrationConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ab05dc6105e47b391030a5fe50ecb_v3_0_0')\
+            self._request_validator('jsd_ed5bf99062d5dee87fe5cd96e360ec2_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/device-admin/condition/{conditionId}')
+        e_url = ('/api/v1/policy/device-admin/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -759,17 +757,16 @@ class DeviceAdministrationConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_ab05dc6105e47b391030a5fe50ecb_v3_0_0', _api_response)
+        return self._object_factory('bpm_ed5bf99062d5dee87fe5cd96e360ec2_v3_0_0', _api_response)
 
-    def delete_device_admin_condition_by_condition_id(self,
-                                                      condition_id,
-                                                      headers=None,
-                                                      **query_parameters):
+    def delete_device_admin_condition_by_id(self,
+                                            id,
+                                            headers=None,
+                                            **query_parameters):
         """Device Admin - Delete a library condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -800,7 +797,7 @@ class DeviceAdministrationConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -809,10 +806,10 @@ class DeviceAdministrationConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/device-admin/condition/{conditionId}')
+        e_url = ('/api/v1/policy/device-admin/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -820,17 +817,16 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c638f98ea11b5c3882966cb0d1758a64_v3_0_0', _api_response)
+        return self._object_factory('bpm_ea5b356b4bc053068a0052b6c807d286_v3_0_0', _api_response)
 
-    def get_device_admin_condition_by_condition_name(self,
-                                                     condition_name,
-                                                     headers=None,
-                                                     **query_parameters):
+    def get_device_admin_condition_by_name(self,
+                                           name,
+                                           headers=None,
+                                           **query_parameters):
         """Device Admin - Returns a library condition.
 
         Args:
-            condition_name(basestring): conditionName path
-                parameter. Condition name.
+            name(basestring): name path parameter. Condition name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -861,7 +857,7 @@ class DeviceAdministrationConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
 
         _params = {
@@ -870,11 +866,10 @@ class DeviceAdministrationConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionName': condition_name,
+            'name': name,
         }
 
-        e_url = ('/api/v1/policy/device-admin/condition-by-'
-                 + 'name/{conditionName}')
+        e_url = ('/api/v1/policy/device-admin/condition-by-name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -882,17 +877,16 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f9f734e2f058f59e13801f1ed4780e_v3_0_0', _api_response)
+        return self._object_factory('bpm_ab7717877a539b9b87f499817aee15_v3_0_0', _api_response)
 
-    def delete_device_admin_condition_by_condition_name(self,
-                                                        condition_name,
-                                                        headers=None,
-                                                        **query_parameters):
+    def delete_device_admin_condition_by_name(self,
+                                              name,
+                                              headers=None,
+                                              **query_parameters):
         """NDevice Admin - Delete a library condition using condition Name.
 
         Args:
-            condition_name(basestring): conditionName path
-                parameter. Condition name.
+            name(basestring): name path parameter. Condition name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -923,7 +917,7 @@ class DeviceAdministrationConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
 
         _params = {
@@ -932,11 +926,10 @@ class DeviceAdministrationConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionName': condition_name,
+            'name': name,
         }
 
-        e_url = ('/api/v1/policy/device-admin/condition-by-'
-                 + 'name/{conditionName}')
+        e_url = ('/api/v1/policy/device-admin/condition-by-name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -944,32 +937,31 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_af2cc85852f52b0aad5a067b2c69286_v3_0_0', _api_response)
+        return self._object_factory('bpm_e56dd3caaf62589f9e827d03e8427467_v3_0_0', _api_response)
 
-    def update_device_admin_condition_by_condition_name(self,
-                                                        condition_name,
-                                                        attribute_id=None,
-                                                        attribute_name=None,
-                                                        attribute_value=None,
-                                                        children=None,
-                                                        condition_type=None,
-                                                        dates_range=None,
-                                                        dates_range_exception=None,
-                                                        description=None,
-                                                        dictionary_name=None,
-                                                        dictionary_value=None,
-                                                        hours_range=None,
-                                                        hours_range_exception=None,
-                                                        id=None,
-                                                        is_negate=None,
-                                                        name=None,
-                                                        operator=None,
-                                                        week_days=None,
-                                                        week_days_exception=None,
-                                                        headers=None,
-                                                        payload=None,
-                                                        active_validation=True,
-                                                        **query_parameters):
+    def update_device_admin_condition_by_name(self,
+                                              name,
+                                              attribute_id=None,
+                                              attribute_name=None,
+                                              attribute_value=None,
+                                              children=None,
+                                              condition_type=None,
+                                              dates_range=None,
+                                              dates_range_exception=None,
+                                              description=None,
+                                              dictionary_name=None,
+                                              dictionary_value=None,
+                                              hours_range=None,
+                                              hours_range_exception=None,
+                                              id=None,
+                                              is_negate=None,
+                                              operator=None,
+                                              week_days=None,
+                                              week_days_exception=None,
+                                              headers=None,
+                                              payload=None,
+                                              active_validation=True,
+                                              **query_parameters):
         """Device Admin - Update library condition using condition name.
 
         Args:
@@ -1038,8 +1030,7 @@ class DeviceAdministrationConditions(object):
                 Available values are 'Sunday', 'Monday',
                 'Tuesday', 'Wednesday', 'Thursday',
                 'Friday' and 'Saturday').
-            condition_name(basestring): conditionName path
-                parameter. Condition name.
+            name(basestring): name path parameter. Condition name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -1079,7 +1070,7 @@ class DeviceAdministrationConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(condition_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
 
         _params = {
@@ -1088,7 +1079,7 @@ class DeviceAdministrationConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionName': condition_name,
+            'name': name,
         }
         if is_xml_payload:
             _payload = payload
@@ -1134,11 +1125,10 @@ class DeviceAdministrationConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e5355db6a478daa29f318303_v3_0_0')\
+            self._request_validator('jsd_d1e1fc98a5588b8bbdda06c4fc012_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/device-admin/condition-by-'
-                 + 'name/{conditionName}')
+        e_url = ('/api/v1/policy/device-admin/condition-by-name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1151,4 +1141,4 @@ class DeviceAdministrationConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_e5355db6a478daa29f318303_v3_0_0', _api_response)
+        return self._object_factory('bpm_d1e1fc98a5588b8bbdda06c4fc012_v3_0_0', _api_response)

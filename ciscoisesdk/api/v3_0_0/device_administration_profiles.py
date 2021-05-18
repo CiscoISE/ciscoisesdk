@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class DeviceAdministrationProfiles(object):
@@ -72,9 +73,9 @@ class DeviceAdministrationProfiles(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_device_admin_profiles(self,
-                                  headers=None,
-                                  **query_parameters):
+    def get_all_device_admin_profiles(self,
+                                      headers=None,
+                                      **query_parameters):
         """Device Admin - Returns list of profiles.
 
         Args:

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getDeviceAdminDictionariesAuthorization data model.
+"""Identity Services Engine getAllDeviceAdminDictionariesAuthorization data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,8 @@ from builtins import *
 
 
 class JSONSchemaValidatorFc9Ecf1E469154Ae845236Dbed070904(object):
-    """getDeviceAdminDictionariesAuthorization request schema definition."""
+    """getAllDeviceAdminDictionariesAuthorization request schema
+    definition."""
     def __init__(self):
         super(JSONSchemaValidatorFc9Ecf1E469154Ae845236Dbed070904, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

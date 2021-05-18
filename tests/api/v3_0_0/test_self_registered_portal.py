@@ -203,7 +203,7 @@ def test_get_self_registered_portal_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_update_self_reg_portal_by_id(json_schema_validate, obj):
+def is_valid_update_self_registered_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -214,8 +214,8 @@ def is_valid_update_self_reg_portal_by_id(json_schema_validate, obj):
     return True
 
 
-def update_self_reg_portal_by_id(api):
-    endpoint_result = api.self_registered_portal.update_self_reg_portal_by_id(
+def update_self_registered_portal_by_id(api):
+    endpoint_result = api.self_registered_portal.update_self_registered_portal_by_id(
         active_validation=False,
         customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
         description='string',
@@ -229,11 +229,11 @@ def update_self_reg_portal_by_id(api):
 
 
 @pytest.mark.self_registered_portal
-def test_update_self_reg_portal_by_id(api, validator):
+def test_update_self_registered_portal_by_id(api, validator):
     try:
-        assert is_valid_update_self_reg_portal_by_id(
+        assert is_valid_update_self_registered_portal_by_id(
             validator,
-            update_self_reg_portal_by_id(api)
+            update_self_registered_portal_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -241,8 +241,8 @@ def test_update_self_reg_portal_by_id(api, validator):
             raise original_e
 
 
-def update_self_reg_portal_by_id_default(api):
-    endpoint_result = api.self_registered_portal.update_self_reg_portal_by_id(
+def update_self_registered_portal_by_id_default(api):
+    endpoint_result = api.self_registered_portal.update_self_registered_portal_by_id(
         active_validation=False,
         id='string',
         customizations=None,
@@ -256,18 +256,18 @@ def update_self_reg_portal_by_id_default(api):
 
 
 @pytest.mark.self_registered_portal
-def test_update_self_reg_portal_by_id_default(api, validator):
+def test_update_self_registered_portal_by_id_default(api, validator):
     try:
-        assert is_valid_update_self_reg_portal_by_id(
+        assert is_valid_update_self_registered_portal_by_id(
             validator,
-            update_self_reg_portal_by_id_default(api)
+            update_self_registered_portal_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_self_reg_portal_by_id(json_schema_validate, obj):
+def is_valid_delete_self_registered_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -278,19 +278,19 @@ def is_valid_delete_self_reg_portal_by_id(json_schema_validate, obj):
     return True
 
 
-def delete_self_reg_portal_by_id(api):
-    endpoint_result = api.self_registered_portal.delete_self_reg_portal_by_id(
+def delete_self_registered_portal_by_id(api):
+    endpoint_result = api.self_registered_portal.delete_self_registered_portal_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.self_registered_portal
-def test_delete_self_reg_portal_by_id(api, validator):
+def test_delete_self_registered_portal_by_id(api, validator):
     try:
-        assert is_valid_delete_self_reg_portal_by_id(
+        assert is_valid_delete_self_registered_portal_by_id(
             validator,
-            delete_self_reg_portal_by_id(api)
+            delete_self_registered_portal_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -298,19 +298,19 @@ def test_delete_self_reg_portal_by_id(api, validator):
             raise original_e
 
 
-def delete_self_reg_portal_by_id_default(api):
-    endpoint_result = api.self_registered_portal.delete_self_reg_portal_by_id(
+def delete_self_registered_portal_by_id_default(api):
+    endpoint_result = api.self_registered_portal.delete_self_registered_portal_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.self_registered_portal
-def test_delete_self_reg_portal_by_id_default(api, validator):
+def test_delete_self_registered_portal_by_id_default(api, validator):
     try:
-        assert is_valid_delete_self_reg_portal_by_id(
+        assert is_valid_delete_self_registered_portal_by_id(
             validator,
-            delete_self_reg_portal_by_id_default(api)
+            delete_self_registered_portal_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

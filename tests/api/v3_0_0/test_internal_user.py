@@ -221,7 +221,7 @@ def test_internaluser_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_update_internaluser_by_id(json_schema_validate, obj):
+def is_valid_update_internal_user_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -232,8 +232,8 @@ def is_valid_update_internaluser_by_id(json_schema_validate, obj):
     return True
 
 
-def update_internaluser_by_id(api):
-    endpoint_result = api.internal_user.update_internaluser_by_id(
+def update_internal_user_by_id(api):
+    endpoint_result = api.internal_user.update_internal_user_by_id(
         active_validation=False,
         change_password=True,
         custom_attributes={'key1': 'string', 'key2': 'string'},
@@ -256,11 +256,11 @@ def update_internaluser_by_id(api):
 
 
 @pytest.mark.internal_user
-def test_update_internaluser_by_id(api, validator):
+def test_update_internal_user_by_id(api, validator):
     try:
-        assert is_valid_update_internaluser_by_id(
+        assert is_valid_update_internal_user_by_id(
             validator,
-            update_internaluser_by_id(api)
+            update_internal_user_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -268,8 +268,8 @@ def test_update_internaluser_by_id(api, validator):
             raise original_e
 
 
-def update_internaluser_by_id_default(api):
-    endpoint_result = api.internal_user.update_internaluser_by_id(
+def update_internal_user_by_id_default(api):
+    endpoint_result = api.internal_user.update_internal_user_by_id(
         active_validation=False,
         id='string',
         change_password=None,
@@ -292,18 +292,18 @@ def update_internaluser_by_id_default(api):
 
 
 @pytest.mark.internal_user
-def test_update_internaluser_by_id_default(api, validator):
+def test_update_internal_user_by_id_default(api, validator):
     try:
-        assert is_valid_update_internaluser_by_id(
+        assert is_valid_update_internal_user_by_id(
             validator,
-            update_internaluser_by_id_default(api)
+            update_internal_user_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_internaluser_by_id(json_schema_validate, obj):
+def is_valid_delete_internal_user_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -314,19 +314,19 @@ def is_valid_delete_internaluser_by_id(json_schema_validate, obj):
     return True
 
 
-def delete_internaluser_by_id(api):
-    endpoint_result = api.internal_user.delete_internaluser_by_id(
+def delete_internal_user_by_id(api):
+    endpoint_result = api.internal_user.delete_internal_user_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.internal_user
-def test_delete_internaluser_by_id(api, validator):
+def test_delete_internal_user_by_id(api, validator):
     try:
-        assert is_valid_delete_internaluser_by_id(
+        assert is_valid_delete_internal_user_by_id(
             validator,
-            delete_internaluser_by_id(api)
+            delete_internal_user_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -334,19 +334,19 @@ def test_delete_internaluser_by_id(api, validator):
             raise original_e
 
 
-def delete_internaluser_by_id_default(api):
-    endpoint_result = api.internal_user.delete_internaluser_by_id(
+def delete_internal_user_by_id_default(api):
+    endpoint_result = api.internal_user.delete_internal_user_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.internal_user
-def test_delete_internaluser_by_id_default(api, validator):
+def test_delete_internal_user_by_id_default(api, validator):
     try:
-        assert is_valid_delete_internaluser_by_id(
+        assert is_valid_delete_internal_user_by_id(
             validator,
-            delete_internaluser_by_id_default(api)
+            delete_internal_user_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

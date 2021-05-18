@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteSelfRegPortalById data model.
+"""Identity Services Engine deleteSelfRegisteredPortalById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF9Ada2E275Fa2934FDb4825266A2C(object):
-    """deleteSelfRegPortalById request schema definition."""
+    """deleteSelfRegisteredPortalById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF9Ada2E275Fa2934FDb4825266A2C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

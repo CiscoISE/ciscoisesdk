@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NetworkAccessConditions(object):
@@ -72,9 +73,9 @@ class NetworkAccessConditions(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_conditions(self,
-                                      headers=None,
-                                      **query_parameters):
+    def get_all_network_access_conditions(self,
+                                          headers=None,
+                                          **query_parameters):
         """Network Access - Returns list of library conditions.
 
         Args:
@@ -326,9 +327,9 @@ class NetworkAccessConditions(object):
 
         return self._object_factory('bpm_e7bd468ee94f53869e52e84454efd0e6_v3_0_0', _api_response)
 
-    def get_network_access_conditions_for_policy_set(self,
-                                                     headers=None,
-                                                     **query_parameters):
+    def get_all_network_access_conditions_for_policy_set(self,
+                                                         headers=None,
+                                                         **query_parameters):
         """Network Access - Returns list of library conditions for
         PolicySet scope.
 
@@ -382,9 +383,9 @@ class NetworkAccessConditions(object):
 
         return self._object_factory('bpm_c0984cde5e925c209ab87472ab905476_v3_0_0', _api_response)
 
-    def get_network_access_conditions_for_authentication_rules(self,
-                                                               headers=None,
-                                                               **query_parameters):
+    def get_all_network_access_conditions_for_authentication_rules(self,
+                                                                   headers=None,
+                                                                   **query_parameters):
         """Network Access - Returns list of library conditions for
         Authentication rules scope.
 
@@ -438,9 +439,9 @@ class NetworkAccessConditions(object):
 
         return self._object_factory('bpm_e34177d675622acd0a532f5b7c41b_v3_0_0', _api_response)
 
-    def get_network_access_conditions_for_authorization_rule(self,
-                                                             headers=None,
-                                                             **query_parameters):
+    def get_all_network_access_conditions_for_authorization_rule(self,
+                                                                 headers=None,
+                                                                 **query_parameters):
         """Network Access - Returns list of library conditions for
         Authorization rules scope.
 
@@ -494,15 +495,14 @@ class NetworkAccessConditions(object):
 
         return self._object_factory('bpm_fff985b5159a0aa52bfe9e62ba7_v3_0_0', _api_response)
 
-    def get_network_access_condition_by_condition_id(self,
-                                                     condition_id,
-                                                     headers=None,
-                                                     **query_parameters):
+    def get_network_access_condition_by_id(self,
+                                           id,
+                                           headers=None,
+                                           **query_parameters):
         """Network Access - Returns a library condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -533,7 +533,7 @@ class NetworkAccessConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -542,10 +542,10 @@ class NetworkAccessConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/network-access/condition/{conditionId}')
+        e_url = ('/api/v1/policy/network-access/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -553,32 +553,31 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e4686a7511884fd3eee7c582efb_v3_0_0', _api_response)
+        return self._object_factory('bpm_f2b0a67d389a592dba005895594b77cc_v3_0_0', _api_response)
 
-    def update_network_access_condition_by_condition_id(self,
-                                                        condition_id,
-                                                        attribute_id=None,
-                                                        attribute_name=None,
-                                                        attribute_value=None,
-                                                        children=None,
-                                                        condition_type=None,
-                                                        dates_range=None,
-                                                        dates_range_exception=None,
-                                                        description=None,
-                                                        dictionary_name=None,
-                                                        dictionary_value=None,
-                                                        hours_range=None,
-                                                        hours_range_exception=None,
-                                                        id=None,
-                                                        is_negate=None,
-                                                        name=None,
-                                                        operator=None,
-                                                        week_days=None,
-                                                        week_days_exception=None,
-                                                        headers=None,
-                                                        payload=None,
-                                                        active_validation=True,
-                                                        **query_parameters):
+    def update_network_access_condition_by_id(self,
+                                              id,
+                                              attribute_id=None,
+                                              attribute_name=None,
+                                              attribute_value=None,
+                                              children=None,
+                                              condition_type=None,
+                                              dates_range=None,
+                                              dates_range_exception=None,
+                                              description=None,
+                                              dictionary_name=None,
+                                              dictionary_value=None,
+                                              hours_range=None,
+                                              hours_range_exception=None,
+                                              is_negate=None,
+                                              name=None,
+                                              operator=None,
+                                              week_days=None,
+                                              week_days_exception=None,
+                                              headers=None,
+                                              payload=None,
+                                              active_validation=True,
+                                              **query_parameters):
         """Network Access - Update library condition.
 
         Args:
@@ -647,8 +646,7 @@ class NetworkAccessConditions(object):
                 Available values are 'Sunday', 'Monday',
                 'Tuesday', 'Wednesday', 'Thursday',
                 'Friday' and 'Saturday').
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -688,7 +686,7 @@ class NetworkAccessConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -697,7 +695,7 @@ class NetworkAccessConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -743,10 +741,10 @@ class NetworkAccessConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_3bfe54779ae1b3edccb16fa7_v3_0_0')\
+            self._request_validator('jsd_e405a20316825460a1f37a2f161e7ac5_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/network-access/condition/{conditionId}')
+        e_url = ('/api/v1/policy/network-access/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -759,17 +757,16 @@ class NetworkAccessConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_3bfe54779ae1b3edccb16fa7_v3_0_0', _api_response)
+        return self._object_factory('bpm_e405a20316825460a1f37a2f161e7ac5_v3_0_0', _api_response)
 
-    def delete_network_access_condition_by_condition_id(self,
-                                                        condition_id,
-                                                        headers=None,
-                                                        **query_parameters):
+    def delete_network_access_condition_by_id(self,
+                                              id,
+                                              headers=None,
+                                              **query_parameters):
         """Network Access - Delete a library condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -800,7 +797,7 @@ class NetworkAccessConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -809,10 +806,10 @@ class NetworkAccessConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/network-access/condition/{conditionId}')
+        e_url = ('/api/v1/policy/network-access/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -820,17 +817,16 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d6d09f7a5084ac7036167214b0e1_v3_0_0', _api_response)
+        return self._object_factory('bpm_d87a24994c514d955149d33e1a99fb_v3_0_0', _api_response)
 
-    def get_network_access_condition_by_condition_name(self,
-                                                       condition_name,
-                                                       headers=None,
-                                                       **query_parameters):
+    def get_network_access_condition_by_name(self,
+                                             name,
+                                             headers=None,
+                                             **query_parameters):
         """Network Access - Returns a library condition.
 
         Args:
-            condition_name(basestring): conditionName path
-                parameter. Condition name.
+            name(basestring): name path parameter. Condition name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -861,7 +857,7 @@ class NetworkAccessConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
 
         _params = {
@@ -870,11 +866,10 @@ class NetworkAccessConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionName': condition_name,
+            'name': name,
         }
 
-        e_url = ('/api/v1/policy/network-access/condition-by-'
-                 + 'name/{conditionName}')
+        e_url = ('/api/v1/policy/network-access/condition-by-name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -882,18 +877,17 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a70be83785373b264d21e84fbfa7d_v3_0_0', _api_response)
+        return self._object_factory('bpm_ea5e5a095d05598db7b99ddfd1d7f7fa_v3_0_0', _api_response)
 
-    def delete_network_access_condition_by_condition_name(self,
-                                                          condition_name,
-                                                          headers=None,
-                                                          **query_parameters):
+    def delete_network_access_condition_by_name(self,
+                                                name,
+                                                headers=None,
+                                                **query_parameters):
         """Network Access - Delete a library condition using condition
         Name.
 
         Args:
-            condition_name(basestring): conditionName path
-                parameter. Condition name.
+            name(basestring): name path parameter. Condition name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -924,7 +918,7 @@ class NetworkAccessConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
 
         _params = {
@@ -933,11 +927,10 @@ class NetworkAccessConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionName': condition_name,
+            'name': name,
         }
 
-        e_url = ('/api/v1/policy/network-access/condition-by-'
-                 + 'name/{conditionName}')
+        e_url = ('/api/v1/policy/network-access/condition-by-name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -945,32 +938,31 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c052306febd5865ada5df348e18a889_v3_0_0', _api_response)
+        return self._object_factory('bpm_beebf3641335579e99c08f038303601e_v3_0_0', _api_response)
 
-    def update_network_access_condition_by_condition_name(self,
-                                                          condition_name,
-                                                          attribute_id=None,
-                                                          attribute_name=None,
-                                                          attribute_value=None,
-                                                          children=None,
-                                                          condition_type=None,
-                                                          dates_range=None,
-                                                          dates_range_exception=None,
-                                                          description=None,
-                                                          dictionary_name=None,
-                                                          dictionary_value=None,
-                                                          hours_range=None,
-                                                          hours_range_exception=None,
-                                                          id=None,
-                                                          is_negate=None,
-                                                          name=None,
-                                                          operator=None,
-                                                          week_days=None,
-                                                          week_days_exception=None,
-                                                          headers=None,
-                                                          payload=None,
-                                                          active_validation=True,
-                                                          **query_parameters):
+    def update_network_access_condition_by_name(self,
+                                                name,
+                                                attribute_id=None,
+                                                attribute_name=None,
+                                                attribute_value=None,
+                                                children=None,
+                                                condition_type=None,
+                                                dates_range=None,
+                                                dates_range_exception=None,
+                                                description=None,
+                                                dictionary_name=None,
+                                                dictionary_value=None,
+                                                hours_range=None,
+                                                hours_range_exception=None,
+                                                id=None,
+                                                is_negate=None,
+                                                operator=None,
+                                                week_days=None,
+                                                week_days_exception=None,
+                                                headers=None,
+                                                payload=None,
+                                                active_validation=True,
+                                                **query_parameters):
         """Network Access - Update library condition using condition name.
 
         Args:
@@ -1039,8 +1031,7 @@ class NetworkAccessConditions(object):
                 Available values are 'Sunday', 'Monday',
                 'Tuesday', 'Wednesday', 'Thursday',
                 'Friday' and 'Saturday').
-            condition_name(basestring): conditionName path
-                parameter. Condition name.
+            name(basestring): name path parameter. Condition name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -1080,7 +1071,7 @@ class NetworkAccessConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(condition_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
 
         _params = {
@@ -1089,7 +1080,7 @@ class NetworkAccessConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionName': condition_name,
+            'name': name,
         }
         if is_xml_payload:
             _payload = payload
@@ -1135,11 +1126,10 @@ class NetworkAccessConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_dee8ff57265324a99fa2011bb4dc5f_v3_0_0')\
+            self._request_validator('jsd_c45ba035019803dacdbf15cf193_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/network-access/condition-by-'
-                 + 'name/{conditionName}')
+        e_url = ('/api/v1/policy/network-access/condition-by-name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1152,4 +1142,4 @@ class NetworkAccessConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_dee8ff57265324a99fa2011bb4dc5f_v3_0_0', _api_response)
+        return self._object_factory('bpm_c45ba035019803dacdbf15cf193_v3_0_0', _api_response)

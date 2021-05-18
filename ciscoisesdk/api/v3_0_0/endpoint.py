@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class Endpoint(object):
@@ -151,8 +152,8 @@ class Endpoint(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, int)
-        check_type(size, int)
+        check_type(page, (int, basestring, list))
+        check_type(size, (int, basestring, list))
         check_type(sortasc, basestring)
         check_type(sortdec, basestring)
         check_type(filter, (basestring, list, set, tuple))
@@ -187,6 +188,136 @@ class Endpoint(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_b7f7285d71be4645db91b0fc74_v3_0_0', _api_response)
+
+    def get_all_endpoints_generator(self,
+                                    filter=None,
+                                    filter_type=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdec=None,
+                                    headers=None,
+                                    **query_parameters):
+        """Get all Endpoint.
+
+        Args:
+            page(int): page query parameter. Page number.
+            size(int): size query parameter. Number of objects
+                returned per page.
+            sortasc(basestring): sortasc query parameter. sort asc.
+            sortdec(basestring): sortdec query parameter. sort desc.
+            filter(basestring, list, set, tuple): filter query
+                parameter.               **Simple
+                filtering** should be available through
+                the filter query string parameter. The
+                structure of a filter is a triplet of
+                field operator and value separated with
+                dots. More than one filter can be sent.
+                The logical operator common to ALL
+                filter criteria will be by default AND,
+                and can be changed by using the
+                "filterType=or" query string parameter.
+                Each resource Data model description
+                should specify if an attribute is a
+                filtered field.              (Operator:
+                Description),
+                (EQ: Equals),               (NEQ: Not
+                Equals),               (GT: Greater
+                Than),               (LT: Less Then),
+                (STARTSW: Starts With),
+                (NSTARTSW: Not Starts With),
+                (ENDSW: Ends With),
+                (NENDSW: Not Ends With),
+                (CONTAINS: Contains),
+                (NCONTAINS: Not Contains),
+                .
+            filter_type(basestring): filterType query parameter. The
+                logical operator common to ALL filter
+                criteria will be by default AND, and can
+                be changed by using the parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            Generator: A generator object containing the following object.
+              + RestResponse: REST response with following properties:
+                  - headers(MyDict): response headers.
+                  - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                        or the bracket notation.
+                  - content(bytes): representation of the request's response
+                  - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(page, (int, basestring, list))
+        check_type(size, (int, basestring, list))
+        check_type(sortasc, basestring)
+        check_type(sortdec, basestring)
+        check_type(filter, (basestring, list, set, tuple))
+        check_type(filter_type, basestring)
+
+        _params = {
+            'page':
+                page,
+            'size':
+                size,
+            'sortasc':
+                sortasc,
+            'sortdec':
+                sortdec,
+            'filter':
+                filter,
+            'filterType':
+                filter_type,
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/ers/config/endpoint')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        yield self._object_factory('bpm_b7f7285d71be4645db91b0fc74_v3_0_0', _api_response)
+        if _api_response.response and _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", ""):
+            url = _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", "")
+            _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
+            _size = _query_params.get('size')
+            _page = _query_params.get('page')
+            yield from self.get_all_endpoints_generator(headers=headers,
+                                                        filter=filter,
+                                                        filter_type=filter_type,
+                                                        sortasc=sortasc,
+                                                        sortdec=sortdec,
+                                                        page=_page,
+                                                        size=_size,
+                                                        **query_parameters)
 
     def create_endpoint(self,
                         custom_attributes=None,

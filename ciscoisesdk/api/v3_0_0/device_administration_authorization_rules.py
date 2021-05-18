@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class DeviceAdministrationAuthorizationRules(object):
@@ -72,10 +73,10 @@ class DeviceAdministrationAuthorizationRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_device_admin_authorization_rules(self,
-                                             policy_id,
-                                             headers=None,
-                                             **query_parameters):
+    def get_all_device_admin_authorization_rules(self,
+                                                 policy_id,
+                                                 headers=None,
+                                                 **query_parameters):
         """Device Admin - Get authorization rules.
 
         Args:
@@ -242,8 +243,8 @@ class DeviceAdministrationAuthorizationRules(object):
         return self._object_factory('bpm_a03a30be865ca599e77c63a332978b_v3_0_0', _api_response)
 
     def get_device_admin_authorization_rule_by_id(self,
+                                                  id,
                                                   policy_id,
-                                                  rule_id,
                                                   headers=None,
                                                   **query_parameters):
         """Device Admin - Get authorization rule attributes.
@@ -251,7 +252,7 @@ class DeviceAdministrationAuthorizationRules(object):
         Args:
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -284,7 +285,7 @@ class DeviceAdministrationAuthorizationRules(object):
             with_custom_headers = True
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -294,11 +295,11 @@ class DeviceAdministrationAuthorizationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/api/v1/policy/device-admin/policy-'
-                 + 'set/{policyId}/authorization/{ruleId}')
+                 + 'set/{policyId}/authorization/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -306,11 +307,11 @@ class DeviceAdministrationAuthorizationRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f59cbefb9504fb36b3e50c355f1c0_v3_0_0', _api_response)
+        return self._object_factory('bpm_dc966c73c65649a244d507bd53fd19_v3_0_0', _api_response)
 
     def update_device_admin_authorization_rule_by_id(self,
+                                                     id,
                                                      policy_id,
-                                                     rule_id,
                                                      commands=None,
                                                      profile=None,
                                                      rule=None,
@@ -334,7 +335,7 @@ class DeviceAdministrationAuthorizationRules(object):
                 of the request body.
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -376,7 +377,7 @@ class DeviceAdministrationAuthorizationRules(object):
             check_type(payload, dict)
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -386,7 +387,7 @@ class DeviceAdministrationAuthorizationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -402,11 +403,11 @@ class DeviceAdministrationAuthorizationRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_cd04558011d055b1ac3386e24728083d_v3_0_0')\
+            self._request_validator('jsd_f92e61297eb05379bd9b92bc60735912_v3_0_0')\
                 .validate(_payload)
 
         e_url = ('/api/v1/policy/device-admin/policy-'
-                 + 'set/{policyId}/authorization/{ruleId}')
+                 + 'set/{policyId}/authorization/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -419,11 +420,11 @@ class DeviceAdministrationAuthorizationRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_cd04558011d055b1ac3386e24728083d_v3_0_0', _api_response)
+        return self._object_factory('bpm_f92e61297eb05379bd9b92bc60735912_v3_0_0', _api_response)
 
     def delete_device_admin_authorization_rule_by_id(self,
+                                                     id,
                                                      policy_id,
-                                                     rule_id,
                                                      headers=None,
                                                      **query_parameters):
         """Device Admin - Delete authorization rule.
@@ -431,7 +432,7 @@ class DeviceAdministrationAuthorizationRules(object):
         Args:
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -464,7 +465,7 @@ class DeviceAdministrationAuthorizationRules(object):
             with_custom_headers = True
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -474,11 +475,11 @@ class DeviceAdministrationAuthorizationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/api/v1/policy/device-admin/policy-'
-                 + 'set/{policyId}/authorization/{ruleId}')
+                 + 'set/{policyId}/authorization/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -486,4 +487,4 @@ class DeviceAdministrationAuthorizationRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f130b53af83c5b7baa2acd190b57fd75_v3_0_0', _api_response)
+        return self._object_factory('bpm_fb4ef0633057a1acdc47e23b120073_v3_0_0', _api_response)

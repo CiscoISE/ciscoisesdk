@@ -41,6 +41,7 @@ from ...utils import (
     apply_path_params,
     dict_of_str,
 )
+import urllib.parse
 
 
 class NetworkAccessTimeDateConditions(object):
@@ -72,9 +73,9 @@ class NetworkAccessTimeDateConditions(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_time_conditions(self,
-                                           headers=None,
-                                           **query_parameters):
+    def get_all_network_access_time_conditions(self,
+                                               headers=None,
+                                               **query_parameters):
         """Network Access - Returns a list of time and date conditions.
 
         Args:
@@ -359,15 +360,14 @@ class NetworkAccessTimeDateConditions(object):
 
         return self._object_factory('bpm_b314d32b258a1b53c5c84cf84d396_v3_0_0', _api_response)
 
-    def get_network_access_time_condition_by_condition_id(self,
-                                                          condition_id,
-                                                          headers=None,
-                                                          **query_parameters):
+    def get_network_access_time_condition_by_id(self,
+                                                id,
+                                                headers=None,
+                                                **query_parameters):
         """Network Access - returns a network condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -398,7 +398,7 @@ class NetworkAccessTimeDateConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -407,11 +407,10 @@ class NetworkAccessTimeDateConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/network-access/time-'
-                 + 'condition/{conditionId}')
+        e_url = ('/api/v1/policy/network-access/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -419,32 +418,31 @@ class NetworkAccessTimeDateConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_feb530ce19c5bcf96d57f49cd84bc1f_v3_0_0', _api_response)
+        return self._object_factory('bpm_c941303330bc5615b3eb8d4d2702b874_v3_0_0', _api_response)
 
-    def update_network_access_time_condition_by_condition_id(self,
-                                                             condition_id,
-                                                             attribute_id=None,
-                                                             attribute_name=None,
-                                                             attribute_value=None,
-                                                             children=None,
-                                                             condition_type=None,
-                                                             dates_range=None,
-                                                             dates_range_exception=None,
-                                                             description=None,
-                                                             dictionary_name=None,
-                                                             dictionary_value=None,
-                                                             hours_range=None,
-                                                             hours_range_exception=None,
-                                                             id=None,
-                                                             is_negate=None,
-                                                             name=None,
-                                                             operator=None,
-                                                             week_days=None,
-                                                             week_days_exception=None,
-                                                             headers=None,
-                                                             payload=None,
-                                                             active_validation=True,
-                                                             **query_parameters):
+    def update_network_access_time_condition_by_id(self,
+                                                   id,
+                                                   attribute_id=None,
+                                                   attribute_name=None,
+                                                   attribute_value=None,
+                                                   children=None,
+                                                   condition_type=None,
+                                                   dates_range=None,
+                                                   dates_range_exception=None,
+                                                   description=None,
+                                                   dictionary_name=None,
+                                                   dictionary_value=None,
+                                                   hours_range=None,
+                                                   hours_range_exception=None,
+                                                   is_negate=None,
+                                                   name=None,
+                                                   operator=None,
+                                                   week_days=None,
+                                                   week_days_exception=None,
+                                                   headers=None,
+                                                   payload=None,
+                                                   active_validation=True,
+                                                   **query_parameters):
         """Network Access - Update network condition.
 
         Args:
@@ -546,8 +544,7 @@ class NetworkAccessTimeDateConditions(object):
                 values are 'Sunday', 'Monday',
                 'Tuesday', 'Wednesday', 'Thursday',
                 'Friday' and 'Saturday').
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -587,7 +584,7 @@ class NetworkAccessTimeDateConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -596,7 +593,7 @@ class NetworkAccessTimeDateConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -642,11 +639,10 @@ class NetworkAccessTimeDateConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_a60516435c6abd996dd616781c16_v3_0_0')\
+            self._request_validator('jsd_a518d5655f69e8687c9c98740c6_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/network-access/time-'
-                 + 'condition/{conditionId}')
+        e_url = ('/api/v1/policy/network-access/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -659,17 +655,16 @@ class NetworkAccessTimeDateConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_a60516435c6abd996dd616781c16_v3_0_0', _api_response)
+        return self._object_factory('bpm_a518d5655f69e8687c9c98740c6_v3_0_0', _api_response)
 
-    def delete_network_access_time_condition_by_condition_id(self,
-                                                             condition_id,
-                                                             headers=None,
-                                                             **query_parameters):
+    def delete_network_access_time_condition_by_id(self,
+                                                   id,
+                                                   headers=None,
+                                                   **query_parameters):
         """Network Access - Delete Time/Date condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -700,7 +695,7 @@ class NetworkAccessTimeDateConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -709,11 +704,10 @@ class NetworkAccessTimeDateConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/api/v1/policy/network-access/time-'
-                 + 'condition/{conditionId}')
+        e_url = ('/api/v1/policy/network-access/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -721,4 +715,4 @@ class NetworkAccessTimeDateConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dae42fe107a5d4fa53289574a0baa84_v3_0_0', _api_response)
+        return self._object_factory('bpm_e2a697abfe2058d3adc7ad9922f5a5d6_v3_0_0', _api_response)

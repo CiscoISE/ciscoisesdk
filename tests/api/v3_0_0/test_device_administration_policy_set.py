@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_device_admin_policy_sets(json_schema_validate, obj):
+def is_valid_get_all_device_admin_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_device_admin_policy_sets(json_schema_validate, obj):
     return True
 
 
-def get_device_admin_policy_sets(api):
-    endpoint_result = api.device_administration_policy_set.get_device_admin_policy_sets(
+def get_all_device_admin_policy_sets(api):
+    endpoint_result = api.device_administration_policy_set.get_all_device_admin_policy_sets(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_policy_set
-def test_get_device_admin_policy_sets(api, validator):
+def test_get_all_device_admin_policy_sets(api, validator):
     try:
-        assert is_valid_get_device_admin_policy_sets(
+        assert is_valid_get_all_device_admin_policy_sets(
             validator,
-            get_device_admin_policy_sets(api)
+            get_all_device_admin_policy_sets(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_device_admin_policy_sets(api, validator):
             raise original_e
 
 
-def get_device_admin_policy_sets_default(api):
-    endpoint_result = api.device_administration_policy_set.get_device_admin_policy_sets(
+def get_all_device_admin_policy_sets_default(api):
+    endpoint_result = api.device_administration_policy_set.get_all_device_admin_policy_sets(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_policy_set
-def test_get_device_admin_policy_sets_default(api, validator):
+def test_get_all_device_admin_policy_sets_default(api, validator):
     try:
-        assert is_valid_get_device_admin_policy_sets(
+        assert is_valid_get_all_device_admin_policy_sets(
             validator,
-            get_device_admin_policy_sets_default(api)
+            get_all_device_admin_policy_sets_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -158,13 +158,13 @@ def is_valid_get_device_admin_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_903b305804a95e2fb51ab50c039e6c66_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_440b1da14ba95aa48b498c76d0bc1017_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_policy_set_by_id(api):
     endpoint_result = api.device_administration_policy_set.get_device_admin_policy_set_by_id(
-        policy_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -184,7 +184,7 @@ def test_get_device_admin_policy_set_by_id(api, validator):
 
 def get_device_admin_policy_set_by_id_default(api):
     endpoint_result = api.device_administration_policy_set.get_device_admin_policy_set_by_id(
-        policy_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -208,7 +208,7 @@ def is_valid_update_device_admin_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c67c56a249ce5721863328be9da81573_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e2c930d3d75859b8b7d30e79f3eab084_v3_0_0').validate(obj.response)
     return True
 
 
@@ -223,7 +223,6 @@ def update_device_admin_policy_set_by_id(api):
         is_proxy=True,
         name='string',
         payload=None,
-        policy_id='string',
         rank=0,
         service_name='string',
         state='string'
@@ -247,12 +246,11 @@ def test_update_device_admin_policy_set_by_id(api, validator):
 def update_device_admin_policy_set_by_id_default(api):
     endpoint_result = api.device_administration_policy_set.update_device_admin_policy_set_by_id(
         active_validation=False,
-        policy_id='string',
+        id='string',
         condition=None,
         default=None,
         description=None,
         hit_counts=None,
-        id=None,
         is_proxy=None,
         name=None,
         payload=None,
@@ -282,13 +280,13 @@ def is_valid_delete_device_admin_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a78585b436685873813e3804cdec7d2b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b5c6ed4306f059cc963895a04f219d5d_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_policy_set_by_id(api):
     endpoint_result = api.device_administration_policy_set.delete_device_admin_policy_set_by_id(
-        policy_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -308,7 +306,7 @@ def test_delete_device_admin_policy_set_by_id(api, validator):
 
 def delete_device_admin_policy_set_by_id_default(api):
     endpoint_result = api.device_administration_policy_set.delete_device_admin_policy_set_by_id(
-        policy_id='string'
+        id='string'
     )
     return endpoint_result
 
