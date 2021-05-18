@@ -238,7 +238,7 @@ ready to start making API calls.
 
 .. code-block:: python
 
-    >>> api.network_device.networkdevice(page=1,size=3).response.SearchResult.resources
+    >>> api.network_device.network_device(page=1,size=3).response.SearchResult.resources
     [{'id': '4969bc30-ad2a-11eb-95af-f263cf05f605',
       'name': 'ISE_EST_Local_Host_19',
       'description': '',
@@ -261,7 +261,7 @@ ready to start making API calls.
 It really is that easy.
 
 All of the calls have been wrapped and represented as native Python method
-calls, like :meth:`IdentityServicesEngineAPI.network_device.networkdevice() <ciscoisesdk.api.v3_0_0.network_device.NetworkDevice.networkdevice>` which gets the network devices summaries
+calls, like :meth:`IdentityServicesEngineAPI.network_device.network_device() <ciscoisesdk.api.v3_0_0.network_device.NetworkDevice.network_device>` which gets the network devices summaries
 for the Cisco ISE ERS - see 
 the `Network Device - Get All
 <https://developer.cisco.com/docs/identity-services-engine/3.0/#!network-device/get-all>`_ API endpoint
@@ -269,7 +269,7 @@ documentation.
 
 As you can see, we have represented the API endpoints using simple terms
 that are aligned with the API docs; for example, representing the ``/ers/config/networkdevice``
-API endpoint as a ``network_device.networkdevice()`` method available underneath the
+API endpoint as a ``network_device.network_device()`` method available underneath the
 :class:`IdentityServicesEngineAPI` connection object.
 
 A full list of the available API methods, with their descriptions and
@@ -321,11 +321,11 @@ message.
     >>> from ciscoisesdk import IdentityServicesEngineAPI, ApiError
     >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!')
     >>> # The base_url used by default is `from ciscoisesdk.config import DEFAULT_BASE_URL`
-    >>> network_device_response = api.network_device.create_networkdevice(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
+    >>> network_device_response = api.network_device.create_network_device(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
     ---------------------------------------------------------------------------
     ApiError                                  Traceback (most recent call last)
     <ipython-input-71-afadb5c98c43> in <module>
-    ----> 1 network_device_response = api.network_device.create_networkdevice(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
+    ----> 1 network_device_response = api.network_device.create_network_device(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
           2
     ciscoisesdk/utils.py in check_response_code(response, expected_response_code)
         215         raise RateLimitError(response)
@@ -358,7 +358,7 @@ You can catch any errors returned by the Identity Services Engine cloud by catch
 
     >>> from ciscoisesdk.exceptions import ApiError
     >>> try:
-    ...     network_device_response = api.network_device.create_networkdevice(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
+    ...     network_device_response = api.network_device.create_network_device(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
     ... except ApiError as e:
     ...     print(e)
     ApiError: [400] - The request was invalid or cannot be otherwise served.
@@ -444,14 +444,14 @@ help clean up your code and make coding easier:
         .. code-block:: python
 
             >>> # Do this
-            >>> device_list_response = api.network_device.networkdevice(filter='name.EQ.ISE_EST_Local_Host_19')
+            >>> device_list_response = api.network_device.network_device(filter='name.EQ.ISE_EST_Local_Host_19')
             >>> device_response = device_list_response.response.SearchResult.resources[0]
-            >>> device_response_detail = api.network_device.networkdevice_by_id(device_response.id).response.NetworkDevice
+            >>> device_response_detail = api.network_device.network_device_by_id(device_response.id).response.NetworkDevice
 
             >>> # or even this
             >>> filter_query = 'name.EQ.ISE_EST_Local_Host_19'
-            >>> device_response_id = api.network_device.networkdevice(filter=filter_query).response.SearchResult.resources[0].id
-            >>> device_response_detail = api.network_device.networkdevice_by_id(device_response_id).response.NetworkDevice
+            >>> device_response_id = api.network_device.network_device(filter=filter_query).response.SearchResult.resources[0].id
+            >>> device_response_detail = api.network_device.network_device_by_id(device_response_id).response.NetworkDevice
 
     2.  When accessing 'optional' attributes, like ``device_list_response.response.SearchResult.resources[0].id``
         attribute of Identity Services Engine NetworkDevice object, the response object will return ``None`` when
@@ -461,7 +461,7 @@ help clean up your code and make coding easier:
 
         .. code-block:: python
 
-            >>> devices_response = api.network_device.networkdevice().response
+            >>> devices_response = api.network_device.network_device().response
             >>> # Instead of doing this
             >>> if hasattr(devices_response, 'SearchResult') and hasattr(devices_response.SearchResult, 'resources'):
             ...     devices = devices_response.SearchResult.resources
@@ -543,7 +543,7 @@ So you can add your logging handlers according to your needs.
     logging.getLogger('ciscoisesdk').addHandler(ch_)
 
     logger.debug('simple message')
-    api.network_device.networkdevice().response
+    api.network_device.network_device().response
 
 
 Adding API call definitions
