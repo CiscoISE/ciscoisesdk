@@ -40,6 +40,7 @@ from ...utils import (
     dict_from_items_with_values,
     apply_path_params,
     dict_of_str,
+    get_next_page,
 )
 import urllib.parse
 
@@ -868,65 +869,16 @@ class Certificates(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
         """
-        check_type(headers, dict)
 
-        if headers is not None:
-            pass
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(sort, basestring)
-        check_type(sort_by, basestring)
-        check_type(filter, (basestring, list, set, tuple))
-        check_type(filter_type, basestring)
-
-        _params = {
-            'page':
-                page,
-            'size':
-                size,
-            'sort':
-                sort,
-            'sortBy':
-                sort_by,
-            'filter':
-                filter,
-            'filterType':
-                filter_type,
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        e_url = ('/api/v1/certs/trusted-certificate')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        yield self._object_factory('bpm_c654a18faf1b5571ac5ba61145d298c4_v3_0_0', _api_response)
-        if _api_response.response and _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", ""):
-            url = _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", "")
-            _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
-            _size = _query_params.get('size')
-            _page = _query_params.get('page')
-            yield from self.get_all_trusted_certificates_generator(headers=headers,
-                                                                   filter=filter,
-                                                                   filter_type=filter_type,
-                                                                   sort=sort,
-                                                                   sort_by=sort_by,
-                                                                   page=_page,
-                                                                   size=_size,
-                                                                   **query_parameters)
+        yield from get_next_page(self.get_all_trusted_certificates, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sort=sort,
+            sort_by=sort_by,
+            **query_parameters
+        ), access_next_list=["nextPage", "href"])
 
     def get_trusted_certificate_by_id(self,
                                       id,
@@ -1478,69 +1430,17 @@ class Certificates(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
         """
-        check_type(headers, dict)
 
-        if headers is not None:
-            pass
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(sort, basestring)
-        check_type(sort_by, basestring)
-        check_type(filter, (basestring, list, set, tuple))
-        check_type(filter_type, basestring)
-        check_type(host_name, basestring,
-                   may_be_none=False)
-
-        _params = {
-            'page':
-                page,
-            'size':
-                size,
-            'sort':
-                sort,
-            'sortBy':
-                sort_by,
-            'filter':
-                filter,
-            'filterType':
-                filter_type,
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'hostName': host_name,
-        }
-
-        e_url = ('/api/v1/certs/system-certificate/{hostName}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        yield self._object_factory('bpm_a56f5c5f739a83e8806da16be5_v3_0_0', _api_response)
-        if _api_response.response and _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", ""):
-            url = _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", "")
-            _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
-            _size = _query_params.get('size')
-            _page = _query_params.get('page')
-            yield from self.get_all_system_certificates_generator(headers=headers,
-                                                                  host_name=host_name,
-                                                                  filter=filter,
-                                                                  filter_type=filter_type,
-                                                                  sort=sort,
-                                                                  sort_by=sort_by,
-                                                                  page=_page,
-                                                                  size=_size,
-                                                                  **query_parameters)
+        yield from get_next_page(self.get_all_system_certificates, dict(
+            host_name=host_name,
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sort=sort,
+            sort_by=sort_by,
+            **query_parameters
+        ), access_next_list=["nextPage", "href"])
 
     def get_system_certificate_by_id(self,
                                      host_name,
@@ -2035,65 +1935,16 @@ class Certificates(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
         """
-        check_type(headers, dict)
 
-        if headers is not None:
-            pass
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(sort, basestring)
-        check_type(sort_by, basestring)
-        check_type(filter, (basestring, list, set, tuple))
-        check_type(filter_type, basestring)
-
-        _params = {
-            'page':
-                page,
-            'size':
-                size,
-            'sort':
-                sort,
-            'sortBy':
-                sort_by,
-            'filter':
-                filter,
-            'filterType':
-                filter_type,
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        e_url = ('/api/v1/certs/certificate-signing-request')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        yield self._object_factory('bpm_eeef18d70b159f788b717e301dd3643_v3_0_0', _api_response)
-        if _api_response.response and _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", ""):
-            url = _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", "")
-            _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
-            _size = _query_params.get('size')
-            _page = _query_params.get('page')
-            yield from self.get_csr_generator(headers=headers,
-                                              filter=filter,
-                                              filter_type=filter_type,
-                                              sort=sort,
-                                              sort_by=sort_by,
-                                              page=_page,
-                                              size=_size,
-                                              **query_parameters)
+        yield from get_next_page(self.get_csr, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sort=sort,
+            sort_by=sort_by,
+            **query_parameters
+        ), access_next_list=["nextPage", "href"])
 
     def generate_csr(self,
                      allow_wild_card_cert=None,

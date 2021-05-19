@@ -390,3 +390,36 @@ def dict_of_str(json_dict):
     for key, value in json_dict.items():
         result[key] = '{}'.format(value)
     return result
+
+
+def get_next_page(function, params, access_next_list=["SearchResult", "nextPage", "href"]):
+    """
+    Args:
+        function(function): The API function to call
+        params(dict): The parameters of the function
+        access_next_list(list): List of strings. Allows to access the URL for the next page using the previous response object
+
+    Yields:
+        Generator: A generator object containing the RestResponse objects for all pages.
+
+    """
+    response = function(**params)
+    if response.response:
+        value = response.response
+        found = True
+        for access_next in access_next_list:
+            if value.get(access_next):
+                value = value.get(access_next)
+            else:
+                found = False
+                break
+        if not isinstance(value, str):
+            found = False
+
+        if not found:
+            yield response
+        else:
+            yield response
+            url = value
+            _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
+            yield from get_next_page(function, {**params, **_query_params}, access_next_list=access_next_list)

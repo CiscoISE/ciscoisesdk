@@ -40,6 +40,7 @@ from ...utils import (
     dict_from_items_with_values,
     apply_path_params,
     dict_of_str,
+    get_next_page,
 )
 import urllib.parse
 
@@ -254,70 +255,16 @@ class Sgt(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
         """
-        check_type(headers, dict)
 
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(filter, (basestring, list, set, tuple))
-        check_type(filter_type, basestring)
-        check_type(sortasc, basestring)
-        check_type(sortdec, basestring)
-
-        _params = {
-            'page':
-                page,
-            'size':
-                size,
-            'filter':
-                filter,
-            'filterType':
-                filter_type,
-            'sortasc':
-                sortasc,
-            'sortdec':
-                sortdec,
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        e_url = ('/ers/config/sgt')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        yield self._object_factory('bpm_b3c356cfc48a5da4b13b8ecbae5748b7_v3_0_0', _api_response)
-        if _api_response.response and _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", ""):
-            url = _api_response.response.get("SearchResult", {}).get("nextPage", {}).get("href", "")
-            _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
-            _size = _query_params.get('size')
-            _page = _query_params.get('page')
-            yield from self.get_all_security_groups_generator(headers=headers,
-                                                              filter=filter,
-                                                              filter_type=filter_type,
-                                                              sortasc=sortasc,
-                                                              sortdec=sortdec,
-                                                              page=_page,
-                                                              size=_size,
-                                                              **query_parameters)
+        yield from get_next_page(self.get_all_security_groups, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdec=sortdec,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_security_group(self,
                               description=None,
