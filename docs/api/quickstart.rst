@@ -261,7 +261,7 @@ ready to start making API calls.
 It really is that easy.
 
 All of the calls have been wrapped and represented as native Python method
-calls, like :meth:`IdentityServicesEngineAPI.network_device.network_device() <ciscoisesdk.api.v3_0_0.network_device.NetworkDevice.network_device>` which gets the network devices summaries
+calls, like :meth:`IdentityServicesEngineAPI.network_device.get_all_network_device() <ciscoisesdk.api.v3_0_0.network_device.NetworkDevice.get_all_network_device>` which gets the network devices summaries
 for the Cisco ISE ERS - see 
 the `Network Device - Get All
 <https://developer.cisco.com/docs/identity-services-engine/3.0/#!network-device/get-all>`_ API endpoint
@@ -269,7 +269,7 @@ documentation.
 
 As you can see, we have represented the API endpoints using simple terms
 that are aligned with the API docs; for example, representing the ``/ers/config/networkdevice``
-API endpoint as a ``network_device.network_device()`` method available underneath the
+API endpoint as a ``network_device.get_all_network_device()`` method available underneath the
 :class:`IdentityServicesEngineAPI` connection object.
 
 A full list of the available API methods, with their descriptions and
