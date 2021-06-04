@@ -150,6 +150,8 @@ from ciscoisesdk.api.v3_0_0.restid_store import \
     RestidStore as RestidStore_v3_0_0
 from ciscoisesdk.api.v3_0_0.replication_status import \
     ReplicationStatus as ReplicationStatus_v3_0_0
+from ciscoisesdk.api.v3_0_0.repository import \
+    Repository as Repository_v3_0_0
 from ciscoisesdk.api.v3_0_0.sg_acl import \
     SgAcl as SgAcl_v3_0_0
 from ciscoisesdk.api.v3_0_0.sgt import \
@@ -325,6 +327,7 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.radius_server_sequence, RadiusServerSequence_v3_0_0)
             assert isinstance(api.restid_store, RestidStore_v3_0_0)
             assert isinstance(api.replication_status, ReplicationStatus_v3_0_0)
+            assert isinstance(api.repository, Repository_v3_0_0)
             assert isinstance(api.sg_acl, SgAcl_v3_0_0)
             assert isinstance(api.sgt, Sgt_v3_0_0)
             assert isinstance(api.sms_provider, SmsProvider_v3_0_0)

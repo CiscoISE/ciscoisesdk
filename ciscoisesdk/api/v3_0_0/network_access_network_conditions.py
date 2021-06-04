@@ -130,14 +130,10 @@ class NetworkAccessNetworkConditions(object):
         return self._object_factory('bpm_d43fec9e7dc556cbb9bf0ebd1dcd6aad_v3_0_0', _api_response)
 
     def create_network_access_network_condition(self,
-                                                cli_dnis_list=None,
                                                 condition_type=None,
+                                                conditions=None,
                                                 description=None,
-                                                device_group_list=None,
-                                                device_list=None,
                                                 id=None,
-                                                ip_addr_list=None,
-                                                mac_addr_list=None,
                                                 name=None,
                                                 headers=None,
                                                 payload=None,
@@ -146,24 +142,20 @@ class NetworkAccessNetworkConditions(object):
         """Network Access - Creates network condition.
 
         Args:
-            cliDnisList(list): cliDnisList, property of the request
-                body (list of strings).
-            condition_type(string): conditionType, property of the
-                request body. Available values are
-                'EndstationCondition', 'DeviceCondition'
-                and 'DevicePortCondition'.
+            condition_type(string): This field determines the
+                content of the conditions field,
+                property of the request body. Available
+                values are 'EndstationCondition',
+                'DeviceCondition' and
+                'DevicePortCondition'.
+            conditions(list): conditions, property of the request
+                body (list of objects).
             description(string): description, property of the
                 request body.
-            deviceGroupList(list): deviceGroupList, property of the
-                request body (list of strings).
-            deviceList(list): deviceList, property of the request
-                body (list of strings).
             id(string): id, property of the request body.
-            ipAddrList(list): ipAddrList, property of the request
-                body (list of strings).
-            macAddrList(list): macAddrList, property of the request
-                body (list of strings).
-            name(string): name, property of the request body.
+            name(string): NetworkCondition name, [Valid characters
+                are alphanumerics, underscore, space],
+                property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -223,16 +215,8 @@ class NetworkAccessNetworkConditions(object):
                     description,
                 'conditionType':
                     condition_type,
-                'ipAddrList':
-                    ip_addr_list,
-                'macAddrList':
-                    mac_addr_list,
-                'cliDnisList':
-                    cli_dnis_list,
-                'deviceList':
-                    device_list,
-                'deviceGroupList':
-                    device_group_list,
+                'conditions':
+                    conditions,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -316,13 +300,9 @@ class NetworkAccessNetworkConditions(object):
 
     def update_network_access_network_condition_by_id(self,
                                                       id,
-                                                      cli_dnis_list=None,
                                                       condition_type=None,
+                                                      conditions=None,
                                                       description=None,
-                                                      device_group_list=None,
-                                                      device_list=None,
-                                                      ip_addr_list=None,
-                                                      mac_addr_list=None,
                                                       name=None,
                                                       headers=None,
                                                       payload=None,
@@ -331,24 +311,20 @@ class NetworkAccessNetworkConditions(object):
         """Network Access - Update network condition.
 
         Args:
-            cliDnisList(list): cliDnisList, property of the request
-                body (list of strings).
-            condition_type(string): conditionType, property of the
-                request body. Available values are
-                'EndstationCondition', 'DeviceCondition'
-                and 'DevicePortCondition'.
+            condition_type(string): This field determines the
+                content of the conditions field,
+                property of the request body. Available
+                values are 'EndstationCondition',
+                'DeviceCondition' and
+                'DevicePortCondition'.
+            conditions(list): conditions, property of the request
+                body (list of objects).
             description(string): description, property of the
                 request body.
-            deviceGroupList(list): deviceGroupList, property of the
-                request body (list of strings).
-            deviceList(list): deviceList, property of the request
-                body (list of strings).
             id(string): id, property of the request body.
-            ipAddrList(list): ipAddrList, property of the request
-                body (list of strings).
-            macAddrList(list): macAddrList, property of the request
-                body (list of strings).
-            name(string): name, property of the request body.
+            name(string): NetworkCondition name, [Valid characters
+                are alphanumerics, underscore, space],
+                property of the request body.
             id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -412,16 +388,8 @@ class NetworkAccessNetworkConditions(object):
                     description,
                 'conditionType':
                     condition_type,
-                'ipAddrList':
-                    ip_addr_list,
-                'macAddrList':
-                    mac_addr_list,
-                'cliDnisList':
-                    cli_dnis_list,
-                'deviceList':
-                    device_list,
-                'deviceGroupList':
-                    device_group_list,
+                'conditions':
+                    conditions,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)

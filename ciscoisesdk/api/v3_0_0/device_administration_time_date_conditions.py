@@ -155,17 +155,33 @@ class DeviceAdministrationTimeDateConditions(object):
         """Device Admin - Creates time/date condition.
 
         Args:
-            attribute_id(string): attributeId, property of the
-                request body.
-            attribute_name(string): attributeName, property of the
-                request body.
-            attribute_value(string): attributeValue, property of the
-                request body.
-            children(list): children, property of the request body
-                (list of objects).
-            condition_type(string): conditionType, property of the
-                request body. Available values are
-                'ConditionReference',
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
+            attribute_value(string): Attribute value for condition
+                Value type is specified in dictionary
+                object   if multiple values allowed is
+                specified in dictionary object, property
+                of the request body.
+            children(list): In case type is andBlock or orBlock
+                addtional conditions will be aggregated
+                under this logical (OR/AND) condition,
+                property of the request body (list of
+                objects).
+            condition_type(string): Inidicates whether the record is
+                the condition itself(data) or a
+                logical(or,and) aggregation   Data type
+                enum(reference,single) indicates than
+                "conditonId" OR "ConditionAttrs" fields
+                should contain condition data but not
+                both   Logical aggreation(and,or) enum
+                indicates that additional conditions are
+                present under the children field,
+                property of the request body. Available
+                values are 'ConditionReference',
                 'ConditionAttributes',
                 'LibraryConditionAttributes',
                 'ConditionAndBlock',
@@ -197,9 +213,9 @@ class DeviceAdministrationTimeDateConditions(object):
                 request body.
             description(string): Condition description, property of
                 the request body.
-            dictionary_name(string): dictionaryName, property of the
-                request body.
-            dictionary_value(string): dictionaryValue, property of
+            dictionary_name(string): Dictionary name, property of
+                the request body.
+            dictionary_value(string): Dictionary value, property of
                 the request body.
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
@@ -214,24 +230,25 @@ class DeviceAdministrationTimeDateConditions(object):
                 hour , mm = minutes )   Default - All
                 Day , property of the request body.
             id(string): id, property of the request body.
-            is_negate(boolean): isNegate, property of the request
+            is_negate(boolean): Indicates whereas this condition is
+                in negate mode, property of the request
                 body.
             name(string): Condition name, property of the request
                 body.
-            operator(string): operator, property of the request
-                body. Available values are 'equals',
-                'notEquals', 'contains', 'notContains',
-                'matches', 'in', 'notIn', 'startsWith',
-                'notStartsWith', 'endsWith',
-                'notEndsWith', 'greaterThan',
-                'lessThan', 'greaterOrEquals',
-                'lessOrEquals', 'macEquals',
-                'macNotEquals', 'macNotIn', 'macIn',
-                'macStartsWith', 'macNotStartsWith',
-                'macEndsWith', 'macNotEndsWith',
-                'macContains', 'macNotContains',
-                'ipGreaterThan', 'ipLessThan',
-                'ipEquals', 'ipNotEquals',
+            operator(string): Equality operator, property of the
+                request body. Available values are
+                'equals', 'notEquals', 'contains',
+                'notContains', 'matches', 'in', 'notIn',
+                'startsWith', 'notStartsWith',
+                'endsWith', 'notEndsWith',
+                'greaterThan', 'lessThan',
+                'greaterOrEquals', 'lessOrEquals',
+                'macEquals', 'macNotEquals', 'macNotIn',
+                'macIn', 'macStartsWith',
+                'macNotStartsWith', 'macEndsWith',
+                'macNotEndsWith', 'macContains',
+                'macNotContains', 'ipGreaterThan',
+                'ipLessThan', 'ipEquals', 'ipNotEquals',
                 'dateTimeMatches', 'dateLessThan',
                 'dateLessThanOrEquals',
                 'dateGreaterThan',
@@ -447,17 +464,33 @@ class DeviceAdministrationTimeDateConditions(object):
         """Device Admin - Update network condition.
 
         Args:
-            attribute_id(string): attributeId, property of the
-                request body.
-            attribute_name(string): attributeName, property of the
-                request body.
-            attribute_value(string): attributeValue, property of the
-                request body.
-            children(list): children, property of the request body
-                (list of objects).
-            condition_type(string): conditionType, property of the
-                request body. Available values are
-                'ConditionReference',
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
+            attribute_value(string): Attribute value for condition
+                Value type is specified in dictionary
+                object   if multiple values allowed is
+                specified in dictionary object, property
+                of the request body.
+            children(list): In case type is andBlock or orBlock
+                addtional conditions will be aggregated
+                under this logical (OR/AND) condition,
+                property of the request body (list of
+                objects).
+            condition_type(string): Inidicates whether the record is
+                the condition itself(data) or a
+                logical(or,and) aggregation   Data type
+                enum(reference,single) indicates than
+                "conditonId" OR "ConditionAttrs" fields
+                should contain condition data but not
+                both   Logical aggreation(and,or) enum
+                indicates that additional conditions are
+                present under the children field,
+                property of the request body. Available
+                values are 'ConditionReference',
                 'ConditionAttributes',
                 'LibraryConditionAttributes',
                 'ConditionAndBlock',
@@ -489,9 +522,9 @@ class DeviceAdministrationTimeDateConditions(object):
                 request body.
             description(string): Condition description, property of
                 the request body.
-            dictionary_name(string): dictionaryName, property of the
-                request body.
-            dictionary_value(string): dictionaryValue, property of
+            dictionary_name(string): Dictionary name, property of
+                the request body.
+            dictionary_value(string): Dictionary value, property of
                 the request body.
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
@@ -506,24 +539,25 @@ class DeviceAdministrationTimeDateConditions(object):
                 hour , mm = minutes )   Default - All
                 Day , property of the request body.
             id(string): id, property of the request body.
-            is_negate(boolean): isNegate, property of the request
+            is_negate(boolean): Indicates whereas this condition is
+                in negate mode, property of the request
                 body.
             name(string): Condition name, property of the request
                 body.
-            operator(string): operator, property of the request
-                body. Available values are 'equals',
-                'notEquals', 'contains', 'notContains',
-                'matches', 'in', 'notIn', 'startsWith',
-                'notStartsWith', 'endsWith',
-                'notEndsWith', 'greaterThan',
-                'lessThan', 'greaterOrEquals',
-                'lessOrEquals', 'macEquals',
-                'macNotEquals', 'macNotIn', 'macIn',
-                'macStartsWith', 'macNotStartsWith',
-                'macEndsWith', 'macNotEndsWith',
-                'macContains', 'macNotContains',
-                'ipGreaterThan', 'ipLessThan',
-                'ipEquals', 'ipNotEquals',
+            operator(string): Equality operator, property of the
+                request body. Available values are
+                'equals', 'notEquals', 'contains',
+                'notContains', 'matches', 'in', 'notIn',
+                'startsWith', 'notStartsWith',
+                'endsWith', 'notEndsWith',
+                'greaterThan', 'lessThan',
+                'greaterOrEquals', 'lessOrEquals',
+                'macEquals', 'macNotEquals', 'macNotIn',
+                'macIn', 'macStartsWith',
+                'macNotStartsWith', 'macEndsWith',
+                'macNotEndsWith', 'macContains',
+                'macNotContains', 'ipGreaterThan',
+                'ipLessThan', 'ipEquals', 'ipNotEquals',
                 'dateTimeMatches', 'dateLessThan',
                 'dateLessThanOrEquals',
                 'dateGreaterThan',

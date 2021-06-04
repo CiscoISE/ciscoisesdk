@@ -268,8 +268,10 @@ class EgressMatrixCell(object):
 
     def create_egress_matrix_cell(self,
                                   default_rule=None,
+                                  description=None,
                                   destination_sgt_id=None,
                                   matrix_cell_status=None,
+                                  name=None,
                                   sgacls=None,
                                   source_sgt_id=None,
                                   headers=None,
@@ -281,10 +283,13 @@ class EgressMatrixCell(object):
         Args:
             default_rule(string): defaultRule, property of the
                 request body.
+            description(string): description, property of the
+                request body.
             destination_sgt_id(string): destinationSgtId, property
                 of the request body.
             matrix_cell_status(string): matrixCellStatus, property
                 of the request body.
+            name(string): name, property of the request body.
             sgacls(list): sgacls, property of the request body (list
                 of strings).
             source_sgt_id(string): sourceSgtId, property of the
@@ -342,7 +347,11 @@ class EgressMatrixCell(object):
         if is_xml_payload:
             _payload = payload
         else:
-            _payload = {
+            _tmp_payload = {
+                'name':
+                    name,
+                'description':
+                    description,
                 'sourceSgtId':
                     source_sgt_id,
                 'destinationSgtId':
@@ -353,6 +362,9 @@ class EgressMatrixCell(object):
                     default_rule,
                 'sgacls':
                     sgacls,
+            }
+            _payload = {
+                'EgressMatrixCell': dict_from_items_with_values(_tmp_payload)
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -440,8 +452,10 @@ class EgressMatrixCell(object):
     def update_egress_matrix_cell_by_id(self,
                                         id,
                                         default_rule=None,
+                                        description=None,
                                         destination_sgt_id=None,
                                         matrix_cell_status=None,
+                                        name=None,
                                         sgacls=None,
                                         source_sgt_id=None,
                                         headers=None,
@@ -453,10 +467,13 @@ class EgressMatrixCell(object):
         Args:
             default_rule(string): defaultRule, property of the
                 request body.
+            description(string): description, property of the
+                request body.
             destination_sgt_id(string): destinationSgtId, property
                 of the request body.
             matrix_cell_status(string): matrixCellStatus, property
                 of the request body.
+            name(string): name, property of the request body.
             sgacls(list): sgacls, property of the request body (list
                 of strings).
             source_sgt_id(string): sourceSgtId, property of the
@@ -518,7 +535,13 @@ class EgressMatrixCell(object):
         if is_xml_payload:
             _payload = payload
         else:
-            _payload = {
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
                 'sourceSgtId':
                     source_sgt_id,
                 'destinationSgtId':
@@ -529,6 +552,9 @@ class EgressMatrixCell(object):
                     default_rule,
                 'sgacls':
                     sgacls,
+            }
+            _payload = {
+                'EgressMatrixCell': dict_from_items_with_values(_tmp_payload)
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)

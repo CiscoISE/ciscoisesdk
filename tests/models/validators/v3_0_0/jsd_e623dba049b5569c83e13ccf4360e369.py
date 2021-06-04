@@ -55,19 +55,6 @@ class JSONSchemaValidatorE623Dba049B5569C83E13Ccf4360E369(object):
                 "rule": {
                 "properties": {
                 "condition": {
-                "discriminator": {
-                "mapping": {
-                "ConditionAndBlock": "#/components/schemas/ConditionAndBlock",
-                "ConditionAttributes": "#/components/schemas/ConditionAttributes",
-                "ConditionOrBlock": "#/components/schemas/ConditionOrBlock",
-                "ConditionReference": "#/components/schemas/ConditionReference",
-                "LibraryConditionAndBlock": "#/components/schemas/LibraryConditionAndBlock",
-                "LibraryConditionAttributes": "#/components/schemas/LibraryConditionAttributes",
-                "LibraryConditionOrBlock": "#/components/schemas/LibraryConditionOrBlock",
-                "TimeAndDateCondition": "#/components/schemas/TimeAndDateCondition"
-                },
-                "propertyName": "conditionType"
-                },
                 "properties": {
                 "conditionType": {
                 "enum": [

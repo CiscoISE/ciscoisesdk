@@ -161,6 +161,12 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969_PATTERN = re.compile(r"/api/v1/policy/device-admin/dictionaries/authentication")
     DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904_PATTERN = re.compile(r"/api/v1/policy/device-admin/dictionaries/authorization")
     DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2_PATTERN = re.compile(r"/api/v1/policy/device-admin/dictionaries/policyset")
+    REPOSITORY_8f9081a48e3c5f4fae5aa00f889216dd_PATTERN = re.compile(r"/api/v1/repository")
+    REPOSITORY_9a207a157244508c99bf3e9abb26aab8_PATTERN = re.compile(r"/api/v1/repository")
+    REPOSITORY_89c785067a5a5e3283f96dd5006c7865_PATTERN = re.compile(r"/api/v1/repository/string")
+    REPOSITORY_386e380a5c1d585ab9012874ca959982_PATTERN = re.compile(r"/api/v1/repository/string")
+    REPOSITORY_c3a2e8960455547da94117ef465db97f_PATTERN = re.compile(r"/api/v1/repository/string")
+    REPOSITORY_c9dea644f40453fead2b003b06c4c52b_PATTERN = re.compile(r"/api/v1/repository/string/files")
     ACTIVE_DIRECTORY_c8dbec9679d453f78cb47d894c507a7b_PATTERN = re.compile(r"/ers/config/activedirectory")
     ACTIVE_DIRECTORY_64e9318040a456978757d7abfa3e66b1_PATTERN = re.compile(r"/ers/config/activedirectory")
     ACTIVE_DIRECTORY_15236cfcc7615d0492e2dd1b04dd03a9_PATTERN = re.compile(r"/ers/config/activedirectory/string")
@@ -1696,7 +1702,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True}])
+        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1732,7 +1738,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True}])
+        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1750,7 +1756,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True}])
+        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1768,7 +1774,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True}])
+        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1894,7 +1900,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string'}])
+        response_content = json.dumps([{'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'conditions': [{}]}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1912,7 +1918,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']})
+        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'conditions': [{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}]})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1930,7 +1936,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']})
+        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'conditions': [{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}]})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1948,7 +1954,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']})
+        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'conditions': [{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}]})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2722,7 +2728,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True}])
+        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2758,7 +2764,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True}])
+        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2776,7 +2782,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True}])
+        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2794,7 +2800,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True}])
+        response_content = json.dumps([{'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2920,7 +2926,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps([{'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string'}])
+        response_content = json.dumps([{'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'conditions': [{}]}])
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2938,7 +2944,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']})
+        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'conditions': [{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}]})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2956,7 +2962,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']})
+        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'conditions': [{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}]})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2974,7 +2980,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']})
+        response_content = json.dumps({'name': 'string', 'id': 'string', 'description': 'string', 'conditionType': 'string', 'conditions': [{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}]})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3209,6 +3215,114 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.end_headers()
         # Add response content.
         response_content = json.dumps([{'id': 'string', 'directionType': 'string', 'name': 'string', 'description': 'string', 'internalName': 'string', 'dataType': 'string', 'dictionaryName': 'string', 'allowedValues': [{'key': 'string', 'value': 'string', 'isDefault': True}]}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_REPOSITORY_8f9081a48e3c5f4fae5aa00f889216dd(self):
+        return re.search(
+            self.REPOSITORY_8f9081a48e3c5f4fae5aa00f889216dd_PATTERN,
+            self.path
+        )
+
+    def repository_get_repositories_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'name': 'string', 'protocol': 'string', 'path': 'string', 'serverName': 'string', 'userName': 'string', 'password': 'string', 'enablePki': True}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_REPOSITORY_9a207a157244508c99bf3e9abb26aab8(self):
+        return re.search(
+            self.REPOSITORY_9a207a157244508c99bf3e9abb26aab8_PATTERN,
+            self.path
+        )
+
+    def repository_create_repository_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'error': 'string'}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_REPOSITORY_89c785067a5a5e3283f96dd5006c7865(self):
+        return re.search(
+            self.REPOSITORY_89c785067a5a5e3283f96dd5006c7865_PATTERN,
+            self.path
+        )
+
+    def repository_get_repository_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'name': 'string', 'protocol': 'string', 'path': 'string', 'serverName': 'string', 'userName': 'string', 'password': 'string', 'enablePki': True}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_REPOSITORY_386e380a5c1d585ab9012874ca959982(self):
+        return re.search(
+            self.REPOSITORY_386e380a5c1d585ab9012874ca959982_PATTERN,
+            self.path
+        )
+
+    def repository_update_repository_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_REPOSITORY_c3a2e8960455547da94117ef465db97f(self):
+        return re.search(
+            self.REPOSITORY_c3a2e8960455547da94117ef465db97f_PATTERN,
+            self.path
+        )
+
+    def repository_delete_repository_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_REPOSITORY_c9dea644f40453fead2b003b06c4c52b(self):
+        return re.search(
+            self.REPOSITORY_c9dea644f40453fead2b003b06c4c52b_PATTERN,
+            self.path
+        )
+
+    def repository_get_repository_files_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': ['string']})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3964,7 +4078,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'sourceSgtId': 'string', 'destinationSgtId': 'string', 'matrixCellStatus': 'string', 'defaultRule': 'string', 'sgacls': ['string']})
+        response_content = json.dumps({'EgressMatrixCell': {'id': 'string', 'name': 'string', 'description': 'string', 'sourceSgtId': 'string', 'destinationSgtId': 'string', 'matrixCellStatus': 'string', 'defaultRule': 'string', 'sgacls': ['string']}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7096,7 +7210,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SponsorPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'fqdn': 'string', 'authenticationMethod': 'string', 'idleTimeout': 0, 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string', 'availableSsids': ['string']}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestToCreateAccounts': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'allowGuestToUseSocialAccounts': True, 'allowShowGuestForm': True, 'socialConfigs': []}, 'aupSettings': {'includeAup': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'requireAccessCode': True, 'requireScrolling': True, 'displayFrequency': 'string'}, 'sponsorChangePasswordSettings': {'allowSponsorToChangePwd': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}}})
+        response_content = json.dumps({'SponsorPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalTestUrl': 'string', 'portalType': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'fqdn': 'string', 'authenticationMethod': 'string', 'idleTimeout': 0, 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string', 'availableSsids': ['string']}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestToCreateAccounts': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'allowGuestToUseSocialAccounts': True, 'allowShowGuestForm': True, 'socialConfigs': []}, 'aupSettings': {'includeAup': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'requireAccessCode': True, 'requireScrolling': True, 'displayFrequency': 'string'}, 'sponsorChangePasswordSettings': {'allowSponsorToChangePwd': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7854,6 +7968,18 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_dictionary_attributes_list_get_all_device_admin_dictionaries_policyset_response()
             return
 
+        if self.matches_REPOSITORY_8f9081a48e3c5f4fae5aa00f889216dd():
+            self.repository_get_repositories_response()
+            return
+
+        if self.matches_REPOSITORY_89c785067a5a5e3283f96dd5006c7865():
+            self.repository_get_repository_by_name_response()
+            return
+
+        if self.matches_REPOSITORY_c9dea644f40453fead2b003b06c4c52b():
+            self.repository_get_repository_files_response()
+            return
+
         if self.matches_ACTIVE_DIRECTORY_c8dbec9679d453f78cb47d894c507a7b():
             self.active_directory_get_all_active_directory_response()
             return
@@ -8400,6 +8526,10 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_time_date_conditions_create_device_admin_time_condition_response()
             return
 
+        if self.matches_REPOSITORY_9a207a157244508c99bf3e9abb26aab8():
+            self.repository_create_repository_response()
+            return
+
         if self.matches_ACTIVE_DIRECTORY_64e9318040a456978757d7abfa3e66b1():
             self.active_directory_create_active_directory_response()
             return
@@ -8632,6 +8762,10 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
 
         if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721():
             self.device_administration_time_date_conditions_update_device_admin_time_condition_by_id_response()
+            return
+
+        if self.matches_REPOSITORY_386e380a5c1d585ab9012874ca959982():
+            self.repository_update_repository_by_name_response()
             return
 
         if self.matches_ACTIVE_DIRECTORY_e84705b918955b53afe61fc37911eb8b():
@@ -9022,6 +9156,10 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
 
         if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015():
             self.device_administration_time_date_conditions_delete_device_admin_time_condition_by_id_response()
+            return
+
+        if self.matches_REPOSITORY_c3a2e8960455547da94117ef465db97f():
+            self.repository_delete_repository_by_name_response()
             return
 
         if self.matches_ACTIVE_DIRECTORY_786febbe79ed5bb780d97a98f292b606():

@@ -155,17 +155,33 @@ class NetworkAccessConditions(object):
         """Network Access - Creates a library condition.
 
         Args:
-            attribute_id(string): attributeId, property of the
-                request body.
-            attribute_name(string): attributeName, property of the
-                request body.
-            attribute_value(string): attributeValue, property of the
-                request body.
-            children(list): children, property of the request body
-                (list of objects).
-            condition_type(string): conditionType, property of the
-                request body. Available values are
-                'ConditionReference',
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
+            attribute_value(string): Attribute value for condition
+                Value type is specified in dictionary
+                object   if multiple values allowed is
+                specified in dictionary object, property
+                of the request body.
+            children(list): In case type is andBlock or orBlock
+                addtional conditions will be aggregated
+                under this logical (OR/AND) condition,
+                property of the request body (list of
+                objects).
+            condition_type(string): Inidicates whether the record is
+                the condition itself(data) or a
+                logical(or,and) aggregation   Data type
+                enum(reference,single) indicates than
+                "conditonId" OR "ConditionAttrs" fields
+                should contain condition data but not
+                both   Logical aggreation(and,or) enum
+                indicates that additional conditions are
+                present under the children field,
+                property of the request body. Available
+                values are 'ConditionReference',
                 'ConditionAttributes',
                 'LibraryConditionAttributes',
                 'ConditionAndBlock',
@@ -173,51 +189,85 @@ class NetworkAccessConditions(object):
                 'ConditionOrBlock',
                 'LibraryConditionOrBlock' and
                 'TimeAndDateCondition'.
-            dates_range(object): datesRange, property of the request
-                body.
-            dates_range_exception(object): datesRangeException,
-                property of the request body.
-            description(string): description, property of the
+            dates_range(object): Defines for which date/s
+                TimeAndDate condition will be matched or
+                NOT matched if used in exceptionDates
+                prooperty  Options are - Date range, for
+                specific date, the same date should be
+                used for start/end date   Default - no
+                specific dates  In order to reset the
+                dates to have no specific dates Date
+                format - yyyy-mm-dd (MM = month, dd =
+                day, yyyy = year), property of the
                 request body.
-            dictionary_name(string): dictionaryName, property of the
+            dates_range_exception(object): Defines for which date/s
+                TimeAndDate condition will be matched or
+                NOT matched if used in exceptionDates
+                prooperty  Options are - Date range, for
+                specific date, the same date should be
+                used for start/end date   Default - no
+                specific dates  In order to reset the
+                dates to have no specific dates Date
+                format - yyyy-mm-dd (MM = month, dd =
+                day, yyyy = year), property of the
                 request body.
-            dictionary_value(string): dictionaryValue, property of
+            description(string): Condition description, property of
                 the request body.
-            hours_range(object): hoursRange, property of the request
-                body.
-            hours_range_exception(object): hoursRangeException,
-                property of the request body.
+            dictionary_name(string): Dictionary name, property of
+                the request body.
+            dictionary_value(string): Dictionary value, property of
+                the request body.
+            hours_range(object): Defines for which hours a
+                TimeAndDate condition will be matched or
+                not matched if used in exceptionHours
+                property  Time foramt - hh:mm  ( h =
+                hour , mm = minutes )   Default - All
+                Day , property of the request body.
+            hours_range_exception(object): Defines for which hours a
+                TimeAndDate condition will be matched or
+                not matched if used in exceptionHours
+                property  Time foramt - hh:mm  ( h =
+                hour , mm = minutes )   Default - All
+                Day , property of the request body.
             id(string): id, property of the request body.
-            is_negate(boolean): isNegate, property of the request
+            is_negate(boolean): Indicates whereas this condition is
+                in negate mode, property of the request
                 body.
-            name(string): name, property of the request body.
-            operator(string): operator, property of the request
-                body. Available values are 'equals',
-                'notEquals', 'contains', 'notContains',
-                'matches', 'in', 'notIn', 'startsWith',
-                'notStartsWith', 'endsWith',
-                'notEndsWith', 'greaterThan',
-                'lessThan', 'greaterOrEquals',
-                'lessOrEquals', 'macEquals',
-                'macNotEquals', 'macNotIn', 'macIn',
-                'macStartsWith', 'macNotStartsWith',
-                'macEndsWith', 'macNotEndsWith',
-                'macContains', 'macNotContains',
-                'ipGreaterThan', 'ipLessThan',
-                'ipEquals', 'ipNotEquals',
+            name(string): Condition name, property of the request
+                body.
+            operator(string): Equality operator, property of the
+                request body. Available values are
+                'equals', 'notEquals', 'contains',
+                'notContains', 'matches', 'in', 'notIn',
+                'startsWith', 'notStartsWith',
+                'endsWith', 'notEndsWith',
+                'greaterThan', 'lessThan',
+                'greaterOrEquals', 'lessOrEquals',
+                'macEquals', 'macNotEquals', 'macNotIn',
+                'macIn', 'macStartsWith',
+                'macNotStartsWith', 'macEndsWith',
+                'macNotEndsWith', 'macContains',
+                'macNotContains', 'ipGreaterThan',
+                'ipLessThan', 'ipEquals', 'ipNotEquals',
                 'dateTimeMatches', 'dateLessThan',
                 'dateLessThanOrEquals',
                 'dateGreaterThan',
                 'dateGreaterThanOrEquals', 'dateEquals'
                 and 'dateNotEquals'.
-            weekDays(list): weekDays, property of the request body
+            weekDays(list): Defines for which days this condition
+                will be matched  Days format - Arrays of
+                WeekDay enums   Default - List of All
+                week days, property of the request body
                 (list of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
-            weekDaysException(list): weekDaysException, property of
-                the request body (list of strings.
-                Available values are 'Sunday', 'Monday',
+            weekDaysException(list): Defines for which days this
+                condition will NOT be matched  Days
+                format - Arrays of WeekDay enums
+                Default - Not enabled, property of the
+                request body (list of strings. Available
+                values are 'Sunday', 'Monday',
                 'Tuesday', 'Wednesday', 'Thursday',
                 'Friday' and 'Saturday').
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -582,17 +632,33 @@ class NetworkAccessConditions(object):
         """Network Access - Update library condition.
 
         Args:
-            attribute_id(string): attributeId, property of the
-                request body.
-            attribute_name(string): attributeName, property of the
-                request body.
-            attribute_value(string): attributeValue, property of the
-                request body.
-            children(list): children, property of the request body
-                (list of objects).
-            condition_type(string): conditionType, property of the
-                request body. Available values are
-                'ConditionReference',
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
+            attribute_value(string): Attribute value for condition
+                Value type is specified in dictionary
+                object   if multiple values allowed is
+                specified in dictionary object, property
+                of the request body.
+            children(list): In case type is andBlock or orBlock
+                addtional conditions will be aggregated
+                under this logical (OR/AND) condition,
+                property of the request body (list of
+                objects).
+            condition_type(string): Inidicates whether the record is
+                the condition itself(data) or a
+                logical(or,and) aggregation   Data type
+                enum(reference,single) indicates than
+                "conditonId" OR "ConditionAttrs" fields
+                should contain condition data but not
+                both   Logical aggreation(and,or) enum
+                indicates that additional conditions are
+                present under the children field,
+                property of the request body. Available
+                values are 'ConditionReference',
                 'ConditionAttributes',
                 'LibraryConditionAttributes',
                 'ConditionAndBlock',
@@ -600,51 +666,85 @@ class NetworkAccessConditions(object):
                 'ConditionOrBlock',
                 'LibraryConditionOrBlock' and
                 'TimeAndDateCondition'.
-            dates_range(object): datesRange, property of the request
-                body.
-            dates_range_exception(object): datesRangeException,
-                property of the request body.
-            description(string): description, property of the
+            dates_range(object): Defines for which date/s
+                TimeAndDate condition will be matched or
+                NOT matched if used in exceptionDates
+                prooperty  Options are - Date range, for
+                specific date, the same date should be
+                used for start/end date   Default - no
+                specific dates  In order to reset the
+                dates to have no specific dates Date
+                format - yyyy-mm-dd (MM = month, dd =
+                day, yyyy = year), property of the
                 request body.
-            dictionary_name(string): dictionaryName, property of the
+            dates_range_exception(object): Defines for which date/s
+                TimeAndDate condition will be matched or
+                NOT matched if used in exceptionDates
+                prooperty  Options are - Date range, for
+                specific date, the same date should be
+                used for start/end date   Default - no
+                specific dates  In order to reset the
+                dates to have no specific dates Date
+                format - yyyy-mm-dd (MM = month, dd =
+                day, yyyy = year), property of the
                 request body.
-            dictionary_value(string): dictionaryValue, property of
+            description(string): Condition description, property of
                 the request body.
-            hours_range(object): hoursRange, property of the request
-                body.
-            hours_range_exception(object): hoursRangeException,
-                property of the request body.
+            dictionary_name(string): Dictionary name, property of
+                the request body.
+            dictionary_value(string): Dictionary value, property of
+                the request body.
+            hours_range(object): Defines for which hours a
+                TimeAndDate condition will be matched or
+                not matched if used in exceptionHours
+                property  Time foramt - hh:mm  ( h =
+                hour , mm = minutes )   Default - All
+                Day , property of the request body.
+            hours_range_exception(object): Defines for which hours a
+                TimeAndDate condition will be matched or
+                not matched if used in exceptionHours
+                property  Time foramt - hh:mm  ( h =
+                hour , mm = minutes )   Default - All
+                Day , property of the request body.
             id(string): id, property of the request body.
-            is_negate(boolean): isNegate, property of the request
+            is_negate(boolean): Indicates whereas this condition is
+                in negate mode, property of the request
                 body.
-            name(string): name, property of the request body.
-            operator(string): operator, property of the request
-                body. Available values are 'equals',
-                'notEquals', 'contains', 'notContains',
-                'matches', 'in', 'notIn', 'startsWith',
-                'notStartsWith', 'endsWith',
-                'notEndsWith', 'greaterThan',
-                'lessThan', 'greaterOrEquals',
-                'lessOrEquals', 'macEquals',
-                'macNotEquals', 'macNotIn', 'macIn',
-                'macStartsWith', 'macNotStartsWith',
-                'macEndsWith', 'macNotEndsWith',
-                'macContains', 'macNotContains',
-                'ipGreaterThan', 'ipLessThan',
-                'ipEquals', 'ipNotEquals',
+            name(string): Condition name, property of the request
+                body.
+            operator(string): Equality operator, property of the
+                request body. Available values are
+                'equals', 'notEquals', 'contains',
+                'notContains', 'matches', 'in', 'notIn',
+                'startsWith', 'notStartsWith',
+                'endsWith', 'notEndsWith',
+                'greaterThan', 'lessThan',
+                'greaterOrEquals', 'lessOrEquals',
+                'macEquals', 'macNotEquals', 'macNotIn',
+                'macIn', 'macStartsWith',
+                'macNotStartsWith', 'macEndsWith',
+                'macNotEndsWith', 'macContains',
+                'macNotContains', 'ipGreaterThan',
+                'ipLessThan', 'ipEquals', 'ipNotEquals',
                 'dateTimeMatches', 'dateLessThan',
                 'dateLessThanOrEquals',
                 'dateGreaterThan',
                 'dateGreaterThanOrEquals', 'dateEquals'
                 and 'dateNotEquals'.
-            weekDays(list): weekDays, property of the request body
+            weekDays(list): Defines for which days this condition
+                will be matched  Days format - Arrays of
+                WeekDay enums   Default - List of All
+                week days, property of the request body
                 (list of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
-            weekDaysException(list): weekDaysException, property of
-                the request body (list of strings.
-                Available values are 'Sunday', 'Monday',
+            weekDaysException(list): Defines for which days this
+                condition will NOT be matched  Days
+                format - Arrays of WeekDay enums
+                Default - Not enabled, property of the
+                request body (list of strings. Available
+                values are 'Sunday', 'Monday',
                 'Tuesday', 'Wednesday', 'Thursday',
                 'Friday' and 'Saturday').
             id(basestring): id path parameter. Condition id.
@@ -967,17 +1067,33 @@ class NetworkAccessConditions(object):
         """Network Access - Update library condition using condition name.
 
         Args:
-            attribute_id(string): attributeId, property of the
-                request body.
-            attribute_name(string): attributeName, property of the
-                request body.
-            attribute_value(string): attributeValue, property of the
-                request body.
-            children(list): children, property of the request body
-                (list of objects).
-            condition_type(string): conditionType, property of the
-                request body. Available values are
-                'ConditionReference',
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
+            attribute_value(string): Attribute value for condition
+                Value type is specified in dictionary
+                object   if multiple values allowed is
+                specified in dictionary object, property
+                of the request body.
+            children(list): In case type is andBlock or orBlock
+                addtional conditions will be aggregated
+                under this logical (OR/AND) condition,
+                property of the request body (list of
+                objects).
+            condition_type(string): Inidicates whether the record is
+                the condition itself(data) or a
+                logical(or,and) aggregation   Data type
+                enum(reference,single) indicates than
+                "conditonId" OR "ConditionAttrs" fields
+                should contain condition data but not
+                both   Logical aggreation(and,or) enum
+                indicates that additional conditions are
+                present under the children field,
+                property of the request body. Available
+                values are 'ConditionReference',
                 'ConditionAttributes',
                 'LibraryConditionAttributes',
                 'ConditionAndBlock',
@@ -985,51 +1101,85 @@ class NetworkAccessConditions(object):
                 'ConditionOrBlock',
                 'LibraryConditionOrBlock' and
                 'TimeAndDateCondition'.
-            dates_range(object): datesRange, property of the request
-                body.
-            dates_range_exception(object): datesRangeException,
-                property of the request body.
-            description(string): description, property of the
+            dates_range(object): Defines for which date/s
+                TimeAndDate condition will be matched or
+                NOT matched if used in exceptionDates
+                prooperty  Options are - Date range, for
+                specific date, the same date should be
+                used for start/end date   Default - no
+                specific dates  In order to reset the
+                dates to have no specific dates Date
+                format - yyyy-mm-dd (MM = month, dd =
+                day, yyyy = year), property of the
                 request body.
-            dictionary_name(string): dictionaryName, property of the
+            dates_range_exception(object): Defines for which date/s
+                TimeAndDate condition will be matched or
+                NOT matched if used in exceptionDates
+                prooperty  Options are - Date range, for
+                specific date, the same date should be
+                used for start/end date   Default - no
+                specific dates  In order to reset the
+                dates to have no specific dates Date
+                format - yyyy-mm-dd (MM = month, dd =
+                day, yyyy = year), property of the
                 request body.
-            dictionary_value(string): dictionaryValue, property of
+            description(string): Condition description, property of
                 the request body.
-            hours_range(object): hoursRange, property of the request
-                body.
-            hours_range_exception(object): hoursRangeException,
-                property of the request body.
+            dictionary_name(string): Dictionary name, property of
+                the request body.
+            dictionary_value(string): Dictionary value, property of
+                the request body.
+            hours_range(object): Defines for which hours a
+                TimeAndDate condition will be matched or
+                not matched if used in exceptionHours
+                property  Time foramt - hh:mm  ( h =
+                hour , mm = minutes )   Default - All
+                Day , property of the request body.
+            hours_range_exception(object): Defines for which hours a
+                TimeAndDate condition will be matched or
+                not matched if used in exceptionHours
+                property  Time foramt - hh:mm  ( h =
+                hour , mm = minutes )   Default - All
+                Day , property of the request body.
             id(string): id, property of the request body.
-            is_negate(boolean): isNegate, property of the request
+            is_negate(boolean): Indicates whereas this condition is
+                in negate mode, property of the request
                 body.
-            name(string): name, property of the request body.
-            operator(string): operator, property of the request
-                body. Available values are 'equals',
-                'notEquals', 'contains', 'notContains',
-                'matches', 'in', 'notIn', 'startsWith',
-                'notStartsWith', 'endsWith',
-                'notEndsWith', 'greaterThan',
-                'lessThan', 'greaterOrEquals',
-                'lessOrEquals', 'macEquals',
-                'macNotEquals', 'macNotIn', 'macIn',
-                'macStartsWith', 'macNotStartsWith',
-                'macEndsWith', 'macNotEndsWith',
-                'macContains', 'macNotContains',
-                'ipGreaterThan', 'ipLessThan',
-                'ipEquals', 'ipNotEquals',
+            name(string): Condition name, property of the request
+                body.
+            operator(string): Equality operator, property of the
+                request body. Available values are
+                'equals', 'notEquals', 'contains',
+                'notContains', 'matches', 'in', 'notIn',
+                'startsWith', 'notStartsWith',
+                'endsWith', 'notEndsWith',
+                'greaterThan', 'lessThan',
+                'greaterOrEquals', 'lessOrEquals',
+                'macEquals', 'macNotEquals', 'macNotIn',
+                'macIn', 'macStartsWith',
+                'macNotStartsWith', 'macEndsWith',
+                'macNotEndsWith', 'macContains',
+                'macNotContains', 'ipGreaterThan',
+                'ipLessThan', 'ipEquals', 'ipNotEquals',
                 'dateTimeMatches', 'dateLessThan',
                 'dateLessThanOrEquals',
                 'dateGreaterThan',
                 'dateGreaterThanOrEquals', 'dateEquals'
                 and 'dateNotEquals'.
-            weekDays(list): weekDays, property of the request body
+            weekDays(list): Defines for which days this condition
+                will be matched  Days format - Arrays of
+                WeekDay enums   Default - List of All
+                week days, property of the request body
                 (list of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
-            weekDaysException(list): weekDaysException, property of
-                the request body (list of strings.
-                Available values are 'Sunday', 'Monday',
+            weekDaysException(list): Defines for which days this
+                condition will NOT be matched  Days
+                format - Arrays of WeekDay enums
+                Default - Not enabled, property of the
+                request body (list of strings. Available
+                values are 'Sunday', 'Monday',
                 'Tuesday', 'Wednesday', 'Thursday',
                 'Friday' and 'Saturday').
             name(basestring): name path parameter. Condition name.

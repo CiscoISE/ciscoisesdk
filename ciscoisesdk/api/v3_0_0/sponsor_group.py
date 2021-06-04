@@ -267,13 +267,53 @@ class SponsorGroup(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_sponsor_group(self,
+                             auto_notification=None,
+                             create_permissions=None,
+                             description=None,
+                             guest_types=None,
+                             id=None,
+                             is_default_group=None,
+                             is_enabled=None,
+                             locations=None,
+                             manage_permission=None,
+                             member_groups=None,
+                             name=None,
+                             other_permissions=None,
                              headers=None,
+                             payload=None,
+                             active_validation=True,
                              **query_parameters):
         """Create Sponsor Group.
 
         Args:
+            auto_notification(boolean): autoNotification, property
+                of the request body.
+            create_permissions(object): createPermissions, property
+                of the request body.
+            description(string): description, property of the
+                request body.
+            guestTypes(list): guestTypes, property of the request
+                body (list of strings).
+            id(string): id, property of the request body.
+            is_default_group(boolean): isDefaultGroup, property of
+                the request body.
+            is_enabled(boolean): isEnabled, property of the request
+                body.
+            locations(list): locations, property of the request body
+                (list of strings).
+            manage_permission(string): managePermission, property of
+                the request body.
+            memberGroups(list): memberGroups, property of the
+                request body (list of strings).
+            name(string): name, property of the request body.
+            other_permissions(object): otherPermissions, property of
+                the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -305,6 +345,11 @@ class SponsorGroup(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
 
         _params = {
         }
@@ -313,15 +358,55 @@ class SponsorGroup(object):
 
         path_params = {
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'isEnabled':
+                    is_enabled,
+                'isDefaultGroup':
+                    is_default_group,
+                'memberGroups':
+                    member_groups,
+                'guestTypes':
+                    guest_types,
+                'locations':
+                    locations,
+                'autoNotification':
+                    auto_notification,
+                'createPermissions':
+                    create_permissions,
+                'managePermission':
+                    manage_permission,
+                'otherPermissions':
+                    other_permissions,
+            }
+            _payload = {
+                'SponsorGroup': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_acd30d35ee2ae16ff23757de7d8_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/sponsorgroup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers)
+                                               headers=_headers,
+                                               **request_params)
         else:
-            _api_response = self._session.post(endpoint_full_url, params=_params)
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               **request_params)
 
         return self._object_factory('bpm_acd30d35ee2ae16ff23757de7d8_v3_0_0', _api_response)
 
@@ -390,14 +475,53 @@ class SponsorGroup(object):
 
     def update_sponsor_group_by_id(self,
                                    id,
+                                   auto_notification=None,
+                                   create_permissions=None,
+                                   description=None,
+                                   guest_types=None,
+                                   is_default_group=None,
+                                   is_enabled=None,
+                                   locations=None,
+                                   manage_permission=None,
+                                   member_groups=None,
+                                   name=None,
+                                   other_permissions=None,
                                    headers=None,
+                                   payload=None,
+                                   active_validation=True,
                                    **query_parameters):
         """Update Sponsor Group by Id.
 
         Args:
+            auto_notification(boolean): autoNotification, property
+                of the request body.
+            create_permissions(object): createPermissions, property
+                of the request body.
+            description(string): description, property of the
+                request body.
+            guestTypes(list): guestTypes, property of the request
+                body (list of strings).
+            id(string): id, property of the request body.
+            is_default_group(boolean): isDefaultGroup, property of
+                the request body.
+            is_enabled(boolean): isEnabled, property of the request
+                body.
+            locations(list): locations, property of the request body
+                (list of strings).
+            manage_permission(string): managePermission, property of
+                the request body.
+            memberGroups(list): memberGroups, property of the
+                request body (list of strings).
+            name(string): name, property of the request body.
+            other_permissions(object): otherPermissions, property of
+                the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -429,6 +553,11 @@ class SponsorGroup(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
         check_type(id, basestring,
                    may_be_none=False)
 
@@ -440,15 +569,56 @@ class SponsorGroup(object):
         path_params = {
             'id': id,
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'isEnabled':
+                    is_enabled,
+                'isDefaultGroup':
+                    is_default_group,
+                'memberGroups':
+                    member_groups,
+                'guestTypes':
+                    guest_types,
+                'locations':
+                    locations,
+                'autoNotification':
+                    auto_notification,
+                'createPermissions':
+                    create_permissions,
+                'managePermission':
+                    manage_permission,
+                'otherPermissions':
+                    other_permissions,
+            }
+            _payload = {
+                'SponsorGroup': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_dfc44f7f24d153d789efa48e904b3832_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/sponsorgroup/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
+                                              headers=_headers,
+                                              **request_params)
+
         else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
 
         return self._object_factory('bpm_dfc44f7f24d153d789efa48e904b3832_v3_0_0', _api_response)
 

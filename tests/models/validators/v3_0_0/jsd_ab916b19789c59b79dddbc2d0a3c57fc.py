@@ -47,19 +47,6 @@ class JSONSchemaValidatorAb916B19789C59B79DddBc2D0A3C57Fc(object):
                 "items": {
                 "allOf": [
                 {
-                "discriminator": {
-                "mapping": {
-                "ConditionAndBlock": "#/components/schemas/ConditionAndBlock",
-                "ConditionAttributes": "#/components/schemas/ConditionAttributes",
-                "ConditionOrBlock": "#/components/schemas/ConditionOrBlock",
-                "ConditionReference": "#/components/schemas/ConditionReference",
-                "LibraryConditionAndBlock": "#/components/schemas/LibraryConditionAndBlock",
-                "LibraryConditionAttributes": "#/components/schemas/LibraryConditionAttributes",
-                "LibraryConditionOrBlock": "#/components/schemas/LibraryConditionOrBlock",
-                "TimeAndDateCondition": "#/components/schemas/TimeAndDateCondition"
-                },
-                "propertyName": "conditionType"
-                },
                 "properties": {
                 "conditionType": {
                 "enum": [

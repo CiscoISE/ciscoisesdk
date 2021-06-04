@@ -95,7 +95,15 @@ def is_valid_create_tacacs_server_sequence(json_schema_validate, obj):
 def create_tacacs_server_sequence(api):
     endpoint_result = api.tacacs_server_sequence.create_tacacs_server_sequence(
         active_validation=False,
-        payload=None
+        local_accounting=True,
+        name='string',
+        payload=None,
+        prefix_delimiter='string',
+        prefix_strip=True,
+        remote_accounting=True,
+        server_list='string',
+        suffix_delimiter='string',
+        suffix_strip=True
     )
     return endpoint_result
 
@@ -116,7 +124,15 @@ def test_create_tacacs_server_sequence(api, validator):
 def create_tacacs_server_sequence_default(api):
     endpoint_result = api.tacacs_server_sequence.create_tacacs_server_sequence(
         active_validation=False,
-        payload=None
+        local_accounting=None,
+        name=None,
+        payload=None,
+        prefix_delimiter=None,
+        prefix_strip=None,
+        remote_accounting=None,
+        server_list=None,
+        suffix_delimiter=None,
+        suffix_strip=None
     )
     return endpoint_result
 
@@ -198,7 +214,15 @@ def update_tacacs_server_sequence_by_id(api):
     endpoint_result = api.tacacs_server_sequence.update_tacacs_server_sequence_by_id(
         active_validation=False,
         id='string',
-        payload=None
+        local_accounting=True,
+        name='string',
+        payload=None,
+        prefix_delimiter='string',
+        prefix_strip=True,
+        remote_accounting=True,
+        server_list='string',
+        suffix_delimiter='string',
+        suffix_strip=True
     )
     return endpoint_result
 
@@ -220,7 +244,15 @@ def update_tacacs_server_sequence_by_id_default(api):
     endpoint_result = api.tacacs_server_sequence.update_tacacs_server_sequence_by_id(
         active_validation=False,
         id='string',
-        payload=None
+        local_accounting=None,
+        name=None,
+        payload=None,
+        prefix_delimiter=None,
+        prefix_strip=None,
+        remote_accounting=None,
+        server_list=None,
+        suffix_delimiter=None,
+        suffix_strip=None
     )
     return endpoint_result
 

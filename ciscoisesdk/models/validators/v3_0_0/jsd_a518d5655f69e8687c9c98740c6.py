@@ -55,19 +55,6 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
                 },
                 "children": {
                 "items": {
-                "discriminator": {
-                "mapping": {
-                "ConditionAndBlock": "#/components/schemas/ConditionAndBlock",
-                "ConditionAttributes": "#/components/schemas/ConditionAttributes",
-                "ConditionOrBlock": "#/components/schemas/ConditionOrBlock",
-                "ConditionReference": "#/components/schemas/ConditionReference",
-                "LibraryConditionAndBlock": "#/components/schemas/LibraryConditionAndBlock",
-                "LibraryConditionAttributes": "#/components/schemas/LibraryConditionAttributes",
-                "LibraryConditionOrBlock": "#/components/schemas/LibraryConditionOrBlock",
-                "TimeAndDateCondition": "#/components/schemas/TimeAndDateCondition"
-                },
-                "propertyName": "conditionType"
-                },
                 "properties": {
                 "conditionType": {
                 "enum": [
@@ -87,9 +74,6 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "conditionType"
-                ],
                 "type": "object"
                 },
                 "minItems": 2,

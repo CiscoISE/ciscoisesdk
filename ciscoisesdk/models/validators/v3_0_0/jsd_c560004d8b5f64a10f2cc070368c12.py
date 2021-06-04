@@ -45,13 +45,22 @@ class JSONSchemaValidatorC560004D8B5F64A10F2Cc070368C12(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "EgressMatrixCell": {
+                "properties": {
                 "defaultRule": {
+                "type": "string"
+                },
+                "description":
+                 {
                 "type": "string"
                 },
                 "destinationSgtId": {
                 "type": "string"
                 },
                 "matrixCellStatus": {
+                "type": "string"
+                },
+                "name": {
                 "type": "string"
                 },
                 "sgacls": {
@@ -69,8 +78,11 @@ class JSONSchemaValidatorC560004D8B5F64A10F2Cc070368C12(object):
                 "destinationSgtId",
                 "matrixCellStatus",
                 "defaultRule",
-                "sgacls"
+                "name"
                 ],
+                "type": "object"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

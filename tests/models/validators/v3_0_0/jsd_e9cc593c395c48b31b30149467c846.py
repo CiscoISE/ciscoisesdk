@@ -43,13 +43,8 @@ class JSONSchemaValidatorE9Cc593C395C48B31B30149467C846(object):
         super(JSONSchemaValidatorE9Cc593C395C48B31B30149467C846, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
+                "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "cliDnisList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
                 "conditionType": {
                 "enum": [
                 "EndstationCondition",
@@ -58,9 +53,14 @@ class JSONSchemaValidatorE9Cc593C395C48B31B30149467C846(object):
                 ],
                 "type": "string"
                 },
-                "description":
-                 {
+                "conditions": {
+                "items": {
+                "properties": {
+                "cliDnisList": {
+                "items": {
                 "type": "string"
+                },
+                "type": "array"
                 },
                 "deviceGroupList": {
                 "items": {
@@ -74,10 +74,6 @@ class JSONSchemaValidatorE9Cc593C395C48B31B30149467C846(object):
                 },
                 "type": "array"
                 },
-                "id": {
-                "readOnly": true,
-                "type": "string"
-                },
                 "ipAddrList": {
                 "items": {
                 "type": "string"
@@ -89,11 +85,27 @@ class JSONSchemaValidatorE9Cc593C395C48B31B30149467C846(object):
                 "type": "string"
                 },
                 "type": "array"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "description":
+                 {
+                "type": "string"
+                },
+                "id": {
+                "type": "string"
                 },
                 "name": {
                 "type": "string"
                 }
                 },
+                "required": [
+                "name",
+                "conditionType"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

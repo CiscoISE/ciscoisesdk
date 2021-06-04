@@ -167,6 +167,8 @@ from .v3_0_0.restid_store import \
     RestidStore as RestidStore_v3_0_0
 from .v3_0_0.replication_status import \
     ReplicationStatus as ReplicationStatus_v3_0_0
+from .v3_0_0.repository import \
+    Repository as Repository_v3_0_0
 from .v3_0_0.sg_acl import \
     SgAcl as SgAcl_v3_0_0
 from .v3_0_0.sgt import \
@@ -674,6 +676,10 @@ class IdentityServicesEngineAPI(object):
                 )
             self.replication_status = \
                 ReplicationStatus_v3_0_0(
+                    self._session_main or self._session_ui, object_factory, _validator
+                )
+            self.repository = \
+                Repository_v3_0_0(
                     self._session_main or self._session_ui, object_factory, _validator
                 )
             self.sg_acl = \

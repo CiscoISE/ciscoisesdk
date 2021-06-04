@@ -95,7 +95,11 @@ def is_valid_create_tacacs_profile(json_schema_validate, obj):
 def create_tacacs_profile(api):
     endpoint_result = api.tacacs_profile.create_tacacs_profile(
         active_validation=False,
-        payload=None
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        session_attributes={'sessionAttributeList': [{'type': 'string', 'name': 'string', 'value': 'string'}]}
     )
     return endpoint_result
 
@@ -116,7 +120,11 @@ def test_create_tacacs_profile(api, validator):
 def create_tacacs_profile_default(api):
     endpoint_result = api.tacacs_profile.create_tacacs_profile(
         active_validation=False,
-        payload=None
+        description=None,
+        id=None,
+        name=None,
+        payload=None,
+        session_attributes=None
     )
     return endpoint_result
 
@@ -197,8 +205,11 @@ def is_valid_update_tacacs_profile_by_id(json_schema_validate, obj):
 def update_tacacs_profile_by_id(api):
     endpoint_result = api.tacacs_profile.update_tacacs_profile_by_id(
         active_validation=False,
+        description='string',
         id='string',
-        payload=None
+        name='string',
+        payload=None,
+        session_attributes={'sessionAttributeList': [{'type': 'string', 'name': 'string', 'value': 'string'}]}
     )
     return endpoint_result
 
@@ -220,7 +231,10 @@ def update_tacacs_profile_by_id_default(api):
     endpoint_result = api.tacacs_profile.update_tacacs_profile_by_id(
         active_validation=False,
         id='string',
-        payload=None
+        description=None,
+        name=None,
+        payload=None,
+        session_attributes=None
     )
     return endpoint_result
 

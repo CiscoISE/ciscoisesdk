@@ -95,7 +95,14 @@ def is_valid_create_tacacs_external_servers(json_schema_validate, obj):
 def create_tacacs_external_servers(api):
     endpoint_result = api.tacacs_external_servers.create_tacacs_external_servers(
         active_validation=False,
-        payload=None
+        connection_port=0,
+        description='string',
+        host_ip='string',
+        name='string',
+        payload=None,
+        shared_secret='string',
+        single_connect=True,
+        timeout=0
     )
     return endpoint_result
 
@@ -116,7 +123,14 @@ def test_create_tacacs_external_servers(api, validator):
 def create_tacacs_external_servers_default(api):
     endpoint_result = api.tacacs_external_servers.create_tacacs_external_servers(
         active_validation=False,
-        payload=None
+        connection_port=None,
+        description=None,
+        host_ip=None,
+        name=None,
+        payload=None,
+        shared_secret=None,
+        single_connect=None,
+        timeout=None
     )
     return endpoint_result
 
@@ -197,8 +211,15 @@ def is_valid_update_tacacs_external_servers_by_id(json_schema_validate, obj):
 def update_tacacs_external_servers_by_id(api):
     endpoint_result = api.tacacs_external_servers.update_tacacs_external_servers_by_id(
         active_validation=False,
+        connection_port=0,
+        description='string',
+        host_ip='string',
         id='string',
-        payload=None
+        name='string',
+        payload=None,
+        shared_secret='string',
+        single_connect=True,
+        timeout=0
     )
     return endpoint_result
 
@@ -220,7 +241,14 @@ def update_tacacs_external_servers_by_id_default(api):
     endpoint_result = api.tacacs_external_servers.update_tacacs_external_servers_by_id(
         active_validation=False,
         id='string',
-        payload=None
+        connection_port=None,
+        description=None,
+        host_ip=None,
+        name=None,
+        payload=None,
+        shared_secret=None,
+        single_connect=None,
+        timeout=None
     )
     return endpoint_result
 

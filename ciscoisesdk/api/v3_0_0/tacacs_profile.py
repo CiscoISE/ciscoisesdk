@@ -181,13 +181,29 @@ class TacacsProfile(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_tacacs_profile(self,
+                              description=None,
+                              id=None,
+                              name=None,
+                              session_attributes=None,
                               headers=None,
+                              payload=None,
+                              active_validation=True,
                               **query_parameters):
         """Create TACACSProfile.
 
         Args:
+            description(string): description, property of the
+                request body.
+            id(string): id, property of the request body.
+            name(string): name, property of the request body.
+            session_attributes(object): sessionAttributes, property
+                of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -219,6 +235,11 @@ class TacacsProfile(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
 
         _params = {
         }
@@ -227,15 +248,39 @@ class TacacsProfile(object):
 
         path_params = {
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'sessionAttributes':
+                    session_attributes,
+            }
+            _payload = {
+                'TacacsProfile': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_c094086382485201ad36d4641fc6822e_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/tacacsprofile')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers)
+                                               headers=_headers,
+                                               **request_params)
         else:
-            _api_response = self._session.post(endpoint_full_url, params=_params)
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               **request_params)
 
         return self._object_factory('bpm_c094086382485201ad36d4641fc6822e_v3_0_0', _api_response)
 
@@ -304,14 +349,29 @@ class TacacsProfile(object):
 
     def update_tacacs_profile_by_id(self,
                                     id,
+                                    description=None,
+                                    name=None,
+                                    session_attributes=None,
                                     headers=None,
+                                    payload=None,
+                                    active_validation=True,
                                     **query_parameters):
         """Update TACACSProfile.
 
         Args:
+            description(string): description, property of the
+                request body.
+            id(string): id, property of the request body.
+            name(string): name, property of the request body.
+            session_attributes(object): sessionAttributes, property
+                of the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -343,6 +403,11 @@ class TacacsProfile(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
         check_type(id, basestring,
                    may_be_none=False)
 
@@ -354,15 +419,40 @@ class TacacsProfile(object):
         path_params = {
             'id': id,
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'sessionAttributes':
+                    session_attributes,
+            }
+            _payload = {
+                'TacacsProfile': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_a0db9ec45c05879a6f016a1edf54793_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/tacacsprofile/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
+                                              headers=_headers,
+                                              **request_params)
+
         else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
 
         return self._object_factory('bpm_a0db9ec45c05879a6f016a1edf54793_v3_0_0', _api_response)
 

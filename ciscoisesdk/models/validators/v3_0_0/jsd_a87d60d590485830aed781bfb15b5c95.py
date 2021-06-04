@@ -70,19 +70,6 @@ class JSONSchemaValidatorA87D60D590485830Aed781Bfb15B5C95(object):
                 },
                 "children": {
                 "items": {
-                "discriminator": {
-                "mapping": {
-                "ConditionAndBlock": "#/components/schemas/ConditionAndBlock",
-                "ConditionAttributes": "#/components/schemas/ConditionAttributes",
-                "ConditionOrBlock": "#/components/schemas/ConditionOrBlock",
-                "ConditionReference": "#/components/schemas/ConditionReference",
-                "LibraryConditionAndBlock": "#/components/schemas/LibraryConditionAndBlock",
-                "LibraryConditionAttributes": "#/components/schemas/LibraryConditionAttributes",
-                "LibraryConditionOrBlock": "#/components/schemas/LibraryConditionOrBlock",
-                "TimeAndDateCondition": "#/components/schemas/TimeAndDateCondition"
-                },
-                "propertyName": "conditionType"
-                },
                 "properties": {
                 "conditionType": {
                 "enum": [
@@ -102,9 +89,6 @@ class JSONSchemaValidatorA87D60D590485830Aed781Bfb15B5C95(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "conditionType"
-                ],
                 "type": "object"
                 },
                 "minItems": 2,
@@ -136,10 +120,6 @@ class JSONSchemaValidatorA87D60D590485830Aed781Bfb15B5C95(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "startDate",
-                "endDate"
-                ],
                 "type": "object"
                 },
                 "datesRangeException": {
@@ -155,10 +135,6 @@ class JSONSchemaValidatorA87D60D590485830Aed781Bfb15B5C95(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "startDate",
-                "endDate"
-                ],
                 "type": "object"
                 },
                 "description":
@@ -181,10 +157,6 @@ class JSONSchemaValidatorA87D60D590485830Aed781Bfb15B5C95(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "startTime",
-                "endTime"
-                ],
                 "type": "object"
                 },
                 "hoursRangeException": {
@@ -196,10 +168,6 @@ class JSONSchemaValidatorA87D60D590485830Aed781Bfb15B5C95(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "startTime",
-                "endTime"
-                ],
                 "type": "object"
                 },
                 "id": {

@@ -45,14 +45,6 @@ class JSONSchemaValidatorB4Ceac9EE830523CA5DdBfdf3E1B44Be(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
-                "discriminator": {
-                "mapping": {
-                "DeviceCondition": "#/components/schemas/DeviceCondition",
-                "DevicePortCondition": "#/components/schemas/DevicePortCondition",
-                "EndstationCondition": "#/components/schemas/EndstationCondition"
-                },
-                "propertyName": "conditionType"
-                },
                 "properties": {
                 "conditionType": {
                 "enum": [
@@ -61,6 +53,10 @@ class JSONSchemaValidatorB4Ceac9EE830523CA5DdBfdf3E1B44Be(object):
                 "DevicePortCondition"
                 ],
                 "type": "string"
+                },
+                "conditions": {
+                "items": {},
+                "type": "array"
                 },
                 "description":
                  {

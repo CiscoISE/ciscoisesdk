@@ -93,7 +93,11 @@ def is_valid_create_tacacs_command_sets(json_schema_validate, obj):
 def create_tacacs_command_sets(api):
     endpoint_result = api.tacacs_command_sets.create_tacacs_command_sets(
         active_validation=False,
-        payload=None
+        commands={'commandList': [{'grant': 'string', 'command': 'string', 'arguments': 'string'}]},
+        description='string',
+        name='string',
+        payload=None,
+        permit_unmatched=True
     )
     return endpoint_result
 
@@ -114,7 +118,11 @@ def test_create_tacacs_command_sets(api, validator):
 def create_tacacs_command_sets_default(api):
     endpoint_result = api.tacacs_command_sets.create_tacacs_command_sets(
         active_validation=False,
-        payload=None
+        commands=None,
+        description=None,
+        name=None,
+        payload=None,
+        permit_unmatched=None
     )
     return endpoint_result
 
@@ -195,8 +203,12 @@ def is_valid_update_tacacs_command_sets_by_id(json_schema_validate, obj):
 def update_tacacs_command_sets_by_id(api):
     endpoint_result = api.tacacs_command_sets.update_tacacs_command_sets_by_id(
         active_validation=False,
+        commands={'commandList': [{'grant': 'string', 'command': 'string', 'arguments': 'string'}]},
+        description='string',
         id='string',
-        payload=None
+        name='string',
+        payload=None,
+        permit_unmatched=True
     )
     return endpoint_result
 
@@ -218,7 +230,11 @@ def update_tacacs_command_sets_by_id_default(api):
     endpoint_result = api.tacacs_command_sets.update_tacacs_command_sets_by_id(
         active_validation=False,
         id='string',
-        payload=None
+        commands=None,
+        description=None,
+        name=None,
+        payload=None,
+        permit_unmatched=None
     )
     return endpoint_result
 

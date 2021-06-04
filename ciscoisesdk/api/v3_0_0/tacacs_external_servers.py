@@ -181,13 +181,37 @@ class TacacsExternalServers(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_tacacs_external_servers(self,
+                                       connection_port=None,
+                                       description=None,
+                                       host_ip=None,
+                                       name=None,
+                                       shared_secret=None,
+                                       single_connect=None,
+                                       timeout=None,
                                        headers=None,
+                                       payload=None,
+                                       active_validation=True,
                                        **query_parameters):
         """Create TACACSExternalServers.
 
         Args:
+            connection_port(integer): connectionPort, property of
+                the request body.
+            description(string): description, property of the
+                request body.
+            host_ip(string): hostIP, property of the request body.
+            name(string): name, property of the request body.
+            shared_secret(string): sharedSecret, property of the
+                request body.
+            single_connect(boolean): singleConnect, property of the
+                request body.
+            timeout(integer): timeout, property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -219,6 +243,11 @@ class TacacsExternalServers(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
 
         _params = {
         }
@@ -227,15 +256,45 @@ class TacacsExternalServers(object):
 
         path_params = {
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'name':
+                    name,
+                'description':
+                    description,
+                'hostIP':
+                    host_ip,
+                'connectionPort':
+                    connection_port,
+                'singleConnect':
+                    single_connect,
+                'sharedSecret':
+                    shared_secret,
+                'timeout':
+                    timeout,
+            }
+            _payload = {
+                'TacacsExternalServer': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_b5097e4db7505ba390914b50b1c2046b_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/tacacsexternalservers')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers)
+                                               headers=_headers,
+                                               **request_params)
         else:
-            _api_response = self._session.post(endpoint_full_url, params=_params)
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               **request_params)
 
         return self._object_factory('bpm_b5097e4db7505ba390914b50b1c2046b_v3_0_0', _api_response)
 
@@ -304,14 +363,38 @@ class TacacsExternalServers(object):
 
     def update_tacacs_external_servers_by_id(self,
                                              id,
+                                             connection_port=None,
+                                             description=None,
+                                             host_ip=None,
+                                             name=None,
+                                             shared_secret=None,
+                                             single_connect=None,
+                                             timeout=None,
                                              headers=None,
+                                             payload=None,
+                                             active_validation=True,
                                              **query_parameters):
         """Update TACACSExternalServers.
 
         Args:
+            connection_port(integer): connectionPort, property of
+                the request body.
+            description(string): description, property of the
+                request body.
+            host_ip(string): hostIP, property of the request body.
+            name(string): name, property of the request body.
+            shared_secret(string): sharedSecret, property of the
+                request body.
+            single_connect(boolean): singleConnect, property of the
+                request body.
+            timeout(integer): timeout, property of the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -343,6 +426,11 @@ class TacacsExternalServers(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
         check_type(id, basestring,
                    may_be_none=False)
 
@@ -354,15 +442,46 @@ class TacacsExternalServers(object):
         path_params = {
             'id': id,
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'name':
+                    name,
+                'description':
+                    description,
+                'hostIP':
+                    host_ip,
+                'connectionPort':
+                    connection_port,
+                'singleConnect':
+                    single_connect,
+                'sharedSecret':
+                    shared_secret,
+                'timeout':
+                    timeout,
+            }
+            _payload = {
+                'TacacsExternalServer': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/tacacsexternalservers/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
+                                              headers=_headers,
+                                              **request_params)
+
         else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
 
         return self._object_factory('bpm_a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0', _api_response)
 

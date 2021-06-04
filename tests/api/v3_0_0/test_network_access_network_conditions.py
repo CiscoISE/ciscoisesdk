@@ -93,14 +93,10 @@ def is_valid_create_network_access_network_condition(json_schema_validate, obj):
 def create_network_access_network_condition(api):
     endpoint_result = api.network_access_network_conditions.create_network_access_network_condition(
         active_validation=False,
-        cli_dnis_list=['string'],
         condition_type='string',
+        conditions=[{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}],
         description='string',
-        device_group_list=['string'],
-        device_list=['string'],
         id='string',
-        ip_addr_list=['string'],
-        mac_addr_list=['string'],
         name='string',
         payload=None
     )
@@ -123,14 +119,10 @@ def test_create_network_access_network_condition(api, validator):
 def create_network_access_network_condition_default(api):
     endpoint_result = api.network_access_network_conditions.create_network_access_network_condition(
         active_validation=False,
-        cli_dnis_list=None,
         condition_type=None,
+        conditions=None,
         description=None,
-        device_group_list=None,
-        device_list=None,
         id=None,
-        ip_addr_list=None,
-        mac_addr_list=None,
         name=None,
         payload=None
     )
@@ -213,14 +205,10 @@ def is_valid_update_network_access_network_condition_by_id(json_schema_validate,
 def update_network_access_network_condition_by_id(api):
     endpoint_result = api.network_access_network_conditions.update_network_access_network_condition_by_id(
         active_validation=False,
-        cli_dnis_list=['string'],
         condition_type='string',
+        conditions=[{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}],
         description='string',
-        device_group_list=['string'],
-        device_list=['string'],
         id='string',
-        ip_addr_list=['string'],
-        mac_addr_list=['string'],
         name='string',
         payload=None
     )
@@ -244,13 +232,9 @@ def update_network_access_network_condition_by_id_default(api):
     endpoint_result = api.network_access_network_conditions.update_network_access_network_condition_by_id(
         active_validation=False,
         id='string',
-        cli_dnis_list=None,
         condition_type=None,
+        conditions=None,
         description=None,
-        device_group_list=None,
-        device_list=None,
-        ip_addr_list=None,
-        mac_addr_list=None,
         name=None,
         payload=None
     )

@@ -181,13 +181,42 @@ class TacacsServerSequence(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_tacacs_server_sequence(self,
+                                      local_accounting=None,
+                                      name=None,
+                                      prefix_delimiter=None,
+                                      prefix_strip=None,
+                                      remote_accounting=None,
+                                      server_list=None,
+                                      suffix_delimiter=None,
+                                      suffix_strip=None,
                                       headers=None,
+                                      payload=None,
+                                      active_validation=True,
                                       **query_parameters):
         """Create TACACSServerSequence.
 
         Args:
+            local_accounting(boolean): localAccounting, property of
+                the request body.
+            name(string): name, property of the request body.
+            prefix_delimiter(string): prefixDelimiter, property of
+                the request body.
+            prefix_strip(boolean): prefixStrip, property of the
+                request body.
+            remote_accounting(boolean): remoteAccounting, property
+                of the request body.
+            server_list(string): serverList, property of the request
+                body.
+            suffix_delimiter(string): suffixDelimiter, property of
+                the request body.
+            suffix_strip(boolean): suffixStrip, property of the
+                request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -219,6 +248,11 @@ class TacacsServerSequence(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
 
         _params = {
         }
@@ -227,15 +261,47 @@ class TacacsServerSequence(object):
 
         path_params = {
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'name':
+                    name,
+                'serverList':
+                    server_list,
+                'localAccounting':
+                    local_accounting,
+                'remoteAccounting':
+                    remote_accounting,
+                'prefixStrip':
+                    prefix_strip,
+                'prefixDelimiter':
+                    prefix_delimiter,
+                'suffixStrip':
+                    suffix_strip,
+                'suffixDelimiter':
+                    suffix_delimiter,
+            }
+            _payload = {
+                'TacacsServerSequence': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_a1e26e595667bd98f84dd29232e2_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/tacacsserversequence')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers)
+                                               headers=_headers,
+                                               **request_params)
         else:
-            _api_response = self._session.post(endpoint_full_url, params=_params)
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               **request_params)
 
         return self._object_factory('bpm_a1e26e595667bd98f84dd29232e2_v3_0_0', _api_response)
 
@@ -304,14 +370,43 @@ class TacacsServerSequence(object):
 
     def update_tacacs_server_sequence_by_id(self,
                                             id,
+                                            local_accounting=None,
+                                            name=None,
+                                            prefix_delimiter=None,
+                                            prefix_strip=None,
+                                            remote_accounting=None,
+                                            server_list=None,
+                                            suffix_delimiter=None,
+                                            suffix_strip=None,
                                             headers=None,
+                                            payload=None,
+                                            active_validation=True,
                                             **query_parameters):
         """Update TACACSServerSequence.
 
         Args:
+            local_accounting(boolean): localAccounting, property of
+                the request body.
+            name(string): name, property of the request body.
+            prefix_delimiter(string): prefixDelimiter, property of
+                the request body.
+            prefix_strip(boolean): prefixStrip, property of the
+                request body.
+            remote_accounting(boolean): remoteAccounting, property
+                of the request body.
+            server_list(string): serverList, property of the request
+                body.
+            suffix_delimiter(string): suffixDelimiter, property of
+                the request body.
+            suffix_strip(boolean): suffixStrip, property of the
+                request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -343,6 +438,11 @@ class TacacsServerSequence(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
         check_type(id, basestring,
                    may_be_none=False)
 
@@ -354,15 +454,48 @@ class TacacsServerSequence(object):
         path_params = {
             'id': id,
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'name':
+                    name,
+                'serverList':
+                    server_list,
+                'localAccounting':
+                    local_accounting,
+                'remoteAccounting':
+                    remote_accounting,
+                'prefixStrip':
+                    prefix_strip,
+                'prefixDelimiter':
+                    prefix_delimiter,
+                'suffixStrip':
+                    suffix_strip,
+                'suffixDelimiter':
+                    suffix_delimiter,
+            }
+            _payload = {
+                'TacacsServerSequence': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_f6de5797735bbd95dc8683c6a7aebf_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/tacacsserversequence/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
+                                              headers=_headers,
+                                              **request_params)
+
         else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
 
         return self._object_factory('bpm_f6de5797735bbd95dc8683c6a7aebf_v3_0_0', _api_response)
 

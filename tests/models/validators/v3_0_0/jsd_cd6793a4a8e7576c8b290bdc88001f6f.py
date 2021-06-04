@@ -158,6 +158,9 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 "name": {
                 "type": "string"
                 },
+                "portalTestUrl": {
+                "type": "string"
+                },
                 "portalType": {
                 "type": "string"
                 },

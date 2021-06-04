@@ -181,13 +181,38 @@ class SponsorPortal(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_sponsor_portal(self,
+                              customizations=None,
+                              description=None,
+                              id=None,
+                              name=None,
+                              portal_test_url=None,
+                              portal_type=None,
+                              settings=None,
                               headers=None,
+                              payload=None,
+                              active_validation=True,
                               **query_parameters):
         """Create Sponsor Portal.
 
         Args:
+            customizations(object): customizations, property of the
+                request body.
+            description(string): description, property of the
+                request body.
+            id(string): id, property of the request body.
+            name(string): name, property of the request body.
+            portal_test_url(string): portalTestUrl, property of the
+                request body.
+            portal_type(string): portalType, property of the request
+                body.
+            settings(object): settings, property of the request
+                body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -219,6 +244,11 @@ class SponsorPortal(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
 
         _params = {
         }
@@ -227,15 +257,45 @@ class SponsorPortal(object):
 
         path_params = {
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'portalTestUrl':
+                    portal_test_url,
+                'portalType':
+                    portal_type,
+                'settings':
+                    settings,
+                'customizations':
+                    customizations,
+            }
+            _payload = {
+                'SponsorPortal': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_f15d19b858d59218ab56b7323ca2fae_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/sponsorportal')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers)
+                                               headers=_headers,
+                                               **request_params)
         else:
-            _api_response = self._session.post(endpoint_full_url, params=_params)
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               **request_params)
 
         return self._object_factory('bpm_f15d19b858d59218ab56b7323ca2fae_v3_0_0', _api_response)
 
@@ -304,14 +364,38 @@ class SponsorPortal(object):
 
     def update_sponsor_portal_by_id(self,
                                     id,
+                                    customizations=None,
+                                    description=None,
+                                    name=None,
+                                    portal_test_url=None,
+                                    portal_type=None,
+                                    settings=None,
                                     headers=None,
+                                    payload=None,
+                                    active_validation=True,
                                     **query_parameters):
         """Update Sponsor Portal.
 
         Args:
+            customizations(object): customizations, property of the
+                request body.
+            description(string): description, property of the
+                request body.
+            id(string): id, property of the request body.
+            name(string): name, property of the request body.
+            portal_test_url(string): portalTestUrl, property of the
+                request body.
+            portal_type(string): portalType, property of the request
+                body.
+            settings(object): settings, property of the request
+                body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -343,6 +427,11 @@ class SponsorPortal(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
         check_type(id, basestring,
                    may_be_none=False)
 
@@ -354,15 +443,46 @@ class SponsorPortal(object):
         path_params = {
             'id': id,
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'portalTestUrl':
+                    portal_test_url,
+                'portalType':
+                    portal_type,
+                'settings':
+                    settings,
+                'customizations':
+                    customizations,
+            }
+            _payload = {
+                'SponsorPortal': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_bd8691c5d9435e48a3c7a08658bda585_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/sponsorportal/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
+                                              headers=_headers,
+                                              **request_params)
+
         else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
 
         return self._object_factory('bpm_bd8691c5d9435e48a3c7a08658bda585_v3_0_0', _api_response)
 

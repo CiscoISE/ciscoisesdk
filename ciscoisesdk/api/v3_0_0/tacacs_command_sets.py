@@ -133,13 +133,30 @@ class TacacsCommandSets(object):
         return self._object_factory('bpm_c9a67d3e9015580f93a52627f19e9916_v3_0_0', _api_response)
 
     def create_tacacs_command_sets(self,
+                                   commands=None,
+                                   description=None,
+                                   name=None,
+                                   permit_unmatched=None,
                                    headers=None,
+                                   payload=None,
+                                   active_validation=True,
                                    **query_parameters):
         """Create TACACSCommandSets.
 
         Args:
+            commands(object): commands, property of the request
+                body.
+            description(string): description, property of the
+                request body.
+            name(string): name, property of the request body.
+            permit_unmatched(boolean): permitUnmatched, property of
+                the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -171,6 +188,11 @@ class TacacsCommandSets(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
 
         _params = {
         }
@@ -179,15 +201,39 @@ class TacacsCommandSets(object):
 
         path_params = {
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'name':
+                    name,
+                'description':
+                    description,
+                'permitUnmatched':
+                    permit_unmatched,
+                'commands':
+                    commands,
+            }
+            _payload = {
+                'TacacsCommandSets': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_d9cc879878ee5a34ac1c32f2f0cb8c6d_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/tacacscommandsets')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers)
+                                               headers=_headers,
+                                               **request_params)
         else:
-            _api_response = self._session.post(endpoint_full_url, params=_params)
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               **request_params)
 
         return self._object_factory('bpm_d9cc879878ee5a34ac1c32f2f0cb8c6d_v3_0_0', _api_response)
 
@@ -256,14 +302,31 @@ class TacacsCommandSets(object):
 
     def update_tacacs_command_sets_by_id(self,
                                          id,
+                                         commands=None,
+                                         description=None,
+                                         name=None,
+                                         permit_unmatched=None,
                                          headers=None,
+                                         payload=None,
+                                         active_validation=True,
                                          **query_parameters):
         """Update TACACSCommandSets.
 
         Args:
+            commands(object): commands, property of the request
+                body.
+            description(string): description, property of the
+                request body.
+            name(string): name, property of the request body.
+            permit_unmatched(boolean): permitUnmatched, property of
+                the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -295,6 +358,11 @@ class TacacsCommandSets(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
         check_type(id, basestring,
                    may_be_none=False)
 
@@ -306,15 +374,40 @@ class TacacsCommandSets(object):
         path_params = {
             'id': id,
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'name':
+                    name,
+                'description':
+                    description,
+                'permitUnmatched':
+                    permit_unmatched,
+                'commands':
+                    commands,
+            }
+            _payload = {
+                'TacacsCommandSets': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_eb6323be425816a4116eea48f16f4b_v3_0_0')\
+                .validate(_payload)
 
         e_url = ('/ers/config/tacacscommandsets/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
+                                              headers=_headers,
+                                              **request_params)
+
         else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
 
         return self._object_factory('bpm_eb6323be425816a4116eea48f16f4b_v3_0_0', _api_response)
 

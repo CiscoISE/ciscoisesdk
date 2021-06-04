@@ -104,8 +104,10 @@ def create_egress_matrix_cell(api):
     endpoint_result = api.egress_matrix_cell.create_egress_matrix_cell(
         active_validation=False,
         default_rule='string',
+        description='string',
         destination_sgt_id='string',
         matrix_cell_status='string',
+        name='string',
         payload=None,
         sgacls=['string'],
         source_sgt_id='string'
@@ -130,8 +132,10 @@ def create_egress_matrix_cell_default(api):
     endpoint_result = api.egress_matrix_cell.create_egress_matrix_cell(
         active_validation=False,
         default_rule=None,
+        description=None,
         destination_sgt_id=None,
         matrix_cell_status=None,
+        name=None,
         payload=None,
         sgacls=None,
         source_sgt_id=None
@@ -216,9 +220,11 @@ def update_egress_matrix_cell_by_id(api):
     endpoint_result = api.egress_matrix_cell.update_egress_matrix_cell_by_id(
         active_validation=False,
         default_rule='string',
+        description='string',
         destination_sgt_id='string',
         id='string',
         matrix_cell_status='string',
+        name='string',
         payload=None,
         sgacls=['string'],
         source_sgt_id='string'
@@ -244,8 +250,10 @@ def update_egress_matrix_cell_by_id_default(api):
         active_validation=False,
         id='string',
         default_rule=None,
+        description=None,
         destination_sgt_id=None,
         matrix_cell_status=None,
+        name=None,
         payload=None,
         sgacls=None,
         source_sgt_id=None

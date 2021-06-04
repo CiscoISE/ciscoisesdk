@@ -228,6 +228,9 @@ def pytest_configure(config):
         "markers", "replication_status: replication_status wrapper test"
     )
     config.addinivalue_line(
+        "markers", "repository: repository wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "sg_acl: sg_acl wrapper test"
     )
     config.addinivalue_line(

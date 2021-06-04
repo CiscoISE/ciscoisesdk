@@ -103,6 +103,18 @@ def is_valid_create_sponsor_group(json_schema_validate, obj):
 def create_sponsor_group(api):
     endpoint_result = api.sponsor_group.create_sponsor_group(
         active_validation=False,
+        auto_notification=True,
+        create_permissions={'canImportMultipleAccounts': True, 'importBatchSizeLimit': 0, 'canCreateRandomAccounts': True, 'randomBatchSizeLimit': 0, 'defaultUsernamePrefix': 'string', 'canSpecifyUsernamePrefix': True, 'canSetFutureStartDate': True, 'startDateFutureLimitDays': 0},
+        description='string',
+        guest_types=['string'],
+        id='string',
+        is_default_group=True,
+        is_enabled=True,
+        locations=['string'],
+        manage_permission='string',
+        member_groups=['string'],
+        name='string',
+        other_permissions={'canUpdateGuestContactInfo': True, 'canViewGuestPasswords': True, 'canSendSmsNotifications': True, 'canResetGuestPasswords': True, 'canExtendGuestAccounts': True, 'canDeleteGuestAccounts': True, 'canSuspendGuestAccounts': True, 'requireSuspensionReason': True, 'canReinstateSuspendedAccounts': True, 'canApproveSelfregGuests': True, 'limitApprovalToSponsorsGuests': True, 'canAccessViaRest': True},
         payload=None
     )
     return endpoint_result
@@ -124,6 +136,18 @@ def test_create_sponsor_group(api, validator):
 def create_sponsor_group_default(api):
     endpoint_result = api.sponsor_group.create_sponsor_group(
         active_validation=False,
+        auto_notification=None,
+        create_permissions=None,
+        description=None,
+        guest_types=None,
+        id=None,
+        is_default_group=None,
+        is_enabled=None,
+        locations=None,
+        manage_permission=None,
+        member_groups=None,
+        name=None,
+        other_permissions=None,
         payload=None
     )
     return endpoint_result
@@ -205,7 +229,18 @@ def is_valid_update_sponsor_group_by_id(json_schema_validate, obj):
 def update_sponsor_group_by_id(api):
     endpoint_result = api.sponsor_group.update_sponsor_group_by_id(
         active_validation=False,
+        auto_notification=True,
+        create_permissions={'canImportMultipleAccounts': True, 'importBatchSizeLimit': 0, 'canCreateRandomAccounts': True, 'randomBatchSizeLimit': 0, 'defaultUsernamePrefix': 'string', 'canSpecifyUsernamePrefix': True, 'canSetFutureStartDate': True, 'startDateFutureLimitDays': 0},
+        description='string',
+        guest_types=['string'],
         id='string',
+        is_default_group=True,
+        is_enabled=True,
+        locations=['string'],
+        manage_permission='string',
+        member_groups=['string'],
+        name='string',
+        other_permissions={'canUpdateGuestContactInfo': True, 'canViewGuestPasswords': True, 'canSendSmsNotifications': True, 'canResetGuestPasswords': True, 'canExtendGuestAccounts': True, 'canDeleteGuestAccounts': True, 'canSuspendGuestAccounts': True, 'requireSuspensionReason': True, 'canReinstateSuspendedAccounts': True, 'canApproveSelfregGuests': True, 'limitApprovalToSponsorsGuests': True, 'canAccessViaRest': True},
         payload=None
     )
     return endpoint_result
@@ -228,6 +263,17 @@ def update_sponsor_group_by_id_default(api):
     endpoint_result = api.sponsor_group.update_sponsor_group_by_id(
         active_validation=False,
         id='string',
+        auto_notification=None,
+        create_permissions=None,
+        description=None,
+        guest_types=None,
+        is_default_group=None,
+        is_enabled=None,
+        locations=None,
+        manage_permission=None,
+        member_groups=None,
+        name=None,
+        other_permissions=None,
         payload=None
     )
     return endpoint_result

@@ -596,6 +596,15 @@ replication_status
 
 
 
+.. _repository_3_0_0:
+
+repository
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_0_0.repository.Repository()
+
+
+
 .. _sg_acl_3_0_0:
 
 sg_acl
