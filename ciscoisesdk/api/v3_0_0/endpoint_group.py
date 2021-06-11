@@ -80,7 +80,7 @@ class EndpointGroup(object):
                                 page=None,
                                 size=None,
                                 sortasc=None,
-                                sortdec=None,
+                                sortdsc=None,
                                 headers=None,
                                 **query_parameters):
         """Get all EndpointGroup.
@@ -90,7 +90,7 @@ class EndpointGroup(object):
             size(int): size query parameter. Number of objects
                 returned per page.
             sortasc(basestring): sortasc query parameter. sort asc.
-            sortdec(basestring): sortdec query parameter. sort desc.
+            sortdsc(basestring): sortdsc query parameter. sort desc.
             filter(basestring, list, set, tuple): filter query
                 parameter.               **Simple
                 filtering** should be available through
@@ -156,7 +156,7 @@ class EndpointGroup(object):
         check_type(page, (int, basestring, list))
         check_type(size, (int, basestring, list))
         check_type(sortasc, basestring)
-        check_type(sortdec, basestring)
+        check_type(sortdsc, basestring)
         check_type(filter, (basestring, list, set, tuple))
         check_type(filter_type, basestring)
 
@@ -167,8 +167,8 @@ class EndpointGroup(object):
                 size,
             'sortasc':
                 sortasc,
-            'sortdec':
-                sortdec,
+            'sortdsc':
+                sortdsc,
             'filter':
                 filter,
             'filterType':
@@ -196,7 +196,7 @@ class EndpointGroup(object):
                                           page=None,
                                           size=None,
                                           sortasc=None,
-                                          sortdec=None,
+                                          sortdsc=None,
                                           headers=None,
                                           **query_parameters):
         """Get all EndpointGroup.
@@ -206,7 +206,7 @@ class EndpointGroup(object):
             size(int): size query parameter. Number of objects
                 returned per page.
             sortasc(basestring): sortasc query parameter. sort asc.
-            sortdec(basestring): sortdec query parameter. sort desc.
+            sortdsc(basestring): sortdsc query parameter. sort desc.
             filter(basestring, list, set, tuple): filter query
                 parameter.               **Simple
                 filtering** should be available through
@@ -262,7 +262,7 @@ class EndpointGroup(object):
             page=page,
             size=size,
             sortasc=sortasc,
-            sortdec=sortdec,
+            sortdsc=sortdsc,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 

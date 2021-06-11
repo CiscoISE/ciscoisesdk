@@ -47,7 +47,7 @@ def get_all_sponsor_group_member(api):
         page=0,
         size=0,
         sortasc='string',
-        sortdec='string'
+        sortdsc='string'
     )
     return endpoint_result
 
@@ -72,7 +72,7 @@ def get_all_sponsor_group_member_default(api):
         page=None,
         size=None,
         sortasc=None,
-        sortdec=None
+        sortdsc=None
     )
     return endpoint_result
 

@@ -101,7 +101,7 @@ def create_anc_policy(api):
         payload=None,
         size=0,
         sortasc='string',
-        sortdec='string'
+        sortdsc='string'
     )
     return endpoint_result
 
@@ -130,7 +130,7 @@ def create_anc_policy_default(api):
         payload=None,
         size=None,
         sortasc=None,
-        sortdec=None
+        sortdsc=None
     )
     return endpoint_result
 

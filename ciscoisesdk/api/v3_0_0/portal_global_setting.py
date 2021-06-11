@@ -80,7 +80,7 @@ class PortalGlobalSetting(object):
                                        page=None,
                                        size=None,
                                        sortasc=None,
-                                       sortdec=None,
+                                       sortdsc=None,
                                        headers=None,
                                        **query_parameters):
         """Get all Portal Global Setting.
@@ -119,7 +119,7 @@ class PortalGlobalSetting(object):
                 criteria will be by default AND, and can
                 be changed by using the parameter.
             sortasc(basestring): sortasc query parameter. sort asc.
-            sortdec(basestring): sortdec query parameter. sort desc.
+            sortdsc(basestring): sortdsc query parameter. sort desc.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -158,7 +158,7 @@ class PortalGlobalSetting(object):
         check_type(filter, (basestring, list, set, tuple))
         check_type(filter_type, basestring)
         check_type(sortasc, basestring)
-        check_type(sortdec, basestring)
+        check_type(sortdsc, basestring)
 
         _params = {
             'page':
@@ -171,8 +171,8 @@ class PortalGlobalSetting(object):
                 filter_type,
             'sortasc':
                 sortasc,
-            'sortdec':
-                sortdec,
+            'sortdsc':
+                sortdsc,
         }
         _params.update(query_parameters)
         _params = dict_from_items_with_values(_params)
@@ -196,7 +196,7 @@ class PortalGlobalSetting(object):
                                                  page=None,
                                                  size=None,
                                                  sortasc=None,
-                                                 sortdec=None,
+                                                 sortdsc=None,
                                                  headers=None,
                                                  **query_parameters):
         """Get all Portal Global Setting.
@@ -235,7 +235,7 @@ class PortalGlobalSetting(object):
                 criteria will be by default AND, and can
                 be changed by using the parameter.
             sortasc(basestring): sortasc query parameter. sort asc.
-            sortdec(basestring): sortdec query parameter. sort desc.
+            sortdsc(basestring): sortdsc query parameter. sort desc.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -262,7 +262,7 @@ class PortalGlobalSetting(object):
             page=page,
             size=size,
             sortasc=sortasc,
-            sortdec=sortdec,
+            sortdsc=sortdsc,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
