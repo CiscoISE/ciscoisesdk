@@ -13,8 +13,8 @@ Make sure that you have:
 * ciscoisesdk :ref:`installed <Install>`
 * ciscoisesdk :ref:`upgraded to the latest version <Upgrade>`
 
-Get your Identity Services Engine Access Token
-----------------------------------------------
+Pass your Identity Services Engine Access Token
+-----------------------------------------------
 
 To interact with the Identity Services Engine APIs, you must have a **Identity Services Engine Access Token**.
 A Identity Services Engine Access Token is how the Identity Services Engine APIs validate access and identify the
@@ -64,6 +64,10 @@ ciscoisesdk will use them to create your access token when creating new :class:`
 If you don't want to set your credentials as environment variables, you
 can manually provide them as parameters when creating a IdentityServicesEngineAPI object.
 
+.. note::
+    The ciscoisesdk assumes that the ERS APIs and OpenAPIs are enabled.
+    If uses_api_gateway is True, the ciscoisesdk assumes that your ISE API Gateway is enabled as well.
+
 
 Set credentials as environment variables
 -----------------------------------------
@@ -107,7 +111,7 @@ object".
     >>> from ciscoisesdk import IdentityServicesEngineAPI
     >>> api = IdentityServicesEngineAPI()
 
-As discussed above (`Get your Identity Services Engine Access Token`_), ciscoisesdk defaults
+As discussed above (`Pass your Identity Services Engine Access Token`_), ciscoisesdk defaults
 to pulling from environment variables to generate your access token.
 If you do not have those environment variables set and you try to
 create a new :class:`IdentityServicesEngineAPI` object without providing them,
@@ -119,7 +123,7 @@ a :exc:`AccessTokenError` will be raised (a :exc:`ciscoisesdkException` subclass
     >>> api = IdentityServicesEngineAPI()
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
-      File "ciscoisesdk/__init__.py", line 237, in __init__
+      File "ciscoisesdk/api/__init__.py", line 356, in __init__
         raise AccessTokenError(error_message)
     AccessTokenError: You need an access token to interact with the Identity Services Engine
     APIs. Identity Services Engine uses HTTP Basic Auth to create an access
@@ -134,10 +138,13 @@ If you don't provide a known version and try to create a new :class:`IdentitySer
 .. code-block:: python
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
-    >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!', base_url='https://dcloud-dna-ise-rtp.cisco.com', version='0.1.12')
+    >>> api = IdentityServicesEngineAPI(username='devnetuser',
+                                        password='Cisco123!',
+                                        base_url='https://dcloud-dna-ise-rtp.cisco.com',
+                                        version='0.1.12')
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
-      File "ciscoisesdk/__init__.py", line 209, in __init__
+      File "ciscoisesdk/api/__init__.py", line 344, in __init__
         raise VersionError(error_message)
     VersionError: Unknown API version, known versions are 3.0.0.
 
@@ -148,22 +155,45 @@ when creating a new :class:`IdentityServicesEngineAPI` connection object.
 .. code-block:: python
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
-    >>> # Create a IdentityServicesEngineAPI connection object; it uses Identity Services Engine sandbox URL and encoded_auth, with Identity Services Engine API version 3.0.0
-    >>> api = IdentityServicesEngineAPI(encoded_auth='ZGV2bmV0dXNlcjpDaXNjbzEyMyEK', base_url="https://dcloud-dna-ise-rtp.cisco.com", version='3.0.0', uses_api_gateway=True)
+    >>> # Create a IdentityServicesEngineAPI connection object;
+    >>> # Using encoded_auth, with Identity Services Engine API version 3.0.0
+    >>> api = IdentityServicesEngineAPI(encoded_auth='YWRtaW46QzFzY28xMjM0NQo=',
+    ...                                 base_url="https://dcloud-dna-ise-rtp.cisco.com",
+    ...                                 version='3.0.0',
+    ...                                 uses_api_gateway=True)
+    >>> # Create a IdentityServicesEngineAPI connection object;
+    >>> # Using username, and password, with ISE API version 3.0.0
+    >>> api = IdentityServicesEngineAPI(username='admin', password='C1sco12345',
+    ...                                 uses_api_gateway=True,
+    ...                                 base_url='https://198.168.133.27',
+    ...                                 version='3.0.0')
+
+
+Use the arguments to provide the URLs required depending on the uses_api_gateway value.
+
+.. note::
+    If uses_api_gateway is True, the ciscoisesdk assumes that your ISE API Gateway is enabled.
 
 .. code-block:: python
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
-    >>> # Create a IdentityServicesEngineAPI connection object; it uses Identity Services Engine username and password, with Identity Services Engine API version 3.0.0
-    >>> # The base_url used by default is `from ciscoisesdk.config import DEFAULT_BASE_URL`
-    >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!', base_url="https://dcloud-dna-ise-rtp.cisco.com", version='3.0.0', uses_api_gateway=True)
-    >>> # Other way to create IdentityServicesEngineAPI connection object; if it does not use the API Gateway
-    >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!', 
-    ...                        ers_base_url="https://dcloud-dna-ise-rtp.cisco.com:9060",
-    ...                        ui_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
-    ...                        mnt_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
-    ...                        px_grid_base_url="https://dcloud-dna-ise-rtp.cisco.com:8910",
-    ...                        version='3.0.0', uses_api_gateway=False)
+    >>> # Create a IdentityServicesEngineAPI connection object; 
+    >>> # Using API Gateway (since it was enabled on ISE)
+    >>> api = IdentityServicesEngineAPI(username='admin',
+    ...                                 password='C1sco12345',
+    ...                                 uses_api_gateway=True,
+    ...                                 base_url='https://dcloud-dna-ise-rtp.cisco.com',
+    ...                                 version='3.0.0',
+    ...                                 verify=True)
+    >>> # Not using API Gateway
+    >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!',
+    ...                                 uses_api_gateway=False,
+    ...                                 ers_base_url="https://dcloud-dna-ise-rtp.cisco.com:9060",
+    ...                                 ui_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
+    ...                                 mnt_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
+    ...                                 px_grid_base_url="https://dcloud-dna-ise-rtp.cisco.com:8910",
+    ...                                 version='3.0.0')
+
 
 Note that this can be very useful if you are reading authentication credentials
 from a file or database and/or when you want to create more than one connection object.
@@ -174,7 +204,64 @@ from a file or database and/or when you want to create more than one connection 
     >>> kingston_auth = 'ZG5hY2VudGVydXNlcjpDaXNjbzEyMyEK'
     >>> london_auth = ('london', 'rcx0cf43!')
     >>> kingston_api = IdentityServicesEngineAPI(encoded_auth=kingston_auth, base_url="https://dcloud-dna-ise-rtp.cisco.com", version='3.0.0')
-    >>> london_api = IdentityServicesEngineAPI(*london_auth, base_url="https://128.107.71.199:443", version='3.0.0')  # * Unpacks tuple
+    >>> london_api = IdentityServicesEngineAPI(*london_auth, base_url="https://128.107.71.199:443",
+    ...                                        version='3.0.0', uses_api_gateway=True)  # * Unpacks tuple
+
+
+API Gateway
+-----------
+
+If `uses_api_gateway` is True, the ciscoisesdk assumes that the API Gateway is enabled.
+
+If `uses_api_gateway` is True you only need to set your `base_url`.
+
+If `uses_api_gateway` is False you need to set the `ers_base_url`, `ui_base_url`, `mnt_base_url` and `px_grid_base_url`.
+
+.. warning::
+    1. Ensure that you have enabled the ERS APIs and OpenAPIs.
+    2. Make sure to check the ISE settings for the API Gateway, and set the uses_api_gateway accordingly.
+
+
+If you don't provide the URLs necessary and try to create a new :class:`IdentityServicesEngineAPI`, a :exc:`TypeError` will be raised.
+
+.. code-block:: python
+
+    >>> from ciscoisesdk import IdentityServicesEngineAPI
+    >>> # Create a IdentityServicesEngineAPI connection object;
+    >>> # it uses Identity Services Engine username and password, with ISE API version 3.0.0
+    >>> # The base_url used by default is `from ciscoisesdk.config import DEFAULT_BASE_URL`
+    >>> api = IdentityServicesEngineAPI(username='admin',
+    ...                                 password='C1sco12345',
+    ...                                 uses_api_gateway=True,
+    ...                                 base_url=None,
+    ...                                 version='3.0.0',
+    ...                                 verify=True)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+        api = IdentityServicesEngineAPI(username='admin',
+      File "ciscoisesdk/api/__init__.py", line 336, in __init__
+      File "ciscoisesdk/utils.py", line 165, in check_type
+    TypeError: We were expecting to receive an instance of one of the following types: 
+    'basestring'; but instead we received None which is a 'NoneType'.
+
+
+.. code-block:: python
+
+    >>> # Other way to create IdentityServicesEngineAPI connection object; if it does not use the API Gateway
+    >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!',
+    ...                                 uses_api_gateway=False,
+    ...                                 ers_base_url="https://dcloud-dna-ise-rtp.cisco.com:9060",
+    ...                                 ui_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
+    ...                                 mnt_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
+    ...                                 # px_grid_base_url="https://dcloud-dna-ise-rtp.cisco.com:8910",
+    ...                                 version='3.0.0')
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+        api = IdentityServicesEngineAPI(username='admin',
+      File "ciscoisesdk/api/__init__.py", line 341, in __init__
+      File "ciscoisesdk/utils.py", line 165, in check_type
+    TypeError: We were expecting to receive an instance of one of the following types: 
+    'basestring'; but instead we received None which is a 'NoneType'.
 
 
 Certificates
@@ -189,8 +276,8 @@ To avoid getting errors like the following:
 .. code-block:: python
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
-    >>> own_api = IdentityServicesEngineAPI(encoded_auth='dXNlcm5hbWU6cGFzc3dvcmQK', 
-    ... base_url="https://128.107.71.199:443", version='3.0.0')
+    >>> own_api = IdentityServicesEngineAPI(encoded_auth='dXNlcm5hbWU6cGFzc3dvcmQK',
+    ... base_url="https://128.107.71.199:443", version='3.0.0', uses_api_gateway=True)
     requests.exceptions.SLError: HTTPSConnectionPool(host='128.107.71.199', port=443):
     Max retries exceeded with url: /dna/system/api/v1/auth/token (Caused by
     SSLError (SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate
@@ -320,7 +407,7 @@ message.
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI, ApiError
     >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!')
-    >>> # The base_url used by default is `from ciscoisesdk.config import DEFAULT_BASE_URL`
+    >>> # The uses_api_gateway is True by default and the base_url used by default is `from ciscoisesdk.config import DEFAULT_BASE_URL`
     >>> network_device_response = api.network_device.create_network_device(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
     ---------------------------------------------------------------------------
     ApiError                                  Traceback (most recent call last)
@@ -575,22 +662,22 @@ Custom caller functions help you:
     # Call it with:
     #     get_hotspotportal(params={'filter': 'name.EQ.Hotspot Guest Portal'})
     def get_hotspotportal(params):
-        return api.custom_caller.call_api('GET', '/ers/config/hotspotportal', params)
+        return api_.custom_caller.call_api('GET', '/ers/config/hotspotportal', params)
 
     # Add your custom API call to the connection object.
     # Define the delete_hotspotportal_by_id function
     # under the custom_caller wrapper.
     # Call it with:
     #     api_.custom_caller.delete_hotspotportal_by_id('be456g16-14fd-4cac-94b7-ac3b8f9f')
-    api.custom_caller.add_api('delete_hotspotportal_by_id',
-                              lambda _id:
-                                  api.custom_caller.call_api(
-                                      'DELETE',
-                                      '/ers/config/hotspotportal/{id}',
-                                      path_params={
-                                          'id': _id,
-                                      })
-                              )
+    api_.custom_caller.add_api('delete_hotspotportal_by_id',
+                               lambda _id:
+                                   api_.custom_caller.call_api(
+                                       'DELETE',
+                                       '/ers/config/hotspotportal/{id}',
+                                       path_params={
+                                           'id': _id,
+                                       })
+                               )
 
     # Advance usage example using Custom Caller functions.
     def setup_custom():
@@ -639,14 +726,14 @@ Custom caller functions help you:
 
         # Alternative 2: Definition with lambda function.
         api_.custom_caller.add_api('delete_hotspotportal_by_id',
-                                  lambda _id:
-                                      api_.custom_caller.call_api(
-                                          'DELETE',
-                                          '/ers/config/hotspotportal/{id}',
-                                          path_params={
-                                              'id': _id,
-                                          })
-                                  )
+                                   lambda _id:
+                                       api_.custom_caller.call_api(
+                                           'DELETE',
+                                           '/ers/config/hotspotportal/{id}',
+                                           path_params={
+                                               'id': _id,
+                                           })
+                                   )
         # Finally add the documentation
         api_.custom_caller.delete_hotspotportal_by_id.__doc__ = """
             Custom global credential API call to delete hostport portal

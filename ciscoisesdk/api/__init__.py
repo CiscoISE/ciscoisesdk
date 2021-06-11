@@ -196,6 +196,7 @@ from .v3_0_0.tacacs_profile import \
 from .v3_0_0.tacacs_server_sequence import \
     TacacsServerSequence as TacacsServerSequence_v3_0_0
 from .custom_caller import CustomCaller
+import copy
 
 
 class IdentityServicesEngineAPI(object):
@@ -227,7 +228,7 @@ class IdentityServicesEngineAPI(object):
                  validator=SchemaValidator):
         """Create a new IdentityServicesEngineAPI object.
         An access token is required to interact with the Identity Services Engine APIs.
-        This package supports two methods for you to generate the
+        This package supports two methods for you to pass the
         authorization token:
 
           1. Provide a encoded_auth value (username:password encoded in
@@ -248,22 +249,28 @@ class IdentityServicesEngineAPI(object):
         When not given enough parameters an AccessTokenError is raised.
 
         Args:
+            uses_api_gateway(bool,basestring): Controls whether we use the ISE's API
+                Gateway to make the request. Defaults to the
+                IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY
+                (or IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY_STRING) environment variable or
+                ciscoisesdk.config.DEFAULT_USES_API_GATEWAY if the environment
+                variables are not set.
             base_url(basestring): The base URL to be prefixed to the
-                individual API endpoint suffixes.
+                individual API endpoint suffixes, used when uses_api_gateway is True.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable or
                 ciscoisesdk.config.DEFAULT_BASE_URL
                 if the environment variable is not set.
             ui_base_url(basestring): The UI base URL to be prefixed to the
-                individual ISE UI API endpoint suffixes.
+                individual ISE UI API endpoint suffixes, used when uses_api_gateway is False.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable if set.
             ers_base_url(basestring): The ERS base URL to be prefixed to the
-                individual ISE ERS API endpoint suffixes.
+                individual ISE ERS API endpoint suffixes, used when uses_api_gateway is False.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable if set.
             mnt_base_url(basestring): The MNT base URL to be prefixed to the
-                individual ISE MNT API endpoint suffixes.
+                individual ISE MNT API endpoint suffixes, used when uses_api_gateway is False.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable if set.
             px_grid_base_url(basestring): The PxGrid base URL to be prefixed to the
-                individual ISE PxGrid API endpoint suffixes.
+                individual ISE PxGrid API endpoint suffixes, used when uses_api_gateway is False.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable if set.
             username(basestring): HTTP Basic Auth username.
             password(basestring): HTTP Basic Auth password.
@@ -294,8 +301,10 @@ class IdentityServicesEngineAPI(object):
                 if the environment variable is not set.
             object_factory(callable): The factory function to use to create
                 Python objects from the returned Identity Services Engine JSON data objects.
-            validator(callable): The factory function to use to validate
-                Python objects sent in the body of the request.
+            validator(callable): The factory class with function
+                json_schema_validate(model:string) that returns an object with
+                function validate(obj:dict) is used to validate Python objects
+                sent in the request body.
 
         Returns:
             IdentityServicesEngineAPI: A new IdentityServicesEngineAPI object.
@@ -312,7 +321,7 @@ class IdentityServicesEngineAPI(object):
         """
         check_type(single_request_timeout, int)
         check_type(wait_on_rate_limit, bool)
-        check_type(uses_api_gateway, (bool, basestring))
+        check_type(uses_api_gateway, (bool, basestring), may_be_none=False)
         check_type(debug, (bool, basestring), may_be_none=True)
         check_type(username, basestring, may_be_none=True)
         check_type(password, basestring, may_be_none=True)
@@ -320,13 +329,16 @@ class IdentityServicesEngineAPI(object):
         check_type(verify, (bool, basestring), may_be_none=False)
         check_type(version, basestring, may_be_none=False)
 
+        if isinstance(uses_api_gateway, str):
+            uses_api_gateway = 'true' in uses_api_gateway.lower()
+
         if uses_api_gateway:
-            check_type(base_url, basestring, may_be_none=True)
+            check_type(base_url, basestring, may_be_none=False)
         else:
-            check_type(ui_base_url, basestring, may_be_none=True)
-            check_type(ers_base_url, basestring, may_be_none=True)
-            check_type(mnt_base_url, basestring, may_be_none=True)
-            check_type(px_grid_base_url, basestring, may_be_none=True)
+            check_type(ui_base_url, basestring, may_be_none=False)
+            check_type(ers_base_url, basestring, may_be_none=False)
+            check_type(mnt_base_url, basestring, may_be_none=False)
+            check_type(px_grid_base_url, basestring, may_be_none=False)
 
         if version not in ['3.0.0']:
             raise VersionError(
@@ -339,15 +351,12 @@ class IdentityServicesEngineAPI(object):
         if isinstance(debug, str):
             debug = 'true' in debug.lower()
 
-        if isinstance(uses_api_gateway, str):
-            uses_api_gateway = 'true' in uses_api_gateway.lower()
-
         # Check if the user has provided the required basicAuth parameters
         if encoded_auth is None and (username is None or password is None):
             raise AccessTokenError(
                 "You need an access token to interact with the Identity Services Engine"
-                " APIs. Identity Services Engine uses HTTP Basic Auth to create an access"
-                " token. You must provide the username and password or just"
+                " APIs. Identity Services Engine uses HTTP Basic Auth."
+                " You must provide the username and password or just"
                 " the encoded_auth, either by setting each parameter or its"
                 " environment variable counterpart ("
                 "IDENTITY_SERVICES_ENGINE_USERNAME, IDENTITY_SERVICES_ENGINE_PASSWORD,"
@@ -739,7 +748,7 @@ class IdentityServicesEngineAPI(object):
 
     @property
     def uses_api_gateway(self):
-        """The Identity Services Engine API uses_api_gateway."""
+        """If the Identity Services Engine API uses an API Gateway."""
         return self._uses_api_gateway
 
     @property
@@ -754,27 +763,27 @@ class IdentityServicesEngineAPI(object):
 
     @property
     def base_url(self):
-        """The base URL prefixed to the individual API endpoint suffixes."""
+        """The base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is True."""
         return self._session.base_url
 
     @property
     def ui_base_url(self):
-        """The ui base URL prefixed to the individual API endpoint suffixes."""
+        """The ui base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
         return self._session.base_url if self._uses_api_gateway else self._session_ui.base_url
 
     @property
     def ers_base_url(self):
-        """The ers base URL prefixed to the individual API endpoint suffixes."""
+        """The ers base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
         return self._session.base_url if self._uses_api_gateway else self._session_ers.base_url
 
     @property
     def mnt_base_url(self):
-        """The mnt base URL prefixed to the individual API endpoint suffixes."""
+        """The mnt base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
         return self._session.base_url if self._uses_api_gateway else self._session_mnt.base_url
 
     @property
     def px_grid_base_url(self):
-        """The px_grid base URL prefixed to the individual API endpoint suffixes."""
+        """The px_grid base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
         return self._session.base_url if self._uses_api_gateway else self._session_px_grid.base_url
 
     @property
@@ -805,16 +814,60 @@ class IdentityServicesEngineAPI(object):
 
     @base_url.setter
     def base_url(self, value):
-        """The base URL for the API endpoints."""
+        """The base URL for the API endpoints, used when uses_api_gateway is True."""
         self._session.base_url = value
 
     @single_request_timeout.setter
     def single_request_timeout(self, value):
         """The timeout (seconds) for a single HTTP REST API request."""
         self.authentication.single_request_timeout = value
-        self._session.single_request_timeout = value
+        if self._uses_api_gateway:
+            self._session.single_request_timeout = value
+        else:
+            self._session_ui.single_request_timeout = value
+            self._session_ers.single_request_timeout = value
+            self._session_mnt.single_request_timeout = value
+            self._session_px_grid.single_request_timeout = value
 
     @wait_on_rate_limit.setter
     def wait_on_rate_limit(self, value):
         """Enable or disable automatic rate-limit handling."""
-        self._session.wait_on_rate_limit = value
+        if self._uses_api_gateway:
+            self._session.wait_on_rate_limit = value
+        else:
+            self._session_ui.wait_on_rate_limit = value
+            self._session_ers.wait_on_rate_limit = value
+            self._session_mnt.wait_on_rate_limit = value
+            self._session_px_grid.wait_on_rate_limit = value
+
+    @ui_base_url.setter
+    def ui_base_url(self, value):
+        """The ui base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
+        if not self._uses_api_gateway:
+            if self._session_ui is None:
+                self._session_ui = copy.deepcopy(self._session)
+            self._session_ui.base_url = value
+
+    @ers_base_url.setter
+    def ers_base_url(self, value):
+        """The ers base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
+        if not self._uses_api_gateway:
+            if self._session_ers is None:
+                self._session_ers = copy.deepcopy(self._session)
+            self._session_ers.base_url = value
+
+    @mnt_base_url.setter
+    def mnt_base_url(self, value):
+        """The mnt base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
+        if not self._uses_api_gateway:
+            if self._session_mnt is None:
+                self._session_mnt = copy.deepcopy(self._session)
+            self._session_mnt.base_url = value
+
+    @px_grid_base_url.setter
+    def px_grid_base_url(self, value):
+        """The px_grid base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
+        if not self._uses_api_gateway:
+            if self._session_px_grid is None:
+                self._session_px_grid = copy.deepcopy(self._session)
+            self._session_px_grid.base_url = value

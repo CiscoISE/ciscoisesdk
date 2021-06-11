@@ -10,14 +10,28 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
     from ciscoisesdk import IdentityServicesEngineAPI
     from ciscoisesdk.exceptions import ApiError
 
-    api = IdentityServicesEngineAPI(verify=False, debug=False)
+    # Create a IdentityServicesEngineAPI connection object;
+    # it uses ISE custom URL, username, and password, with ISE API version 3.0.0
+    # and its API Gateway enabled,
+    # and verify=True to verify the server's TLS certificate.
+    api = IdentityServicesEngineAPI(username='admin',
+                                    password='C1sco12345',
+                                    uses_api_gateway=True,
+                                    base_url='https://198.18.133.27',
+                                    version='3.0.0',
+                                    verify=True)
+    # NOTE: This collection assumes that the ERS APIs and OpenAPIs are enabled.
 
     # Get allowed protocols (first page)
     search_result = api.allowed_protocols.get_all_allowed_protocols().response.SearchResult
     if search_result and search_result.resources:
       for resource in search_result.resources:
-        resource_detail = api.allowed_protocols.get_allowed_protocol_by_id(resource.id).response.AllowedProtocols
-        print("Id {}\nName {}\nallowChap {}\n".format(resource_detail.id, resource_detail.name, resource_detail.allowChap))
+        resource_detail = api.allowed_protocols.get_allowed_protocol_by_id(
+                            resource.id
+                          ).response.AllowedProtocols
+        print("Id {}\nName {}\nallowChap {}\n".format(resource_detail.id,
+                                                      resource_detail.name,
+                                                      resource_detail.allowChap))
     print("----------")
 
     # Handle pagination with a generator
@@ -25,8 +39,12 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
     for allowed_protocols_page_resp in allowed_protols_gen:
       allowed_protols_result = allowed_protocols_page_resp.response.SearchResult
       for resource in allowed_protols_result.resources:
-        resource_detail = api.allowed_protocols.get_allowed_protocol_by_id(resource.id).response.AllowedProtocols
-        print("Id {}\nName {}\nallowChap {}\n".format(resource_detail.id, resource_detail.name, resource_detail.allowChap))
+        resource_detail = api.allowed_protocols.get_allowed_protocol_by_id(
+                            resource.id
+                          ).response.AllowedProtocols
+        print("Id {}\nName {}\nallowChap {}\n".format(resource_detail.id,
+                                                      resource_detail.name,
+                                                      resource_detail.allowChap))
 
     # Filter network device
     device_list_response = api.network_device.get_all_network_device(filter='name.EQ.ISE_EST_Local_Host_19')
@@ -41,7 +59,9 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
 
     # Create network device
     try:
-        network_device_response = api.network_device.create_network_device(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
+        network_device_response = api.network_device.create_network_device(
+                                    name='ISE_EST_Local_Host_19',
+                                    network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
         print("Created, new Location {}".format(network_device_response.headers.Location))
     except ApiError as e:
         print(e)

@@ -52,8 +52,13 @@ With ciscoisesdk, the above Python code can be consolidated to the following:
 
     from ciscoisesdk import api
 
-    api_ = api.IdentityServicesEngineAPI(base_url='https://dcloud-dna-ise-rtp.cisco.com', version='3.0.0')
-    # Or even just api_ = api.IdentityServicesEngineAPI() as base_url and version have those values.
+    api_ = api.IdentityServicesEngineAPI(username='admin',
+                                         password='C1sco12345',
+                                         uses_api_gateway=True,
+                                         base_url='https://dcloud-dna-ise-rtp.cisco.com',
+                                         version='3.0.0',
+                                         verify=True)
+    # Or even just api_ = api.IdentityServicesEngineAPI(username='admin', password='C1sco12345') as others have those values by default.
     try:
         device_response = api_.network_device.get_all_network_device(filter='name.EQ.Test').response
         if device_response.SearchResult and device_response.SearchResult.resources:
