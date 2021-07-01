@@ -51,11 +51,11 @@ def test_rate_limit_retry(api):
     api._session.wait_on_rate_limit = True
 
     with warnings.catch_warnings(record=True) as w:
-        devices = api.network_device.get_all_network_device().response.SearchResult.resources
+        devices = api.devices.get_device_list()
         i = 0
-        while i < len(devices):
+        while i < len(devices.response):
             # Try and trigger a rate-limit
-            api.network_device.get_network_device_by_id(devices[i].id)
+            api.devices.get_device_config_by_id(path_network_device_id=devices.response[i].id)
             i += 1
             if rate_limit_detected(w):
                 break

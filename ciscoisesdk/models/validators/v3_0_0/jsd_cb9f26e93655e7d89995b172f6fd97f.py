@@ -193,19 +193,6 @@ class JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "accessType",
-                "authzProfileType",
-                "trackMovement",
-                "serviceTemplate",
-                "easywiredSessionCandidate",
-                "daclName",
-                "voiceDomainPermission",
-                "profileName"
-                ],
                 "type": "object"
                 }
                 },

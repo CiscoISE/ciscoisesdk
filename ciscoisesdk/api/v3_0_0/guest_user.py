@@ -977,9 +977,12 @@ class GuestUser(object):
         if is_xml_payload:
             _payload = payload
         else:
-            _payload = {
+            _tmp_payload = {
                 'additionalData':
                     additional_data,
+            }
+            _payload = {
+                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -1140,9 +1143,12 @@ class GuestUser(object):
         if is_xml_payload:
             _payload = payload
         else:
-            _payload = {
+            _tmp_payload = {
                 'additionalData':
                     additional_data,
+            }
+            _payload = {
+                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)

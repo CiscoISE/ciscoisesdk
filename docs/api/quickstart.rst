@@ -165,7 +165,7 @@ when creating a new :class:`IdentityServicesEngineAPI` connection object.
     >>> # Using username, and password, with ISE API version 3.0.0
     >>> api = IdentityServicesEngineAPI(username='admin', password='C1sco12345',
     ...                                 uses_api_gateway=True,
-    ...                                 base_url='https://198.168.133.27',
+    ...                                 base_url="https://dcloud-dna-ise-rtp.cisco.com",
     ...                                 version='3.0.0')
 
 

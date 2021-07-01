@@ -34,6 +34,7 @@ from future import standard_library
 standard_library.install_aliases()
 
 import os
+import re
 import time
 import urllib.parse
 import warnings
@@ -74,6 +75,8 @@ class RestSession(object):
                  wait_on_rate_limit=DEFAULT_WAIT_ON_RATE_LIMIT,
                  verify=DEFAULT_VERIFY,
                  version=None,
+                 headers={'Content-type': 'application/json;charset=utf-8',
+                          'Accept': 'application/json'},
                  debug=False):
         """Initialize a new RestSession object.
 
@@ -93,6 +96,7 @@ class RestSession(object):
                 to a CA bundle to use.
             version(basestring): Controls which version of IDENTITY_SERVICES_ENGINE to use.
                 Defaults to ciscoisesdk.config.IDENTITY_SERVICES_ENGINE_VERSION
+            headers(dict): Allows to add headers to RestSession requests.
             debug(bool,basestring): Controls whether to log information about
                 Identity Services Engine APIs' request and response process.
                 Defaults to the DEBUG environment variable or False
@@ -132,9 +136,9 @@ class RestSession(object):
         self._req_session = requests.session()
 
         # Update the headers of the `requests` session
-        self.update_headers({'authorization': 'Basic ' + access_token,
-                             'Content-type': 'application/json;charset=utf-8',
-                             'Accept': 'application/json'})
+        self.update_headers({'authorization': 'Basic ' + access_token})
+        if headers and isinstance(headers, dict):
+            self.update_headers(headers)
 
     @property
     def version(self):
@@ -247,6 +251,31 @@ class RestSession(object):
         else:
             # url is already an absolute URL; return as is
             return url
+
+    def download(self, method, url, erc, custom_refresh, **kwargs):
+        dirpath = kwargs.pop('dirpath', None)
+        if not(dirpath) or not(os.path.isdir(dirpath)):
+            dirpath = os.getcwd()
+
+        save_file = kwargs.pop('save_file', False)
+        with self.request(method, url, erc, 0, **kwargs) as resp:
+            if save_file and resp.headers and resp.headers.get('Content-Disposition'):
+                try:
+                    content = resp.headers.get('Content-Disposition')
+                    (content_file_name,) = re.search('filename="(.*)"', content).groups()
+                    file_name = os.path.join(dirpath,
+                                             content_file_name)
+                    with open(file_name, 'wb') as f:
+                        logger.debug('Downloading {}'.format(file_name))
+                        for chunk in resp.iter_content(chunk_size=1024):
+                            if chunk:
+                                f.write(chunk)
+                except Exception as e:
+                    raise DownloadFailure(resp, e)
+                logger.debug('Downloaded')
+            # Needed to create a copy of the raw response
+            # if not copied it would not recover data and other properties
+            return HTTPResponse(resp.raw)
 
     def request(self, method, url, erc, custom_refresh, **kwargs):
         """Abstract base method for making requests to the Identity Services Engine APIs.
@@ -389,31 +418,13 @@ class RestSession(object):
 
         # Expected response code
         erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['GET'])
+
         stream = kwargs.get('stream', None)
-
-        dirpath = kwargs.pop('dirpath', None)
-        if not(dirpath) or not(os.path.isdir(dirpath)):
-            dirpath = os.getcwd()
-
-        save_file = kwargs.pop('save_file', False)
-        with self.request('GET', url, erc, 0, params=params, **kwargs) as resp:
-            if stream:
-                if save_file and resp.headers and resp.headers.get('fileName'):
-                    try:
-                        file_name = os.path.join(dirpath,
-                                                 resp.headers.get('fileName'))
-                        with open(file_name, 'wb') as f:
-                            logger.debug('Downloading {}'.format(file_name))
-                            for chunk in resp.iter_content(chunk_size=1024):
-                                if chunk:
-                                    f.write(chunk)
-                    except Exception as e:
-                        raise DownloadFailure(resp, e)
-                    logger.debug('Downloaded')
-                # Needed to create a copy of the raw response
-                # if not copied it would not recover data and other properties
-                return HTTPResponse(resp.raw)
-            return RestResponse(resp)
+        if stream:
+            return self.download('GET', url, erc, 0, params=params, **kwargs)
+        else:
+            response = self.request('GET', url, erc, 0, params=params, **kwargs)
+            return RestResponse(response)
 
     def post(self, url, params=None, json=None, data=None, **kwargs):
         """Sends a POST request.
@@ -437,9 +448,14 @@ class RestSession(object):
         # Expected response code
         erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['POST'])
 
-        response = self.request('POST', url, erc, 0, params=params,
-                                json=json, data=data, **kwargs)
-        return RestResponse(response)
+        stream = kwargs.get('stream', None)
+        if stream:
+            return self.download('POST', url, erc, 0, params=params,
+                                 json=json, data=data, **kwargs)
+        else:
+            response = self.request('POST', url, erc, 0, params=params,
+                                    json=json, data=data, **kwargs)
+            return RestResponse(response)
 
     def put(self, url, params=None, json=None, data=None, **kwargs):
         """Sends a PUT request.
@@ -463,9 +479,14 @@ class RestSession(object):
         # Expected response code
         erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['PUT'])
 
-        response = self.request('PUT', url, erc, 0, params=params,
-                                json=json, data=data, **kwargs)
-        return RestResponse(response)
+        stream = kwargs.get('stream', None)
+        if stream:
+            return self.download('PUT', url, erc, 0, params=params,
+                                 json=json, data=data, **kwargs)
+        else:
+            response = self.request('PUT', url, erc, 0, params=params,
+                                    json=json, data=data, **kwargs)
+            return RestResponse(response)
 
     def delete(self, url, params=None, **kwargs):
         """Sends a DELETE request.

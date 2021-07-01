@@ -47,18 +47,36 @@ from ciscoisesdk.restsession import RestSession
 from ciscoisesdk.utils import check_type
 
 from .authentication import Authentication
+from .v3_0_0.aci_bindings import \
+    AciBindings as AciBindings_v3_0_0
+from .v3_0_0.aci_settings import \
+    AciSettings as AciSettings_v3_0_0
+from .v3_0_0.anc_endpoint import \
+    AncEndpoint as AncEndpoint_v3_0_0
 from .v3_0_0.anc_policy import \
     AncPolicy as AncPolicy_v3_0_0
 from .v3_0_0.active_directory import \
     ActiveDirectory as ActiveDirectory_v3_0_0
+from .v3_0_0.admin_user import \
+    AdminUser as AdminUser_v3_0_0
 from .v3_0_0.allowed_protocols import \
     AllowedProtocols as AllowedProtocols_v3_0_0
 from .v3_0_0.authorization_profile import \
     AuthorizationProfile as AuthorizationProfile_v3_0_0
+from .v3_0_0.byod_portal import \
+    ByodPortal as ByodPortal_v3_0_0
 from .v3_0_0.backup_and_restore import \
     BackupAndRestore as BackupAndRestore_v3_0_0
+from .v3_0_0.certificate_profile import \
+    CertificateProfile as CertificateProfile_v3_0_0
+from .v3_0_0.certificate_template import \
+    CertificateTemplate as CertificateTemplate_v3_0_0
 from .v3_0_0.certificates import \
     Certificates as Certificates_v3_0_0
+from .v3_0_0.consumer import \
+    Consumer as Consumer_v3_0_0
+from .v3_0_0.deployment import \
+    Deployment as Deployment_v3_0_0
 from .v3_0_0.device_administration_authentication_rules import \
     DeviceAdministrationAuthenticationRules as DeviceAdministrationAuthenticationRules_v3_0_0
 from .v3_0_0.device_administration_authorization_exception_rules import \
@@ -91,6 +109,8 @@ from .v3_0_0.egress_matrix_cell import \
     EgressMatrixCell as EgressMatrixCell_v3_0_0
 from .v3_0_0.endpoint import \
     Endpoint as Endpoint_v3_0_0
+from .v3_0_0.endpoint_cert import \
+    EndpointCert as EndpointCert_v3_0_0
 from .v3_0_0.endpoint_group import \
     EndpointGroup as EndpointGroup_v3_0_0
 from .v3_0_0.external_radius_server import \
@@ -115,6 +135,14 @@ from .v3_0_0.identity_store_sequence import \
     IdentityStoreSequence as IdentityStoreSequence_v3_0_0
 from .v3_0_0.internal_user import \
     InternalUser as InternalUser_v3_0_0
+from .v3_0_0.mdm import \
+    Mdm as Mdm_v3_0_0
+from .v3_0_0.misc import \
+    Misc as Misc_v3_0_0
+from .v3_0_0.my_device_portal import \
+    MyDevicePortal as MyDevicePortal_v3_0_0
+from .v3_0_0.native_supplicant_profile import \
+    NativeSupplicantProfile as NativeSupplicantProfile_v3_0_0
 from .v3_0_0.network_access_authentication_rules import \
     NetworkAccessAuthenticationRules as NetworkAccessAuthenticationRules_v3_0_0
 from .v3_0_0.network_access_authorization_exception_rules import \
@@ -149,6 +177,8 @@ from .v3_0_0.network_device import \
     NetworkDevice as NetworkDevice_v3_0_0
 from .v3_0_0.network_device_group import \
     NetworkDeviceGroup as NetworkDeviceGroup_v3_0_0
+from .v3_0_0.node import \
+    Node as Node_v3_0_0
 from .v3_0_0.node_deployment import \
     NodeDeployment as NodeDeployment_v3_0_0
 from .v3_0_0.node_group import \
@@ -161,6 +191,14 @@ from .v3_0_0.portal_global_setting import \
     PortalGlobalSetting as PortalGlobalSetting_v3_0_0
 from .v3_0_0.portal_theme import \
     PortalTheme as PortalTheme_v3_0_0
+from .v3_0_0.profiler import \
+    Profiler as Profiler_v3_0_0
+from .v3_0_0.profiler_profile import \
+    ProfilerProfile as ProfilerProfile_v3_0_0
+from .v3_0_0.provider import \
+    Provider as Provider_v3_0_0
+from .v3_0_0.radius_failure import \
+    RadiusFailure as RadiusFailure_v3_0_0
 from .v3_0_0.radius_server_sequence import \
     RadiusServerSequence as RadiusServerSequence_v3_0_0
 from .v3_0_0.restid_store import \
@@ -171,12 +209,30 @@ from .v3_0_0.repository import \
     Repository as Repository_v3_0_0
 from .v3_0_0.sg_acl import \
     SgAcl as SgAcl_v3_0_0
+from .v3_0_0.sg_mapping import \
+    SgMapping as SgMapping_v3_0_0
+from .v3_0_0.sg_mapping_group import \
+    SgMappingGroup as SgMappingGroup_v3_0_0
 from .v3_0_0.sgt import \
     Sgt as Sgt_v3_0_0
+from .v3_0_0.sgt_vn_vlan import \
+    SgtVnVlan as SgtVnVlan_v3_0_0
 from .v3_0_0.sms_provider import \
     SmsProvider as SmsProvider_v3_0_0
+from .v3_0_0.sxp_connections import \
+    SxpConnections as SxpConnections_v3_0_0
+from .v3_0_0.sxp_local_bindings import \
+    SxpLocalBindings as SxpLocalBindings_v3_0_0
+from .v3_0_0.sxp_vpns import \
+    SxpVpns as SxpVpns_v3_0_0
 from .v3_0_0.self_registered_portal import \
     SelfRegisteredPortal as SelfRegisteredPortal_v3_0_0
+from .v3_0_0.service import \
+    Service as Service_v3_0_0
+from .v3_0_0.session_directory import \
+    SessionDirectory as SessionDirectory_v3_0_0
+from .v3_0_0.session_service_node import \
+    SessionServiceNode as SessionServiceNode_v3_0_0
 from .v3_0_0.sponsor_group import \
     SponsorGroup as SponsorGroup_v3_0_0
 from .v3_0_0.sponsor_group_member import \
@@ -185,8 +241,14 @@ from .v3_0_0.sponsor_portal import \
     SponsorPortal as SponsorPortal_v3_0_0
 from .v3_0_0.sponsored_guest_portal import \
     SponsoredGuestPortal as SponsoredGuestPortal_v3_0_0
+from .v3_0_0.support_bundle import \
+    SupportBundle as SupportBundle_v3_0_0
 from .v3_0_0.sync_ise_node import \
     SyncIseNode as SyncIseNode_v3_0_0
+from .v3_0_0.system_health import \
+    SystemHealth as SystemHealth_v3_0_0
+from .v3_0_0.system_certificate import \
+    SystemCertificate as SystemCertificate_v3_0_0
 from .v3_0_0.tacacs_command_sets import \
     TacacsCommandSets as TacacsCommandSets_v3_0_0
 from .v3_0_0.tacacs_external_servers import \
@@ -195,6 +257,24 @@ from .v3_0_0.tacacs_profile import \
     TacacsProfile as TacacsProfile_v3_0_0
 from .v3_0_0.tacacs_server_sequence import \
     TacacsServerSequence as TacacsServerSequence_v3_0_0
+from .v3_0_0.telemetry_information import \
+    TelemetryInformation as TelemetryInformation_v3_0_0
+from .v3_0_0.threat import \
+    Threat as Threat_v3_0_0
+from .v3_0_0.trust_sec_configuration import \
+    TrustSecConfiguration as TrustSecConfiguration_v3_0_0
+from .v3_0_0.trust_sec_sxp import \
+    TrustSecSxp as TrustSecSxp_v3_0_0
+from .v3_0_0.version_ import \
+    Version as Version_v3_0_0
+from .v3_0_0.version_info import \
+    VersionInfo as VersionInfo_v3_0_0
+from .v3_0_0.px_grid_node import \
+    PxGridNode as PxGridNode_v3_0_0
+from .v3_0_0.px_grid_settings import \
+    PxGridSettings as PxGridSettings_v3_0_0
+from .v3_0_0.tasks import \
+    Tasks as Tasks_v3_0_0
 from .custom_caller import CustomCaller
 import copy
 
@@ -382,14 +462,13 @@ class IdentityServicesEngineAPI(object):
         # All of the API calls associated with a IdentityServicesEngineAPI object will
         # leverage a single RESTful 'session' connecting to the Identity Services Engine
         # cloud.
-        self._session = None
-        self._session_main = None
         self._session_ui = None
         self._session_ers = None
+        self._session = None
         self._session_mnt = None
         self._session_px_grid = None
         if uses_api_gateway:
-            self._session_main = RestSession(
+            self._session_ui = RestSession(
                 get_access_token=get_access_token,
                 access_token=get_access_token(),
                 base_url=base_url,
@@ -399,7 +478,39 @@ class IdentityServicesEngineAPI(object):
                 version=version,
                 debug=debug,
             )
-            self._session = self._session_main
+            self._session_ers = RestSession(
+                get_access_token=get_access_token,
+                access_token=get_access_token(),
+                base_url=base_url,
+                single_request_timeout=single_request_timeout,
+                wait_on_rate_limit=wait_on_rate_limit,
+                verify=verify,
+                version=version,
+                debug=debug,
+            )
+            self._session = self._session_ers
+            self._session_mnt = RestSession(
+                get_access_token=get_access_token,
+                access_token=get_access_token(),
+                base_url=base_url,
+                single_request_timeout=single_request_timeout,
+                wait_on_rate_limit=wait_on_rate_limit,
+                verify=verify,
+                version=version,
+                headers={'Content-type': 'application/xml;charset=utf-8',
+                         'Accept': 'application/xml'},
+                debug=debug,
+            )
+            self._session_px_grid = RestSession(
+                get_access_token=get_access_token,
+                access_token=get_access_token(),
+                base_url=base_url,
+                single_request_timeout=single_request_timeout,
+                wait_on_rate_limit=wait_on_rate_limit,
+                verify=verify,
+                version=version,
+                debug=debug,
+            )
         else:
             self._session_ui = RestSession(
                 get_access_token=get_access_token,
@@ -430,6 +541,8 @@ class IdentityServicesEngineAPI(object):
                 wait_on_rate_limit=wait_on_rate_limit,
                 verify=verify,
                 version=version,
+                headers={'Content-type': 'application/xml;charset=utf-8',
+                         'Accept': 'application/xml'},
                 debug=debug,
             )
             self._session_px_grid = RestSession(
@@ -447,301 +560,461 @@ class IdentityServicesEngineAPI(object):
 
         # API wrappers
         if version == '3.0.0':
+            self.aci_bindings = \
+                AciBindings_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.aci_settings = \
+                AciSettings_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.anc_endpoint = \
+                AncEndpoint_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
             self.anc_policy = \
                 AncPolicy_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.active_directory = \
                 ActiveDirectory_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.admin_user = \
+                AdminUser_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.allowed_protocols = \
                 AllowedProtocols_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.authorization_profile = \
                 AuthorizationProfile_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.byod_portal = \
+                ByodPortal_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.backup_and_restore = \
                 BackupAndRestore_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
+                )
+            self.certificate_profile = \
+                CertificateProfile_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.certificate_template = \
+                CertificateTemplate_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.certificates = \
                 Certificates_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
+                )
+            self.consumer = \
+                Consumer_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
+                )
+            self.deployment = \
+                Deployment_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.device_administration_authentication_rules = \
                 DeviceAdministrationAuthenticationRules_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_authorization_exception_rules = \
                 DeviceAdministrationAuthorizationExceptionRules_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_authorization_global_exception_rules = \
                 DeviceAdministrationAuthorizationGlobalExceptionRules_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_authorization_rules = \
                 DeviceAdministrationAuthorizationRules_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_command_set = \
                 DeviceAdministrationCommandSet_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_conditions = \
                 DeviceAdministrationConditions_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_dictionary_attributes_list = \
                 DeviceAdministrationDictionaryAttributesList_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_identity_stores = \
                 DeviceAdministrationIdentityStores_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_network_conditions = \
                 DeviceAdministrationNetworkConditions_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_policy_set = \
                 DeviceAdministrationPolicySet_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_profiles = \
                 DeviceAdministrationProfiles_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_service_names = \
                 DeviceAdministrationServiceNames_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.device_administration_time_date_conditions = \
                 DeviceAdministrationTimeDateConditions_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.downloadable_acl = \
                 DownloadableAcl_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.egress_matrix_cell = \
                 EgressMatrixCell_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.endpoint = \
                 Endpoint_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.endpoint_cert = \
+                EndpointCert_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.endpoint_group = \
                 EndpointGroup_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.external_radius_server = \
                 ExternalRadiusServer_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.filter_policy = \
                 FilterPolicy_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.guest_location = \
                 GuestLocation_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.guest_smtp_notifications = \
                 GuestSmtpNotifications_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.guest_ssid = \
                 GuestSsid_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.guest_type = \
                 GuestType_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.guest_user = \
                 GuestUser_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.hotspot_portal = \
                 HotspotPortal_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.identity_group = \
                 IdentityGroup_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.identity_store_sequence = \
                 IdentityStoreSequence_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.internal_user = \
                 InternalUser_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.mdm = \
+                Mdm_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
+                )
+            self.misc = \
+                Misc_v3_0_0(
+                    self._session_mnt, object_factory, _validator
+                )
+            self.my_device_portal = \
+                MyDevicePortal_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.native_supplicant_profile = \
+                NativeSupplicantProfile_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.network_access_authentication_rules = \
                 NetworkAccessAuthenticationRules_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_authorization_exception_rules = \
                 NetworkAccessAuthorizationExceptionRules_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_authorization_global_exception_rules = \
                 NetworkAccessAuthorizationGlobalExceptionRules_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_authorization_rules = \
                 NetworkAccessAuthorizationRules_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_conditions = \
                 NetworkAccessConditions_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_dictionary = \
                 NetworkAccessDictionary_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_dictionary_attribute = \
                 NetworkAccessDictionaryAttribute_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_dictionary_attributes_list = \
                 NetworkAccessDictionaryAttributesList_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_identity_stores = \
                 NetworkAccessIdentityStores_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_network_conditions = \
                 NetworkAccessNetworkConditions_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_policy_set = \
                 NetworkAccessPolicySet_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_profiles = \
                 NetworkAccessProfiles_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_security_groups = \
                 NetworkAccessSecurityGroups_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_service_names = \
                 NetworkAccessServiceNames_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_access_time_date_conditions = \
                 NetworkAccessTimeDateConditions_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.network_device = \
                 NetworkDevice_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.network_device_group = \
                 NetworkDeviceGroup_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.node = \
+                Node_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.node_deployment = \
                 NodeDeployment_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.node_group = \
                 NodeGroup_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.pan_ha = \
                 PanHa_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.portal = \
                 Portal_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.portal_global_setting = \
                 PortalGlobalSetting_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.portal_theme = \
                 PortalTheme_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.profiler = \
+                Profiler_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
+                )
+            self.profiler_profile = \
+                ProfilerProfile_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.provider = \
+                Provider_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
+                )
+            self.radius_failure = \
+                RadiusFailure_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
                 )
             self.radius_server_sequence = \
                 RadiusServerSequence_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.restid_store = \
                 RestidStore_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.replication_status = \
                 ReplicationStatus_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.repository = \
                 Repository_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
                 )
             self.sg_acl = \
                 SgAcl_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.sg_mapping = \
+                SgMapping_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.sg_mapping_group = \
+                SgMappingGroup_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.sgt = \
                 Sgt_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.sgt_vn_vlan = \
+                SgtVnVlan_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.sms_provider = \
                 SmsProvider_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.sxp_connections = \
+                SxpConnections_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.sxp_local_bindings = \
+                SxpLocalBindings_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.sxp_vpns = \
+                SxpVpns_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.self_registered_portal = \
                 SelfRegisteredPortal_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.service = \
+                Service_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.session_directory = \
+                SessionDirectory_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
+                )
+            self.session_service_node = \
+                SessionServiceNode_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.sponsor_group = \
                 SponsorGroup_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.sponsor_group_member = \
                 SponsorGroupMember_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.sponsor_portal = \
                 SponsorPortal_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.sponsored_guest_portal = \
                 SponsoredGuestPortal_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.support_bundle = \
+                SupportBundle_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.sync_ise_node = \
                 SyncIseNode_v3_0_0(
-                    self._session_main or self._session_ui, object_factory, _validator
+                    self._session_ui, object_factory, _validator
+                )
+            self.system_health = \
+                SystemHealth_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
+                )
+            self.system_certificate = \
+                SystemCertificate_v3_0_0(
+                    self._session_ers, object_factory, _validator
                 )
             self.tacacs_command_sets = \
                 TacacsCommandSets_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.tacacs_external_servers = \
                 TacacsExternalServers_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.tacacs_profile = \
                 TacacsProfile_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
                 )
             self.tacacs_server_sequence = \
                 TacacsServerSequence_v3_0_0(
-                    self._session_main or self._session_ers, object_factory, _validator
+                    self._session_ers, object_factory, _validator
+                )
+            self.telemetry_information = \
+                TelemetryInformation_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.threat = \
+                Threat_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.trust_sec_configuration = \
+                TrustSecConfiguration_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
+                )
+            self.trust_sec_sxp = \
+                TrustSecSxp_v3_0_0(
+                    self._session_px_grid, object_factory, _validator
+                )
+            self.version_ = \
+                Version_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.version_info = \
+                VersionInfo_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.px_grid_node = \
+                PxGridNode_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.px_grid_settings = \
+                PxGridSettings_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.tasks = \
+                Tasks_v3_0_0(
+                    self._session_ui, object_factory, _validator
                 )
         self.custom_caller = \
             CustomCaller(self._session, object_factory)
@@ -757,34 +1030,54 @@ class IdentityServicesEngineAPI(object):
         return self._session
 
     @property
+    def session_ui(self):
+        """The Identity Services Engine UI API session."""
+        return self._session_ui
+
+    @property
+    def session_ers(self):
+        """The Identity Services Engine ERS API session."""
+        return self._session_ers
+
+    @property
+    def session_mnt(self):
+        """The Identity Services Engine MNT API session."""
+        return self._session_mnt
+
+    @property
+    def session_px_grid(self):
+        """The Identity Services Engine PxGrid API session."""
+        return self._session_px_grid
+
+    @property
     def access_token(self):
         """The access token used for API calls to the Identity Services Engine service."""
         return self._session.access_token
 
     @property
     def base_url(self):
-        """The base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is True."""
+        """The base URL prefixed to the individual API endpoint suffixes for ERS and Custom Caller operations."""
         return self._session.base_url
 
     @property
     def ui_base_url(self):
-        """The ui base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
-        return self._session.base_url if self._uses_api_gateway else self._session_ui.base_url
+        """The ui base URL prefixed to the individual API endpoint suffixes for UI operations."""
+        return self._session_ui.base_url
 
     @property
     def ers_base_url(self):
-        """The ers base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
-        return self._session.base_url if self._uses_api_gateway else self._session_ers.base_url
+        """The ers base URL prefixed to the individual API endpoint suffixes for ERS operations."""
+        return self._session_ers.base_url
 
     @property
     def mnt_base_url(self):
-        """The mnt base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
-        return self._session.base_url if self._uses_api_gateway else self._session_mnt.base_url
+        """The mnt base URL prefixed to the individual API endpoint suffixes for MNT operations."""
+        return self._session_mnt.base_url
 
     @property
     def px_grid_base_url(self):
-        """The px_grid base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
-        return self._session.base_url if self._uses_api_gateway else self._session_px_grid.base_url
+        """The px_grid base URL prefixed to the individual API endpoint suffixes for PxGrid operations"""
+        return self._session_px_grid.base_url
 
     @property
     def single_request_timeout(self):
@@ -814,60 +1107,42 @@ class IdentityServicesEngineAPI(object):
 
     @base_url.setter
     def base_url(self, value):
-        """The base URL for the API endpoints, used when uses_api_gateway is True."""
+        """The base URL for the API endpoints for ERS and Custom Caller operations."""
         self._session.base_url = value
 
     @single_request_timeout.setter
     def single_request_timeout(self, value):
         """The timeout (seconds) for a single HTTP REST API request."""
         self.authentication.single_request_timeout = value
-        if self._uses_api_gateway:
-            self._session.single_request_timeout = value
-        else:
-            self._session_ui.single_request_timeout = value
-            self._session_ers.single_request_timeout = value
-            self._session_mnt.single_request_timeout = value
-            self._session_px_grid.single_request_timeout = value
+        self._session_ui.single_request_timeout = value
+        self._session_ers.single_request_timeout = value
+        self._session_mnt.single_request_timeout = value
+        self._session_px_grid.single_request_timeout = value
 
     @wait_on_rate_limit.setter
     def wait_on_rate_limit(self, value):
         """Enable or disable automatic rate-limit handling."""
-        if self._uses_api_gateway:
-            self._session.wait_on_rate_limit = value
-        else:
-            self._session_ui.wait_on_rate_limit = value
-            self._session_ers.wait_on_rate_limit = value
-            self._session_mnt.wait_on_rate_limit = value
-            self._session_px_grid.wait_on_rate_limit = value
+        self._session_ui.wait_on_rate_limit = value
+        self._session_ers.wait_on_rate_limit = value
+        self._session_mnt.wait_on_rate_limit = value
+        self._session_px_grid.wait_on_rate_limit = value
 
     @ui_base_url.setter
     def ui_base_url(self, value):
-        """The ui base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
-        if not self._uses_api_gateway:
-            if self._session_ui is None:
-                self._session_ui = copy.deepcopy(self._session)
-            self._session_ui.base_url = value
+        """The ui base URL prefixed to the individual API endpoint suffixes for UI operations."""
+        self._session_ui.base_url = value
 
     @ers_base_url.setter
     def ers_base_url(self, value):
-        """The ers base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
-        if not self._uses_api_gateway:
-            if self._session_ers is None:
-                self._session_ers = copy.deepcopy(self._session)
-            self._session_ers.base_url = value
+        """The ers base URL prefixed to the individual API endpoint suffixes for ERS operations."""
+        self._session_ers.base_url = value
 
     @mnt_base_url.setter
     def mnt_base_url(self, value):
-        """The mnt base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
-        if not self._uses_api_gateway:
-            if self._session_mnt is None:
-                self._session_mnt = copy.deepcopy(self._session)
-            self._session_mnt.base_url = value
+        """The mnt base URL prefixed to the individual API endpoint suffixes for MNT operations."""
+        self._session_mnt.base_url = value
 
     @px_grid_base_url.setter
     def px_grid_base_url(self, value):
-        """The px_grid base URL prefixed to the individual API endpoint suffixes, used when uses_api_gateway is False."""
-        if not self._uses_api_gateway:
-            if self._session_px_grid is None:
-                self._session_px_grid = copy.deepcopy(self._session)
-            self._session_px_grid.base_url = value
+        """The px_grid base URL prefixed to the individual API endpoint suffixes for PxGrid operations."""
+        self._session_px_grid.base_url = value

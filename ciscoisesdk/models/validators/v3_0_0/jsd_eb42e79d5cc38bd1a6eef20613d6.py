@@ -45,6 +45,8 @@ class JSONSchemaValidatorEb42E79D5Cc38Bd1A6Eef20613D6(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "OperationAdditionalData": {
+                "properties": {
                 "additionalData": {
                 "items": {
                 "properties": {
@@ -66,6 +68,12 @@ class JSONSchemaValidatorEb42E79D5Cc38Bd1A6Eef20613D6(object):
                 },
                 "required": [
                 "additionalData"
+                ],
+                "type": "object"
+                }
+                },
+                "required": [
+                "OperationAdditionalData"
                 ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
