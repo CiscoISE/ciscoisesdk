@@ -63,12 +63,6 @@ class JSONSchemaValidatorC137Cad852579F4B810Ff8Adf661(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "id",
-                "serviceType",
-                "isLocalAuthorization"
-                ],
                 "type": "object"
                 },
                 "type": "array"

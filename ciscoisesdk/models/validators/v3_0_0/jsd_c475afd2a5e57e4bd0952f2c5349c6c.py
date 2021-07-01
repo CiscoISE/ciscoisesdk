@@ -302,10 +302,6 @@ class JSONSchemaValidatorC475Afd2A5E57E4Bd0952F2C5349C6C(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rule",
-                "profile"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

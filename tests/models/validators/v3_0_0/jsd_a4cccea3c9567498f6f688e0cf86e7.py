@@ -67,11 +67,6 @@ class JSONSchemaValidatorA4CcceA3C9567498F6F688E0Cf86E7(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "version",
-                "dictionaryAttrType"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -102,10 +102,6 @@ class JSONSchemaValidatorE9Cc593C395C48B31B30149467C846(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "conditionType"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

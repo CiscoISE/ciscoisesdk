@@ -197,21 +197,6 @@ class JSONSchemaValidatorEaa0D7C339D152B688876C2E10F51Fe7(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "isEnabled",
-                "isDefaultGroup",
-                "memberGroups",
-                "guestTypes",
-                "locations",
-                "autoNotification",
-                "createPermissions",
-                "managePermission",
-                "otherPermissions",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

@@ -80,12 +80,6 @@ class JSONSchemaValidatorBc200Af85D598885A990Ff9Bcbf8(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "link"
-                ],
                 "type": "object"
                 },
                 "type": "array"

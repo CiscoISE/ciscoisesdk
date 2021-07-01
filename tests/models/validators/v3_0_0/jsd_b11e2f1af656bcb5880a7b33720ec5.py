@@ -55,10 +55,6 @@ class JSONSchemaValidatorB11E2F1Af656BcB5880A7B33720Ec5(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "code",
-                "message"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

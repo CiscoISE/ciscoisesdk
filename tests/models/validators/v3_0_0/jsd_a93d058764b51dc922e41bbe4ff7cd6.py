@@ -73,10 +73,6 @@ class JSONSchemaValidatorA93D058764B51Dc922E41Bbe4Ff7Cd6(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "id",
-                "link"
-                ],
                 "type": "object"
                 },
                 "type": "array"

@@ -91,17 +91,6 @@ class JSONSchemaValidatorCa28129793D1569BB50DE9F43B0D0Ee8(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "id",
-                "notificationEnabled",
-                "useDefaultFromAddress",
-                "defaultFromAddress",
-                "smtpPort",
-                "connectionTimeout",
-                "useTLSorSSLEncryption",
-                "usePasswordAuthentication",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

@@ -61,12 +61,6 @@ class JSONSchemaValidatorB05E80058Df96E685Baa727D578(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "domain"
-                ],
                 "type": "object"
                 }
                 },

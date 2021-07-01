@@ -60,10 +60,6 @@ class JSONSchemaValidatorC77600D349Fc5C259Dbd22D65B3Ffa1D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "key",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -113,12 +109,6 @@ class JSONSchemaValidatorC77600D349Fc5C259Dbd22D65B3Ffa1D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "internalName",
-                "dataType",
-                "dictionaryName"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

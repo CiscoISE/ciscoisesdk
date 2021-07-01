@@ -68,12 +68,6 @@ class JSONSchemaValidatorF24049Df29D059C48Eef86D381Ffad5D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "guestType",
-                "portalId",
-                "guestInfo"
-                ],
                 "type": "object"
                 }
                 },

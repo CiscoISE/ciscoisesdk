@@ -80,12 +80,6 @@ class JSONSchemaValidatorC5E52706E7095A81B8D32F3024E01Cf6(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "link"
-                ],
                 "type": "object"
                 },
                 "type": "array"

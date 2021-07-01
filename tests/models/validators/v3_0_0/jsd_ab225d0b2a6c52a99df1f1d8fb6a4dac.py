@@ -80,13 +80,6 @@ class JSONSchemaValidatorAb225D0B2A6C52A99Df1F1D8Fb6A4Dac(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "ipAddress",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

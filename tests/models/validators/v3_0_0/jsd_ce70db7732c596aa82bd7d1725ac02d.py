@@ -113,15 +113,6 @@ class JSONSchemaValidatorCe70Db7732C596AA82BD7D1725Ac02D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "allowSponsorToChangeOwnPassword",
-                "guestUserFieldList",
-                "portalType",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

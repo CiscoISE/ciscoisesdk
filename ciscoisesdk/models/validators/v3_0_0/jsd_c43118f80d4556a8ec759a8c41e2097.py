@@ -193,19 +193,6 @@ class JSONSchemaValidatorC43118F80D4556A8Ec759A8C41E2097(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "accessType",
-                "authzProfileType",
-                "trackMovement",
-                "serviceTemplate",
-                "easywiredSessionCandidate",
-                "daclName",
-                "voiceDomainPermission",
-                "profileName"
-                ],
                 "type": "object"
                 }
                 },

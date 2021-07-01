@@ -50,9 +50,6 @@ class JSONSchemaValidatorC0Ec3A56F65447Ba863Ae0Cac5Ef6A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

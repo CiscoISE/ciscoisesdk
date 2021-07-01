@@ -73,11 +73,6 @@ class JSONSchemaValidatorAc243EcB8C157658A4BCfe77A102C14(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "id",
-                "customization",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

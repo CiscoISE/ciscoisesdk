@@ -121,10 +121,6 @@ class JSONSchemaValidatorE23AC4C658F5B75F19D13D6F7189(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rule",
-                "profile"
-                ],
                 "type": "object"
                 },
                 "type": "array"

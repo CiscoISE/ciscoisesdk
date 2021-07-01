@@ -73,10 +73,6 @@ class JSONSchemaValidatorE9Ce4A1E1Cf955F098343646760E9D58(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "id",
-                "link"
-                ],
                 "type": "object"
                 },
                 "type": "array"

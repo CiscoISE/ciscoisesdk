@@ -80,12 +80,6 @@ class JSONSchemaValidatorD912B1C21E2B5Dca8B56332D3A8Ad13D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "link"
-                ],
                 "type": "object"
                 },
                 "type": "array"

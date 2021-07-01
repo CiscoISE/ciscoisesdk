@@ -86,15 +86,6 @@ class JSONSchemaValidatorE9E38Cdf5Bcb5C018B7F10F1D0864215(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "keySize",
-                "validityPeriod",
-                "raprofile",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

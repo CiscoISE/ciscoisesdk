@@ -76,14 +76,6 @@ class JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "backupName",
-                "repositoryName",
-                "backupEncryptionKey",
-                "frequency",
-                "startDate",
-                "time"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

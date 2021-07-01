@@ -101,20 +101,6 @@ class JSONSchemaValidatorAdac9B81D9235Be3B656Acf9436583Dd(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "enabled",
-                "password",
-                "changePassword",
-                "includeSystemAlarmsInEmail",
-                "externalUser",
-                "inactiveAccountNeverDisabled",
-                "adminGroups",
-                "customAttributes",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

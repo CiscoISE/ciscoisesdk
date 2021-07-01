@@ -60,11 +60,6 @@ class JSONSchemaValidatorD0Ed84901325292Ad4E2A91A174F6B2(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "dnsName",
-                "forest",
-                "unusableReason"
-                ],
                 "type": "object"
                 },
                 "type": "array"

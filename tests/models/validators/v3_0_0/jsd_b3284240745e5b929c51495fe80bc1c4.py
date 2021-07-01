@@ -92,11 +92,6 @@ class JSONSchemaValidatorB3284240745E5B929C51495Fe80Bc1C4(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "operation",
-                "messages",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

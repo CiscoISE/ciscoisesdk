@@ -114,10 +114,6 @@ class JSONSchemaValidatorCbcecf65A0155FcAd602D3Ac16531A7(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name"
-                ],
                 "type": "object"
                 }
                 },
@@ -291,16 +287,6 @@ class JSONSchemaValidatorCbcecf65A0155FcAd602D3Ac16531A7(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "portalType",
-                "portalTestUrl",
-                "settings",
-                "customizations",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

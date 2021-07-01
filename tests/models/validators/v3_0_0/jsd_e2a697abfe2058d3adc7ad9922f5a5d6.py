@@ -49,9 +49,6 @@ class JSONSchemaValidatorE2A697AbFe2058D3Adc7Ad9922F5A5D6(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

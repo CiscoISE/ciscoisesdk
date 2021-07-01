@@ -60,11 +60,6 @@ class JSONSchemaValidatorB839D4DeE9B958E48CceF056603E253F(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "sid",
-                "type"
-                ],
                 "type": "object"
                 },
                 "type": "array"

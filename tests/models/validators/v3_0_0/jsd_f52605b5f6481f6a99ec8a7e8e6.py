@@ -79,13 +79,6 @@ class JSONSchemaValidatorF52605B5F6481F6A99Ec8A7E8E6(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "status",
-                "deploymentId",
-                "udiSN",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

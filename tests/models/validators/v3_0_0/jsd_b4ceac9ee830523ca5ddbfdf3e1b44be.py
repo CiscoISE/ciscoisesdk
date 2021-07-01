@@ -69,10 +69,6 @@ class JSONSchemaValidatorB4Ceac9EE830523CA5DdBfdf3E1B44Be(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "conditionType"
-                ],
                 "type": "object"
                 },
                 "type": "array"

@@ -80,13 +80,6 @@ class JSONSchemaValidatorC988Bb742D055294B74B4D6916Ca1Ada(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "ipAddress",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

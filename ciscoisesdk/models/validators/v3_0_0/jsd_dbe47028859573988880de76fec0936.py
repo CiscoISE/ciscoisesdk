@@ -62,10 +62,6 @@ class JSONSchemaValidatorDbe47028859573988880De76Fec0936(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "certificateID",
-                "export"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

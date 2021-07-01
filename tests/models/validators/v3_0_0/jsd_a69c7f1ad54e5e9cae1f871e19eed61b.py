@@ -104,21 +104,6 @@ class JSONSchemaValidatorA69C7F1AD54E5E9CAe1F871E19Eed61B(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "accessType",
-                "authzProfileType",
-                "trackMovement",
-                "agentlessPosture",
-                "serviceTemplate",
-                "easywiredSessionCandidate",
-                "daclName",
-                "voiceDomainPermission",
-                "profileName",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

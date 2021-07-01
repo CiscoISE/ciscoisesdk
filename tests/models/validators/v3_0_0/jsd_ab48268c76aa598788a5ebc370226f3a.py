@@ -112,23 +112,6 @@ class JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "gateWay",
-                "displayName",
-                "inDeployment",
-                "otherPapFqdn",
-                "ipAddresses",
-                "ipAddress",
-                "sxpIpAddress",
-                "nodeServiceTypes",
-                "fqdn",
-                "primaryPapNode",
-                "pxGridNode",
-                "papNode",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

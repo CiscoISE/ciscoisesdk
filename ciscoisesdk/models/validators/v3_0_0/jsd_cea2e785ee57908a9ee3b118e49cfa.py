@@ -120,12 +120,6 @@ class JSONSchemaValidatorCea2E785Ee57908A9EE3B118E49Cfa(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "enableAci",
-                "defaultSgtName",
-                "aci50",
-                "aci51"
-                ],
                 "type": "object"
                 }
                 },

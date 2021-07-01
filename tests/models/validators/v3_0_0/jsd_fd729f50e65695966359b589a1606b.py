@@ -60,11 +60,6 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "sid",
-                "type"
-                ],
                 "type": "object"
                 },
                 "type": "array"

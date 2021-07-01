@@ -292,10 +292,6 @@ class JSONSchemaValidatorCc909C2717Cf55F1863A04A785166Fe0(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "serviceName"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

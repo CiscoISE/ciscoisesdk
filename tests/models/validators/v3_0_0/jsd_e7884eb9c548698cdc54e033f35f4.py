@@ -71,16 +71,6 @@ class JSONSchemaValidatorE7884Eb9C548698CdC54E033F35F4(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "externalIdentityStoreName",
-                "certificateAttributeName",
-                "allowedAsUserName",
-                "matchMode",
-                "usernameFrom"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

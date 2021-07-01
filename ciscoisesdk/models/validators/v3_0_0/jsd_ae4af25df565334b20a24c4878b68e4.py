@@ -84,12 +84,6 @@ class JSONSchemaValidatorAe4Af25Df565334B20A24C4878B68E4(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "settings"
-                ],
                 "type": "object"
                 }
                 },

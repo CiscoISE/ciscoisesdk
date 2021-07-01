@@ -292,10 +292,6 @@ class JSONSchemaValidatorDfe1Db8729D541FB3A17D31D47D1881(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "serviceName"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

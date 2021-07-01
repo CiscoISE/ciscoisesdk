@@ -118,19 +118,6 @@ class JSONSchemaValidatorF403Dda9440503191536993F569Cc6F(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "enabled",
-                "password",
-                "changePassword",
-                "expiryDateEnabled",
-                "enablePassword",
-                "customAttributes",
-                "passwordIDStore",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

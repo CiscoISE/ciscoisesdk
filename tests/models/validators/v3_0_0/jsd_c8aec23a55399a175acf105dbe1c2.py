@@ -60,10 +60,6 @@ class JSONSchemaValidatorC8Aec23A55399A175Acf105Dbe1C2(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "key",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -113,12 +109,6 @@ class JSONSchemaValidatorC8Aec23A55399A175Acf105Dbe1C2(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "internalName",
-                "dataType",
-                "dictionaryName"
-                ],
                 "type": "object"
                 },
                 "type": "array"

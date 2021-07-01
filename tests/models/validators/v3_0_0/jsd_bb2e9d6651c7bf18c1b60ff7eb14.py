@@ -112,23 +112,6 @@ class JSONSchemaValidatorBb2E9D6651C7Bf18C1B60Ff7Eb14(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "gateWay",
-                "displayName",
-                "inDeployment",
-                "otherPapFqdn",
-                "ipAddresses",
-                "ipAddress",
-                "sxpIpAddress",
-                "nodeServiceTypes",
-                "fqdn",
-                "primaryPapNode",
-                "pxGridNode",
-                "papNode",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

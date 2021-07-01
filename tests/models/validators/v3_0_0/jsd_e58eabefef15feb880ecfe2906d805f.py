@@ -76,12 +76,6 @@ class JSONSchemaValidatorE58EabeFef15Feb880ECfe2906D805F(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "themeData",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

@@ -68,12 +68,6 @@ class JSONSchemaValidatorB9C7C5847B17684C49399Ff95(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "guestType",
-                "portalId",
-                "guestInfo"
-                ],
                 "type": "object"
                 }
                 },

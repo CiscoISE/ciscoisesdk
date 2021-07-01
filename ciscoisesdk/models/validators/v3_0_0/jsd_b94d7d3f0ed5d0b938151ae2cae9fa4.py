@@ -97,15 +97,6 @@ class JSONSchemaValidatorB94D7D3F0Ed5D0B938151Ae2Cae9Fa4(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "id",
-                "data",
-                "hostName",
-                "allowOutOfDateCert",
-                "allowExtendedValidity",
-                "allowReplacementOfCertificates",
-                "allowReplacementOfPortalGroupTag"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

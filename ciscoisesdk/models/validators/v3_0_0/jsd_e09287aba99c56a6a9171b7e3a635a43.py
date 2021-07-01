@@ -71,16 +71,6 @@ class JSONSchemaValidatorE09287AbA99C56A6A9171B7E3A635A43(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "description",
-                "externalIdentityStoreName",
-                "certificateAttributeName",
-                "allowedAsUserName",
-                "matchMode",
-                "usernameFrom"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

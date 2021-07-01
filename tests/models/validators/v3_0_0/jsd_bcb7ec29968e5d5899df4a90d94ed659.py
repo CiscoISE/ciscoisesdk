@@ -138,18 +138,6 @@ class JSONSchemaValidatorBcb7Ec29968E5D5899Df4A90D94Ed659(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "id",
-                "name",
-                "guestType",
-                "status",
-                "sponsorUserName",
-                "sponsorUserId",
-                "guestInfo",
-                "guestAccessInfo",
-                "customFields",
-                "link"
-                ],
                 "type": "object"
                 }
                 },

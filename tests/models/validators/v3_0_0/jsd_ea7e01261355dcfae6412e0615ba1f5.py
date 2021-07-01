@@ -63,12 +63,6 @@ class JSONSchemaValidatorEa7E01261355DcfAe6412E0615Ba1F5(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "id",
-                "serviceType",
-                "isLocalAuthorization"
-                ],
                 "type": "object"
                 },
                 "type": "array"

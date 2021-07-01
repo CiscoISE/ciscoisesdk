@@ -60,10 +60,6 @@ class JSONSchemaValidatorF4508Bb3352Ff920DBdc229E0Fc50(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "key",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -113,12 +109,6 @@ class JSONSchemaValidatorF4508Bb3352Ff920DBdc229E0Fc50(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "internalName",
-                "dataType",
-                "dictionaryName"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

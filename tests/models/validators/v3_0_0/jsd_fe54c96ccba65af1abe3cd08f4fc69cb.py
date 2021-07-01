@@ -111,10 +111,6 @@ class JSONSchemaValidatorFe54C96CCba65Af1Abe3Cd08F4Fc69Cb(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "serviceName"
-                ],
                 "type": "object"
                 },
                 "type": "array"
