@@ -270,7 +270,7 @@ class IdentityGroup(object):
                               description=None,
                               id=None,
                               name=None,
-                              system_defined=None,
+                              parent=None,
                               headers=None,
                               payload=None,
                               active_validation=True,
@@ -282,7 +282,7 @@ class IdentityGroup(object):
                 request body.
             id(string): id, property of the request body.
             name(string): name, property of the request body.
-            system_defined(boolean): systemDefined, property of the
+            parent(string): parent, property of the
                 request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -344,11 +344,11 @@ class IdentityGroup(object):
                     name,
                 'description':
                     description,
-                'systemDefined':
-                    system_defined,
+                'parent':
+                    parent,
             }
             _payload = {
-                'EndPointGroup': dict_from_items_with_values(_tmp_payload)
+                'IdentityGroup': dict_from_items_with_values(_tmp_payload)
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -437,7 +437,7 @@ class IdentityGroup(object):
                                     id,
                                     description=None,
                                     name=None,
-                                    system_defined=None,
+                                    parent=None,
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
@@ -449,7 +449,7 @@ class IdentityGroup(object):
                 request body.
             id(string): id, property of the request body.
             name(string): name, property of the request body.
-            system_defined(boolean): systemDefined, property of the
+            parent(string): parent, property of the
                 request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -515,11 +515,11 @@ class IdentityGroup(object):
                     name,
                 'description':
                     description,
-                'systemDefined':
-                    system_defined,
+                'parent':
+                    parent,
             }
             _payload = {
-                'EndPointGroup': dict_from_items_with_values(_tmp_payload)
+                'IdentityGroup': dict_from_items_with_values(_tmp_payload)
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)

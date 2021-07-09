@@ -107,7 +107,7 @@ def create_identity_group(api):
         id='string',
         name='string',
         payload=None,
-        system_defined=True
+        parent='string'
     )
     return endpoint_result
 
@@ -132,7 +132,7 @@ def create_identity_group_default(api):
         id=None,
         name=None,
         payload=None,
-        system_defined=None
+        parent=None
     )
     return endpoint_result
 
@@ -217,7 +217,7 @@ def update_identity_group_by_id(api):
         id='string',
         name='string',
         payload=None,
-        system_defined=True
+        parent='string'
     )
     return endpoint_result
 
@@ -242,7 +242,7 @@ def update_identity_group_by_id_default(api):
         description=None,
         name=None,
         payload=None,
-        system_defined=None
+        parent=None
     )
     return endpoint_result
 

@@ -45,7 +45,7 @@ class JSONSchemaValidatorF18Bdd1938755409Bf6Db6B29E85D3A(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "EndPointGroup": {
+                "IdentityGroup": {
                 "properties": {
                 "description":
                  {
@@ -57,8 +57,8 @@ class JSONSchemaValidatorF18Bdd1938755409Bf6Db6B29E85D3A(object):
                 "name": {
                 "type": "string"
                 },
-                "systemDefined": {
-                "type": "boolean"
+                "parent": {
+                "type": "string"
                 }
                 },
                 "type": "object"
