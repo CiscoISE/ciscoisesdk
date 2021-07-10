@@ -45,16 +45,40 @@ class JSONSchemaValidatorD1448851F0154D0B6E9C856Ec6Cc6F0(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "ArrayList": {
-                "items": {
+                "ACIBindings": {
+                "properties": {
+                "description":
+                 {
                 "type": "string"
                 },
-                "type": "array"
+                "id": {
+                "type": "string"
+                },
+                "ip": {
+                "type": "string"
+                },
+                "learnedBy": {
+                "type": "string"
+                },
+                "learnedFrom": {
+                "type": "string"
+                },
+                "name": {
+                "type": "string"
+                },
+                "psn": {
+                "type": "string"
+                },
+                "sgtValue": {
+                "type": "string"
+                },
+                "vn": {
+                "type": "string"
                 }
                 },
-                "required": [
-                "ArrayList"
-                ],
+                "type": "object"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

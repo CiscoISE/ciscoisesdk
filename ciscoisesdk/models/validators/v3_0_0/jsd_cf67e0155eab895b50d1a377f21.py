@@ -47,21 +47,25 @@ class JSONSchemaValidatorCf67E0155EaB895B50D1A377F21(object):
                 "properties": {
                 "ERSSxpLocalBindings": {
                 "properties": {
-                "bindingName": {
-                "type": "string"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
                 "id": {
                 "type": "string"
                 },
                 "ipAddressOrHost": {
                 "type": "string"
                 },
-                "name": {
+                "link": {
+                "properties": {
+                "href": {
                 "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "sgt": {
                 "type": "string"
@@ -73,19 +77,9 @@ class JSONSchemaValidatorCf67E0155EaB895B50D1A377F21(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "ipAddressOrHost",
-                "sxpVpn",
-                "sgt",
-                "vns"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSSxpLocalBindings"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

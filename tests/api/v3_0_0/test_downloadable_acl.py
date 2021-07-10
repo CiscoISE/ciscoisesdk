@@ -29,118 +29,6 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_downloadable_acl(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9191bc200af85d598885a990ff9bcbf8_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_downloadable_acl(api):
-    endpoint_result = api.downloadable_acl.get_all_downloadable_acl(
-        page=0,
-        size=0
-    )
-    return endpoint_result
-
-
-@pytest.mark.downloadable_acl
-def test_get_all_downloadable_acl(api, validator):
-    try:
-        assert is_valid_get_all_downloadable_acl(
-            validator,
-            get_all_downloadable_acl(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_downloadable_acl_default(api):
-    endpoint_result = api.downloadable_acl.get_all_downloadable_acl(
-        page=None,
-        size=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.downloadable_acl
-def test_get_all_downloadable_acl_default(api, validator):
-    try:
-        assert is_valid_get_all_downloadable_acl(
-            validator,
-            get_all_downloadable_acl_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_downloadable_acl(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_adcf947c42fe5588b7b82d9c43a3bbf0_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_downloadable_acl(api):
-    endpoint_result = api.downloadable_acl.create_downloadable_acl(
-        active_validation=False,
-        dacl='string',
-        dacl_type='string',
-        description='string',
-        name='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.downloadable_acl
-def test_create_downloadable_acl(api, validator):
-    try:
-        assert is_valid_create_downloadable_acl(
-            validator,
-            create_downloadable_acl(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_downloadable_acl_default(api):
-    endpoint_result = api.downloadable_acl.create_downloadable_acl(
-        active_validation=False,
-        dacl=None,
-        dacl_type=None,
-        description=None,
-        name=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.downloadable_acl
-def test_create_downloadable_acl_default(api, validator):
-    try:
-        assert is_valid_create_downloadable_acl(
-            validator,
-            create_downloadable_acl_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_get_downloadable_acl_by_id(json_schema_validate, obj):
     if not obj:
         return False
@@ -297,6 +185,168 @@ def test_delete_downloadable_acl_by_id_default(api, validator):
         assert is_valid_delete_downloadable_acl_by_id(
             validator,
             delete_downloadable_acl_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_all_downloadable_acl(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_9191bc200af85d598885a990ff9bcbf8_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_all_downloadable_acl(api):
+    endpoint_result = api.downloadable_acl.get_all_downloadable_acl(
+        page=0,
+        size=0
+    )
+    return endpoint_result
+
+
+@pytest.mark.downloadable_acl
+def test_get_all_downloadable_acl(api, validator):
+    try:
+        assert is_valid_get_all_downloadable_acl(
+            validator,
+            get_all_downloadable_acl(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_all_downloadable_acl_default(api):
+    endpoint_result = api.downloadable_acl.get_all_downloadable_acl(
+        page=None,
+        size=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.downloadable_acl
+def test_get_all_downloadable_acl_default(api, validator):
+    try:
+        assert is_valid_get_all_downloadable_acl(
+            validator,
+            get_all_downloadable_acl_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_downloadable_acl(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_adcf947c42fe5588b7b82d9c43a3bbf0_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_downloadable_acl(api):
+    endpoint_result = api.downloadable_acl.create_downloadable_acl(
+        active_validation=False,
+        dacl='string',
+        dacl_type='string',
+        description='string',
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.downloadable_acl
+def test_create_downloadable_acl(api, validator):
+    try:
+        assert is_valid_create_downloadable_acl(
+            validator,
+            create_downloadable_acl(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_downloadable_acl_default(api):
+    endpoint_result = api.downloadable_acl.create_downloadable_acl(
+        active_validation=False,
+        dacl=None,
+        dacl_type=None,
+        description=None,
+        name=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.downloadable_acl
+def test_create_downloadable_acl_default(api, validator):
+    try:
+        assert is_valid_create_downloadable_acl(
+            validator,
+            create_downloadable_acl_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_d10b7914625e5da0861cbeab4cf6440e_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.downloadable_acl.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.downloadable_acl
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.downloadable_acl.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.downloadable_acl
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

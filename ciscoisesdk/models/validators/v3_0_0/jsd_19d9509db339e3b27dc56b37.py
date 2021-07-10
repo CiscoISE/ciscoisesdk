@@ -47,19 +47,56 @@ class JSONSchemaValidator19D9509DB339E3B27Dc56B37(object):
                 "properties": {
                 "InternalUser": {
                 "properties": {
+                "changePassword": {
+                "type": "boolean"
+                },
+                "customAttributes": {
+                "type": "object"
+                },
+                "description":
+                 {
+                "type": "string"
+                },
+                "email": {
+                "type": "string"
+                },
+                "enablePassword": {
+                "type": "string"
+                },
+                "enabled": {
+                "type": "boolean"
+                },
+                "expiryDate": {
+                "type": "string"
+                },
+                "expiryDateEnabled": {
+                "type": "boolean"
+                },
+                "firstName": {
+                "type": "string"
+                },
+                "id": {
+                "type": "string"
+                },
+                "identityGroups": {
+                "type": "string"
+                },
+                "lastName": {
+                "type": "string"
+                },
+                "name": {
+                "type": "string"
+                },
                 "password": {
+                "type": "string"
+                },
+                "passwordIDStore": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "password"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "InternalUser"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

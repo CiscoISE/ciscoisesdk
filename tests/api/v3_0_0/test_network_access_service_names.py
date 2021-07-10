@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_access_service_names(json_schema_validate, obj):
+def is_valid_get_network_access_service_names(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8304c137cad852579f4b810ff8adf661_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ca8f50a31b325fd281ae7f7b69f31d3f_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_network_access_service_names(api):
-    endpoint_result = api.network_access_service_names.get_all_network_access_service_names(
+def get_network_access_service_names(api):
+    endpoint_result = api.network_access_service_names.get_network_access_service_names(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_service_names
-def test_get_all_network_access_service_names(api, validator):
+def test_get_network_access_service_names(api, validator):
     try:
-        assert is_valid_get_all_network_access_service_names(
+        assert is_valid_get_network_access_service_names(
             validator,
-            get_all_network_access_service_names(api)
+            get_network_access_service_names(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_network_access_service_names(api, validator):
             raise original_e
 
 
-def get_all_network_access_service_names_default(api):
-    endpoint_result = api.network_access_service_names.get_all_network_access_service_names(
+def get_network_access_service_names_default(api):
+    endpoint_result = api.network_access_service_names.get_network_access_service_names(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_service_names
-def test_get_all_network_access_service_names_default(api, validator):
+def test_get_network_access_service_names_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_service_names(
+        assert is_valid_get_network_access_service_names(
             validator,
-            get_all_network_access_service_names_default(api)
+            get_network_access_service_names_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

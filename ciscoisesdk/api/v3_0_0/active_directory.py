@@ -74,360 +74,11 @@ class ActiveDirectory(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_active_directory(self,
-                                 page=None,
-                                 size=None,
-                                 headers=None,
-                                 **query_parameters):
-        """Get all Active Directory.
-
-        Args:
-            page(int): page query parameter. Page number.
-            size(int): size query parameter. Number of objects
-                returned per page.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-
-        _params = {
-            'page':
-                page,
-            'size':
-                size,
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        e_url = ('/ers/config/activedirectory')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_c8dbec9679d453f78cb47d894c507a7b_v3_0_0', _api_response)
-
-    def get_all_active_directory_generator(self,
-                                           page=None,
-                                           size=None,
-                                           headers=None,
-                                           **query_parameters):
-        """Get all Active Directory.
-
-        Args:
-            page(int): page query parameter. Page number.
-            size(int): size query parameter. Number of objects
-                returned per page.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            Generator: A generator object containing the following object.
-              + RestResponse: REST response with following properties:
-                  - headers(MyDict): response headers.
-                  - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
-                  - content(bytes): representation of the request's response
-                  - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-
-        yield from get_next_page(self.get_all_active_directory, dict(
-            page=page,
-            size=size,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
-
-    def create_active_directory(self,
-                                ad_attributes=None,
-                                ad_scopes_names=None,
-                                adgroups=None,
-                                advanced_settings=None,
-                                description=None,
-                                domain=None,
-                                name=None,
-                                headers=None,
-                                payload=None,
-                                active_validation=True,
-                                **query_parameters):
-        """Attribute change: - < ISE 3.0 P2: enableDomainWhiteList  - >=
-        ISE 3.0 P2 enableDomainAllowedList.
-
-        Args:
-            ad_attributes(object): adAttributes, property of the
-                request body.
-            ad_scopes_names(string): adScopesNames, property of the
-                request body.
-            adgroups(object): adgroups, property of the request
-                body.
-            advanced_settings(object): advancedSettings, property of
-                the request body.
-            description(string): description, property of the
-                request body.
-            domain(string): domain, property of the request body.
-            name(string): name, property of the request body.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'name':
-                    name,
-                'description':
-                    description,
-                'domain':
-                    domain,
-                'adgroups':
-                    adgroups,
-                'advancedSettings':
-                    advanced_settings,
-                'adAttributes':
-                    ad_attributes,
-                'adScopesNames':
-                    ad_scopes_names,
-            }
-            _payload = {
-                'ERSActiveDirectory': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e9318040a456978757d7abfa3e66b1_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/activedirectory')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers,
-                                               **request_params)
-        else:
-            _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               **request_params)
-
-        return self._object_factory('bpm_e9318040a456978757d7abfa3e66b1_v3_0_0', _api_response)
-
-    def get_active_directory_by_id(self,
-                                   id,
-                                   headers=None,
-                                   **query_parameters):
-        """Get Active Directory by Id.
-
-        Args:
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-
-        e_url = ('/ers/config/activedirectory/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_cfcc7615d0492e2dd1b04dd03a9_v3_0_0', _api_response)
-
-    def delete_active_directory_by_id(self,
-                                      id,
-                                      headers=None,
-                                      **query_parameters):
-        """Delete Active Directory by Id.
-
-        Args:
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-
-        e_url = ('/ers/config/activedirectory/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
-        else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_febbe79ed5bb780d97a98f292b606_v3_0_0', _api_response)
-
     def get_active_directory_by_name(self,
                                      name,
                                      headers=None,
                                      **query_parameters):
-        """Get Active Directory by name.
+        """This API allows the client to get Active Directory by name.
 
         Args:
             name(basestring): name path parameter.
@@ -458,6 +109,12 @@ class ActiveDirectory(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -486,300 +143,6 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_c6be021c4ca59e48c97afe218219bb1_v3_0_0', _api_response)
 
-    def join_domain_with_all_nodes(self,
-                                   id,
-                                   additional_data=None,
-                                   headers=None,
-                                   payload=None,
-                                   active_validation=True,
-                                   **query_parameters):
-        """Active Directory - join a domain with all nodes.
-
-        Args:
-            additionalData(list): additionalData, property of the
-                request body (list of objects).
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'additionalData':
-                    additional_data,
-            }
-            _payload = {
-                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e84705b918955b53afe61fc37911eb8b_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/activedirectory/{id}/joinAllNodes')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_e84705b918955b53afe61fc37911eb8b_v3_0_0', _api_response)
-
-    def get_groups_by_domain(self,
-                             id,
-                             additional_data=None,
-                             headers=None,
-                             payload=None,
-                             active_validation=True,
-                             **query_parameters):
-        """Active Directory get groups by domain.
-
-        Args:
-            additionalData(list): additionalData, property of the
-                request body (list of objects).
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'additionalData':
-                    additional_data,
-            }
-            _payload = {
-                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_fd729f50e65695966359b589a1606b_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/activedirectory/{id}/getGroupsByDomain')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_fd729f50e65695966359b589a1606b_v3_0_0', _api_response)
-
-    def load_groups_from_domain(self,
-                                id,
-                                description=None,
-                                domain=None,
-                                name=None,
-                                headers=None,
-                                payload=None,
-                                active_validation=True,
-                                **query_parameters):
-        """Reload domain groups configuration from Active Directory into
-        ISE.
-
-        Args:
-            description(string): description, property of the
-                request body.
-            domain(string): domain, property of the request body.
-            id(string): id, property of the request body.
-            name(string): name, property of the request body.
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'id':
-                    id,
-                'name':
-                    name,
-                'description':
-                    description,
-                'domain':
-                    domain,
-            }
-            _payload = {
-                'ERSActiveDirectory': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b05e80058df96e685baa727d578_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/activedirectory/{id}/addGroups')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_b05e80058df96e685baa727d578_v3_0_0', _api_response)
-
     def get_all_user_groups(self,
                             id,
                             additional_data=None,
@@ -787,7 +150,8 @@ class ActiveDirectory(object):
                             payload=None,
                             active_validation=True,
                             **query_parameters):
-        """Active Directory get user groups.
+        """This API allows the client to get groups of which a given user
+        is a member.
 
         Args:
             additionalData(list): additionalData, property of the
@@ -818,9 +182,18 @@ class ActiveDirectory(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -874,16 +247,57 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_b839d4dee9b958e48ccef056603e253f_v3_0_0', _api_response)
 
-    def get_all_trusted_domains(self,
+    def load_groups_from_domain(self,
                                 id,
+                                ad_attributes=None,
+                                ad_scopes_names=None,
+                                adgroups=None,
+                                advanced_settings=None,
+                                description=None,
+                                domain=None,
+                                enable_domain_white_list=None,
+                                name=None,
                                 headers=None,
+                                payload=None,
+                                active_validation=True,
                                 **query_parameters):
-        """Active Directory get trusted domains.
+        """This API loads domain groups configuration from Active Directory
+        into Cisco ISE.
 
         Args:
+            ad_attributes(object): Holds list of AD Attributes,
+                property of the request body.
+            ad_scopes_names(string): String that contains the names
+                of the scopes that the active directory
+                belongs to. Names are separated by
+                comma. Alphanumeric, underscore (_)
+                characters are allowed, property of the
+                request body.
+            adgroups(object): Holds list of AD Groups, property of
+                the request body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
+            description(string): No character restriction, property
+                of the request body.
+            domain(string): The AD domain. Alphanumeric, hyphen (-)
+                and dot (.) characters are allowed,
+                property of the request body.
+            enable_domain_white_list(boolean):
+                enableDomainWhiteList, property of the
+                request body.
+            id(string): Resource UUID value, property of the request
+                body.
+            name(string): Resource Name. Maximum 32 characters
+                allowed. Allowed characters are
+                alphanumeric and .-_/\\ characters,
+                property of the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -909,76 +323,12 @@ class ActiveDirectory(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-
-        e_url = ('/ers/config/activedirectory/{id}/getTrustedDomains')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_d0ed84901325292ad4e2a91a174f6b2_v3_0_0', _api_response)
-
-    def is_user_member_of_groups(self,
-                                 id,
-                                 additional_data=None,
-                                 headers=None,
-                                 payload=None,
-                                 active_validation=True,
-                                 **query_parameters):
-        """Active Directory is user a member of groups.
-
-        Args:
-            additionalData(list): additionalData, property of the
-                request body (list of objects).
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1005,113 +355,35 @@ class ActiveDirectory(object):
             _payload = payload
         else:
             _tmp_payload = {
-                'additionalData':
-                    additional_data,
-            }
-            _payload = {
-                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_eae60ece5110590e97ddd910e8144ed2_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/activedirectory/{id}/isUserMemberOf')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_eae60ece5110590e97ddd910e8144ed2_v3_0_0', _api_response)
-
-    def join_domain(self,
+                'id':
                     id,
-                    additional_data=None,
-                    headers=None,
-                    payload=None,
-                    active_validation=True,
-                    **query_parameters):
-        """Active Directory join a domain.
-
-        Args:
-            additionalData(list): additionalData, property of the
-                request body (list of objects).
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'additionalData':
-                    additional_data,
+                'name':
+                    name,
+                'description':
+                    description,
+                'domain':
+                    domain,
+                'enableDomainWhiteList':
+                    enable_domain_white_list,
+                'adgroups':
+                    adgroups,
+                'advancedSettings':
+                    advanced_settings,
+                'adAttributes':
+                    ad_attributes,
+                'adScopesNames':
+                    ad_scopes_names,
             }
             _payload = {
-                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
+                'ERSActiveDirectory': dict_from_items_with_values(_tmp_payload)
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b3284240745e5b929c51495fe80bc1c4_v3_0_0')\
+            self._request_validator('jsd_b05e80058df96e685baa727d578_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/activedirectory/{id}/join')
+        e_url = ('/ers/config/activedirectory/{id}/addGroups')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1124,7 +396,7 @@ class ActiveDirectory(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_b3284240745e5b929c51495fe80bc1c4_v3_0_0', _api_response)
+        return self._object_factory('bpm_b05e80058df96e685baa727d578_v3_0_0', _api_response)
 
     def leave_domain(self,
                      id,
@@ -1133,7 +405,8 @@ class ActiveDirectory(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Active Directory leave a domain.
+        """This API makes a Cisco ISE node to leave an Active Directory
+        domain.
 
         Args:
             additionalData(list): additionalData, property of the
@@ -1164,9 +437,18 @@ class ActiveDirectory(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1220,14 +502,14 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_e84541805d1da1fa3d4d581102a9_v3_0_0', _api_response)
 
-    def leave_domain_with_all_nodes(self,
-                                    id,
-                                    additional_data=None,
-                                    headers=None,
-                                    payload=None,
-                                    active_validation=True,
-                                    **query_parameters):
-        """Leave a domain with all nodes.
+    def is_user_member_of_groups(self,
+                                 id,
+                                 additional_data=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
+        """This API verifies if the user is a member of the given groups.
 
         Args:
             additionalData(list): additionalData, property of the
@@ -1258,9 +540,297 @@ class ActiveDirectory(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'additionalData':
+                    additional_data,
+            }
+            _payload = {
+                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_eae60ece5110590e97ddd910e8144ed2_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/activedirectory/{id}/isUserMemberOf')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_eae60ece5110590e97ddd910e8144ed2_v3_0_0', _api_response)
+
+    def get_all_trusted_domains(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
+        """This API gets the list of domains that are accessible through
+        the given join point via trust relationships.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/activedirectory/{id}/getTrustedDomains')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_d0ed84901325292ad4e2a91a174f6b2_v3_0_0', _api_response)
+
+    def join_domain_with_all_nodes(self,
+                                   id,
+                                   additional_data=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
+        """This API joins all Cisco ISE Nodes to an Active Directory
+        domain.
+
+        Args:
+            additionalData(list): additionalData, property of the
+                request body (list of objects).
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'additionalData':
+                    additional_data,
+            }
+            _payload = {
+                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_e84705b918955b53afe61fc37911eb8b_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/activedirectory/{id}/joinAllNodes')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_e84705b918955b53afe61fc37911eb8b_v3_0_0', _api_response)
+
+    def leave_domain_with_all_nodes(self,
+                                    id,
+                                    additional_data=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
+        """This API joins makes all Cisco ISE nodes leave an Active
+        Directory domain.
+
+        Args:
+            additionalData(list): additionalData, property of the
+                request body (list of objects).
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1313,3 +883,666 @@ class ActiveDirectory(object):
                                               **request_params)
 
         return self._object_factory('bpm_d011417d18d055ccb864c1dc2ae0456d_v3_0_0', _api_response)
+
+    def get_groups_by_domain(self,
+                             id,
+                             additional_data=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
+        """This API lists the groups of the given domain.
+
+        Args:
+            additionalData(list): additionalData, property of the
+                request body (list of objects).
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'additionalData':
+                    additional_data,
+            }
+            _payload = {
+                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_fd729f50e65695966359b589a1606b_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/activedirectory/{id}/getGroupsByDomain')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_fd729f50e65695966359b589a1606b_v3_0_0', _api_response)
+
+    def get_active_directory_by_id(self,
+                                   id,
+                                   headers=None,
+                                   **query_parameters):
+        """This API fetchs the join point details by ID. The ID can be
+        retrieved with the Get All operation.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/activedirectory/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_cfcc7615d0492e2dd1b04dd03a9_v3_0_0', _api_response)
+
+    def delete_active_directory_by_id(self,
+                                      id,
+                                      headers=None,
+                                      **query_parameters):
+        """This API deletes an AD join point from Cisco ISE.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/activedirectory/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_febbe79ed5bb780d97a98f292b606_v3_0_0', _api_response)
+
+    def join_domain(self,
+                    id,
+                    additional_data=None,
+                    headers=None,
+                    payload=None,
+                    active_validation=True,
+                    **query_parameters):
+        """This API joins a Cisco ISE node to an Active Directory domain.
+
+        Args:
+            additionalData(list): additionalData, property of the
+                request body (list of objects).
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'additionalData':
+                    additional_data,
+            }
+            _payload = {
+                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_b3284240745e5b929c51495fe80bc1c4_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/activedirectory/{id}/join')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_b3284240745e5b929c51495fe80bc1c4_v3_0_0', _api_response)
+
+    def get_all_active_directory(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
+        """This API lists all the join points for Active Directory domains
+        in Cisco ISE.
+
+        Args:
+            page(int): page query parameter. Page number.
+            size(int): size query parameter. Number of objects
+                returned per page.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(page, (int, basestring, list))
+        check_type(size, (int, basestring, list))
+
+        _params = {
+            'page':
+                page,
+            'size':
+                size,
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/ers/config/activedirectory')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_c8dbec9679d453f78cb47d894c507a7b_v3_0_0', _api_response)
+
+    def get_all_active_directory_generator(self,
+                                           page=None,
+                                           size=None,
+                                           headers=None,
+                                           **query_parameters):
+        """This API lists all the join points for Active Directory domains
+        in Cisco ISE.
+
+        Args:
+            page(int): page query parameter. Page number.
+            size(int): size query parameter. Number of objects
+                returned per page.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            Generator: A generator object containing the following object.
+              + RestResponse: REST response with following properties:
+                  - headers(MyDict): response headers.
+                  - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                        or the bracket notation.
+                  - content(bytes): representation of the request's response
+                  - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+
+        yield from get_next_page(self.get_all_active_directory, dict(
+            page=page,
+            size=size,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def create_active_directory(self,
+                                ad_attributes=None,
+                                ad_scopes_names=None,
+                                adgroups=None,
+                                advanced_settings=None,
+                                description=None,
+                                domain=None,
+                                enable_domain_white_list=None,
+                                id=None,
+                                name=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
+        """This API creates an AD join point in Cisco ISE.
+
+        Args:
+            ad_attributes(object): Holds list of AD Attributes,
+                property of the request body.
+            ad_scopes_names(string): String that contains the names
+                of the scopes that the active directory
+                belongs to. Names are separated by
+                comma. Alphanumeric, underscore (_)
+                characters are allowed, property of the
+                request body.
+            adgroups(object): Holds list of AD Groups, property of
+                the request body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
+            description(string): No character restriction, property
+                of the request body.
+            domain(string): The AD domain. Alphanumeric, hyphen (-)
+                and dot (.) characters are allowed,
+                property of the request body.
+            enable_domain_white_list(boolean):
+                enableDomainWhiteList, property of the
+                request body.
+            id(string): Resource UUID value, property of the request
+                body.
+            name(string): Resource Name. Maximum 32 characters
+                allowed. Allowed characters are
+                alphanumeric and .-_/\\ characters,
+                property of the request body.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'domain':
+                    domain,
+                'enableDomainWhiteList':
+                    enable_domain_white_list,
+                'adgroups':
+                    adgroups,
+                'advancedSettings':
+                    advanced_settings,
+                'adAttributes':
+                    ad_attributes,
+                'adScopesNames':
+                    ad_scopes_names,
+            }
+            _payload = {
+                'ERSActiveDirectory': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_e9318040a456978757d7abfa3e66b1_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/activedirectory')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               headers=_headers,
+                                               **request_params)
+        else:
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               **request_params)
+
+        return self._object_factory('bpm_e9318040a456978757d7abfa3e66b1_v3_0_0', _api_response)
+
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the active directory.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/ers/config/activedirectory/versioninfo')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_c2d0923990e35be1882e4dee000254a9_v3_0_0', _api_response)

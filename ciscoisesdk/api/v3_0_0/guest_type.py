@@ -74,6 +74,485 @@ class GuestType(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
+    def update_guest_type_email(self,
+                                id,
+                                additional_data=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
+        """This API allows the client to update a guest type email by ID.
+
+        Args:
+            additionalData(list): additionalData, property of the
+                request body (list of objects).
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'additionalData':
+                    additional_data,
+            }
+            _payload = {
+                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_c7aed7320e54bfac29f13c8717a6b5_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/ers/config/guesttype/email/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_c7aed7320e54bfac29f13c8717a6b5_v3_0_0', _api_response)
+
+    def update_guest_type_sms(self,
+                              id,
+                              additional_data=None,
+                              headers=None,
+                              payload=None,
+                              active_validation=True,
+                              **query_parameters):
+        """This API allows the client to update a guest type sms by ID.
+
+        Args:
+            additionalData(list): additionalData, property of the
+                request body (list of objects).
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'additionalData':
+                    additional_data,
+            }
+            _payload = {
+                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_f9661f7c85c2570897cffc3d02668263_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/ers/config/guesttype/sms/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_f9661f7c85c2570897cffc3d02668263_v3_0_0', _api_response)
+
+    def get_guest_type_by_id(self,
+                             id,
+                             headers=None,
+                             **query_parameters):
+        """This API allows the client to get a guest type by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/guesttype/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_acb5a41fe395b158a3fe1cda996b0cf_v3_0_0', _api_response)
+
+    def update_guest_type_by_id(self,
+                                id,
+                                access_time=None,
+                                description=None,
+                                expiration_notification=None,
+                                is_default_type=None,
+                                login_options=None,
+                                name=None,
+                                sponsor_groups=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
+        """This API allows the client to update a guest type.
+
+        Args:
+            access_time(object): accessTime, property of the request
+                body.
+            description(string): description, property of the
+                request body.
+            expiration_notification(object): Expiration Notification
+                Settings, property of the request body.
+            id(string): id, property of the request body.
+            is_default_type(boolean): isDefaultType, property of the
+                request body.
+            login_options(object): loginOptions, property of the
+                request body.
+            name(string): name, property of the request body.
+            sponsorGroups(list): sponsorGroups, property of the
+                request body (list of strings).
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'isDefaultType':
+                    is_default_type,
+                'accessTime':
+                    access_time,
+                'loginOptions':
+                    login_options,
+                'expirationNotification':
+                    expiration_notification,
+                'sponsorGroups':
+                    sponsor_groups,
+            }
+            _payload = {
+                'GuestType': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_bac6d4d95ac45a0a8933b8712dcbe70d_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/guesttype/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_bac6d4d95ac45a0a8933b8712dcbe70d_v3_0_0', _api_response)
+
+    def delete_guest_type_by_id(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
+        """This API deletes a guest type.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/guesttype/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_faa7211d68e5b329034e17c82b78694_v3_0_0', _api_response)
+
     def get_all_guest_type(self,
                            filter=None,
                            filter_type=None,
@@ -83,7 +562,16 @@ class GuestType(object):
                            sortdsc=None,
                            headers=None,
                            **query_parameters):
-        """Get all Guest Type.
+        """This API allows the client to get all the guest types.   Filter:
+        [name]   To search guest users by using  toDate
+        column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -147,6 +635,12 @@ class GuestType(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -199,7 +693,16 @@ class GuestType(object):
                                      sortdsc=None,
                                      headers=None,
                                      **query_parameters):
-        """Get all Guest Type.
+        """This API allows the client to get all the guest types.   Filter:
+        [name]   To search guest users by using  toDate
+        column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -270,7 +773,7 @@ class GuestType(object):
                           access_time=None,
                           description=None,
                           expiration_notification=None,
-                          id=None,
+                          is_default_type=None,
                           login_options=None,
                           name=None,
                           sponsor_groups=None,
@@ -278,16 +781,17 @@ class GuestType(object):
                           payload=None,
                           active_validation=True,
                           **query_parameters):
-        """Create Guest Type.
+        """This API creates a guest type.
 
         Args:
             access_time(object): accessTime, property of the request
                 body.
             description(string): description, property of the
                 request body.
-            expiration_notification(object): expirationNotification,
-                property of the request body.
-            id(string): id, property of the request body.
+            expiration_notification(object): Expiration Notification
+                Settings, property of the request body.
+            is_default_type(boolean): isDefaultType, property of the
+                request body.
             login_options(object): loginOptions, property of the
                 request body.
             name(string): name, property of the request body.
@@ -324,6 +828,12 @@ class GuestType(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -347,12 +857,12 @@ class GuestType(object):
             _payload = payload
         else:
             _tmp_payload = {
-                'id':
-                    id,
                 'name':
                     name,
                 'description':
                     description,
+                'isDefaultType':
+                    is_default_type,
                 'accessTime':
                     access_time,
                 'loginOptions':
@@ -385,14 +895,13 @@ class GuestType(object):
 
         return self._object_factory('bpm_f46c01449d585b088490c4db530c56d5_v3_0_0', _api_response)
 
-    def get_guest_type_by_id(self,
-                             id,
-                             headers=None,
-                             **query_parameters):
-        """Get Guest Type by Id.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the guest type.
 
         Args:
-            id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -426,8 +935,6 @@ class GuestType(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -435,10 +942,9 @@ class GuestType(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/guesttype/{id}')
+        e_url = ('/ers/config/guesttype/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -446,385 +952,4 @@ class GuestType(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_acb5a41fe395b158a3fe1cda996b0cf_v3_0_0', _api_response)
-
-    def update_guesttype_by_id(self,
-                               id,
-                               access_time=None,
-                               description=None,
-                               expiration_notification=None,
-                               login_options=None,
-                               name=None,
-                               sponsor_groups=None,
-                               headers=None,
-                               payload=None,
-                               active_validation=True,
-                               **query_parameters):
-        """Update Guest Type.
-
-        Args:
-            access_time(object): accessTime, property of the request
-                body.
-            description(string): description, property of the
-                request body.
-            expiration_notification(object): expirationNotification,
-                property of the request body.
-            id(string): id, property of the request body.
-            login_options(object): loginOptions, property of the
-                request body.
-            name(string): name, property of the request body.
-            sponsorGroups(list): sponsorGroups, property of the
-                request body (list of strings).
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'id':
-                    id,
-                'name':
-                    name,
-                'description':
-                    description,
-                'accessTime':
-                    access_time,
-                'loginOptions':
-                    login_options,
-                'expirationNotification':
-                    expiration_notification,
-                'sponsorGroups':
-                    sponsor_groups,
-            }
-            _payload = {
-                'GuestType': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_bac6d4d95ac45a0a8933b8712dcbe70d_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/guesttype/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_bac6d4d95ac45a0a8933b8712dcbe70d_v3_0_0', _api_response)
-
-    def delete_guest_type_by_id(self,
-                                id,
-                                headers=None,
-                                **query_parameters):
-        """Delete Guest Type by id.
-
-        Args:
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-
-        e_url = ('/ers/config/guesttype/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
-        else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_faa7211d68e5b329034e17c82b78694_v3_0_0', _api_response)
-
-    def update_guest_type_sms(self,
-                              id,
-                              additional_data=None,
-                              headers=None,
-                              payload=None,
-                              active_validation=True,
-                              **query_parameters):
-        """Update Guest Type SMS by Id.
-
-        Args:
-            additionalData(list): additionalData, property of the
-                request body (list of objects).
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'additionalData':
-                    additional_data,
-            }
-            _payload = {
-                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_eb42e79d5cc38bd1a6eef20613d6_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/guesttype/sms/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_eb42e79d5cc38bd1a6eef20613d6_v3_0_0', _api_response)
-
-    def update_guest_type_email(self,
-                                id,
-                                additional_data=None,
-                                headers=None,
-                                payload=None,
-                                active_validation=True,
-                                **query_parameters):
-        """Update Guest Type Email by Id.
-
-        Args:
-            additionalData(list): additionalData, property of the
-                request body (list of objects).
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'additionalData':
-                    additional_data,
-            }
-            _payload = {
-                'OperationAdditionalData': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_cf310e621a395bb7bac7b90d7d4c8603_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/guesttype/email/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_cf310e621a395bb7bac7b90d7d4c8603_v3_0_0', _api_response)
+        return self._object_factory('bpm_a6bfaedfca185fb7b6a86621e866a5f6_v3_0_0', _api_response)

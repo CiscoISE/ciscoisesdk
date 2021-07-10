@@ -83,11 +83,6 @@ class JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -102,6 +97,9 @@ class JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A(object):
                 "papNode": {
                 "type": "boolean"
                 },
+                "passWord": {
+                "type": "string"
+                },
                 "primaryPapNode": {
                 "type": "boolean"
                 },
@@ -110,14 +108,14 @@ class JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A(object):
                 },
                 "sxpIpAddress": {
                 "type": "string"
+                },
+                "userName": {
+                "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "Node"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

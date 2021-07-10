@@ -47,8 +47,16 @@ class JSONSchemaValidatorE6734850FaBb2097Fa969948Cb(object):
                 "properties": {
                 "UpdatedFieldsList": {
                 "properties": {
+                "field": {
+                "type": "string"
+                },
+                "newValue": {
+                "type": "string"
+                },
+                "oldValue": {
+                "type": "string"
+                },
                 "updatedField": {
-                "items": {
                 "properties": {
                 "field": {
                 "type": "string"
@@ -60,25 +68,12 @@ class JSONSchemaValidatorE6734850FaBb2097Fa969948Cb(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "field",
-                "oldValue",
-                "newValue"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "updatedField"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "UpdatedFieldsList"
-                ],
+                "type": "object"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

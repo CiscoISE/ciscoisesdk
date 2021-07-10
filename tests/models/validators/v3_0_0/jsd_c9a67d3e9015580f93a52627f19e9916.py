@@ -48,6 +48,7 @@ class JSONSchemaValidatorC9A67D3E9015580F93A52627F19E9916(object):
                 "SearchResult": {
                 "properties": {
                 "nextPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -60,8 +61,11 @@ class JSONSchemaValidatorC9A67D3E9015580F93A52627F19E9916(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "previousPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -74,6 +78,8 @@ class JSONSchemaValidatorC9A67D3E9015580F93A52627F19E9916(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "resources": {
                 "items": {
@@ -114,9 +120,6 @@ class JSONSchemaValidatorC9A67D3E9015580F93A52627F19E9916(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

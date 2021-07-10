@@ -89,9 +89,6 @@ class JSONSchemaValidatorAcd30D35Ee2Ae16Ff23757De7D8(object):
                 },
                 "type": "array"
                 },
-                "id": {
-                "type": "string"
-                },
                 "isDefaultGroup": {
                 "type": "boolean"
                 },

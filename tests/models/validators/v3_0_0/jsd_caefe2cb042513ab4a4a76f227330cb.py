@@ -62,11 +62,6 @@ class JSONSchemaValidatorCaefe2CB042513AB4A4A76F227330Cb(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "grant",
-                "command",
-                "arguments"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -78,6 +73,23 @@ class JSONSchemaValidatorCaefe2CB042513AB4A4A76F227330Cb(object):
                  {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -85,15 +97,9 @@ class JSONSchemaValidatorCaefe2CB042513AB4A4A76F227330Cb(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "name"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsCommandSets"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

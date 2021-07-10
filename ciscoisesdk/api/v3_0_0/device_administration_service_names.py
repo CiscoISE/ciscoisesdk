@@ -74,11 +74,14 @@ class DeviceAdministrationServiceNames(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_service_names(self,
-                                           headers=None,
-                                           **query_parameters):
-        """Device Admin - Returns list of allowed protocols and server
-        sequences.
+    def get_device_admin_service_names(self,
+                                       headers=None,
+                                       **query_parameters):
+        """Returns list of Allowed Protocols and Server Sequences for
+        Device Admin Policy Set results.
+        'isLocalAuthorization' property is available only for
+        Network Access Policy Set results of type Server
+        Sequence.   (Other CRUD APIs available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -120,7 +123,7 @@ class DeviceAdministrationServiceNames(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/policy/device-admin/service-names')
+        e_url = ('/v1/policy/device-admin/service-names')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -128,4 +131,4 @@ class DeviceAdministrationServiceNames(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ea7e01261355dcfae6412e0615ba1f5_v3_0_0', _api_response)
+        return self._object_factory('bpm_e8018e15b053f39046b5bec0243d3f_v3_0_0', _api_response)

@@ -29,31 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_tacacs_external_servers(json_schema_validate, obj):
+def is_valid_get_tacacs_external_servers_by_name(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8c6c2a4908ee5f48b7e9cae7572f6a94_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_afe1108b1a59539ebe3de3e5652c9653_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_tacacs_external_servers(api):
-    endpoint_result = api.tacacs_external_servers.get_all_tacacs_external_servers(
-        page=0,
-        size=0
+def get_tacacs_external_servers_by_name(api):
+    endpoint_result = api.tacacs_external_servers.get_tacacs_external_servers_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_external_servers
-def test_get_all_tacacs_external_servers(api, validator):
+def test_get_tacacs_external_servers_by_name(api, validator):
     try:
-        assert is_valid_get_all_tacacs_external_servers(
+        assert is_valid_get_tacacs_external_servers_by_name(
             validator,
-            get_all_tacacs_external_servers(api)
+            get_tacacs_external_servers_by_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -61,86 +60,19 @@ def test_get_all_tacacs_external_servers(api, validator):
             raise original_e
 
 
-def get_all_tacacs_external_servers_default(api):
-    endpoint_result = api.tacacs_external_servers.get_all_tacacs_external_servers(
-        page=None,
-        size=None
+def get_tacacs_external_servers_by_name_default(api):
+    endpoint_result = api.tacacs_external_servers.get_tacacs_external_servers_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_external_servers
-def test_get_all_tacacs_external_servers_default(api, validator):
+def test_get_tacacs_external_servers_by_name_default(api, validator):
     try:
-        assert is_valid_get_all_tacacs_external_servers(
+        assert is_valid_get_tacacs_external_servers_by_name(
             validator,
-            get_all_tacacs_external_servers_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_tacacs_external_servers(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b5097e4db7505ba390914b50b1c2046b_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_tacacs_external_servers(api):
-    endpoint_result = api.tacacs_external_servers.create_tacacs_external_servers(
-        active_validation=False,
-        connection_port=0,
-        description='string',
-        host_ip='string',
-        name='string',
-        payload=None,
-        shared_secret='string',
-        single_connect=True,
-        timeout=0
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_external_servers
-def test_create_tacacs_external_servers(api, validator):
-    try:
-        assert is_valid_create_tacacs_external_servers(
-            validator,
-            create_tacacs_external_servers(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_tacacs_external_servers_default(api):
-    endpoint_result = api.tacacs_external_servers.create_tacacs_external_servers(
-        active_validation=False,
-        connection_port=None,
-        description=None,
-        host_ip=None,
-        name=None,
-        payload=None,
-        shared_secret=None,
-        single_connect=None,
-        timeout=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_external_servers
-def test_create_tacacs_external_servers_default(api, validator):
-    try:
-        assert is_valid_create_tacacs_external_servers(
-            validator,
-            create_tacacs_external_servers_default(api)
+            get_tacacs_external_servers_by_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -315,30 +247,31 @@ def test_delete_tacacs_external_servers_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_tacacs_external_servers_by_name(json_schema_validate, obj):
+def is_valid_get_all_tacacs_external_servers(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_afe1108b1a59539ebe3de3e5652c9653_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_8c6c2a4908ee5f48b7e9cae7572f6a94_v3_0_0').validate(obj.response)
     return True
 
 
-def get_tacacs_external_servers_by_name(api):
-    endpoint_result = api.tacacs_external_servers.get_tacacs_external_servers_by_name(
-        name='string'
+def get_all_tacacs_external_servers(api):
+    endpoint_result = api.tacacs_external_servers.get_all_tacacs_external_servers(
+        page=0,
+        size=0
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_external_servers
-def test_get_tacacs_external_servers_by_name(api, validator):
+def test_get_all_tacacs_external_servers(api, validator):
     try:
-        assert is_valid_get_tacacs_external_servers_by_name(
+        assert is_valid_get_all_tacacs_external_servers(
             validator,
-            get_tacacs_external_servers_by_name(api)
+            get_all_tacacs_external_servers(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -346,19 +279,136 @@ def test_get_tacacs_external_servers_by_name(api, validator):
             raise original_e
 
 
-def get_tacacs_external_servers_by_name_default(api):
-    endpoint_result = api.tacacs_external_servers.get_tacacs_external_servers_by_name(
-        name='string'
+def get_all_tacacs_external_servers_default(api):
+    endpoint_result = api.tacacs_external_servers.get_all_tacacs_external_servers(
+        page=None,
+        size=None
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_external_servers
-def test_get_tacacs_external_servers_by_name_default(api, validator):
+def test_get_all_tacacs_external_servers_default(api, validator):
     try:
-        assert is_valid_get_tacacs_external_servers_by_name(
+        assert is_valid_get_all_tacacs_external_servers(
             validator,
-            get_tacacs_external_servers_by_name_default(api)
+            get_all_tacacs_external_servers_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_tacacs_external_servers(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_b5097e4db7505ba390914b50b1c2046b_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_tacacs_external_servers(api):
+    endpoint_result = api.tacacs_external_servers.create_tacacs_external_servers(
+        active_validation=False,
+        connection_port=0,
+        description='string',
+        host_ip='string',
+        name='string',
+        payload=None,
+        shared_secret='string',
+        single_connect=True,
+        timeout=0
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_external_servers
+def test_create_tacacs_external_servers(api, validator):
+    try:
+        assert is_valid_create_tacacs_external_servers(
+            validator,
+            create_tacacs_external_servers(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_tacacs_external_servers_default(api):
+    endpoint_result = api.tacacs_external_servers.create_tacacs_external_servers(
+        active_validation=False,
+        connection_port=None,
+        description=None,
+        host_ip=None,
+        name=None,
+        payload=None,
+        shared_secret=None,
+        single_connect=None,
+        timeout=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_external_servers
+def test_create_tacacs_external_servers_default(api, validator):
+    try:
+        assert is_valid_create_tacacs_external_servers(
+            validator,
+            create_tacacs_external_servers_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_d3e106d187b35547bf1f0463e4fc832f_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.tacacs_external_servers.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_external_servers
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.tacacs_external_servers.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_external_servers
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

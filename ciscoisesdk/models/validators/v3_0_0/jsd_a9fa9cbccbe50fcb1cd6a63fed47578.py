@@ -57,24 +57,14 @@ class JSONSchemaValidatorA9Fa9CbCcbe50FcB1Cd6A63Fed47578(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "additionalData"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "OperationAdditionalData"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

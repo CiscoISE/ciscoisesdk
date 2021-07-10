@@ -47,6 +47,23 @@ class JSONSchemaValidatorFfbc09A97795B8D872A943895C00345(object):
                 "properties": {
                 "ErsAncEndpoint": {
                 "properties": {
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "macAddress": {
                 "type": "string"
                 },

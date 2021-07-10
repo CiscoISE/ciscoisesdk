@@ -47,6 +47,10 @@ class JSONSchemaValidatorEb833980F55025BfacBfcb8De814C8(object):
                 "properties": {
                 "PortalTheme": {
                 "properties": {
+                "description":
+                 {
+                "type": "string"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -54,16 +58,9 @@ class JSONSchemaValidatorEb833980F55025BfacBfcb8De814C8(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "themeData"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "PortalTheme"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

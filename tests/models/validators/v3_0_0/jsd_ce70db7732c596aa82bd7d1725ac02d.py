@@ -47,42 +47,9 @@ class JSONSchemaValidatorCe70Db7732C596AA82BD7D1725Ac02D(object):
                 "properties": {
                 "ERSPortal": {
                 "properties": {
-                "allowSponsorToChangeOwnPassword": {
-                "type": "boolean"
-                },
                 "description":
                  {
                 "type": "string"
-                },
-                "guestUserFieldList": {
-                "items": {
-                "properties": {
-                "customType": {
-                "type": "boolean"
-                },
-                "dataType": {
-                "type": "string"
-                },
-                "dictionaryLabelKey": {
-                "type": "string"
-                },
-                "labelName": {
-                "type": "string"
-                },
-                "required": {
-                "type": "boolean"
-                }
-                },
-                "required": [
-                "labelName",
-                "dataType",
-                "required",
-                "dictionaryLabelKey",
-                "customType"
-                ],
-                "type": "object"
-                },
-                "type": "array"
                 },
                 "id": {
                 "type": "string"
@@ -99,11 +66,6 @@ class JSONSchemaValidatorCe70Db7732C596AA82BD7D1725Ac02D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -116,9 +78,6 @@ class JSONSchemaValidatorCe70Db7732C596AA82BD7D1725Ac02D(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSPortal"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

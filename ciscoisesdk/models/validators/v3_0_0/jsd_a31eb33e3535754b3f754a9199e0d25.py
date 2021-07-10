@@ -47,9 +47,6 @@ class JSONSchemaValidatorA31Eb33E3535754B3F754A9199E0D25(object):
                 "properties": {
                 "GuestSSID": {
                 "properties": {
-                "id": {
-                "type": "string"
-                },
                 "name": {
                 "type": "string"
                 }

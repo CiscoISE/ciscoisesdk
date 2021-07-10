@@ -29,6 +29,166 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_get_portal_theme_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_6e58eabefef15feb880ecfe2906d805f_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_portal_theme_by_id(api):
+    endpoint_result = api.portal_theme.get_portal_theme_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal_theme
+def test_get_portal_theme_by_id(api, validator):
+    try:
+        assert is_valid_get_portal_theme_by_id(
+            validator,
+            get_portal_theme_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_portal_theme_by_id_default(api):
+    endpoint_result = api.portal_theme.get_portal_theme_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal_theme
+def test_get_portal_theme_by_id_default(api, validator):
+    try:
+        assert is_valid_get_portal_theme_by_id(
+            validator,
+            get_portal_theme_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_portal_theme_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c82dcf6f2c3d5d399045050b02208db2_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_portal_theme_by_id(api):
+    endpoint_result = api.portal_theme.update_portal_theme_by_id(
+        active_validation=False,
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        theme_data='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal_theme
+def test_update_portal_theme_by_id(api, validator):
+    try:
+        assert is_valid_update_portal_theme_by_id(
+            validator,
+            update_portal_theme_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_portal_theme_by_id_default(api):
+    endpoint_result = api.portal_theme.update_portal_theme_by_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        name=None,
+        payload=None,
+        theme_data=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal_theme
+def test_update_portal_theme_by_id_default(api, validator):
+    try:
+        assert is_valid_update_portal_theme_by_id(
+            validator,
+            update_portal_theme_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_portal_theme_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_8567c39e537955888cc23e4f90e6449b_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_portal_theme_by_id(api):
+    endpoint_result = api.portal_theme.delete_portal_theme_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal_theme
+def test_delete_portal_theme_by_id(api, validator):
+    try:
+        assert is_valid_delete_portal_theme_by_id(
+            validator,
+            delete_portal_theme_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_portal_theme_by_id_default(api):
+    endpoint_result = api.portal_theme.delete_portal_theme_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal_theme
+def test_delete_portal_theme_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_portal_theme_by_id(
+            validator,
+            delete_portal_theme_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_portal_themes(json_schema_validate, obj):
     if not obj:
         return False
@@ -103,6 +263,7 @@ def is_valid_create_portal_theme(json_schema_validate, obj):
 def create_portal_theme(api):
     endpoint_result = api.portal_theme.create_portal_theme(
         active_validation=False,
+        description='string',
         name='string',
         payload=None,
         theme_data='string'
@@ -126,6 +287,7 @@ def test_create_portal_theme(api, validator):
 def create_portal_theme_default(api):
     endpoint_result = api.portal_theme.create_portal_theme(
         active_validation=False,
+        description=None,
         name=None,
         payload=None,
         theme_data=None
@@ -145,30 +307,30 @@ def test_create_portal_theme_default(api, validator):
             raise original_e
 
 
-def is_valid_get_portal_theme_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6e58eabefef15feb880ecfe2906d805f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b6bf4f02759a5e7f968896a30575e4c6_v3_0_0').validate(obj.response)
     return True
 
 
-def get_portal_theme_by_id(api):
-    endpoint_result = api.portal_theme.get_portal_theme_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.portal_theme.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.portal_theme
-def test_get_portal_theme_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_portal_theme_by_id(
+        assert is_valid_get_version(
             validator,
-            get_portal_theme_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -176,127 +338,19 @@ def test_get_portal_theme_by_id(api, validator):
             raise original_e
 
 
-def get_portal_theme_by_id_default(api):
-    endpoint_result = api.portal_theme.get_portal_theme_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.portal_theme.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.portal_theme
-def test_get_portal_theme_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_portal_theme_by_id(
+        assert is_valid_get_version(
             validator,
-            get_portal_theme_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_portal_theme_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c82dcf6f2c3d5d399045050b02208db2_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_portal_theme_by_id(api):
-    endpoint_result = api.portal_theme.update_portal_theme_by_id(
-        active_validation=False,
-        id='string',
-        name='string',
-        payload=None,
-        theme_data='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.portal_theme
-def test_update_portal_theme_by_id(api, validator):
-    try:
-        assert is_valid_update_portal_theme_by_id(
-            validator,
-            update_portal_theme_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_portal_theme_by_id_default(api):
-    endpoint_result = api.portal_theme.update_portal_theme_by_id(
-        active_validation=False,
-        id='string',
-        name=None,
-        payload=None,
-        theme_data=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.portal_theme
-def test_update_portal_theme_by_id_default(api, validator):
-    try:
-        assert is_valid_update_portal_theme_by_id(
-            validator,
-            update_portal_theme_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_portal_theme_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8567c39e537955888cc23e4f90e6449b_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_portal_theme_by_id(api):
-    endpoint_result = api.portal_theme.delete_portal_theme_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.portal_theme
-def test_delete_portal_theme_by_id(api, validator):
-    try:
-        assert is_valid_delete_portal_theme_by_id(
-            validator,
-            delete_portal_theme_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_portal_theme_by_id_default(api):
-    endpoint_result = api.portal_theme.delete_portal_theme_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.portal_theme
-def test_delete_portal_theme_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_portal_theme_by_id(
-            validator,
-            delete_portal_theme_by_id_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

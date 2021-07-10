@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_device_admin_command_sets(json_schema_validate, obj):
+def is_valid_get_device_admin_command_sets(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_717e68f07767522ba1e49dc474e936d2_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_273e0977618453b1b00e1c2b4cfa1999_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_device_admin_command_sets(api):
-    endpoint_result = api.device_administration_command_set.get_all_device_admin_command_sets(
+def get_device_admin_command_sets(api):
+    endpoint_result = api.device_administration_command_set.get_device_admin_command_sets(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_command_set
-def test_get_all_device_admin_command_sets(api, validator):
+def test_get_device_admin_command_sets(api, validator):
     try:
-        assert is_valid_get_all_device_admin_command_sets(
+        assert is_valid_get_device_admin_command_sets(
             validator,
-            get_all_device_admin_command_sets(api)
+            get_device_admin_command_sets(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_device_admin_command_sets(api, validator):
             raise original_e
 
 
-def get_all_device_admin_command_sets_default(api):
-    endpoint_result = api.device_administration_command_set.get_all_device_admin_command_sets(
+def get_device_admin_command_sets_default(api):
+    endpoint_result = api.device_administration_command_set.get_device_admin_command_sets(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_command_set
-def test_get_all_device_admin_command_sets_default(api, validator):
+def test_get_device_admin_command_sets_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_command_sets(
+        assert is_valid_get_device_admin_command_sets(
             validator,
-            get_all_device_admin_command_sets_default(api)
+            get_device_admin_command_sets_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

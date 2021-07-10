@@ -74,11 +74,12 @@ class DeviceAdministrationIdentityStores(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_identity_stores(self,
-                                             headers=None,
-                                             **query_parameters):
+    def get_device_admin_identity_stores(self,
+                                         headers=None,
+                                         **query_parameters):
         """Device Admin - Return list of identity stores for
-        authentication.
+        authentication.  (Other CRUD APIs available throught
+        ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -120,7 +121,7 @@ class DeviceAdministrationIdentityStores(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/policy/device-admin/identity-stores')
+        e_url = ('/v1/policy/device-admin/identity-stores')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -128,4 +129,4 @@ class DeviceAdministrationIdentityStores(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ce65f2bd375be1ba41a7d6f02ad7b6_v3_0_0', _api_response)
+        return self._object_factory('bpm_ae7d98a7b185837af8d15ae864616e0_v3_0_0', _api_response)

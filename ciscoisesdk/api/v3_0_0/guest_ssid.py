@@ -74,6 +74,252 @@ class GuestSsid(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
+    def get_guest_ssid_by_id(self,
+                             id,
+                             headers=None,
+                             **query_parameters):
+        """This API allows the client to get a guest SSID by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/guestssid/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_d5572c56526151cb8ea42de44b2db52c_v3_0_0', _api_response)
+
+    def update_guest_ssid_by_id(self,
+                                id,
+                                name=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
+        """This API allows the client to update a guest SSID by ID.
+
+        Args:
+            id(string): id, property of the request body.
+            name(string): Resource Name. Name may contain
+                alphanumeric or any of the following
+                characters [_.-], property of the
+                request body.
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+            }
+            _payload = {
+                'GuestSSID': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_e6e4b7d022556a80f1948efb3d5c61_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/guestssid/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_e6e4b7d022556a80f1948efb3d5c61_v3_0_0', _api_response)
+
+    def delete_guest_ssid_by_id(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
+        """This API deletes a guest SSID by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/guestssid/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_df7345f788230a512d6635c25_v3_0_0', _api_response)
+
     def get_all_guest_ssid(self,
                            filter=None,
                            filter_type=None,
@@ -83,7 +329,16 @@ class GuestSsid(object):
                            sortdsc=None,
                            headers=None,
                            **query_parameters):
-        """Get all Guest SSID.
+        """This API allows the client to get all the guest SSIDs.   Filter:
+        [name]   To search guest users by using  toDate
+        column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -147,6 +402,12 @@ class GuestSsid(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -199,7 +460,16 @@ class GuestSsid(object):
                                      sortdsc=None,
                                      headers=None,
                                      **query_parameters):
-        """Get all Guest SSID.
+        """This API allows the client to get all the guest SSIDs.   Filter:
+        [name]   To search guest users by using  toDate
+        column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -267,17 +537,18 @@ class GuestSsid(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_guest_ssid(self,
-                          id=None,
                           name=None,
                           headers=None,
                           payload=None,
                           active_validation=True,
                           **query_parameters):
-        """Create Guest SSID.
+        """This API creates a guest SSID.
 
         Args:
-            id(string): id, property of the request body.
-            name(string): name, property of the request body.
+            name(string): Resource Name. Name may contain
+                alphanumeric or any of the following
+                characters [_.-], property of the
+                request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -309,6 +580,12 @@ class GuestSsid(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -332,8 +609,6 @@ class GuestSsid(object):
             _payload = payload
         else:
             _tmp_payload = {
-                'id':
-                    id,
                 'name':
                     name,
             }
@@ -360,14 +635,13 @@ class GuestSsid(object):
 
         return self._object_factory('bpm_a31eb33e3535754b3f754a9199e0d25_v3_0_0', _api_response)
 
-    def get_guest_ssid_by_id(self,
-                             id,
-                             headers=None,
-                             **query_parameters):
-        """Get Guest SSID by Id.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the guest SSID.
 
         Args:
-            id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -401,8 +675,6 @@ class GuestSsid(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -410,10 +682,9 @@ class GuestSsid(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/guestssid/{id}')
+        e_url = ('/ers/config/guestssid/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -421,166 +692,4 @@ class GuestSsid(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d5572c56526151cb8ea42de44b2db52c_v3_0_0', _api_response)
-
-    def update_guest_ssid_by_id(self,
-                                id,
-                                name=None,
-                                headers=None,
-                                payload=None,
-                                active_validation=True,
-                                **query_parameters):
-        """Update Guest SSID.
-
-        Args:
-            id(string): id, property of the request body.
-            name(string): name, property of the request body.
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'id':
-                    id,
-                'name':
-                    name,
-            }
-            _payload = {
-                'GuestSSID': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e6e4b7d022556a80f1948efb3d5c61_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/guestssid/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_e6e4b7d022556a80f1948efb3d5c61_v3_0_0', _api_response)
-
-    def delete_guest_ssid_by_id(self,
-                                id,
-                                headers=None,
-                                **query_parameters):
-        """Delete Guest SSID.
-
-        Args:
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-
-        e_url = ('/ers/config/guestssid/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
-        else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_df7345f788230a512d6635c25_v3_0_0', _api_response)
+        return self._object_factory('bpm_b400ebaa2d1f51398d3b32e7a6e4ba35_v3_0_0', _api_response)

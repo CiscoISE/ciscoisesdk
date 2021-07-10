@@ -89,30 +89,30 @@ def test_get_all_sms_provider_default(api, validator):
             raise original_e
 
 
-def is_valid_get_sms_provider_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f82fa2c8f63c5b638aa0e598d7b015c1_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_37250017e20e5400a53280d52487ecd6_v3_0_0').validate(obj.response)
     return True
 
 
-def get_sms_provider_by_id(api):
-    endpoint_result = api.sms_provider.get_sms_provider_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.sms_provider.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.sms_provider
-def test_get_sms_provider_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_sms_provider_by_id(
+        assert is_valid_get_version(
             validator,
-            get_sms_provider_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -120,19 +120,19 @@ def test_get_sms_provider_by_id(api, validator):
             raise original_e
 
 
-def get_sms_provider_by_id_default(api):
-    endpoint_result = api.sms_provider.get_sms_provider_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.sms_provider.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.sms_provider
-def test_get_sms_provider_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_sms_provider_by_id(
+        assert is_valid_get_version(
             validator,
-            get_sms_provider_by_id_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

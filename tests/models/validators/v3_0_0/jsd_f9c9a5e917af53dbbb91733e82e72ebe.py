@@ -51,6 +51,14 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "properties": {
                 "globalCustomizations": {
                 "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "bannerImage": {
                 "properties": {
                 "data": {
@@ -155,7 +163,24 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
+                "type": "string"
+                },
+                "portalTestUrl": {
                 "type": "string"
                 },
                 "portalType": {
@@ -168,10 +193,13 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "displayFrequency": {
                 "type": "string"
                 },
+                "displayFrequencyIntervalDays": {
+                "type": "integer"
+                },
                 "includeAup": {
                 "type": "boolean"
                 },
-                "requireAccessCode": {
+                "requireAupScrolling": {
                 "type": "boolean"
                 },
                 "requireScrolling": {
@@ -193,6 +221,59 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 },
                 "successRedirect": {
                 "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "byodSettings": {
+                "properties": {
+                "byodRegistrationSettings": {
+                "properties": {
+                "endPointIdentityGroupId": {
+                "type": "string"
+                },
+                "showDeviceID": {
+                "type": "boolean"
+                }
+                },
+                "type": "object"
+                },
+                "byodRegistrationSuccessSettings": {
+                "properties": {
+                "redirectUrl": {
+                "type": "string"
+                },
+                "successRedirect": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "byodWelcomeSettings": {
+                "properties": {
+                "aupDisplay": {
+                "type": "string"
+                },
+                "enableBYOD": {
+                "type": "boolean"
+                },
+                "enableGuestAccess": {
+                "type": "boolean"
+                },
+                "includeAup": {
+                "type": "boolean"
+                },
+                "requireAupAcceptance": {
+                "type": "boolean"
+                },
+                "requireMDM": {
+                "type": "boolean"
+                },
+                "requireScrolling": {
+                "type": "boolean"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"
@@ -224,6 +305,9 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "allowAlternateGuestPortal": {
                 "type": "boolean"
                 },
+                "allowForgotPassword": {
+                "type": "boolean"
+                },
                 "allowGuestToChangePassword": {
                 "type": "boolean"
                 },
@@ -235,6 +319,9 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 },
                 "allowShowGuestForm": {
                 "type": "boolean"
+                },
+                "alternateGuestPortal": {
+                "type": "string"
                 },
                 "aupDisplay": {
                 "type": "string"
@@ -251,11 +338,18 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "requireAupAcceptance": {
                 "type": "boolean"
                 },
-                "requireAupScrolling": {
-                "type": "boolean"
-                },
                 "socialConfigs": {
-                "items": {},
+                "items": {
+                "properties": {
+                "socialMediaType": {
+                "type": "string"
+                },
+                "socialMediaValue": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "type": "array"
                 },
                 "timeBetweenLoginsDuringRateLimit": {
@@ -267,10 +361,7 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "portalSettings": {
                 "properties": {
                 "allowedInterfaces": {
-                "items": {
                 "type": "string"
-                },
-                "type": "array"
                 },
                 "alwaysUsedLanguage": {
                 "type": "string"
@@ -281,17 +372,10 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "authenticationMethod": {
                 "type": "string"
                 },
-                "availableSsids": {
-                "items": {},
-                "type": "array"
-                },
                 "certificateGroupTag": {
                 "type": "string"
                 },
                 "displayLang": {
-                "type": "string"
-                },
-                "endpointIdentityGroup": {
                 "type": "string"
                 },
                 "fallbackLanguage": {
@@ -299,6 +383,14 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 },
                 "httpsPort": {
                 "type": "integer"
+                }
+                },
+                "type": "object"
+                },
+                "postAccessBannerSettings": {
+                "properties": {
+                "includePostAccessBanner": {
+                "type": "boolean"
                 }
                 },
                 "type": "object"
@@ -319,8 +411,17 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "accountValidityTimeUnits": {
                 "type": "string"
                 },
+                "allowGraceAccess": {
+                "type": "boolean"
+                },
+                "approvalEmailAddresses": {
+                "type": "string"
+                },
                 "approveDenyLinksTimeUnits": {
                 "type": "string"
+                },
+                "approveDenyLinksValidFor": {
+                "type": "integer"
                 },
                 "assignGuestsToGuestType": {
                 "type": "string"
@@ -329,7 +430,13 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "type": "string"
                 },
                 "authenticateSponsorsUsingPortalList": {
+                "type": "string"
+                },
+                "autoLoginSelfWait": {
                 "type": "boolean"
+                },
+                "autoLoginTimePeriod": {
+                "type": "integer"
                 },
                 "credentialNotificationUsingEmail": {
                 "type": "boolean"
@@ -398,6 +505,17 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 },
                 "type": "object"
                 },
+                "fieldPersonBeingVisited": {
+                "properties": {
+                "include": {
+                "type": "boolean"
+                },
+                "require": {
+                "type": "boolean"
+                }
+                },
+                "type": "object"
+                },
                 "fieldPhoneNo": {
                 "properties": {
                 "include": {
@@ -442,26 +560,37 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 },
                 "type": "object"
                 },
-                "guestEmailBlacklistDomains": {
-                "items": {
-                "type": "string"
+                "graceAccessExpireInterval": {
+                "type": "integer"
                 },
-                "type": "array"
+                "graceAccessSendAccountExpiration": {
+                "type": "boolean"
+                },
+                "guestEmailBlacklistDomains": {
+                "type": "string"
                 },
                 "guestEmailWhitelistDomains": {
-                "items": {
                 "type": "string"
-                },
-                "type": "array"
                 },
                 "includeAup": {
                 "type": "boolean"
                 },
                 "postRegistrationRedirect": {
+                "enum": [
+                "SELFREGISTRATIONSUCCESS",
+                "LOGINPAGEWITHINSTRUCTIONS",
+                "URL"
+                ],
+                "type": "string"
+                },
+                "postRegistrationRedirectUrl": {
                 "type": "string"
                 },
                 "registrationCode": {
                 "type": "string"
+                },
+                "requireApproverToAuthenticate": {
+                "type": "boolean"
                 },
                 "requireAupAcceptance": {
                 "type": "boolean"
@@ -558,6 +687,9 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 },
                 "supportInfoSettings": {
                 "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
                 "emptyFieldDisplay": {
                 "type": "string"
                 },
@@ -586,16 +718,9 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "name",
-                "portalType"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SelfRegPortal"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

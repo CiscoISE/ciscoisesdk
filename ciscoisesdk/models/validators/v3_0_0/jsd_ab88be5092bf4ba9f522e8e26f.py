@@ -50,14 +50,6 @@ class JSONSchemaValidatorAb88Be5092Bf4BA9F522E8E26F(object):
                 "customAttributes": {
                 "properties": {
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 }
                 },
@@ -70,9 +62,6 @@ class JSONSchemaValidatorAb88Be5092Bf4BA9F522E8E26F(object):
                 "groupId": {
                 "type": "string"
                 },
-                "id": {
-                "type": "string"
-                },
                 "identityStore": {
                 "type": "string"
                 },
@@ -81,50 +70,6 @@ class JSONSchemaValidatorAb88Be5092Bf4BA9F522E8E26F(object):
                 },
                 "mac": {
                 "type": "string"
-                },
-                "mdmAttributes": {
-                "properties": {
-                "mdmComplianceStatus": {
-                "type": "boolean"
-                },
-                "mdmEncrypted": {
-                "type": "boolean"
-                },
-                "mdmEnrolled": {
-                "type": "boolean"
-                },
-                "mdmIMEI": {
-                "type": "string"
-                },
-                "mdmJailBroken": {
-                "type": "boolean"
-                },
-                "mdmManufacturer": {
-                "type": "string"
-                },
-                "mdmModel": {
-                "type": "string"
-                },
-                "mdmOS": {
-                "type": "string"
-                },
-                "mdmPhoneNumber": {
-                "type": "string"
-                },
-                "mdmPinlock": {
-                "type": "boolean"
-                },
-                "mdmReachable": {
-                "type": "boolean"
-                },
-                "mdmSerial": {
-                "type": "string"
-                },
-                "mdmServerName": {
-                "type": "string"
-                }
-                },
-                "type": "object"
                 },
                 "name": {
                 "type": "string"

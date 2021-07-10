@@ -74,6 +74,262 @@ class HotspotPortal(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
+    def get_hotspot_portal_by_id(self,
+                                 id,
+                                 headers=None,
+                                 **query_parameters):
+        """This API allows the client to get a hotspot portal by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/hotspotportal/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_cbcecf65a0155fcad602d3ac16531a7_v3_0_0', _api_response)
+
+    def update_hotspot_portal_by_id(self,
+                                    id,
+                                    customizations=None,
+                                    description=None,
+                                    name=None,
+                                    portal_test_url=None,
+                                    portal_type=None,
+                                    settings=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
+        """This API allows the client to update a hotspot portal by ID.
+
+        Args:
+            customizations(object): Defines all of the Portal
+                Customizations available, property of
+                the request body.
+            description(string): description, property of the
+                request body.
+            id(string): id, property of the request body.
+            name(string): name, property of the request body.
+            portal_test_url(string): URL to bring up a test page for
+                this portal, property of the request
+                body.
+            portal_type(string): Allowed values: - BYOD, -
+                HOTSPOTGUEST, - MYDEVICE, -
+                SELFREGGUEST, - SPONSOR, -
+                SPONSOREDGUEST, property of the request
+                body.
+            settings(object): Defines all of the settings groups
+                available for a BYOD, property of the
+                request body.
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'portalType':
+                    portal_type,
+                'portalTestUrl':
+                    portal_test_url,
+                'settings':
+                    settings,
+                'customizations':
+                    customizations,
+            }
+            _payload = {
+                'HotspotPortal': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_ae4af25df565334b20a24c4878b68e4_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/hotspotportal/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_ae4af25df565334b20a24c4878b68e4_v3_0_0', _api_response)
+
+    def delete_hotspot_portal_by_id(self,
+                                    id,
+                                    headers=None,
+                                    **query_parameters):
+        """This API deletes a hotspot portal by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/hotspotportal/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_a344d1c6f535789b7badbaa502e8d3b_v3_0_0', _api_response)
+
     def get_all_hotspot_portal(self,
                                filter=None,
                                filter_type=None,
@@ -83,7 +339,16 @@ class HotspotPortal(object):
                                sortdsc=None,
                                headers=None,
                                **query_parameters):
-        """Get all Hotspot Portal.
+        """This API allows the client to get all the hotspot portals.
+        Filter:   [name]   To search guest users by using
+        toDate  column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -147,6 +412,12 @@ class HotspotPortal(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -199,7 +470,16 @@ class HotspotPortal(object):
                                          sortdsc=None,
                                          headers=None,
                                          **query_parameters):
-        """Get all Hotspot Portal.
+        """This API allows the client to get all the hotspot portals.
+        Filter:   [name]   To search guest users by using
+        toDate  column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -270,24 +550,33 @@ class HotspotPortal(object):
                               customizations=None,
                               description=None,
                               name=None,
+                              portal_test_url=None,
                               portal_type=None,
                               settings=None,
                               headers=None,
                               payload=None,
                               active_validation=True,
                               **query_parameters):
-        """Create Hotspot Portal.
+        """This API creates a hotspot portal.
 
         Args:
-            customizations(object): customizations, property of the
-                request body.
+            customizations(object): Defines all of the Portal
+                Customizations available, property of
+                the request body.
             description(string): description, property of the
                 request body.
             name(string): name, property of the request body.
-            portal_type(string): portalType, property of the request
+            portal_test_url(string): URL to bring up a test page for
+                this portal, property of the request
                 body.
-            settings(object): settings, property of the request
+            portal_type(string): Allowed values: - BYOD, -
+                HOTSPOTGUEST, - MYDEVICE, -
+                SELFREGGUEST, - SPONSOR, -
+                SPONSOREDGUEST, property of the request
                 body.
+            settings(object): Defines all of the settings groups
+                available for a BYOD, property of the
+                request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -313,9 +602,18 @@ class HotspotPortal(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -345,6 +643,8 @@ class HotspotPortal(object):
                     description,
                 'portalType':
                     portal_type,
+                'portalTestUrl':
+                    portal_test_url,
                 'settings':
                     settings,
                 'customizations':
@@ -373,14 +673,13 @@ class HotspotPortal(object):
 
         return self._object_factory('bpm_df78c9a3f72584dbd1c7b667b0e312f_v3_0_0', _api_response)
 
-    def get_hotspot_portal_by_id(self,
-                                 id,
-                                 headers=None,
-                                 **query_parameters):
-        """Get Hotspot Portal by Id.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the hotspot portal.
 
         Args:
-            id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -414,8 +713,6 @@ class HotspotPortal(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -423,10 +720,9 @@ class HotspotPortal(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/hotspotportal/{id}')
+        e_url = ('/ers/config/hotspotportal/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -434,173 +730,4 @@ class HotspotPortal(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_cbcecf65a0155fcad602d3ac16531a7_v3_0_0', _api_response)
-
-    def update_hotspot_portal_by_id(self,
-                                    id,
-                                    description=None,
-                                    name=None,
-                                    settings=None,
-                                    headers=None,
-                                    payload=None,
-                                    active_validation=True,
-                                    **query_parameters):
-        """Update Hotspot Portal by Id.
-
-        Args:
-            description(string): description, property of the
-                request body.
-            id(string): id, property of the request body.
-            name(string): name, property of the request body.
-            settings(object): settings, property of the request
-                body.
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'id':
-                    id,
-                'name':
-                    name,
-                'description':
-                    description,
-                'settings':
-                    settings,
-            }
-            _payload = {
-                'HotspotPortal': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ae4af25df565334b20a24c4878b68e4_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/hotspotportal/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_ae4af25df565334b20a24c4878b68e4_v3_0_0', _api_response)
-
-    def delete_hotspot_portal_by_id(self,
-                                    id,
-                                    headers=None,
-                                    **query_parameters):
-        """Delete Hotspot Portal by Id.
-
-        Args:
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-
-        e_url = ('/ers/config/hotspotportal/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
-        else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_a344d1c6f535789b7badbaa502e8d3b_v3_0_0', _api_response)
+        return self._object_factory('bpm_d81be4f5a0486cc085499c19b1c_v3_0_0', _api_response)

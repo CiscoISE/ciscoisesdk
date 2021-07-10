@@ -51,6 +51,14 @@ class JSONSchemaValidatorEffdf30A3E3A5781Ba1F5Cf833395359(object):
                 "properties": {
                 "globalCustomizations": {
                 "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "bannerImage": {
                 "properties": {
                 "data": {
@@ -155,7 +163,24 @@ class JSONSchemaValidatorEffdf30A3E3A5781Ba1F5Cf833395359(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
+                "type": "string"
+                },
+                "portalTestUrl": {
                 "type": "string"
                 },
                 "portalType": {
@@ -227,14 +252,13 @@ class JSONSchemaValidatorEffdf30A3E3A5781Ba1F5Cf833395359(object):
                 "alwaysUsedLanguage": {
                 "type": "string"
                 },
-                "availableSsids": {
-                "items": {},
-                "type": "array"
-                },
                 "certificateGroupTag": {
                 "type": "string"
                 },
                 "displayLang": {
+                "type": "string"
+                },
+                "endpointIdentityGroup": {
                 "type": "string"
                 },
                 "fallbackLanguage": {
@@ -248,6 +272,9 @@ class JSONSchemaValidatorEffdf30A3E3A5781Ba1F5Cf833395359(object):
                 },
                 "supportInfoSettings": {
                 "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
                 "emptyFieldDisplay": {
                 "type": "string"
                 },

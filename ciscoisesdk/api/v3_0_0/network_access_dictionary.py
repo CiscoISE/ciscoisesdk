@@ -74,16 +74,72 @@ class NetworkAccessDictionary(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def create_network_access_dictionaries(self,
-                                           description=None,
-                                           dictionary_attr_type=None,
-                                           id=None,
-                                           name=None,
-                                           version=None,
-                                           headers=None,
-                                           payload=None,
-                                           active_validation=True,
-                                           **query_parameters):
+    def get_network_access_dictionaries(self,
+                                        headers=None,
+                                        **query_parameters):
+        """Get all Dictionaries.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/v1/policy/network-access/dictionaries')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_eb2cef3895d5bc68b7a28eca42ef630_v3_0_0', _api_response)
+
+    def post_network_access_dictionaries(self,
+                                         description=None,
+                                         dictionary_attr_type=None,
+                                         id=None,
+                                         link=None,
+                                         name=None,
+                                         version=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """Network Access - Create a new Dictionary.
 
         Args:
@@ -95,6 +151,7 @@ class NetworkAccessDictionary(object):
                 'MSG_ATTR' and 'PIP_ATTR'.
             id(string): Identifier for the dictionary, property of
                 the request body.
+            link(object): link, property of the request body.
             name(string): The dictionary name, property of the
                 request body.
             version(string): The dictionary version, property of the
@@ -150,24 +207,26 @@ class NetworkAccessDictionary(object):
             _payload = payload
         else:
             _payload = {
-                'id':
-                    id,
-                'name':
-                    name,
                 'description':
                     description,
-                'version':
-                    version,
                 'dictionaryAttrType':
                     dictionary_attr_type,
+                'id':
+                    id,
+                'link':
+                    link,
+                'name':
+                    name,
+                'version':
+                    version,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_a57687cef65891a6f48dd17f456c4e_v3_0_0')\
+            self._request_validator('jsd_be755dae5251bd2d8348eeebfdde_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/network-access/dictionaries')
+        e_url = ('/v1/policy/network-access/dictionaries')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -179,12 +238,12 @@ class NetworkAccessDictionary(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_a57687cef65891a6f48dd17f456c4e_v3_0_0', _api_response)
+        return self._object_factory('bpm_be755dae5251bd2d8348eeebfdde_v3_0_0', _api_response)
 
-    def get_network_access_dictionary_by_name(self,
-                                              name,
-                                              headers=None,
-                                              **query_parameters):
+    def get_network_access_dictionary(self,
+                                      name,
+                                      headers=None,
+                                      **query_parameters):
         """GET a dictionary by name.
 
         Args:
@@ -211,6 +270,12 @@ class NetworkAccessDictionary(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
                            basestring)
@@ -232,7 +297,7 @@ class NetworkAccessDictionary(object):
             'name': name,
         }
 
-        e_url = ('/api/v1/policy/network-access/dictionaries/{name}')
+        e_url = ('/v1/policy/network-access/dictionaries/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -240,18 +305,19 @@ class NetworkAccessDictionary(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f1fd8e2bd1581aabf7cd87bff65137_v3_0_0', _api_response)
+        return self._object_factory('bpm_e60234354578568697b6740d08170678_v3_0_0', _api_response)
 
-    def update_network_access_dictionaries_by_name(self,
-                                                   name,
-                                                   description=None,
-                                                   dictionary_attr_type=None,
-                                                   id=None,
-                                                   version=None,
-                                                   headers=None,
-                                                   payload=None,
-                                                   active_validation=True,
-                                                   **query_parameters):
+    def put_network_access_dictionaries_by_name(self,
+                                                name,
+                                                description=None,
+                                                dictionary_attr_type=None,
+                                                id=None,
+                                                link=None,
+                                                version=None,
+                                                headers=None,
+                                                payload=None,
+                                                active_validation=True,
+                                                **query_parameters):
         """Network Access - Update a Dictionary.
 
         Args:
@@ -263,6 +329,7 @@ class NetworkAccessDictionary(object):
                 'MSG_ATTR' and 'PIP_ATTR'.
             id(string): Identifier for the dictionary, property of
                 the request body.
+            link(object): link, property of the request body.
             name(string): The dictionary name, property of the
                 request body.
             version(string): The dictionary version, property of the
@@ -294,6 +361,12 @@ class NetworkAccessDictionary(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
                            basestring)
@@ -323,24 +396,26 @@ class NetworkAccessDictionary(object):
             _payload = payload
         else:
             _payload = {
-                'id':
-                    id,
-                'name':
-                    name,
                 'description':
                     description,
-                'version':
-                    version,
                 'dictionaryAttrType':
                     dictionary_attr_type,
+                'id':
+                    id,
+                'link':
+                    link,
+                'name':
+                    name,
+                'version':
+                    version,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_a4cccea3c9567498f6f688e0cf86e7_v3_0_0')\
+            self._request_validator('jsd_e4f1e31aca1558f782a2cdb43853aaf2_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/policy/network-access/dictionaries/{name}')
+        e_url = ('/v1/policy/network-access/dictionaries/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -353,7 +428,7 @@ class NetworkAccessDictionary(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_a4cccea3c9567498f6f688e0cf86e7_v3_0_0', _api_response)
+        return self._object_factory('bpm_e4f1e31aca1558f782a2cdb43853aaf2_v3_0_0', _api_response)
 
     def delete_network_access_dictionaries_by_name(self,
                                                    name,
@@ -385,6 +460,12 @@ class NetworkAccessDictionary(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
                            basestring)
@@ -406,7 +487,7 @@ class NetworkAccessDictionary(object):
             'name': name,
         }
 
-        e_url = ('/api/v1/policy/network-access/dictionaries/{name}')
+        e_url = ('/v1/policy/network-access/dictionaries/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -414,4 +495,4 @@ class NetworkAccessDictionary(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dfae2409eecc551298e9fa31d14f43d0_v3_0_0', _api_response)
+        return self._object_factory('bpm_b80087f14af51d186a7bfa89f5a494b_v3_0_0', _api_response)

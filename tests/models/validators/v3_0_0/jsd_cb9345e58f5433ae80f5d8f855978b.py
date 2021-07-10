@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getIdentityStoreSequenceById data model.
+"""Identity Services Engine getIdentitySequenceById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,15 +38,21 @@ from builtins import *
 
 
 class JSONSchemaValidatorCb9345E58F5433Ae80F5D8F855978B(object):
-    """getIdentityStoreSequenceById request schema definition."""
+    """getIdentitySequenceById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCb9345E58F5433Ae80F5D8F855978B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "IdentityGroup": {
+                "IdStoreSequence": {
                 "properties": {
+                "breakOnStoreFail": {
+                "type": "boolean"
+                },
+                "certificateAuthenticationProfile": {
+                "type": "string"
+                },
                 "description":
                  {
                 "type": "string"
@@ -54,10 +60,35 @@ class JSONSchemaValidatorCb9345E58F5433Ae80F5D8F855978B(object):
                 "id": {
                 "type": "string"
                 },
-                "name": {
+                "idSeqItem": {
+                "items": {
+                "properties": {
+                "idstore": {
                 "type": "string"
                 },
-                "parent": {
+                "order": {
+                "type": "integer"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "name": {
                 "type": "string"
                 }
                 },

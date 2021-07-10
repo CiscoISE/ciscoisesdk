@@ -29,6 +29,328 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_get_rest_id_store_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_17a5f22fc961547f93976a53949cac73_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_rest_id_store_by_name(api):
+    endpoint_result = api.restid_store.get_rest_id_store_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_get_rest_id_store_by_name(api, validator):
+    try:
+        assert is_valid_get_rest_id_store_by_name(
+            validator,
+            get_rest_id_store_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_rest_id_store_by_name_default(api):
+    endpoint_result = api.restid_store.get_rest_id_store_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_get_rest_id_store_by_name_default(api, validator):
+    try:
+        assert is_valid_get_rest_id_store_by_name(
+            validator,
+            get_rest_id_store_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_rest_id_store_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c85464a04f0e5ddc99f8e6b8ed0f7eac_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_rest_id_store_by_name(api):
+    endpoint_result = api.restid_store.update_rest_id_store_by_name(
+        active_validation=False,
+        description='string',
+        ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]},
+        id='string',
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_update_rest_id_store_by_name(api, validator):
+    try:
+        assert is_valid_update_rest_id_store_by_name(
+            validator,
+            update_rest_id_store_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_rest_id_store_by_name_default(api):
+    endpoint_result = api.restid_store.update_rest_id_store_by_name(
+        active_validation=False,
+        name='string',
+        description=None,
+        ers_rest_idstore_attributes=None,
+        id=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_update_rest_id_store_by_name_default(api, validator):
+    try:
+        assert is_valid_update_rest_id_store_by_name(
+            validator,
+            update_rest_id_store_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_rest_id_store_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_e068a8dc1ed65f8d9cdfa70a49f543e0_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_rest_id_store_by_name(api):
+    endpoint_result = api.restid_store.delete_rest_id_store_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_delete_rest_id_store_by_name(api, validator):
+    try:
+        assert is_valid_delete_rest_id_store_by_name(
+            validator,
+            delete_rest_id_store_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_rest_id_store_by_name_default(api):
+    endpoint_result = api.restid_store.delete_rest_id_store_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_delete_rest_id_store_by_name_default(api, validator):
+    try:
+        assert is_valid_delete_rest_id_store_by_name(
+            validator,
+            delete_rest_id_store_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_rest_id_store_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_788cba3f7ace597da668acfbe00364be_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_rest_id_store_by_id(api):
+    endpoint_result = api.restid_store.get_rest_id_store_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_get_rest_id_store_by_id(api, validator):
+    try:
+        assert is_valid_get_rest_id_store_by_id(
+            validator,
+            get_rest_id_store_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_rest_id_store_by_id_default(api):
+    endpoint_result = api.restid_store.get_rest_id_store_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_get_rest_id_store_by_id_default(api, validator):
+    try:
+        assert is_valid_get_rest_id_store_by_id(
+            validator,
+            get_rest_id_store_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_rest_id_store_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_ded7f8573c255c318bb1f04bfdbf01e1_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_rest_id_store_by_id(api):
+    endpoint_result = api.restid_store.update_rest_id_store_by_id(
+        active_validation=False,
+        description='string',
+        ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]},
+        id='string',
+        link={'rel': 'string', 'href': 'string', 'type': 'string'},
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_update_rest_id_store_by_id(api, validator):
+    try:
+        assert is_valid_update_rest_id_store_by_id(
+            validator,
+            update_rest_id_store_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_rest_id_store_by_id_default(api):
+    endpoint_result = api.restid_store.update_rest_id_store_by_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        ers_rest_idstore_attributes=None,
+        link=None,
+        name=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_update_rest_id_store_by_id_default(api, validator):
+    try:
+        assert is_valid_update_rest_id_store_by_id(
+            validator,
+            update_rest_id_store_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_rest_id_store_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_2e77a1dd4aa75dcebbc3ee4e94a162b4_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_rest_id_store_by_id(api):
+    endpoint_result = api.restid_store.delete_rest_id_store_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_delete_rest_id_store_by_id(api, validator):
+    try:
+        assert is_valid_delete_rest_id_store_by_id(
+            validator,
+            delete_rest_id_store_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_rest_id_store_by_id_default(api):
+    endpoint_result = api.restid_store.delete_rest_id_store_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_delete_rest_id_store_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_rest_id_store_by_id(
+            validator,
+            delete_rest_id_store_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_rest_id_store(json_schema_validate, obj):
     if not obj:
         return False
@@ -105,6 +427,8 @@ def create_rest_id_store(api):
         active_validation=False,
         description='string',
         ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]},
+        id='string',
+        link={'rel': 'string', 'href': 'string', 'type': 'string'},
         name='string',
         payload=None
     )
@@ -129,6 +453,8 @@ def create_rest_id_store_default(api):
         active_validation=False,
         description=None,
         ers_rest_idstore_attributes=None,
+        id=None,
+        link=None,
         name=None,
         payload=None
     )
@@ -147,30 +473,30 @@ def test_create_rest_id_store_default(api, validator):
             raise original_e
 
 
-def is_valid_get_rest_id_store_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_788cba3f7ace597da668acfbe00364be_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1b8c3846fcf751e4b008eb0a011dea4d_v3_0_0').validate(obj.response)
     return True
 
 
-def get_rest_id_store_by_id(api):
-    endpoint_result = api.restid_store.get_rest_id_store_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.restid_store.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.restid_store
-def test_get_rest_id_store_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_rest_id_store_by_id(
+        assert is_valid_get_version(
             validator,
-            get_rest_id_store_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -178,287 +504,19 @@ def test_get_rest_id_store_by_id(api, validator):
             raise original_e
 
 
-def get_rest_id_store_by_id_default(api):
-    endpoint_result = api.restid_store.get_rest_id_store_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.restid_store.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.restid_store
-def test_get_rest_id_store_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_rest_id_store_by_id(
+        assert is_valid_get_version(
             validator,
-            get_rest_id_store_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_rest_id_store_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ded7f8573c255c318bb1f04bfdbf01e1_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_rest_id_store_by_id(api):
-    endpoint_result = api.restid_store.update_rest_id_store_by_id(
-        active_validation=False,
-        description='string',
-        ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]},
-        id='string',
-        name='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_update_rest_id_store_by_id(api, validator):
-    try:
-        assert is_valid_update_rest_id_store_by_id(
-            validator,
-            update_rest_id_store_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_rest_id_store_by_id_default(api):
-    endpoint_result = api.restid_store.update_rest_id_store_by_id(
-        active_validation=False,
-        id='string',
-        description=None,
-        ers_rest_idstore_attributes=None,
-        name=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_update_rest_id_store_by_id_default(api, validator):
-    try:
-        assert is_valid_update_rest_id_store_by_id(
-            validator,
-            update_rest_id_store_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_rest_id_store_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2e77a1dd4aa75dcebbc3ee4e94a162b4_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_rest_id_store_by_id(api):
-    endpoint_result = api.restid_store.delete_rest_id_store_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_delete_rest_id_store_by_id(api, validator):
-    try:
-        assert is_valid_delete_rest_id_store_by_id(
-            validator,
-            delete_rest_id_store_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_rest_id_store_by_id_default(api):
-    endpoint_result = api.restid_store.delete_rest_id_store_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_delete_rest_id_store_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_rest_id_store_by_id(
-            validator,
-            delete_rest_id_store_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_rest_id_store_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_48c47e28f13659658b3e6af9409a1177_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_rest_id_store_by_name(api):
-    endpoint_result = api.restid_store.get_rest_id_store_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_get_rest_id_store_by_name(api, validator):
-    try:
-        assert is_valid_get_rest_id_store_by_name(
-            validator,
-            get_rest_id_store_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_rest_id_store_by_name_default(api):
-    endpoint_result = api.restid_store.get_rest_id_store_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_get_rest_id_store_by_name_default(api, validator):
-    try:
-        assert is_valid_get_rest_id_store_by_name(
-            validator,
-            get_rest_id_store_by_name_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_rest_id_store_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d0e432f52e2a5863858c7dc0c3eda277_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_rest_id_store_by_name(api):
-    endpoint_result = api.restid_store.update_rest_id_store_by_name(
-        active_validation=False,
-        description='string',
-        ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]},
-        name='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_update_rest_id_store_by_name(api, validator):
-    try:
-        assert is_valid_update_rest_id_store_by_name(
-            validator,
-            update_rest_id_store_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_rest_id_store_by_name_default(api):
-    endpoint_result = api.restid_store.update_rest_id_store_by_name(
-        active_validation=False,
-        name='string',
-        description=None,
-        ers_rest_idstore_attributes=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_update_rest_id_store_by_name_default(api, validator):
-    try:
-        assert is_valid_update_rest_id_store_by_name(
-            validator,
-            update_rest_id_store_by_name_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_rest_id_store_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_fe53fb8359725e40ac431d41e1487626_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_rest_id_store_by_name(api):
-    endpoint_result = api.restid_store.delete_rest_id_store_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_delete_rest_id_store_by_name(api, validator):
-    try:
-        assert is_valid_delete_rest_id_store_by_name(
-            validator,
-            delete_rest_id_store_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_rest_id_store_by_name_default(api):
-    endpoint_result = api.restid_store.delete_rest_id_store_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.restid_store
-def test_delete_rest_id_store_by_name_default(api, validator):
-    try:
-        assert is_valid_delete_rest_id_store_by_name(
-            validator,
-            delete_rest_id_store_by_name_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -63,10 +63,6 @@ class JSONSchemaValidatorCba3F7Ace597DA668Acfbe00364Be(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "key",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -81,28 +77,15 @@ class JSONSchemaValidatorCba3F7Ace597DA668Acfbe00364Be(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "usernameSuffix",
-                "rootUrl",
-                "predefined",
-                "headers"
-                ],
                 "type": "object"
                 },
                 "name": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "ersRestIDStoreAttributes"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSRestIDStore"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

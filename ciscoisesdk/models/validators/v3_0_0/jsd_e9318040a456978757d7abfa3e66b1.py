@@ -73,6 +73,7 @@ class JSONSchemaValidatorE9318040A456978757D7Abfa3E66B1(object):
                 "type": "object"
                 },
                 "adScopesNames": {
+                "default": "Default_Scope",
                 "type": "string"
                 },
                 "adgroups": {
@@ -90,6 +91,10 @@ class JSONSchemaValidatorE9318040A456978757D7Abfa3E66B1(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "name",
+                "sid"
+                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -101,6 +106,9 @@ class JSONSchemaValidatorE9318040A456978757D7Abfa3E66B1(object):
                 "properties": {
                 "agingTime": {
                 "type": "integer"
+                },
+                "authProtectionType": {
+                "type": "string"
                 },
                 "country": {
                 "type": "string"
@@ -117,6 +125,9 @@ class JSONSchemaValidatorE9318040A456978757D7Abfa3E66B1(object):
                 "enableDialinPermissionCheck": {
                 "type": "boolean"
                 },
+                "enableFailedAuthProtection": {
+                "type": "boolean"
+                },
                 "enableMachineAccess": {
                 "type": "boolean"
                 },
@@ -128,6 +139,9 @@ class JSONSchemaValidatorE9318040A456978757D7Abfa3E66B1(object):
                 },
                 "enableRewrites": {
                 "type": "boolean"
+                },
+                "failedAuthThreshold": {
+                "type": "integer"
                 },
                 "firstName": {
                 "type": "string"
@@ -163,6 +177,11 @@ class JSONSchemaValidatorE9318040A456978757D7Abfa3E66B1(object):
                 "type": "integer"
                 }
                 },
+                "required": [
+                "rowId",
+                "rewriteMatch",
+                "rewriteResult"
+                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -192,6 +211,12 @@ class JSONSchemaValidatorE9318040A456978757D7Abfa3E66B1(object):
                 "domain": {
                 "type": "string"
                 },
+                "enableDomainWhiteList": {
+                "type": "boolean"
+                },
+                "id": {
+                "type": "string"
+                },
                 "name": {
                 "type": "string"
                 }
@@ -203,9 +228,6 @@ class JSONSchemaValidatorE9318040A456978757D7Abfa3E66B1(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSActiveDirectory"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

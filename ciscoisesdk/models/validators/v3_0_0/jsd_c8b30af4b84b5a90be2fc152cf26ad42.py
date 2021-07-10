@@ -50,14 +50,6 @@ class JSONSchemaValidatorC8B30Af4B84B5A90Be2FC152Cf26Ad42(object):
                 "customAttributes": {
                 "properties": {
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 }
                 },
@@ -81,50 +73,6 @@ class JSONSchemaValidatorC8B30Af4B84B5A90Be2FC152Cf26Ad42(object):
                 },
                 "mac": {
                 "type": "string"
-                },
-                "mdmAttributes": {
-                "properties": {
-                "mdmComplianceStatus": {
-                "type": "boolean"
-                },
-                "mdmEncrypted": {
-                "type": "boolean"
-                },
-                "mdmEnrolled": {
-                "type": "boolean"
-                },
-                "mdmIMEI": {
-                "type": "string"
-                },
-                "mdmJailBroken": {
-                "type": "boolean"
-                },
-                "mdmManufacturer": {
-                "type": "string"
-                },
-                "mdmModel": {
-                "type": "string"
-                },
-                "mdmOS": {
-                "type": "string"
-                },
-                "mdmPhoneNumber": {
-                "type": "string"
-                },
-                "mdmPinlock": {
-                "type": "boolean"
-                },
-                "mdmReachable": {
-                "type": "boolean"
-                },
-                "mdmSerial": {
-                "type": "string"
-                },
-                "mdmServerName": {
-                "type": "string"
-                }
-                },
-                "type": "object"
                 },
                 "name": {
                 "type": "string"

@@ -29,6 +29,56 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_get_admin_user_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_adac9b81d9235be3b656acf9436583dd_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_admin_user_by_id(api):
+    endpoint_result = api.admin_user.get_admin_user_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.admin_user
+def test_get_admin_user_by_id(api, validator):
+    try:
+        assert is_valid_get_admin_user_by_id(
+            validator,
+            get_admin_user_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_admin_user_by_id_default(api):
+    endpoint_result = api.admin_user.get_admin_user_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.admin_user
+def test_get_admin_user_by_id_default(api, validator):
+    try:
+        assert is_valid_get_admin_user_by_id(
+            validator,
+            get_admin_user_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_admin_users(json_schema_validate, obj):
     if not obj:
         return False
@@ -89,30 +139,30 @@ def test_get_all_admin_users_default(api, validator):
             raise original_e
 
 
-def is_valid_get_admin_user_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_adac9b81d9235be3b656acf9436583dd_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9535a5edeb5057839d702e0f490dc28f_v3_0_0').validate(obj.response)
     return True
 
 
-def get_admin_user_by_id(api):
-    endpoint_result = api.admin_user.get_admin_user_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.admin_user.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.admin_user
-def test_get_admin_user_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_admin_user_by_id(
+        assert is_valid_get_version(
             validator,
-            get_admin_user_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -120,19 +170,19 @@ def test_get_admin_user_by_id(api, validator):
             raise original_e
 
 
-def get_admin_user_by_id_default(api):
-    endpoint_result = api.admin_user.get_admin_user_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.admin_user.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.admin_user
-def test_get_admin_user_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_admin_user_by_id(
+        assert is_valid_get_version(
             validator,
-            get_admin_user_by_id_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

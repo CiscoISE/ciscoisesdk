@@ -66,23 +66,18 @@ class JSONSchemaValidatorE176356698B5Ec49609504A530C1D8A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
+                "type": "string"
+                },
+                "parentId": {
                 "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "ProfilerProfile"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

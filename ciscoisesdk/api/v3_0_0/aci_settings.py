@@ -77,7 +77,7 @@ class AciSettings(object):
     def get_all_aci_settings(self,
                              headers=None,
                              **query_parameters):
-        """Get all ACISettings.
+        """This API allows the client to get ACI Settings.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -107,6 +107,12 @@ class AciSettings(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -132,15 +138,77 @@ class AciSettings(object):
 
         return self._object_factory('bpm_ea5c865993b56f48f7f43475294a20c_v3_0_0', _api_response)
 
+    def test_aci_connectivity(self,
+                              headers=None,
+                              **query_parameters):
+        """This API allows the client to test ACI Domain Manager
+        connection.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/ers/config/acisettings/testACIConnectivity')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_b155c91eec153338302d492db1afb80_v3_0_0', _api_response)
+
     def update_aci_settings_by_id(self,
                                   id,
                                   aci50=None,
                                   aci51=None,
-                                  aciipaddress=None,
-                                  acipassword=None,
-                                  aciuser_name=None,
                                   admin_name=None,
-                                  admin_password=None,
                                   all_sxp_domain=None,
                                   default_sgt_name=None,
                                   enable_aci=None,
@@ -160,34 +228,29 @@ class AciSettings(object):
                                   payload=None,
                                   active_validation=True,
                                   **query_parameters):
-        """Update ACISettings by Id.
+        """This API allows the client to update ACI settings.
 
         Args:
-            aci50(boolean): aci50, property of the request body.
-            aci51(boolean): aci51, property of the request body.
-            aciipaddress(string): aciipaddress, property of the
+            aci50(boolean): Enable 5.0 ACI Version, property of the
                 request body.
-            acipassword(string): acipassword, property of the
-                request body.
-            aciuser_name(string): aciuserName, property of the
+            aci51(boolean): Enable 5.1 ACI Version, property of the
                 request body.
             admin_name(string): adminName, property of the request
                 body.
-            admin_password(string): adminPassword, property of the
-                request body.
             all_sxp_domain(boolean): allSxpDomain, property of the
                 request body.
             default_sgt_name(string): defaultSgtName, property of
                 the request body.
-            enable_aci(boolean): enableAci, property of the request
-                body.
+            enable_aci(boolean): Enable ACI Integration, property of
+                the request body.
             enable_data_plane(boolean): enableDataPlane, property of
                 the request body.
             enable_elements_limit(boolean): enableElementsLimit,
                 property of the request body.
-            id(string): id, property of the request body.
-            ip_address_host_name(string): ipAddressHostName,
-                property of the request body.
+            id(string): Resource UUID value, property of the request
+                body.
+            ip_address_host_name(string): ACI Cluster IP Address /
+                Host name, property of the request body.
             l3_route_network(string): l3RouteNetwork, property of
                 the request body.
             max_num_iepg_from_aci(integer): maxNumIepgFromAci,
@@ -240,6 +303,12 @@ class AciSettings(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -276,8 +345,6 @@ class AciSettings(object):
                     admin_name,
                 'tenantName':
                     tenant_name,
-                'adminPassword':
-                    admin_password,
                 'l3RouteNetwork':
                     l3_route_network,
                 'suffixToEpg':
@@ -302,12 +369,6 @@ class AciSettings(object):
                     max_num_iepg_from_aci,
                 'maxNumSgtToAci':
                     max_num_sgt_to_aci,
-                'aciipaddress':
-                    aciipaddress,
-                'aciuserName':
-                    aciuser_name,
-                'acipassword':
-                    acipassword,
                 'aci50':
                     aci50,
                 'aci51':
@@ -337,10 +398,11 @@ class AciSettings(object):
 
         return self._object_factory('bpm_cea2e785ee57908a9ee3b118e49cfa_v3_0_0', _api_response)
 
-    def test_aci_connectivity(self,
-                              headers=None,
-                              **query_parameters):
-        """Test ACI Connectivity.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the Cisco ACI settings.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -385,13 +447,12 @@ class AciSettings(object):
         path_params = {
         }
 
-        e_url = ('/ers/config/acisettings/testACIConnectivity')
+        e_url = ('/ers/config/acisettings/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
-
         if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
+            _api_response = self._session.get(endpoint_full_url, params=_params,
                                               headers=_headers)
         else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
+            _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b155c91eec153338302d492db1afb80_v3_0_0', _api_response)
+        return self._object_factory('bpm_ea47f65521bcf0ab949b5d72b5_v3_0_0', _api_response)

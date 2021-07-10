@@ -50,14 +50,6 @@ class JSONSchemaValidatorD53842E83F0538CAb91E097Aa6800Ce(object):
                 "customAttributes": {
                 "properties": {
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 }
                 },
@@ -79,52 +71,22 @@ class JSONSchemaValidatorD53842E83F0538CAb91E097Aa6800Ce(object):
                 "identityStoreId": {
                 "type": "string"
                 },
-                "mac": {
-                "type": "string"
-                },
-                "mdmAttributes": {
+                "link": {
                 "properties": {
-                "mdmComplianceStatus": {
-                "type": "boolean"
-                },
-                "mdmEncrypted": {
-                "type": "boolean"
-                },
-                "mdmEnrolled": {
-                "type": "boolean"
-                },
-                "mdmIMEI": {
+                "href": {
                 "type": "string"
                 },
-                "mdmJailBroken": {
-                "type": "boolean"
-                },
-                "mdmManufacturer": {
+                "rel": {
                 "type": "string"
                 },
-                "mdmModel": {
-                "type": "string"
-                },
-                "mdmOS": {
-                "type": "string"
-                },
-                "mdmPhoneNumber": {
-                "type": "string"
-                },
-                "mdmPinlock": {
-                "type": "boolean"
-                },
-                "mdmReachable": {
-                "type": "boolean"
-                },
-                "mdmSerial": {
-                "type": "string"
-                },
-                "mdmServerName": {
+                "type": {
                 "type": "string"
                 }
                 },
                 "type": "object"
+                },
+                "mac": {
+                "type": "string"
                 },
                 "name": {
                 "type": "string"

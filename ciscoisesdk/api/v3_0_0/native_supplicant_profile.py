@@ -74,117 +74,12 @@ class NativeSupplicantProfile(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_native_supplicant_profile(self,
-                                          page=None,
-                                          size=None,
-                                          headers=None,
-                                          **query_parameters):
-        """Get all NativeSupplicantProfile.
-
-        Args:
-            page(int): page query parameter. Page number.
-            size(int): size query parameter. Number of objects
-                returned per page.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-
-        _params = {
-            'page':
-                page,
-            'size':
-                size,
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        e_url = ('/ers/config/nspprofile')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_fa9802505d7bbdf85b951581db47_v3_0_0', _api_response)
-
-    def get_all_native_supplicant_profile_generator(self,
-                                                    page=None,
-                                                    size=None,
-                                                    headers=None,
-                                                    **query_parameters):
-        """Get all NativeSupplicantProfile.
-
-        Args:
-            page(int): page query parameter. Page number.
-            size(int): size query parameter. Number of objects
-                returned per page.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            Generator: A generator object containing the following object.
-              + RestResponse: REST response with following properties:
-                  - headers(MyDict): response headers.
-                  - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
-                  - content(bytes): representation of the request's response
-                  - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-
-        yield from get_next_page(self.get_all_native_supplicant_profile, dict(
-            page=page,
-            size=size,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
-
     def get_native_supplicant_profile_by_id(self,
                                             id,
                                             headers=None,
                                             **query_parameters):
-        """Get NativeSupplicantProfile by Id.
+        """This API allows the client to get a native supplicant profile by
+        ID.
 
         Args:
             id(basestring): id path parameter.
@@ -215,6 +110,12 @@ class NativeSupplicantProfile(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -252,7 +153,8 @@ class NativeSupplicantProfile(object):
                                                payload=None,
                                                active_validation=True,
                                                **query_parameters):
-        """Update NativeSupplicantProfile.
+        """This API allows the client to update a native supplicant
+        profile.
 
         Args:
             description(string): description, property of the
@@ -293,6 +195,12 @@ class NativeSupplicantProfile(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -356,10 +264,192 @@ class NativeSupplicantProfile(object):
                                                id,
                                                headers=None,
                                                **query_parameters):
-        """Delete NativeSupplicantProfile.
+        """This API deletes a native supplicant profile.
 
         Args:
             id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/nspprofile/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_fff9d421c78597d98a54dd08a9a99f9_v3_0_0', _api_response)
+
+    def get_all_native_supplicant_profile(self,
+                                          page=None,
+                                          size=None,
+                                          headers=None,
+                                          **query_parameters):
+        """This API allows the client to get all the native supplicant
+        profiles.
+
+        Args:
+            page(int): page query parameter. Page number.
+            size(int): size query parameter. Number of objects
+                returned per page.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(page, (int, basestring, list))
+        check_type(size, (int, basestring, list))
+
+        _params = {
+            'page':
+                page,
+            'size':
+                size,
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/ers/config/nspprofile')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_fa9802505d7bbdf85b951581db47_v3_0_0', _api_response)
+
+    def get_all_native_supplicant_profile_generator(self,
+                                                    page=None,
+                                                    size=None,
+                                                    headers=None,
+                                                    **query_parameters):
+        """This API allows the client to get all the native supplicant
+        profiles.
+
+        Args:
+            page(int): page query parameter. Page number.
+            size(int): size query parameter. Number of objects
+                returned per page.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            Generator: A generator object containing the following object.
+              + RestResponse: REST response with following properties:
+                  - headers(MyDict): response headers.
+                  - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                        or the bracket notation.
+                  - content(bytes): representation of the request's response
+                  - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+
+        yield from get_next_page(self.get_all_native_supplicant_profile, dict(
+            page=page,
+            size=size,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the native supplicant profile.
+
+        Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -393,8 +483,6 @@ class NativeSupplicantProfile(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -402,15 +490,14 @@ class NativeSupplicantProfile(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/nspprofile/{id}')
+        e_url = ('/ers/config/nspprofile/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
         else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
+            _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fff9d421c78597d98a54dd08a9a99f9_v3_0_0', _api_response)
+        return self._object_factory('bpm_f577c55d36b05178b0275dd88c71e118_v3_0_0', _api_response)

@@ -65,11 +65,6 @@ class JSONSchemaValidatorF52605B5F6481F6A99Ec8A7E8E6(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "status": {
@@ -82,9 +77,6 @@ class JSONSchemaValidatorF52605B5F6481F6A99Ec8A7E8E6(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "TelemetryInfo"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

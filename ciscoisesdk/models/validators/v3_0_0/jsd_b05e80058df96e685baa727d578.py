@@ -47,12 +47,172 @@ class JSONSchemaValidatorB05E80058Df96E685Baa727D578(object):
                 "properties": {
                 "ERSActiveDirectory": {
                 "properties": {
+                "adAttributes": {
+                "properties": {
+                "attributes": {
+                "items": {
+                "properties": {
+                "defaultValue": {
+                "type": "string"
+                },
+                "internalName": {
+                "type": "string"
+                },
+                "name": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                }
+                },
+                "type": "object"
+                },
+                "adScopesNames": {
+                "default": "Default_Scope",
+                "type": "string"
+                },
+                "adgroups": {
+                "properties": {
+                "groups": {
+                "items": {
+                "properties": {
+                "name": {
+                "type": "string"
+                },
+                "sid": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "name",
+                "sid"
+                ],
+                "type": "object"
+                },
+                "type": "array"
+                }
+                },
+                "type": "object"
+                },
+                "advancedSettings": {
+                "properties": {
+                "agingTime": {
+                "type": "integer"
+                },
+                "authProtectionType": {
+                "type": "string"
+                },
+                "country": {
+                "type": "string"
+                },
+                "department": {
+                "type": "string"
+                },
+                "email": {
+                "type": "string"
+                },
+                "enableCallbackForDialinClient": {
+                "type": "boolean"
+                },
+                "enableDialinPermissionCheck": {
+                "type": "boolean"
+                },
+                "enableFailedAuthProtection": {
+                "type": "boolean"
+                },
+                "enableMachineAccess": {
+                "type": "boolean"
+                },
+                "enableMachineAuth": {
+                "type": "boolean"
+                },
+                "enablePassChange": {
+                "type": "boolean"
+                },
+                "enableRewrites": {
+                "type": "boolean"
+                },
+                "failedAuthThreshold": {
+                "type": "integer"
+                },
+                "firstName": {
+                "type": "string"
+                },
+                "identityNotInAdBehaviour": {
+                "type": "string"
+                },
+                "jobTitle": {
+                "type": "string"
+                },
+                "lastName": {
+                "type": "string"
+                },
+                "locality": {
+                "type": "string"
+                },
+                "organizationalUnit": {
+                "type": "string"
+                },
+                "plaintextAuth": {
+                "type": "boolean"
+                },
+                "rewriteRules": {
+                "items": {
+                "properties": {
+                "rewriteMatch": {
+                "type": "string"
+                },
+                "rewriteResult": {
+                "type": "string"
+                },
+                "rowId": {
+                "type": "integer"
+                }
+                },
+                "required": [
+                "rowId",
+                "rewriteMatch",
+                "rewriteResult"
+                ],
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "schema": {
+                "type": "string"
+                },
+                "stateOrProvince": {
+                "type": "string"
+                },
+                "streetAddress": {
+                "type": "string"
+                },
+                "telephone": {
+                "type": "string"
+                },
+                "unreachableDomainsBehaviour": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "description":
                  {
                 "type": "string"
                 },
                 "domain": {
                 "type": "string"
+                },
+                "enableDomainWhiteList": {
+                "type": "boolean"
                 },
                 "id": {
                 "type": "string"
@@ -61,12 +221,13 @@ class JSONSchemaValidatorB05E80058Df96E685Baa727D578(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "name",
+                "domain"
+                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSActiveDirectory"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

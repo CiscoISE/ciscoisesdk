@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine 500joinDomain data model.
+"""Identity Services Engine joinDomain data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorB3284240745E5B929C51495Fe80Bc1C4(object):
-    """500joinDomain request schema definition."""
+    """joinDomain request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB3284240745E5B929C51495Fe80Bc1C4, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -57,24 +57,14 @@ class JSONSchemaValidatorB3284240745E5B929C51495Fe80Bc1C4(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "additionalData"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "OperationAdditionalData"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

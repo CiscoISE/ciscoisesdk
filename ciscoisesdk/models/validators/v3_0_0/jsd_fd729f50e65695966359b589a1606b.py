@@ -57,24 +57,14 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "additionalData"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "OperationAdditionalData"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

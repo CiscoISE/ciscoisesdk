@@ -56,6 +56,9 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "NetworkDeviceIPList": {
                 "items": {
                 "properties": {
+                "getIpaddressExclude": {
+                "type": "string"
+                },
                 "ipaddress": {
                 "type": "string"
                 },
@@ -63,10 +66,6 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "ipaddress",
-                "mask"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -80,7 +79,10 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "type": "boolean"
                 },
                 "enableMultiSecret": {
-                "type": "string"
+                "type": "boolean"
+                },
+                "enabled": {
+                "type": "boolean"
                 },
                 "keyEncryptionKey": {
                 "type": "string"
@@ -96,6 +98,9 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 },
                 "radiusSharedSecret": {
                 "type": "string"
+                },
+                "secondRadiusSharedSecret": {
+                "type": "string"
                 }
                 },
                 "type": "object"
@@ -110,6 +115,12 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "dtlsDnsName": {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
+                "modelName": {
+                "type": "string"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -118,9 +129,6 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 },
                 "snmpsettings": {
                 "properties": {
-                "authPassowrd": {
-                "type": "string"
-                },
                 "linkTrapQuery": {
                 "type": "boolean"
                 },
@@ -133,9 +141,6 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "pollingInterval": {
                 "type": "integer"
                 },
-                "privacyPassowrd": {
-                "type": "string"
-                },
                 "roCommunity": {
                 "type": "string"
                 },
@@ -144,6 +149,9 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 }
                 },
                 "type": "object"
+                },
+                "softwareVersion": {
+                "type": "string"
                 },
                 "tacacsSettings": {
                 "properties": {
@@ -154,10 +162,6 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "sharedSecret",
-                "connectModeOptions"
-                ],
                 "type": "object"
                 },
                 "trustsecsettings": {
@@ -181,6 +185,9 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "execModePassword": {
                 "type": "string"
                 },
+                "execModeUsername": {
+                "type": "string"
+                },
                 "includeWhenDeployingSGTUpdates": {
                 "type": "boolean"
                 }
@@ -188,7 +195,7 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "type": "object"
                 },
                 "pushIdSupport": {
-                "type": "string"
+                "type": "boolean"
                 },
                 "sgaNotificationAndUpdates": {
                 "properties": {
@@ -223,16 +230,9 @@ class JSONSchemaValidatorB1Edfeb182025176Bb250633937177Ae(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "name",
-                "NetworkDeviceIPList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "NetworkDevice"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

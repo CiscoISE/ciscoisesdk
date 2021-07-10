@@ -137,16 +137,9 @@ class JSONSchemaValidatorDf9Ab8Ff636353279D5C787585Dcb6Af(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "name",
-                "RadiusServerList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "RadiusServerSequence"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

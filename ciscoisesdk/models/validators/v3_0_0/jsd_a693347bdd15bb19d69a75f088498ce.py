@@ -47,22 +47,13 @@ class JSONSchemaValidatorA693347Bdd15Bb19D69A75F088498Ce(object):
                 "properties": {
                 "ERSSxpVpn": {
                 "properties": {
-                "id": {
-                "type": "string"
-                },
                 "sxpVpnName": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "sxpVpnName"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSSxpVpn"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

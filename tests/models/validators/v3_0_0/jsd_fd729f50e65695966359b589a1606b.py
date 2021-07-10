@@ -45,12 +45,10 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "ERSActiveDirectoryGroups": {
-                "properties": {
                 "groups": {
                 "items": {
                 "properties": {
-                "name": {
+                "groupName": {
                 "type": "string"
                 },
                 "sid": {
@@ -65,15 +63,6 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
                 "type": "array"
                 }
                 },
-                "required": [
-                "groups"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "ERSActiveDirectoryGroups"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

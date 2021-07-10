@@ -29,6 +29,228 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_get_tacacs_server_sequence_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_493b03900a2e5027b615d9f1bdcf9f63_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_tacacs_server_sequence_by_name(api):
+    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_get_tacacs_server_sequence_by_name(api, validator):
+    try:
+        assert is_valid_get_tacacs_server_sequence_by_name(
+            validator,
+            get_tacacs_server_sequence_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_tacacs_server_sequence_by_name_default(api):
+    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_get_tacacs_server_sequence_by_name_default(api, validator):
+    try:
+        assert is_valid_get_tacacs_server_sequence_by_name(
+            validator,
+            get_tacacs_server_sequence_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_tacacs_server_sequence_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_8b9eb9547216547cab8b9e686eee674b_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_tacacs_server_sequence_by_id(api):
+    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_get_tacacs_server_sequence_by_id(api, validator):
+    try:
+        assert is_valid_get_tacacs_server_sequence_by_id(
+            validator,
+            get_tacacs_server_sequence_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_tacacs_server_sequence_by_id_default(api):
+    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_get_tacacs_server_sequence_by_id_default(api, validator):
+    try:
+        assert is_valid_get_tacacs_server_sequence_by_id(
+            validator,
+            get_tacacs_server_sequence_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_tacacs_server_sequence_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_7a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_tacacs_server_sequence_by_id(api):
+    endpoint_result = api.tacacs_server_sequence.update_tacacs_server_sequence_by_id(
+        active_validation=False,
+        description='string',
+        id='string',
+        local_accounting=True,
+        name='string',
+        payload=None,
+        prefix_delimiter='string',
+        prefix_strip=True,
+        remote_accounting=True,
+        server_list='string',
+        suffix_delimiter='string',
+        suffix_strip=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_update_tacacs_server_sequence_by_id(api, validator):
+    try:
+        assert is_valid_update_tacacs_server_sequence_by_id(
+            validator,
+            update_tacacs_server_sequence_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_tacacs_server_sequence_by_id_default(api):
+    endpoint_result = api.tacacs_server_sequence.update_tacacs_server_sequence_by_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        local_accounting=None,
+        name=None,
+        payload=None,
+        prefix_delimiter=None,
+        prefix_strip=None,
+        remote_accounting=None,
+        server_list=None,
+        suffix_delimiter=None,
+        suffix_strip=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_update_tacacs_server_sequence_by_id_default(api, validator):
+    try:
+        assert is_valid_update_tacacs_server_sequence_by_id(
+            validator,
+            update_tacacs_server_sequence_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_tacacs_server_sequence_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_896816622564523798353b885b115048_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_tacacs_server_sequence_by_id(api):
+    endpoint_result = api.tacacs_server_sequence.delete_tacacs_server_sequence_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_delete_tacacs_server_sequence_by_id(api, validator):
+    try:
+        assert is_valid_delete_tacacs_server_sequence_by_id(
+            validator,
+            delete_tacacs_server_sequence_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_tacacs_server_sequence_by_id_default(api):
+    endpoint_result = api.tacacs_server_sequence.delete_tacacs_server_sequence_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_delete_tacacs_server_sequence_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_tacacs_server_sequence_by_id(
+            validator,
+            delete_tacacs_server_sequence_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_tacacs_server_sequence(json_schema_validate, obj):
     if not obj:
         return False
@@ -95,6 +317,7 @@ def is_valid_create_tacacs_server_sequence(json_schema_validate, obj):
 def create_tacacs_server_sequence(api):
     endpoint_result = api.tacacs_server_sequence.create_tacacs_server_sequence(
         active_validation=False,
+        description='string',
         local_accounting=True,
         name='string',
         payload=None,
@@ -124,6 +347,7 @@ def test_create_tacacs_server_sequence(api, validator):
 def create_tacacs_server_sequence_default(api):
     endpoint_result = api.tacacs_server_sequence.create_tacacs_server_sequence(
         active_validation=False,
+        description=None,
         local_accounting=None,
         name=None,
         payload=None,
@@ -149,30 +373,30 @@ def test_create_tacacs_server_sequence_default(api, validator):
             raise original_e
 
 
-def is_valid_get_tacacs_server_sequence_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f3b45b8e4089574c9912407f88b1a5d2_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_aa8e1dc47a445d44ab86020f421ee721_v3_0_0').validate(obj.response)
     return True
 
 
-def get_tacacs_server_sequence_by_id(api):
-    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.tacacs_server_sequence.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_server_sequence
-def test_get_tacacs_server_sequence_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_tacacs_server_sequence_by_id(
+        assert is_valid_get_version(
             validator,
-            get_tacacs_server_sequence_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -180,189 +404,19 @@ def test_get_tacacs_server_sequence_by_id(api, validator):
             raise original_e
 
 
-def get_tacacs_server_sequence_by_id_default(api):
-    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.tacacs_server_sequence.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_server_sequence
-def test_get_tacacs_server_sequence_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_tacacs_server_sequence_by_id(
+        assert is_valid_get_version(
             validator,
-            get_tacacs_server_sequence_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_tacacs_server_sequence_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_18f6de5797735bbd95dc8683c6a7aebf_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_tacacs_server_sequence_by_id(api):
-    endpoint_result = api.tacacs_server_sequence.update_tacacs_server_sequence_by_id(
-        active_validation=False,
-        id='string',
-        local_accounting=True,
-        name='string',
-        payload=None,
-        prefix_delimiter='string',
-        prefix_strip=True,
-        remote_accounting=True,
-        server_list='string',
-        suffix_delimiter='string',
-        suffix_strip=True
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_server_sequence
-def test_update_tacacs_server_sequence_by_id(api, validator):
-    try:
-        assert is_valid_update_tacacs_server_sequence_by_id(
-            validator,
-            update_tacacs_server_sequence_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_tacacs_server_sequence_by_id_default(api):
-    endpoint_result = api.tacacs_server_sequence.update_tacacs_server_sequence_by_id(
-        active_validation=False,
-        id='string',
-        local_accounting=None,
-        name=None,
-        payload=None,
-        prefix_delimiter=None,
-        prefix_strip=None,
-        remote_accounting=None,
-        server_list=None,
-        suffix_delimiter=None,
-        suffix_strip=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_server_sequence
-def test_update_tacacs_server_sequence_by_id_default(api, validator):
-    try:
-        assert is_valid_update_tacacs_server_sequence_by_id(
-            validator,
-            update_tacacs_server_sequence_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_tacacs_server_sequence_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a1465b72911359bdbb1430469801d4be_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_tacacs_server_sequence_by_id(api):
-    endpoint_result = api.tacacs_server_sequence.delete_tacacs_server_sequence_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_server_sequence
-def test_delete_tacacs_server_sequence_by_id(api, validator):
-    try:
-        assert is_valid_delete_tacacs_server_sequence_by_id(
-            validator,
-            delete_tacacs_server_sequence_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_tacacs_server_sequence_by_id_default(api):
-    endpoint_result = api.tacacs_server_sequence.delete_tacacs_server_sequence_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_server_sequence
-def test_delete_tacacs_server_sequence_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_tacacs_server_sequence_by_id(
-            validator,
-            delete_tacacs_server_sequence_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_tacacs_server_sequence_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_493b03900a2e5027b615d9f1bdcf9f63_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_tacacs_server_sequence_by_name(api):
-    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_server_sequence
-def test_get_tacacs_server_sequence_by_name(api, validator):
-    try:
-        assert is_valid_get_tacacs_server_sequence_by_name(
-            validator,
-            get_tacacs_server_sequence_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_tacacs_server_sequence_by_name_default(api):
-    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_server_sequence
-def test_get_tacacs_server_sequence_by_name_default(api, validator):
-    try:
-        assert is_valid_get_tacacs_server_sequence_by_name(
-            validator,
-            get_tacacs_server_sequence_by_name_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

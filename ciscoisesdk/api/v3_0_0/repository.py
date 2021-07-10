@@ -118,7 +118,7 @@ class Repository(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/repository')
+        e_url = ('/v1/repository')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -126,7 +126,7 @@ class Repository(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f9081a48e3c5f4fae5aa00f889216dd_v3_0_0', _api_response)
+        return self._object_factory('bpm_a83213678e6b58528986f1219d9f12ce_v3_0_0', _api_response)
 
     def create_repository(self,
                           enable_pki=None,
@@ -146,19 +146,27 @@ class Repository(object):
         Args:
             enable_pki(boolean): enablePki, property of the request
                 body.
-            name(string): name, property of the request body.
+            name(string): Repository name should be less than 80
+                characters and can contain alphanumeric,
+                underscore, hyphen and dot characters.,
+                property of the request body.
                 Constraints: maxLength set to 80 and
                 minLength set to 1.
-            password(string): password, property of the request
-                body.
-            path(string): path, property of the request body.
+            password(string): Password can contain alphanumeric
+                and/or special characters., property of
+                the request body.
+            path(string): Path should always start with "/" and can
+                contain alphanumeric, underscore, hyphen
+                and dot characters., property of the
+                request body.
             protocol(string): protocol, property of the request
                 body. Available values are 'DISK',
                 'FTP', 'SFTP', 'TFTP', 'NFS', 'CDROM',
                 'HTTP' and 'HTTPS'.
             server_name(string): serverName, property of the request
                 body.
-            user_name(string): userName, property of the request
+            user_name(string): Username can contain alphanumeric
+                characters., property of the request
                 body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -215,22 +223,22 @@ class Repository(object):
                     protocol,
                 'path':
                     path,
+                'password':
+                    password,
                 'serverName':
                     server_name,
                 'userName':
                     user_name,
-                'password':
-                    password,
                 'enablePki':
                     enable_pki,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_a207a157244508c99bf3e9abb26aab8_v3_0_0')\
+            self._request_validator('jsd_edcb0e8c6b54709d4d61ea23b45f84_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/repository')
+        e_url = ('/v1/repository')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -242,12 +250,12 @@ class Repository(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_a207a157244508c99bf3e9abb26aab8_v3_0_0', _api_response)
+        return self._object_factory('bpm_edcb0e8c6b54709d4d61ea23b45f84_v3_0_0', _api_response)
 
-    def get_repository_by_name(self,
-                               name,
-                               headers=None,
-                               **query_parameters):
+    def get_repository(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
         """Get a specific repository identified by the name passed in the
         URL. .
 
@@ -294,7 +302,7 @@ class Repository(object):
             'name': name,
         }
 
-        e_url = ('/api/v1/repository/{name}')
+        e_url = ('/v1/repository/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -302,39 +310,47 @@ class Repository(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c785067a5a5e3283f96dd5006c7865_v3_0_0', _api_response)
+        return self._object_factory('bpm_a79dc5595ac51d1970b8d53498d3c32_v3_0_0', _api_response)
 
-    def update_repository_by_name(self,
-                                  name,
-                                  enable_pki=None,
-                                  password=None,
-                                  path=None,
-                                  protocol=None,
-                                  server_name=None,
-                                  user_name=None,
-                                  headers=None,
-                                  payload=None,
-                                  active_validation=True,
-                                  **query_parameters):
+    def update_repository(self,
+                          name,
+                          enable_pki=None,
+                          password=None,
+                          path=None,
+                          protocol=None,
+                          server_name=None,
+                          user_name=None,
+                          headers=None,
+                          payload=None,
+                          active_validation=True,
+                          **query_parameters):
         """Update the definition of a specific repository, providing ALL
         parameters for the repository. .
 
         Args:
             enable_pki(boolean): enablePki, property of the request
                 body.
-            name(string): name, property of the request body.
+            name(string): Repository name should be less than 80
+                characters and can contain alphanumeric,
+                underscore, hyphen and dot characters.,
+                property of the request body.
                 Constraints: maxLength set to 80 and
                 minLength set to 1.
-            password(string): password, property of the request
-                body.
-            path(string): path, property of the request body.
+            password(string): Password can contain alphanumeric
+                and/or special characters., property of
+                the request body.
+            path(string): Path should always start with "/" and can
+                contain alphanumeric, underscore, hyphen
+                and dot characters., property of the
+                request body.
             protocol(string): protocol, property of the request
                 body. Available values are 'DISK',
                 'FTP', 'SFTP', 'TFTP', 'NFS', 'CDROM',
                 'HTTP' and 'HTTPS'.
             server_name(string): serverName, property of the request
                 body.
-            user_name(string): userName, property of the request
+            user_name(string): Username can contain alphanumeric
+                characters., property of the request
                 body.
             name(basestring): name path parameter. Unique name for a
                 repository.
@@ -396,22 +412,22 @@ class Repository(object):
                     protocol,
                 'path':
                     path,
+                'password':
+                    password,
                 'serverName':
                     server_name,
                 'userName':
                     user_name,
-                'password':
-                    password,
                 'enablePki':
                     enable_pki,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e380a5c1d585ab9012874ca959982_v3_0_0')\
+            self._request_validator('jsd_ad8eb56595e86c4300607ec4dd3_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/repository/{name}')
+        e_url = ('/v1/repository/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -424,12 +440,12 @@ class Repository(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_e380a5c1d585ab9012874ca959982_v3_0_0', _api_response)
+        return self._object_factory('bpm_ad8eb56595e86c4300607ec4dd3_v3_0_0', _api_response)
 
-    def delete_repository_by_name(self,
-                                  name,
-                                  headers=None,
-                                  **query_parameters):
+    def delete_repository(self,
+                          name,
+                          headers=None,
+                          **query_parameters):
         """Long description TBD .
 
         Args:
@@ -475,7 +491,7 @@ class Repository(object):
             'name': name,
         }
 
-        e_url = ('/api/v1/repository/{name}')
+        e_url = ('/v1/repository/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -483,7 +499,7 @@ class Repository(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c3a2e8960455547da94117ef465db97f_v3_0_0', _api_response)
+        return self._object_factory('bpm_d3b49f09d7f954bdb6f413e1785a05d7_v3_0_0', _api_response)
 
     def get_repository_files(self,
                              name,
@@ -535,7 +551,7 @@ class Repository(object):
             'name': name,
         }
 
-        e_url = ('/api/v1/repository/{name}/files')
+        e_url = ('/v1/repository/{name}/files')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -543,4 +559,4 @@ class Repository(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c9dea644f40453fead2b003b06c4c52b_v3_0_0', _api_response)
+        return self._object_factory('bpm_fc645a4297f55557af8d398f07f6d0a0_v3_0_0', _api_response)

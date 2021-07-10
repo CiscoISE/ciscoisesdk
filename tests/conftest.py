@@ -51,9 +51,6 @@ def pytest_configure(config):
         "markers", "anc_endpoint: anc_endpoint wrapper test"
     )
     config.addinivalue_line(
-        "markers", "anc_policy: anc_policy wrapper test"
-    )
-    config.addinivalue_line(
         "markers", "active_directory: active_directory wrapper test"
     )
     config.addinivalue_line(
@@ -61,6 +58,9 @@ def pytest_configure(config):
     )
     config.addinivalue_line(
         "markers", "allowed_protocols: allowed_protocols wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "anc_policy: anc_policy wrapper test"
     )
     config.addinivalue_line(
         "markers", "authentication: authentication wrapper test"
@@ -84,13 +84,13 @@ def pytest_configure(config):
         "markers", "certificates: certificates wrapper test"
     )
     config.addinivalue_line(
+        "markers", "clear_threats_and_vulnerabilities: clear_threats_and_vulnerabilities wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "consumer: consumer wrapper test"
     )
     config.addinivalue_line(
         "markers", "custom_caller: custom_caller wrapper test"
-    )
-    config.addinivalue_line(
-        "markers", "deployment: deployment wrapper test"
     )
     config.addinivalue_line(
         "markers", "device_administration_authentication_rules: device_administration_authentication_rules wrapper test"
@@ -138,13 +138,10 @@ def pytest_configure(config):
         "markers", "egress_matrix_cell: egress_matrix_cell wrapper test"
     )
     config.addinivalue_line(
-        "markers", "endpoint: endpoint wrapper test"
+        "markers", "endpoint_certificate: endpoint_certificate wrapper test"
     )
     config.addinivalue_line(
-        "markers", "endpoint_cert: endpoint_cert wrapper test"
-    )
-    config.addinivalue_line(
-        "markers", "endpoint_group: endpoint_group wrapper test"
+        "markers", "endpoint_identity_group: endpoint_identity_group wrapper test"
     )
     config.addinivalue_line(
         "markers", "external_radius_server: external_radius_server wrapper test"
@@ -156,7 +153,7 @@ def pytest_configure(config):
         "markers", "guest_location: guest_location wrapper test"
     )
     config.addinivalue_line(
-        "markers", "guest_smtp_notifications: guest_smtp_notifications wrapper test"
+        "markers", "guest_smtp_notification_configuration: guest_smtp_notification_configuration wrapper test"
     )
     config.addinivalue_line(
         "markers", "guest_ssid: guest_ssid wrapper test"
@@ -171,10 +168,16 @@ def pytest_configure(config):
         "markers", "hotspot_portal: hotspot_portal wrapper test"
     )
     config.addinivalue_line(
-        "markers", "identity_group: identity_group wrapper test"
+        "markers", "i_p_to_sgt_mapping: i_p_to_sgt_mapping wrapper test"
     )
     config.addinivalue_line(
-        "markers", "identity_store_sequence: identity_store_sequence wrapper test"
+        "markers", "i_p_to_sgt_mapping_group: i_p_to_sgt_mapping_group wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "identity_groups: identity_groups wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "identity_sequence: identity_sequence wrapper test"
     )
     config.addinivalue_line(
         "markers", "internal_user: internal_user wrapper test"
@@ -243,19 +246,16 @@ def pytest_configure(config):
         "markers", "network_device_group: network_device_group wrapper test"
     )
     config.addinivalue_line(
-        "markers", "node: node wrapper test"
-    )
-    config.addinivalue_line(
         "markers", "node_deployment: node_deployment wrapper test"
     )
     config.addinivalue_line(
         "markers", "node_group: node_group wrapper test"
     )
     config.addinivalue_line(
-        "markers", "pan_ha: pan_ha wrapper test"
+        "markers", "node_details: node_details wrapper test"
     )
     config.addinivalue_line(
-        "markers", "portal: portal wrapper test"
+        "markers", "pan_ha: pan_ha wrapper test"
     )
     config.addinivalue_line(
         "markers", "portal_global_setting: portal_global_setting wrapper test"
@@ -273,6 +273,15 @@ def pytest_configure(config):
         "markers", "provider: provider wrapper test"
     )
     config.addinivalue_line(
+        "markers", "psn_node_details_with_radius_service: psn_node_details_with_radius_service wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "pull_deployment_info: pull_deployment_info wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "px_grid_settings: px_grid_settings wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "radius_failure: radius_failure wrapper test"
     )
     config.addinivalue_line(
@@ -288,21 +297,6 @@ def pytest_configure(config):
         "markers", "repository: repository wrapper test"
     )
     config.addinivalue_line(
-        "markers", "sg_acl: sg_acl wrapper test"
-    )
-    config.addinivalue_line(
-        "markers", "sg_mapping: sg_mapping wrapper test"
-    )
-    config.addinivalue_line(
-        "markers", "sg_mapping_group: sg_mapping_group wrapper test"
-    )
-    config.addinivalue_line(
-        "markers", "sgt: sgt wrapper test"
-    )
-    config.addinivalue_line(
-        "markers", "sgt_vn_vlan: sgt_vn_vlan wrapper test"
-    )
-    config.addinivalue_line(
         "markers", "sms_provider: sms_provider wrapper test"
     )
     config.addinivalue_line(
@@ -315,16 +309,19 @@ def pytest_configure(config):
         "markers", "sxp_vpns: sxp_vpns wrapper test"
     )
     config.addinivalue_line(
+        "markers", "security_group_to_virtual_network: security_group_to_virtual_network wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "security_groups: security_groups wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "security_groups_acls: security_groups_acls wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "self_registered_portal: self_registered_portal wrapper test"
     )
     config.addinivalue_line(
-        "markers", "service: service wrapper test"
-    )
-    config.addinivalue_line(
         "markers", "session_directory: session_directory wrapper test"
-    )
-    config.addinivalue_line(
-        "markers", "session_service_node: session_service_node wrapper test"
     )
     config.addinivalue_line(
         "markers", "sponsor_group: sponsor_group wrapper test"
@@ -339,7 +336,13 @@ def pytest_configure(config):
         "markers", "sponsored_guest_portal: sponsored_guest_portal wrapper test"
     )
     config.addinivalue_line(
-        "markers", "support_bundle: support_bundle wrapper test"
+        "markers", "support_bundle_download: support_bundle_download wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "support_bundle_status: support_bundle_status wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "support_bundle_trigger_configuration: support_bundle_trigger_configuration wrapper test"
     )
     config.addinivalue_line(
         "markers", "sync_ise_node: sync_ise_node wrapper test"
@@ -366,25 +369,22 @@ def pytest_configure(config):
         "markers", "telemetry_information: telemetry_information wrapper test"
     )
     config.addinivalue_line(
-        "markers", "threat: threat wrapper test"
-    )
-    config.addinivalue_line(
         "markers", "trust_sec_configuration: trust_sec_configuration wrapper test"
     )
     config.addinivalue_line(
         "markers", "trust_sec_sxp: trust_sec_sxp wrapper test"
     )
     config.addinivalue_line(
-        "markers", "version_: version_ wrapper test"
+        "markers", "version_and_patch: version_and_patch wrapper test"
     )
     config.addinivalue_line(
-        "markers", "version_info: version_info wrapper test"
+        "markers", "endpoint: endpoint wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "portal: portal wrapper test"
     )
     config.addinivalue_line(
         "markers", "px_grid_node: px_grid_node wrapper test"
-    )
-    config.addinivalue_line(
-        "markers", "px_grid_settings: px_grid_settings wrapper test"
     )
     config.addinivalue_line(
         "markers", "tasks: tasks wrapper test"

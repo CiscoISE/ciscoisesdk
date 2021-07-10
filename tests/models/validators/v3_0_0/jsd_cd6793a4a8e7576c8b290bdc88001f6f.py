@@ -51,6 +51,14 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 "properties": {
                 "globalCustomizations": {
                 "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "bannerImage": {
                 "properties": {
                 "data": {
@@ -155,6 +163,20 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -171,19 +193,13 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 "displayFrequency": {
                 "type": "string"
                 },
+                "displayFrequencyIntervalDays": {
+                "type": "integer"
+                },
                 "includeAup": {
                 "type": "boolean"
                 },
-                "requireAccessCode": {
-                "type": "boolean"
-                },
                 "requireScrolling": {
-                "type": "boolean"
-                },
-                "skipAupForEmployees": {
-                "type": "boolean"
-                },
-                "useDiffAupForEmployees": {
                 "type": "boolean"
                 }
                 },
@@ -191,21 +207,6 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 },
                 "loginPageSettings": {
                 "properties": {
-                "allowAlternateGuestPortal": {
-                "type": "boolean"
-                },
-                "allowGuestToChangePassword": {
-                "type": "boolean"
-                },
-                "allowGuestToCreateAccounts": {
-                "type": "boolean"
-                },
-                "allowGuestToUseSocialAccounts": {
-                "type": "boolean"
-                },
-                "allowShowGuestForm": {
-                "type": "boolean"
-                },
                 "aupDisplay": {
                 "type": "string"
                 },
@@ -214,9 +215,6 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 },
                 "maxFailedAttemptsBeforeRateLimit": {
                 "type": "integer"
-                },
-                "requireAccessCode": {
-                "type": "boolean"
                 },
                 "requireAupAcceptance": {
                 "type": "boolean"
@@ -237,22 +235,13 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 "portalSettings": {
                 "properties": {
                 "allowedInterfaces": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "alwaysUsedLanguage": {
                 "type": "string"
                 },
                 "authenticationMethod": {
                 "type": "string"
                 },
                 "availableSsids": {
-                "items": {
                 "type": "string"
-                },
-                "type": "array"
                 },
                 "certificateGroupTag": {
                 "type": "string"
@@ -275,6 +264,14 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 },
                 "type": "object"
                 },
+                "postAccessBannerSettings": {
+                "properties": {
+                "includePostAccessBanner": {
+                "type": "boolean"
+                }
+                },
+                "type": "object"
+                },
                 "postLoginBannerSettings": {
                 "properties": {
                 "includePostAccessBanner": {
@@ -293,6 +290,9 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 },
                 "supportInfoSettings": {
                 "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
                 "emptyFieldDisplay": {
                 "type": "string"
                 },

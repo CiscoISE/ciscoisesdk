@@ -29,6 +29,172 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_get_hotspot_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_6cbcecf65a0155fcad602d3ac16531a7_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_hotspot_portal_by_id(api):
+    endpoint_result = api.hotspot_portal.get_hotspot_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.hotspot_portal
+def test_get_hotspot_portal_by_id(api, validator):
+    try:
+        assert is_valid_get_hotspot_portal_by_id(
+            validator,
+            get_hotspot_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_hotspot_portal_by_id_default(api):
+    endpoint_result = api.hotspot_portal.get_hotspot_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.hotspot_portal
+def test_get_hotspot_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_get_hotspot_portal_by_id(
+            validator,
+            get_hotspot_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_hotspot_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_0ae4af25df565334b20a24c4878b68e4_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_hotspot_portal_by_id(api):
+    endpoint_result = api.hotspot_portal.update_hotspot_portal_by_id(
+        active_validation=False,
+        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        portal_test_url='string',
+        portal_type='string',
+        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'coaType': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'aupSettings': {'requireAccessCode': True, 'accessCode': 'string', 'includeAup': True, 'requireScrolling': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}
+    )
+    return endpoint_result
+
+
+@pytest.mark.hotspot_portal
+def test_update_hotspot_portal_by_id(api, validator):
+    try:
+        assert is_valid_update_hotspot_portal_by_id(
+            validator,
+            update_hotspot_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_hotspot_portal_by_id_default(api):
+    endpoint_result = api.hotspot_portal.update_hotspot_portal_by_id(
+        active_validation=False,
+        id='string',
+        customizations=None,
+        description=None,
+        name=None,
+        payload=None,
+        portal_test_url=None,
+        portal_type=None,
+        settings=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.hotspot_portal
+def test_update_hotspot_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_update_hotspot_portal_by_id(
+            validator,
+            update_hotspot_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_hotspot_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_1a344d1c6f535789b7badbaa502e8d3b_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_hotspot_portal_by_id(api):
+    endpoint_result = api.hotspot_portal.delete_hotspot_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.hotspot_portal
+def test_delete_hotspot_portal_by_id(api, validator):
+    try:
+        assert is_valid_delete_hotspot_portal_by_id(
+            validator,
+            delete_hotspot_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_hotspot_portal_by_id_default(api):
+    endpoint_result = api.hotspot_portal.delete_hotspot_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.hotspot_portal
+def test_delete_hotspot_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_hotspot_portal_by_id(
+            validator,
+            delete_hotspot_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_hotspot_portal(json_schema_validate, obj):
     if not obj:
         return False
@@ -103,12 +269,13 @@ def is_valid_create_hotspot_portal(json_schema_validate, obj):
 def create_hotspot_portal(api):
     endpoint_result = api.hotspot_portal.create_hotspot_portal(
         active_validation=False,
-        customizations={'portalTheme': {'id': 'string', 'name': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
+        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
         description='string',
         name='string',
         payload=None,
+        portal_test_url='string',
         portal_type='string',
-        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'coaType': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'aupSettings': {'includeAup': True, 'requireScrolling': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string'}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string'}}
+        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'coaType': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'aupSettings': {'requireAccessCode': True, 'accessCode': 'string', 'includeAup': True, 'requireScrolling': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}
     )
     return endpoint_result
 
@@ -133,6 +300,7 @@ def create_hotspot_portal_default(api):
         description=None,
         name=None,
         payload=None,
+        portal_test_url=None,
         portal_type=None,
         settings=None
     )
@@ -151,30 +319,30 @@ def test_create_hotspot_portal_default(api, validator):
             raise original_e
 
 
-def is_valid_get_hotspot_portal_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6cbcecf65a0155fcad602d3ac16531a7_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_91257d81be4f5a0486cc085499c19b1c_v3_0_0').validate(obj.response)
     return True
 
 
-def get_hotspot_portal_by_id(api):
-    endpoint_result = api.hotspot_portal.get_hotspot_portal_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.hotspot_portal.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.hotspot_portal
-def test_get_hotspot_portal_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_hotspot_portal_by_id(
+        assert is_valid_get_version(
             validator,
-            get_hotspot_portal_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -182,129 +350,19 @@ def test_get_hotspot_portal_by_id(api, validator):
             raise original_e
 
 
-def get_hotspot_portal_by_id_default(api):
-    endpoint_result = api.hotspot_portal.get_hotspot_portal_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.hotspot_portal.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.hotspot_portal
-def test_get_hotspot_portal_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_hotspot_portal_by_id(
+        assert is_valid_get_version(
             validator,
-            get_hotspot_portal_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_hotspot_portal_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0ae4af25df565334b20a24c4878b68e4_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_hotspot_portal_by_id(api):
-    endpoint_result = api.hotspot_portal.update_hotspot_portal_by_id(
-        active_validation=False,
-        description='string',
-        id='string',
-        name='string',
-        payload=None,
-        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string']}}
-    )
-    return endpoint_result
-
-
-@pytest.mark.hotspot_portal
-def test_update_hotspot_portal_by_id(api, validator):
-    try:
-        assert is_valid_update_hotspot_portal_by_id(
-            validator,
-            update_hotspot_portal_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_hotspot_portal_by_id_default(api):
-    endpoint_result = api.hotspot_portal.update_hotspot_portal_by_id(
-        active_validation=False,
-        id='string',
-        description=None,
-        name=None,
-        payload=None,
-        settings=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.hotspot_portal
-def test_update_hotspot_portal_by_id_default(api, validator):
-    try:
-        assert is_valid_update_hotspot_portal_by_id(
-            validator,
-            update_hotspot_portal_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_hotspot_portal_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1a344d1c6f535789b7badbaa502e8d3b_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_hotspot_portal_by_id(api):
-    endpoint_result = api.hotspot_portal.delete_hotspot_portal_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.hotspot_portal
-def test_delete_hotspot_portal_by_id(api, validator):
-    try:
-        assert is_valid_delete_hotspot_portal_by_id(
-            validator,
-            delete_hotspot_portal_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_hotspot_portal_by_id_default(api):
-    endpoint_result = api.hotspot_portal.delete_hotspot_portal_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.hotspot_portal
-def test_delete_hotspot_portal_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_hotspot_portal_by_id(
-            validator,
-            delete_hotspot_portal_by_id_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

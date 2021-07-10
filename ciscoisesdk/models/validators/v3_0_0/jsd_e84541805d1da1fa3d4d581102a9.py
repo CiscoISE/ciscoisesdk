@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine 500leaveDomain data model.
+"""Identity Services Engine leaveDomain data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9(object):
-    """500leaveDomain request schema definition."""
+    """leaveDomain request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -57,24 +57,14 @@ class JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "additionalData"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "OperationAdditionalData"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

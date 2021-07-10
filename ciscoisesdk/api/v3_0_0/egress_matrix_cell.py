@@ -74,6 +74,492 @@ class EgressMatrixCell(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
+    def clear_all_matrix_cells(self,
+                               headers=None,
+                               **query_parameters):
+        """This API allows the client to clear all the egress matrix cells.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/ers/config/egressmatrixcell/clearallmatrixcells')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_f503ab54e2921d713ed88f51c9_v3_0_0', _api_response)
+
+    def set_all_cells_status(self,
+                             status,
+                             headers=None,
+                             **query_parameters):
+        """his API allows the client to set status of all the egress matrix
+        cells.
+
+        Args:
+            status(basestring): status path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(status, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'status': status,
+        }
+
+        e_url = ('/ers/config/egressmatrixcell/status/{status}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_f47f525dbd71ef49710ef578_v3_0_0', _api_response)
+
+    def clone_matrix_cell(self,
+                          dst_sgt_id,
+                          id,
+                          src_sgt_id,
+                          headers=None,
+                          **query_parameters):
+        """This API allows the client to clone an egress matrix cell.
+
+        Args:
+            id(basestring): id path parameter.
+            src_sgt_id(basestring): srcSgtId path parameter.
+            dst_sgt_id(basestring): dstSgtId path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+        check_type(src_sgt_id, basestring,
+                   may_be_none=False)
+        check_type(dst_sgt_id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+            'srcSgtId': src_sgt_id,
+            'dstSgtId': dst_sgt_id,
+        }
+
+        e_url = ('/ers/config/egressmatrixcell/clonecell/{id}/srcSgt/{srcS'
+                 + 'gtId}/dstSgt/{dstSgtId}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_a1e6c05d05e67906b3b59bbe6d274_v3_0_0', _api_response)
+
+    def get_egress_matrix_cell_by_id(self,
+                                     id,
+                                     headers=None,
+                                     **query_parameters):
+        """This API allows the client to get an egress matrix cell by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/egressmatrixcell/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_cdc971b23285b87945021bd5983d1cd_v3_0_0', _api_response)
+
+    def update_egress_matrix_cell_by_id(self,
+                                        id,
+                                        default_rule=None,
+                                        description=None,
+                                        destination_sgt_id=None,
+                                        matrix_cell_status=None,
+                                        name=None,
+                                        sgacls=None,
+                                        source_sgt_id=None,
+                                        headers=None,
+                                        payload=None,
+                                        active_validation=True,
+                                        **query_parameters):
+        """This API allows the client to update an egress matrix cell.
+
+        Args:
+            default_rule(string): Allowed values: - NONE, - DENY_IP,
+                - PERMIT_IP, property of the request
+                body.
+            description(string): description, property of the
+                request body.
+            destination_sgt_id(string): destinationSgtId, property
+                of the request body.
+            id(string): id, property of the request body.
+            matrix_cell_status(string): Allowed values: - DISABLED,
+                - ENABLED, - MONITOR, property of the
+                request body.
+            name(string): name, property of the request body.
+            sgacls(list): sgacls, property of the request body (list
+                of strings).
+            source_sgt_id(string): sourceSgtId, property of the
+                request body.
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'sourceSgtId':
+                    source_sgt_id,
+                'destinationSgtId':
+                    destination_sgt_id,
+                'matrixCellStatus':
+                    matrix_cell_status,
+                'defaultRule':
+                    default_rule,
+                'sgacls':
+                    sgacls,
+            }
+            _payload = {
+                'EgressMatrixCell': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_ce83fba942c25938bae0c7012df68317_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/egressmatrixcell/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_ce83fba942c25938bae0c7012df68317_v3_0_0', _api_response)
+
+    def delete_egress_matrix_cell_by_id(self,
+                                        id,
+                                        headers=None,
+                                        **query_parameters):
+        """This API deletes an egress matrix cell.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/egressmatrixcell/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_e4393915121d5bcc94dfde6c8f6f7f1c_v3_0_0', _api_response)
+
     def get_all_egress_matrix_cell(self,
                                    filter=None,
                                    filter_type=None,
@@ -83,7 +569,18 @@ class EgressMatrixCell(object):
                                    sortdsc=None,
                                    headers=None,
                                    **query_parameters):
-        """Get all EgressMatrixCell.
+        """This API allows the client to get all the egress matrix cell.
+        Filter:   [sgtSrcValue, matrixStatus, description,
+        sgtSrcName, sgtDstName, sgtDstValue]   To search guest
+        users by using  toDate  column,follow the format:   DD-
+        MON-YY (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [description, sgtSrcName, sgtDstName,
+        sgtDstValue].
 
         Args:
             page(int): page query parameter. Page number.
@@ -147,6 +644,12 @@ class EgressMatrixCell(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -199,7 +702,18 @@ class EgressMatrixCell(object):
                                              sortdsc=None,
                                              headers=None,
                                              **query_parameters):
-        """Get all EgressMatrixCell.
+        """This API allows the client to get all the egress matrix cell.
+        Filter:   [sgtSrcValue, matrixStatus, description,
+        sgtSrcName, sgtDstName, sgtDstValue]   To search guest
+        users by using  toDate  column,follow the format:   DD-
+        MON-YY (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [description, sgtSrcName, sgtDstName,
+        sgtDstValue].
 
         Args:
             page(int): page query parameter. Page number.
@@ -278,17 +792,19 @@ class EgressMatrixCell(object):
                                   payload=None,
                                   active_validation=True,
                                   **query_parameters):
-        """Create EgressMatrixCell.
+        """This API creates an egress matrix cell.
 
         Args:
-            default_rule(string): defaultRule, property of the
-                request body.
+            default_rule(string): Allowed values: - NONE, - DENY_IP,
+                - PERMIT_IP, property of the request
+                body.
             description(string): description, property of the
                 request body.
             destination_sgt_id(string): destinationSgtId, property
                 of the request body.
-            matrix_cell_status(string): matrixCellStatus, property
-                of the request body.
+            matrix_cell_status(string): Allowed values: - DISABLED,
+                - ENABLED, - MONITOR, property of the
+                request body.
             name(string): name, property of the request body.
             sgacls(list): sgacls, property of the request body (list
                 of strings).
@@ -325,6 +841,12 @@ class EgressMatrixCell(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -386,14 +908,13 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_c560004d8b5f64a10f2cc070368c12_v3_0_0', _api_response)
 
-    def get_egress_matrix_cell_by_id(self,
-                                     id,
-                                     headers=None,
-                                     **query_parameters):
-        """Get EgressMatrixCell by Id.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the egress matrix cell.
 
         Args:
-            id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -427,8 +948,6 @@ class EgressMatrixCell(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -436,10 +955,9 @@ class EgressMatrixCell(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/egressmatrixcell/{id}')
+        e_url = ('/ers/config/egressmatrixcell/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -447,396 +965,7 @@ class EgressMatrixCell(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_cdc971b23285b87945021bd5983d1cd_v3_0_0', _api_response)
-
-    def update_egress_matrix_cell_by_id(self,
-                                        id,
-                                        default_rule=None,
-                                        description=None,
-                                        destination_sgt_id=None,
-                                        matrix_cell_status=None,
-                                        name=None,
-                                        sgacls=None,
-                                        source_sgt_id=None,
-                                        headers=None,
-                                        payload=None,
-                                        active_validation=True,
-                                        **query_parameters):
-        """Update EgressMatrixCell.
-
-        Args:
-            default_rule(string): defaultRule, property of the
-                request body.
-            description(string): description, property of the
-                request body.
-            destination_sgt_id(string): destinationSgtId, property
-                of the request body.
-            matrix_cell_status(string): matrixCellStatus, property
-                of the request body.
-            name(string): name, property of the request body.
-            sgacls(list): sgacls, property of the request body (list
-                of strings).
-            source_sgt_id(string): sourceSgtId, property of the
-                request body.
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'id':
-                    id,
-                'name':
-                    name,
-                'description':
-                    description,
-                'sourceSgtId':
-                    source_sgt_id,
-                'destinationSgtId':
-                    destination_sgt_id,
-                'matrixCellStatus':
-                    matrix_cell_status,
-                'defaultRule':
-                    default_rule,
-                'sgacls':
-                    sgacls,
-            }
-            _payload = {
-                'EgressMatrixCell': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ce83fba942c25938bae0c7012df68317_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/egressmatrixcell/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_ce83fba942c25938bae0c7012df68317_v3_0_0', _api_response)
-
-    def delete_egress_matrix_cell_by_id(self,
-                                        id,
-                                        headers=None,
-                                        **query_parameters):
-        """Delete EgressMatrixCell.
-
-        Args:
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-
-        e_url = ('/ers/config/egressmatrixcell/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
-        else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_e4393915121d5bcc94dfde6c8f6f7f1c_v3_0_0', _api_response)
-
-    def clear_all_matrix_cells(self,
-                               headers=None,
-                               **query_parameters):
-        """Clear all Egress Matrix Cells.
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        e_url = ('/ers/config/egressmatrixcell/clearallmatrixcells')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_f503ab54e2921d713ed88f51c9_v3_0_0', _api_response)
-
-    def set_all_cells_status(self,
-                             status,
-                             headers=None,
-                             **query_parameters):
-        """Set all Egress Cells Status.
-
-        Args:
-            status(basestring): status path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(status, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'status': status,
-        }
-
-        e_url = ('/ers/config/egressmatrixcell/status/{status}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_f47f525dbd71ef49710ef578_v3_0_0', _api_response)
-
-    def clone_matrix_cell(self,
-                          dst_sgt_id,
-                          id,
-                          src_sgt_id,
-                          headers=None,
-                          **query_parameters):
-        """Clone Egress Matrix Cell.
-
-        Args:
-            id(basestring): id path parameter.
-            src_sgt_id(basestring): srcSgtId path parameter.
-            dst_sgt_id(basestring): dstSgtId path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-        check_type(src_sgt_id, basestring,
-                   may_be_none=False)
-        check_type(dst_sgt_id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-            'srcSgtId': src_sgt_id,
-            'dstSgtId': dst_sgt_id,
-        }
-
-        e_url = ('/ers/config/egressmatrixcell/clonecell/{id}/srcSgt/{srcS'
-                 + 'gtId}/dstSgt/{dstSgtId}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_a1e6c05d05e67906b3b59bbe6d274_v3_0_0', _api_response)
+        return self._object_factory('bpm_c9da5c04b59358ac8bb1034340df4_v3_0_0', _api_response)
 
     def bulk_request_for_egress_matrix_cell(self,
                                             operation_type=None,
@@ -845,7 +974,7 @@ class EgressMatrixCell(object):
                                             payload=None,
                                             active_validation=True,
                                             **query_parameters):
-        """Bulk request for Egress Matrix Cell.
+        """This API allows the client to submit the bulk request\.
 
         Args:
             operation_type(string): operationType, property of the
@@ -939,7 +1068,7 @@ class EgressMatrixCell(object):
                                                bulkid,
                                                headers=None,
                                                **query_parameters):
-        """Monitor bulk status for Egress Matrix Cell.
+        """This API allows the client to monitor the bulk request.
 
         Args:
             bulkid(basestring): bulkid path parameter.

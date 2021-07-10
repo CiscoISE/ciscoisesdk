@@ -47,6 +47,40 @@ class JSONSchemaValidatorE9Ce4A1E1Cf955F098343646760E9D58(object):
                 "properties": {
                 "SearchResult": {
                 "properties": {
+                "nextPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "resources": {
                 "items": {
                 "properties": {
@@ -65,11 +99,6 @@ class JSONSchemaValidatorE9Ce4A1E1Cf955F098343646760E9D58(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 }
                 },
@@ -81,16 +110,9 @@ class JSONSchemaValidatorE9Ce4A1E1Cf955F098343646760E9D58(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

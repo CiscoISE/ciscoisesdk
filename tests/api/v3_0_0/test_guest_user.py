@@ -29,6 +29,856 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_approve_guest_user_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c67b4dcffba052ae8ece775bc61a1c21_v3_0_0').validate(obj.response)
+    return True
+
+
+def approve_guest_user_by_id(api):
+    endpoint_result = api.guest_user.approve_guest_user_by_id(
+        active_validation=False,
+        id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_approve_guest_user_by_id(api, validator):
+    try:
+        assert is_valid_approve_guest_user_by_id(
+            validator,
+            approve_guest_user_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def approve_guest_user_by_id_default(api):
+    endpoint_result = api.guest_user.approve_guest_user_by_id(
+        active_validation=False,
+        id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_approve_guest_user_by_id_default(api, validator):
+    try:
+        assert is_valid_approve_guest_user_by_id(
+            validator,
+            approve_guest_user_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_change_sponsor_password(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_2eb3472c4de150828b2dae61e2285313_v3_0_0').validate(obj.response)
+    return True
+
+
+def change_sponsor_password(api):
+    endpoint_result = api.guest_user.change_sponsor_password(
+        active_validation=False,
+        additional_data=[{'value': 'string', 'name': 'string'}],
+        payload=None,
+        portal_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_change_sponsor_password(api, validator):
+    try:
+        assert is_valid_change_sponsor_password(
+            validator,
+            change_sponsor_password(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def change_sponsor_password_default(api):
+    endpoint_result = api.guest_user.change_sponsor_password(
+        active_validation=False,
+        portal_id='string',
+        additional_data=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_change_sponsor_password_default(api, validator):
+    try:
+        assert is_valid_change_sponsor_password(
+            validator,
+            change_sponsor_password_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_suspend_guest_user_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_83983afcc8fe53b4824ae744a2ff3848_v3_0_0').validate(obj.response)
+    return True
+
+
+def suspend_guest_user_by_name(api):
+    endpoint_result = api.guest_user.suspend_guest_user_by_name(
+        active_validation=False,
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_suspend_guest_user_by_name(api, validator):
+    try:
+        assert is_valid_suspend_guest_user_by_name(
+            validator,
+            suspend_guest_user_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def suspend_guest_user_by_name_default(api):
+    endpoint_result = api.guest_user.suspend_guest_user_by_name(
+        active_validation=False,
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_suspend_guest_user_by_name_default(api, validator):
+    try:
+        assert is_valid_suspend_guest_user_by_name(
+            validator,
+            suspend_guest_user_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_reinstate_guest_user_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_18b21045846d5097a82cd61cb3c7eaf1_v3_0_0').validate(obj.response)
+    return True
+
+
+def reinstate_guest_user_by_name(api):
+    endpoint_result = api.guest_user.reinstate_guest_user_by_name(
+        active_validation=False,
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_reinstate_guest_user_by_name(api, validator):
+    try:
+        assert is_valid_reinstate_guest_user_by_name(
+            validator,
+            reinstate_guest_user_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def reinstate_guest_user_by_name_default(api):
+    endpoint_result = api.guest_user.reinstate_guest_user_by_name(
+        active_validation=False,
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_reinstate_guest_user_by_name_default(api, validator):
+    try:
+        assert is_valid_reinstate_guest_user_by_name(
+            validator,
+            reinstate_guest_user_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_guest_user_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_bcb7ec29968e5d5899df4a90d94ed659_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_guest_user_by_name(api):
+    endpoint_result = api.guest_user.get_guest_user_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_get_guest_user_by_name(api, validator):
+    try:
+        assert is_valid_get_guest_user_by_name(
+            validator,
+            get_guest_user_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_guest_user_by_name_default(api):
+    endpoint_result = api.guest_user.get_guest_user_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_get_guest_user_by_name_default(api, validator):
+    try:
+        assert is_valid_get_guest_user_by_name(
+            validator,
+            get_guest_user_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_guest_user_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_f24049df29d059c48eef86d381ffad5d_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_guest_user_by_name(api):
+    endpoint_result = api.guest_user.update_guest_user_by_name(
+        active_validation=False,
+        custom_fields={},
+        description='string',
+        guest_access_info={'validDays': 0, 'fromDate': 'string', 'toDate': 'string', 'location': 'string', 'ssid': 'string', 'groupTag': 'string'},
+        guest_info={'firstName': 'string', 'lastName': 'string', 'company': 'string', 'creationTime': 'string', 'notificationLanguage': 'string', 'userName': 'string', 'emailAddress': 'string', 'phoneNumber': 'string', 'password': 'string', 'enabled': True, 'smsServiceProvider': 'string'},
+        guest_type='string',
+        id='string',
+        name='string',
+        payload=None,
+        portal_id='string',
+        reason_for_visit='string',
+        sponsor_user_id='string',
+        sponsor_user_name='string',
+        status='string',
+        status_reason='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_update_guest_user_by_name(api, validator):
+    try:
+        assert is_valid_update_guest_user_by_name(
+            validator,
+            update_guest_user_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_guest_user_by_name_default(api):
+    endpoint_result = api.guest_user.update_guest_user_by_name(
+        active_validation=False,
+        name='string',
+        custom_fields=None,
+        description=None,
+        guest_access_info=None,
+        guest_info=None,
+        guest_type=None,
+        id=None,
+        payload=None,
+        portal_id=None,
+        reason_for_visit=None,
+        sponsor_user_id=None,
+        sponsor_user_name=None,
+        status=None,
+        status_reason=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_update_guest_user_by_name_default(api, validator):
+    try:
+        assert is_valid_update_guest_user_by_name(
+            validator,
+            update_guest_user_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_guest_user_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_76ef15d7c6b259f5859ee9675c38887c_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_guest_user_by_name(api):
+    endpoint_result = api.guest_user.delete_guest_user_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_delete_guest_user_by_name(api, validator):
+    try:
+        assert is_valid_delete_guest_user_by_name(
+            validator,
+            delete_guest_user_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_guest_user_by_name_default(api):
+    endpoint_result = api.guest_user.delete_guest_user_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_delete_guest_user_by_name_default(api, validator):
+    try:
+        assert is_valid_delete_guest_user_by_name(
+            validator,
+            delete_guest_user_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_reset_guest_user_password_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_7ea6ea4e41d85f83b6f6c10ce38bb9ed_v3_0_0').validate(obj.response)
+    return True
+
+
+def reset_guest_user_password_by_id(api):
+    endpoint_result = api.guest_user.reset_guest_user_password_by_id(
+        active_validation=False,
+        id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_reset_guest_user_password_by_id(api, validator):
+    try:
+        assert is_valid_reset_guest_user_password_by_id(
+            validator,
+            reset_guest_user_password_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def reset_guest_user_password_by_id_default(api):
+    endpoint_result = api.guest_user.reset_guest_user_password_by_id(
+        active_validation=False,
+        id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_reset_guest_user_password_by_id_default(api, validator):
+    try:
+        assert is_valid_reset_guest_user_password_by_id(
+            validator,
+            reset_guest_user_password_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_reinstate_guest_user_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_4dfcba4a0f685c168bdf2b5b2be317ac_v3_0_0').validate(obj.response)
+    return True
+
+
+def reinstate_guest_user_by_id(api):
+    endpoint_result = api.guest_user.reinstate_guest_user_by_id(
+        active_validation=False,
+        id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_reinstate_guest_user_by_id(api, validator):
+    try:
+        assert is_valid_reinstate_guest_user_by_id(
+            validator,
+            reinstate_guest_user_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def reinstate_guest_user_by_id_default(api):
+    endpoint_result = api.guest_user.reinstate_guest_user_by_id(
+        active_validation=False,
+        id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_reinstate_guest_user_by_id_default(api, validator):
+    try:
+        assert is_valid_reinstate_guest_user_by_id(
+            validator,
+            reinstate_guest_user_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_guest_user_email(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_9a9fa9cbccbe50fcb1cd6a63fed47578_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_guest_user_email(api):
+    endpoint_result = api.guest_user.update_guest_user_email(
+        active_validation=False,
+        additional_data=[{'value': 'string', 'name': 'string'}],
+        id='string',
+        payload=None,
+        portal_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_update_guest_user_email(api, validator):
+    try:
+        assert is_valid_update_guest_user_email(
+            validator,
+            update_guest_user_email(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_guest_user_email_default(api):
+    endpoint_result = api.guest_user.update_guest_user_email(
+        active_validation=False,
+        id='string',
+        portal_id='string',
+        additional_data=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_update_guest_user_email_default(api, validator):
+    try:
+        assert is_valid_update_guest_user_email(
+            validator,
+            update_guest_user_email_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_guest_user_sms(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_290601ba14b751f98206ca2e19cff3fe_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_guest_user_sms(api):
+    endpoint_result = api.guest_user.update_guest_user_sms(
+        active_validation=False,
+        id='string',
+        payload=None,
+        portal_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_update_guest_user_sms(api, validator):
+    try:
+        assert is_valid_update_guest_user_sms(
+            validator,
+            update_guest_user_sms(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_guest_user_sms_default(api):
+    endpoint_result = api.guest_user.update_guest_user_sms(
+        active_validation=False,
+        id='string',
+        portal_id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_update_guest_user_sms_default(api, validator):
+    try:
+        assert is_valid_update_guest_user_sms(
+            validator,
+            update_guest_user_sms_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_deny_guest_user_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_3c1e5e2a187652018c59b10155ac973d_v3_0_0').validate(obj.response)
+    return True
+
+
+def deny_guest_user_by_id(api):
+    endpoint_result = api.guest_user.deny_guest_user_by_id(
+        active_validation=False,
+        id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_deny_guest_user_by_id(api, validator):
+    try:
+        assert is_valid_deny_guest_user_by_id(
+            validator,
+            deny_guest_user_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def deny_guest_user_by_id_default(api):
+    endpoint_result = api.guest_user.deny_guest_user_by_id(
+        active_validation=False,
+        id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_deny_guest_user_by_id_default(api, validator):
+    try:
+        assert is_valid_deny_guest_user_by_id(
+            validator,
+            deny_guest_user_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_guest_user_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_2645275c3c7d5a3a83d9f7441972d399_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_guest_user_by_id(api):
+    endpoint_result = api.guest_user.get_guest_user_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_get_guest_user_by_id(api, validator):
+    try:
+        assert is_valid_get_guest_user_by_id(
+            validator,
+            get_guest_user_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_guest_user_by_id_default(api):
+    endpoint_result = api.guest_user.get_guest_user_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_get_guest_user_by_id_default(api, validator):
+    try:
+        assert is_valid_get_guest_user_by_id(
+            validator,
+            get_guest_user_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_guest_user_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_8754551b9c7c5847b17684c49399ff95_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_guest_user_by_id(api):
+    endpoint_result = api.guest_user.update_guest_user_by_id(
+        active_validation=False,
+        custom_fields={},
+        description='string',
+        guest_access_info={'validDays': 0, 'fromDate': 'string', 'toDate': 'string', 'location': 'string', 'ssid': 'string', 'groupTag': 'string'},
+        guest_info={'firstName': 'string', 'lastName': 'string', 'company': 'string', 'creationTime': 'string', 'notificationLanguage': 'string', 'userName': 'string', 'emailAddress': 'string', 'phoneNumber': 'string', 'password': 'string', 'enabled': True, 'smsServiceProvider': 'string'},
+        guest_type='string',
+        id='string',
+        name='string',
+        payload=None,
+        portal_id='string',
+        reason_for_visit='string',
+        sponsor_user_id='string',
+        sponsor_user_name='string',
+        status='string',
+        status_reason='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_update_guest_user_by_id(api, validator):
+    try:
+        assert is_valid_update_guest_user_by_id(
+            validator,
+            update_guest_user_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_guest_user_by_id_default(api):
+    endpoint_result = api.guest_user.update_guest_user_by_id(
+        active_validation=False,
+        id='string',
+        custom_fields=None,
+        description=None,
+        guest_access_info=None,
+        guest_info=None,
+        guest_type=None,
+        name=None,
+        payload=None,
+        portal_id=None,
+        reason_for_visit=None,
+        sponsor_user_id=None,
+        sponsor_user_name=None,
+        status=None,
+        status_reason=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_update_guest_user_by_id_default(api, validator):
+    try:
+        assert is_valid_update_guest_user_by_id(
+            validator,
+            update_guest_user_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_guest_user_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_1030e251b39f55d3ac2570a963a3ee9c_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_guest_user_by_id(api):
+    endpoint_result = api.guest_user.delete_guest_user_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_delete_guest_user_by_id(api, validator):
+    try:
+        assert is_valid_delete_guest_user_by_id(
+            validator,
+            delete_guest_user_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_guest_user_by_id_default(api):
+    endpoint_result = api.guest_user.delete_guest_user_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_user
+def test_delete_guest_user_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_guest_user_by_id(
+            validator,
+            delete_guest_user_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_guest_users(json_schema_validate, obj):
     if not obj:
         return False
@@ -103,12 +953,19 @@ def is_valid_create_guest_user(json_schema_validate, obj):
 def create_guest_user(api):
     endpoint_result = api.guest_user.create_guest_user(
         active_validation=False,
-        guest_access_info={'validDays': 0, 'fromDate': 'string', 'toDate': 'string', 'location': 'string'},
-        guest_info={'enabled': 'string', 'userName': 'string', 'password': 'string', 'firstName': 'string', 'lastName': 'string', 'emailAddress': 'string'},
+        custom_fields={},
+        description='string',
+        guest_access_info={'validDays': 0, 'fromDate': 'string', 'toDate': 'string', 'location': 'string', 'ssid': 'string', 'groupTag': 'string'},
+        guest_info={'firstName': 'string', 'lastName': 'string', 'company': 'string', 'creationTime': 'string', 'notificationLanguage': 'string', 'userName': 'string', 'emailAddress': 'string', 'phoneNumber': 'string', 'password': 'string', 'enabled': True, 'smsServiceProvider': 'string'},
         guest_type='string',
+        name='string',
         payload=None,
         portal_id='string',
-        reason_for_visit='string'
+        reason_for_visit='string',
+        sponsor_user_id='string',
+        sponsor_user_name='string',
+        status='string',
+        status_reason='string'
     )
     return endpoint_result
 
@@ -129,12 +986,19 @@ def test_create_guest_user(api, validator):
 def create_guest_user_default(api):
     endpoint_result = api.guest_user.create_guest_user(
         active_validation=False,
+        custom_fields=None,
+        description=None,
         guest_access_info=None,
         guest_info=None,
         guest_type=None,
+        name=None,
         payload=None,
         portal_id=None,
-        reason_for_visit=None
+        reason_for_visit=None,
+        sponsor_user_id=None,
+        sponsor_user_name=None,
+        status=None,
+        status_reason=None
     )
     return endpoint_result
 
@@ -145,768 +1009,6 @@ def test_create_guest_user_default(api, validator):
         assert is_valid_create_guest_user(
             validator,
             create_guest_user_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_guest_user_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2645275c3c7d5a3a83d9f7441972d399_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_guest_user_by_id(api):
-    endpoint_result = api.guest_user.get_guest_user_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_get_guest_user_by_id(api, validator):
-    try:
-        assert is_valid_get_guest_user_by_id(
-            validator,
-            get_guest_user_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_guest_user_by_id_default(api):
-    endpoint_result = api.guest_user.get_guest_user_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_get_guest_user_by_id_default(api, validator):
-    try:
-        assert is_valid_get_guest_user_by_id(
-            validator,
-            get_guest_user_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_guest_user_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8754551b9c7c5847b17684c49399ff95_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_guest_user_by_id(api):
-    endpoint_result = api.guest_user.update_guest_user_by_id(
-        active_validation=False,
-        guest_info={'enabled': True},
-        guest_type='string',
-        id='string',
-        payload=None,
-        portal_id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_update_guest_user_by_id(api, validator):
-    try:
-        assert is_valid_update_guest_user_by_id(
-            validator,
-            update_guest_user_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_guest_user_by_id_default(api):
-    endpoint_result = api.guest_user.update_guest_user_by_id(
-        active_validation=False,
-        id='string',
-        guest_info=None,
-        guest_type=None,
-        payload=None,
-        portal_id=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_update_guest_user_by_id_default(api, validator):
-    try:
-        assert is_valid_update_guest_user_by_id(
-            validator,
-            update_guest_user_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_guest_user_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1030e251b39f55d3ac2570a963a3ee9c_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_guest_user_by_id(api):
-    endpoint_result = api.guest_user.delete_guest_user_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_delete_guest_user_by_id(api, validator):
-    try:
-        assert is_valid_delete_guest_user_by_id(
-            validator,
-            delete_guest_user_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_guest_user_by_id_default(api):
-    endpoint_result = api.guest_user.delete_guest_user_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_delete_guest_user_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_guest_user_by_id(
-            validator,
-            delete_guest_user_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_guest_user_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bcb7ec29968e5d5899df4a90d94ed659_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_guest_user_by_name(api):
-    endpoint_result = api.guest_user.get_guest_user_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_get_guest_user_by_name(api, validator):
-    try:
-        assert is_valid_get_guest_user_by_name(
-            validator,
-            get_guest_user_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_guest_user_by_name_default(api):
-    endpoint_result = api.guest_user.get_guest_user_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_get_guest_user_by_name_default(api, validator):
-    try:
-        assert is_valid_get_guest_user_by_name(
-            validator,
-            get_guest_user_by_name_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_guest_user_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f24049df29d059c48eef86d381ffad5d_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_guest_user_by_name(api):
-    endpoint_result = api.guest_user.update_guest_user_by_name(
-        active_validation=False,
-        guest_info={'enabled': True},
-        guest_type='string',
-        id='string',
-        name='string',
-        payload=None,
-        portal_id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_update_guest_user_by_name(api, validator):
-    try:
-        assert is_valid_update_guest_user_by_name(
-            validator,
-            update_guest_user_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_guest_user_by_name_default(api):
-    endpoint_result = api.guest_user.update_guest_user_by_name(
-        active_validation=False,
-        name='string',
-        guest_info=None,
-        guest_type=None,
-        id=None,
-        payload=None,
-        portal_id=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_update_guest_user_by_name_default(api, validator):
-    try:
-        assert is_valid_update_guest_user_by_name(
-            validator,
-            update_guest_user_by_name_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_guest_user_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_76ef15d7c6b259f5859ee9675c38887c_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_guest_user_by_name(api):
-    endpoint_result = api.guest_user.delete_guest_user_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_delete_guest_user_by_name(api, validator):
-    try:
-        assert is_valid_delete_guest_user_by_name(
-            validator,
-            delete_guest_user_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_guest_user_by_name_default(api):
-    endpoint_result = api.guest_user.delete_guest_user_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_delete_guest_user_by_name_default(api, validator):
-    try:
-        assert is_valid_delete_guest_user_by_name(
-            validator,
-            delete_guest_user_by_name_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_approve_guest_user_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c67b4dcffba052ae8ece775bc61a1c21_v3_0_0').validate(obj.response)
-    return True
-
-
-def approve_guest_user_by_id(api):
-    endpoint_result = api.guest_user.approve_guest_user_by_id(
-        active_validation=False,
-        id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_approve_guest_user_by_id(api, validator):
-    try:
-        assert is_valid_approve_guest_user_by_id(
-            validator,
-            approve_guest_user_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def approve_guest_user_by_id_default(api):
-    endpoint_result = api.guest_user.approve_guest_user_by_id(
-        active_validation=False,
-        id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_approve_guest_user_by_id_default(api, validator):
-    try:
-        assert is_valid_approve_guest_user_by_id(
-            validator,
-            approve_guest_user_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_change_sponsor_password(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2eb3472c4de150828b2dae61e2285313_v3_0_0').validate(obj.response)
-    return True
-
-
-def change_sponsor_password(api):
-    endpoint_result = api.guest_user.change_sponsor_password(
-        active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
-        payload=None,
-        portal_id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_change_sponsor_password(api, validator):
-    try:
-        assert is_valid_change_sponsor_password(
-            validator,
-            change_sponsor_password(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def change_sponsor_password_default(api):
-    endpoint_result = api.guest_user.change_sponsor_password(
-        active_validation=False,
-        portal_id='string',
-        additional_data=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_change_sponsor_password_default(api, validator):
-    try:
-        assert is_valid_change_sponsor_password(
-            validator,
-            change_sponsor_password_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_deny_guest_user_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3c1e5e2a187652018c59b10155ac973d_v3_0_0').validate(obj.response)
-    return True
-
-
-def deny_guest_user_by_id(api):
-    endpoint_result = api.guest_user.deny_guest_user_by_id(
-        active_validation=False,
-        id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_deny_guest_user_by_id(api, validator):
-    try:
-        assert is_valid_deny_guest_user_by_id(
-            validator,
-            deny_guest_user_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def deny_guest_user_by_id_default(api):
-    endpoint_result = api.guest_user.deny_guest_user_by_id(
-        active_validation=False,
-        id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_deny_guest_user_by_id_default(api, validator):
-    try:
-        assert is_valid_deny_guest_user_by_id(
-            validator,
-            deny_guest_user_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_guest_user_email(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9a9fa9cbccbe50fcb1cd6a63fed47578_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_guest_user_email(api):
-    endpoint_result = api.guest_user.update_guest_user_email(
-        active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
-        id='string',
-        payload=None,
-        portal_id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_update_guest_user_email(api, validator):
-    try:
-        assert is_valid_update_guest_user_email(
-            validator,
-            update_guest_user_email(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_guest_user_email_default(api):
-    endpoint_result = api.guest_user.update_guest_user_email(
-        active_validation=False,
-        id='string',
-        portal_id='string',
-        additional_data=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_update_guest_user_email_default(api, validator):
-    try:
-        assert is_valid_update_guest_user_email(
-            validator,
-            update_guest_user_email_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_reinstate_guest_user_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_4dfcba4a0f685c168bdf2b5b2be317ac_v3_0_0').validate(obj.response)
-    return True
-
-
-def reinstate_guest_user_by_id(api):
-    endpoint_result = api.guest_user.reinstate_guest_user_by_id(
-        active_validation=False,
-        id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_reinstate_guest_user_by_id(api, validator):
-    try:
-        assert is_valid_reinstate_guest_user_by_id(
-            validator,
-            reinstate_guest_user_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def reinstate_guest_user_by_id_default(api):
-    endpoint_result = api.guest_user.reinstate_guest_user_by_id(
-        active_validation=False,
-        id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_reinstate_guest_user_by_id_default(api, validator):
-    try:
-        assert is_valid_reinstate_guest_user_by_id(
-            validator,
-            reinstate_guest_user_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_reinstate_guest_user_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_18b21045846d5097a82cd61cb3c7eaf1_v3_0_0').validate(obj.response)
-    return True
-
-
-def reinstate_guest_user_by_name(api):
-    endpoint_result = api.guest_user.reinstate_guest_user_by_name(
-        active_validation=False,
-        name='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_reinstate_guest_user_by_name(api, validator):
-    try:
-        assert is_valid_reinstate_guest_user_by_name(
-            validator,
-            reinstate_guest_user_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def reinstate_guest_user_by_name_default(api):
-    endpoint_result = api.guest_user.reinstate_guest_user_by_name(
-        active_validation=False,
-        name='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_reinstate_guest_user_by_name_default(api, validator):
-    try:
-        assert is_valid_reinstate_guest_user_by_name(
-            validator,
-            reinstate_guest_user_by_name_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_reset_guest_user_password_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_7ea6ea4e41d85f83b6f6c10ce38bb9ed_v3_0_0').validate(obj.response)
-    return True
-
-
-def reset_guest_user_password_by_id(api):
-    endpoint_result = api.guest_user.reset_guest_user_password_by_id(
-        active_validation=False,
-        id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_reset_guest_user_password_by_id(api, validator):
-    try:
-        assert is_valid_reset_guest_user_password_by_id(
-            validator,
-            reset_guest_user_password_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def reset_guest_user_password_by_id_default(api):
-    endpoint_result = api.guest_user.reset_guest_user_password_by_id(
-        active_validation=False,
-        id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_reset_guest_user_password_by_id_default(api, validator):
-    try:
-        assert is_valid_reset_guest_user_password_by_id(
-            validator,
-            reset_guest_user_password_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_guest_user_sms(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_290601ba14b751f98206ca2e19cff3fe_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_guest_user_sms(api):
-    endpoint_result = api.guest_user.update_guest_user_sms(
-        active_validation=False,
-        id='string',
-        payload=None,
-        portal_id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_update_guest_user_sms(api, validator):
-    try:
-        assert is_valid_update_guest_user_sms(
-            validator,
-            update_guest_user_sms(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_guest_user_sms_default(api):
-    endpoint_result = api.guest_user.update_guest_user_sms(
-        active_validation=False,
-        id='string',
-        portal_id='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_user
-def test_update_guest_user_sms_default(api, validator):
-    try:
-        assert is_valid_update_guest_user_sms(
-            validator,
-            update_guest_user_sms_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -927,6 +1029,7 @@ def is_valid_suspend_guest_user_by_id(json_schema_validate, obj):
 def suspend_guest_user_by_id(api):
     endpoint_result = api.guest_user.suspend_guest_user_by_id(
         active_validation=False,
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
         payload=None
     )
@@ -950,6 +1053,7 @@ def suspend_guest_user_by_id_default(api):
     endpoint_result = api.guest_user.suspend_guest_user_by_id(
         active_validation=False,
         id='string',
+        additional_data=None,
         payload=None
     )
     return endpoint_result
@@ -967,32 +1071,30 @@ def test_suspend_guest_user_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_suspend_guest_user_by_name(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_83983afcc8fe53b4824ae744a2ff3848_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_76abe22ea0c45f619731bd568c9f57f4_v3_0_0').validate(obj.response)
     return True
 
 
-def suspend_guest_user_by_name(api):
-    endpoint_result = api.guest_user.suspend_guest_user_by_name(
-        active_validation=False,
-        name='string',
-        payload=None
+def get_version(api):
+    endpoint_result = api.guest_user.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.guest_user
-def test_suspend_guest_user_by_name(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_suspend_guest_user_by_name(
+        assert is_valid_get_version(
             validator,
-            suspend_guest_user_by_name(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1000,21 +1102,19 @@ def test_suspend_guest_user_by_name(api, validator):
             raise original_e
 
 
-def suspend_guest_user_by_name_default(api):
-    endpoint_result = api.guest_user.suspend_guest_user_by_name(
-        active_validation=False,
-        name='string',
-        payload=None
+def get_version_default(api):
+    endpoint_result = api.guest_user.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.guest_user
-def test_suspend_guest_user_by_name_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_suspend_guest_user_by_name(
+        assert is_valid_get_version(
             validator,
-            suspend_guest_user_by_name_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -54,15 +54,9 @@ class JSONSchemaValidatorC97E7851003E5A63A2A8005Ac8807Dc7(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "customization"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "PortalCustomizationGlobalSetting"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -74,10 +74,11 @@ class DeviceAdministrationCommandSet(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_command_sets(self,
-                                          headers=None,
-                                          **query_parameters):
-        """Device Admin - Return list of command sets.
+    def get_device_admin_command_sets(self,
+                                      headers=None,
+                                      **query_parameters):
+        """Device Admin - Return list of command sets.  (Other CRUD APIs
+        available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -119,7 +120,7 @@ class DeviceAdministrationCommandSet(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/policy/device-admin/command-sets')
+        e_url = ('/v1/policy/device-admin/command-sets')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -127,4 +128,4 @@ class DeviceAdministrationCommandSet(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e68f07767522ba1e49dc474e936d2_v3_0_0', _api_response)
+        return self._object_factory('bpm_e0977618453b1b00e1c2b4cfa1999_v3_0_0', _api_response)

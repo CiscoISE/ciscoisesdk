@@ -29,122 +29,6 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_sxp_vpns(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2a93d058764b51dc922e41bbe4ff7cd6_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_sxp_vpns(api):
-    endpoint_result = api.sxp_vpns.get_all_sxp_vpns(
-        filter='value1,value2',
-        filter_type='string',
-        page=0,
-        size=0,
-        sortasc='string',
-        sortdsc='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.sxp_vpns
-def test_get_all_sxp_vpns(api, validator):
-    try:
-        assert is_valid_get_all_sxp_vpns(
-            validator,
-            get_all_sxp_vpns(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_sxp_vpns_default(api):
-    endpoint_result = api.sxp_vpns.get_all_sxp_vpns(
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sortasc=None,
-        sortdsc=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.sxp_vpns
-def test_get_all_sxp_vpns_default(api, validator):
-    try:
-        assert is_valid_get_all_sxp_vpns(
-            validator,
-            get_all_sxp_vpns_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_sxp_vpn(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1a693347bdd15bb19d69a75f088498ce_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_sxp_vpn(api):
-    endpoint_result = api.sxp_vpns.create_sxp_vpn(
-        active_validation=False,
-        id='string',
-        payload=None,
-        sxp_vpn_name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.sxp_vpns
-def test_create_sxp_vpn(api, validator):
-    try:
-        assert is_valid_create_sxp_vpn(
-            validator,
-            create_sxp_vpn(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_sxp_vpn_default(api):
-    endpoint_result = api.sxp_vpns.create_sxp_vpn(
-        active_validation=False,
-        id=None,
-        payload=None,
-        sxp_vpn_name=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.sxp_vpns
-def test_create_sxp_vpn_default(api, validator):
-    try:
-        assert is_valid_create_sxp_vpn(
-            validator,
-            create_sxp_vpn_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_get_sxp_vpn_by_id(json_schema_validate, obj):
     if not obj:
         return False
@@ -245,6 +129,170 @@ def test_delete_sxp_vpn_by_id_default(api, validator):
             raise original_e
 
 
+def is_valid_get_all_sxp_vpns(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_2a93d058764b51dc922e41bbe4ff7cd6_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_all_sxp_vpns(api):
+    endpoint_result = api.sxp_vpns.get_all_sxp_vpns(
+        filter='value1,value2',
+        filter_type='string',
+        page=0,
+        size=0,
+        sortasc='string',
+        sortdsc='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_vpns
+def test_get_all_sxp_vpns(api, validator):
+    try:
+        assert is_valid_get_all_sxp_vpns(
+            validator,
+            get_all_sxp_vpns(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_all_sxp_vpns_default(api):
+    endpoint_result = api.sxp_vpns.get_all_sxp_vpns(
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sortasc=None,
+        sortdsc=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_vpns
+def test_get_all_sxp_vpns_default(api, validator):
+    try:
+        assert is_valid_get_all_sxp_vpns(
+            validator,
+            get_all_sxp_vpns_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_sxp_vpn(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_1a693347bdd15bb19d69a75f088498ce_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_sxp_vpn(api):
+    endpoint_result = api.sxp_vpns.create_sxp_vpn(
+        active_validation=False,
+        payload=None,
+        sxp_vpn_name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_vpns
+def test_create_sxp_vpn(api, validator):
+    try:
+        assert is_valid_create_sxp_vpn(
+            validator,
+            create_sxp_vpn(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_sxp_vpn_default(api):
+    endpoint_result = api.sxp_vpns.create_sxp_vpn(
+        active_validation=False,
+        payload=None,
+        sxp_vpn_name=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_vpns
+def test_create_sxp_vpn_default(api, validator):
+    try:
+        assert is_valid_create_sxp_vpn(
+            validator,
+            create_sxp_vpn_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_36ca67bf525555b086ecee4cb93e9aee_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.sxp_vpns.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_vpns
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.sxp_vpns.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_vpns
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_bulk_request_for_sxp_vpns(json_schema_validate, obj):
     if not obj:
         return False
@@ -252,7 +300,7 @@ def is_valid_bulk_request_for_sxp_vpns(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2549a746755c588c928d15a59f8a693d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_be45eed0938a5143bf85ffd5fd4205d0_v3_0_0').validate(obj.response)
     return True
 
 

@@ -68,17 +68,18 @@ class JSONSchemaValidatorCa28129793D1569BB50DE9F43B0D0Ee8(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "notificationEnabled": {
                 "type": "boolean"
                 },
+                "password": {
+                "type": "string"
+                },
                 "smtpPort": {
+                "type": "string"
+                },
+                "smtpServer": {
                 "type": "string"
                 },
                 "useDefaultFromAddress": {
@@ -89,14 +90,14 @@ class JSONSchemaValidatorCa28129793D1569BB50DE9F43B0D0Ee8(object):
                 },
                 "useTLSorSSLEncryption": {
                 "type": "boolean"
+                },
+                "userName": {
+                "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSGuestSmtpNotificationSettings"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

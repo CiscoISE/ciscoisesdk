@@ -29,58 +29,6 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_native_supplicant_profile(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6470fa9802505d7bbdf85b951581db47_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_native_supplicant_profile(api):
-    endpoint_result = api.native_supplicant_profile.get_all_native_supplicant_profile(
-        page=0,
-        size=0
-    )
-    return endpoint_result
-
-
-@pytest.mark.native_supplicant_profile
-def test_get_all_native_supplicant_profile(api, validator):
-    try:
-        assert is_valid_get_all_native_supplicant_profile(
-            validator,
-            get_all_native_supplicant_profile(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_native_supplicant_profile_default(api):
-    endpoint_result = api.native_supplicant_profile.get_all_native_supplicant_profile(
-        page=None,
-        size=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.native_supplicant_profile
-def test_get_all_native_supplicant_profile_default(api, validator):
-    try:
-        assert is_valid_get_all_native_supplicant_profile(
-            validator,
-            get_all_native_supplicant_profile_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_get_native_supplicant_profile_by_id(json_schema_validate, obj):
     if not obj:
         return False
@@ -235,6 +183,108 @@ def test_delete_native_supplicant_profile_by_id_default(api, validator):
         assert is_valid_delete_native_supplicant_profile_by_id(
             validator,
             delete_native_supplicant_profile_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_all_native_supplicant_profile(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_6470fa9802505d7bbdf85b951581db47_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_all_native_supplicant_profile(api):
+    endpoint_result = api.native_supplicant_profile.get_all_native_supplicant_profile(
+        page=0,
+        size=0
+    )
+    return endpoint_result
+
+
+@pytest.mark.native_supplicant_profile
+def test_get_all_native_supplicant_profile(api, validator):
+    try:
+        assert is_valid_get_all_native_supplicant_profile(
+            validator,
+            get_all_native_supplicant_profile(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_all_native_supplicant_profile_default(api):
+    endpoint_result = api.native_supplicant_profile.get_all_native_supplicant_profile(
+        page=None,
+        size=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.native_supplicant_profile
+def test_get_all_native_supplicant_profile_default(api, validator):
+    try:
+        assert is_valid_get_all_native_supplicant_profile(
+            validator,
+            get_all_native_supplicant_profile_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_f577c55d36b05178b0275dd88c71e118_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.native_supplicant_profile.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.native_supplicant_profile
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.native_supplicant_profile.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.native_supplicant_profile
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

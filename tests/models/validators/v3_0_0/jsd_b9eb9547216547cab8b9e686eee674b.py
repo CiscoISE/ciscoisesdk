@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getTACACSExternalServersById data model.
+"""Identity Services Engine getTACACSServerSequenceById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,48 +38,64 @@ from builtins import *
 
 
 class JSONSchemaValidatorB9Eb9547216547CAb8B9E686Eee674B(object):
-    """getTACACSExternalServersById request schema definition."""
+    """getTACACSServerSequenceById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB9Eb9547216547CAb8B9E686Eee674B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "TacacsExternalServer": {
+                "TacacsServerSequence": {
                 "properties": {
-                "connectionPort": {
-                "type": "integer"
-                },
                 "description":
                  {
                 "type": "string"
                 },
-                "hostIP": {
+                "id": {
                 "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "localAccounting": {
+                "type": "boolean"
                 },
                 "name": {
                 "type": "string"
                 },
-                "sharedSecret": {
+                "prefixDelimiter": {
                 "type": "string"
                 },
-                "singleConnect": {
+                "prefixStrip": {
                 "type": "boolean"
                 },
-                "timeout": {
-                "type": "integer"
+                "remoteAccounting": {
+                "type": "boolean"
+                },
+                "serverList": {
+                "type": "string"
+                },
+                "suffixDelimiter": {
+                "type": "string"
+                },
+                "suffixStrip": {
+                "type": "boolean"
                 }
                 },
-                "required": [
-                "name",
-                "hostIP"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsExternalServer"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

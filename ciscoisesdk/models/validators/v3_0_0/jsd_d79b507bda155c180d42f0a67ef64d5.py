@@ -47,11 +47,34 @@ class JSONSchemaValidatorD79B507Bda155C180D42F0A67Ef64D5(object):
                 "properties": {
                 "ErsAncPolicy": {
                 "properties": {
-                "actions": {
+                "action": {
                 "items": {
+                "enum": [
+                "QUARANTINE",
+                "PORTBOUNCE",
+                "SHUTDOWN",
+                "RE_AUTHENTICATE"
+                ],
                 "type": "string"
                 },
                 "type": "array"
+                },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "name": {
                 "type": "string"

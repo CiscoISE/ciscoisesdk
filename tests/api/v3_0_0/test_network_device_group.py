@@ -29,35 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_device_group(json_schema_validate, obj):
+def is_valid_get_network_device_group_by_name(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2a1af553d663556ca429a10ed82effda_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e1d938f110e059a5abcb9cc8fb3cbd7c_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_network_device_group(api):
-    endpoint_result = api.network_device_group.get_all_network_device_group(
-        filter='value1,value2',
-        filter_type='string',
-        page=0,
-        size=0,
-        sortasc='string',
-        sortdsc='string'
+def get_network_device_group_by_name(api):
+    endpoint_result = api.network_device_group.get_network_device_group_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_device_group
-def test_get_all_network_device_group(api, validator):
+def test_get_network_device_group_by_name(api, validator):
     try:
-        assert is_valid_get_all_network_device_group(
+        assert is_valid_get_network_device_group_by_name(
             validator,
-            get_all_network_device_group(api)
+            get_network_device_group_by_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -65,82 +60,19 @@ def test_get_all_network_device_group(api, validator):
             raise original_e
 
 
-def get_all_network_device_group_default(api):
-    endpoint_result = api.network_device_group.get_all_network_device_group(
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sortasc=None,
-        sortdsc=None
+def get_network_device_group_by_name_default(api):
+    endpoint_result = api.network_device_group.get_network_device_group_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_device_group
-def test_get_all_network_device_group_default(api, validator):
+def test_get_network_device_group_by_name_default(api, validator):
     try:
-        assert is_valid_get_all_network_device_group(
+        assert is_valid_get_network_device_group_by_name(
             validator,
-            get_all_network_device_group_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_network_device_group(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6c38fb2e2dd45f4dab6ec3a19effd15a_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_network_device_group(api):
-    endpoint_result = api.network_device_group.create_network_device_group(
-        active_validation=False,
-        description='string',
-        name='string',
-        othername='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_device_group
-def test_create_network_device_group(api, validator):
-    try:
-        assert is_valid_create_network_device_group(
-            validator,
-            create_network_device_group(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_network_device_group_default(api):
-    endpoint_result = api.network_device_group.create_network_device_group(
-        active_validation=False,
-        description=None,
-        name=None,
-        othername=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_device_group
-def test_create_network_device_group_default(api, validator):
-    try:
-        assert is_valid_create_network_device_group(
-            validator,
-            create_network_device_group_default(api)
+            get_network_device_group_by_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -307,30 +239,35 @@ def test_delete_network_device_group_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_network_device_group_by_name(json_schema_validate, obj):
+def is_valid_get_all_network_device_group(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e1d938f110e059a5abcb9cc8fb3cbd7c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2a1af553d663556ca429a10ed82effda_v3_0_0').validate(obj.response)
     return True
 
 
-def get_network_device_group_by_name(api):
-    endpoint_result = api.network_device_group.get_network_device_group_by_name(
-        name='string'
+def get_all_network_device_group(api):
+    endpoint_result = api.network_device_group.get_all_network_device_group(
+        filter='value1,value2',
+        filter_type='string',
+        page=0,
+        size=0,
+        sortasc='string',
+        sortdsc='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_device_group
-def test_get_network_device_group_by_name(api, validator):
+def test_get_all_network_device_group(api, validator):
     try:
-        assert is_valid_get_network_device_group_by_name(
+        assert is_valid_get_all_network_device_group(
             validator,
-            get_network_device_group_by_name(api)
+            get_all_network_device_group(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -338,19 +275,132 @@ def test_get_network_device_group_by_name(api, validator):
             raise original_e
 
 
-def get_network_device_group_by_name_default(api):
-    endpoint_result = api.network_device_group.get_network_device_group_by_name(
-        name='string'
+def get_all_network_device_group_default(api):
+    endpoint_result = api.network_device_group.get_all_network_device_group(
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sortasc=None,
+        sortdsc=None
     )
     return endpoint_result
 
 
 @pytest.mark.network_device_group
-def test_get_network_device_group_by_name_default(api, validator):
+def test_get_all_network_device_group_default(api, validator):
     try:
-        assert is_valid_get_network_device_group_by_name(
+        assert is_valid_get_all_network_device_group(
             validator,
-            get_network_device_group_by_name_default(api)
+            get_all_network_device_group_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_network_device_group(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_6c38fb2e2dd45f4dab6ec3a19effd15a_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_network_device_group(api):
+    endpoint_result = api.network_device_group.create_network_device_group(
+        active_validation=False,
+        description='string',
+        name='string',
+        othername='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device_group
+def test_create_network_device_group(api, validator):
+    try:
+        assert is_valid_create_network_device_group(
+            validator,
+            create_network_device_group(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_network_device_group_default(api):
+    endpoint_result = api.network_device_group.create_network_device_group(
+        active_validation=False,
+        description=None,
+        name=None,
+        othername=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device_group
+def test_create_network_device_group_default(api, validator):
+    try:
+        assert is_valid_create_network_device_group(
+            validator,
+            create_network_device_group_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_163f22d64bd4557d856a66ad6599d2d1_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.network_device_group.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device_group
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.network_device_group.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device_group
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

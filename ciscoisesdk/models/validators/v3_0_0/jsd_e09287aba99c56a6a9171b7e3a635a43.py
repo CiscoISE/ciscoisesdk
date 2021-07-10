@@ -45,14 +45,12 @@ class JSONSchemaValidatorE09287AbA99C56A6A9171B7E3A635A43(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "CertificateProfile": {
+                "properties": {
                 "allowedAsUserName": {
                 "type": "boolean"
                 },
                 "certificateAttributeName": {
-                "type": "string"
-                },
-                "description":
-                 {
                 "type": "string"
                 },
                 "externalIdentityStoreName": {
@@ -69,6 +67,9 @@ class JSONSchemaValidatorE09287AbA99C56A6A9171B7E3A635A43(object):
                 },
                 "usernameFrom": {
                 "type": "string"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"

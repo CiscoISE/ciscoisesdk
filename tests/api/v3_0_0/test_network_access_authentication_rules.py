@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_access_authentication_rules(json_schema_validate, obj):
+def is_valid_get_network_access_policy_by_id_authentication_rule_list(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_794bee301e7f5ccfa2e788dcafbf92cc_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_7956d836da955609bd9a5243101f3536_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_network_access_authentication_rules(api):
-    endpoint_result = api.network_access_authentication_rules.get_all_network_access_authentication_rules(
+def get_network_access_policy_by_id_authentication_rule_list(api):
+    endpoint_result = api.network_access_authentication_rules.get_network_access_policy_by_id_authentication_rule_list(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authentication_rules
-def test_get_all_network_access_authentication_rules(api, validator):
+def test_get_network_access_policy_by_id_authentication_rule_list(api, validator):
     try:
-        assert is_valid_get_all_network_access_authentication_rules(
+        assert is_valid_get_network_access_policy_by_id_authentication_rule_list(
             validator,
-            get_all_network_access_authentication_rules(api)
+            get_network_access_policy_by_id_authentication_rule_list(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,56 +60,57 @@ def test_get_all_network_access_authentication_rules(api, validator):
             raise original_e
 
 
-def get_all_network_access_authentication_rules_default(api):
-    endpoint_result = api.network_access_authentication_rules.get_all_network_access_authentication_rules(
+def get_network_access_policy_by_id_authentication_rule_list_default(api):
+    endpoint_result = api.network_access_authentication_rules.get_network_access_policy_by_id_authentication_rule_list(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authentication_rules
-def test_get_all_network_access_authentication_rules_default(api, validator):
+def test_get_network_access_policy_by_id_authentication_rule_list_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_authentication_rules(
+        assert is_valid_get_network_access_policy_by_id_authentication_rule_list(
             validator,
-            get_all_network_access_authentication_rules_default(api)
+            get_network_access_policy_by_id_authentication_rule_list_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_create_network_access_authentication_rule(json_schema_validate, obj):
+def is_valid_create_network_access_policy_by_id_authentication_rule(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0017f2fcf04554db9ea4cdc3a7024322_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c26e318c3c405713a55b4e162be8c890_v3_0_0').validate(obj.response)
     return True
 
 
-def create_network_access_authentication_rule(api):
-    endpoint_result = api.network_access_authentication_rules.create_network_access_authentication_rule(
+def create_network_access_policy_by_id_authentication_rule(api):
+    endpoint_result = api.network_access_authentication_rules.create_network_access_policy_by_id_authentication_rule(
         active_validation=False,
-        identity_source_id='string',
+        identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
         if_user_not_found='string',
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authentication_rules
-def test_create_network_access_authentication_rule(api, validator):
+def test_create_network_access_policy_by_id_authentication_rule(api, validator):
     try:
-        assert is_valid_create_network_access_authentication_rule(
+        assert is_valid_create_network_access_policy_by_id_authentication_rule(
             validator,
-            create_network_access_authentication_rule(api)
+            create_network_access_policy_by_id_authentication_rule(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -117,14 +118,15 @@ def test_create_network_access_authentication_rule(api, validator):
             raise original_e
 
 
-def create_network_access_authentication_rule_default(api):
-    endpoint_result = api.network_access_authentication_rules.create_network_access_authentication_rule(
+def create_network_access_policy_by_id_authentication_rule_default(api):
+    endpoint_result = api.network_access_authentication_rules.create_network_access_policy_by_id_authentication_rule(
         active_validation=False,
         policy_id='string',
-        identity_source_id=None,
+        identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,
         if_user_not_found=None,
+        link=None,
         payload=None,
         rule=None
     )
@@ -132,42 +134,43 @@ def create_network_access_authentication_rule_default(api):
 
 
 @pytest.mark.network_access_authentication_rules
-def test_create_network_access_authentication_rule_default(api, validator):
+def test_create_network_access_policy_by_id_authentication_rule_default(api, validator):
     try:
-        assert is_valid_create_network_access_authentication_rule(
+        assert is_valid_create_network_access_policy_by_id_authentication_rule(
             validator,
-            create_network_access_authentication_rule_default(api)
+            create_network_access_policy_by_id_authentication_rule_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_network_access_authentication_rule_by_id(json_schema_validate, obj):
+def is_valid_reset_hit_counts_network_access_policy_by_id_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_57a588d29d5a527388ee8498f746d1f5_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_362ffc5178ed53749ebcaadd1c2af785_v3_0_0').validate(obj.response)
     return True
 
 
-def get_network_access_authentication_rule_by_id(api):
-    endpoint_result = api.network_access_authentication_rules.get_network_access_authentication_rule_by_id(
-        id='string',
+def reset_hit_counts_network_access_policy_by_id_authentication_rules(api):
+    endpoint_result = api.network_access_authentication_rules.reset_hit_counts_network_access_policy_by_id_authentication_rules(
+        active_validation=False,
+        payload=None,
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authentication_rules
-def test_get_network_access_authentication_rule_by_id(api, validator):
+def test_reset_hit_counts_network_access_policy_by_id_authentication_rules(api, validator):
     try:
-        assert is_valid_get_network_access_authentication_rule_by_id(
+        assert is_valid_reset_hit_counts_network_access_policy_by_id_authentication_rules(
             validator,
-            get_network_access_authentication_rule_by_id(api)
+            reset_hit_counts_network_access_policy_by_id_authentication_rules(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -175,58 +178,112 @@ def test_get_network_access_authentication_rule_by_id(api, validator):
             raise original_e
 
 
-def get_network_access_authentication_rule_by_id_default(api):
-    endpoint_result = api.network_access_authentication_rules.get_network_access_authentication_rule_by_id(
-        id='string',
-        policy_id='string'
+def reset_hit_counts_network_access_policy_by_id_authentication_rules_default(api):
+    endpoint_result = api.network_access_authentication_rules.reset_hit_counts_network_access_policy_by_id_authentication_rules(
+        active_validation=False,
+        policy_id='string',
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authentication_rules
-def test_get_network_access_authentication_rule_by_id_default(api, validator):
+def test_reset_hit_counts_network_access_policy_by_id_authentication_rules_default(api, validator):
     try:
-        assert is_valid_get_network_access_authentication_rule_by_id(
+        assert is_valid_reset_hit_counts_network_access_policy_by_id_authentication_rules(
             validator,
-            get_network_access_authentication_rule_by_id_default(api)
+            reset_hit_counts_network_access_policy_by_id_authentication_rules_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_network_access_authentication_rule_by_id(json_schema_validate, obj):
+def is_valid_get_network_access_policy_by_id_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_aa4daefaa3b95ecca521188a43eacbd9_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_85a98a9a386755939fe1f1633be33689_v3_0_0').validate(obj.response)
     return True
 
 
-def update_network_access_authentication_rule_by_id(api):
-    endpoint_result = api.network_access_authentication_rules.update_network_access_authentication_rule_by_id(
+def get_network_access_policy_by_id_authentication_rule_by_id(api):
+    endpoint_result = api.network_access_authentication_rules.get_network_access_policy_by_id_authentication_rule_by_id(
+        policy_id='string',
+        rule_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_authentication_rules
+def test_get_network_access_policy_by_id_authentication_rule_by_id(api, validator):
+    try:
+        assert is_valid_get_network_access_policy_by_id_authentication_rule_by_id(
+            validator,
+            get_network_access_policy_by_id_authentication_rule_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_network_access_policy_by_id_authentication_rule_by_id_default(api):
+    endpoint_result = api.network_access_authentication_rules.get_network_access_policy_by_id_authentication_rule_by_id(
+        policy_id='string',
+        rule_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_authentication_rules
+def test_get_network_access_policy_by_id_authentication_rule_by_id_default(api, validator):
+    try:
+        assert is_valid_get_network_access_policy_by_id_authentication_rule_by_id(
+            validator,
+            get_network_access_policy_by_id_authentication_rule_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_network_access_policy_by_id_authentication_rule_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_ec5180b8603d5cf78c13d6d3c0be18c2_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_network_access_policy_by_id_authentication_rule_by_id(api):
+    endpoint_result = api.network_access_authentication_rules.update_network_access_policy_by_id_authentication_rule_by_id(
         active_validation=False,
-        id='string',
-        identity_source_id='string',
+        identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
         if_user_not_found='string',
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
+        rule_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authentication_rules
-def test_update_network_access_authentication_rule_by_id(api, validator):
+def test_update_network_access_policy_by_id_authentication_rule_by_id(api, validator):
     try:
-        assert is_valid_update_network_access_authentication_rule_by_id(
+        assert is_valid_update_network_access_policy_by_id_authentication_rule_by_id(
             validator,
-            update_network_access_authentication_rule_by_id(api)
+            update_network_access_policy_by_id_authentication_rule_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -234,15 +291,16 @@ def test_update_network_access_authentication_rule_by_id(api, validator):
             raise original_e
 
 
-def update_network_access_authentication_rule_by_id_default(api):
-    endpoint_result = api.network_access_authentication_rules.update_network_access_authentication_rule_by_id(
+def update_network_access_policy_by_id_authentication_rule_by_id_default(api):
+    endpoint_result = api.network_access_authentication_rules.update_network_access_policy_by_id_authentication_rule_by_id(
         active_validation=False,
-        id='string',
         policy_id='string',
-        identity_source_id=None,
+        rule_id='string',
+        identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,
         if_user_not_found=None,
+        link=None,
         payload=None,
         rule=None
     )
@@ -250,42 +308,42 @@ def update_network_access_authentication_rule_by_id_default(api):
 
 
 @pytest.mark.network_access_authentication_rules
-def test_update_network_access_authentication_rule_by_id_default(api, validator):
+def test_update_network_access_policy_by_id_authentication_rule_by_id_default(api, validator):
     try:
-        assert is_valid_update_network_access_authentication_rule_by_id(
+        assert is_valid_update_network_access_policy_by_id_authentication_rule_by_id(
             validator,
-            update_network_access_authentication_rule_by_id_default(api)
+            update_network_access_policy_by_id_authentication_rule_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_network_access_authentication_rule_by_id(json_schema_validate, obj):
+def is_valid_delete_network_access_policy_by_id_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8af104d12b5c5e668af1504feca5c9b1_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_da4f3b797ace547fa8f298d8c5197ce8_v3_0_0').validate(obj.response)
     return True
 
 
-def delete_network_access_authentication_rule_by_id(api):
-    endpoint_result = api.network_access_authentication_rules.delete_network_access_authentication_rule_by_id(
-        id='string',
-        policy_id='string'
+def delete_network_access_policy_by_id_authentication_rule_by_id(api):
+    endpoint_result = api.network_access_authentication_rules.delete_network_access_policy_by_id_authentication_rule_by_id(
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authentication_rules
-def test_delete_network_access_authentication_rule_by_id(api, validator):
+def test_delete_network_access_policy_by_id_authentication_rule_by_id(api, validator):
     try:
-        assert is_valid_delete_network_access_authentication_rule_by_id(
+        assert is_valid_delete_network_access_policy_by_id_authentication_rule_by_id(
             validator,
-            delete_network_access_authentication_rule_by_id(api)
+            delete_network_access_policy_by_id_authentication_rule_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -293,20 +351,20 @@ def test_delete_network_access_authentication_rule_by_id(api, validator):
             raise original_e
 
 
-def delete_network_access_authentication_rule_by_id_default(api):
-    endpoint_result = api.network_access_authentication_rules.delete_network_access_authentication_rule_by_id(
-        id='string',
-        policy_id='string'
+def delete_network_access_policy_by_id_authentication_rule_by_id_default(api):
+    endpoint_result = api.network_access_authentication_rules.delete_network_access_policy_by_id_authentication_rule_by_id(
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authentication_rules
-def test_delete_network_access_authentication_rule_by_id_default(api, validator):
+def test_delete_network_access_policy_by_id_authentication_rule_by_id_default(api, validator):
     try:
-        assert is_valid_delete_network_access_authentication_rule_by_id(
+        assert is_valid_delete_network_access_policy_by_id_authentication_rule_by_id(
             validator,
-            delete_network_access_authentication_rule_by_id_default(api)
+            delete_network_access_policy_by_id_authentication_rule_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

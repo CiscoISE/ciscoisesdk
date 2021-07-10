@@ -117,8 +117,8 @@ class JSONSchemaValidatorF46C01449D585B088490C4Db530C56D5(object):
                 },
                 "type": "object"
                 },
-                "id": {
-                "type": "string"
+                "isDefaultType": {
+                "type": "boolean"
                 },
                 "loginOptions": {
                 "properties": {

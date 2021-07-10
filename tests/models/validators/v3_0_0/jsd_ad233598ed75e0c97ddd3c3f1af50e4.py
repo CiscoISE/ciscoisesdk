@@ -47,6 +47,40 @@ class JSONSchemaValidatorAd233598Ed75E0C97DdD3C3F1Af50E4(object):
                 "properties": {
                 "SearchResult": {
                 "properties": {
+                "nextPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "resources": {
                 "items": {
                 "properties": {
@@ -65,11 +99,6 @@ class JSONSchemaValidatorAd233598Ed75E0C97DdD3C3F1Af50E4(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -84,16 +113,9 @@ class JSONSchemaValidatorAd233598Ed75E0C97DdD3C3F1Af50E4(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

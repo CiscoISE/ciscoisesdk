@@ -47,6 +47,40 @@ class JSONSchemaValidatorBdae59219027B4D40B94Fa3D(object):
                 "properties": {
                 "SearchResult": {
                 "properties": {
+                "nextPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "resources": {
                 "items": {
                 "properties": {
@@ -69,11 +103,6 @@ class JSONSchemaValidatorBdae59219027B4D40B94Fa3D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -88,16 +117,9 @@ class JSONSchemaValidatorBdae59219027B4D40B94Fa3D(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

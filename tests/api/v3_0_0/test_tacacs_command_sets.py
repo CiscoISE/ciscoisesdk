@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_tacacs_command_sets(json_schema_validate, obj):
+def is_valid_get_tacacs_command_sets_by_name(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c9a67d3e9015580f93a52627f19e9916_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_34f8ba0e97135ca6bacff94d5a76df97_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_tacacs_command_sets(api):
-    endpoint_result = api.tacacs_command_sets.get_all_tacacs_command_sets(
-
+def get_tacacs_command_sets_by_name(api):
+    endpoint_result = api.tacacs_command_sets.get_tacacs_command_sets_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_command_sets
-def test_get_all_tacacs_command_sets(api, validator):
+def test_get_tacacs_command_sets_by_name(api, validator):
     try:
-        assert is_valid_get_all_tacacs_command_sets(
+        assert is_valid_get_tacacs_command_sets_by_name(
             validator,
-            get_all_tacacs_command_sets(api)
+            get_tacacs_command_sets_by_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,79 +60,19 @@ def test_get_all_tacacs_command_sets(api, validator):
             raise original_e
 
 
-def get_all_tacacs_command_sets_default(api):
-    endpoint_result = api.tacacs_command_sets.get_all_tacacs_command_sets(
-
+def get_tacacs_command_sets_by_name_default(api):
+    endpoint_result = api.tacacs_command_sets.get_tacacs_command_sets_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_command_sets
-def test_get_all_tacacs_command_sets_default(api, validator):
+def test_get_tacacs_command_sets_by_name_default(api, validator):
     try:
-        assert is_valid_get_all_tacacs_command_sets(
+        assert is_valid_get_tacacs_command_sets_by_name(
             validator,
-            get_all_tacacs_command_sets_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_tacacs_command_sets(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d9cc879878ee5a34ac1c32f2f0cb8c6d_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_tacacs_command_sets(api):
-    endpoint_result = api.tacacs_command_sets.create_tacacs_command_sets(
-        active_validation=False,
-        commands={'commandList': [{'grant': 'string', 'command': 'string', 'arguments': 'string'}]},
-        description='string',
-        name='string',
-        payload=None,
-        permit_unmatched=True
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_command_sets
-def test_create_tacacs_command_sets(api, validator):
-    try:
-        assert is_valid_create_tacacs_command_sets(
-            validator,
-            create_tacacs_command_sets(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_tacacs_command_sets_default(api):
-    endpoint_result = api.tacacs_command_sets.create_tacacs_command_sets(
-        active_validation=False,
-        commands=None,
-        description=None,
-        name=None,
-        payload=None,
-        permit_unmatched=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.tacacs_command_sets
-def test_create_tacacs_command_sets_default(api, validator):
-    try:
-        assert is_valid_create_tacacs_command_sets(
-            validator,
-            create_tacacs_command_sets_default(api)
+            get_tacacs_command_sets_by_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -301,30 +241,31 @@ def test_delete_tacacs_command_sets_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_tacacs_command_sets_by_name(json_schema_validate, obj):
+def is_valid_get_all_tacacs_command_sets(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_34f8ba0e97135ca6bacff94d5a76df97_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c9a67d3e9015580f93a52627f19e9916_v3_0_0').validate(obj.response)
     return True
 
 
-def get_tacacs_command_sets_by_name(api):
-    endpoint_result = api.tacacs_command_sets.get_tacacs_command_sets_by_name(
-        name='string'
+def get_all_tacacs_command_sets(api):
+    endpoint_result = api.tacacs_command_sets.get_all_tacacs_command_sets(
+        page=0,
+        size=0
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_command_sets
-def test_get_tacacs_command_sets_by_name(api, validator):
+def test_get_all_tacacs_command_sets(api, validator):
     try:
-        assert is_valid_get_tacacs_command_sets_by_name(
+        assert is_valid_get_all_tacacs_command_sets(
             validator,
-            get_tacacs_command_sets_by_name(api)
+            get_all_tacacs_command_sets(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -332,19 +273,130 @@ def test_get_tacacs_command_sets_by_name(api, validator):
             raise original_e
 
 
-def get_tacacs_command_sets_by_name_default(api):
-    endpoint_result = api.tacacs_command_sets.get_tacacs_command_sets_by_name(
-        name='string'
+def get_all_tacacs_command_sets_default(api):
+    endpoint_result = api.tacacs_command_sets.get_all_tacacs_command_sets(
+        page=None,
+        size=None
     )
     return endpoint_result
 
 
 @pytest.mark.tacacs_command_sets
-def test_get_tacacs_command_sets_by_name_default(api, validator):
+def test_get_all_tacacs_command_sets_default(api, validator):
     try:
-        assert is_valid_get_tacacs_command_sets_by_name(
+        assert is_valid_get_all_tacacs_command_sets(
             validator,
-            get_tacacs_command_sets_by_name_default(api)
+            get_all_tacacs_command_sets_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_tacacs_command_sets(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_d9cc879878ee5a34ac1c32f2f0cb8c6d_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_tacacs_command_sets(api):
+    endpoint_result = api.tacacs_command_sets.create_tacacs_command_sets(
+        active_validation=False,
+        commands={'commandList': [{'grant': 'string', 'command': 'string', 'arguments': 'string'}]},
+        description='string',
+        name='string',
+        payload=None,
+        permit_unmatched=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_command_sets
+def test_create_tacacs_command_sets(api, validator):
+    try:
+        assert is_valid_create_tacacs_command_sets(
+            validator,
+            create_tacacs_command_sets(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_tacacs_command_sets_default(api):
+    endpoint_result = api.tacacs_command_sets.create_tacacs_command_sets(
+        active_validation=False,
+        commands=None,
+        description=None,
+        name=None,
+        payload=None,
+        permit_unmatched=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_command_sets
+def test_create_tacacs_command_sets_default(api, validator):
+    try:
+        assert is_valid_create_tacacs_command_sets(
+            validator,
+            create_tacacs_command_sets_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_5865f0adb7f554eb810687bd8699149a_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.tacacs_command_sets.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_command_sets
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.tacacs_command_sets.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_command_sets
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

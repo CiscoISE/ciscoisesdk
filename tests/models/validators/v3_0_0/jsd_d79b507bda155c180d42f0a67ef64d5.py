@@ -60,25 +60,14 @@ class JSONSchemaValidatorD79B507Bda155C180D42F0A67Ef64D5(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "field",
-                "oldValue",
-                "newValue"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "updatedField"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "UpdatedFieldsList"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

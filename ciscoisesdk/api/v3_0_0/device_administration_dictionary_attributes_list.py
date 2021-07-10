@@ -74,9 +74,9 @@ class DeviceAdministrationDictionaryAttributesList(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_dictionaries_authentication(self,
-                                                         headers=None,
-                                                         **query_parameters):
+    def get_device_admin_dictionaries_authentication(self,
+                                                     headers=None,
+                                                     **query_parameters):
         """Network Access - Returns list of dictionary attributes for
         authentication.
 
@@ -89,7 +89,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         Returns:
             RestResponse: REST response with following properties:
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
                     or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
@@ -120,7 +120,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/policy/device-admin/dictionaries/authentication')
+        e_url = ('/v1/policy/device-admin/dictionaries/authentication')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -128,11 +128,11 @@ class DeviceAdministrationDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b09ea91f72885e05b6aa73e89546f969_v3_0_0', _api_response)
+        return self._object_factory('bpm_f1ff6e8bb2d5c7fbcf39fbadf5da2d5_v3_0_0', _api_response)
 
-    def get_all_device_admin_dictionaries_authorization(self,
-                                                        headers=None,
-                                                        **query_parameters):
+    def get_device_admin_dictionaries_authorization(self,
+                                                    headers=None,
+                                                    **query_parameters):
         """Network Access - Returns list of dictionary attributes for
         authorization.
 
@@ -145,7 +145,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         Returns:
             RestResponse: REST response with following properties:
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
                     or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
@@ -176,7 +176,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/policy/device-admin/dictionaries/authorization')
+        e_url = ('/v1/policy/device-admin/dictionaries/authorization')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -184,11 +184,11 @@ class DeviceAdministrationDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fc9ecf1e469154ae845236dbed070904_v3_0_0', _api_response)
+        return self._object_factory('bpm_e2f955f29ce511993a189f2d234048d_v3_0_0', _api_response)
 
-    def get_all_device_admin_dictionaries_policyset(self,
-                                                    headers=None,
-                                                    **query_parameters):
+    def get_device_admin_dictionaries_policyset(self,
+                                                headers=None,
+                                                **query_parameters):
         """Network Access - Returns list of dictionary attributes for
         policyset.
 
@@ -201,7 +201,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         Returns:
             RestResponse: REST response with following properties:
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
                     or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
@@ -232,7 +232,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/policy/device-admin/dictionaries/policyset')
+        e_url = ('/v1/policy/device-admin/dictionaries/policyset')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -240,4 +240,4 @@ class DeviceAdministrationDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c8aec23a55399a175acf105dbe1c2_v3_0_0', _api_response)
+        return self._object_factory('bpm_e064032895c8098927d3a39ef6af2_v3_0_0', _api_response)

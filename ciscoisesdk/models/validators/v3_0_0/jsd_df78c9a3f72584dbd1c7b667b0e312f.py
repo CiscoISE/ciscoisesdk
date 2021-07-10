@@ -51,21 +51,48 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 "properties": {
                 "globalCustomizations": {
                 "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "bannerImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "bannerTitle": {
                 "type": "string"
                 },
                 "contactText": {
                 "type": "string"
                 },
-                "footerElement": {
+                "desktopLogoImage": {
+                "properties": {
+                "data": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "bannerTitle",
-                "contactText",
-                "footerElement"
-                ],
+                "type": "object"
+                },
+                "footerElement": {
+                "type": "string"
+                },
+                "mobileLogoImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                }
+                },
                 "type": "object"
                 },
                 "language": {
@@ -74,9 +101,6 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "viewLanguage"
-                ],
                 "type": "object"
                 },
                 "pageCustomizations": {
@@ -91,18 +115,11 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "key",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "data"
-                ],
                 "type": "object"
                 },
                 "portalTheme": {
@@ -112,17 +129,31 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 },
                 "name": {
                 "type": "string"
+                },
+                "themeData": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "portalTweakSettings": {
+                "properties": {
+                "bannerColor": {
+                "type": "string"
+                },
+                "bannerTextColor": {
+                "type": "string"
+                },
+                "pageBackgroundColor": {
+                "type": "string"
+                },
+                "pageLabelAndTextColor": {
+                "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "portalTheme",
-                "language",
-                "globalCustomizations",
-                "pageCustomizations"
-                ],
                 "type": "object"
                 },
                 "description":
@@ -132,6 +163,9 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 "name": {
                 "type": "string"
                 },
+                "portalTestUrl": {
+                "type": "string"
+                },
                 "portalType": {
                 "type": "string"
                 },
@@ -139,37 +173,36 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 "properties": {
                 "aupSettings": {
                 "properties": {
+                "accessCode": {
+                "type": "string"
+                },
                 "includeAup": {
+                "type": "boolean"
+                },
+                "requireAccessCode": {
                 "type": "boolean"
                 },
                 "requireScrolling": {
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "includeAup",
-                "requireScrolling"
-                ],
                 "type": "object"
                 },
                 "authSuccessSettings": {
                 "properties": {
+                "redirectUrl": {
+                "type": "string"
+                },
                 "successRedirect": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "successRedirect"
-                ],
                 "type": "object"
                 },
                 "portalSettings": {
                 "properties": {
                 "allowedInterfaces": {
-                "items": {
                 "type": "string"
-                },
-                "type": "array"
                 },
                 "alwaysUsedLanguage": {
                 "type": "string"
@@ -193,16 +226,6 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "httpsPort",
-                "allowedInterfaces",
-                "certificateGroupTag",
-                "endpointIdentityGroup",
-                "coaType",
-                "displayLang",
-                "fallbackLanguage",
-                "alwaysUsedLanguage"
-                ],
                 "type": "object"
                 },
                 "postAccessBannerSettings": {
@@ -211,13 +234,21 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "includePostAccessBanner"
-                ],
+                "type": "object"
+                },
+                "postLoginBannerSettings": {
+                "properties": {
+                "includePostAccessBanner": {
+                "type": "boolean"
+                }
+                },
                 "type": "object"
                 },
                 "supportInfoSettings": {
                 "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
                 "emptyFieldDisplay": {
                 "type": "string"
                 },
@@ -240,41 +271,15 @@ class JSONSchemaValidatorDf78C9A3F72584DBd1C7B667B0E312F(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "includeSupportInfoPage",
-                "includeMacAddr",
-                "includeIpAddress",
-                "includeBrowserUserAgent",
-                "includePolicyServer",
-                "includeFailureCode",
-                "emptyFieldDisplay"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "portalSettings",
-                "aupSettings",
-                "postAccessBannerSettings",
-                "authSuccessSettings",
-                "supportInfoSettings"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "name",
-                "description",
-                "portalType",
-                "settings",
-                "customizations"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "HotspotPortal"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

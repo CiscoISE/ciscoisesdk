@@ -74,6 +74,624 @@ class NetworkDevice(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
+    def get_network_device_by_name(self,
+                                   name,
+                                   headers=None,
+                                   **query_parameters):
+        """This API allows the client to get a network device by name.
+
+        Args:
+            name(basestring): name path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(name, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'name': name,
+        }
+
+        e_url = ('/ers/config/networkdevice/name/{name}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_d8610d4a355b63aaaa364447d5fa00_v3_0_0', _api_response)
+
+    def update_network_device_by_name(self,
+                                      name,
+                                      authentication_settings=None,
+                                      coa_port=None,
+                                      description=None,
+                                      dtls_dns_name=None,
+                                      id=None,
+                                      link=None,
+                                      model_name=None,
+                                      network_device_group_list=None,
+                                      network_device_iplist=None,
+                                      profile_name=None,
+                                      snmpsettings=None,
+                                      software_version=None,
+                                      tacacs_settings=None,
+                                      trustsecsettings=None,
+                                      headers=None,
+                                      payload=None,
+                                      active_validation=True,
+                                      **query_parameters):
+        """This API allows the client to update a network device by name.
+
+        Args:
+            NetworkDeviceGroupList(list): List of Network Device
+                Group names for this node, property of
+                the request body (list of strings).
+            NetworkDeviceIPList(list): List of IP Subnets for this
+                node, property of the request body (list
+                of objects).
+            authentication_settings(object): authenticationSettings,
+                property of the request body.
+            coa_port(integer): coaPort, property of the request
+                body.
+            description(string): description, property of the
+                request body.
+            dtls_dns_name(string): This value is used to verify the
+                client identity contained in the X.509
+                RADIUS/DTLS client certificate, property
+                of the request body.
+            id(string): id, property of the request body.
+            link(object): link, property of the request body.
+            model_name(string): modelName, property of the request
+                body.
+            name(string): name, property of the request body.
+            profile_name(string): profileName, property of the
+                request body.
+            snmpsettings(object): snmpsettings, property of the
+                request body.
+            software_version(string): softwareVersion, property of
+                the request body.
+            tacacs_settings(object): tacacsSettings, property of the
+                request body.
+            trustsecsettings(object): trustsecsettings, property of
+                the request body.
+            name(basestring): name path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(name, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'name': name,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'authenticationSettings':
+                    authentication_settings,
+                'snmpsettings':
+                    snmpsettings,
+                'trustsecsettings':
+                    trustsecsettings,
+                'tacacsSettings':
+                    tacacs_settings,
+                'profileName':
+                    profile_name,
+                'modelName':
+                    model_name,
+                'softwareVersion':
+                    software_version,
+                'coaPort':
+                    coa_port,
+                'dtlsDnsName':
+                    dtls_dns_name,
+                'NetworkDeviceIPList':
+                    network_device_iplist,
+                'NetworkDeviceGroupList':
+                    network_device_group_list,
+                'link':
+                    link,
+            }
+            _payload = {
+                'NetworkDevice': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_ea2c4586b845888b2a9375126f70de2_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/networkdevice/name/{name}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_ea2c4586b845888b2a9375126f70de2_v3_0_0', _api_response)
+
+    def delete_network_device_by_name(self,
+                                      name,
+                                      headers=None,
+                                      **query_parameters):
+        """This API deletes a network device by name.
+
+        Args:
+            name(basestring): name path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(name, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'name': name,
+        }
+
+        e_url = ('/ers/config/networkdevice/name/{name}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_eafaf2e785c6898fb982dbe4462e7_v3_0_0', _api_response)
+
+    def get_network_device_by_id(self,
+                                 id,
+                                 headers=None,
+                                 **query_parameters):
+        """This API allows the client to get a network device by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/networkdevice/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_a4ab683ce53052e089626a096abaf451_v3_0_0', _api_response)
+
+    def update_network_device_by_id(self,
+                                    id,
+                                    authentication_settings=None,
+                                    coa_port=None,
+                                    description=None,
+                                    dtls_dns_name=None,
+                                    model_name=None,
+                                    name=None,
+                                    network_device_group_list=None,
+                                    network_device_iplist=None,
+                                    profile_name=None,
+                                    snmpsettings=None,
+                                    software_version=None,
+                                    tacacs_settings=None,
+                                    trustsecsettings=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
+        """This API allows the client to update a network device by ID.
+
+        Args:
+            NetworkDeviceGroupList(list): List of Network Device
+                Group names for this node, property of
+                the request body (list of strings).
+            NetworkDeviceIPList(list): List of IP Subnets for this
+                node, property of the request body (list
+                of objects).
+            authentication_settings(object): authenticationSettings,
+                property of the request body.
+            coa_port(integer): coaPort, property of the request
+                body.
+            description(string): description, property of the
+                request body.
+            dtls_dns_name(string): This value is used to verify the
+                client identity contained in the X.509
+                RADIUS/DTLS client certificate, property
+                of the request body.
+            id(string): id, property of the request body.
+            model_name(string): modelName, property of the request
+                body.
+            name(string): name, property of the request body.
+            profile_name(string): profileName, property of the
+                request body.
+            snmpsettings(object): snmpsettings, property of the
+                request body.
+            software_version(string): softwareVersion, property of
+                the request body.
+            tacacs_settings(object): tacacsSettings, property of the
+                request body.
+            trustsecsettings(object): trustsecsettings, property of
+                the request body.
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'id':
+                    id,
+                'name':
+                    name,
+                'description':
+                    description,
+                'authenticationSettings':
+                    authentication_settings,
+                'snmpsettings':
+                    snmpsettings,
+                'trustsecsettings':
+                    trustsecsettings,
+                'tacacsSettings':
+                    tacacs_settings,
+                'profileName':
+                    profile_name,
+                'coaPort':
+                    coa_port,
+                'dtlsDnsName':
+                    dtls_dns_name,
+                'modelName':
+                    model_name,
+                'softwareVersion':
+                    software_version,
+                'NetworkDeviceIPList':
+                    network_device_iplist,
+                'NetworkDeviceGroupList':
+                    network_device_group_list,
+            }
+            _payload = {
+                'NetworkDevice': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_b1edfeb182025176bb250633937177ae_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/networkdevice/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_b1edfeb182025176bb250633937177ae_v3_0_0', _api_response)
+
+    def delete_network_device_by_id(self,
+                                    id,
+                                    headers=None,
+                                    **query_parameters):
+        """This API deletes a network device by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/networkdevice/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_f2fd3c6324b581ca0f3f9eadede1cdc_v3_0_0', _api_response)
+
     def get_all_network_device(self,
                                filter=None,
                                filter_type=None,
@@ -83,7 +701,17 @@ class NetworkDevice(object):
                                sortdsc=None,
                                headers=None,
                                **query_parameters):
-        """Get all Network Device.
+        """This API allows the client to get all the network devices.
+        Filter:   [ipaddress, name, description, location, type]
+        To search guest users by using  toDate  column,follow
+        the format:   DD-MON-YY (Example:13-SEP-18)     Day or
+        Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -147,6 +775,12 @@ class NetworkDevice(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -199,7 +833,17 @@ class NetworkDevice(object):
                                          sortdsc=None,
                                          headers=None,
                                          **query_parameters):
-        """Get all Network Device.
+        """This API allows the client to get all the network devices.
+        Filter:   [ipaddress, name, description, location, type]
+        To search guest users by using  toDate  column,follow
+        the format:   DD-MON-YY (Example:13-SEP-18)     Day or
+        Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -271,38 +915,47 @@ class NetworkDevice(object):
                               coa_port=None,
                               description=None,
                               dtls_dns_name=None,
+                              model_name=None,
                               name=None,
                               network_device_group_list=None,
                               network_device_iplist=None,
                               profile_name=None,
                               snmpsettings=None,
+                              software_version=None,
                               tacacs_settings=None,
                               trustsecsettings=None,
                               headers=None,
                               payload=None,
                               active_validation=True,
                               **query_parameters):
-        """Create Network Device.
+        """This API creates a network device.
 
         Args:
-            NetworkDeviceGroupList(list): NetworkDeviceGroupList,
-                property of the request body (list of
-                strings).
-            NetworkDeviceIPList(list): NetworkDeviceIPList, property
-                of the request body (list of objects).
+            NetworkDeviceGroupList(list): List of Network Device
+                Group names for this node, property of
+                the request body (list of strings).
+            NetworkDeviceIPList(list): List of IP Subnets for this
+                node, property of the request body (list
+                of objects).
             authentication_settings(object): authenticationSettings,
                 property of the request body.
             coa_port(integer): coaPort, property of the request
                 body.
             description(string): description, property of the
                 request body.
-            dtls_dns_name(string): dtlsDnsName, property of the
-                request body.
+            dtls_dns_name(string): This value is used to verify the
+                client identity contained in the X.509
+                RADIUS/DTLS client certificate, property
+                of the request body.
+            model_name(string): modelName, property of the request
+                body.
             name(string): name, property of the request body.
             profile_name(string): profileName, property of the
                 request body.
             snmpsettings(object): snmpsettings, property of the
                 request body.
+            software_version(string): softwareVersion, property of
+                the request body.
             tacacs_settings(object): tacacsSettings, property of the
                 request body.
             trustsecsettings(object): trustsecsettings, property of
@@ -332,9 +985,18 @@ class NetworkDevice(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -364,18 +1026,22 @@ class NetworkDevice(object):
                     description,
                 'authenticationSettings':
                     authentication_settings,
-                'tacacsSettings':
-                    tacacs_settings,
                 'snmpsettings':
                     snmpsettings,
                 'trustsecsettings':
                     trustsecsettings,
+                'tacacsSettings':
+                    tacacs_settings,
                 'profileName':
                     profile_name,
                 'coaPort':
                     coa_port,
                 'dtlsDnsName':
                     dtls_dns_name,
+                'modelName':
+                    model_name,
+                'softwareVersion':
+                    software_version,
                 'NetworkDeviceIPList':
                     network_device_iplist,
                 'NetworkDeviceGroupList':
@@ -404,14 +1070,13 @@ class NetworkDevice(object):
 
         return self._object_factory('bpm_ca6ab8ec556c3bc9531dc380b230a_v3_0_0', _api_response)
 
-    def get_network_device_by_id(self,
-                                 id,
-                                 headers=None,
-                                 **query_parameters):
-        """Get Network Device by Id.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the network device.
 
         Args:
-            id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -445,8 +1110,6 @@ class NetworkDevice(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -454,10 +1117,9 @@ class NetworkDevice(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/networkdevice/{id}')
+        e_url = ('/ers/config/networkdevice/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -465,489 +1127,7 @@ class NetworkDevice(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a4ab683ce53052e089626a096abaf451_v3_0_0', _api_response)
-
-    def update_network_device_by_id(self,
-                                    id,
-                                    authentication_settings=None,
-                                    coa_port=None,
-                                    description=None,
-                                    dtls_dns_name=None,
-                                    name=None,
-                                    network_device_group_list=None,
-                                    network_device_iplist=None,
-                                    profile_name=None,
-                                    snmpsettings=None,
-                                    tacacs_settings=None,
-                                    trustsecsettings=None,
-                                    headers=None,
-                                    payload=None,
-                                    active_validation=True,
-                                    **query_parameters):
-        """Update Network Device.
-
-        Args:
-            NetworkDeviceGroupList(list): NetworkDeviceGroupList,
-                property of the request body (list of
-                strings).
-            NetworkDeviceIPList(list): NetworkDeviceIPList, property
-                of the request body (list of objects).
-            authentication_settings(object): authenticationSettings,
-                property of the request body.
-            coa_port(integer): coaPort, property of the request
-                body.
-            description(string): description, property of the
-                request body.
-            dtls_dns_name(string): dtlsDnsName, property of the
-                request body.
-            name(string): name, property of the request body.
-            profile_name(string): profileName, property of the
-                request body.
-            snmpsettings(object): snmpsettings, property of the
-                request body.
-            tacacs_settings(object): tacacsSettings, property of the
-                request body.
-            trustsecsettings(object): trustsecsettings, property of
-                the request body.
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'name':
-                    name,
-                'description':
-                    description,
-                'authenticationSettings':
-                    authentication_settings,
-                'tacacsSettings':
-                    tacacs_settings,
-                'snmpsettings':
-                    snmpsettings,
-                'trustsecsettings':
-                    trustsecsettings,
-                'profileName':
-                    profile_name,
-                'coaPort':
-                    coa_port,
-                'dtlsDnsName':
-                    dtls_dns_name,
-                'NetworkDeviceIPList':
-                    network_device_iplist,
-                'NetworkDeviceGroupList':
-                    network_device_group_list,
-            }
-            _payload = {
-                'NetworkDevice': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b1edfeb182025176bb250633937177ae_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/networkdevice/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_b1edfeb182025176bb250633937177ae_v3_0_0', _api_response)
-
-    def delete_network_device_by_id(self,
-                                    id,
-                                    headers=None,
-                                    **query_parameters):
-        """Delete Network Device.
-
-        Args:
-            id(basestring): id path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'id': id,
-        }
-
-        e_url = ('/ers/config/networkdevice/{id}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
-        else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_f2fd3c6324b581ca0f3f9eadede1cdc_v3_0_0', _api_response)
-
-    def get_network_device_by_name(self,
-                                   name,
-                                   headers=None,
-                                   **query_parameters):
-        """Get Network Device by name.
-
-        Args:
-            name(basestring): name path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(name, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'name': name,
-        }
-
-        e_url = ('/ers/config/networkdevice/name/{name}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_d8610d4a355b63aaaa364447d5fa00_v3_0_0', _api_response)
-
-    def update_network_device_by_name(self,
-                                      name,
-                                      authentication_settings=None,
-                                      coa_port=None,
-                                      description=None,
-                                      dtls_dns_name=None,
-                                      network_device_group_list=None,
-                                      network_device_iplist=None,
-                                      profile_name=None,
-                                      snmpsettings=None,
-                                      tacacs_settings=None,
-                                      trustsecsettings=None,
-                                      headers=None,
-                                      payload=None,
-                                      active_validation=True,
-                                      **query_parameters):
-        """Update Network Device by name.
-
-        Args:
-            NetworkDeviceGroupList(list): NetworkDeviceGroupList,
-                property of the request body (list of
-                strings).
-            NetworkDeviceIPList(list): NetworkDeviceIPList, property
-                of the request body (list of objects).
-            authentication_settings(object): authenticationSettings,
-                property of the request body.
-            coa_port(integer): coaPort, property of the request
-                body.
-            description(string): description, property of the
-                request body.
-            dtls_dns_name(string): dtlsDnsName, property of the
-                request body.
-            name(string): name, property of the request body.
-            profile_name(string): profileName, property of the
-                request body.
-            snmpsettings(object): snmpsettings, property of the
-                request body.
-            tacacs_settings(object): tacacsSettings, property of the
-                request body.
-            trustsecsettings(object): trustsecsettings, property of
-                the request body.
-            name(basestring): name path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
-        if active_validation and is_xml_payload:
-            check_type(payload, basestring)
-        if active_validation and not is_xml_payload:
-            check_type(payload, dict)
-        check_type(name, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'name': name,
-        }
-        if is_xml_payload:
-            _payload = payload
-        else:
-            _tmp_payload = {
-                'name':
-                    name,
-                'description':
-                    description,
-                'authenticationSettings':
-                    authentication_settings,
-                'tacacsSettings':
-                    tacacs_settings,
-                'snmpsettings':
-                    snmpsettings,
-                'trustsecsettings':
-                    trustsecsettings,
-                'profileName':
-                    profile_name,
-                'coaPort':
-                    coa_port,
-                'dtlsDnsName':
-                    dtls_dns_name,
-                'NetworkDeviceIPList':
-                    network_device_iplist,
-                'NetworkDeviceGroupList':
-                    network_device_group_list,
-            }
-            _payload = {
-                'NetworkDevice': dict_from_items_with_values(_tmp_payload)
-            }
-            _payload.update(payload or {})
-            _payload = dict_from_items_with_values(_payload)
-        if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ea2c4586b845888b2a9375126f70de2_v3_0_0')\
-                .validate(_payload)
-
-        e_url = ('/ers/config/networkdevice/name/{name}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
-        if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
-        else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
-
-        return self._object_factory('bpm_ea2c4586b845888b2a9375126f70de2_v3_0_0', _api_response)
-
-    def delete_network_device_by_name(self,
-                                      name,
-                                      headers=None,
-                                      **query_parameters):
-        """Delete Network Device by name.
-
-        Args:
-            name(basestring): name path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(name, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'name': name,
-        }
-
-        e_url = ('/ers/config/networkdevice/name/{name}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
-        else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_eafaf2e785c6898fb982dbe4462e7_v3_0_0', _api_response)
+        return self._object_factory('bpm_e571185718b6ef6e78bfbfdf68_v3_0_0', _api_response)
 
     def bulk_request_for_network_device(self,
                                         operation_type=None,
@@ -956,7 +1136,7 @@ class NetworkDevice(object):
                                         payload=None,
                                         active_validation=True,
                                         **query_parameters):
-        """Bulk request for Network Device.
+        """This API allows the client to submit the bulk request\.
 
         Args:
             operation_type(string): operationType, property of the
@@ -1050,7 +1230,7 @@ class NetworkDevice(object):
                                            bulkid,
                                            headers=None,
                                            **query_parameters):
-        """Monitor bulk status for Network Device.
+        """This API allows the client to monitor the bulk request.
 
         Args:
             bulkid(basestring): bulkid path parameter.

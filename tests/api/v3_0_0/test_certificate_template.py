@@ -29,31 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_certificate_template(json_schema_validate, obj):
+def is_valid_get_certificate_template_by_name(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c87977b21b8f5d64852a8b6a5527928d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e04f248274ea584aa30857975a28297f_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_certificate_template(api):
-    endpoint_result = api.certificate_template.get_all_certificate_template(
-        page=0,
-        size=0
+def get_certificate_template_by_name(api):
+    endpoint_result = api.certificate_template.get_certificate_template_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.certificate_template
-def test_get_all_certificate_template(api, validator):
+def test_get_certificate_template_by_name(api, validator):
     try:
-        assert is_valid_get_all_certificate_template(
+        assert is_valid_get_certificate_template_by_name(
             validator,
-            get_all_certificate_template(api)
+            get_certificate_template_by_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -61,20 +60,19 @@ def test_get_all_certificate_template(api, validator):
             raise original_e
 
 
-def get_all_certificate_template_default(api):
-    endpoint_result = api.certificate_template.get_all_certificate_template(
-        page=None,
-        size=None
+def get_certificate_template_by_name_default(api):
+    endpoint_result = api.certificate_template.get_certificate_template_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.certificate_template
-def test_get_all_certificate_template_default(api, validator):
+def test_get_certificate_template_by_name_default(api, validator):
     try:
-        assert is_valid_get_all_certificate_template(
+        assert is_valid_get_certificate_template_by_name(
             validator,
-            get_all_certificate_template_default(api)
+            get_certificate_template_by_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -131,30 +129,31 @@ def test_get_certificate_template_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_certificate_template_by_name(json_schema_validate, obj):
+def is_valid_get_all_certificate_template(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_40ef36cc17a55cb38bf1fe2973dcc312_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_dc1da5c3912a5117878160e27f6b533a_v3_0_0').validate(obj.response)
     return True
 
 
-def get_certificate_template_by_name(api):
-    endpoint_result = api.certificate_template.get_certificate_template_by_name(
-        name='string'
+def get_all_certificate_template(api):
+    endpoint_result = api.certificate_template.get_all_certificate_template(
+        page=0,
+        size=0
     )
     return endpoint_result
 
 
 @pytest.mark.certificate_template
-def test_get_certificate_template_by_name(api, validator):
+def test_get_all_certificate_template(api, validator):
     try:
-        assert is_valid_get_certificate_template_by_name(
+        assert is_valid_get_all_certificate_template(
             validator,
-            get_certificate_template_by_name(api)
+            get_all_certificate_template(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -162,19 +161,70 @@ def test_get_certificate_template_by_name(api, validator):
             raise original_e
 
 
-def get_certificate_template_by_name_default(api):
-    endpoint_result = api.certificate_template.get_certificate_template_by_name(
-        name='string'
+def get_all_certificate_template_default(api):
+    endpoint_result = api.certificate_template.get_all_certificate_template(
+        page=None,
+        size=None
     )
     return endpoint_result
 
 
 @pytest.mark.certificate_template
-def test_get_certificate_template_by_name_default(api, validator):
+def test_get_all_certificate_template_default(api, validator):
     try:
-        assert is_valid_get_certificate_template_by_name(
+        assert is_valid_get_all_certificate_template(
             validator,
-            get_certificate_template_by_name_default(api)
+            get_all_certificate_template_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_3f126f916efd575dbc9acae4ab2a1e4e_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.certificate_template.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificate_template
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.certificate_template.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificate_template
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

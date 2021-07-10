@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_device_admin_identity_stores(json_schema_validate, obj):
+def is_valid_get_device_admin_identity_stores(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_22ce65f2bd375be1ba41a7d6f02ad7b6_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_7ae7d98a7b185837af8d15ae864616e0_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_device_admin_identity_stores(api):
-    endpoint_result = api.device_administration_identity_stores.get_all_device_admin_identity_stores(
+def get_device_admin_identity_stores(api):
+    endpoint_result = api.device_administration_identity_stores.get_device_admin_identity_stores(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_identity_stores
-def test_get_all_device_admin_identity_stores(api, validator):
+def test_get_device_admin_identity_stores(api, validator):
     try:
-        assert is_valid_get_all_device_admin_identity_stores(
+        assert is_valid_get_device_admin_identity_stores(
             validator,
-            get_all_device_admin_identity_stores(api)
+            get_device_admin_identity_stores(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_device_admin_identity_stores(api, validator):
             raise original_e
 
 
-def get_all_device_admin_identity_stores_default(api):
-    endpoint_result = api.device_administration_identity_stores.get_all_device_admin_identity_stores(
+def get_device_admin_identity_stores_default(api):
+    endpoint_result = api.device_administration_identity_stores.get_device_admin_identity_stores(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_identity_stores
-def test_get_all_device_admin_identity_stores_default(api, validator):
+def test_get_device_admin_identity_stores_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_identity_stores(
+        assert is_valid_get_device_admin_identity_stores(
             validator,
-            get_all_device_admin_identity_stores_default(api)
+            get_device_admin_identity_stores_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

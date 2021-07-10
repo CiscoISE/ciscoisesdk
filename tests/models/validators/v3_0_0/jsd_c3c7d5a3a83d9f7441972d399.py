@@ -50,12 +50,22 @@ class JSONSchemaValidatorC3C7D5A3A83D9F7441972D399(object):
                 "customFields": {
                 "type": "object"
                 },
+                "description":
+                 {
+                "type": "string"
+                },
                 "guestAccessInfo": {
                 "properties": {
                 "fromDate": {
                 "type": "string"
                 },
+                "groupTag": {
+                "type": "string"
+                },
                 "location": {
+                "type": "string"
+                },
+                "ssid": {
                 "type": "string"
                 },
                 "toDate": {
@@ -65,21 +75,27 @@ class JSONSchemaValidatorC3C7D5A3A83D9F7441972D399(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "validDays",
-                "fromDate",
-                "toDate",
-                "location"
-                ],
                 "type": "object"
                 },
                 "guestInfo": {
                 "properties": {
+                "company": {
+                "type": "string"
+                },
                 "creationTime": {
+                "type": "string"
+                },
+                "emailAddress": {
                 "type": "string"
                 },
                 "enabled": {
                 "type": "boolean"
+                },
+                "firstName": {
+                "type": "string"
+                },
+                "lastName": {
+                "type": "string"
                 },
                 "notificationLanguage": {
                 "type": "string"
@@ -87,17 +103,16 @@ class JSONSchemaValidatorC3C7D5A3A83D9F7441972D399(object):
                 "password": {
                 "type": "string"
                 },
+                "phoneNumber": {
+                "type": "string"
+                },
+                "smsServiceProvider": {
+                "type": "string"
+                },
                 "userName": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "userName",
-                "password",
-                "creationTime",
-                "enabled",
-                "notificationLanguage"
-                ],
                 "type": "object"
                 },
                 "guestType": {
@@ -118,14 +133,15 @@ class JSONSchemaValidatorC3C7D5A3A83D9F7441972D399(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
+                "type": "string"
+                },
+                "portalId": {
+                "type": "string"
+                },
+                "reasonForVisit": {
                 "type": "string"
                 },
                 "sponsorUserId": {
@@ -136,14 +152,14 @@ class JSONSchemaValidatorC3C7D5A3A83D9F7441972D399(object):
                 },
                 "status": {
                 "type": "string"
+                },
+                "statusReason": {
+                "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "GuestUser"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

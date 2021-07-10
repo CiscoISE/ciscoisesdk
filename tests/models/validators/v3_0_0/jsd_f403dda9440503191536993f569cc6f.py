@@ -51,30 +51,13 @@ class JSONSchemaValidatorF403Dda9440503191536993F569Cc6F(object):
                 "type": "boolean"
                 },
                 "customAttributes": {
-                "properties": {
-                "Country": {
-                "type": "string"
-                },
-                "Created": {
-                "type": "string"
-                },
-                "Department": {
-                "type": "string"
-                },
-                "Expired": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "Created",
-                "Department",
-                "Expired",
-                "Country"
-                ],
                 "type": "object"
                 },
                 "description":
                  {
+                "type": "string"
+                },
+                "email": {
                 "type": "string"
                 },
                 "enablePassword": {
@@ -83,10 +66,22 @@ class JSONSchemaValidatorF403Dda9440503191536993F569Cc6F(object):
                 "enabled": {
                 "type": "boolean"
                 },
+                "expiryDate": {
+                "type": "string"
+                },
                 "expiryDateEnabled": {
                 "type": "boolean"
                 },
+                "firstName": {
+                "type": "string"
+                },
                 "id": {
+                "type": "string"
+                },
+                "identityGroups": {
+                "type": "string"
+                },
+                "lastName": {
                 "type": "string"
                 },
                 "link": {
@@ -101,11 +96,6 @@ class JSONSchemaValidatorF403Dda9440503191536993F569Cc6F(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -121,9 +111,6 @@ class JSONSchemaValidatorF403Dda9440503191536993F569Cc6F(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "InternalUser"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

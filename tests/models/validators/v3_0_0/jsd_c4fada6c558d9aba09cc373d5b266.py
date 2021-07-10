@@ -47,22 +47,33 @@ class JSONSchemaValidatorC4FadA6C558D9Aba09Cc373D5B266(object):
                 "properties": {
                 "UpdatedFieldsList": {
                 "properties": {
-                "updatedField": {
-                "items": {
+                "field": {
                 "type": "string"
                 },
-                "type": "array"
+                "newValue": {
+                "type": "string"
+                },
+                "oldValue": {
+                "type": "string"
+                },
+                "updatedField": {
+                "properties": {
+                "field": {
+                "type": "string"
+                },
+                "newValue": {
+                "type": "string"
+                },
+                "oldValue": {
+                "type": "string"
                 }
                 },
-                "required": [
-                "updatedField"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "UpdatedFieldsList"
-                ],
+                "type": "object"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

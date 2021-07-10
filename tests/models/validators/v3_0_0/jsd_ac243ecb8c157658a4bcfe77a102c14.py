@@ -65,20 +65,12 @@ class JSONSchemaValidatorAc243EcB8C157658A4BCfe77A102C14(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "PortalCustomizationGlobalSetting"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

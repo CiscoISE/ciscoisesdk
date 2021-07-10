@@ -29,6 +29,170 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_get_sxp_local_bindings_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_e56bea5248a25f799b02fcb6098a7b10_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_sxp_local_bindings_by_id(api):
+    endpoint_result = api.sxp_local_bindings.get_sxp_local_bindings_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_local_bindings
+def test_get_sxp_local_bindings_by_id(api, validator):
+    try:
+        assert is_valid_get_sxp_local_bindings_by_id(
+            validator,
+            get_sxp_local_bindings_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_sxp_local_bindings_by_id_default(api):
+    endpoint_result = api.sxp_local_bindings.get_sxp_local_bindings_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_local_bindings
+def test_get_sxp_local_bindings_by_id_default(api, validator):
+    try:
+        assert is_valid_get_sxp_local_bindings_by_id(
+            validator,
+            get_sxp_local_bindings_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_sxp_local_bindings_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_313e07cb8ea65820863cce345c67926b_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_sxp_local_bindings_by_id(api):
+    endpoint_result = api.sxp_local_bindings.update_sxp_local_bindings_by_id(
+        active_validation=False,
+        id='string',
+        ip_address_or_host='string',
+        link={'rel': 'string', 'href': 'string', 'type': 'string'},
+        payload=None,
+        sgt='string',
+        sxp_vpn='string',
+        vns='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_local_bindings
+def test_update_sxp_local_bindings_by_id(api, validator):
+    try:
+        assert is_valid_update_sxp_local_bindings_by_id(
+            validator,
+            update_sxp_local_bindings_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_sxp_local_bindings_by_id_default(api):
+    endpoint_result = api.sxp_local_bindings.update_sxp_local_bindings_by_id(
+        active_validation=False,
+        id='string',
+        ip_address_or_host=None,
+        link=None,
+        payload=None,
+        sgt=None,
+        sxp_vpn=None,
+        vns=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_local_bindings
+def test_update_sxp_local_bindings_by_id_default(api, validator):
+    try:
+        assert is_valid_update_sxp_local_bindings_by_id(
+            validator,
+            update_sxp_local_bindings_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_sxp_local_bindings_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_77db04edfe595fbba5b49eb71dcb65bd_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_sxp_local_bindings_by_id(api):
+    endpoint_result = api.sxp_local_bindings.delete_sxp_local_bindings_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_local_bindings
+def test_delete_sxp_local_bindings_by_id(api, validator):
+    try:
+        assert is_valid_delete_sxp_local_bindings_by_id(
+            validator,
+            delete_sxp_local_bindings_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_sxp_local_bindings_by_id_default(api):
+    endpoint_result = api.sxp_local_bindings.delete_sxp_local_bindings_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sxp_local_bindings
+def test_delete_sxp_local_bindings_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_sxp_local_bindings_by_id(
+            validator,
+            delete_sxp_local_bindings_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_sxp_local_bindings(json_schema_validate, obj):
     if not obj:
         return False
@@ -103,11 +267,9 @@ def is_valid_create_sxp_local_bindings(json_schema_validate, obj):
 def create_sxp_local_bindings(api):
     endpoint_result = api.sxp_local_bindings.create_sxp_local_bindings(
         active_validation=False,
-        binding_name='string',
-        description='string',
         id='string',
         ip_address_or_host='string',
-        name='string',
+        link={'rel': 'string', 'href': 'string', 'type': 'string'},
         payload=None,
         sgt='string',
         sxp_vpn='string',
@@ -132,11 +294,9 @@ def test_create_sxp_local_bindings(api, validator):
 def create_sxp_local_bindings_default(api):
     endpoint_result = api.sxp_local_bindings.create_sxp_local_bindings(
         active_validation=False,
-        binding_name=None,
-        description=None,
         id=None,
         ip_address_or_host=None,
-        name=None,
+        link=None,
         payload=None,
         sgt=None,
         sxp_vpn=None,
@@ -157,30 +317,30 @@ def test_create_sxp_local_bindings_default(api, validator):
             raise original_e
 
 
-def is_valid_get_sxp_local_bindings_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e56bea5248a25f799b02fcb6098a7b10_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ee22235f36835dec897ed6381e3e15fc_v3_0_0').validate(obj.response)
     return True
 
 
-def get_sxp_local_bindings_by_id(api):
-    endpoint_result = api.sxp_local_bindings.get_sxp_local_bindings_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.sxp_local_bindings.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.sxp_local_bindings
-def test_get_sxp_local_bindings_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_sxp_local_bindings_by_id(
+        assert is_valid_get_version(
             validator,
-            get_sxp_local_bindings_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -188,137 +348,19 @@ def test_get_sxp_local_bindings_by_id(api, validator):
             raise original_e
 
 
-def get_sxp_local_bindings_by_id_default(api):
-    endpoint_result = api.sxp_local_bindings.get_sxp_local_bindings_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.sxp_local_bindings.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.sxp_local_bindings
-def test_get_sxp_local_bindings_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_sxp_local_bindings_by_id(
+        assert is_valid_get_version(
             validator,
-            get_sxp_local_bindings_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_sxp_local_bindings_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_313e07cb8ea65820863cce345c67926b_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_sxp_local_bindings_by_id(api):
-    endpoint_result = api.sxp_local_bindings.update_sxp_local_bindings_by_id(
-        active_validation=False,
-        binding_name='string',
-        description='string',
-        id='string',
-        ip_address_or_host='string',
-        name='string',
-        payload=None,
-        sgt='string',
-        sxp_vpn='string',
-        vns='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.sxp_local_bindings
-def test_update_sxp_local_bindings_by_id(api, validator):
-    try:
-        assert is_valid_update_sxp_local_bindings_by_id(
-            validator,
-            update_sxp_local_bindings_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_sxp_local_bindings_by_id_default(api):
-    endpoint_result = api.sxp_local_bindings.update_sxp_local_bindings_by_id(
-        active_validation=False,
-        id='string',
-        binding_name=None,
-        description=None,
-        ip_address_or_host=None,
-        name=None,
-        payload=None,
-        sgt=None,
-        sxp_vpn=None,
-        vns=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.sxp_local_bindings
-def test_update_sxp_local_bindings_by_id_default(api, validator):
-    try:
-        assert is_valid_update_sxp_local_bindings_by_id(
-            validator,
-            update_sxp_local_bindings_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_sxp_local_bindings_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_77db04edfe595fbba5b49eb71dcb65bd_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_sxp_local_bindings_by_id(api):
-    endpoint_result = api.sxp_local_bindings.delete_sxp_local_bindings_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.sxp_local_bindings
-def test_delete_sxp_local_bindings_by_id(api, validator):
-    try:
-        assert is_valid_delete_sxp_local_bindings_by_id(
-            validator,
-            delete_sxp_local_bindings_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_sxp_local_bindings_by_id_default(api):
-    endpoint_result = api.sxp_local_bindings.delete_sxp_local_bindings_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.sxp_local_bindings
-def test_delete_sxp_local_bindings_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_sxp_local_bindings_by_id(
-            validator,
-            delete_sxp_local_bindings_by_id_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -332,7 +374,7 @@ def is_valid_bulk_request_for_sxp_local_bindings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0615c21f51995bff8d6468a1e9c0b2e9_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2b97435f47305f5da136a0d68ac6d466_v3_0_0').validate(obj.response)
     return True
 
 

@@ -47,6 +47,40 @@ class JSONSchemaValidatorA23B580495514394B125800E073C9A(object):
                 "properties": {
                 "SearchResult": {
                 "properties": {
+                "nextPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "resources": {
                 "items": {
                 "properties": {
@@ -69,11 +103,6 @@ class JSONSchemaValidatorA23B580495514394B125800E073C9A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -88,16 +117,9 @@ class JSONSchemaValidatorA23B580495514394B125800E073C9A(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

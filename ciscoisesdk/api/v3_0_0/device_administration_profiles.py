@@ -74,10 +74,11 @@ class DeviceAdministrationProfiles(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_profiles(self,
-                                      headers=None,
-                                      **query_parameters):
-        """Device Admin - Returns list of profiles.
+    def get_device_admin_profiles(self,
+                                  headers=None,
+                                  **query_parameters):
+        """Device Admin - Returns list of profiles.  (Other CRUD APIs
+        available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -119,7 +120,7 @@ class DeviceAdministrationProfiles(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/policy/device-admin/profiles')
+        e_url = ('/v1/policy/device-admin/profiles')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -127,4 +128,4 @@ class DeviceAdministrationProfiles(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fde0cbd2de50f680d0b0f681771829_v3_0_0', _api_response)
+        return self._object_factory('bpm_ca669963ed0563e96bb009bf14a417b_v3_0_0', _api_response)

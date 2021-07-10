@@ -116,10 +116,19 @@ class JSONSchemaValidatorA0B312F70257B1Bfa90D0260F0C971(object):
                 "allowEapFastEapTlsAuthOfExpiredCerts": {
                 "type": "boolean"
                 },
+                "eapFastDontUsePacsAcceptClientCert": {
+                "type": "boolean"
+                },
+                "eapFastDontUsePacsAllowMachineAuthentication": {
+                "type": "boolean"
+                },
                 "eapFastEnableEAPChaining": {
                 "type": "boolean"
                 },
                 "eapFastUsePacs": {
+                "type": "boolean"
+                },
+                "eapFastUsePacsAcceptClientCert": {
                 "type": "boolean"
                 },
                 "eapFastUsePacsAllowAnonymProvisioning": {
@@ -129,6 +138,21 @@ class JSONSchemaValidatorA0B312F70257B1Bfa90D0260F0C971(object):
                 "type": "boolean"
                 },
                 "eapFastUsePacsAllowMachineAuthentication": {
+                "type": "boolean"
+                },
+                "eapFastUsePacsAuthorizationPacTtl": {
+                "type": "integer"
+                },
+                "eapFastUsePacsAuthorizationPacTtlUnits": {
+                "type": "string"
+                },
+                "eapFastUsePacsMachinePacTtl": {
+                "type": "integer"
+                },
+                "eapFastUsePacsMachinePacTtlUnits": {
+                "type": "string"
+                },
+                "eapFastUsePacsReturnAccessAcceptAfterAuthenticatedProvisioning": {
                 "type": "boolean"
                 },
                 "eapFastUsePacsStatelessSessionResume": {
@@ -153,6 +177,15 @@ class JSONSchemaValidatorA0B312F70257B1Bfa90D0260F0C971(object):
                 },
                 "eapTlsEnableStatelessSessionResume": {
                 "type": "boolean"
+                },
+                "eapTlsSessionTicketPrecentage": {
+                "type": "integer"
+                },
+                "eapTlsSessionTicketTtl": {
+                "type": "integer"
+                },
+                "eapTlsSessionTicketTtlUnits": {
+                "type": "string"
                 }
                 },
                 "type": "object"
@@ -189,6 +222,23 @@ class JSONSchemaValidatorA0B312F70257B1Bfa90D0260F0C971(object):
                 },
                 "type": "object"
                 },
+                "id": {
+                "type": "string"
+                },
+                "link1": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -196,6 +246,12 @@ class JSONSchemaValidatorA0B312F70257B1Bfa90D0260F0C971(object):
                 "properties": {
                 "allowPeapEapGtc": {
                 "type": "boolean"
+                },
+                "allowPeapEapGtcPwdChange": {
+                "type": "boolean"
+                },
+                "allowPeapEapGtcPwdChangeRetries": {
+                "type": "integer"
                 },
                 "allowPeapEapMsChapV2": {
                 "type": "boolean"
@@ -235,6 +291,9 @@ class JSONSchemaValidatorA0B312F70257B1Bfa90D0260F0C971(object):
                 "acceptClientCertDuringTunnelEst": {
                 "type": "boolean"
                 },
+                "allowDowngradeMsk": {
+                "type": "boolean"
+                },
                 "allowTeapEapMsChapV2": {
                 "type": "boolean"
                 },
@@ -251,9 +310,6 @@ class JSONSchemaValidatorA0B312F70257B1Bfa90D0260F0C971(object):
                 "type": "boolean"
                 },
                 "enableEapChaining": {
-                "type": "boolean"
-                },
-                "requestBasicPwdAuth": {
                 "type": "boolean"
                 }
                 },

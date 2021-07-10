@@ -47,6 +47,40 @@ class JSONSchemaValidatorA93D058764B51Dc922E41Bbe4Ff7Cd6(object):
                 "properties": {
                 "SearchResult": {
                 "properties": {
+                "nextPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "resources": {
                 "items": {
                 "properties": {
@@ -65,11 +99,6 @@ class JSONSchemaValidatorA93D058764B51Dc922E41Bbe4Ff7Cd6(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 }
                 },
@@ -81,16 +110,9 @@ class JSONSchemaValidatorA93D058764B51Dc922E41Bbe4Ff7Cd6(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

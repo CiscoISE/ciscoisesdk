@@ -50,10 +50,78 @@ class JSONSchemaValidatorA69C7F1AD54E5E9CAe1F871E19Eed61B(object):
                 "accessType": {
                 "type": "string"
                 },
+                "acl": {
+                "type": "string"
+                },
+                "advancedAttributes": {
+                "items": {
+                "properties": {
+                "leftHandSideDictionaryAttribue": {
+                "properties": {
+                "AdvancedAttributeValueType": {
+                "enum": [
+                "AttributeValue",
+                "AdvancedDictionaryAttribute"
+                ],
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
+                "dictionaryName": {
+                "type": "string"
+                },
+                "value": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "rightHandSideAttribueValue": {
+                "properties": {
+                "AdvancedAttributeValueType": {
+                "enum": [
+                "AttributeValue",
+                "AdvancedDictionaryAttribute"
+                ],
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
+                "dictionaryName": {
+                "type": "string"
+                },
+                "value": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "agentlessPosture": {
                 "type": "boolean"
                 },
+                "airespaceACL": {
+                "type": "string"
+                },
+                "airespaceIPv6ACL": {
+                "type": "string"
+                },
+                "asaVpn": {
+                "type": "string"
+                },
                 "authzProfileType": {
+                "type": "string"
+                },
+                "autoSmartPort": {
+                "type": "string"
+                },
+                "avcProfile": {
                 "type": "string"
                 },
                 "daclName": {
@@ -69,6 +137,15 @@ class JSONSchemaValidatorA69C7F1AD54E5E9CAe1F871E19Eed61B(object):
                 "id": {
                 "type": "string"
                 },
+                "interfaceTemplate": {
+                "type": "string"
+                },
+                "ipv6ACLFilter": {
+                "type": "string"
+                },
+                "ipv6DaclName": {
+                "type": "string"
+                },
                 "link": {
                 "properties": {
                 "href": {
@@ -81,18 +158,30 @@ class JSONSchemaValidatorA69C7F1AD54E5E9CAe1F871E19Eed61B(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
+                },
+                "macSecPolicy": {
+                "type": "string"
                 },
                 "name": {
                 "type": "string"
                 },
+                "neat": {
+                "type": "boolean"
+                },
                 "profileName": {
                 "type": "string"
+                },
+                "reauth": {
+                "properties": {
+                "connectivity": {
+                "type": "string"
+                },
+                "timer": {
+                "type": "integer"
+                }
+                },
+                "type": "object"
                 },
                 "serviceTemplate": {
                 "type": "boolean"
@@ -100,16 +189,47 @@ class JSONSchemaValidatorA69C7F1AD54E5E9CAe1F871E19Eed61B(object):
                 "trackMovement": {
                 "type": "boolean"
                 },
+                "vlan": {
+                "properties": {
+                "nameID": {
+                "type": "string"
+                },
+                "tagID": {
+                "type": "integer"
+                }
+                },
+                "type": "object"
+                },
                 "voiceDomainPermission": {
                 "type": "boolean"
+                },
+                "webAuth": {
+                "type": "boolean"
+                },
+                "webRedirection": {
+                "properties": {
+                "WebRedirectionType": {
+                "type": "string"
+                },
+                "acl": {
+                "type": "string"
+                },
+                "displayCertificatesRenewalMessages": {
+                "type": "boolean"
+                },
+                "portalName": {
+                "type": "string"
+                },
+                "staticIPHostNameFQDN": {
+                "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "AuthorizationProfile"
-                ],
+                "type": "object"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

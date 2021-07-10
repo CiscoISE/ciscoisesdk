@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_access_profiles(json_schema_validate, obj):
+def is_valid_get_network_access_profiles(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b227e1b5bbac556a9f577d3a3ea407af_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_97b33c6c1bdf5c6b8c63835ce0298418_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_network_access_profiles(api):
-    endpoint_result = api.network_access_profiles.get_all_network_access_profiles(
+def get_network_access_profiles(api):
+    endpoint_result = api.network_access_profiles.get_network_access_profiles(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_profiles
-def test_get_all_network_access_profiles(api, validator):
+def test_get_network_access_profiles(api, validator):
     try:
-        assert is_valid_get_all_network_access_profiles(
+        assert is_valid_get_network_access_profiles(
             validator,
-            get_all_network_access_profiles(api)
+            get_network_access_profiles(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_network_access_profiles(api, validator):
             raise original_e
 
 
-def get_all_network_access_profiles_default(api):
-    endpoint_result = api.network_access_profiles.get_all_network_access_profiles(
+def get_network_access_profiles_default(api):
+    endpoint_result = api.network_access_profiles.get_network_access_profiles(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_profiles
-def test_get_all_network_access_profiles_default(api, validator):
+def test_get_network_access_profiles_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_profiles(
+        assert is_valid_get_network_access_profiles(
             validator,
-            get_all_network_access_profiles_default(api)
+            get_network_access_profiles_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -54,11 +54,17 @@ class JSONSchemaValidatorAb61F24Bdaf508590F7686E1130913F(object):
                  {
                 "type": "string"
                 },
-                "id": {
+                "generationId": {
                 "type": "string"
                 },
                 "ipVersion": {
                 "type": "string"
+                },
+                "isReadOnly": {
+                "type": "boolean"
+                },
+                "modelledContent": {
+                "type": "object"
                 },
                 "name": {
                 "type": "string"

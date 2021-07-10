@@ -54,6 +54,20 @@ class JSONSchemaValidatorD1B9755414C5DcbB61987B2Dd06839A(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -76,25 +90,14 @@ class JSONSchemaValidatorD1B9755414C5DcbB61987B2Dd06839A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "ssid",
-                "allowedProtocol"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "name",
-                "wirelessProfiles"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSNSPProfile"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

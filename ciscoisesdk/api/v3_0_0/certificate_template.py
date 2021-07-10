@@ -74,12 +74,152 @@ class CertificateTemplate(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
+    def get_certificate_template_by_name(self,
+                                         name,
+                                         headers=None,
+                                         **query_parameters):
+        """This API allows the client to get a certificate template by
+        name.
+
+        Args:
+            name(basestring): name path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(name, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'name': name,
+        }
+
+        e_url = ('/ers/config/certificatetemplate/{name}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_e04f248274ea584aa30857975a28297f_v3_0_0', _api_response)
+
+    def get_certificate_template_by_id(self,
+                                       id,
+                                       headers=None,
+                                       **query_parameters):
+        """This API allows the client to get a certificate template by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/certificatetemplate/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_e9e38cdf5bcb5c018b7f10f1d0864215_v3_0_0', _api_response)
+
     def get_all_certificate_template(self,
                                      page=None,
                                      size=None,
                                      headers=None,
                                      **query_parameters):
-        """Get all CertificateTemplate.
+        """This API allows the client to get aall the certificate
+        templates.
 
         Args:
             page(int): page query parameter. Page number.
@@ -112,6 +252,12 @@ class CertificateTemplate(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -133,7 +279,7 @@ class CertificateTemplate(object):
         path_params = {
         }
 
-        e_url = ('/ers/config/certificatetemplate')
+        e_url = ('/ers/config/certificatetemplate/')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -141,14 +287,15 @@ class CertificateTemplate(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c87977b21b8f5d64852a8b6a5527928d_v3_0_0', _api_response)
+        return self._object_factory('bpm_dc1da5c3912a5117878160e27f6b533a_v3_0_0', _api_response)
 
     def get_all_certificate_template_generator(self,
                                                page=None,
                                                size=None,
                                                headers=None,
                                                **query_parameters):
-        """Get all CertificateTemplate.
+        """This API allows the client to get aall the certificate
+        templates.
 
         Args:
             page(int): page query parameter. Page number.
@@ -180,14 +327,13 @@ class CertificateTemplate(object):
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
-    def get_certificate_template_by_id(self,
-                                       id,
-                                       headers=None,
-                                       **query_parameters):
-        """Get CertificateTemplate by Id.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the certificate template.
 
         Args:
-            id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -221,8 +367,6 @@ class CertificateTemplate(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -230,10 +374,9 @@ class CertificateTemplate(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/certificatetemplate/{id}')
+        e_url = ('/ers/config/certificatetemplate/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -241,67 +384,4 @@ class CertificateTemplate(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e9e38cdf5bcb5c018b7f10f1d0864215_v3_0_0', _api_response)
-
-    def get_certificate_template_by_name(self,
-                                         name,
-                                         headers=None,
-                                         **query_parameters):
-        """Get CertificateTemplate by name.
-
-        Args:
-            name(basestring): name path parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
-            if 'Accept' in headers:
-                check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-        check_type(name, basestring,
-                   may_be_none=False)
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            'name': name,
-        }
-
-        e_url = ('/ers/config/certificatetemplate/name/{name}')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_ef36cc17a55cb38bf1fe2973dcc312_v3_0_0', _api_response)
+        return self._object_factory('bpm_f126f916efd575dbc9acae4ab2a1e4e_v3_0_0', _api_response)

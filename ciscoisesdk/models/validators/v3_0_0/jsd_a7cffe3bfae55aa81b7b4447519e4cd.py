@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateTACACSExternalServersById data model.
+"""Identity Services Engine updateTACACSServerSequenceById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,48 +38,50 @@ from builtins import *
 
 
 class JSONSchemaValidatorA7Cffe3Bfae55Aa81B7B4447519E4Cd(object):
-    """updateTACACSExternalServersById request schema definition."""
+    """updateTACACSServerSequenceById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA7Cffe3Bfae55Aa81B7B4447519E4Cd, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "TacacsExternalServer": {
+                "TacacsServerSequence": {
                 "properties": {
-                "connectionPort": {
-                "type": "integer"
-                },
                 "description":
                  {
                 "type": "string"
                 },
-                "hostIP": {
+                "id": {
                 "type": "string"
+                },
+                "localAccounting": {
+                "type": "boolean"
                 },
                 "name": {
                 "type": "string"
                 },
-                "sharedSecret": {
+                "prefixDelimiter": {
                 "type": "string"
                 },
-                "singleConnect": {
+                "prefixStrip": {
                 "type": "boolean"
                 },
-                "timeout": {
-                "type": "integer"
+                "remoteAccounting": {
+                "type": "boolean"
+                },
+                "serverList": {
+                "type": "string"
+                },
+                "suffixDelimiter": {
+                "type": "string"
+                },
+                "suffixStrip": {
+                "type": "boolean"
                 }
                 },
-                "required": [
-                "name",
-                "hostIP"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsExternalServer"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

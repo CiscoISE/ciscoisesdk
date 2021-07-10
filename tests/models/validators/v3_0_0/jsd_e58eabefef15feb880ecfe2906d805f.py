@@ -47,6 +47,10 @@ class JSONSchemaValidatorE58EabeFef15Feb880ECfe2906D805F(object):
                 "properties": {
                 "PortalTheme": {
                 "properties": {
+                "description":
+                 {
+                "type": "string"
+                },
                 "id": {
                 "type": "string"
                 },
@@ -62,11 +66,6 @@ class JSONSchemaValidatorE58EabeFef15Feb880ECfe2906D805F(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -79,9 +78,6 @@ class JSONSchemaValidatorE58EabeFef15Feb880ECfe2906D805F(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "PortalTheme"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

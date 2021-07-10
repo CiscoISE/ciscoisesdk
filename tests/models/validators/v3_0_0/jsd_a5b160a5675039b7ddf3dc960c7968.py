@@ -54,8 +54,25 @@ class JSONSchemaValidatorA5B160A5675039B7DdF3Dc960C7968(object):
                 "enabled": {
                 "type": "boolean"
                 },
+                "id": {
+                "type": "string"
+                },
                 "ipAddress": {
                 "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "sxpMode": {
                 "type": "string"
@@ -73,21 +90,9 @@ class JSONSchemaValidatorA5B160A5675039B7DdF3Dc960C7968(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "sxpPeer",
-                "sxpVpn",
-                "sxpNode",
-                "ipAddress",
-                "sxpMode",
-                "sxpVersion",
-                "enabled"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSSxpConnection"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

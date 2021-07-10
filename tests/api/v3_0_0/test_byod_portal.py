@@ -29,6 +29,172 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_get_byod_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_effdf30a3e3a5781ba1f5cf833395359_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_byod_portal_by_id(api):
+    endpoint_result = api.byod_portal.get_byod_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.byod_portal
+def test_get_byod_portal_by_id(api, validator):
+    try:
+        assert is_valid_get_byod_portal_by_id(
+            validator,
+            get_byod_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_byod_portal_by_id_default(api):
+    endpoint_result = api.byod_portal.get_byod_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.byod_portal
+def test_get_byod_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_get_byod_portal_by_id(
+            validator,
+            get_byod_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_byod_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_3e38d10b1ea257d49ebce893e87b3419_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_byod_portal_by_id(api):
+    endpoint_result = api.byod_portal.update_byod_portal_by_id(
+        active_validation=False,
+        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        portal_test_url='string',
+        portal_type='string',
+        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}
+    )
+    return endpoint_result
+
+
+@pytest.mark.byod_portal
+def test_update_byod_portal_by_id(api, validator):
+    try:
+        assert is_valid_update_byod_portal_by_id(
+            validator,
+            update_byod_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_byod_portal_by_id_default(api):
+    endpoint_result = api.byod_portal.update_byod_portal_by_id(
+        active_validation=False,
+        id='string',
+        customizations=None,
+        description=None,
+        name=None,
+        payload=None,
+        portal_test_url=None,
+        portal_type=None,
+        settings=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.byod_portal
+def test_update_byod_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_update_byod_portal_by_id(
+            validator,
+            update_byod_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_byod_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_df2fb34fbab65254ac87d1be50abd15f_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_byod_portal_by_id(api):
+    endpoint_result = api.byod_portal.delete_byod_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.byod_portal
+def test_delete_byod_portal_by_id(api, validator):
+    try:
+        assert is_valid_delete_byod_portal_by_id(
+            validator,
+            delete_byod_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_byod_portal_by_id_default(api):
+    endpoint_result = api.byod_portal.delete_byod_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.byod_portal
+def test_delete_byod_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_byod_portal_by_id(
+            validator,
+            delete_byod_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_byod_portal(json_schema_validate, obj):
     if not obj:
         return False
@@ -103,13 +269,14 @@ def is_valid_create_byod_portal(json_schema_validate, obj):
 def create_byod_portal(api):
     endpoint_result = api.byod_portal.create_byod_portal(
         active_validation=False,
-        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
+        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
         description='string',
         id='string',
         name='string',
         payload=None,
+        portal_test_url='string',
         portal_type='string',
-        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string', 'availableSsids': []}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string'}}
+        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}
     )
     return endpoint_result
 
@@ -135,6 +302,7 @@ def create_byod_portal_default(api):
         id=None,
         name=None,
         payload=None,
+        portal_test_url=None,
         portal_type=None,
         settings=None
     )
@@ -153,30 +321,30 @@ def test_create_byod_portal_default(api, validator):
             raise original_e
 
 
-def is_valid_get_byod_portal_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_effdf30a3e3a5781ba1f5cf833395359_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c5d2d9d8c20b58049cd3326850f2292f_v3_0_0').validate(obj.response)
     return True
 
 
-def get_byod_portal_by_id(api):
-    endpoint_result = api.byod_portal.get_byod_portal_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.byod_portal.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.byod_portal
-def test_get_byod_portal_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_byod_portal_by_id(
+        assert is_valid_get_version(
             validator,
-            get_byod_portal_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -184,133 +352,19 @@ def test_get_byod_portal_by_id(api, validator):
             raise original_e
 
 
-def get_byod_portal_by_id_default(api):
-    endpoint_result = api.byod_portal.get_byod_portal_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.byod_portal.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.byod_portal
-def test_get_byod_portal_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_byod_portal_by_id(
+        assert is_valid_get_version(
             validator,
-            get_byod_portal_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_byod_portal_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3e38d10b1ea257d49ebce893e87b3419_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_byod_portal_by_id(api):
-    endpoint_result = api.byod_portal.update_byod_portal_by_id(
-        active_validation=False,
-        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
-        description='string',
-        id='string',
-        name='string',
-        payload=None,
-        portal_type='string',
-        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string', 'availableSsids': []}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string'}}
-    )
-    return endpoint_result
-
-
-@pytest.mark.byod_portal
-def test_update_byod_portal_by_id(api, validator):
-    try:
-        assert is_valid_update_byod_portal_by_id(
-            validator,
-            update_byod_portal_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_byod_portal_by_id_default(api):
-    endpoint_result = api.byod_portal.update_byod_portal_by_id(
-        active_validation=False,
-        id='string',
-        customizations=None,
-        description=None,
-        name=None,
-        payload=None,
-        portal_type=None,
-        settings=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.byod_portal
-def test_update_byod_portal_by_id_default(api, validator):
-    try:
-        assert is_valid_update_byod_portal_by_id(
-            validator,
-            update_byod_portal_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_byod_portal_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_df2fb34fbab65254ac87d1be50abd15f_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_byod_portal_by_id(api):
-    endpoint_result = api.byod_portal.delete_byod_portal_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.byod_portal
-def test_delete_byod_portal_by_id(api, validator):
-    try:
-        assert is_valid_delete_byod_portal_by_id(
-            validator,
-            delete_byod_portal_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_byod_portal_by_id_default(api):
-    endpoint_result = api.byod_portal.delete_byod_portal_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.byod_portal
-def test_delete_byod_portal_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_byod_portal_by_id(
-            validator,
-            delete_byod_portal_by_id_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

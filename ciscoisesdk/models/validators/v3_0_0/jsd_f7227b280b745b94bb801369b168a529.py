@@ -51,14 +51,6 @@ class JSONSchemaValidatorF7227B280B745B94Bb801369B168A529(object):
                 "type": "boolean"
                 },
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 },
                 "description":
@@ -102,17 +94,9 @@ class JSONSchemaValidatorF7227B280B745B94Bb801369B168A529(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "enabled",
-                "password"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "InternalUser"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

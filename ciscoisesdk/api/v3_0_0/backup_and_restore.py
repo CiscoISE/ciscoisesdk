@@ -82,8 +82,9 @@ class BackupAndRestore(object):
                       payload=None,
                       active_validation=True,
                       **query_parameters):
-        """Take the config DB backup now by providing the name of the
-        backup,repository name and encryption key.
+        """Triggers on demand configuration backup on the ISE node. The API
+        returns the task ID. Use the Task Service status API to
+        get the status of the backup job.
 
         Args:
             backup_encryption_key(string): The encyption key for the
@@ -101,9 +102,10 @@ class BackupAndRestore(object):
             backup_name(string): The backup file will get saved with
                 this name., property of the request
                 body.
-            repository_name(string): Name of the repository where
-                the generated backup file will get
-                copied., property of the request body.
+            repository_name(string): Name of the configured
+                repository where the generated backup
+                file will get copied., property of the
+                request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -153,20 +155,20 @@ class BackupAndRestore(object):
             _payload = payload
         else:
             _payload = {
+                'backupEncryptionKey':
+                    backup_encryption_key,
                 'backupName':
                     backup_name,
                 'repositoryName':
                     repository_name,
-                'backupEncryptionKey':
-                    backup_encryption_key,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_db1d9dda53369e35d33138b29c16_v3_0_0')\
+            self._request_validator('jsd_b9638a67f60d5a6aa476af13632d96bd_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/backup-restore/config/backup')
+        e_url = ('/v1/backup-restore/config/backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -178,7 +180,114 @@ class BackupAndRestore(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_db1d9dda53369e35d33138b29c16_v3_0_0', _api_response)
+        return self._object_factory('bpm_b9638a67f60d5a6aa476af13632d96bd_v3_0_0', _api_response)
+
+    def cancel_backup(self,
+                      headers=None,
+                      **query_parameters):
+        """Cancels the backup job running on the node.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/v1/backup-restore/config/cancel-backup')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        if with_custom_headers:
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               headers=_headers)
+        else:
+            _api_response = self._session.post(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_e9813ff50a9bcbbd5d539ed19d8_v3_0_0', _api_response)
+
+    def get_last_config_backup_status(self,
+                                      headers=None,
+                                      **query_parameters):
+        """Gives the last backup status.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/v1/backup-restore/config/last-backup-status')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_b0b71a5f25825202b6cb339ce1a5a8d4_v3_0_0', _api_response)
 
     def restore_config_backup(self,
                               backup_encryption_key=None,
@@ -189,8 +298,9 @@ class BackupAndRestore(object):
                               payload=None,
                               active_validation=True,
                               **query_parameters):
-        """Restore a config DB backup by giving the name of the backup
-        file, repository name and encryption key.
+        """Triggers a configuration DB restore job on the ISE node. The API
+        returns the task ID. Use the Task Service status API to
+        get the status of the backup job.
 
         Args:
             backup_encryption_key(string): The encryption key which
@@ -203,8 +313,9 @@ class BackupAndRestore(object):
                 restored on ISE node., property of the
                 request body.
             restore_include_adeos(string): Determines whether the
-                ADE-OS configure is restored., property
-                of the request body.
+                ADE-OS configure is restored. Possible
+                values true, false, property of the
+                request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -254,22 +365,22 @@ class BackupAndRestore(object):
             _payload = payload
         else:
             _payload = {
-                'restoreFile':
-                    restore_file,
-                'repositoryName':
-                    repository_name,
                 'backupEncryptionKey':
                     backup_encryption_key,
+                'repositoryName':
+                    repository_name,
+                'restoreFile':
+                    restore_file,
                 'restoreIncludeAdeos':
                     restore_include_adeos,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b8319a8b5d195348a8763acd95ca2967_v3_0_0')\
+            self._request_validator('jsd_db3505847b4e5f37a5c74bc41df54be3_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/backup-restore/config/restore')
+        e_url = ('/v1/backup-restore/config/restore')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -281,129 +392,27 @@ class BackupAndRestore(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_b8319a8b5d195348a8763acd95ca2967_v3_0_0', _api_response)
+        return self._object_factory('bpm_db3505847b4e5f37a5c74bc41df54be3_v3_0_0', _api_response)
 
-    def cancel_backup(self,
-                      headers=None,
-                      **query_parameters):
-        """Cancel the running backup.
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            pass
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        e_url = ('/api/v1/backup-restore/config/cancel-backup')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-
-        if with_custom_headers:
-            _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers)
-        else:
-            _api_response = self._session.post(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_e155669bc74586e9ef2580ec5752902_v3_0_0', _api_response)
-
-    def get_last_config_backup_status(self,
-                                      headers=None,
-                                      **query_parameters):
-        """gives the last backup status.
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            RestResponse: REST response with following properties:
-              - headers(MyDict): response headers.
-              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-        check_type(headers, dict)
-
-        if headers is not None:
-            pass
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-
-        _params = {
-        }
-        _params.update(query_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        e_url = ('/api/v1/backup-restore/config/last-backup-status')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
-        else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_d388e26255a15233ac682c0406880cfb_v3_0_0', _api_response)
-
-    def schedule_config_backup(self,
-                               backup_description=None,
-                               backup_encryption_key=None,
-                               backup_name=None,
-                               end_date=None,
-                               frequency=None,
-                               repository_name=None,
-                               start_date=None,
-                               time=None,
-                               headers=None,
-                               payload=None,
-                               active_validation=True,
-                               **query_parameters):
-        """Schedule the config backup.
+    def update_scheduled_config_backup(self,
+                                       backup_description=None,
+                                       backup_encryption_key=None,
+                                       backup_name=None,
+                                       end_date=None,
+                                       frequency=None,
+                                       month_day=None,
+                                       repository_name=None,
+                                       start_date=None,
+                                       status=None,
+                                       time=None,
+                                       week_day=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **query_parameters):
+        """Update the Schedule of the configuration backup on the ISE node
+        as per the input parameters. This API only helps in
+        editing the schedule.
 
         Args:
             backup_description(string): Description of the backup.,
@@ -424,25 +433,40 @@ class BackupAndRestore(object):
                 this name., property of the request
                 body.
             end_date(string): End date of the scheduled backup job.
-                Allowed format YYYY-MM-DD. End date is
+                Allowed format MM/DD/YYYY. End date is
                 not required in case of ONE_TIME
                 frequency., property of the request
                 body.
             frequency(string): Frequency with which the backup will
                 get scheduled in the ISE node. Allowed
-                values - ONE_TIME, DAILY, WEEKLY,
-                MONTHLY, property of the request body.
-                Available values are 'ONE_TIME',
-                'DAILY', 'WEEKLY' and 'MONTHLY'.
-            repository_name(string): Name of the repository where
-                the generated backup file will get
-                copied., property of the request body.
-            start_date(string): Start date for scheduling the backup
-                job. Allowed format YYYY-MM-DD.,
+                values - ONCE, DAILY, WEEKLY, MONTHLY,
+                property of the request body. Available
+                values are 'ONCE', 'DAILY', 'WEEKLY' and
+                'MONTHLY'.
+            month_day(string): Day of month you want backup to be
+                performed on when scheduled frequency is
+                MONTHLY. Allowed values - from 1 to 28.,
                 property of the request body.
+            repository_name(string): Name of the configured
+                repository where the generated backup
+                file will get copied., property of the
+                request body.
+            start_date(string): Start date for scheduling the backup
+                job. Allowed format MM/DD/YYYY.,
+                property of the request body.
+            status(string): Enable or disable scheduled backup.,
+                property of the request body. Available
+                values are 'ENABLE' and 'DISABLE'.
             time(string): Time at which backup job get scheduled.
                 example- 12:00 AM, property of the
                 request body.
+            week_day(string): Day of week you want backup to be
+                performed on when scheduled frequency is
+                WEEKLY. Allowed values - MON, TUE, WED,
+                THU, FRI, SAT, SUN., property of the
+                request body. Available values are
+                'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'
+                and 'SUN'.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -492,30 +516,202 @@ class BackupAndRestore(object):
             _payload = payload
         else:
             _payload = {
-                'backupName':
-                    backup_name,
                 'backupDescription':
                     backup_description,
-                'repositoryName':
-                    repository_name,
                 'backupEncryptionKey':
                     backup_encryption_key,
-                'frequency':
-                    frequency,
-                'startDate':
-                    start_date,
+                'backupName':
+                    backup_name,
                 'endDate':
                     end_date,
+                'frequency':
+                    frequency,
+                'monthDay':
+                    month_day,
+                'repositoryName':
+                    repository_name,
+                'startDate':
+                    start_date,
+                'status':
+                    status,
                 'time':
                     time,
+                'weekDay':
+                    week_day,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b994e6c8b8d53f29230686824c9fafa_v3_0_0')\
+            self._request_validator('jsd_d31fa60f5575a2ed23cee473c0fc_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/backup-restore/config/schedule-config-backup')
+        e_url = ('/v1/backup-restore/config/schedule-config-backup')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
+        else:
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
+
+        return self._object_factory('bpm_d31fa60f5575a2ed23cee473c0fc_v3_0_0', _api_response)
+
+    def create_scheduled_config_backup(self,
+                                       backup_description=None,
+                                       backup_encryption_key=None,
+                                       backup_name=None,
+                                       end_date=None,
+                                       frequency=None,
+                                       month_day=None,
+                                       repository_name=None,
+                                       start_date=None,
+                                       status=None,
+                                       time=None,
+                                       week_day=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **query_parameters):
+        """Schedules the configuration backup on the ISE node as per the
+        input parameters. This API helps in creating the
+        schedule for the first time.
+
+        Args:
+            backup_description(string): Description of the backup.,
+                property of the request body.
+            backup_encryption_key(string): The encyption key for the
+                backed up file. Encryption key must
+                satisfy the following criteria -
+                Contains at least one uppercase letter
+                [A-Z], Contains at least one lowercase
+                letter [a-z], Contains at least one
+                digit [0-9], Contain only
+                [A-Z][a-z][0-9]_#, Has at least 8
+                characters, Has not more than 15
+                characters, Must not contain
+                'CcIiSsCco', Must not begin with,
+                property of the request body.
+            backup_name(string): The backup file will get saved with
+                this name., property of the request
+                body.
+            end_date(string): End date of the scheduled backup job.
+                Allowed format MM/DD/YYYY. End date is
+                not required in case of ONE_TIME
+                frequency., property of the request
+                body.
+            frequency(string): Frequency with which the backup will
+                get scheduled in the ISE node. Allowed
+                values - ONCE, DAILY, WEEKLY, MONTHLY,
+                property of the request body. Available
+                values are 'ONCE', 'DAILY', 'WEEKLY' and
+                'MONTHLY'.
+            month_day(string): Day of month you want backup to be
+                performed on when scheduled frequency is
+                MONTHLY. Allowed values - from 1 to 28.,
+                property of the request body.
+            repository_name(string): Name of the configured
+                repository where the generated backup
+                file will get copied., property of the
+                request body.
+            start_date(string): Start date for scheduling the backup
+                job. Allowed format MM/DD/YYYY.,
+                property of the request body.
+            status(string): Enable or disable scheduled backup.,
+                property of the request body. Available
+                values are 'ENABLE' and 'DISABLE'.
+            time(string): Time at which backup job get scheduled.
+                example- 12:00 AM, property of the
+                request body.
+            week_day(string): Day of week you want backup to be
+                performed on when scheduled frequency is
+                WEEKLY. Allowed values - MON, TUE, WED,
+                THU, FRI, SAT, SUN., property of the
+                request body. Available values are
+                'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'
+                and 'SUN'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _payload = {
+                'backupDescription':
+                    backup_description,
+                'backupEncryptionKey':
+                    backup_encryption_key,
+                'backupName':
+                    backup_name,
+                'endDate':
+                    end_date,
+                'frequency':
+                    frequency,
+                'monthDay':
+                    month_day,
+                'repositoryName':
+                    repository_name,
+                'startDate':
+                    start_date,
+                'status':
+                    status,
+                'time':
+                    time,
+                'weekDay':
+                    week_day,
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_dd4581dd32f65e8c83cca2f0a97af3e2_v3_0_0')\
+                .validate(_payload)
+
+        e_url = ('/v1/backup-restore/config/schedule-config-backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -527,4 +723,4 @@ class BackupAndRestore(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_b994e6c8b8d53f29230686824c9fafa_v3_0_0', _api_response)
+        return self._object_factory('bpm_dd4581dd32f65e8c83cca2f0a97af3e2_v3_0_0', _api_response)

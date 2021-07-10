@@ -65,15 +65,9 @@ class JSONSchemaValidatorD0Ed84901325292Ad4E2A91A174F6B2(object):
                 "type": "array"
                 }
                 },
-                "required": [
-                "domains"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSActiveDirectoryDomains"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

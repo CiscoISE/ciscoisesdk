@@ -29,6 +29,172 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
+def is_valid_get_sponsored_guest_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_56d1132a216d54d091022aec0ad018f8_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_sponsored_guest_portal_by_id(api):
+    endpoint_result = api.sponsored_guest_portal.get_sponsored_guest_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsored_guest_portal
+def test_get_sponsored_guest_portal_by_id(api, validator):
+    try:
+        assert is_valid_get_sponsored_guest_portal_by_id(
+            validator,
+            get_sponsored_guest_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_sponsored_guest_portal_by_id_default(api):
+    endpoint_result = api.sponsored_guest_portal.get_sponsored_guest_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsored_guest_portal
+def test_get_sponsored_guest_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_get_sponsored_guest_portal_by_id(
+            validator,
+            get_sponsored_guest_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_sponsored_guest_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_0d39172f68fd5cbd897f03f1440f98a4_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_sponsored_guest_portal_by_id(api):
+    endpoint_result = api.sponsored_guest_portal.update_sponsored_guest_portal_by_id(
+        active_validation=False,
+        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        portal_test_url='string',
+        portal_type='string',
+        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowForgotPassword': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'socialConfigs': [{'socialMediaType': 'string', 'socialMediaValue': 'string'}]}, 'aupSettings': {'includeAup': True, 'requireAupScrolling': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'displayFrequencyIntervalDays': 0, 'requireScrolling': True, 'displayFrequency': 'string'}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsored_guest_portal
+def test_update_sponsored_guest_portal_by_id(api, validator):
+    try:
+        assert is_valid_update_sponsored_guest_portal_by_id(
+            validator,
+            update_sponsored_guest_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_sponsored_guest_portal_by_id_default(api):
+    endpoint_result = api.sponsored_guest_portal.update_sponsored_guest_portal_by_id(
+        active_validation=False,
+        id='string',
+        customizations=None,
+        description=None,
+        name=None,
+        payload=None,
+        portal_test_url=None,
+        portal_type=None,
+        settings=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsored_guest_portal
+def test_update_sponsored_guest_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_update_sponsored_guest_portal_by_id(
+            validator,
+            update_sponsored_guest_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_sponsored_guest_portal_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_9218749931f05e2ebc796f080892085f_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_sponsored_guest_portal_by_id(api):
+    endpoint_result = api.sponsored_guest_portal.delete_sponsored_guest_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsored_guest_portal
+def test_delete_sponsored_guest_portal_by_id(api, validator):
+    try:
+        assert is_valid_delete_sponsored_guest_portal_by_id(
+            validator,
+            delete_sponsored_guest_portal_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_sponsored_guest_portal_by_id_default(api):
+    endpoint_result = api.sponsored_guest_portal.delete_sponsored_guest_portal_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsored_guest_portal
+def test_delete_sponsored_guest_portal_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_sponsored_guest_portal_by_id(
+            validator,
+            delete_sponsored_guest_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
 def is_valid_get_all_sponsored_guest_portals(json_schema_validate, obj):
     if not obj:
         return False
@@ -103,13 +269,13 @@ def is_valid_create_sponsored_guest_portal(json_schema_validate, obj):
 def create_sponsored_guest_portal(api):
     endpoint_result = api.sponsored_guest_portal.create_sponsored_guest_portal(
         active_validation=False,
-        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
+        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
         description='string',
-        id='string',
         name='string',
         payload=None,
+        portal_test_url='string',
         portal_type='string',
-        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string', 'availableSsids': []}, 'loginPageSettings': {'requireAccessCode': True, 'accessCode': 'string', 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestToCreateAccounts': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'allowGuestToUseSocialAccounts': True, 'allowShowGuestForm': True, 'socialConfigs': []}, 'aupSettings': {'includeAup': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'requireAccessCode': True, 'requireScrolling': True, 'displayFrequency': 'string'}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string'}}
+        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowForgotPassword': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'socialConfigs': [{'socialMediaType': 'string', 'socialMediaValue': 'string'}]}, 'aupSettings': {'includeAup': True, 'requireAupScrolling': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'displayFrequencyIntervalDays': 0, 'requireScrolling': True, 'displayFrequency': 'string'}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}
     )
     return endpoint_result
 
@@ -132,9 +298,9 @@ def create_sponsored_guest_portal_default(api):
         active_validation=False,
         customizations=None,
         description=None,
-        id=None,
         name=None,
         payload=None,
+        portal_test_url=None,
         portal_type=None,
         settings=None
     )
@@ -153,30 +319,30 @@ def test_create_sponsored_guest_portal_default(api, validator):
             raise original_e
 
 
-def is_valid_get_sponsored_guest_portal_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_56d1132a216d54d091022aec0ad018f8_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2f1aacc5c48654cebbc4d075dc7dde80_v3_0_0').validate(obj.response)
     return True
 
 
-def get_sponsored_guest_portal_by_id(api):
-    endpoint_result = api.sponsored_guest_portal.get_sponsored_guest_portal_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.sponsored_guest_portal.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.sponsored_guest_portal
-def test_get_sponsored_guest_portal_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_sponsored_guest_portal_by_id(
+        assert is_valid_get_version(
             validator,
-            get_sponsored_guest_portal_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -184,133 +350,19 @@ def test_get_sponsored_guest_portal_by_id(api, validator):
             raise original_e
 
 
-def get_sponsored_guest_portal_by_id_default(api):
-    endpoint_result = api.sponsored_guest_portal.get_sponsored_guest_portal_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.sponsored_guest_portal.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.sponsored_guest_portal
-def test_get_sponsored_guest_portal_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_sponsored_guest_portal_by_id(
+        assert is_valid_get_version(
             validator,
-            get_sponsored_guest_portal_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_sponsored_guest_portal_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0d39172f68fd5cbd897f03f1440f98a4_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_sponsored_guest_portal_by_id(api):
-    endpoint_result = api.sponsored_guest_portal.update_sponsored_guest_portal_by_id(
-        active_validation=False,
-        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
-        description='string',
-        id='string',
-        name='string',
-        payload=None,
-        portal_type='string',
-        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string', 'availableSsids': []}, 'loginPageSettings': {'requireAccessCode': True, 'accessCode': 'string', 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestToCreateAccounts': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'allowGuestToUseSocialAccounts': True, 'allowShowGuestForm': True, 'socialConfigs': []}, 'aupSettings': {'includeAup': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'requireAccessCode': True, 'requireScrolling': True, 'displayFrequency': 'string'}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string'}}
-    )
-    return endpoint_result
-
-
-@pytest.mark.sponsored_guest_portal
-def test_update_sponsored_guest_portal_by_id(api, validator):
-    try:
-        assert is_valid_update_sponsored_guest_portal_by_id(
-            validator,
-            update_sponsored_guest_portal_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_sponsored_guest_portal_by_id_default(api):
-    endpoint_result = api.sponsored_guest_portal.update_sponsored_guest_portal_by_id(
-        active_validation=False,
-        id='string',
-        customizations=None,
-        description=None,
-        name=None,
-        payload=None,
-        portal_type=None,
-        settings=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.sponsored_guest_portal
-def test_update_sponsored_guest_portal_by_id_default(api, validator):
-    try:
-        assert is_valid_update_sponsored_guest_portal_by_id(
-            validator,
-            update_sponsored_guest_portal_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_sponsored_guest_portal_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9218749931f05e2ebc796f080892085f_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_sponsored_guest_portal_by_id(api):
-    endpoint_result = api.sponsored_guest_portal.delete_sponsored_guest_portal_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.sponsored_guest_portal
-def test_delete_sponsored_guest_portal_by_id(api, validator):
-    try:
-        assert is_valid_delete_sponsored_guest_portal_by_id(
-            validator,
-            delete_sponsored_guest_portal_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_sponsored_guest_portal_by_id_default(api):
-    endpoint_result = api.sponsored_guest_portal.delete_sponsored_guest_portal_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.sponsored_guest_portal
-def test_delete_sponsored_guest_portal_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_sponsored_guest_portal_by_id(
-            validator,
-            delete_sponsored_guest_portal_by_id_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

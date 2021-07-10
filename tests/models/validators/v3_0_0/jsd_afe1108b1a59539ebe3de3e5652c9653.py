@@ -57,6 +57,23 @@ class JSONSchemaValidatorAfe1108B1A59539EBe3DE3E5652C9653(object):
                 "hostIP": {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -70,16 +87,9 @@ class JSONSchemaValidatorAfe1108B1A59539EBe3DE3E5652C9653(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "name",
-                "hostIP"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsExternalServer"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

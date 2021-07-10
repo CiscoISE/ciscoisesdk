@@ -83,12 +83,23 @@ class SponsorGroupMember(object):
                                      sortdsc=None,
                                      headers=None,
                                      **query_parameters):
-        """Get all Sponsor Group Member.
+        """This API allows the client to get all the sponsor group members.
+        Filter:   [name]   To search guest users by using
+        toDate  column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
+            sortasc(basestring): sortasc query parameter. sort asc.
+            sortdsc(basestring): sortdsc query parameter. sort desc.
             filter(basestring, list, set, tuple): filter query
                 parameter.               **Simple
                 filtering** should be available through
@@ -118,8 +129,6 @@ class SponsorGroupMember(object):
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
-            sortasc(basestring): sortasc query parameter. sort asc.
-            sortdsc(basestring): sortdsc query parameter. sort desc.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -147,6 +156,12 @@ class SponsorGroupMember(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -155,24 +170,24 @@ class SponsorGroupMember(object):
             with_custom_headers = True
         check_type(page, (int, basestring, list))
         check_type(size, (int, basestring, list))
-        check_type(filter, (basestring, list, set, tuple))
-        check_type(filter_type, basestring)
         check_type(sortasc, basestring)
         check_type(sortdsc, basestring)
+        check_type(filter, (basestring, list, set, tuple))
+        check_type(filter_type, basestring)
 
         _params = {
             'page':
                 page,
             'size':
                 size,
-            'filter':
-                filter,
-            'filterType':
-                filter_type,
             'sortasc':
                 sortasc,
             'sortdsc':
                 sortdsc,
+            'filter':
+                filter,
+            'filterType':
+                filter_type,
         }
         _params.update(query_parameters)
         _params = dict_from_items_with_values(_params)
@@ -199,12 +214,23 @@ class SponsorGroupMember(object):
                                                sortdsc=None,
                                                headers=None,
                                                **query_parameters):
-        """Get all Sponsor Group Member.
+        """This API allows the client to get all the sponsor group members.
+        Filter:   [name]   To search guest users by using
+        toDate  column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
+            sortasc(basestring): sortasc query parameter. sort asc.
+            sortdsc(basestring): sortdsc query parameter. sort desc.
             filter(basestring, list, set, tuple): filter query
                 parameter.               **Simple
                 filtering** should be available through
@@ -234,8 +260,6 @@ class SponsorGroupMember(object):
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
-            sortasc(basestring): sortasc query parameter. sort asc.
-            sortdsc(basestring): sortdsc query parameter. sort desc.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -266,14 +290,13 @@ class SponsorGroupMember(object):
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
-    def get_sponsor_group_member_by_id(self,
-                                       id,
-                                       headers=None,
-                                       **query_parameters):
-        """Get Sponsor Group Member by Id.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the sponsor group member.
 
         Args:
-            id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -307,8 +330,6 @@ class SponsorGroupMember(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -316,10 +337,9 @@ class SponsorGroupMember(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/sponsorgroupmember/{id}')
+        e_url = ('/ers/config/sponsorgroupmember/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -327,4 +347,4 @@ class SponsorGroupMember(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ed1fe4ba7d5facbce4ad1eadab3e08_v3_0_0', _api_response)
+        return self._object_factory('bpm_f7c916a2e265c11b8b8535e8f88c7d1_v3_0_0', _api_response)

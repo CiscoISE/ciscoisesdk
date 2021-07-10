@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_access_identity_stores(json_schema_validate, obj):
+def is_valid_get_network_access_identity_stores(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c7aa2a6cac155a6cb7ace3fd76a81e0f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_4ef75d8c1654508aae4fc2ee9b34fabc_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_network_access_identity_stores(api):
-    endpoint_result = api.network_access_identity_stores.get_all_network_access_identity_stores(
+def get_network_access_identity_stores(api):
+    endpoint_result = api.network_access_identity_stores.get_network_access_identity_stores(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_identity_stores
-def test_get_all_network_access_identity_stores(api, validator):
+def test_get_network_access_identity_stores(api, validator):
     try:
-        assert is_valid_get_all_network_access_identity_stores(
+        assert is_valid_get_network_access_identity_stores(
             validator,
-            get_all_network_access_identity_stores(api)
+            get_network_access_identity_stores(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_network_access_identity_stores(api, validator):
             raise original_e
 
 
-def get_all_network_access_identity_stores_default(api):
-    endpoint_result = api.network_access_identity_stores.get_all_network_access_identity_stores(
+def get_network_access_identity_stores_default(api):
+    endpoint_result = api.network_access_identity_stores.get_network_access_identity_stores(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_identity_stores
-def test_get_all_network_access_identity_stores_default(api, validator):
+def test_get_network_access_identity_stores_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_identity_stores(
+        assert is_valid_get_network_access_identity_stores(
             validator,
-            get_all_network_access_identity_stores_default(api)
+            get_network_access_identity_stores_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

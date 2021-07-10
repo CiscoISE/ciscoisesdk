@@ -74,10 +74,11 @@ class NetworkAccessProfiles(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_network_access_profiles(self,
-                                        headers=None,
-                                        **query_parameters):
-        """Network Access - Returns list of profiles.
+    def get_network_access_profiles(self,
+                                    headers=None,
+                                    **query_parameters):
+        """Network Access - Returns list of profiles.  (Other CRUD APIs
+        available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -119,7 +120,7 @@ class NetworkAccessProfiles(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/policy/network-access/profiles')
+        e_url = ('/v1/policy/network-access/profiles')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -127,4 +128,4 @@ class NetworkAccessProfiles(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b227e1b5bbac556a9f577d3a3ea407af_v3_0_0', _api_response)
+        return self._object_factory('bpm_b33c6c1bdf5c6b8c63835ce0298418_v3_0_0', _api_response)

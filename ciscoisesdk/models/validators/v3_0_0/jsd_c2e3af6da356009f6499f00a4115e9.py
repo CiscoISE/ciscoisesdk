@@ -60,16 +60,9 @@ class JSONSchemaValidatorC2E3Af6Da356009F6499F00A4115E9(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "deployType"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SGMappingGroup"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_autoapprove_px_grid_node(json_schema_validate, obj):
+def is_valid_autoapprove_px_grid_settings(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,20 +40,22 @@ def is_valid_autoapprove_px_grid_node(json_schema_validate, obj):
     return True
 
 
-def autoapprove_px_grid_node(api):
-    endpoint_result = api.px_grid_settings.autoapprove_px_grid_node(
+def autoapprove_px_grid_settings(api):
+    endpoint_result = api.px_grid_settings.autoapprove_px_grid_settings(
         active_validation=False,
+        allow_password_based_accounts=True,
+        auto_approve_cert_based_accounts=True,
         payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.px_grid_settings
-def test_autoapprove_px_grid_node(api, validator):
+def test_autoapprove_px_grid_settings(api, validator):
     try:
-        assert is_valid_autoapprove_px_grid_node(
+        assert is_valid_autoapprove_px_grid_settings(
             validator,
-            autoapprove_px_grid_node(api)
+            autoapprove_px_grid_settings(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -61,20 +63,72 @@ def test_autoapprove_px_grid_node(api, validator):
             raise original_e
 
 
-def autoapprove_px_grid_node_default(api):
-    endpoint_result = api.px_grid_settings.autoapprove_px_grid_node(
+def autoapprove_px_grid_settings_default(api):
+    endpoint_result = api.px_grid_settings.autoapprove_px_grid_settings(
         active_validation=False,
+        allow_password_based_accounts=None,
+        auto_approve_cert_based_accounts=None,
         payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.px_grid_settings
-def test_autoapprove_px_grid_node_default(api, validator):
+def test_autoapprove_px_grid_settings_default(api, validator):
     try:
-        assert is_valid_autoapprove_px_grid_node(
+        assert is_valid_autoapprove_px_grid_settings(
             validator,
-            autoapprove_px_grid_node_default(api)
+            autoapprove_px_grid_settings_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_bea00c7a4f9b5e1798ea078e123ff016_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.px_grid_settings.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.px_grid_settings
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.px_grid_settings.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.px_grid_settings
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

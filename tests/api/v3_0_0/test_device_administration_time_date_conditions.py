@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_device_admin_time_conditions(json_schema_validate, obj):
+def is_valid_get_device_admin_time_conditions(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f79ab23563d857e58e01a74e37333572_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_816bf923264c53f98d5c347fa50b9c15_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_device_admin_time_conditions(api):
-    endpoint_result = api.device_administration_time_date_conditions.get_all_device_admin_time_conditions(
+def get_device_admin_time_conditions(api):
+    endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_conditions(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_get_all_device_admin_time_conditions(api, validator):
+def test_get_device_admin_time_conditions(api, validator):
     try:
-        assert is_valid_get_all_device_admin_time_conditions(
+        assert is_valid_get_device_admin_time_conditions(
             validator,
-            get_all_device_admin_time_conditions(api)
+            get_device_admin_time_conditions(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,53 +60,53 @@ def test_get_all_device_admin_time_conditions(api, validator):
             raise original_e
 
 
-def get_all_device_admin_time_conditions_default(api):
-    endpoint_result = api.device_administration_time_date_conditions.get_all_device_admin_time_conditions(
+def get_device_admin_time_conditions_default(api):
+    endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_conditions(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_get_all_device_admin_time_conditions_default(api, validator):
+def test_get_device_admin_time_conditions_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_time_conditions(
+        assert is_valid_get_device_admin_time_conditions(
             validator,
-            get_all_device_admin_time_conditions_default(api)
+            get_device_admin_time_conditions_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_create_device_admin_time_condition(json_schema_validate, obj):
+def is_valid_post_device_admin_time_condition(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_26a4d5b5da6a50bfaaecc180543fd952_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_98b30f809e275589bd7154b5b4093d3f_v3_0_0').validate(obj.response)
     return True
 
 
-def create_device_admin_time_condition(api):
-    endpoint_result = api.device_administration_time_date_conditions.create_device_admin_time_condition(
+def post_device_admin_time_condition(api):
+    endpoint_result = api.device_administration_time_date_conditions.post_device_admin_time_condition(
         active_validation=False,
-        attribute_id='string',
         attribute_name='string',
         attribute_value='string',
-        children=[{'conditionType': 'string', 'isNegate': True}],
+        children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
-        dates_range={'startDate': 'string', 'endDate': 'string'},
-        dates_range_exception={'startDate': 'string', 'endDate': 'string'},
+        dates_range={'endDate': 'string', 'startDate': 'string'},
+        dates_range_exception={'endDate': 'string', 'startDate': 'string'},
         description='string',
         dictionary_name='string',
         dictionary_value='string',
-        hours_range={'startTime': 'string', 'endTime': 'string'},
-        hours_range_exception={'startTime': 'string', 'endTime': 'string'},
+        hours_range={'endTime': 'string', 'startTime': 'string'},
+        hours_range_exception={'endTime': 'string', 'startTime': 'string'},
         id='string',
         is_negate=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         operator='string',
         payload=None,
@@ -117,11 +117,11 @@ def create_device_admin_time_condition(api):
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_create_device_admin_time_condition(api, validator):
+def test_post_device_admin_time_condition(api, validator):
     try:
-        assert is_valid_create_device_admin_time_condition(
+        assert is_valid_post_device_admin_time_condition(
             validator,
-            create_device_admin_time_condition(api)
+            post_device_admin_time_condition(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -129,10 +129,9 @@ def test_create_device_admin_time_condition(api, validator):
             raise original_e
 
 
-def create_device_admin_time_condition_default(api):
-    endpoint_result = api.device_administration_time_date_conditions.create_device_admin_time_condition(
+def post_device_admin_time_condition_default(api):
+    endpoint_result = api.device_administration_time_date_conditions.post_device_admin_time_condition(
         active_validation=False,
-        attribute_id=None,
         attribute_name=None,
         attribute_value=None,
         children=None,
@@ -146,6 +145,7 @@ def create_device_admin_time_condition_default(api):
         hours_range_exception=None,
         id=None,
         is_negate=None,
+        link=None,
         name=None,
         operator=None,
         payload=None,
@@ -156,41 +156,41 @@ def create_device_admin_time_condition_default(api):
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_create_device_admin_time_condition_default(api, validator):
+def test_post_device_admin_time_condition_default(api, validator):
     try:
-        assert is_valid_create_device_admin_time_condition(
+        assert is_valid_post_device_admin_time_condition(
             validator,
-            create_device_admin_time_condition_default(api)
+            post_device_admin_time_condition_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_device_admin_time_condition_by_id(json_schema_validate, obj):
+def is_valid_get_device_admin_time_condition_by_condition_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_4709e603092f597ab6c25381e59c4a70_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_15ffd94d339a5fea8a4777dccccb926f_v3_0_0').validate(obj.response)
     return True
 
 
-def get_device_admin_time_condition_by_id(api):
-    endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_condition_by_id(
-        id='string'
+def get_device_admin_time_condition_by_condition_id(api):
+    endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_condition_by_condition_id(
+        condition_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_get_device_admin_time_condition_by_id(api, validator):
+def test_get_device_admin_time_condition_by_condition_id(api, validator):
     try:
-        assert is_valid_get_device_admin_time_condition_by_id(
+        assert is_valid_get_device_admin_time_condition_by_condition_id(
             validator,
-            get_device_admin_time_condition_by_id(api)
+            get_device_admin_time_condition_by_condition_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -198,53 +198,54 @@ def test_get_device_admin_time_condition_by_id(api, validator):
             raise original_e
 
 
-def get_device_admin_time_condition_by_id_default(api):
-    endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_condition_by_id(
-        id='string'
+def get_device_admin_time_condition_by_condition_id_default(api):
+    endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_condition_by_condition_id(
+        condition_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_get_device_admin_time_condition_by_id_default(api, validator):
+def test_get_device_admin_time_condition_by_condition_id_default(api, validator):
     try:
-        assert is_valid_get_device_admin_time_condition_by_id(
+        assert is_valid_get_device_admin_time_condition_by_condition_id(
             validator,
-            get_device_admin_time_condition_by_id_default(api)
+            get_device_admin_time_condition_by_condition_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_device_admin_time_condition_by_id(json_schema_validate, obj):
+def is_valid_put_device_admin_time_condition_by_condition_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6ee1780a38a85d1ba57c9a38e1093721_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e3241242740252b2814e0b474c314e9b_v3_0_0').validate(obj.response)
     return True
 
 
-def update_device_admin_time_condition_by_id(api):
-    endpoint_result = api.device_administration_time_date_conditions.update_device_admin_time_condition_by_id(
+def put_device_admin_time_condition_by_condition_id(api):
+    endpoint_result = api.device_administration_time_date_conditions.put_device_admin_time_condition_by_condition_id(
         active_validation=False,
-        attribute_id='string',
         attribute_name='string',
         attribute_value='string',
-        children=[{'conditionType': 'string', 'isNegate': True}],
+        children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
+        condition_id='string',
         condition_type='string',
-        dates_range={'startDate': 'string', 'endDate': 'string'},
-        dates_range_exception={'startDate': 'string', 'endDate': 'string'},
+        dates_range={'endDate': 'string', 'startDate': 'string'},
+        dates_range_exception={'endDate': 'string', 'startDate': 'string'},
         description='string',
         dictionary_name='string',
         dictionary_value='string',
-        hours_range={'startTime': 'string', 'endTime': 'string'},
-        hours_range_exception={'startTime': 'string', 'endTime': 'string'},
+        hours_range={'endTime': 'string', 'startTime': 'string'},
+        hours_range_exception={'endTime': 'string', 'startTime': 'string'},
         id='string',
         is_negate=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         operator='string',
         payload=None,
@@ -255,11 +256,11 @@ def update_device_admin_time_condition_by_id(api):
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_update_device_admin_time_condition_by_id(api, validator):
+def test_put_device_admin_time_condition_by_condition_id(api, validator):
     try:
-        assert is_valid_update_device_admin_time_condition_by_id(
+        assert is_valid_put_device_admin_time_condition_by_condition_id(
             validator,
-            update_device_admin_time_condition_by_id(api)
+            put_device_admin_time_condition_by_condition_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -267,11 +268,10 @@ def test_update_device_admin_time_condition_by_id(api, validator):
             raise original_e
 
 
-def update_device_admin_time_condition_by_id_default(api):
-    endpoint_result = api.device_administration_time_date_conditions.update_device_admin_time_condition_by_id(
+def put_device_admin_time_condition_by_condition_id_default(api):
+    endpoint_result = api.device_administration_time_date_conditions.put_device_admin_time_condition_by_condition_id(
         active_validation=False,
-        id='string',
-        attribute_id=None,
+        condition_id='string',
         attribute_name=None,
         attribute_value=None,
         children=None,
@@ -283,7 +283,9 @@ def update_device_admin_time_condition_by_id_default(api):
         dictionary_value=None,
         hours_range=None,
         hours_range_exception=None,
+        id=None,
         is_negate=None,
+        link=None,
         name=None,
         operator=None,
         payload=None,
@@ -294,41 +296,41 @@ def update_device_admin_time_condition_by_id_default(api):
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_update_device_admin_time_condition_by_id_default(api, validator):
+def test_put_device_admin_time_condition_by_condition_id_default(api, validator):
     try:
-        assert is_valid_update_device_admin_time_condition_by_id(
+        assert is_valid_put_device_admin_time_condition_by_condition_id(
             validator,
-            update_device_admin_time_condition_by_id_default(api)
+            put_device_admin_time_condition_by_condition_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_device_admin_time_condition_by_id(json_schema_validate, obj):
+def is_valid_delete_device_admin_time_condition_by_condition_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c1052ac49dd35088a9874a4350182015_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_cf9f01129179555aa60c446f0a65c65a_v3_0_0').validate(obj.response)
     return True
 
 
-def delete_device_admin_time_condition_by_id(api):
-    endpoint_result = api.device_administration_time_date_conditions.delete_device_admin_time_condition_by_id(
-        id='string'
+def delete_device_admin_time_condition_by_condition_id(api):
+    endpoint_result = api.device_administration_time_date_conditions.delete_device_admin_time_condition_by_condition_id(
+        condition_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_delete_device_admin_time_condition_by_id(api, validator):
+def test_delete_device_admin_time_condition_by_condition_id(api, validator):
     try:
-        assert is_valid_delete_device_admin_time_condition_by_id(
+        assert is_valid_delete_device_admin_time_condition_by_condition_id(
             validator,
-            delete_device_admin_time_condition_by_id(api)
+            delete_device_admin_time_condition_by_condition_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -336,19 +338,19 @@ def test_delete_device_admin_time_condition_by_id(api, validator):
             raise original_e
 
 
-def delete_device_admin_time_condition_by_id_default(api):
-    endpoint_result = api.device_administration_time_date_conditions.delete_device_admin_time_condition_by_id(
-        id='string'
+def delete_device_admin_time_condition_by_condition_id_default(api):
+    endpoint_result = api.device_administration_time_date_conditions.delete_device_admin_time_condition_by_condition_id(
+        condition_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_delete_device_admin_time_condition_by_id_default(api, validator):
+def test_delete_device_admin_time_condition_by_condition_id_default(api, validator):
     try:
-        assert is_valid_delete_device_admin_time_condition_by_id(
+        assert is_valid_delete_device_admin_time_condition_by_condition_id(
             validator,
-            delete_device_admin_time_condition_by_id_default(api)
+            delete_device_admin_time_condition_by_condition_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

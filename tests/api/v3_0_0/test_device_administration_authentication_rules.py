@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_device_admin_authentication_rules(json_schema_validate, obj):
+def is_valid_get_device_admin_policy_by_id_authentication_rule_list(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_141b9e8541f25c4ea29944f659f68994_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e8bd869250105a2ba30dd2cb65b0b3f2_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_device_admin_authentication_rules(api):
-    endpoint_result = api.device_administration_authentication_rules.get_all_device_admin_authentication_rules(
+def get_device_admin_policy_by_id_authentication_rule_list(api):
+    endpoint_result = api.device_administration_authentication_rules.get_device_admin_policy_by_id_authentication_rule_list(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_get_all_device_admin_authentication_rules(api, validator):
+def test_get_device_admin_policy_by_id_authentication_rule_list(api, validator):
     try:
-        assert is_valid_get_all_device_admin_authentication_rules(
+        assert is_valid_get_device_admin_policy_by_id_authentication_rule_list(
             validator,
-            get_all_device_admin_authentication_rules(api)
+            get_device_admin_policy_by_id_authentication_rule_list(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,56 +60,57 @@ def test_get_all_device_admin_authentication_rules(api, validator):
             raise original_e
 
 
-def get_all_device_admin_authentication_rules_default(api):
-    endpoint_result = api.device_administration_authentication_rules.get_all_device_admin_authentication_rules(
+def get_device_admin_policy_by_id_authentication_rule_list_default(api):
+    endpoint_result = api.device_administration_authentication_rules.get_device_admin_policy_by_id_authentication_rule_list(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_get_all_device_admin_authentication_rules_default(api, validator):
+def test_get_device_admin_policy_by_id_authentication_rule_list_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_authentication_rules(
+        assert is_valid_get_device_admin_policy_by_id_authentication_rule_list(
             validator,
-            get_all_device_admin_authentication_rules_default(api)
+            get_device_admin_policy_by_id_authentication_rule_list_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_create_device_admin_authentication_rules(json_schema_validate, obj):
+def is_valid_create_device_admin_policy_by_id_authentication_rule(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f1ff2b82953f5131884f0779db37190c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_73164e92c5af5344b4d9fdc45a282ce5_v3_0_0').validate(obj.response)
     return True
 
 
-def create_device_admin_authentication_rules(api):
-    endpoint_result = api.device_administration_authentication_rules.create_device_admin_authentication_rules(
+def create_device_admin_policy_by_id_authentication_rule(api):
+    endpoint_result = api.device_administration_authentication_rules.create_device_admin_policy_by_id_authentication_rule(
         active_validation=False,
-        identity_source_id='string',
+        identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
         if_user_not_found='string',
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_create_device_admin_authentication_rules(api, validator):
+def test_create_device_admin_policy_by_id_authentication_rule(api, validator):
     try:
-        assert is_valid_create_device_admin_authentication_rules(
+        assert is_valid_create_device_admin_policy_by_id_authentication_rule(
             validator,
-            create_device_admin_authentication_rules(api)
+            create_device_admin_policy_by_id_authentication_rule(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -117,14 +118,15 @@ def test_create_device_admin_authentication_rules(api, validator):
             raise original_e
 
 
-def create_device_admin_authentication_rules_default(api):
-    endpoint_result = api.device_administration_authentication_rules.create_device_admin_authentication_rules(
+def create_device_admin_policy_by_id_authentication_rule_default(api):
+    endpoint_result = api.device_administration_authentication_rules.create_device_admin_policy_by_id_authentication_rule(
         active_validation=False,
         policy_id='string',
-        identity_source_id=None,
+        identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,
         if_user_not_found=None,
+        link=None,
         payload=None,
         rule=None
     )
@@ -132,42 +134,43 @@ def create_device_admin_authentication_rules_default(api):
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_create_device_admin_authentication_rules_default(api, validator):
+def test_create_device_admin_policy_by_id_authentication_rule_default(api, validator):
     try:
-        assert is_valid_create_device_admin_authentication_rules(
+        assert is_valid_create_device_admin_policy_by_id_authentication_rule(
             validator,
-            create_device_admin_authentication_rules_default(api)
+            create_device_admin_policy_by_id_authentication_rule_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_device_admin_authentication_rule_by_id(json_schema_validate, obj):
+def is_valid_reset_hit_counts_device_admin_policy_by_id_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_97a160f293375ae9924d8240c4efdc6a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_573a1a3596305814bab0a6d05cf86280_v3_0_0').validate(obj.response)
     return True
 
 
-def get_device_admin_authentication_rule_by_id(api):
-    endpoint_result = api.device_administration_authentication_rules.get_device_admin_authentication_rule_by_id(
-        id='string',
+def reset_hit_counts_device_admin_policy_by_id_authentication_rules(api):
+    endpoint_result = api.device_administration_authentication_rules.reset_hit_counts_device_admin_policy_by_id_authentication_rules(
+        active_validation=False,
+        payload=None,
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_get_device_admin_authentication_rule_by_id(api, validator):
+def test_reset_hit_counts_device_admin_policy_by_id_authentication_rules(api, validator):
     try:
-        assert is_valid_get_device_admin_authentication_rule_by_id(
+        assert is_valid_reset_hit_counts_device_admin_policy_by_id_authentication_rules(
             validator,
-            get_device_admin_authentication_rule_by_id(api)
+            reset_hit_counts_device_admin_policy_by_id_authentication_rules(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -175,58 +178,112 @@ def test_get_device_admin_authentication_rule_by_id(api, validator):
             raise original_e
 
 
-def get_device_admin_authentication_rule_by_id_default(api):
-    endpoint_result = api.device_administration_authentication_rules.get_device_admin_authentication_rule_by_id(
-        id='string',
-        policy_id='string'
+def reset_hit_counts_device_admin_policy_by_id_authentication_rules_default(api):
+    endpoint_result = api.device_administration_authentication_rules.reset_hit_counts_device_admin_policy_by_id_authentication_rules(
+        active_validation=False,
+        policy_id='string',
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_get_device_admin_authentication_rule_by_id_default(api, validator):
+def test_reset_hit_counts_device_admin_policy_by_id_authentication_rules_default(api, validator):
     try:
-        assert is_valid_get_device_admin_authentication_rule_by_id(
+        assert is_valid_reset_hit_counts_device_admin_policy_by_id_authentication_rules(
             validator,
-            get_device_admin_authentication_rule_by_id_default(api)
+            reset_hit_counts_device_admin_policy_by_id_authentication_rules_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_device_admin_authentication_rule_by_id(json_schema_validate, obj):
+def is_valid_get_device_admin_policy_by_id_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1269ca61ff725fedb94fba602d7afe46_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_87d71c8af3b55abb8e5959965baf2043_v3_0_0').validate(obj.response)
     return True
 
 
-def update_device_admin_authentication_rule_by_id(api):
-    endpoint_result = api.device_administration_authentication_rules.update_device_admin_authentication_rule_by_id(
+def get_device_admin_policy_by_id_authentication_rule_by_id(api):
+    endpoint_result = api.device_administration_authentication_rules.get_device_admin_policy_by_id_authentication_rule_by_id(
+        policy_id='string',
+        rule_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.device_administration_authentication_rules
+def test_get_device_admin_policy_by_id_authentication_rule_by_id(api, validator):
+    try:
+        assert is_valid_get_device_admin_policy_by_id_authentication_rule_by_id(
+            validator,
+            get_device_admin_policy_by_id_authentication_rule_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_device_admin_policy_by_id_authentication_rule_by_id_default(api):
+    endpoint_result = api.device_administration_authentication_rules.get_device_admin_policy_by_id_authentication_rule_by_id(
+        policy_id='string',
+        rule_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.device_administration_authentication_rules
+def test_get_device_admin_policy_by_id_authentication_rule_by_id_default(api, validator):
+    try:
+        assert is_valid_get_device_admin_policy_by_id_authentication_rule_by_id(
+            validator,
+            get_device_admin_policy_by_id_authentication_rule_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_device_admin_policy_by_id_authentication_rule_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_7dc678d472905ab5bce9f4cba7cd7004_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_device_admin_policy_by_id_authentication_rule_by_id(api):
+    endpoint_result = api.device_administration_authentication_rules.update_device_admin_policy_by_id_authentication_rule_by_id(
         active_validation=False,
-        id='string',
-        identity_source_id='string',
+        identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
         if_user_not_found='string',
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
+        rule_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_update_device_admin_authentication_rule_by_id(api, validator):
+def test_update_device_admin_policy_by_id_authentication_rule_by_id(api, validator):
     try:
-        assert is_valid_update_device_admin_authentication_rule_by_id(
+        assert is_valid_update_device_admin_policy_by_id_authentication_rule_by_id(
             validator,
-            update_device_admin_authentication_rule_by_id(api)
+            update_device_admin_policy_by_id_authentication_rule_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -234,15 +291,16 @@ def test_update_device_admin_authentication_rule_by_id(api, validator):
             raise original_e
 
 
-def update_device_admin_authentication_rule_by_id_default(api):
-    endpoint_result = api.device_administration_authentication_rules.update_device_admin_authentication_rule_by_id(
+def update_device_admin_policy_by_id_authentication_rule_by_id_default(api):
+    endpoint_result = api.device_administration_authentication_rules.update_device_admin_policy_by_id_authentication_rule_by_id(
         active_validation=False,
-        id='string',
         policy_id='string',
-        identity_source_id=None,
+        rule_id='string',
+        identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,
         if_user_not_found=None,
+        link=None,
         payload=None,
         rule=None
     )
@@ -250,42 +308,42 @@ def update_device_admin_authentication_rule_by_id_default(api):
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_update_device_admin_authentication_rule_by_id_default(api, validator):
+def test_update_device_admin_policy_by_id_authentication_rule_by_id_default(api, validator):
     try:
-        assert is_valid_update_device_admin_authentication_rule_by_id(
+        assert is_valid_update_device_admin_policy_by_id_authentication_rule_by_id(
             validator,
-            update_device_admin_authentication_rule_by_id_default(api)
+            update_device_admin_policy_by_id_authentication_rule_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_device_admin_authentication_rule_by_id(json_schema_validate, obj):
+def is_valid_delete_device_admin_policy_by_id_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_30085a9f1f24542dbd244e31691a2e09_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_a0a005e87c6755e0bf5d4454a98f08c5_v3_0_0').validate(obj.response)
     return True
 
 
-def delete_device_admin_authentication_rule_by_id(api):
-    endpoint_result = api.device_administration_authentication_rules.delete_device_admin_authentication_rule_by_id(
-        id='string',
-        policy_id='string'
+def delete_device_admin_policy_by_id_authentication_rule_by_id(api):
+    endpoint_result = api.device_administration_authentication_rules.delete_device_admin_policy_by_id_authentication_rule_by_id(
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_delete_device_admin_authentication_rule_by_id(api, validator):
+def test_delete_device_admin_policy_by_id_authentication_rule_by_id(api, validator):
     try:
-        assert is_valid_delete_device_admin_authentication_rule_by_id(
+        assert is_valid_delete_device_admin_policy_by_id_authentication_rule_by_id(
             validator,
-            delete_device_admin_authentication_rule_by_id(api)
+            delete_device_admin_policy_by_id_authentication_rule_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -293,20 +351,20 @@ def test_delete_device_admin_authentication_rule_by_id(api, validator):
             raise original_e
 
 
-def delete_device_admin_authentication_rule_by_id_default(api):
-    endpoint_result = api.device_administration_authentication_rules.delete_device_admin_authentication_rule_by_id(
-        id='string',
-        policy_id='string'
+def delete_device_admin_policy_by_id_authentication_rule_by_id_default(api):
+    endpoint_result = api.device_administration_authentication_rules.delete_device_admin_policy_by_id_authentication_rule_by_id(
+        policy_id='string',
+        rule_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authentication_rules
-def test_delete_device_admin_authentication_rule_by_id_default(api, validator):
+def test_delete_device_admin_policy_by_id_authentication_rule_by_id_default(api, validator):
     try:
-        assert is_valid_delete_device_admin_authentication_rule_by_id(
+        assert is_valid_delete_device_admin_policy_by_id_authentication_rule_by_id(
             validator,
-            delete_device_admin_authentication_rule_by_id_default(api)
+            delete_device_admin_policy_by_id_authentication_rule_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -51,6 +51,9 @@ class JSONSchemaValidatorAb225D0B2A6C52A99Df1F1D8Fb6A4Dac(object):
                  {
                 "type": "string"
                 },
+                "gateWay": {
+                "type": "string"
+                },
                 "id": {
                 "type": "string"
                 },
@@ -69,11 +72,6 @@ class JSONSchemaValidatorAb225D0B2A6C52A99Df1F1D8Fb6A4Dac(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -83,9 +81,6 @@ class JSONSchemaValidatorAb225D0B2A6C52A99Df1F1D8Fb6A4Dac(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SessionServiceNode"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -51,6 +51,14 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                 "properties": {
                 "globalCustomizations": {
                 "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "bannerImage": {
                 "properties": {
                 "data": {
@@ -152,9 +160,6 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                  {
                 "type": "string"
                 },
-                "id": {
-                "type": "string"
-                },
                 "name": {
                 "type": "string"
                 },
@@ -171,19 +176,13 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                 "displayFrequency": {
                 "type": "string"
                 },
+                "displayFrequencyIntervalDays": {
+                "type": "integer"
+                },
                 "includeAup": {
                 "type": "boolean"
                 },
-                "requireAccessCode": {
-                "type": "boolean"
-                },
                 "requireScrolling": {
-                "type": "boolean"
-                },
-                "skipAupForEmployees": {
-                "type": "boolean"
-                },
-                "useDiffAupForEmployees": {
                 "type": "boolean"
                 }
                 },
@@ -191,21 +190,6 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                 },
                 "loginPageSettings": {
                 "properties": {
-                "allowAlternateGuestPortal": {
-                "type": "boolean"
-                },
-                "allowGuestToChangePassword": {
-                "type": "boolean"
-                },
-                "allowGuestToCreateAccounts": {
-                "type": "boolean"
-                },
-                "allowGuestToUseSocialAccounts": {
-                "type": "boolean"
-                },
-                "allowShowGuestForm": {
-                "type": "boolean"
-                },
                 "aupDisplay": {
                 "type": "string"
                 },
@@ -214,9 +198,6 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                 },
                 "maxFailedAttemptsBeforeRateLimit": {
                 "type": "integer"
-                },
-                "requireAccessCode": {
-                "type": "boolean"
                 },
                 "requireAupAcceptance": {
                 "type": "boolean"
@@ -237,22 +218,13 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                 "portalSettings": {
                 "properties": {
                 "allowedInterfaces": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "alwaysUsedLanguage": {
                 "type": "string"
                 },
                 "authenticationMethod": {
                 "type": "string"
                 },
                 "availableSsids": {
-                "items": {
                 "type": "string"
-                },
-                "type": "array"
                 },
                 "certificateGroupTag": {
                 "type": "string"
@@ -275,6 +247,14 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                 },
                 "type": "object"
                 },
+                "postAccessBannerSettings": {
+                "properties": {
+                "includePostAccessBanner": {
+                "type": "boolean"
+                }
+                },
+                "type": "object"
+                },
                 "postLoginBannerSettings": {
                 "properties": {
                 "includePostAccessBanner": {
@@ -293,6 +273,9 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                 },
                 "supportInfoSettings": {
                 "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
                 "emptyFieldDisplay": {
                 "type": "string"
                 },

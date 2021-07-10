@@ -43,6 +43,8 @@ def is_valid_create_system_certificate(json_schema_validate, obj):
 def create_system_certificate(api):
     endpoint_result = api.system_certificate.create_system_certificate(
         active_validation=False,
+        ers_local_cert_stub={'friendlyName': 'string', 'ersSubjectStub': {'commonName': 'string', 'organizationalUnitName': 'string', 'organizationName': 'string', 'localityName': 'string', 'stateOrProvinceName': 'string', 'countryName': 'string'}, 'keyLength': 'string', 'xgridCertificate': 'string', 'groupTagDD': 'string', 'samlCertificate': 'string', 'keyType': 'string', 'digest': 'string', 'certificatePolicies': 'string', 'expirationTTL': 0, 'selectedExpirationTTLUnit': 'string', 'allowWildcardCerts': 'string', 'certificateSanDns': 'string', 'certificateSanIp': 'string', 'certificateSanUri': 'string'},
+        node_id='string',
         payload=None
     )
     return endpoint_result
@@ -64,6 +66,8 @@ def test_create_system_certificate(api, validator):
 def create_system_certificate_default(api):
     endpoint_result = api.system_certificate.create_system_certificate(
         active_validation=False,
+        ers_local_cert_stub=None,
+        node_id=None,
         payload=None
     )
     return endpoint_result
@@ -75,6 +79,56 @@ def test_create_system_certificate_default(api, validator):
         assert is_valid_create_system_certificate(
             validator,
             create_system_certificate_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_3512a19fb8fe5fe9b069aa19d2dd74d5_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.system_certificate.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.system_certificate
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.system_certificate.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.system_certificate
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

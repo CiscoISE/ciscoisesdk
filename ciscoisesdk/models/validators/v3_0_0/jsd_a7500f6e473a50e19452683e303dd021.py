@@ -53,6 +53,9 @@ class JSONSchemaValidatorA7500F6E473A50E19452683E303Dd021(object):
                 "defaultFromAddress": {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
                 "notificationEnabled": {
                 "type": "boolean"
                 },
@@ -78,18 +81,9 @@ class JSONSchemaValidatorA7500F6E473A50E19452683E303Dd021(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "defaultFromAddress",
-                "notificationEnabled",
-                "smtpServer",
-                "useDefaultFromAddress"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSGuestSmtpNotificationSettings"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

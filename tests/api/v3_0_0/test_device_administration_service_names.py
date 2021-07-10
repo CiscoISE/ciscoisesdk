@@ -29,30 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_device_admin_service_names(json_schema_validate, obj):
+def is_valid_get_device_admin_service_names(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8ea7e01261355dcfae6412e0615ba1f5_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_36e8018e15b053f39046b5bec0243d3f_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_device_admin_service_names(api):
-    endpoint_result = api.device_administration_service_names.get_all_device_admin_service_names(
+def get_device_admin_service_names(api):
+    endpoint_result = api.device_administration_service_names.get_device_admin_service_names(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_service_names
-def test_get_all_device_admin_service_names(api, validator):
+def test_get_device_admin_service_names(api, validator):
     try:
-        assert is_valid_get_all_device_admin_service_names(
+        assert is_valid_get_device_admin_service_names(
             validator,
-            get_all_device_admin_service_names(api)
+            get_device_admin_service_names(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_device_admin_service_names(api, validator):
             raise original_e
 
 
-def get_all_device_admin_service_names_default(api):
-    endpoint_result = api.device_administration_service_names.get_all_device_admin_service_names(
+def get_device_admin_service_names_default(api):
+    endpoint_result = api.device_administration_service_names.get_device_admin_service_names(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_service_names
-def test_get_all_device_admin_service_names_default(api, validator):
+def test_get_device_admin_service_names_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_service_names(
+        assert is_valid_get_device_admin_service_names(
             validator,
-            get_all_device_admin_service_names_default(api)
+            get_device_admin_service_names_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

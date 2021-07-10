@@ -54,6 +54,20 @@ class JSONSchemaValidatorA0710Ba581DA4D3Fd00E84D59E3(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -112,9 +126,6 @@ class JSONSchemaValidatorA0710Ba581DA4D3Fd00E84D59E3(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SgtVNVlanContainer"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

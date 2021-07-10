@@ -61,18 +61,9 @@ class JSONSchemaValidatorAdcf947C42Fe5588B7B82D9C43A3Bbf0(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "description",
-                "dacl",
-                "daclType"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "DownloadableAcl"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

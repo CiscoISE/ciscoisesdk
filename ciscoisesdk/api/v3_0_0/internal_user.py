@@ -74,52 +74,14 @@ class InternalUser(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_internal_user(self,
-                              filter=None,
-                              filter_type=None,
-                              page=None,
-                              size=None,
-                              sortasc=None,
-                              sortdsc=None,
-                              headers=None,
-                              **query_parameters):
-        """Get all InternalUser.
+    def get_internal_user_by_name(self,
+                                  name,
+                                  headers=None,
+                                  **query_parameters):
+        """This API allows the client to get an internal user by name.
 
         Args:
-            page(int): page query parameter. Page number.
-            size(int): size query parameter. Number of objects
-                returned per page.
-            sortasc(basestring): sortasc query parameter. sort asc.
-            sortdsc(basestring): sortdsc query parameter. sort desc.
-            filter(basestring, list, set, tuple): filter query
-                parameter.               **Simple
-                filtering** should be available through
-                the filter query string parameter. The
-                structure of a filter is a triplet of
-                field operator and value separated with
-                dots. More than one filter can be sent.
-                The logical operator common to ALL
-                filter criteria will be by default AND,
-                and can be changed by using the
-                "filterType=or" query string parameter.
-                Each resource Data model description
-                should specify if an attribute is a
-                filtered field.              (Operator:
-                Description),
-                (EQ: Equals),               (NEQ: Not
-                Equals),               (GT: Greater
-                Than),               (LT: Less Then),
-                (STARTSW: Starts With),
-                (NSTARTSW: Not Starts With),
-                (ENDSW: Ends With),
-                (NENDSW: Not Ends With),
-                (CONTAINS: Contains),
-                (NCONTAINS: Not Contains),
-                .
-            filter_type(basestring): filterType query parameter. The
-                logical operator common to ALL filter
-                criteria will be by default AND, and can
-                be changed by using the parameter.
+            name(basestring): name path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -147,40 +109,31 @@ class InternalUser(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(sortasc, basestring)
-        check_type(sortdsc, basestring)
-        check_type(filter, (basestring, list, set, tuple))
-        check_type(filter_type, basestring)
+        check_type(name, basestring,
+                   may_be_none=False)
 
         _params = {
-            'page':
-                page,
-            'size':
-                size,
-            'sortasc':
-                sortasc,
-            'sortdsc':
-                sortdsc,
-            'filter':
-                filter,
-            'filterType':
-                filter_type,
         }
         _params.update(query_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'name': name,
         }
 
-        e_url = ('/ers/config/internaluser')
+        e_url = ('/ers/config/internaluser/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -188,133 +141,66 @@ class InternalUser(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ccba98a61555ae495f6a05284e3b5ae_v3_0_0', _api_response)
+        return self._object_factory('bpm_f403dda9440503191536993f569cc6f_v3_0_0', _api_response)
 
-    def get_all_internal_user_generator(self,
-                                        filter=None,
-                                        filter_type=None,
-                                        page=None,
-                                        size=None,
-                                        sortasc=None,
-                                        sortdsc=None,
-                                        headers=None,
-                                        **query_parameters):
-        """Get all InternalUser.
-
-        Args:
-            page(int): page query parameter. Page number.
-            size(int): size query parameter. Number of objects
-                returned per page.
-            sortasc(basestring): sortasc query parameter. sort asc.
-            sortdsc(basestring): sortdsc query parameter. sort desc.
-            filter(basestring, list, set, tuple): filter query
-                parameter.               **Simple
-                filtering** should be available through
-                the filter query string parameter. The
-                structure of a filter is a triplet of
-                field operator and value separated with
-                dots. More than one filter can be sent.
-                The logical operator common to ALL
-                filter criteria will be by default AND,
-                and can be changed by using the
-                "filterType=or" query string parameter.
-                Each resource Data model description
-                should specify if an attribute is a
-                filtered field.              (Operator:
-                Description),
-                (EQ: Equals),               (NEQ: Not
-                Equals),               (GT: Greater
-                Than),               (LT: Less Then),
-                (STARTSW: Starts With),
-                (NSTARTSW: Not Starts With),
-                (ENDSW: Ends With),
-                (NENDSW: Not Ends With),
-                (CONTAINS: Contains),
-                (NCONTAINS: Not Contains),
-                .
-            filter_type(basestring): filterType query parameter. The
-                logical operator common to ALL filter
-                criteria will be by default AND, and can
-                be changed by using the parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **query_parameters: Additional query parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            Generator: A generator object containing the following object.
-              + RestResponse: REST response with following properties:
-                  - headers(MyDict): response headers.
-                  - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
-                  - content(bytes): representation of the request's response
-                  - text(str): representation of the request's response
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Identity Services Engine cloud returns an error.
-        """
-
-        yield from get_next_page(self.get_all_internal_user, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sortasc=sortasc,
-            sortdsc=sortdsc,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
-
-    def create_internal_user(self,
-                             change_password=None,
-                             custom_attributes=None,
-                             description=None,
-                             email=None,
-                             enable_password=None,
-                             enabled=None,
-                             expiry_date=None,
-                             expiry_date_enabled=None,
-                             first_name=None,
-                             id=None,
-                             identity_groups=None,
-                             last_name=None,
-                             name=None,
-                             password=None,
-                             password_idstore=None,
-                             headers=None,
-                             payload=None,
-                             active_validation=True,
-                             **query_parameters):
-        """Create InternalUser.
+    def update_internal_user_by_name(self,
+                                     name,
+                                     change_password=None,
+                                     custom_attributes=None,
+                                     description=None,
+                                     email=None,
+                                     enable_password=None,
+                                     enabled=None,
+                                     expiry_date=None,
+                                     expiry_date_enabled=None,
+                                     first_name=None,
+                                     id=None,
+                                     identity_groups=None,
+                                     last_name=None,
+                                     password=None,
+                                     password_idstore=None,
+                                     headers=None,
+                                     payload=None,
+                                     active_validation=True,
+                                     **query_parameters):
+        """This API allows the client to update an internal user by name.
 
         Args:
             change_password(boolean): changePassword, property of
                 the request body.
-            custom_attributes(object): customAttributes, property of
+            custom_attributes(object): Key value map, property of
                 the request body.
             description(string): description, property of the
                 request body.
             email(string): email, property of the request body.
             enable_password(string): enablePassword, property of the
                 request body.
-            enabled(boolean): enabled, property of the request body.
-            expiry_date(string): expiryDate, property of the request
+            enabled(boolean): Whether the user is enabled/disabled.
+                To use it as filter, the values should
+                be 'Enabled' or 'Disabled'. The values
+                are case sensitive. For example, '[ERSOb
+                jectURL]?filter=enabled.EQ.Enabled',
+                property of the request body.
+            expiry_date(string): To store the internal user's expiry
+                date information. It's format is =
+                'YYYY-MM-DD', property of the request
                 body.
             expiry_date_enabled(boolean): expiryDateEnabled,
                 property of the request body.
             first_name(string): firstName, property of the request
                 body.
             id(string): id, property of the request body.
-            identity_groups(string): identityGroups, property of the
-                request body.
+            identity_groups(string): CSV of identity group IDs,
+                property of the request body.
             last_name(string): lastName, property of the request
                 body.
             name(string): name, property of the request body.
             password(string): password, property of the request
                 body.
-            password_idstore(string): passwordIDStore, property of
-                the request body.
+            password_idstore(string): The id store where the
+                internal user's password is kept,
+                property of the request body.
+            name(basestring): name path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -340,9 +226,18 @@ class InternalUser(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -354,6 +249,8 @@ class InternalUser(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
+        check_type(name, basestring,
+                   may_be_none=False)
 
         _params = {
         }
@@ -361,6 +258,7 @@ class InternalUser(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'name': name,
         }
         if is_xml_payload:
             _payload = payload
@@ -403,28 +301,98 @@ class InternalUser(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_bf175c04fcb051b9a6fd70a2252903fa_v3_0_0')\
+            self._request_validator('jsd_19d9509db339e3b27dc56b37_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/internaluser')
+        e_url = ('/ers/config/internaluser/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
-            _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               headers=_headers,
-                                               **request_params)
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              headers=_headers,
+                                              **request_params)
+
         else:
-            _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               **request_params)
+            _api_response = self._session.put(endpoint_full_url, params=_params,
+                                              **request_params)
 
-        return self._object_factory('bpm_bf175c04fcb051b9a6fd70a2252903fa_v3_0_0', _api_response)
+        return self._object_factory('bpm_19d9509db339e3b27dc56b37_v3_0_0', _api_response)
 
-    def internaluser_by_id(self,
-                           id,
-                           headers=None,
-                           **query_parameters):
-        """Get InternalUser by Id.
+    def delete_internal_user_by_name(self,
+                                     name,
+                                     headers=None,
+                                     **query_parameters):
+        """This API deletes an internal user by name.
+
+        Args:
+            name(basestring): name path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            RestResponse: REST response with following properties:
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                    or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(name, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'name': name,
+        }
+
+        e_url = ('/ers/config/internaluser/name/{name}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 headers=_headers)
+        else:
+            _api_response = self._session.delete(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_b4e2fc3e595aa1be86d6589614b9_v3_0_0', _api_response)
+
+    def get_internal_user_by_id(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
+        """This API allows the client to get an internal user by ID.
 
         Args:
             id(basestring): id path parameter.
@@ -455,6 +423,12 @@ class InternalUser(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -503,35 +477,43 @@ class InternalUser(object):
                                    payload=None,
                                    active_validation=True,
                                    **query_parameters):
-        """Update InternalUser.
+        """This API allows the client to update an internal user by ID.
 
         Args:
             change_password(boolean): changePassword, property of
                 the request body.
-            custom_attributes(object): customAttributes, property of
+            custom_attributes(object): Key value map, property of
                 the request body.
             description(string): description, property of the
                 request body.
             email(string): email, property of the request body.
             enable_password(string): enablePassword, property of the
                 request body.
-            enabled(boolean): enabled, property of the request body.
-            expiry_date(string): expiryDate, property of the request
+            enabled(boolean): Whether the user is enabled/disabled.
+                To use it as filter, the values should
+                be 'Enabled' or 'Disabled'. The values
+                are case sensitive. For example, '[ERSOb
+                jectURL]?filter=enabled.EQ.Enabled',
+                property of the request body.
+            expiry_date(string): To store the internal user's expiry
+                date information. It's format is =
+                'YYYY-MM-DD', property of the request
                 body.
             expiry_date_enabled(boolean): expiryDateEnabled,
                 property of the request body.
             first_name(string): firstName, property of the request
                 body.
             id(string): id, property of the request body.
-            identity_groups(string): identityGroups, property of the
-                request body.
+            identity_groups(string): CSV of identity group IDs,
+                property of the request body.
             last_name(string): lastName, property of the request
                 body.
             name(string): name, property of the request body.
             password(string): password, property of the request
                 body.
-            password_idstore(string): passwordIDStore, property of
-                the request body.
+            password_idstore(string): The id store where the
+                internal user's password is kept,
+                property of the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -558,9 +540,18 @@ class InternalUser(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -646,7 +637,7 @@ class InternalUser(object):
                                    id,
                                    headers=None,
                                    **query_parameters):
-        """Delete InternalUser.
+        """This API deletes an internal user by ID.
 
         Args:
             id(basestring): id path parameter.
@@ -677,6 +668,12 @@ class InternalUser(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -705,14 +702,62 @@ class InternalUser(object):
 
         return self._object_factory('bpm_dcf28db5184e51139b15f9ffccd10b67_v3_0_0', _api_response)
 
-    def get_internal_user_by_name(self,
-                                  name,
-                                  headers=None,
-                                  **query_parameters):
-        """Get InternalUser by name.
+    def get_all_internal_user(self,
+                              filter=None,
+                              filter_type=None,
+                              page=None,
+                              size=None,
+                              sortasc=None,
+                              sortdsc=None,
+                              headers=None,
+                              **query_parameters):
+        """This API allows the client to get all the internal users.
+        Filter:   [firstName, lastName, identityGroup, name,
+        description, email, enabled]   To search guest users by
+        using  toDate  column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
-            name(basestring): name path parameter.
+            page(int): page query parameter. Page number.
+            size(int): size query parameter. Number of objects
+                returned per page.
+            sortasc(basestring): sortasc query parameter. sort asc.
+            sortdsc(basestring): sortdsc query parameter. sort desc.
+            filter(basestring, list, set, tuple): filter query
+                parameter.               **Simple
+                filtering** should be available through
+                the filter query string parameter. The
+                structure of a filter is a triplet of
+                field operator and value separated with
+                dots. More than one filter can be sent.
+                The logical operator common to ALL
+                filter criteria will be by default AND,
+                and can be changed by using the
+                "filterType=or" query string parameter.
+                Each resource Data model description
+                should specify if an attribute is a
+                filtered field.              (Operator:
+                Description),
+                (EQ: Equals),               (NEQ: Not
+                Equals),               (GT: Greater
+                Than),               (LT: Less Then),
+                (STARTSW: Starts With),
+                (NSTARTSW: Not Starts With),
+                (ENDSW: Ends With),
+                (NENDSW: Not Ends With),
+                (CONTAINS: Contains),
+                (NCONTAINS: Not Contains),
+                .
+            filter_type(basestring): filterType query parameter. The
+                logical operator common to ALL filter
+                criteria will be by default AND, and can
+                be changed by using the parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -740,25 +785,46 @@ class InternalUser(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(name, basestring,
-                   may_be_none=False)
+        check_type(page, (int, basestring, list))
+        check_type(size, (int, basestring, list))
+        check_type(sortasc, basestring)
+        check_type(sortdsc, basestring)
+        check_type(filter, (basestring, list, set, tuple))
+        check_type(filter_type, basestring)
 
         _params = {
+            'page':
+                page,
+            'size':
+                size,
+            'sortasc':
+                sortasc,
+            'sortdsc':
+                sortdsc,
+            'filter':
+                filter,
+            'filterType':
+                filter_type,
         }
         _params.update(query_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'name': name,
         }
 
-        e_url = ('/ers/config/internaluser/name/{name}')
+        e_url = ('/ers/config/internaluser')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -766,21 +832,149 @@ class InternalUser(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f403dda9440503191536993f569cc6f_v3_0_0', _api_response)
+        return self._object_factory('bpm_ccba98a61555ae495f6a05284e3b5ae_v3_0_0', _api_response)
 
-    def update_internal_user_by_name(self,
-                                     name,
-                                     password=None,
-                                     headers=None,
-                                     payload=None,
-                                     active_validation=True,
-                                     **query_parameters):
-        """Update InternalUser by name.
+    def get_all_internal_user_generator(self,
+                                        filter=None,
+                                        filter_type=None,
+                                        page=None,
+                                        size=None,
+                                        sortasc=None,
+                                        sortdsc=None,
+                                        headers=None,
+                                        **query_parameters):
+        """This API allows the client to get all the internal users.
+        Filter:   [firstName, lastName, identityGroup, name,
+        description, email, enabled]   To search guest users by
+        using  toDate  column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
+            page(int): page query parameter. Page number.
+            size(int): size query parameter. Number of objects
+                returned per page.
+            sortasc(basestring): sortasc query parameter. sort asc.
+            sortdsc(basestring): sortdsc query parameter. sort desc.
+            filter(basestring, list, set, tuple): filter query
+                parameter.               **Simple
+                filtering** should be available through
+                the filter query string parameter. The
+                structure of a filter is a triplet of
+                field operator and value separated with
+                dots. More than one filter can be sent.
+                The logical operator common to ALL
+                filter criteria will be by default AND,
+                and can be changed by using the
+                "filterType=or" query string parameter.
+                Each resource Data model description
+                should specify if an attribute is a
+                filtered field.              (Operator:
+                Description),
+                (EQ: Equals),               (NEQ: Not
+                Equals),               (GT: Greater
+                Than),               (LT: Less Then),
+                (STARTSW: Starts With),
+                (NSTARTSW: Not Starts With),
+                (ENDSW: Ends With),
+                (NENDSW: Not Ends With),
+                (CONTAINS: Contains),
+                (NCONTAINS: Not Contains),
+                .
+            filter_type(basestring): filterType query parameter. The
+                logical operator common to ALL filter
+                criteria will be by default AND, and can
+                be changed by using the parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            Generator: A generator object containing the following object.
+              + RestResponse: REST response with following properties:
+                  - headers(MyDict): response headers.
+                  - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                        or the bracket notation.
+                  - content(bytes): representation of the request's response
+                  - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+
+        yield from get_next_page(self.get_all_internal_user, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def create_internal_user(self,
+                             change_password=None,
+                             custom_attributes=None,
+                             description=None,
+                             email=None,
+                             enable_password=None,
+                             enabled=None,
+                             expiry_date=None,
+                             expiry_date_enabled=None,
+                             first_name=None,
+                             identity_groups=None,
+                             last_name=None,
+                             name=None,
+                             password=None,
+                             password_idstore=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
+        """This API creates an internal user.
+
+        Args:
+            change_password(boolean): changePassword, property of
+                the request body.
+            custom_attributes(object): Key value map, property of
+                the request body.
+            description(string): description, property of the
+                request body.
+            email(string): email, property of the request body.
+            enable_password(string): enablePassword, property of the
+                request body.
+            enabled(boolean): Whether the user is enabled/disabled.
+                To use it as filter, the values should
+                be 'Enabled' or 'Disabled'. The values
+                are case sensitive. For example, '[ERSOb
+                jectURL]?filter=enabled.EQ.Enabled',
+                property of the request body.
+            expiry_date(string): To store the internal user's expiry
+                date information. It's format is =
+                'YYYY-MM-DD', property of the request
+                body.
+            expiry_date_enabled(boolean): expiryDateEnabled,
+                property of the request body.
+            first_name(string): firstName, property of the request
+                body.
+            identity_groups(string): CSV of identity group IDs,
+                property of the request body.
+            last_name(string): lastName, property of the request
+                body.
+            name(string): name, property of the request body.
             password(string): password, property of the request
                 body.
-            name(basestring): name path parameter.
+            password_idstore(string): The id store where the
+                internal user's password is kept,
+                property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -806,9 +1000,18 @@ class InternalUser(object):
         check_type(headers, dict)
 
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -820,8 +1023,6 @@ class InternalUser(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(name, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -829,14 +1030,39 @@ class InternalUser(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'name': name,
         }
         if is_xml_payload:
             _payload = payload
         else:
             _tmp_payload = {
+                'name':
+                    name,
+                'description':
+                    description,
+                'enabled':
+                    enabled,
+                'email':
+                    email,
                 'password':
                     password,
+                'firstName':
+                    first_name,
+                'lastName':
+                    last_name,
+                'changePassword':
+                    change_password,
+                'identityGroups':
+                    identity_groups,
+                'expiryDateEnabled':
+                    expiry_date_enabled,
+                'expiryDate':
+                    expiry_date,
+                'enablePassword':
+                    enable_password,
+                'customAttributes':
+                    custom_attributes,
+                'passwordIDStore':
+                    password_idstore,
             }
             _payload = {
                 'InternalUser': dict_from_items_with_values(_tmp_payload)
@@ -844,32 +1070,30 @@ class InternalUser(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_19d9509db339e3b27dc56b37_v3_0_0')\
+            self._request_validator('jsd_bf175c04fcb051b9a6fd70a2252903fa_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/internaluser/name/{name}')
+        e_url = ('/ers/config/internaluser')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              headers=_headers,
-                                              **request_params)
-
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               headers=_headers,
+                                               **request_params)
         else:
-            _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              **request_params)
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               **request_params)
 
-        return self._object_factory('bpm_19d9509db339e3b27dc56b37_v3_0_0', _api_response)
+        return self._object_factory('bpm_bf175c04fcb051b9a6fd70a2252903fa_v3_0_0', _api_response)
 
-    def delete_internal_user_by_name(self,
-                                     name,
-                                     headers=None,
-                                     **query_parameters):
-        """Delete InternalUser by name.
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the internal user.
 
         Args:
-            name(basestring): name path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -903,8 +1127,6 @@ class InternalUser(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(name, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -912,15 +1134,14 @@ class InternalUser(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'name': name,
         }
 
-        e_url = ('/ers/config/internaluser/name/{name}')
+        e_url = ('/ers/config/internaluser/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
         else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
+            _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b4e2fc3e595aa1be86d6589614b9_v3_0_0', _api_response)
+        return self._object_factory('bpm_af99828533e58a2b84996b85bacc9ff_v3_0_0', _api_response)
