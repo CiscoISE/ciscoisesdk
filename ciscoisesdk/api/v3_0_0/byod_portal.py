@@ -88,10 +88,12 @@ class ByodPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class ByodPortal(object):
 
         return self._object_factory('bpm_effdf30a3e3a5781ba1f5cf833395359_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_byod_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.byod_portal.
+        ByodPortal.get_byod_portal_by_id>`_
+        """
+        return self.get_byod_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_byod_portal_by_id(self,
                                  id,
                                  customizations=None,
@@ -189,10 +205,12 @@ class ByodPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -281,6 +299,36 @@ class ByodPortal(object):
 
         return self._object_factory('bpm_e38d10b1ea257d49ebce893e87b3419_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     customizations=None,
+                     description=None,
+                     name=None,
+                     portal_test_url=None,
+                     portal_type=None,
+                     settings=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_byod_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.byod_portal.
+        ByodPortal.update_byod_portal_by_id>`_
+        """
+        return self.update_byod_portal_by_id(
+            id=id,
+            customizations=customizations,
+            description=description,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_byod_portal_by_id(self,
                                  id,
                                  headers=None,
@@ -295,10 +343,12 @@ class ByodPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -350,6 +400,20 @@ class ByodPortal(object):
 
         return self._object_factory('bpm_df2fb34fbab65254ac87d1be50abd15f_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_byod_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.byod_portal.
+        ByodPortal.delete_byod_portal_by_id>`_
+        """
+        return self.delete_byod_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_byod_portal(self,
                             filter=None,
                             filter_type=None,
@@ -360,7 +424,7 @@ class ByodPortal(object):
                             headers=None,
                             **query_parameters):
         """This API allows the client to get all the BYOD portals.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -411,10 +475,12 @@ class ByodPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -481,6 +547,30 @@ class ByodPortal(object):
 
         return self._object_factory('bpm_a23b580495514394b125800e073c9a_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_byod_portal <#ciscoisesdk.
+        api.v3_0_0.byod_portal.
+        ByodPortal.get_all_byod_portal>`_
+        """
+        return self.get_all_byod_portal(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_byod_portal_generator(self,
                                       filter=None,
                                       filter_type=None,
@@ -491,7 +581,7 @@ class ByodPortal(object):
                                       headers=None,
                                       **query_parameters):
         """This API allows the client to get all the BYOD portals.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -543,10 +633,12 @@ class ByodPortal(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -563,6 +655,31 @@ class ByodPortal(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_byod_portal_generator <#ciscoisesdk.
+        api.v3_0_0.byod_portal.
+        ByodPortal.get_all_byod_portal_generator>`_
+        """
+        yield from get_next_page(self.get_all_byod_portal, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -611,10 +728,12 @@ class ByodPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -699,6 +818,36 @@ class ByodPortal(object):
 
         return self._object_factory('bpm_afcce33ec863567f94f3b9b73719ff8d_v3_0_0', _api_response)
 
+    def create(self,
+               customizations=None,
+               description=None,
+               id=None,
+               name=None,
+               portal_test_url=None,
+               portal_type=None,
+               settings=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_byod_portal <#ciscoisesdk.
+        api.v3_0_0.byod_portal.
+        ByodPortal.create_byod_portal>`_
+        """
+        return self.create_byod_portal(
+            customizations=customizations,
+            description=description,
+            id=id,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -712,10 +861,12 @@ class ByodPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

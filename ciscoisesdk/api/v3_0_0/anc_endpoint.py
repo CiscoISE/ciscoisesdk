@@ -88,10 +88,12 @@ class AncEndpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class AncEndpoint(object):
 
         return self._object_factory('bpm_ffbc09a97795b8d872a943895c00345_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_anc_endpoint_by_id <#ciscoisesdk.
+        api.v3_0_0.anc_endpoint.
+        AncEndpoint.get_anc_endpoint_by_id>`_
+        """
+        return self.get_anc_endpoint_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def clear_anc_endpoint(self,
                            additional_data=None,
                            headers=None,
@@ -164,10 +180,12 @@ class AncEndpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -241,6 +259,24 @@ class AncEndpoint(object):
 
         return self._object_factory('bpm_fc6670fd50dfb04b1f6b16981256_v3_0_0', _api_response)
 
+    def clear(self,
+              additional_data=None,
+              headers=None,
+              payload=None,
+              active_validation=True,
+              **query_parameters):
+        """Alias for `clear_anc_endpoint <#ciscoisesdk.
+        api.v3_0_0.anc_endpoint.
+        AncEndpoint.clear_anc_endpoint>`_
+        """
+        return self.clear_anc_endpoint(
+            additional_data=additional_data,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_anc_endpoint(self,
                              filter=None,
                              filter_type=None,
@@ -251,7 +287,7 @@ class AncEndpoint(object):
                              headers=None,
                              **query_parameters):
         """This API allows the client to get all the ANC endpoints.
-        Filter: [name]   To search guest users by using  toDate
+        Filter: [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -302,10 +338,12 @@ class AncEndpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -372,6 +410,30 @@ class AncEndpoint(object):
 
         return self._object_factory('bpm_e681462295b8b8faea9ce6099ff0c_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_anc_endpoint <#ciscoisesdk.
+        api.v3_0_0.anc_endpoint.
+        AncEndpoint.get_all_anc_endpoint>`_
+        """
+        return self.get_all_anc_endpoint(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_anc_endpoint_generator(self,
                                        filter=None,
                                        filter_type=None,
@@ -382,7 +444,7 @@ class AncEndpoint(object):
                                        headers=None,
                                        **query_parameters):
         """This API allows the client to get all the ANC endpoints.
-        Filter: [name]   To search guest users by using  toDate
+        Filter: [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -434,10 +496,12 @@ class AncEndpoint(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -454,6 +518,31 @@ class AncEndpoint(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_anc_endpoint_generator <#ciscoisesdk.
+        api.v3_0_0.anc_endpoint.
+        AncEndpoint.get_all_anc_endpoint_generator>`_
+        """
+        yield from get_next_page(self.get_all_anc_endpoint, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -478,10 +567,12 @@ class AncEndpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -555,6 +646,24 @@ class AncEndpoint(object):
 
         return self._object_factory('bpm_bc936bcb25464b9f3f227647b0443_v3_0_0', _api_response)
 
+    def apply(self,
+              additional_data=None,
+              headers=None,
+              payload=None,
+              active_validation=True,
+              **query_parameters):
+        """Alias for `apply_anc_endpoint <#ciscoisesdk.
+        api.v3_0_0.anc_endpoint.
+        AncEndpoint.apply_anc_endpoint>`_
+        """
+        return self.apply_anc_endpoint(
+            additional_data=additional_data,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -568,10 +677,12 @@ class AncEndpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -638,10 +749,12 @@ class AncEndpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -706,6 +819,26 @@ class AncEndpoint(object):
 
         return self._object_factory('bpm_e6167fc5cb6593b8b48429187a26a67_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_anc_endpoint <#ciscoisesdk.
+        api.v3_0_0.anc_endpoint.
+        AncEndpoint.bulk_request_for_anc_endpoint>`_
+        """
+        return self.bulk_request_for_anc_endpoint(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_anc_endpoint(self,
                                          bulkid,
                                          headers=None,
@@ -720,10 +853,12 @@ class AncEndpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -768,3 +903,17 @@ class AncEndpoint(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a1c6b9323e55505830673a1819840f3_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_anc_endpoint <#ciscoisesdk.
+        api.v3_0_0.anc_endpoint.
+        AncEndpoint.monitor_bulk_status_anc_endpoint>`_
+        """
+        return self.monitor_bulk_status_anc_endpoint(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

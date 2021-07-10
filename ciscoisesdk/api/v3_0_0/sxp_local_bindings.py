@@ -88,10 +88,12 @@ class SxpLocalBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class SxpLocalBindings(object):
 
         return self._object_factory('bpm_e56bea5248a25f799b02fcb6098a7b10_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_sxp_local_bindings_by_id <#ciscoisesdk.
+        api.v3_0_0.sxp_local_bindings.
+        SxpLocalBindings.get_sxp_local_bindings_by_id>`_
+        """
+        return self.get_sxp_local_bindings_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_sxp_local_bindings_by_id(self,
                                         id,
                                         ip_address_or_host=None,
@@ -183,10 +199,12 @@ class SxpLocalBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -273,6 +291,34 @@ class SxpLocalBindings(object):
 
         return self._object_factory('bpm_e07cb8ea65820863cce345c67926b_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     ip_address_or_host=None,
+                     link=None,
+                     sgt=None,
+                     sxp_vpn=None,
+                     vns=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_sxp_local_bindings_by_id <#ciscoisesdk.
+        api.v3_0_0.sxp_local_bindings.
+        SxpLocalBindings.update_sxp_local_bindings_by_id>`_
+        """
+        return self.update_sxp_local_bindings_by_id(
+            id=id,
+            ip_address_or_host=ip_address_or_host,
+            link=link,
+            sgt=sgt,
+            sxp_vpn=sxp_vpn,
+            vns=vns,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_sxp_local_bindings_by_id(self,
                                         id,
                                         headers=None,
@@ -287,10 +333,12 @@ class SxpLocalBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -342,6 +390,20 @@ class SxpLocalBindings(object):
 
         return self._object_factory('bpm_db04edfe595fbba5b49eb71dcb65bd_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_sxp_local_bindings_by_id <#ciscoisesdk.
+        api.v3_0_0.sxp_local_bindings.
+        SxpLocalBindings.delete_sxp_local_bindings_by_id>`_
+        """
+        return self.delete_sxp_local_bindings_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sxp_local_bindings(self,
                                    filter=None,
                                    filter_type=None,
@@ -352,7 +414,7 @@ class SxpLocalBindings(object):
                                    headers=None,
                                    **query_parameters):
         """This API allows the client to get all the SXP local bindings.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -403,10 +465,12 @@ class SxpLocalBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -473,6 +537,30 @@ class SxpLocalBindings(object):
 
         return self._object_factory('bpm_f845bd746a5c00967fe66178c5edbf_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_sxp_local_bindings <#ciscoisesdk.
+        api.v3_0_0.sxp_local_bindings.
+        SxpLocalBindings.get_all_sxp_local_bindings>`_
+        """
+        return self.get_all_sxp_local_bindings(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sxp_local_bindings_generator(self,
                                              filter=None,
                                              filter_type=None,
@@ -483,7 +571,7 @@ class SxpLocalBindings(object):
                                              headers=None,
                                              **query_parameters):
         """This API allows the client to get all the SXP local bindings.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -535,10 +623,12 @@ class SxpLocalBindings(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -555,6 +645,31 @@ class SxpLocalBindings(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_sxp_local_bindings_generator <#ciscoisesdk.
+        api.v3_0_0.sxp_local_bindings.
+        SxpLocalBindings.get_all_sxp_local_bindings_generator>`_
+        """
+        yield from get_next_page(self.get_all_sxp_local_bindings, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -597,10 +712,12 @@ class SxpLocalBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -683,6 +800,34 @@ class SxpLocalBindings(object):
 
         return self._object_factory('bpm_cf67e0155eab895b50d1a377f21_v3_0_0', _api_response)
 
+    def create(self,
+               id=None,
+               ip_address_or_host=None,
+               link=None,
+               sgt=None,
+               sxp_vpn=None,
+               vns=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_sxp_local_bindings <#ciscoisesdk.
+        api.v3_0_0.sxp_local_bindings.
+        SxpLocalBindings.create_sxp_local_bindings>`_
+        """
+        return self.create_sxp_local_bindings(
+            id=id,
+            ip_address_or_host=ip_address_or_host,
+            link=link,
+            sgt=sgt,
+            sxp_vpn=sxp_vpn,
+            vns=vns,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -696,10 +841,12 @@ class SxpLocalBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -749,7 +896,7 @@ class SxpLocalBindings(object):
                                             payload=None,
                                             active_validation=True,
                                             **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -766,10 +913,12 @@ class SxpLocalBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -839,6 +988,26 @@ class SxpLocalBindings(object):
 
         return self._object_factory('bpm_b97435f47305f5da136a0d68ac6d466_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_sxp_local_bindings <#ciscoisesdk.
+        api.v3_0_0.sxp_local_bindings.
+        SxpLocalBindings.bulk_request_for_sxp_local_bindings>`_
+        """
+        return self.bulk_request_for_sxp_local_bindings(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_sxp_local_bindings(self,
                                                bulkid,
                                                headers=None,
@@ -853,10 +1022,12 @@ class SxpLocalBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -901,3 +1072,17 @@ class SxpLocalBindings(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_db866e1125ca0b7cd7cc13ac4bdd4_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_sxp_local_bindings <#ciscoisesdk.
+        api.v3_0_0.sxp_local_bindings.
+        SxpLocalBindings.monitor_bulk_status_sxp_local_bindings>`_
+        """
+        return self.monitor_bulk_status_sxp_local_bindings(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

@@ -88,10 +88,12 @@ class SecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class SecurityGroups(object):
 
         return self._object_factory('bpm_ea658190e73c5ce1b27e7def4aea28e3_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_security_group_by_id <#ciscoisesdk.
+        api.v3_0_0.security_groups.
+        SecurityGroups.get_security_group_by_id>`_
+        """
+        return self.get_security_group_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_security_group_by_id(self,
                                     id,
                                     default_sga_c_ls=None,
@@ -184,10 +200,12 @@ class SecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -278,6 +296,38 @@ class SecurityGroups(object):
 
         return self._object_factory('bpm_ce666e64a958229cfd8da70945935e_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     default_sga_c_ls=None,
+                     description=None,
+                     generation_id=None,
+                     is_read_only=None,
+                     name=None,
+                     propogate_to_apic=None,
+                     value=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_security_group_by_id <#ciscoisesdk.
+        api.v3_0_0.security_groups.
+        SecurityGroups.update_security_group_by_id>`_
+        """
+        return self.update_security_group_by_id(
+            id=id,
+            default_sga_c_ls=default_sga_c_ls,
+            description=description,
+            generation_id=generation_id,
+            is_read_only=is_read_only,
+            name=name,
+            propogate_to_apic=propogate_to_apic,
+            value=value,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_security_group_by_id(self,
                                     id,
                                     headers=None,
@@ -292,10 +342,12 @@ class SecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -347,6 +399,20 @@ class SecurityGroups(object):
 
         return self._object_factory('bpm_ed2c0f81f4ea5299840089761bfd4f62_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_security_group_by_id <#ciscoisesdk.
+        api.v3_0_0.security_groups.
+        SecurityGroups.delete_security_group_by_id>`_
+        """
+        return self.delete_security_group_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_security_groups(self,
                                 filter=None,
                                 filter_type=None,
@@ -358,8 +424,8 @@ class SecurityGroups(object):
                                 **query_parameters):
         """This API allows the client to get all the security groups.
         Filter:   [propogateToApic, name, description, value]
-        To search guest users by using  toDate  column,follow
-        the format:   DD-MON-YY (Example:13-SEP-18)     Day or
+        To search resources by using  toDate  column,follow the
+        format:   DD-MON-YY (Example:13-SEP-18)     Day or
         Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -409,10 +475,12 @@ class SecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -479,6 +547,30 @@ class SecurityGroups(object):
 
         return self._object_factory('bpm_b3c356cfc48a5da4b13b8ecbae5748b7_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_security_groups <#ciscoisesdk.
+        api.v3_0_0.security_groups.
+        SecurityGroups.get_all_security_groups>`_
+        """
+        return self.get_all_security_groups(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_security_groups_generator(self,
                                           filter=None,
                                           filter_type=None,
@@ -490,8 +582,8 @@ class SecurityGroups(object):
                                           **query_parameters):
         """This API allows the client to get all the security groups.
         Filter:   [propogateToApic, name, description, value]
-        To search guest users by using  toDate  column,follow
-        the format:   DD-MON-YY (Example:13-SEP-18)     Day or
+        To search resources by using  toDate  column,follow the
+        format:   DD-MON-YY (Example:13-SEP-18)     Day or
         Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -542,10 +634,12 @@ class SecurityGroups(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -562,6 +656,31 @@ class SecurityGroups(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_security_groups_generator <#ciscoisesdk.
+        api.v3_0_0.security_groups.
+        SecurityGroups.get_all_security_groups_generator>`_
+        """
+        yield from get_next_page(self.get_all_security_groups, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -603,10 +722,12 @@ class SecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -691,6 +812,36 @@ class SecurityGroups(object):
 
         return self._object_factory('bpm_d0290eb241f5bd79221afc8d6cb32da_v3_0_0', _api_response)
 
+    def create(self,
+               default_sga_c_ls=None,
+               description=None,
+               generation_id=None,
+               is_read_only=None,
+               name=None,
+               propogate_to_apic=None,
+               value=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_security_group <#ciscoisesdk.
+        api.v3_0_0.security_groups.
+        SecurityGroups.create_security_group>`_
+        """
+        return self.create_security_group(
+            default_sga_c_ls=default_sga_c_ls,
+            description=description,
+            generation_id=generation_id,
+            is_read_only=is_read_only,
+            name=name,
+            propogate_to_apic=propogate_to_apic,
+            value=value,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -704,10 +855,12 @@ class SecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -757,7 +910,7 @@ class SecurityGroups(object):
                                         payload=None,
                                         active_validation=True,
                                         **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -774,10 +927,12 @@ class SecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -847,6 +1002,26 @@ class SecurityGroups(object):
 
         return self._object_factory('bpm_fe0ac7fc07885c6f877768654aefd189_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_security_group <#ciscoisesdk.
+        api.v3_0_0.security_groups.
+        SecurityGroups.bulk_request_for_security_group>`_
+        """
+        return self.bulk_request_for_security_group(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_security_group(self,
                                            bulkid,
                                            headers=None,
@@ -861,10 +1036,12 @@ class SecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -909,3 +1086,17 @@ class SecurityGroups(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a3148b789a935070b99caed1e99592cf_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_security_group <#ciscoisesdk.
+        api.v3_0_0.security_groups.
+        SecurityGroups.monitor_bulk_status_security_group>`_
+        """
+        return self.monitor_bulk_status_security_group(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

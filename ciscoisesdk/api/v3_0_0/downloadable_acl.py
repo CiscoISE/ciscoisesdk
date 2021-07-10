@@ -88,10 +88,12 @@ class DownloadableAcl(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class DownloadableAcl(object):
 
         return self._object_factory('bpm_dfa8f48210e85715beebb44e62fac408_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_downloadable_acl_by_id <#ciscoisesdk.
+        api.v3_0_0.downloadable_acl.
+        DownloadableAcl.get_downloadable_acl_by_id>`_
+        """
+        return self.get_downloadable_acl_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_downloadable_acl_by_id(self,
                                       id,
                                       dacl=None,
@@ -179,10 +195,12 @@ class DownloadableAcl(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -267,6 +285,32 @@ class DownloadableAcl(object):
 
         return self._object_factory('bpm_d8c7ba0cb8f56d99135e16d2d973d11_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     dacl=None,
+                     dacl_type=None,
+                     description=None,
+                     name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_downloadable_acl_by_id <#ciscoisesdk.
+        api.v3_0_0.downloadable_acl.
+        DownloadableAcl.update_downloadable_acl_by_id>`_
+        """
+        return self.update_downloadable_acl_by_id(
+            id=id,
+            dacl=dacl,
+            dacl_type=dacl_type,
+            description=description,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_downloadable_acl_by_id(self,
                                       id,
                                       headers=None,
@@ -281,10 +325,12 @@ class DownloadableAcl(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -336,6 +382,20 @@ class DownloadableAcl(object):
 
         return self._object_factory('bpm_b3db444eaa50678218c29f88de60e8_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_downloadable_acl_by_id <#ciscoisesdk.
+        api.v3_0_0.downloadable_acl.
+        DownloadableAcl.delete_downloadable_acl_by_id>`_
+        """
+        return self.delete_downloadable_acl_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_downloadable_acl(self,
                                  page=None,
                                  size=None,
@@ -353,10 +413,12 @@ class DownloadableAcl(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -411,6 +473,22 @@ class DownloadableAcl(object):
 
         return self._object_factory('bpm_bc200af85d598885a990ff9bcbf8_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_downloadable_acl <#ciscoisesdk.
+        api.v3_0_0.downloadable_acl.
+        DownloadableAcl.get_all_downloadable_acl>`_
+        """
+        return self.get_all_downloadable_acl(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_downloadable_acl_generator(self,
                                            page=None,
                                            size=None,
@@ -429,10 +507,12 @@ class DownloadableAcl(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -445,6 +525,23 @@ class DownloadableAcl(object):
         yield from get_next_page(self.get_all_downloadable_acl, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_downloadable_acl_generator <#ciscoisesdk.
+        api.v3_0_0.downloadable_acl.
+        DownloadableAcl.get_all_downloadable_acl_generator>`_
+        """
+        yield from get_next_page(self.get_all_downloadable_acl, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -481,10 +578,12 @@ class DownloadableAcl(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -563,6 +662,30 @@ class DownloadableAcl(object):
 
         return self._object_factory('bpm_adcf947c42fe5588b7b82d9c43a3bbf0_v3_0_0', _api_response)
 
+    def create(self,
+               dacl=None,
+               dacl_type=None,
+               description=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_downloadable_acl <#ciscoisesdk.
+        api.v3_0_0.downloadable_acl.
+        DownloadableAcl.create_downloadable_acl>`_
+        """
+        return self.create_downloadable_acl(
+            dacl=dacl,
+            dacl_type=dacl_type,
+            description=description,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -576,10 +699,12 @@ class DownloadableAcl(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

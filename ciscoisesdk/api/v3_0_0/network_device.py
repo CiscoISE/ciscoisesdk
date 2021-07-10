@@ -88,10 +88,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -142,6 +144,20 @@ class NetworkDevice(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_d8610d4a355b63aaaa364447d5fa00_v3_0_0', _api_response)
+
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_network_device_by_name <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.get_network_device_by_name>`_
+        """
+        return self.get_network_device_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_network_device_by_name(self,
                                       name,
@@ -208,10 +224,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -316,6 +334,52 @@ class NetworkDevice(object):
 
         return self._object_factory('bpm_ea2c4586b845888b2a9375126f70de2_v3_0_0', _api_response)
 
+    def update_by_name(self,
+                       name,
+                       authentication_settings=None,
+                       coa_port=None,
+                       description=None,
+                       dtls_dns_name=None,
+                       id=None,
+                       link=None,
+                       model_name=None,
+                       network_device_group_list=None,
+                       network_device_iplist=None,
+                       profile_name=None,
+                       snmpsettings=None,
+                       software_version=None,
+                       tacacs_settings=None,
+                       trustsecsettings=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
+        """Alias for `update_network_device_by_name <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.update_network_device_by_name>`_
+        """
+        return self.update_network_device_by_name(
+            name=name,
+            authentication_settings=authentication_settings,
+            coa_port=coa_port,
+            description=description,
+            dtls_dns_name=dtls_dns_name,
+            id=id,
+            link=link,
+            model_name=model_name,
+            network_device_group_list=network_device_group_list,
+            network_device_iplist=network_device_iplist,
+            profile_name=profile_name,
+            snmpsettings=snmpsettings,
+            software_version=software_version,
+            tacacs_settings=tacacs_settings,
+            trustsecsettings=trustsecsettings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_network_device_by_name(self,
                                       name,
                                       headers=None,
@@ -330,10 +394,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -385,6 +451,20 @@ class NetworkDevice(object):
 
         return self._object_factory('bpm_eafaf2e785c6898fb982dbe4462e7_v3_0_0', _api_response)
 
+    def delete_by_name(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_network_device_by_name <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.delete_network_device_by_name>`_
+        """
+        return self.delete_network_device_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_network_device_by_id(self,
                                  id,
                                  headers=None,
@@ -399,10 +479,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -453,6 +535,20 @@ class NetworkDevice(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a4ab683ce53052e089626a096abaf451_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_network_device_by_id <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.get_network_device_by_id>`_
+        """
+        return self.get_network_device_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_network_device_by_id(self,
                                     id,
@@ -517,10 +613,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -623,6 +721,50 @@ class NetworkDevice(object):
 
         return self._object_factory('bpm_b1edfeb182025176bb250633937177ae_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     authentication_settings=None,
+                     coa_port=None,
+                     description=None,
+                     dtls_dns_name=None,
+                     model_name=None,
+                     name=None,
+                     network_device_group_list=None,
+                     network_device_iplist=None,
+                     profile_name=None,
+                     snmpsettings=None,
+                     software_version=None,
+                     tacacs_settings=None,
+                     trustsecsettings=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_network_device_by_id <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.update_network_device_by_id>`_
+        """
+        return self.update_network_device_by_id(
+            id=id,
+            authentication_settings=authentication_settings,
+            coa_port=coa_port,
+            description=description,
+            dtls_dns_name=dtls_dns_name,
+            model_name=model_name,
+            name=name,
+            network_device_group_list=network_device_group_list,
+            network_device_iplist=network_device_iplist,
+            profile_name=profile_name,
+            snmpsettings=snmpsettings,
+            software_version=software_version,
+            tacacs_settings=tacacs_settings,
+            trustsecsettings=trustsecsettings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_network_device_by_id(self,
                                     id,
                                     headers=None,
@@ -637,10 +779,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -692,6 +836,20 @@ class NetworkDevice(object):
 
         return self._object_factory('bpm_f2fd3c6324b581ca0f3f9eadede1cdc_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_network_device_by_id <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.delete_network_device_by_id>`_
+        """
+        return self.delete_network_device_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_network_device(self,
                                filter=None,
                                filter_type=None,
@@ -703,8 +861,8 @@ class NetworkDevice(object):
                                **query_parameters):
         """This API allows the client to get all the network devices.
         Filter:   [ipaddress, name, description, location, type]
-        To search guest users by using  toDate  column,follow
-        the format:   DD-MON-YY (Example:13-SEP-18)     Day or
+        To search resources by using  toDate  column,follow the
+        format:   DD-MON-YY (Example:13-SEP-18)     Day or
         Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -754,10 +912,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -824,6 +984,30 @@ class NetworkDevice(object):
 
         return self._object_factory('bpm_b986fa0f0d54ef98eb135eeb88808a_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_network_device <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.get_all_network_device>`_
+        """
+        return self.get_all_network_device(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_network_device_generator(self,
                                          filter=None,
                                          filter_type=None,
@@ -835,8 +1019,8 @@ class NetworkDevice(object):
                                          **query_parameters):
         """This API allows the client to get all the network devices.
         Filter:   [ipaddress, name, description, location, type]
-        To search guest users by using  toDate  column,follow
-        the format:   DD-MON-YY (Example:13-SEP-18)     Day or
+        To search resources by using  toDate  column,follow the
+        format:   DD-MON-YY (Example:13-SEP-18)     Day or
         Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -887,10 +1071,12 @@ class NetworkDevice(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -907,6 +1093,31 @@ class NetworkDevice(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_network_device_generator <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.get_all_network_device_generator>`_
+        """
+        yield from get_next_page(self.get_all_network_device, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -970,10 +1181,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1070,6 +1283,48 @@ class NetworkDevice(object):
 
         return self._object_factory('bpm_ca6ab8ec556c3bc9531dc380b230a_v3_0_0', _api_response)
 
+    def create(self,
+               authentication_settings=None,
+               coa_port=None,
+               description=None,
+               dtls_dns_name=None,
+               model_name=None,
+               name=None,
+               network_device_group_list=None,
+               network_device_iplist=None,
+               profile_name=None,
+               snmpsettings=None,
+               software_version=None,
+               tacacs_settings=None,
+               trustsecsettings=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_network_device <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.create_network_device>`_
+        """
+        return self.create_network_device(
+            authentication_settings=authentication_settings,
+            coa_port=coa_port,
+            description=description,
+            dtls_dns_name=dtls_dns_name,
+            model_name=model_name,
+            name=name,
+            network_device_group_list=network_device_group_list,
+            network_device_iplist=network_device_iplist,
+            profile_name=profile_name,
+            snmpsettings=snmpsettings,
+            software_version=software_version,
+            tacacs_settings=tacacs_settings,
+            trustsecsettings=trustsecsettings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -1083,10 +1338,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1136,7 +1393,7 @@ class NetworkDevice(object):
                                         payload=None,
                                         active_validation=True,
                                         **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -1153,10 +1410,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1226,6 +1485,26 @@ class NetworkDevice(object):
 
         return self._object_factory('bpm_b2eebd5c245e58a503aa53115eec53_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_network_device <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.bulk_request_for_network_device>`_
+        """
+        return self.bulk_request_for_network_device(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_network_device(self,
                                            bulkid,
                                            headers=None,
@@ -1240,10 +1519,12 @@ class NetworkDevice(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1288,3 +1569,17 @@ class NetworkDevice(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_bf96800cc265b5e9e1566ec7088619c_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_network_device <#ciscoisesdk.
+        api.v3_0_0.network_device.
+        NetworkDevice.monitor_bulk_status_network_device>`_
+        """
+        return self.monitor_bulk_status_network_device(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

@@ -88,10 +88,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class GuestUser(object):
 
         return self._object_factory('bpm_c67b4dcffba052ae8ece775bc61a1c21_v3_0_0', _api_response)
 
+    def approve_by_id(self,
+                      id,
+                      headers=None,
+                      **query_parameters):
+        """Alias for `approve_guest_user_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.approve_guest_user_by_id>`_
+        """
+        return self.approve_guest_user_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def change_sponsor_password(self,
                                 portal_id,
                                 additional_data=None,
@@ -167,10 +183,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -255,10 +273,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -311,6 +331,20 @@ class GuestUser(object):
 
         return self._object_factory('bpm_afcc8fe53b4824ae744a2ff3848_v3_0_0', _api_response)
 
+    def suspend_by_name(self,
+                        name,
+                        headers=None,
+                        **query_parameters):
+        """Alias for `suspend_guest_user_by_name <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.suspend_guest_user_by_name>`_
+        """
+        return self.suspend_guest_user_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def reinstate_guest_user_by_name(self,
                                      name,
                                      headers=None,
@@ -325,10 +359,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -381,6 +417,20 @@ class GuestUser(object):
 
         return self._object_factory('bpm_b21045846d5097a82cd61cb3c7eaf1_v3_0_0', _api_response)
 
+    def reinstate_by_name(self,
+                          name,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `reinstate_guest_user_by_name <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.reinstate_guest_user_by_name>`_
+        """
+        return self.reinstate_guest_user_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_guest_user_by_name(self,
                                name,
                                headers=None,
@@ -395,10 +445,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -449,6 +501,20 @@ class GuestUser(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_bcb7ec29968e5d5899df4a90d94ed659_v3_0_0', _api_response)
+
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_guest_user_by_name <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.get_guest_user_by_name>`_
+        """
+        return self.get_guest_user_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_guest_user_by_name(self,
                                   name,
@@ -505,10 +571,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -609,6 +677,48 @@ class GuestUser(object):
 
         return self._object_factory('bpm_f24049df29d059c48eef86d381ffad5d_v3_0_0', _api_response)
 
+    def update_by_name(self,
+                       name,
+                       custom_fields=None,
+                       description=None,
+                       guest_access_info=None,
+                       guest_info=None,
+                       guest_type=None,
+                       id=None,
+                       portal_id=None,
+                       reason_for_visit=None,
+                       sponsor_user_id=None,
+                       sponsor_user_name=None,
+                       status=None,
+                       status_reason=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
+        """Alias for `update_guest_user_by_name <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.update_guest_user_by_name>`_
+        """
+        return self.update_guest_user_by_name(
+            name=name,
+            custom_fields=custom_fields,
+            description=description,
+            guest_access_info=guest_access_info,
+            guest_info=guest_info,
+            guest_type=guest_type,
+            id=id,
+            portal_id=portal_id,
+            reason_for_visit=reason_for_visit,
+            sponsor_user_id=sponsor_user_id,
+            sponsor_user_name=sponsor_user_name,
+            status=status,
+            status_reason=status_reason,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_guest_user_by_name(self,
                                   name,
                                   headers=None,
@@ -623,10 +733,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -678,6 +790,20 @@ class GuestUser(object):
 
         return self._object_factory('bpm_ef15d7c6b259f5859ee9675c38887c_v3_0_0', _api_response)
 
+    def delete_by_name(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_guest_user_by_name <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.delete_guest_user_by_name>`_
+        """
+        return self.delete_guest_user_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def reset_guest_user_password_by_id(self,
                                         id,
                                         headers=None,
@@ -692,10 +818,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -748,6 +876,20 @@ class GuestUser(object):
 
         return self._object_factory('bpm_ea6ea4e41d85f83b6f6c10ce38bb9ed_v3_0_0', _api_response)
 
+    def reset_password_by_id(self,
+                             id,
+                             headers=None,
+                             **query_parameters):
+        """Alias for `reset_guest_user_password_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.reset_guest_user_password_by_id>`_
+        """
+        return self.reset_guest_user_password_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def reinstate_guest_user_by_id(self,
                                    id,
                                    headers=None,
@@ -762,10 +904,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -818,6 +962,20 @@ class GuestUser(object):
 
         return self._object_factory('bpm_dfcba4a0f685c168bdf2b5b2be317ac_v3_0_0', _api_response)
 
+    def reinstate_by_id(self,
+                        id,
+                        headers=None,
+                        **query_parameters):
+        """Alias for `reinstate_guest_user_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.reinstate_guest_user_by_id>`_
+        """
+        return self.reinstate_guest_user_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_guest_user_email(self,
                                 id,
                                 portal_id,
@@ -843,10 +1001,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -926,6 +1086,28 @@ class GuestUser(object):
 
         return self._object_factory('bpm_a9fa9cbccbe50fcb1cd6a63fed47578_v3_0_0', _api_response)
 
+    def update_email(self,
+                     id,
+                     portal_id,
+                     additional_data=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_guest_user_email <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.update_guest_user_email>`_
+        """
+        return self.update_guest_user_email(
+            id=id,
+            portal_id=portal_id,
+            additional_data=additional_data,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_guest_user_sms(self,
                               id,
                               portal_id,
@@ -942,10 +1124,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1001,6 +1185,22 @@ class GuestUser(object):
 
         return self._object_factory('bpm_ba14b751f98206ca2e19cff3fe_v3_0_0', _api_response)
 
+    def update_sms(self,
+                   id,
+                   portal_id,
+                   headers=None,
+                   **query_parameters):
+        """Alias for `update_guest_user_sms <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.update_guest_user_sms>`_
+        """
+        return self.update_guest_user_sms(
+            id=id,
+            portal_id=portal_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def deny_guest_user_by_id(self,
                               id,
                               headers=None,
@@ -1015,10 +1215,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1071,6 +1273,20 @@ class GuestUser(object):
 
         return self._object_factory('bpm_c1e5e2a187652018c59b10155ac973d_v3_0_0', _api_response)
 
+    def deny_by_id(self,
+                   id,
+                   headers=None,
+                   **query_parameters):
+        """Alias for `deny_guest_user_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.deny_guest_user_by_id>`_
+        """
+        return self.deny_guest_user_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_guest_user_by_id(self,
                              id,
                              headers=None,
@@ -1085,10 +1301,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1139,6 +1357,20 @@ class GuestUser(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c3c7d5a3a83d9f7441972d399_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_guest_user_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.get_guest_user_by_id>`_
+        """
+        return self.get_guest_user_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_guest_user_by_id(self,
                                 id,
@@ -1195,10 +1427,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1299,6 +1533,48 @@ class GuestUser(object):
 
         return self._object_factory('bpm_b9c7c5847b17684c49399ff95_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     custom_fields=None,
+                     description=None,
+                     guest_access_info=None,
+                     guest_info=None,
+                     guest_type=None,
+                     name=None,
+                     portal_id=None,
+                     reason_for_visit=None,
+                     sponsor_user_id=None,
+                     sponsor_user_name=None,
+                     status=None,
+                     status_reason=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_guest_user_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.update_guest_user_by_id>`_
+        """
+        return self.update_guest_user_by_id(
+            id=id,
+            custom_fields=custom_fields,
+            description=description,
+            guest_access_info=guest_access_info,
+            guest_info=guest_info,
+            guest_type=guest_type,
+            name=name,
+            portal_id=portal_id,
+            reason_for_visit=reason_for_visit,
+            sponsor_user_id=sponsor_user_id,
+            sponsor_user_name=sponsor_user_name,
+            status=status,
+            status_reason=status_reason,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_guest_user_by_id(self,
                                 id,
                                 headers=None,
@@ -1313,10 +1589,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1368,6 +1646,20 @@ class GuestUser(object):
 
         return self._object_factory('bpm_e251b39f55d3ac2570a963a3ee9c_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_guest_user_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.delete_guest_user_by_id>`_
+        """
+        return self.delete_guest_user_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_guest_users(self,
                             filter=None,
                             filter_type=None,
@@ -1381,7 +1673,7 @@ class GuestUser(object):
         [lastName, sponsor, creationTime, personBeingVisited,
         toDate, userName, firstName, emailAddress, phoneNumber,
         groupTag, name, company, guestType, status]   To search
-        guest users by using  toDate  column,follow the format:
+        resources by using  toDate  column,follow the format:
         DD-MON-YY (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -1432,10 +1724,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1502,6 +1796,30 @@ class GuestUser(object):
 
         return self._object_factory('bpm_a5abd33eeaa52e39e926472751ef79e_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_guest_users <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.get_all_guest_users>`_
+        """
+        return self.get_all_guest_users(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_guest_users_generator(self,
                                       filter=None,
                                       filter_type=None,
@@ -1515,7 +1833,7 @@ class GuestUser(object):
         [lastName, sponsor, creationTime, personBeingVisited,
         toDate, userName, firstName, emailAddress, phoneNumber,
         groupTag, name, company, guestType, status]   To search
-        guest users by using  toDate  column,follow the format:
+        resources by using  toDate  column,follow the format:
         DD-MON-YY (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -1567,10 +1885,12 @@ class GuestUser(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -1587,6 +1907,31 @@ class GuestUser(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_guest_users_generator <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.get_all_guest_users_generator>`_
+        """
+        yield from get_next_page(self.get_all_guest_users, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -1642,10 +1987,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1740,6 +2087,46 @@ class GuestUser(object):
 
         return self._object_factory('bpm_f7cf06a1655d6da606ace9b0950bcf_v3_0_0', _api_response)
 
+    def create(self,
+               custom_fields=None,
+               description=None,
+               guest_access_info=None,
+               guest_info=None,
+               guest_type=None,
+               name=None,
+               portal_id=None,
+               reason_for_visit=None,
+               sponsor_user_id=None,
+               sponsor_user_name=None,
+               status=None,
+               status_reason=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_guest_user <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.create_guest_user>`_
+        """
+        return self.create_guest_user(
+            custom_fields=custom_fields,
+            description=description,
+            guest_access_info=guest_access_info,
+            guest_info=guest_info,
+            guest_type=guest_type,
+            name=name,
+            portal_id=portal_id,
+            reason_for_visit=reason_for_visit,
+            sponsor_user_id=sponsor_user_id,
+            sponsor_user_name=sponsor_user_name,
+            status=status,
+            status_reason=status_reason,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def suspend_guest_user_by_id(self,
                                  id,
                                  additional_data=None,
@@ -1763,10 +2150,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1843,6 +2232,26 @@ class GuestUser(object):
 
         return self._object_factory('bpm_be5b1e320e55f4a181370417471d9e_v3_0_0', _api_response)
 
+    def suspend_by_id(self,
+                      id,
+                      additional_data=None,
+                      headers=None,
+                      payload=None,
+                      active_validation=True,
+                      **query_parameters):
+        """Alias for `suspend_guest_user_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.suspend_guest_user_by_id>`_
+        """
+        return self.suspend_guest_user_by_id(
+            id=id,
+            additional_data=additional_data,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -1856,10 +2265,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1909,7 +2320,7 @@ class GuestUser(object):
                                     payload=None,
                                     active_validation=True,
                                     **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -1926,10 +2337,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1999,6 +2412,26 @@ class GuestUser(object):
 
         return self._object_factory('bpm_edfca30e8e514d9bab840c3c2d4c0f_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_guest_user <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.bulk_request_for_guest_user>`_
+        """
+        return self.bulk_request_for_guest_user(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_guest_user(self,
                                        bulkid,
                                        headers=None,
@@ -2013,10 +2446,12 @@ class GuestUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -2061,3 +2496,17 @@ class GuestUser(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e38a1af3ad835636a11375363528fa2e_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_guest_user <#ciscoisesdk.
+        api.v3_0_0.guest_user.
+        GuestUser.monitor_bulk_status_guest_user>`_
+        """
+        return self.monitor_bulk_status_guest_user(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

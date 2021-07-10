@@ -89,10 +89,12 @@ class PortalGlobalSetting(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class PortalGlobalSetting(object):
 
         return self._object_factory('bpm_ac243ecb8c157658a4bcfe77a102c14_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_portal_global_setting_by_id <#ciscoisesdk.
+        api.v3_0_0.portal_global_setting.
+        PortalGlobalSetting.get_portal_global_setting_by_id>`_
+        """
+        return self.get_portal_global_setting_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_portal_global_setting_by_id(self,
                                            id,
                                            customization=None,
@@ -170,10 +186,12 @@ class PortalGlobalSetting(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -252,6 +270,26 @@ class PortalGlobalSetting(object):
 
         return self._object_factory('bpm_c97e7851003e5a63a2a8005ac8807dc7_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     customization=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_portal_global_setting_by_id <#ciscoisesdk.
+        api.v3_0_0.portal_global_setting.
+        PortalGlobalSetting.update_portal_global_setting_by_id>`_
+        """
+        return self.update_portal_global_setting_by_id(
+            id=id,
+            customization=customization,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_portal_global_settings(self,
                                        filter=None,
                                        filter_type=None,
@@ -262,7 +300,7 @@ class PortalGlobalSetting(object):
                                        headers=None,
                                        **query_parameters):
         """This API allows the client to get all the portal global
-        settings.   Filter:   [name]   To search guest users by
+        settings.   Filter:   [name]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -313,10 +351,12 @@ class PortalGlobalSetting(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -383,6 +423,30 @@ class PortalGlobalSetting(object):
 
         return self._object_factory('bpm_e9ce4a1e1cf955f098343646760e9d58_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_portal_global_settings <#ciscoisesdk.
+        api.v3_0_0.portal_global_setting.
+        PortalGlobalSetting.get_all_portal_global_settings>`_
+        """
+        return self.get_all_portal_global_settings(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_portal_global_settings_generator(self,
                                                  filter=None,
                                                  filter_type=None,
@@ -393,7 +457,7 @@ class PortalGlobalSetting(object):
                                                  headers=None,
                                                  **query_parameters):
         """This API allows the client to get all the portal global
-        settings.   Filter:   [name]   To search guest users by
+        settings.   Filter:   [name]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -445,10 +509,12 @@ class PortalGlobalSetting(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -465,6 +531,31 @@ class PortalGlobalSetting(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_portal_global_settings_generator <#ciscoisesdk.
+        api.v3_0_0.portal_global_setting.
+        PortalGlobalSetting.get_all_portal_global_settings_generator>`_
+        """
+        yield from get_next_page(self.get_all_portal_global_settings, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -481,10 +572,12 @@ class PortalGlobalSetting(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

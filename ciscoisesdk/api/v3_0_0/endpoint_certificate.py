@@ -198,6 +198,34 @@ class EndpointCertificate(object):
 
         return self._object_factory('bpm_e27d5df9cbe5b29a7e16bb7c877a4ce_v3_0_0', _api_response)
 
+    def create(self,
+               cert_template_name=None,
+               certificate_request=None,
+               format=None,
+               password=None,
+               dirpath=None,
+               save_file=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_endpoint_certificate <#ciscoisesdk.
+        api.v3_0_0.endpoint_certificate.
+        EndpointCertificate.create_endpoint_certificate>`_
+        """
+        return self.create_endpoint_certificate(
+            cert_template_name=cert_template_name,
+            certificate_request=certificate_request,
+            format=format,
+            password=password,
+            dirpath=dirpath,
+            save_file=save_file,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -211,10 +239,12 @@ class EndpointCertificate(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

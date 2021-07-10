@@ -84,8 +84,8 @@ class SmsProvider(object):
                              headers=None,
                              **query_parameters):
         """This API allows the client to get all the SMS providers.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -135,10 +135,12 @@ class SmsProvider(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -205,6 +207,30 @@ class SmsProvider(object):
 
         return self._object_factory('bpm_daac88943a5cd2bd745c483448e231_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_sms_provider <#ciscoisesdk.
+        api.v3_0_0.sms_provider.
+        SmsProvider.get_all_sms_provider>`_
+        """
+        return self.get_all_sms_provider(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sms_provider_generator(self,
                                        filter=None,
                                        filter_type=None,
@@ -215,8 +241,8 @@ class SmsProvider(object):
                                        headers=None,
                                        **query_parameters):
         """This API allows the client to get all the SMS providers.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -267,10 +293,12 @@ class SmsProvider(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -287,6 +315,31 @@ class SmsProvider(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_sms_provider_generator <#ciscoisesdk.
+        api.v3_0_0.sms_provider.
+        SmsProvider.get_all_sms_provider_generator>`_
+        """
+        yield from get_next_page(self.get_all_sms_provider, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -303,10 +356,12 @@ class SmsProvider(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

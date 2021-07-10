@@ -86,10 +86,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -128,6 +130,18 @@ class DeviceAdministrationTimeDateConditions(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_bf923264c53f98d5c347fa50b9c15_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_time_conditions <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.get_device_admin_time_conditions>`_
+        """
+        return self.get_device_admin_time_conditions(
+            headers=headers,
+            **query_parameters
+        )
 
     def post_device_admin_time_condition(self,
                                          attribute_name=None,
@@ -268,10 +282,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -366,6 +382,58 @@ class DeviceAdministrationTimeDateConditions(object):
 
         return self._object_factory('bpm_b30f809e275589bd7154b5b4093d3f_v3_0_0', _api_response)
 
+    def create(self,
+               attribute_name=None,
+               attribute_value=None,
+               children=None,
+               condition_type=None,
+               dates_range=None,
+               dates_range_exception=None,
+               description=None,
+               dictionary_name=None,
+               dictionary_value=None,
+               hours_range=None,
+               hours_range_exception=None,
+               id=None,
+               is_negate=None,
+               link=None,
+               name=None,
+               operator=None,
+               week_days=None,
+               week_days_exception=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `post_device_admin_time_condition <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.post_device_admin_time_condition>`_
+        """
+        return self.post_device_admin_time_condition(
+            attribute_name=attribute_name,
+            attribute_value=attribute_value,
+            children=children,
+            condition_type=condition_type,
+            dates_range=dates_range,
+            dates_range_exception=dates_range_exception,
+            description=description,
+            dictionary_name=dictionary_name,
+            dictionary_value=dictionary_value,
+            hours_range=hours_range,
+            hours_range_exception=hours_range_exception,
+            id=id,
+            is_negate=is_negate,
+            link=link,
+            name=name,
+            operator=operator,
+            week_days=week_days,
+            week_days_exception=week_days_exception,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_time_condition_by_condition_id(self,
                                                         condition_id,
                                                         headers=None,
@@ -381,10 +449,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -426,6 +496,20 @@ class DeviceAdministrationTimeDateConditions(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ffd94d339a5fea8a4777dccccb926f_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  condition_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_time_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.get_device_admin_time_condition_by_condition_id>`_
+        """
+        return self.get_device_admin_time_condition_by_condition_id(
+            condition_id=condition_id,
+            headers=headers,
+            **query_parameters
+        )
 
     def put_device_admin_time_condition_by_condition_id(self,
                                                         condition_id,
@@ -569,10 +653,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -671,6 +757,60 @@ class DeviceAdministrationTimeDateConditions(object):
 
         return self._object_factory('bpm_e3241242740252b2814e0b474c314e9b_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     condition_id,
+                     attribute_name=None,
+                     attribute_value=None,
+                     children=None,
+                     condition_type=None,
+                     dates_range=None,
+                     dates_range_exception=None,
+                     description=None,
+                     dictionary_name=None,
+                     dictionary_value=None,
+                     hours_range=None,
+                     hours_range_exception=None,
+                     id=None,
+                     is_negate=None,
+                     link=None,
+                     name=None,
+                     operator=None,
+                     week_days=None,
+                     week_days_exception=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `put_device_admin_time_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.put_device_admin_time_condition_by_condition_id>`_
+        """
+        return self.put_device_admin_time_condition_by_condition_id(
+            condition_id=condition_id,
+            attribute_name=attribute_name,
+            attribute_value=attribute_value,
+            children=children,
+            condition_type=condition_type,
+            dates_range=dates_range,
+            dates_range_exception=dates_range_exception,
+            description=description,
+            dictionary_name=dictionary_name,
+            dictionary_value=dictionary_value,
+            hours_range=hours_range,
+            hours_range_exception=hours_range_exception,
+            id=id,
+            is_negate=is_negate,
+            link=link,
+            name=name,
+            operator=operator,
+            week_days=week_days,
+            week_days_exception=week_days_exception,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_time_condition_by_condition_id(self,
                                                            condition_id,
                                                            headers=None,
@@ -686,10 +826,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -731,3 +873,17 @@ class DeviceAdministrationTimeDateConditions(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_cf9f01129179555aa60c446f0a65c65a_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     condition_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_time_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.delete_device_admin_time_condition_by_condition_id>`_
+        """
+        return self.delete_device_admin_time_condition_by_condition_id(
+            condition_id=condition_id,
+            headers=headers,
+            **query_parameters
+        )

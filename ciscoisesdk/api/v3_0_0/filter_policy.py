@@ -88,10 +88,12 @@ class FilterPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class FilterPolicy(object):
 
         return self._object_factory('bpm_f5d5ab6568d8bf5f9932f7ed7f4_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_filter_policy_by_id <#ciscoisesdk.
+        api.v3_0_0.filter_policy.
+        FilterPolicy.get_filter_policy_by_id>`_
+        """
+        return self.get_filter_policy_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_filter_policy_by_id(self,
                                    id,
                                    domains=None,
@@ -179,10 +195,12 @@ class FilterPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -265,6 +283,32 @@ class FilterPolicy(object):
 
         return self._object_factory('bpm_d0006cc03d53c89a3593526bf8dc0f_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     domains=None,
+                     sgt=None,
+                     subnet=None,
+                     vn=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_filter_policy_by_id <#ciscoisesdk.
+        api.v3_0_0.filter_policy.
+        FilterPolicy.update_filter_policy_by_id>`_
+        """
+        return self.update_filter_policy_by_id(
+            id=id,
+            domains=domains,
+            sgt=sgt,
+            subnet=subnet,
+            vn=vn,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_filter_policy_by_id(self,
                                    id,
                                    headers=None,
@@ -279,10 +323,12 @@ class FilterPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -334,6 +380,20 @@ class FilterPolicy(object):
 
         return self._object_factory('bpm_a83e0d4f56a5c06946f685aa46fa3e3_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_filter_policy_by_id <#ciscoisesdk.
+        api.v3_0_0.filter_policy.
+        FilterPolicy.delete_filter_policy_by_id>`_
+        """
+        return self.delete_filter_policy_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_filter_policy(self,
                               page=None,
                               size=None,
@@ -351,10 +411,12 @@ class FilterPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -409,6 +471,22 @@ class FilterPolicy(object):
 
         return self._object_factory('bpm_a599ae00f5e47b9ece23cd3183d1c_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_filter_policy <#ciscoisesdk.
+        api.v3_0_0.filter_policy.
+        FilterPolicy.get_all_filter_policy>`_
+        """
+        return self.get_all_filter_policy(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_filter_policy_generator(self,
                                         page=None,
                                         size=None,
@@ -427,10 +505,12 @@ class FilterPolicy(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -443,6 +523,23 @@ class FilterPolicy(object):
         yield from get_next_page(self.get_all_filter_policy, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_filter_policy_generator <#ciscoisesdk.
+        api.v3_0_0.filter_policy.
+        FilterPolicy.get_all_filter_policy_generator>`_
+        """
+        yield from get_next_page(self.get_all_filter_policy, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -480,10 +577,12 @@ class FilterPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -562,6 +661,30 @@ class FilterPolicy(object):
 
         return self._object_factory('bpm_f8082b07ce528f82545e210b84d7de_v3_0_0', _api_response)
 
+    def create(self,
+               domains=None,
+               sgt=None,
+               subnet=None,
+               vn=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_filter_policy <#ciscoisesdk.
+        api.v3_0_0.filter_policy.
+        FilterPolicy.create_filter_policy>`_
+        """
+        return self.create_filter_policy(
+            domains=domains,
+            sgt=sgt,
+            subnet=subnet,
+            vn=vn,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -575,10 +698,12 @@ class FilterPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

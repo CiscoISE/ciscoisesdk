@@ -88,10 +88,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class Endpoint(object):
 
         return self._object_factory('bpm_f4f97557daacb3dadaced526cc_v3_0_0', _api_response)
 
+    def release_rejected(self,
+                         id,
+                         headers=None,
+                         **query_parameters):
+        """Alias for `release_rejected_endpoint <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.release_rejected_endpoint>`_
+        """
+        return self.release_rejected_endpoint(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def deregister_endpoint(self,
                             id,
                             headers=None,
@@ -158,10 +174,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -214,6 +232,20 @@ class Endpoint(object):
 
         return self._object_factory('bpm_ed121b2686e85bd5b28c068c3c0de220_v3_0_0', _api_response)
 
+    def deregister(self,
+                   id,
+                   headers=None,
+                   **query_parameters):
+        """Alias for `deregister_endpoint <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.deregister_endpoint>`_
+        """
+        return self.deregister_endpoint(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_rejected_endpoints(self,
                                headers=None,
                                **query_parameters):
@@ -226,10 +258,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -278,6 +312,18 @@ class Endpoint(object):
 
         return self._object_factory('bpm_f8a2f0834e625822bed1cb4cf34fde5e_v3_0_0', _api_response)
 
+    def get_rejected(self,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `get_rejected_endpoints <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.get_rejected_endpoints>`_
+        """
+        return self.get_rejected_endpoints(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_endpoint_by_name(self,
                              name,
                              headers=None,
@@ -292,10 +338,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -347,6 +395,20 @@ class Endpoint(object):
 
         return self._object_factory('bpm_d53842e83f0538cab91e097aa6800ce_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_endpoint_by_name <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.get_endpoint_by_name>`_
+        """
+        return self.get_endpoint_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_endpoint_by_id(self,
                            id,
                            headers=None,
@@ -361,10 +423,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -415,6 +479,20 @@ class Endpoint(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_eb8e0ce63376573995a49178435f7747_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_endpoint_by_id <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.get_endpoint_by_id>`_
+        """
+        return self.get_endpoint_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_endpoint_by_id(self,
                               id,
@@ -468,10 +546,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -570,6 +650,46 @@ class Endpoint(object):
 
         return self._object_factory('bpm_c8b30af4b84b5a90be2fc152cf26ad42_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     custom_attributes=None,
+                     description=None,
+                     group_id=None,
+                     identity_store=None,
+                     identity_store_id=None,
+                     mac=None,
+                     name=None,
+                     portal_user=None,
+                     profile_id=None,
+                     static_group_assignment=None,
+                     static_profile_assignment=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_endpoint_by_id <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.update_endpoint_by_id>`_
+        """
+        return self.update_endpoint_by_id(
+            id=id,
+            custom_attributes=custom_attributes,
+            description=description,
+            group_id=group_id,
+            identity_store=identity_store,
+            identity_store_id=identity_store_id,
+            mac=mac,
+            name=name,
+            portal_user=portal_user,
+            profile_id=profile_id,
+            static_group_assignment=static_group_assignment,
+            static_profile_assignment=static_profile_assignment,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_endpoint_by_id(self,
                               id,
                               headers=None,
@@ -584,10 +704,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -638,6 +760,20 @@ class Endpoint(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f1cac5f578ab6509196266ad8e3_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_endpoint_by_id <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.delete_endpoint_by_id>`_
+        """
+        return self.delete_endpoint_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def register_endpoint(self,
                           custom_attributes=None,
@@ -690,10 +826,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -789,6 +927,46 @@ class Endpoint(object):
 
         return self._object_factory('bpm_dfaeea899c185169ae2a3b70b5491008_v3_0_0', _api_response)
 
+    def register(self,
+                 custom_attributes=None,
+                 description=None,
+                 group_id=None,
+                 id=None,
+                 identity_store=None,
+                 identity_store_id=None,
+                 mac=None,
+                 name=None,
+                 portal_user=None,
+                 profile_id=None,
+                 static_group_assignment=None,
+                 static_profile_assignment=None,
+                 headers=None,
+                 payload=None,
+                 active_validation=True,
+                 **query_parameters):
+        """Alias for `register_endpoint <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.register_endpoint>`_
+        """
+        return self.register_endpoint(
+            custom_attributes=custom_attributes,
+            description=description,
+            group_id=group_id,
+            id=id,
+            identity_store=identity_store,
+            identity_store_id=identity_store_id,
+            mac=mac,
+            name=name,
+            portal_user=portal_user,
+            profile_id=profile_id,
+            static_group_assignment=static_group_assignment,
+            static_profile_assignment=static_profile_assignment,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_endpoints(self,
                           filter=None,
                           filter_type=None,
@@ -811,9 +989,9 @@ class Endpoint(object):
         filter:   /ers/config/endpoint?filter={filter
         name}.{operator}.{logical profile name}   Example:
         https://{ise-ip}:9060/ers/config/endpoint?filter=logical
-        ProfileName.EQ.LP_Apple   Example 2:   To search guest
-        users by using  toDate  column,follow the format:   DD-
-        MON-YY (Example:13-SEP-18)     Day or Year:GET
+        ProfileName.EQ.LP_Apple   Example 2:   To search
+        resources by using  toDate  column,follow the format:
+        DD-MON-YY (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
@@ -862,10 +1040,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -932,6 +1112,30 @@ class Endpoint(object):
 
         return self._object_factory('bpm_b7f7285d71be4645db91b0fc74_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_endpoints <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.get_all_endpoints>`_
+        """
+        return self.get_all_endpoints(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_endpoints_generator(self,
                                     filter=None,
                                     filter_type=None,
@@ -954,9 +1158,9 @@ class Endpoint(object):
         filter:   /ers/config/endpoint?filter={filter
         name}.{operator}.{logical profile name}   Example:
         https://{ise-ip}:9060/ers/config/endpoint?filter=logical
-        ProfileName.EQ.LP_Apple   Example 2:   To search guest
-        users by using  toDate  column,follow the format:   DD-
-        MON-YY (Example:13-SEP-18)     Day or Year:GET
+        ProfileName.EQ.LP_Apple   Example 2:   To search
+        resources by using  toDate  column,follow the format:
+        DD-MON-YY (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
@@ -1006,10 +1210,12 @@ class Endpoint(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -1026,6 +1232,31 @@ class Endpoint(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_endpoints_generator <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.get_all_endpoints_generator>`_
+        """
+        yield from get_next_page(self.get_all_endpoints, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -1078,10 +1309,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1174,6 +1407,44 @@ class Endpoint(object):
 
         return self._object_factory('bpm_ab88be5092bf4ba9f522e8e26f_v3_0_0', _api_response)
 
+    def create(self,
+               custom_attributes=None,
+               description=None,
+               group_id=None,
+               identity_store=None,
+               identity_store_id=None,
+               mac=None,
+               name=None,
+               portal_user=None,
+               profile_id=None,
+               static_group_assignment=None,
+               static_profile_assignment=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_endpoint <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.create_endpoint>`_
+        """
+        return self.create_endpoint(
+            custom_attributes=custom_attributes,
+            description=description,
+            group_id=group_id,
+            identity_store=identity_store,
+            identity_store_id=identity_store_id,
+            mac=mac,
+            name=name,
+            portal_user=portal_user,
+            profile_id=profile_id,
+            static_group_assignment=static_group_assignment,
+            static_profile_assignment=static_profile_assignment,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -1187,10 +1458,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1240,7 +1513,7 @@ class Endpoint(object):
                                   payload=None,
                                   active_validation=True,
                                   **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -1257,10 +1530,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1330,6 +1605,26 @@ class Endpoint(object):
 
         return self._object_factory('bpm_c03505504e8e5af8a715e27c40f16eab_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_endpoint <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.bulk_request_for_endpoint>`_
+        """
+        return self.bulk_request_for_endpoint(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_endpoint(self,
                                      bulkid,
                                      headers=None,
@@ -1344,10 +1639,12 @@ class Endpoint(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1392,3 +1689,17 @@ class Endpoint(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_b054a43ba875f0da3da5a7d863f3ef7_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_endpoint <#ciscoisesdk.
+        api.v3_0_0.endpoint.
+        Endpoint.monitor_bulk_status_endpoint>`_
+        """
+        return self.monitor_bulk_status_endpoint(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

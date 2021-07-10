@@ -89,10 +89,12 @@ class EndpointIdentityGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class EndpointIdentityGroup(object):
 
         return self._object_factory('bpm_f64c3c08518e9eef83a92d69cde3_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_endpoint_group_by_name <#ciscoisesdk.
+        api.v3_0_0.endpoint_identity_group.
+        EndpointIdentityGroup.get_endpoint_group_by_name>`_
+        """
+        return self.get_endpoint_group_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_endpoint_group_by_id(self,
                                  id,
                                  headers=None,
@@ -159,10 +175,12 @@ class EndpointIdentityGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -214,6 +232,20 @@ class EndpointIdentityGroup(object):
 
         return self._object_factory('bpm_e4bfa620f76545d9887045cd24d99a2_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_endpoint_group_by_id <#ciscoisesdk.
+        api.v3_0_0.endpoint_identity_group.
+        EndpointIdentityGroup.get_endpoint_group_by_id>`_
+        """
+        return self.get_endpoint_group_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_endpoint_group_by_id(self,
                                     id,
                                     description=None,
@@ -243,10 +275,12 @@ class EndpointIdentityGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -329,6 +363,30 @@ class EndpointIdentityGroup(object):
 
         return self._object_factory('bpm_b4e8d45639975c226dacd53e7b_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     description=None,
+                     name=None,
+                     system_defined=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_endpoint_group_by_id <#ciscoisesdk.
+        api.v3_0_0.endpoint_identity_group.
+        EndpointIdentityGroup.update_endpoint_group_by_id>`_
+        """
+        return self.update_endpoint_group_by_id(
+            id=id,
+            description=description,
+            name=name,
+            system_defined=system_defined,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_endpoint_group_by_id(self,
                                     id,
                                     headers=None,
@@ -343,10 +401,12 @@ class EndpointIdentityGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -398,6 +458,20 @@ class EndpointIdentityGroup(object):
 
         return self._object_factory('bpm_f7b0aab2a65652feae637779bfb20d2d_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_endpoint_group_by_id <#ciscoisesdk.
+        api.v3_0_0.endpoint_identity_group.
+        EndpointIdentityGroup.delete_endpoint_group_by_id>`_
+        """
+        return self.delete_endpoint_group_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_endpoint_groups(self,
                                 filter=None,
                                 filter_type=None,
@@ -408,7 +482,7 @@ class EndpointIdentityGroup(object):
                                 headers=None,
                                 **query_parameters):
         """This API allows the client to get all the endpoint identity
-        groups.   Filter:   [name]   To search guest users by
+        groups.   Filter:   [name]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -459,10 +533,12 @@ class EndpointIdentityGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -529,6 +605,30 @@ class EndpointIdentityGroup(object):
 
         return self._object_factory('bpm_cd429bb8ff3556a796570480f742028b_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_endpoint_groups <#ciscoisesdk.
+        api.v3_0_0.endpoint_identity_group.
+        EndpointIdentityGroup.get_all_endpoint_groups>`_
+        """
+        return self.get_all_endpoint_groups(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_endpoint_groups_generator(self,
                                           filter=None,
                                           filter_type=None,
@@ -539,7 +639,7 @@ class EndpointIdentityGroup(object):
                                           headers=None,
                                           **query_parameters):
         """This API allows the client to get all the endpoint identity
-        groups.   Filter:   [name]   To search guest users by
+        groups.   Filter:   [name]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -591,10 +691,12 @@ class EndpointIdentityGroup(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -611,6 +713,31 @@ class EndpointIdentityGroup(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_endpoint_groups_generator <#ciscoisesdk.
+        api.v3_0_0.endpoint_identity_group.
+        EndpointIdentityGroup.get_all_endpoint_groups_generator>`_
+        """
+        yield from get_next_page(self.get_all_endpoint_groups, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -640,10 +767,12 @@ class EndpointIdentityGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -720,6 +849,28 @@ class EndpointIdentityGroup(object):
 
         return self._object_factory('bpm_b14d63c641e95ac0a8c2da2fb65909c7_v3_0_0', _api_response)
 
+    def create(self,
+               description=None,
+               name=None,
+               system_defined=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_endpoint_group <#ciscoisesdk.
+        api.v3_0_0.endpoint_identity_group.
+        EndpointIdentityGroup.create_endpoint_group>`_
+        """
+        return self.create_endpoint_group(
+            description=description,
+            name=name,
+            system_defined=system_defined,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -733,10 +884,12 @@ class EndpointIdentityGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

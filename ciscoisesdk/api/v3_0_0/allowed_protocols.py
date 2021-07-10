@@ -88,10 +88,12 @@ class AllowedProtocols(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class AllowedProtocols(object):
 
         return self._object_factory('bpm_ac8c8cb9b5007a1e1a6434a20a881_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_allowed_protocol_by_name <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.get_allowed_protocol_by_name>`_
+        """
+        return self.get_allowed_protocol_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_allowed_protocol_by_id(self,
                                    id,
                                    headers=None,
@@ -157,10 +173,12 @@ class AllowedProtocols(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -211,6 +229,20 @@ class AllowedProtocols(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e3ddfddd45e299f14ed194926f8de_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_allowed_protocol_by_id <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.get_allowed_protocol_by_id>`_
+        """
+        return self.get_allowed_protocol_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_allowed_protocol_by_id(self,
                                       id,
@@ -326,10 +358,12 @@ class AllowedProtocols(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -456,6 +490,74 @@ class AllowedProtocols(object):
 
         return self._object_factory('bpm_a0b312f70257b1bfa90d0260f0c971_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     allow_chap=None,
+                     allow_eap_fast=None,
+                     allow_eap_md5=None,
+                     allow_eap_tls=None,
+                     allow_eap_ttls=None,
+                     allow_leap=None,
+                     allow_ms_chap_v1=None,
+                     allow_ms_chap_v2=None,
+                     allow_pap_ascii=None,
+                     allow_peap=None,
+                     allow_preferred_eap_protocol=None,
+                     allow_teap=None,
+                     allow_weak_ciphers_for_eap=None,
+                     description=None,
+                     eap_fast=None,
+                     eap_tls=None,
+                     eap_tls_l_bit=None,
+                     eap_ttls=None,
+                     link1=None,
+                     name=None,
+                     peap=None,
+                     preferred_eap_protocol=None,
+                     process_host_lookup=None,
+                     require_message_auth=None,
+                     teap=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_allowed_protocol_by_id <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.update_allowed_protocol_by_id>`_
+        """
+        return self.update_allowed_protocol_by_id(
+            id=id,
+            allow_chap=allow_chap,
+            allow_eap_fast=allow_eap_fast,
+            allow_eap_md5=allow_eap_md5,
+            allow_eap_tls=allow_eap_tls,
+            allow_eap_ttls=allow_eap_ttls,
+            allow_leap=allow_leap,
+            allow_ms_chap_v1=allow_ms_chap_v1,
+            allow_ms_chap_v2=allow_ms_chap_v2,
+            allow_pap_ascii=allow_pap_ascii,
+            allow_peap=allow_peap,
+            allow_preferred_eap_protocol=allow_preferred_eap_protocol,
+            allow_teap=allow_teap,
+            allow_weak_ciphers_for_eap=allow_weak_ciphers_for_eap,
+            description=description,
+            eap_fast=eap_fast,
+            eap_tls=eap_tls,
+            eap_tls_l_bit=eap_tls_l_bit,
+            eap_ttls=eap_ttls,
+            link1=link1,
+            name=name,
+            peap=peap,
+            preferred_eap_protocol=preferred_eap_protocol,
+            process_host_lookup=process_host_lookup,
+            require_message_auth=require_message_auth,
+            teap=teap,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_allowed_protocol_by_id(self,
                                       id,
                                       headers=None,
@@ -470,10 +572,12 @@ class AllowedProtocols(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -525,6 +629,20 @@ class AllowedProtocols(object):
 
         return self._object_factory('bpm_a6cbd2c420785cfcbdecc3495bca8af4_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_allowed_protocol_by_id <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.delete_allowed_protocol_by_id>`_
+        """
+        return self.delete_allowed_protocol_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_allowed_protocols(self,
                                   page=None,
                                   size=None,
@@ -542,10 +660,12 @@ class AllowedProtocols(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -600,6 +720,22 @@ class AllowedProtocols(object):
 
         return self._object_factory('bpm_d82fe0f9e4635b74af809beaaf98bd07_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_allowed_protocols <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.get_all_allowed_protocols>`_
+        """
+        return self.get_all_allowed_protocols(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_allowed_protocols_generator(self,
                                             page=None,
                                             size=None,
@@ -618,10 +754,12 @@ class AllowedProtocols(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -634,6 +772,23 @@ class AllowedProtocols(object):
         yield from get_next_page(self.get_all_allowed_protocols, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_allowed_protocols_generator <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.get_all_allowed_protocols_generator>`_
+        """
+        yield from get_next_page(self.get_all_allowed_protocols, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -750,10 +905,12 @@ class AllowedProtocols(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -876,6 +1033,74 @@ class AllowedProtocols(object):
 
         return self._object_factory('bpm_b40ad23ab0a5a7b8adade320c8912e7_v3_0_0', _api_response)
 
+    def create(self,
+               allow_chap=None,
+               allow_eap_fast=None,
+               allow_eap_md5=None,
+               allow_eap_tls=None,
+               allow_eap_ttls=None,
+               allow_leap=None,
+               allow_ms_chap_v1=None,
+               allow_ms_chap_v2=None,
+               allow_pap_ascii=None,
+               allow_peap=None,
+               allow_preferred_eap_protocol=None,
+               allow_teap=None,
+               allow_weak_ciphers_for_eap=None,
+               description=None,
+               eap_fast=None,
+               eap_tls=None,
+               eap_tls_l_bit=None,
+               eap_ttls=None,
+               id=None,
+               link1=None,
+               name=None,
+               peap=None,
+               preferred_eap_protocol=None,
+               process_host_lookup=None,
+               require_message_auth=None,
+               teap=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_allowed_protocol <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.create_allowed_protocol>`_
+        """
+        return self.create_allowed_protocol(
+            allow_chap=allow_chap,
+            allow_eap_fast=allow_eap_fast,
+            allow_eap_md5=allow_eap_md5,
+            allow_eap_tls=allow_eap_tls,
+            allow_eap_ttls=allow_eap_ttls,
+            allow_leap=allow_leap,
+            allow_ms_chap_v1=allow_ms_chap_v1,
+            allow_ms_chap_v2=allow_ms_chap_v2,
+            allow_pap_ascii=allow_pap_ascii,
+            allow_peap=allow_peap,
+            allow_preferred_eap_protocol=allow_preferred_eap_protocol,
+            allow_teap=allow_teap,
+            allow_weak_ciphers_for_eap=allow_weak_ciphers_for_eap,
+            description=description,
+            eap_fast=eap_fast,
+            eap_tls=eap_tls,
+            eap_tls_l_bit=eap_tls_l_bit,
+            eap_ttls=eap_ttls,
+            id=id,
+            link1=link1,
+            name=name,
+            peap=peap,
+            preferred_eap_protocol=preferred_eap_protocol,
+            process_host_lookup=process_host_lookup,
+            require_message_auth=require_message_auth,
+            teap=teap,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -889,10 +1114,12 @@ class AllowedProtocols(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

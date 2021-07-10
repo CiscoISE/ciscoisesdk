@@ -86,10 +86,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -128,6 +130,18 @@ class NetworkAccessNetworkConditions(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_da2d8b2763ed53d9bec7f9427c4ce344_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_network_conditions <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.get_network_access_network_conditions>`_
+        """
+        return self.get_network_access_network_conditions(
+            headers=headers,
+            **query_parameters
+        )
 
     def post_network_access_network_condition(self,
                                               cli_dnis_list=None,
@@ -202,10 +216,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -284,6 +300,42 @@ class NetworkAccessNetworkConditions(object):
 
         return self._object_factory('bpm_ad86a47e15d45ab1cc0cadc5b248f_v3_0_0', _api_response)
 
+    def create(self,
+               cli_dnis_list=None,
+               condition_type=None,
+               description=None,
+               device_group_list=None,
+               device_list=None,
+               id=None,
+               ip_addr_list=None,
+               link=None,
+               mac_addr_list=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `post_network_access_network_condition <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.post_network_access_network_condition>`_
+        """
+        return self.post_network_access_network_condition(
+            cli_dnis_list=cli_dnis_list,
+            condition_type=condition_type,
+            description=description,
+            device_group_list=device_group_list,
+            device_list=device_list,
+            id=id,
+            ip_addr_list=ip_addr_list,
+            link=link,
+            mac_addr_list=mac_addr_list,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_network_access_network_condition_by_condition_id(self,
                                                              condition_id,
                                                              headers=None,
@@ -299,10 +351,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -345,6 +399,20 @@ class NetworkAccessNetworkConditions(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_faeb3bb3f25787844f6973d5a1658f_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  condition_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_network_access_network_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.get_network_access_network_condition_by_condition_id>`_
+        """
+        return self.get_network_access_network_condition_by_condition_id(
+            condition_id=condition_id,
+            headers=headers,
+            **query_parameters
+        )
 
     def put_network_access_network_condition_by_condition_id(self,
                                                              condition_id,
@@ -422,10 +490,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -509,6 +579,44 @@ class NetworkAccessNetworkConditions(object):
 
         return self._object_factory('bpm_aaa481aaad35f8b8a7cbf2e063eac2b_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     condition_id,
+                     cli_dnis_list=None,
+                     condition_type=None,
+                     description=None,
+                     device_group_list=None,
+                     device_list=None,
+                     id=None,
+                     ip_addr_list=None,
+                     link=None,
+                     mac_addr_list=None,
+                     name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `put_network_access_network_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.put_network_access_network_condition_by_condition_id>`_
+        """
+        return self.put_network_access_network_condition_by_condition_id(
+            condition_id=condition_id,
+            cli_dnis_list=cli_dnis_list,
+            condition_type=condition_type,
+            description=description,
+            device_group_list=device_group_list,
+            device_list=device_list,
+            id=id,
+            ip_addr_list=ip_addr_list,
+            link=link,
+            mac_addr_list=mac_addr_list,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_network_access_network_condition_by_condition_id(self,
                                                                 condition_id,
                                                                 headers=None,
@@ -524,10 +632,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -570,3 +680,17 @@ class NetworkAccessNetworkConditions(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e345ca7adb75b1bacfa42771a4d242c_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     condition_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_network_access_network_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.delete_network_access_network_condition_by_condition_id>`_
+        """
+        return self.delete_network_access_network_condition_by_condition_id(
+            condition_id=condition_id,
+            headers=headers,
+            **query_parameters
+        )

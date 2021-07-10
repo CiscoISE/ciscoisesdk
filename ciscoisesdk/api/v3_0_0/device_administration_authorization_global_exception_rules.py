@@ -86,10 +86,12 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -129,6 +131,18 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
 
         return self._object_factory('bpm_d407475db88f596390eab0a3e8c1d162_v3_0_0', _api_response)
 
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_policy_set_global_exception_rule_list <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_global_exception_rules.
+        DeviceAdministrationAuthorizationGlobalExceptionRules.get_device_admin_policy_set_global_exception_rule_list>`_
+        """
+        return self.get_device_admin_policy_set_global_exception_rule_list(
+            headers=headers,
+            **query_parameters
+        )
+
     def create_device_admin_policy_set_global_exception(self,
                                                         commands=None,
                                                         link=None,
@@ -163,10 +177,12 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -233,6 +249,30 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
 
         return self._object_factory('bpm_ade26d445251a45cc753f68d21bc_v3_0_0', _api_response)
 
+    def create(self,
+               commands=None,
+               link=None,
+               profile=None,
+               rule=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_device_admin_policy_set_global_exception <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_global_exception_rules.
+        DeviceAdministrationAuthorizationGlobalExceptionRules.create_device_admin_policy_set_global_exception>`_
+        """
+        return self.create_device_admin_policy_set_global_exception(
+            commands=commands,
+            link=link,
+            profile=profile,
+            rule=rule,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def reset_hit_counts_device_admin_global_exceptions(self,
                                                         headers=None,
                                                         **query_parameters):
@@ -245,10 +285,12 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -290,6 +332,18 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
 
         return self._object_factory('bpm_b273ca0ffac58c3921f658152c03dbb_v3_0_0', _api_response)
 
+    def reset_hit_counts(self,
+                         headers=None,
+                         **query_parameters):
+        """Alias for `reset_hit_counts_device_admin_global_exceptions <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_global_exception_rules.
+        DeviceAdministrationAuthorizationGlobalExceptionRules.reset_hit_counts_device_admin_global_exceptions>`_
+        """
+        return self.reset_hit_counts_device_admin_global_exceptions(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_policy_set_global_exception_by_rule_id(self,
                                                                 rule_id,
                                                                 headers=None,
@@ -304,10 +358,12 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -351,6 +407,20 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
 
         return self._object_factory('bpm_a3d7e48a50d58a8a5d5720f9d55cf45_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  rule_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_policy_set_global_exception_by_rule_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_global_exception_rules.
+        DeviceAdministrationAuthorizationGlobalExceptionRules.get_device_admin_policy_set_global_exception_by_rule_id>`_
+        """
+        return self.get_device_admin_policy_set_global_exception_by_rule_id(
+            rule_id=rule_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def put_device_admin_policy_set_global_exception_by_rule_id(self,
                                                                 rule_id,
                                                                 commands=None,
@@ -387,10 +457,12 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -462,6 +534,32 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
 
         return self._object_factory('bpm_da96552991705623287a164c_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     rule_id,
+                     commands=None,
+                     link=None,
+                     profile=None,
+                     rule=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `put_device_admin_policy_set_global_exception_by_rule_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_global_exception_rules.
+        DeviceAdministrationAuthorizationGlobalExceptionRules.put_device_admin_policy_set_global_exception_by_rule_id>`_
+        """
+        return self.put_device_admin_policy_set_global_exception_by_rule_id(
+            rule_id=rule_id,
+            commands=commands,
+            link=link,
+            profile=profile,
+            rule=rule,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_policyset_global_exception_by_rule_id(self,
                                                                   rule_id,
                                                                   headers=None,
@@ -476,10 +574,12 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -522,3 +622,17 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a20040d51a1ba61f4d210195e59_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     rule_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_policyset_global_exception_by_rule_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_global_exception_rules.
+        DeviceAdministrationAuthorizationGlobalExceptionRules.delete_device_admin_policyset_global_exception_by_rule_id>`_
+        """
+        return self.delete_device_admin_policyset_global_exception_by_rule_id(
+            rule_id=rule_id,
+            headers=headers,
+            **query_parameters
+        )

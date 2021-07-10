@@ -89,10 +89,12 @@ class CertificateTemplate(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class CertificateTemplate(object):
 
         return self._object_factory('bpm_e04f248274ea584aa30857975a28297f_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_certificate_template_by_name <#ciscoisesdk.
+        api.v3_0_0.certificate_template.
+        CertificateTemplate.get_certificate_template_by_name>`_
+        """
+        return self.get_certificate_template_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_certificate_template_by_id(self,
                                        id,
                                        headers=None,
@@ -158,10 +174,12 @@ class CertificateTemplate(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -213,6 +231,20 @@ class CertificateTemplate(object):
 
         return self._object_factory('bpm_e9e38cdf5bcb5c018b7f10f1d0864215_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_certificate_template_by_id <#ciscoisesdk.
+        api.v3_0_0.certificate_template.
+        CertificateTemplate.get_certificate_template_by_id>`_
+        """
+        return self.get_certificate_template_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_certificate_template(self,
                                      page=None,
                                      size=None,
@@ -231,10 +263,12 @@ class CertificateTemplate(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -289,6 +323,22 @@ class CertificateTemplate(object):
 
         return self._object_factory('bpm_dc1da5c3912a5117878160e27f6b533a_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_certificate_template <#ciscoisesdk.
+        api.v3_0_0.certificate_template.
+        CertificateTemplate.get_all_certificate_template>`_
+        """
+        return self.get_all_certificate_template(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_certificate_template_generator(self,
                                                page=None,
                                                size=None,
@@ -308,10 +358,12 @@ class CertificateTemplate(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -324,6 +376,23 @@ class CertificateTemplate(object):
         yield from get_next_page(self.get_all_certificate_template, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_certificate_template_generator <#ciscoisesdk.
+        api.v3_0_0.certificate_template.
+        CertificateTemplate.get_all_certificate_template_generator>`_
+        """
+        yield from get_next_page(self.get_all_certificate_template, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -340,10 +409,12 @@ class CertificateTemplate(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

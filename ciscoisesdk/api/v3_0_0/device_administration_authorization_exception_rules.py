@@ -89,10 +89,12 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -135,6 +137,20 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_eb446266e3d54f4a657050d4f9b0bf9_v3_0_0', _api_response)
 
+    def get_all(self,
+                policy_id,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_policy_by_id_local_exception_rule_list <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_exception_rules.
+        DeviceAdministrationAuthorizationExceptionRules.get_device_admin_policy_by_id_local_exception_rule_list>`_
+        """
+        return self.get_device_admin_policy_by_id_local_exception_rule_list(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def create_device_admin_policy_by_id_local_exception_rule(self,
                                                               policy_id,
                                                               commands=None,
@@ -172,10 +188,12 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -245,6 +263,32 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_c730e85640aa5a59bc0e0fd95dacf889_v3_0_0', _api_response)
 
+    def create(self,
+               policy_id,
+               commands=None,
+               link=None,
+               profile=None,
+               rule=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_device_admin_policy_by_id_local_exception_rule <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_exception_rules.
+        DeviceAdministrationAuthorizationExceptionRules.create_device_admin_policy_by_id_local_exception_rule>`_
+        """
+        return self.create_device_admin_policy_by_id_local_exception_rule(
+            policy_id=policy_id,
+            commands=commands,
+            link=link,
+            profile=profile,
+            rule=rule,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def reset_hit_counts_device_admin_policy_by_id_local_exceptions(self,
                                                                     policy_id,
                                                                     headers=None,
@@ -260,10 +304,12 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -308,6 +354,20 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_dde23cf27e65a60a949d8f1f599b3d2_v3_0_0', _api_response)
 
+    def reset_hit_counts_by_id(self,
+                               policy_id,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `reset_hit_counts_device_admin_policy_by_id_local_exceptions <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_exception_rules.
+        DeviceAdministrationAuthorizationExceptionRules.reset_hit_counts_device_admin_policy_by_id_local_exceptions>`_
+        """
+        return self.reset_hit_counts_device_admin_policy_by_id_local_exceptions(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_policy_by_id_local_exception_rule_by_id(self,
                                                                  policy_id,
                                                                  rule_id,
@@ -325,10 +385,12 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -375,6 +437,22 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_afaa335e2545c6f8f5530cd5686366a_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  policy_id,
+                  rule_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_exception_rules.
+        DeviceAdministrationAuthorizationExceptionRules.get_device_admin_policy_by_id_local_exception_rule_by_id>`_
+        """
+        return self.get_device_admin_policy_by_id_local_exception_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_device_admin_policy_by_id_local_exception_rule_by_id(self,
                                                                     policy_id,
                                                                     rule_id,
@@ -414,10 +492,12 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -492,6 +572,34 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_e326f7a61069587f9a27e69433229cc7_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     policy_id,
+                     rule_id,
+                     commands=None,
+                     link=None,
+                     profile=None,
+                     rule=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_device_admin_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_exception_rules.
+        DeviceAdministrationAuthorizationExceptionRules.update_device_admin_policy_by_id_local_exception_rule_by_id>`_
+        """
+        return self.update_device_admin_policy_by_id_local_exception_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            commands=commands,
+            link=link,
+            profile=profile,
+            rule=rule,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_policy_by_id_local_exception_rule_by_id(self,
                                                                     policy_id,
                                                                     rule_id,
@@ -509,10 +617,12 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -558,3 +668,19 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c12c4eb2a5650c2b6e26a84131ef65b_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     policy_id,
+                     rule_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authorization_exception_rules.
+        DeviceAdministrationAuthorizationExceptionRules.delete_device_admin_policy_by_id_local_exception_rule_by_id>`_
+        """
+        return self.delete_device_admin_policy_by_id_local_exception_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            headers=headers,
+            **query_parameters
+        )

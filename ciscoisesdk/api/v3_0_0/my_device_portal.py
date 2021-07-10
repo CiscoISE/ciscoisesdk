@@ -88,10 +88,12 @@ class MyDevicePortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class MyDevicePortal(object):
 
         return self._object_factory('bpm_bb3528d280652678f8e211b9e418e66_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_my_device_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.my_device_portal.
+        MyDevicePortal.get_my_device_portal_by_id>`_
+        """
+        return self.get_my_device_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_my_device_portal_by_id(self,
                                       id,
                                       customizations=None,
@@ -189,10 +205,12 @@ class MyDevicePortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -283,6 +301,38 @@ class MyDevicePortal(object):
 
         return self._object_factory('bpm_c64b769537ea7c586565f6ed2a2_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     customizations=None,
+                     description=None,
+                     link=None,
+                     name=None,
+                     portal_test_url=None,
+                     portal_type=None,
+                     settings=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_my_device_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.my_device_portal.
+        MyDevicePortal.update_my_device_portal_by_id>`_
+        """
+        return self.update_my_device_portal_by_id(
+            id=id,
+            customizations=customizations,
+            description=description,
+            link=link,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_my_device_portal_by_id(self,
                                       id,
                                       headers=None,
@@ -297,10 +347,12 @@ class MyDevicePortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -352,6 +404,20 @@ class MyDevicePortal(object):
 
         return self._object_factory('bpm_c04f18d6afee5f649a5700bf3074adb9_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_my_device_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.my_device_portal.
+        MyDevicePortal.delete_my_device_portal_by_id>`_
+        """
+        return self.delete_my_device_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_my_device_portal(self,
                                  filter=None,
                                  filter_type=None,
@@ -362,7 +428,7 @@ class MyDevicePortal(object):
                                  headers=None,
                                  **query_parameters):
         """This API allows the client to get all the my device portals.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -413,10 +479,12 @@ class MyDevicePortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -483,6 +551,30 @@ class MyDevicePortal(object):
 
         return self._object_factory('bpm_a71ccf29f05ee29af909b07bb9c754_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_my_device_portal <#ciscoisesdk.
+        api.v3_0_0.my_device_portal.
+        MyDevicePortal.get_all_my_device_portal>`_
+        """
+        return self.get_all_my_device_portal(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_my_device_portal_generator(self,
                                            filter=None,
                                            filter_type=None,
@@ -493,7 +585,7 @@ class MyDevicePortal(object):
                                            headers=None,
                                            **query_parameters):
         """This API allows the client to get all the my device portals.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -545,10 +637,12 @@ class MyDevicePortal(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -565,6 +659,31 @@ class MyDevicePortal(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_my_device_portal_generator <#ciscoisesdk.
+        api.v3_0_0.my_device_portal.
+        MyDevicePortal.get_all_my_device_portal_generator>`_
+        """
+        yield from get_next_page(self.get_all_my_device_portal, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -613,10 +732,12 @@ class MyDevicePortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -703,6 +824,38 @@ class MyDevicePortal(object):
 
         return self._object_factory('bpm_e643a5ac8bca55f58ea8d6260c57eafe_v3_0_0', _api_response)
 
+    def create(self,
+               customizations=None,
+               description=None,
+               id=None,
+               link=None,
+               name=None,
+               portal_test_url=None,
+               portal_type=None,
+               settings=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_my_device_portal <#ciscoisesdk.
+        api.v3_0_0.my_device_portal.
+        MyDevicePortal.create_my_device_portal>`_
+        """
+        return self.create_my_device_portal(
+            customizations=customizations,
+            description=description,
+            id=id,
+            link=link,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -716,10 +869,12 @@ class MyDevicePortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

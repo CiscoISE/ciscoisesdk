@@ -89,10 +89,12 @@ class PxGridNode(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -145,6 +147,20 @@ class PxGridNode(object):
 
         return self._object_factory('bpm_a2a7f23f85105113954c87a917b7455f_v3_0_0', _api_response)
 
+    def approve(self,
+                name,
+                headers=None,
+                **query_parameters):
+        """Alias for `approve_px_grid_node <#ciscoisesdk.
+        api.v3_0_0.px_grid_node.
+        PxGridNode.approve_px_grid_node>`_
+        """
+        return self.approve_px_grid_node(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_px_grid_node_by_name(self,
                                  name,
                                  headers=None,
@@ -159,10 +175,12 @@ class PxGridNode(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -214,6 +232,20 @@ class PxGridNode(object):
 
         return self._object_factory('bpm_a9d109aac585a89bdd3fae400064b_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_px_grid_node_by_name <#ciscoisesdk.
+        api.v3_0_0.px_grid_node.
+        PxGridNode.get_px_grid_node_by_name>`_
+        """
+        return self.get_px_grid_node_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_px_grid_node_by_name(self,
                                     name,
                                     headers=None,
@@ -228,10 +260,12 @@ class PxGridNode(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -283,6 +317,20 @@ class PxGridNode(object):
 
         return self._object_factory('bpm_e718d5054593b94a2fef39461c24a_v3_0_0', _api_response)
 
+    def delete_by_name(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_px_grid_node_by_name <#ciscoisesdk.
+        api.v3_0_0.px_grid_node.
+        PxGridNode.delete_px_grid_node_by_name>`_
+        """
+        return self.delete_px_grid_node_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_px_grid_node_by_id(self,
                                id,
                                headers=None,
@@ -297,10 +345,12 @@ class PxGridNode(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -352,6 +402,20 @@ class PxGridNode(object):
 
         return self._object_factory('bpm_d24ade0b53405fbc898cb0cc1ea57fb8_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_px_grid_node_by_id <#ciscoisesdk.
+        api.v3_0_0.px_grid_node.
+        PxGridNode.get_px_grid_node_by_id>`_
+        """
+        return self.get_px_grid_node_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_px_grid_node(self,
                              page=None,
                              size=None,
@@ -369,10 +433,12 @@ class PxGridNode(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -427,6 +493,22 @@ class PxGridNode(object):
 
         return self._object_factory('bpm_d97156379640002f79b2007c_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_px_grid_node <#ciscoisesdk.
+        api.v3_0_0.px_grid_node.
+        PxGridNode.get_all_px_grid_node>`_
+        """
+        return self.get_all_px_grid_node(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_px_grid_node_generator(self,
                                        page=None,
                                        size=None,
@@ -445,10 +527,12 @@ class PxGridNode(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -461,6 +545,23 @@ class PxGridNode(object):
         yield from get_next_page(self.get_all_px_grid_node, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_px_grid_node_generator <#ciscoisesdk.
+        api.v3_0_0.px_grid_node.
+        PxGridNode.get_all_px_grid_node_generator>`_
+        """
+        yield from get_next_page(self.get_all_px_grid_node, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -477,10 +578,12 @@ class PxGridNode(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

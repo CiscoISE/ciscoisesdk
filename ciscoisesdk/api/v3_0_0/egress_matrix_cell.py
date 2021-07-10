@@ -86,10 +86,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -139,6 +141,18 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_f503ab54e2921d713ed88f51c9_v3_0_0', _api_response)
 
+    def clear(self,
+              headers=None,
+              **query_parameters):
+        """Alias for `clear_all_matrix_cells <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.clear_all_matrix_cells>`_
+        """
+        return self.clear_all_matrix_cells(
+            headers=headers,
+            **query_parameters
+        )
+
     def set_all_cells_status(self,
                              status,
                              headers=None,
@@ -154,10 +168,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -204,6 +220,20 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_f47f525dbd71ef49710ef578_v3_0_0', _api_response)
 
+    def set_status(self,
+                   status,
+                   headers=None,
+                   **query_parameters):
+        """Alias for `set_all_cells_status <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.set_all_cells_status>`_
+        """
+        return self.set_all_cells_status(
+            status=status,
+            headers=headers,
+            **query_parameters
+        )
+
     def clone_matrix_cell(self,
                           dst_sgt_id,
                           id,
@@ -222,10 +252,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -285,6 +317,24 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_a1e6c05d05e67906b3b59bbe6d274_v3_0_0', _api_response)
 
+    def clone(self,
+              dst_sgt_id,
+              id,
+              src_sgt_id,
+              headers=None,
+              **query_parameters):
+        """Alias for `clone_matrix_cell <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.clone_matrix_cell>`_
+        """
+        return self.clone_matrix_cell(
+            dst_sgt_id=dst_sgt_id,
+            id=id,
+            src_sgt_id=src_sgt_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_egress_matrix_cell_by_id(self,
                                      id,
                                      headers=None,
@@ -299,10 +349,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -354,6 +406,20 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_cdc971b23285b87945021bd5983d1cd_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_egress_matrix_cell_by_id <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.get_egress_matrix_cell_by_id>`_
+        """
+        return self.get_egress_matrix_cell_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_egress_matrix_cell_by_id(self,
                                         id,
                                         default_rule=None,
@@ -397,10 +463,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -491,6 +559,38 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_ce83fba942c25938bae0c7012df68317_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     default_rule=None,
+                     description=None,
+                     destination_sgt_id=None,
+                     matrix_cell_status=None,
+                     name=None,
+                     sgacls=None,
+                     source_sgt_id=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_egress_matrix_cell_by_id <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.update_egress_matrix_cell_by_id>`_
+        """
+        return self.update_egress_matrix_cell_by_id(
+            id=id,
+            default_rule=default_rule,
+            description=description,
+            destination_sgt_id=destination_sgt_id,
+            matrix_cell_status=matrix_cell_status,
+            name=name,
+            sgacls=sgacls,
+            source_sgt_id=source_sgt_id,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_egress_matrix_cell_by_id(self,
                                         id,
                                         headers=None,
@@ -505,10 +605,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -560,6 +662,20 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_e4393915121d5bcc94dfde6c8f6f7f1c_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_egress_matrix_cell_by_id <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.delete_egress_matrix_cell_by_id>`_
+        """
+        return self.delete_egress_matrix_cell_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_egress_matrix_cell(self,
                                    filter=None,
                                    filter_type=None,
@@ -571,9 +687,9 @@ class EgressMatrixCell(object):
                                    **query_parameters):
         """This API allows the client to get all the egress matrix cell.
         Filter:   [sgtSrcValue, matrixStatus, description,
-        sgtSrcName, sgtDstName, sgtDstValue]   To search guest
-        users by using  toDate  column,follow the format:   DD-
-        MON-YY (Example:13-SEP-18)     Day or Year:GET
+        sgtSrcName, sgtDstName, sgtDstValue]   To search
+        resources by using  toDate  column,follow the format:
+        DD-MON-YY (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
@@ -623,10 +739,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -693,6 +811,30 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_c5e52706e7095a81b8d32f3024e01cf6_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_egress_matrix_cell <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.get_all_egress_matrix_cell>`_
+        """
+        return self.get_all_egress_matrix_cell(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_egress_matrix_cell_generator(self,
                                              filter=None,
                                              filter_type=None,
@@ -704,9 +846,9 @@ class EgressMatrixCell(object):
                                              **query_parameters):
         """This API allows the client to get all the egress matrix cell.
         Filter:   [sgtSrcValue, matrixStatus, description,
-        sgtSrcName, sgtDstName, sgtDstValue]   To search guest
-        users by using  toDate  column,follow the format:   DD-
-        MON-YY (Example:13-SEP-18)     Day or Year:GET
+        sgtSrcName, sgtDstName, sgtDstValue]   To search
+        resources by using  toDate  column,follow the format:
+        DD-MON-YY (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
@@ -757,10 +899,12 @@ class EgressMatrixCell(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -777,6 +921,31 @@ class EgressMatrixCell(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_egress_matrix_cell_generator <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.get_all_egress_matrix_cell_generator>`_
+        """
+        yield from get_next_page(self.get_all_egress_matrix_cell, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -820,10 +989,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -908,6 +1079,36 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_c560004d8b5f64a10f2cc070368c12_v3_0_0', _api_response)
 
+    def create(self,
+               default_rule=None,
+               description=None,
+               destination_sgt_id=None,
+               matrix_cell_status=None,
+               name=None,
+               sgacls=None,
+               source_sgt_id=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_egress_matrix_cell <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.create_egress_matrix_cell>`_
+        """
+        return self.create_egress_matrix_cell(
+            default_rule=default_rule,
+            description=description,
+            destination_sgt_id=destination_sgt_id,
+            matrix_cell_status=matrix_cell_status,
+            name=name,
+            sgacls=sgacls,
+            source_sgt_id=source_sgt_id,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -921,10 +1122,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -974,7 +1177,7 @@ class EgressMatrixCell(object):
                                             payload=None,
                                             active_validation=True,
                                             **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -991,10 +1194,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1064,6 +1269,26 @@ class EgressMatrixCell(object):
 
         return self._object_factory('bpm_aa333658bf83576eb36a025283516518_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_egress_matrix_cell <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.bulk_request_for_egress_matrix_cell>`_
+        """
+        return self.bulk_request_for_egress_matrix_cell(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_egress_matrix_cell(self,
                                                bulkid,
                                                headers=None,
@@ -1078,10 +1303,12 @@ class EgressMatrixCell(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1126,3 +1353,17 @@ class EgressMatrixCell(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_face30e52b28c76c1b2574de858_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_egress_matrix_cell <#ciscoisesdk.
+        api.v3_0_0.egress_matrix_cell.
+        EgressMatrixCell.monitor_bulk_status_egress_matrix_cell>`_
+        """
+        return self.monitor_bulk_status_egress_matrix_cell(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

@@ -86,10 +86,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -128,6 +130,18 @@ class DeviceAdministrationNetworkConditions(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_bda58fc63575503b80c024dbe02cf547_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_network_conditions <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.get_device_admin_network_conditions>`_
+        """
+        return self.get_device_admin_network_conditions(
+            headers=headers,
+            **query_parameters
+        )
 
     def post_device_admin_network_condition(self,
                                             cli_dnis_list=None,
@@ -202,10 +216,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -284,6 +300,42 @@ class DeviceAdministrationNetworkConditions(object):
 
         return self._object_factory('bpm_ea4e38c44e5b1c90b19af25b88546e_v3_0_0', _api_response)
 
+    def create(self,
+               cli_dnis_list=None,
+               condition_type=None,
+               description=None,
+               device_group_list=None,
+               device_list=None,
+               id=None,
+               ip_addr_list=None,
+               link=None,
+               mac_addr_list=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `post_device_admin_network_condition <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.post_device_admin_network_condition>`_
+        """
+        return self.post_device_admin_network_condition(
+            cli_dnis_list=cli_dnis_list,
+            condition_type=condition_type,
+            description=description,
+            device_group_list=device_group_list,
+            device_list=device_list,
+            id=id,
+            ip_addr_list=ip_addr_list,
+            link=link,
+            mac_addr_list=mac_addr_list,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_network_condition_by_condition_id(self,
                                                            condition_id,
                                                            headers=None,
@@ -299,10 +351,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -344,6 +398,20 @@ class DeviceAdministrationNetworkConditions(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a3640f918edb5df99d09001ca9e12688_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  condition_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_network_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.get_device_admin_network_condition_by_condition_id>`_
+        """
+        return self.get_device_admin_network_condition_by_condition_id(
+            condition_id=condition_id,
+            headers=headers,
+            **query_parameters
+        )
 
     def put_device_admin_network_condition_by_condition_id(self,
                                                            condition_id,
@@ -421,10 +489,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -507,6 +577,44 @@ class DeviceAdministrationNetworkConditions(object):
 
         return self._object_factory('bpm_b371441bddfd5d819a7aedfa215f4aeb_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     condition_id,
+                     cli_dnis_list=None,
+                     condition_type=None,
+                     description=None,
+                     device_group_list=None,
+                     device_list=None,
+                     id=None,
+                     ip_addr_list=None,
+                     link=None,
+                     mac_addr_list=None,
+                     name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `put_device_admin_network_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.put_device_admin_network_condition_by_condition_id>`_
+        """
+        return self.put_device_admin_network_condition_by_condition_id(
+            condition_id=condition_id,
+            cli_dnis_list=cli_dnis_list,
+            condition_type=condition_type,
+            description=description,
+            device_group_list=device_group_list,
+            device_list=device_list,
+            id=id,
+            ip_addr_list=ip_addr_list,
+            link=link,
+            mac_addr_list=mac_addr_list,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_network_condition_by_condition_id(self,
                                                               condition_id,
                                                               headers=None,
@@ -522,10 +630,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -567,3 +677,17 @@ class DeviceAdministrationNetworkConditions(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e7b011df45066b55be86033ecd17a_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     condition_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_network_condition_by_condition_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.delete_device_admin_network_condition_by_condition_id>`_
+        """
+        return self.delete_device_admin_network_condition_by_condition_id(
+            condition_id=condition_id,
+            headers=headers,
+            **query_parameters
+        )

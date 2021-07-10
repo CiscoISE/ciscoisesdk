@@ -88,10 +88,12 @@ class TacacsProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class TacacsProfile(object):
 
         return self._object_factory('bpm_b8696d875b12b0a3ab735b397d7a_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_tacacs_profile_by_name <#ciscoisesdk.
+        api.v3_0_0.tacacs_profile.
+        TacacsProfile.get_tacacs_profile_by_name>`_
+        """
+        return self.get_tacacs_profile_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_tacacs_profile_by_id(self,
                                  id,
                                  headers=None,
@@ -157,10 +173,12 @@ class TacacsProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -212,6 +230,20 @@ class TacacsProfile(object):
 
         return self._object_factory('bpm_bdea52558473565c9963ec14c65727b8_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_tacacs_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_profile.
+        TacacsProfile.get_tacacs_profile_by_id>`_
+        """
+        return self.get_tacacs_profile_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_tacacs_profile_by_id(self,
                                     id,
                                     description=None,
@@ -243,10 +275,12 @@ class TacacsProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -329,6 +363,30 @@ class TacacsProfile(object):
 
         return self._object_factory('bpm_a0db9ec45c05879a6f016a1edf54793_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     description=None,
+                     name=None,
+                     session_attributes=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_tacacs_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_profile.
+        TacacsProfile.update_tacacs_profile_by_id>`_
+        """
+        return self.update_tacacs_profile_by_id(
+            id=id,
+            description=description,
+            name=name,
+            session_attributes=session_attributes,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_tacacs_profile_by_id(self,
                                     id,
                                     headers=None,
@@ -343,10 +401,12 @@ class TacacsProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -398,6 +458,20 @@ class TacacsProfile(object):
 
         return self._object_factory('bpm_fd38182c505549fbc0d8c1122c1f685_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_tacacs_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_profile.
+        TacacsProfile.delete_tacacs_profile_by_id>`_
+        """
+        return self.delete_tacacs_profile_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_tacacs_profile(self,
                                page=None,
                                size=None,
@@ -415,10 +489,12 @@ class TacacsProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -473,6 +549,22 @@ class TacacsProfile(object):
 
         return self._object_factory('bpm_ffff1c792bf559ebb39b789421be6966_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_tacacs_profile <#ciscoisesdk.
+        api.v3_0_0.tacacs_profile.
+        TacacsProfile.get_all_tacacs_profile>`_
+        """
+        return self.get_all_tacacs_profile(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_tacacs_profile_generator(self,
                                          page=None,
                                          size=None,
@@ -491,10 +583,12 @@ class TacacsProfile(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -507,6 +601,23 @@ class TacacsProfile(object):
         yield from get_next_page(self.get_all_tacacs_profile, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_tacacs_profile_generator <#ciscoisesdk.
+        api.v3_0_0.tacacs_profile.
+        TacacsProfile.get_all_tacacs_profile_generator>`_
+        """
+        yield from get_next_page(self.get_all_tacacs_profile, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -538,10 +649,12 @@ class TacacsProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -618,6 +731,28 @@ class TacacsProfile(object):
 
         return self._object_factory('bpm_c094086382485201ad36d4641fc6822e_v3_0_0', _api_response)
 
+    def create(self,
+               description=None,
+               name=None,
+               session_attributes=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_tacacs_profile <#ciscoisesdk.
+        api.v3_0_0.tacacs_profile.
+        TacacsProfile.create_tacacs_profile>`_
+        """
+        return self.create_tacacs_profile(
+            description=description,
+            name=name,
+            session_attributes=session_attributes,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -631,10 +766,12 @@ class TacacsProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

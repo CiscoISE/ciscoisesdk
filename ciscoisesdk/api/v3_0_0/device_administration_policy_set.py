@@ -86,10 +86,12 @@ class DeviceAdministrationPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -128,6 +130,18 @@ class DeviceAdministrationPolicySet(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ed5920513e92b1728b824771cc_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_policy_set_list <#ciscoisesdk.
+        api.v3_0_0.device_administration_policy_set.
+        DeviceAdministrationPolicySet.get_device_admin_policy_set_list>`_
+        """
+        return self.get_device_admin_policy_set_list(
+            headers=headers,
+            **query_parameters
+        )
 
     def create_device_admin_policy_set(self,
                                        condition=None,
@@ -190,10 +204,12 @@ class DeviceAdministrationPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -274,6 +290,44 @@ class DeviceAdministrationPolicySet(object):
 
         return self._object_factory('bpm_ac3ccf225801ad8ba0bb1ad9de0b_v3_0_0', _api_response)
 
+    def create(self,
+               condition=None,
+               default=None,
+               description=None,
+               hit_counts=None,
+               id=None,
+               is_proxy=None,
+               link=None,
+               name=None,
+               rank=None,
+               service_name=None,
+               state=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_device_admin_policy_set <#ciscoisesdk.
+        api.v3_0_0.device_administration_policy_set.
+        DeviceAdministrationPolicySet.create_device_admin_policy_set>`_
+        """
+        return self.create_device_admin_policy_set(
+            condition=condition,
+            default=default,
+            description=description,
+            hit_counts=hit_counts,
+            id=id,
+            is_proxy=is_proxy,
+            link=link,
+            name=name,
+            rank=rank,
+            service_name=service_name,
+            state=state,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def reset_hit_counts_device_admin_policy_sets(self,
                                                   headers=None,
                                                   **query_parameters):
@@ -286,10 +340,12 @@ class DeviceAdministrationPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -330,6 +386,18 @@ class DeviceAdministrationPolicySet(object):
 
         return self._object_factory('bpm_ed47964d442d52dca1f7da967f37b3e2_v3_0_0', _api_response)
 
+    def reset_hit_counts(self,
+                         headers=None,
+                         **query_parameters):
+        """Alias for `reset_hit_counts_device_admin_policy_sets <#ciscoisesdk.
+        api.v3_0_0.device_administration_policy_set.
+        DeviceAdministrationPolicySet.reset_hit_counts_device_admin_policy_sets>`_
+        """
+        return self.reset_hit_counts_device_admin_policy_sets(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_policy_set_by_id(self,
                                           policy_id,
                                           headers=None,
@@ -345,10 +413,12 @@ class DeviceAdministrationPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -390,6 +460,20 @@ class DeviceAdministrationPolicySet(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f36918d98a546ab6ca2618d1844984_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  policy_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_policy_set_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_policy_set.
+        DeviceAdministrationPolicySet.get_device_admin_policy_set_by_id>`_
+        """
+        return self.get_device_admin_policy_set_by_id(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_device_admin_policy_set_by_id(self,
                                              policy_id,
@@ -455,10 +539,12 @@ class DeviceAdministrationPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -543,6 +629,46 @@ class DeviceAdministrationPolicySet(object):
 
         return self._object_factory('bpm_b6cc40e0f4b45e8da5908776d124ed5a_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     policy_id,
+                     condition=None,
+                     default=None,
+                     description=None,
+                     hit_counts=None,
+                     id=None,
+                     is_proxy=None,
+                     link=None,
+                     name=None,
+                     rank=None,
+                     service_name=None,
+                     state=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_device_admin_policy_set_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_policy_set.
+        DeviceAdministrationPolicySet.update_device_admin_policy_set_by_id>`_
+        """
+        return self.update_device_admin_policy_set_by_id(
+            policy_id=policy_id,
+            condition=condition,
+            default=default,
+            description=description,
+            hit_counts=hit_counts,
+            id=id,
+            is_proxy=is_proxy,
+            link=link,
+            name=name,
+            rank=rank,
+            service_name=service_name,
+            state=state,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_policy_set_by_id(self,
                                              policy_id,
                                              headers=None,
@@ -558,10 +684,12 @@ class DeviceAdministrationPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -603,3 +731,17 @@ class DeviceAdministrationPolicySet(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f602e2f88378502a8d8bca6dff274afe_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     policy_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_policy_set_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_policy_set.
+        DeviceAdministrationPolicySet.delete_device_admin_policy_set_by_id>`_
+        """
+        return self.delete_device_admin_policy_set_by_id(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )

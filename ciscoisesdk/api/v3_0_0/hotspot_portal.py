@@ -88,10 +88,12 @@ class HotspotPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -137,6 +139,20 @@ class HotspotPortal(object):
 
         return self._object_factory('bpm_cbcecf65a0155fcad602d3ac16531a7_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_hotspot_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.hotspot_portal.
+        HotspotPortal.get_hotspot_portal_by_id>`_
+        """
+        return self.get_hotspot_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_hotspot_portal_by_id(self,
                                     id,
                                     customizations=None,
@@ -181,10 +197,12 @@ class HotspotPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -267,6 +285,36 @@ class HotspotPortal(object):
 
         return self._object_factory('bpm_ae4af25df565334b20a24c4878b68e4_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     customizations=None,
+                     description=None,
+                     name=None,
+                     portal_test_url=None,
+                     portal_type=None,
+                     settings=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_hotspot_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.hotspot_portal.
+        HotspotPortal.update_hotspot_portal_by_id>`_
+        """
+        return self.update_hotspot_portal_by_id(
+            id=id,
+            customizations=customizations,
+            description=description,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_hotspot_portal_by_id(self,
                                     id,
                                     headers=None,
@@ -281,10 +329,12 @@ class HotspotPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -330,6 +380,20 @@ class HotspotPortal(object):
 
         return self._object_factory('bpm_a344d1c6f535789b7badbaa502e8d3b_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_hotspot_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.hotspot_portal.
+        HotspotPortal.delete_hotspot_portal_by_id>`_
+        """
+        return self.delete_hotspot_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_hotspot_portal(self,
                                filter=None,
                                filter_type=None,
@@ -340,8 +404,8 @@ class HotspotPortal(object):
                                headers=None,
                                **query_parameters):
         """This API allows the client to get all the hotspot portals.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -391,10 +455,12 @@ class HotspotPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -461,6 +527,30 @@ class HotspotPortal(object):
 
         return self._object_factory('bpm_d912b1c21e2b5dca8b56332d3a8ad13d_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_hotspot_portal <#ciscoisesdk.
+        api.v3_0_0.hotspot_portal.
+        HotspotPortal.get_all_hotspot_portal>`_
+        """
+        return self.get_all_hotspot_portal(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_hotspot_portal_generator(self,
                                          filter=None,
                                          filter_type=None,
@@ -471,8 +561,8 @@ class HotspotPortal(object):
                                          headers=None,
                                          **query_parameters):
         """This API allows the client to get all the hotspot portals.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -523,10 +613,12 @@ class HotspotPortal(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -543,6 +635,31 @@ class HotspotPortal(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_hotspot_portal_generator <#ciscoisesdk.
+        api.v3_0_0.hotspot_portal.
+        HotspotPortal.get_all_hotspot_portal_generator>`_
+        """
+        yield from get_next_page(self.get_all_hotspot_portal, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -587,10 +704,12 @@ class HotspotPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -673,6 +792,34 @@ class HotspotPortal(object):
 
         return self._object_factory('bpm_df78c9a3f72584dbd1c7b667b0e312f_v3_0_0', _api_response)
 
+    def create(self,
+               customizations=None,
+               description=None,
+               name=None,
+               portal_test_url=None,
+               portal_type=None,
+               settings=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_hotspot_portal <#ciscoisesdk.
+        api.v3_0_0.hotspot_portal.
+        HotspotPortal.create_hotspot_portal>`_
+        """
+        return self.create_hotspot_portal(
+            customizations=customizations,
+            description=description,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -686,10 +833,12 @@ class HotspotPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

@@ -86,10 +86,12 @@ class NetworkAccessPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -128,6 +130,18 @@ class NetworkAccessPolicySet(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_b904117c35daf8833398c262c403d_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_policy_set_list <#ciscoisesdk.
+        api.v3_0_0.network_access_policy_set.
+        NetworkAccessPolicySet.get_network_access_policy_set_list>`_
+        """
+        return self.get_network_access_policy_set_list(
+            headers=headers,
+            **query_parameters
+        )
 
     def create_network_access_policy_set(self,
                                          condition=None,
@@ -199,10 +213,12 @@ class NetworkAccessPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -283,6 +299,44 @@ class NetworkAccessPolicySet(object):
 
         return self._object_factory('bpm_e1af4e392c5790a01685b9687208c0_v3_0_0', _api_response)
 
+    def create(self,
+               condition=None,
+               default=None,
+               description=None,
+               hit_counts=None,
+               id=None,
+               is_proxy=None,
+               link=None,
+               name=None,
+               rank=None,
+               service_name=None,
+               state=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_network_access_policy_set <#ciscoisesdk.
+        api.v3_0_0.network_access_policy_set.
+        NetworkAccessPolicySet.create_network_access_policy_set>`_
+        """
+        return self.create_network_access_policy_set(
+            condition=condition,
+            default=default,
+            description=description,
+            hit_counts=hit_counts,
+            id=id,
+            is_proxy=is_proxy,
+            link=link,
+            name=name,
+            rank=rank,
+            service_name=service_name,
+            state=state,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def reset_hit_counts_network_access_policy_sets(self,
                                                     headers=None,
                                                     **query_parameters):
@@ -295,10 +349,12 @@ class NetworkAccessPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -339,6 +395,18 @@ class NetworkAccessPolicySet(object):
 
         return self._object_factory('bpm_aef73e11e56edb468869d663b5e85_v3_0_0', _api_response)
 
+    def reset_hit_counts(self,
+                         headers=None,
+                         **query_parameters):
+        """Alias for `reset_hit_counts_network_access_policy_sets <#ciscoisesdk.
+        api.v3_0_0.network_access_policy_set.
+        NetworkAccessPolicySet.reset_hit_counts_network_access_policy_sets>`_
+        """
+        return self.reset_hit_counts_network_access_policy_sets(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_network_access_policy_set_by_id(self,
                                             policy_id,
                                             headers=None,
@@ -354,10 +422,12 @@ class NetworkAccessPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -399,6 +469,20 @@ class NetworkAccessPolicySet(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_fb3b6363bad54678ae56dc699e8c7e8_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  policy_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_network_access_policy_set_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_policy_set.
+        NetworkAccessPolicySet.get_network_access_policy_set_by_id>`_
+        """
+        return self.get_network_access_policy_set_by_id(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_network_access_policy_set_by_id(self,
                                                policy_id,
@@ -464,10 +548,12 @@ class NetworkAccessPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -552,6 +638,46 @@ class NetworkAccessPolicySet(object):
 
         return self._object_factory('bpm_fa27e5a779143ed557b417535_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     policy_id,
+                     condition=None,
+                     default=None,
+                     description=None,
+                     hit_counts=None,
+                     id=None,
+                     is_proxy=None,
+                     link=None,
+                     name=None,
+                     rank=None,
+                     service_name=None,
+                     state=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_network_access_policy_set_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_policy_set.
+        NetworkAccessPolicySet.update_network_access_policy_set_by_id>`_
+        """
+        return self.update_network_access_policy_set_by_id(
+            policy_id=policy_id,
+            condition=condition,
+            default=default,
+            description=description,
+            hit_counts=hit_counts,
+            id=id,
+            is_proxy=is_proxy,
+            link=link,
+            name=name,
+            rank=rank,
+            service_name=service_name,
+            state=state,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_network_access_policy_set_by_id(self,
                                                policy_id,
                                                headers=None,
@@ -567,10 +693,12 @@ class NetworkAccessPolicySet(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -612,3 +740,17 @@ class NetworkAccessPolicySet(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c1d0c2c01a5856fa8be5af8e2b07e420_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     policy_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_network_access_policy_set_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_policy_set.
+        NetworkAccessPolicySet.delete_network_access_policy_set_by_id>`_
+        """
+        return self.delete_network_access_policy_set_by_id(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )

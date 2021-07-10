@@ -89,10 +89,12 @@ class TacacsExternalServers(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class TacacsExternalServers(object):
 
         return self._object_factory('bpm_afe1108b1a59539ebe3de3e5652c9653_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_tacacs_external_servers_by_name <#ciscoisesdk.
+        api.v3_0_0.tacacs_external_servers.
+        TacacsExternalServers.get_tacacs_external_servers_by_name>`_
+        """
+        return self.get_tacacs_external_servers_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_tacacs_external_servers_by_id(self,
                                           id,
                                           headers=None,
@@ -158,10 +174,12 @@ class TacacsExternalServers(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -213,6 +231,20 @@ class TacacsExternalServers(object):
 
         return self._object_factory('bpm_b9eb9547216547cab8b9e686eee674b_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_tacacs_external_servers_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_external_servers.
+        TacacsExternalServers.get_tacacs_external_servers_by_id>`_
+        """
+        return self.get_tacacs_external_servers_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_tacacs_external_servers_by_id(self,
                                              id,
                                              connection_port=None,
@@ -255,10 +287,12 @@ class TacacsExternalServers(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -349,6 +383,38 @@ class TacacsExternalServers(object):
 
         return self._object_factory('bpm_a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     connection_port=None,
+                     description=None,
+                     host_ip=None,
+                     name=None,
+                     shared_secret=None,
+                     single_connect=None,
+                     timeout=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_tacacs_external_servers_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_external_servers.
+        TacacsExternalServers.update_tacacs_external_servers_by_id>`_
+        """
+        return self.update_tacacs_external_servers_by_id(
+            id=id,
+            connection_port=connection_port,
+            description=description,
+            host_ip=host_ip,
+            name=name,
+            shared_secret=shared_secret,
+            single_connect=single_connect,
+            timeout=timeout,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_tacacs_external_servers_by_id(self,
                                              id,
                                              headers=None,
@@ -363,10 +429,12 @@ class TacacsExternalServers(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -418,6 +486,20 @@ class TacacsExternalServers(object):
 
         return self._object_factory('bpm_2564523798353b885b115048_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_tacacs_external_servers_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_external_servers.
+        TacacsExternalServers.delete_tacacs_external_servers_by_id>`_
+        """
+        return self.delete_tacacs_external_servers_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_tacacs_external_servers(self,
                                         page=None,
                                         size=None,
@@ -436,10 +518,12 @@ class TacacsExternalServers(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -494,6 +578,22 @@ class TacacsExternalServers(object):
 
         return self._object_factory('bpm_c6c2a4908ee5f48b7e9cae7572f6a94_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_tacacs_external_servers <#ciscoisesdk.
+        api.v3_0_0.tacacs_external_servers.
+        TacacsExternalServers.get_all_tacacs_external_servers>`_
+        """
+        return self.get_all_tacacs_external_servers(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_tacacs_external_servers_generator(self,
                                                   page=None,
                                                   size=None,
@@ -513,10 +613,12 @@ class TacacsExternalServers(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -529,6 +631,23 @@ class TacacsExternalServers(object):
         yield from get_next_page(self.get_all_tacacs_external_servers, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_tacacs_external_servers_generator <#ciscoisesdk.
+        api.v3_0_0.tacacs_external_servers.
+        TacacsExternalServers.get_all_tacacs_external_servers_generator>`_
+        """
+        yield from get_next_page(self.get_all_tacacs_external_servers, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -571,10 +690,12 @@ class TacacsExternalServers(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -659,6 +780,36 @@ class TacacsExternalServers(object):
 
         return self._object_factory('bpm_b5097e4db7505ba390914b50b1c2046b_v3_0_0', _api_response)
 
+    def create(self,
+               connection_port=None,
+               description=None,
+               host_ip=None,
+               name=None,
+               shared_secret=None,
+               single_connect=None,
+               timeout=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_tacacs_external_servers <#ciscoisesdk.
+        api.v3_0_0.tacacs_external_servers.
+        TacacsExternalServers.create_tacacs_external_servers>`_
+        """
+        return self.create_tacacs_external_servers(
+            connection_port=connection_port,
+            description=description,
+            host_ip=host_ip,
+            name=name,
+            shared_secret=shared_secret,
+            single_connect=single_connect,
+            timeout=timeout,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -672,10 +823,12 @@ class TacacsExternalServers(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

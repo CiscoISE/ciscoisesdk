@@ -88,10 +88,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class AncPolicy(object):
 
         return self._object_factory('bpm_a095b061f564ebba331f66505b0e3_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_anc_policy_by_name <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.get_anc_policy_by_name>`_
+        """
+        return self.get_anc_policy_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_anc_policy_by_id(self,
                              id,
                              headers=None,
@@ -157,10 +173,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -212,6 +230,20 @@ class AncPolicy(object):
 
         return self._object_factory('bpm_f41f77362663580d8cc3e6e88623889d_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_anc_policy_by_id <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.get_anc_policy_by_id>`_
+        """
+        return self.get_anc_policy_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_anc_policy_by_id(self,
                                 id,
                                 action=None,
@@ -252,10 +284,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -338,6 +372,30 @@ class AncPolicy(object):
 
         return self._object_factory('bpm_d79b507bda155c180d42f0a67ef64d5_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     action=None,
+                     link=None,
+                     name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_anc_policy_by_id <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.update_anc_policy_by_id>`_
+        """
+        return self.update_anc_policy_by_id(
+            id=id,
+            action=action,
+            link=link,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_anc_policy_by_id(self,
                                 id,
                                 headers=None,
@@ -352,10 +410,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -407,6 +467,20 @@ class AncPolicy(object):
 
         return self._object_factory('bpm_c6b8dd764e052699d4d7a0d8ba43640_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_anc_policy_by_id <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.delete_anc_policy_by_id>`_
+        """
+        return self.delete_anc_policy_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_anc_policy(self,
                            filter=None,
                            filter_type=None,
@@ -417,7 +491,7 @@ class AncPolicy(object):
                            headers=None,
                            **query_parameters):
         """This API allows the client to get all the ANC policies.
-        Filter: [name]   To search guest users by using  toDate
+        Filter: [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -468,10 +542,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -538,6 +614,30 @@ class AncPolicy(object):
 
         return self._object_factory('bpm_c9722c56108cac8ca50bf8f01c_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_anc_policy <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.get_all_anc_policy>`_
+        """
+        return self.get_all_anc_policy(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_anc_policy_generator(self,
                                      filter=None,
                                      filter_type=None,
@@ -548,7 +648,7 @@ class AncPolicy(object):
                                      headers=None,
                                      **query_parameters):
         """This API allows the client to get all the ANC policies.
-        Filter: [name]   To search guest users by using  toDate
+        Filter: [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -600,10 +700,12 @@ class AncPolicy(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -620,6 +722,31 @@ class AncPolicy(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_anc_policy_generator <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.get_all_anc_policy_generator>`_
+        """
+        yield from get_next_page(self.get_all_anc_policy, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -662,10 +789,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -744,6 +873,30 @@ class AncPolicy(object):
 
         return self._object_factory('bpm_acfdb4060de5a1895b383238c205986_v3_0_0', _api_response)
 
+    def create(self,
+               action=None,
+               id=None,
+               link=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_anc_policy <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.create_anc_policy>`_
+        """
+        return self.create_anc_policy(
+            action=action,
+            id=id,
+            link=link,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -757,10 +910,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -827,10 +982,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -900,6 +1057,26 @@ class AncPolicy(object):
 
         return self._object_factory('bpm_d67f9f6fba65dcbbcf64ca3e31b39a6_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_anc_policy <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.bulk_request_for_anc_policy>`_
+        """
+        return self.bulk_request_for_anc_policy(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_anc_policy(self,
                                        bulkid,
                                        headers=None,
@@ -914,10 +1091,12 @@ class AncPolicy(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -962,3 +1141,17 @@ class AncPolicy(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_cdff02b5185b9b54c9e58762704_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_anc_policy <#ciscoisesdk.
+        api.v3_0_0.anc_policy.
+        AncPolicy.monitor_bulk_status_anc_policy>`_
+        """
+        return self.monitor_bulk_status_anc_policy(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

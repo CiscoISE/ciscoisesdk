@@ -87,10 +87,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -127,6 +129,18 @@ class Repository(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a83213678e6b58528986f1219d9f12ce_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_repositories <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.get_repositories>`_
+        """
+        return self.get_repositories(
+            headers=headers,
+            **query_parameters
+        )
 
     def create_repository(self,
                           enable_pki=None,
@@ -178,10 +192,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -252,6 +268,36 @@ class Repository(object):
 
         return self._object_factory('bpm_edcb0e8c6b54709d4d61ea23b45f84_v3_0_0', _api_response)
 
+    def create(self,
+               enable_pki=None,
+               name=None,
+               password=None,
+               path=None,
+               protocol=None,
+               server_name=None,
+               user_name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_repository <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.create_repository>`_
+        """
+        return self.create_repository(
+            enable_pki=enable_pki,
+            name=name,
+            password=password,
+            path=path,
+            protocol=protocol,
+            server_name=server_name,
+            user_name=user_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_repository(self,
                        name,
                        headers=None,
@@ -268,10 +314,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -311,6 +359,20 @@ class Repository(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a79dc5595ac51d1970b8d53498d3c32_v3_0_0', _api_response)
+
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_repository <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.get_repository>`_
+        """
+        return self.get_repository(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_repository(self,
                           name,
@@ -364,10 +426,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -442,6 +506,36 @@ class Repository(object):
 
         return self._object_factory('bpm_ad8eb56595e86c4300607ec4dd3_v3_0_0', _api_response)
 
+    def update_by_name(self,
+                       name,
+                       enable_pki=None,
+                       password=None,
+                       path=None,
+                       protocol=None,
+                       server_name=None,
+                       user_name=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
+        """Alias for `update_repository <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.update_repository>`_
+        """
+        return self.update_repository(
+            name=name,
+            enable_pki=enable_pki,
+            password=password,
+            path=path,
+            protocol=protocol,
+            server_name=server_name,
+            user_name=user_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_repository(self,
                           name,
                           headers=None,
@@ -457,10 +551,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -501,6 +597,20 @@ class Repository(object):
 
         return self._object_factory('bpm_d3b49f09d7f954bdb6f413e1785a05d7_v3_0_0', _api_response)
 
+    def delete_by_name(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_repository <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.delete_repository>`_
+        """
+        return self.delete_repository(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_repository_files(self,
                              name,
                              headers=None,
@@ -517,10 +627,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -560,3 +672,17 @@ class Repository(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_fc645a4297f55557af8d398f07f6d0a0_v3_0_0', _api_response)
+
+    def get_files(self,
+                  name,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_repository_files <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.get_repository_files>`_
+        """
+        return self.get_repository_files(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )

@@ -90,10 +90,12 @@ class NetworkAccessServiceNames(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -132,3 +134,15 @@ class NetworkAccessServiceNames(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ca8f50a31b325fd281ae7f7b69f31d3f_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_service_names <#ciscoisesdk.
+        api.v3_0_0.network_access_service_names.
+        NetworkAccessServiceNames.get_network_access_service_names>`_
+        """
+        return self.get_network_access_service_names(
+            headers=headers,
+            **query_parameters
+        )

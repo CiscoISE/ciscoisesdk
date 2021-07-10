@@ -89,10 +89,12 @@ class NetworkAccessAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -136,6 +138,20 @@ class NetworkAccessAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_b2117ae65635dfd9c9d7042eb649261_v3_0_0', _api_response)
 
+    def get_all(self,
+                policy_id,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_policy_by_id_local_exception_rule_list <#ciscoisesdk.
+        api.v3_0_0.network_access_authorization_exception_rules.
+        NetworkAccessAuthorizationExceptionRules.get_network_access_policy_by_id_local_exception_rule_list>`_
+        """
+        return self.get_network_access_policy_by_id_local_exception_rule_list(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def create_network_access_policy_by_id_local_exception_rule(self,
                                                                 policy_id,
                                                                 link=None,
@@ -178,10 +194,12 @@ class NetworkAccessAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -252,6 +270,32 @@ class NetworkAccessAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_d40ae38628c51c49af42a4ede3d66d9_v3_0_0', _api_response)
 
+    def create(self,
+               policy_id,
+               link=None,
+               profile=None,
+               rule=None,
+               security_group=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_network_access_policy_by_id_local_exception_rule <#ciscoisesdk.
+        api.v3_0_0.network_access_authorization_exception_rules.
+        NetworkAccessAuthorizationExceptionRules.create_network_access_policy_by_id_local_exception_rule>`_
+        """
+        return self.create_network_access_policy_by_id_local_exception_rule(
+            policy_id=policy_id,
+            link=link,
+            profile=profile,
+            rule=rule,
+            security_group=security_group,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def reset_hit_counts_network_access_policy_by_id_local_exceptions(self,
                                                                       policy_id,
                                                                       headers=None,
@@ -267,10 +311,12 @@ class NetworkAccessAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -315,6 +361,20 @@ class NetworkAccessAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_d45668b438c59a6b92eb3c79386935b_v3_0_0', _api_response)
 
+    def reset_hit_counts_by_id(self,
+                               policy_id,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `reset_hit_counts_network_access_policy_by_id_local_exceptions <#ciscoisesdk.
+        api.v3_0_0.network_access_authorization_exception_rules.
+        NetworkAccessAuthorizationExceptionRules.reset_hit_counts_network_access_policy_by_id_local_exceptions>`_
+        """
+        return self.reset_hit_counts_network_access_policy_by_id_local_exceptions(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_network_access_policy_by_id_local_exception_rule_by_id(self,
                                                                    policy_id,
                                                                    rule_id,
@@ -332,10 +392,12 @@ class NetworkAccessAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -382,6 +444,22 @@ class NetworkAccessAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_d01cc518eafd5daeaf80b7e83f4d6ad1_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  policy_id,
+                  rule_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_network_access_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_authorization_exception_rules.
+        NetworkAccessAuthorizationExceptionRules.get_network_access_policy_by_id_local_exception_rule_by_id>`_
+        """
+        return self.get_network_access_policy_by_id_local_exception_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_network_access_policy_by_id_local_exception_rule_by_id(self,
                                                                       policy_id,
                                                                       rule_id,
@@ -418,10 +496,12 @@ class NetworkAccessAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -496,6 +576,34 @@ class NetworkAccessAuthorizationExceptionRules(object):
 
         return self._object_factory('bpm_d5c906da96395858b888f382e2ab9d79_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     policy_id,
+                     rule_id,
+                     link=None,
+                     profile=None,
+                     rule=None,
+                     security_group=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_network_access_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_authorization_exception_rules.
+        NetworkAccessAuthorizationExceptionRules.update_network_access_policy_by_id_local_exception_rule_by_id>`_
+        """
+        return self.update_network_access_policy_by_id_local_exception_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            link=link,
+            profile=profile,
+            rule=rule,
+            security_group=security_group,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_network_access_policy_by_id_local_exception_rule_by_id(self,
                                                                       policy_id,
                                                                       rule_id,
@@ -513,10 +621,12 @@ class NetworkAccessAuthorizationExceptionRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -562,3 +672,19 @@ class NetworkAccessAuthorizationExceptionRules(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_d60e4de79065869a39a937f02e3e885_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     policy_id,
+                     rule_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_network_access_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_authorization_exception_rules.
+        NetworkAccessAuthorizationExceptionRules.delete_network_access_policy_by_id_local_exception_rule_by_id>`_
+        """
+        return self.delete_network_access_policy_by_id_local_exception_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            headers=headers,
+            **query_parameters
+        )

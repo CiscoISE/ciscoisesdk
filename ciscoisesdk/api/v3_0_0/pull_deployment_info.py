@@ -89,10 +89,12 @@ class PullDeploymentInfo(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class PullDeploymentInfo(object):
 
         return self._object_factory('bpm_f9159c9f9a1951568daee7080e1dda47_v3_0_0', _api_response)
 
+    def get_all(self,
+                timeout=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_deployment_info <#ciscoisesdk.
+        api.v3_0_0.pull_deployment_info.
+        PullDeploymentInfo.get_all_deployment_info>`_
+        """
+        return self.get_all_deployment_info(
+            timeout=timeout,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -156,10 +172,12 @@ class PullDeploymentInfo(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

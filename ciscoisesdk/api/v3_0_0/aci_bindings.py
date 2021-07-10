@@ -109,10 +109,12 @@ class AciBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -179,6 +181,30 @@ class AciBindings(object):
 
         return self._object_factory('bpm_d1448851f0154d0b6e9c856ec6cc6f0_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter_by=None,
+                filter_value=None,
+                page=None,
+                size=None,
+                sort=None,
+                sort_by=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_aci_bindings <#ciscoisesdk.
+        api.v3_0_0.aci_bindings.
+        AciBindings.get_all_aci_bindings>`_
+        """
+        return self.get_all_aci_bindings(
+            filter_by=filter_by,
+            filter_value=filter_value,
+            page=page,
+            size=size,
+            sort=sort,
+            sort_by=sort_by,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_aci_bindings_generator(self,
                                        filter_by=None,
                                        filter_value=None,
@@ -215,10 +241,12 @@ class AciBindings(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -235,6 +263,31 @@ class AciBindings(object):
             size=size,
             sort=sort,
             sort_by=sort_by,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter_by=None,
+                          filter_value=None,
+                          page=None,
+                          size=None,
+                          sort=None,
+                          sort_by=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_aci_bindings_generator <#ciscoisesdk.
+        api.v3_0_0.aci_bindings.
+        AciBindings.get_all_aci_bindings_generator>`_
+        """
+        yield from get_next_page(self.get_all_aci_bindings, dict(
+            filter_by=filter_by,
+            filter_value=filter_value,
+            page=page,
+            size=size,
+            sort=sort,
+            sort_by=sort_by,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -251,10 +304,12 @@ class AciBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

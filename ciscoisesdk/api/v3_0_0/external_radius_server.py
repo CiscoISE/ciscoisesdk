@@ -89,10 +89,12 @@ class ExternalRadiusServer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class ExternalRadiusServer(object):
 
         return self._object_factory('bpm_e6019b6b2b605132b57db142f581e710_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_external_radius_server_by_name <#ciscoisesdk.
+        api.v3_0_0.external_radius_server.
+        ExternalRadiusServer.get_external_radius_server_by_name>`_
+        """
+        return self.get_external_radius_server_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_external_radius_server_by_id(self,
                                          id,
                                          headers=None,
@@ -159,10 +175,12 @@ class ExternalRadiusServer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -213,6 +231,20 @@ class ExternalRadiusServer(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a93c51c59037ec968625ee45_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_external_radius_server_by_id <#ciscoisesdk.
+        api.v3_0_0.external_radius_server.
+        ExternalRadiusServer.get_external_radius_server_by_id>`_
+        """
+        return self.get_external_radius_server_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_external_radius_server_by_id(self,
                                             id,
@@ -294,10 +326,12 @@ class ExternalRadiusServer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -400,6 +434,50 @@ class ExternalRadiusServer(object):
 
         return self._object_factory('bpm_e94f5eba9d9615a3ecc18ebc_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     accounting_port=None,
+                     authentication_port=None,
+                     authenticator_key=None,
+                     description=None,
+                     enable_key_wrap=None,
+                     encryption_key=None,
+                     host_ip=None,
+                     key_input_format=None,
+                     name=None,
+                     proxy_timeout=None,
+                     retries=None,
+                     shared_secret=None,
+                     timeout=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_external_radius_server_by_id <#ciscoisesdk.
+        api.v3_0_0.external_radius_server.
+        ExternalRadiusServer.update_external_radius_server_by_id>`_
+        """
+        return self.update_external_radius_server_by_id(
+            id=id,
+            accounting_port=accounting_port,
+            authentication_port=authentication_port,
+            authenticator_key=authenticator_key,
+            description=description,
+            enable_key_wrap=enable_key_wrap,
+            encryption_key=encryption_key,
+            host_ip=host_ip,
+            key_input_format=key_input_format,
+            name=name,
+            proxy_timeout=proxy_timeout,
+            retries=retries,
+            shared_secret=shared_secret,
+            timeout=timeout,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_external_radius_server_by_id(self,
                                             id,
                                             headers=None,
@@ -414,10 +492,12 @@ class ExternalRadiusServer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -469,6 +549,20 @@ class ExternalRadiusServer(object):
 
         return self._object_factory('bpm_fcbde1c215f95bebbfa95780ed9a8_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_external_radius_server_by_id <#ciscoisesdk.
+        api.v3_0_0.external_radius_server.
+        ExternalRadiusServer.delete_external_radius_server_by_id>`_
+        """
+        return self.delete_external_radius_server_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_external_radius_server(self,
                                        page=None,
                                        size=None,
@@ -487,10 +581,12 @@ class ExternalRadiusServer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -545,6 +641,22 @@ class ExternalRadiusServer(object):
 
         return self._object_factory('bpm_b641825a9555ecba105cabbdf50fc78_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_external_radius_server <#ciscoisesdk.
+        api.v3_0_0.external_radius_server.
+        ExternalRadiusServer.get_all_external_radius_server>`_
+        """
+        return self.get_all_external_radius_server(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_external_radius_server_generator(self,
                                                  page=None,
                                                  size=None,
@@ -564,10 +676,12 @@ class ExternalRadiusServer(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -580,6 +694,23 @@ class ExternalRadiusServer(object):
         yield from get_next_page(self.get_all_external_radius_server, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_external_radius_server_generator <#ciscoisesdk.
+        api.v3_0_0.external_radius_server.
+        ExternalRadiusServer.get_all_external_radius_server_generator>`_
+        """
+        yield from get_next_page(self.get_all_external_radius_server, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -660,10 +791,12 @@ class ExternalRadiusServer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -760,6 +893,48 @@ class ExternalRadiusServer(object):
 
         return self._object_factory('bpm_fc1c74b35ae5050b4f7fd702570ad5b_v3_0_0', _api_response)
 
+    def create(self,
+               accounting_port=None,
+               authentication_port=None,
+               authenticator_key=None,
+               description=None,
+               enable_key_wrap=None,
+               encryption_key=None,
+               host_ip=None,
+               key_input_format=None,
+               name=None,
+               proxy_timeout=None,
+               retries=None,
+               shared_secret=None,
+               timeout=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_external_radius_server <#ciscoisesdk.
+        api.v3_0_0.external_radius_server.
+        ExternalRadiusServer.create_external_radius_server>`_
+        """
+        return self.create_external_radius_server(
+            accounting_port=accounting_port,
+            authentication_port=authentication_port,
+            authenticator_key=authenticator_key,
+            description=description,
+            enable_key_wrap=enable_key_wrap,
+            encryption_key=encryption_key,
+            host_ip=host_ip,
+            key_input_format=key_input_format,
+            name=name,
+            proxy_timeout=proxy_timeout,
+            retries=retries,
+            shared_secret=shared_secret,
+            timeout=timeout,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -773,10 +948,12 @@ class ExternalRadiusServer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

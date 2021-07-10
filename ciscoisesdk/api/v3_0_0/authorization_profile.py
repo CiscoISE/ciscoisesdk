@@ -89,10 +89,12 @@ class AuthorizationProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class AuthorizationProfile(object):
 
         return self._object_factory('bpm_acf0372068885036baee3c4524638f31_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_authorization_profile_by_name <#ciscoisesdk.
+        api.v3_0_0.authorization_profile.
+        AuthorizationProfile.get_authorization_profile_by_name>`_
+        """
+        return self.get_authorization_profile_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_authorization_profile_by_id(self,
                                         id,
                                         headers=None,
@@ -159,10 +175,12 @@ class AuthorizationProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -213,6 +231,20 @@ class AuthorizationProfile(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a69c7f1ad54e5e9cae1f871e19eed61b_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_authorization_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.authorization_profile.
+        AuthorizationProfile.get_authorization_profile_by_id>`_
+        """
+        return self.get_authorization_profile_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_authorization_profile_by_id(self,
                                            id,
@@ -319,10 +351,12 @@ class AuthorizationProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -455,6 +489,80 @@ class AuthorizationProfile(object):
 
         return self._object_factory('bpm_cb9f26e93655e7d89995b172f6fd97f_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     access_type=None,
+                     acl=None,
+                     advanced_attributes=None,
+                     agentless_posture=None,
+                     airespace_acl=None,
+                     airespace_i_pv6_acl=None,
+                     asa_vpn=None,
+                     authz_profile_type=None,
+                     auto_smart_port=None,
+                     avc_profile=None,
+                     dacl_name=None,
+                     description=None,
+                     easywired_session_candidate=None,
+                     interface_template=None,
+                     ipv6_acl_filter=None,
+                     ipv6_dacl_name=None,
+                     link=None,
+                     mac_sec_policy=None,
+                     name=None,
+                     neat=None,
+                     profile_name=None,
+                     reauth=None,
+                     service_template=None,
+                     track_movement=None,
+                     vlan=None,
+                     voice_domain_permission=None,
+                     web_auth=None,
+                     web_redirection=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_authorization_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.authorization_profile.
+        AuthorizationProfile.update_authorization_profile_by_id>`_
+        """
+        return self.update_authorization_profile_by_id(
+            id=id,
+            access_type=access_type,
+            acl=acl,
+            advanced_attributes=advanced_attributes,
+            agentless_posture=agentless_posture,
+            airespace_acl=airespace_acl,
+            airespace_i_pv6_acl=airespace_i_pv6_acl,
+            asa_vpn=asa_vpn,
+            authz_profile_type=authz_profile_type,
+            auto_smart_port=auto_smart_port,
+            avc_profile=avc_profile,
+            dacl_name=dacl_name,
+            description=description,
+            easywired_session_candidate=easywired_session_candidate,
+            interface_template=interface_template,
+            ipv6_acl_filter=ipv6_acl_filter,
+            ipv6_dacl_name=ipv6_dacl_name,
+            link=link,
+            mac_sec_policy=mac_sec_policy,
+            name=name,
+            neat=neat,
+            profile_name=profile_name,
+            reauth=reauth,
+            service_template=service_template,
+            track_movement=track_movement,
+            vlan=vlan,
+            voice_domain_permission=voice_domain_permission,
+            web_auth=web_auth,
+            web_redirection=web_redirection,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_authorization_profile_by_id(self,
                                            id,
                                            headers=None,
@@ -469,10 +577,12 @@ class AuthorizationProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -524,6 +634,20 @@ class AuthorizationProfile(object):
 
         return self._object_factory('bpm_c3913dfbda305f678ede16f782762ad3_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_authorization_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.authorization_profile.
+        AuthorizationProfile.delete_authorization_profile_by_id>`_
+        """
+        return self.delete_authorization_profile_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_authorization_profiles(self,
                                        page=None,
                                        size=None,
@@ -541,10 +665,12 @@ class AuthorizationProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -599,6 +725,22 @@ class AuthorizationProfile(object):
 
         return self._object_factory('bpm_e232c5666ab5ed783588f413c3bc644_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_authorization_profiles <#ciscoisesdk.
+        api.v3_0_0.authorization_profile.
+        AuthorizationProfile.get_all_authorization_profiles>`_
+        """
+        return self.get_all_authorization_profiles(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_authorization_profiles_generator(self,
                                                  page=None,
                                                  size=None,
@@ -617,10 +759,12 @@ class AuthorizationProfile(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -633,6 +777,23 @@ class AuthorizationProfile(object):
         yield from get_next_page(self.get_all_authorization_profiles, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_authorization_profiles_generator <#ciscoisesdk.
+        api.v3_0_0.authorization_profile.
+        AuthorizationProfile.get_all_authorization_profiles_generator>`_
+        """
+        yield from get_next_page(self.get_all_authorization_profiles, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -740,10 +901,12 @@ class AuthorizationProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -872,6 +1035,80 @@ class AuthorizationProfile(object):
 
         return self._object_factory('bpm_c43118f80d4556a8ec759a8c41e2097_v3_0_0', _api_response)
 
+    def create(self,
+               access_type=None,
+               acl=None,
+               advanced_attributes=None,
+               agentless_posture=None,
+               airespace_acl=None,
+               airespace_i_pv6_acl=None,
+               asa_vpn=None,
+               authz_profile_type=None,
+               auto_smart_port=None,
+               avc_profile=None,
+               dacl_name=None,
+               description=None,
+               easywired_session_candidate=None,
+               id=None,
+               interface_template=None,
+               ipv6_acl_filter=None,
+               ipv6_dacl_name=None,
+               link=None,
+               mac_sec_policy=None,
+               name=None,
+               neat=None,
+               profile_name=None,
+               reauth=None,
+               service_template=None,
+               track_movement=None,
+               vlan=None,
+               voice_domain_permission=None,
+               web_auth=None,
+               web_redirection=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_authorization_profile <#ciscoisesdk.
+        api.v3_0_0.authorization_profile.
+        AuthorizationProfile.create_authorization_profile>`_
+        """
+        return self.create_authorization_profile(
+            access_type=access_type,
+            acl=acl,
+            advanced_attributes=advanced_attributes,
+            agentless_posture=agentless_posture,
+            airespace_acl=airespace_acl,
+            airespace_i_pv6_acl=airespace_i_pv6_acl,
+            asa_vpn=asa_vpn,
+            authz_profile_type=authz_profile_type,
+            auto_smart_port=auto_smart_port,
+            avc_profile=avc_profile,
+            dacl_name=dacl_name,
+            description=description,
+            easywired_session_candidate=easywired_session_candidate,
+            id=id,
+            interface_template=interface_template,
+            ipv6_acl_filter=ipv6_acl_filter,
+            ipv6_dacl_name=ipv6_dacl_name,
+            link=link,
+            mac_sec_policy=mac_sec_policy,
+            name=name,
+            neat=neat,
+            profile_name=profile_name,
+            reauth=reauth,
+            service_template=service_template,
+            track_movement=track_movement,
+            vlan=vlan,
+            voice_domain_permission=voice_domain_permission,
+            web_auth=web_auth,
+            web_redirection=web_redirection,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -885,10 +1122,12 @@ class AuthorizationProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

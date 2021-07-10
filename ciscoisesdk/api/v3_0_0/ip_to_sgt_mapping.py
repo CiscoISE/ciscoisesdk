@@ -89,10 +89,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -145,6 +147,20 @@ class IpToSgtMapping(object):
 
         return self._object_factory('bpm_b5711af534e557749661afb5b6c90cee_v3_0_0', _api_response)
 
+    def deploy_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `deploy_ip_to_sgt_mapping_by_id <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.deploy_ip_to_sgt_mapping_by_id>`_
+        """
+        return self.deploy_ip_to_sgt_mapping_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def deploy_all_ip_to_sgt_mapping(self,
                                      headers=None,
                                      **query_parameters):
@@ -158,10 +174,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -211,6 +229,18 @@ class IpToSgtMapping(object):
 
         return self._object_factory('bpm_df7a50feb38d8729b99553e9_v3_0_0', _api_response)
 
+    def deploy_all(self,
+                   headers=None,
+                   **query_parameters):
+        """Alias for `deploy_all_ip_to_sgt_mapping <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.deploy_all_ip_to_sgt_mapping>`_
+        """
+        return self.deploy_all_ip_to_sgt_mapping(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_deploy_status_ip_to_sgt_mapping(self,
                                             headers=None,
                                             **query_parameters):
@@ -226,10 +256,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -279,6 +311,18 @@ class IpToSgtMapping(object):
 
         return self._object_factory('bpm_dcd55e1e57d25e65b625526a1d341afd_v3_0_0', _api_response)
 
+    def get_deploy_status(self,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_deploy_status_ip_to_sgt_mapping <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.get_deploy_status_ip_to_sgt_mapping>`_
+        """
+        return self.get_deploy_status_ip_to_sgt_mapping(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_ip_to_sgt_mapping_by_id(self,
                                     id,
                                     headers=None,
@@ -293,10 +337,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -348,6 +394,20 @@ class IpToSgtMapping(object):
 
         return self._object_factory('bpm_ddc6729af25f8b8c060b20d09f0057_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_ip_to_sgt_mapping_by_id <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.get_ip_to_sgt_mapping_by_id>`_
+        """
+        return self.get_ip_to_sgt_mapping_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_ip_to_sgt_mapping_by_id(self,
                                        id,
                                        deploy_to=None,
@@ -391,10 +451,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -485,6 +547,38 @@ class IpToSgtMapping(object):
 
         return self._object_factory('bpm_de3cecd62e5153881245a8613fbeea_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     deploy_to=None,
+                     deploy_type=None,
+                     host_ip=None,
+                     host_name=None,
+                     mapping_group=None,
+                     name=None,
+                     sgt=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_ip_to_sgt_mapping_by_id <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.update_ip_to_sgt_mapping_by_id>`_
+        """
+        return self.update_ip_to_sgt_mapping_by_id(
+            id=id,
+            deploy_to=deploy_to,
+            deploy_type=deploy_type,
+            host_ip=host_ip,
+            host_name=host_name,
+            mapping_group=mapping_group,
+            name=name,
+            sgt=sgt,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_ip_to_sgt_mapping_by_id(self,
                                        id,
                                        headers=None,
@@ -499,10 +593,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -553,6 +649,20 @@ class IpToSgtMapping(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f0cb1e55c9baee89c136c8ec47_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_ip_to_sgt_mapping_by_id <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.delete_ip_to_sgt_mapping_by_id>`_
+        """
+        return self.delete_ip_to_sgt_mapping_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def get_all_ip_to_sgt_mapping(self,
                                   filter=None,
@@ -615,10 +725,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -685,6 +797,30 @@ class IpToSgtMapping(object):
 
         return self._object_factory('bpm_cd9e91565f5c74b9f32ff0e5be6f17_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_ip_to_sgt_mapping <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.get_all_ip_to_sgt_mapping>`_
+        """
+        return self.get_all_ip_to_sgt_mapping(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_ip_to_sgt_mapping_generator(self,
                                             filter=None,
                                             filter_type=None,
@@ -747,10 +883,12 @@ class IpToSgtMapping(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -767,6 +905,31 @@ class IpToSgtMapping(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_ip_to_sgt_mapping_generator <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.get_all_ip_to_sgt_mapping_generator>`_
+        """
+        yield from get_next_page(self.get_all_ip_to_sgt_mapping, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -810,10 +973,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -898,6 +1063,36 @@ class IpToSgtMapping(object):
 
         return self._object_factory('bpm_dd838b268f5dd298a123ac58448ea9_v3_0_0', _api_response)
 
+    def create(self,
+               deploy_to=None,
+               deploy_type=None,
+               host_ip=None,
+               host_name=None,
+               mapping_group=None,
+               name=None,
+               sgt=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_ip_to_sgt_mapping <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.create_ip_to_sgt_mapping>`_
+        """
+        return self.create_ip_to_sgt_mapping(
+            deploy_to=deploy_to,
+            deploy_type=deploy_type,
+            host_ip=host_ip,
+            host_name=host_name,
+            mapping_group=mapping_group,
+            name=name,
+            sgt=sgt,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -911,10 +1106,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -964,7 +1161,7 @@ class IpToSgtMapping(object):
                                            payload=None,
                                            active_validation=True,
                                            **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -981,10 +1178,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1054,6 +1253,26 @@ class IpToSgtMapping(object):
 
         return self._object_factory('bpm_ab203a1dd0015924bf2005a84ae85477_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_ip_to_sgt_mapping <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.bulk_request_for_ip_to_sgt_mapping>`_
+        """
+        return self.bulk_request_for_ip_to_sgt_mapping(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_ip_to_sgt_mapping(self,
                                               bulkid,
                                               headers=None,
@@ -1068,10 +1287,12 @@ class IpToSgtMapping(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1116,3 +1337,17 @@ class IpToSgtMapping(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f36d3f43a6157978ec529318ce506e0_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_ip_to_sgt_mapping <#ciscoisesdk.
+        api.v3_0_0.ip_to_sgt_mapping.
+        IpToSgtMapping.monitor_bulk_status_ip_to_sgt_mapping>`_
+        """
+        return self.monitor_bulk_status_ip_to_sgt_mapping(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

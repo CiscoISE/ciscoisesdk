@@ -88,10 +88,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class RestidStore(object):
 
         return self._object_factory('bpm_a5f22fc961547f93976a53949cac73_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_rest_id_store_by_name <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.get_rest_id_store_by_name>`_
+        """
+        return self.get_rest_id_store_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_rest_id_store_by_name(self,
                                      name,
                                      description=None,
@@ -173,10 +189,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -259,6 +277,30 @@ class RestidStore(object):
 
         return self._object_factory('bpm_c85464a04f0e5ddc99f8e6b8ed0f7eac_v3_0_0', _api_response)
 
+    def update_by_name(self,
+                       name,
+                       description=None,
+                       ers_rest_idstore_attributes=None,
+                       id=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
+        """Alias for `update_rest_id_store_by_name <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.update_rest_id_store_by_name>`_
+        """
+        return self.update_rest_id_store_by_name(
+            name=name,
+            description=description,
+            ers_rest_idstore_attributes=ers_rest_idstore_attributes,
+            id=id,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_rest_id_store_by_name(self,
                                      name,
                                      headers=None,
@@ -273,10 +315,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -328,6 +372,20 @@ class RestidStore(object):
 
         return self._object_factory('bpm_e068a8dc1ed65f8d9cdfa70a49f543e0_v3_0_0', _api_response)
 
+    def delete_by_name(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_rest_id_store_by_name <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.delete_rest_id_store_by_name>`_
+        """
+        return self.delete_rest_id_store_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_rest_id_store_by_id(self,
                                 id,
                                 headers=None,
@@ -342,10 +400,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -397,6 +457,20 @@ class RestidStore(object):
 
         return self._object_factory('bpm_cba3f7ace597da668acfbe00364be_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_rest_id_store_by_id <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.get_rest_id_store_by_id>`_
+        """
+        return self.get_rest_id_store_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_rest_id_store_by_id(self,
                                    id,
                                    description=None,
@@ -429,10 +503,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -517,6 +593,32 @@ class RestidStore(object):
 
         return self._object_factory('bpm_ded7f8573c255c318bb1f04bfdbf01e1_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     description=None,
+                     ers_rest_idstore_attributes=None,
+                     link=None,
+                     name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_rest_id_store_by_id <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.update_rest_id_store_by_id>`_
+        """
+        return self.update_rest_id_store_by_id(
+            id=id,
+            description=description,
+            ers_rest_idstore_attributes=ers_rest_idstore_attributes,
+            link=link,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_rest_id_store_by_id(self,
                                    id,
                                    headers=None,
@@ -531,10 +633,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -586,6 +690,20 @@ class RestidStore(object):
 
         return self._object_factory('bpm_e77a1dd4aa75dcebbc3ee4e94a162b4_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_rest_id_store_by_id <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.delete_rest_id_store_by_id>`_
+        """
+        return self.delete_rest_id_store_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_rest_id_store(self,
                               filter=None,
                               filter_type=None,
@@ -596,8 +714,8 @@ class RestidStore(object):
                               headers=None,
                               **query_parameters):
         """This API allows the client to get all the REST ID stores.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -647,10 +765,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -717,6 +837,30 @@ class RestidStore(object):
 
         return self._object_factory('bpm_d810359e31e453ac8145981b7d5bb7e4_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_rest_id_store <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.get_all_rest_id_store>`_
+        """
+        return self.get_all_rest_id_store(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_rest_id_store_generator(self,
                                         filter=None,
                                         filter_type=None,
@@ -727,8 +871,8 @@ class RestidStore(object):
                                         headers=None,
                                         **query_parameters):
         """This API allows the client to get all the REST ID stores.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -779,10 +923,12 @@ class RestidStore(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -799,6 +945,31 @@ class RestidStore(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_rest_id_store_generator <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.get_all_rest_id_store_generator>`_
+        """
+        yield from get_next_page(self.get_all_rest_id_store, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -833,10 +1004,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -917,6 +1090,32 @@ class RestidStore(object):
 
         return self._object_factory('bpm_c23243c950f29b51f502c03d7058_v3_0_0', _api_response)
 
+    def create(self,
+               description=None,
+               ers_rest_idstore_attributes=None,
+               id=None,
+               link=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_rest_id_store <#ciscoisesdk.
+        api.v3_0_0.restid_store.
+        RestidStore.create_rest_id_store>`_
+        """
+        return self.create_rest_id_store(
+            description=description,
+            ers_rest_idstore_attributes=ers_rest_idstore_attributes,
+            id=id,
+            link=link,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -930,10 +1129,12 @@ class RestidStore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

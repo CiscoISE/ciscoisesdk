@@ -88,10 +88,12 @@ class PsnNodeDetailsWithRadiusService(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class PsnNodeDetailsWithRadiusService(object):
 
         return self._object_factory('bpm_ab225d0b2a6c52a99df1f1d8fb6a4dac_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_session_service_node_by_name <#ciscoisesdk.
+        api.v3_0_0.psn_node_details_with_radius_service.
+        PsnNodeDetailsWithRadiusService.get_session_service_node_by_name>`_
+        """
+        return self.get_session_service_node_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_session_service_node_by_id(self,
                                        id,
                                        headers=None,
@@ -157,10 +173,12 @@ class PsnNodeDetailsWithRadiusService(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -212,6 +230,20 @@ class PsnNodeDetailsWithRadiusService(object):
 
         return self._object_factory('bpm_c988bb742d055294b74b4d6916ca1ada_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_session_service_node_by_id <#ciscoisesdk.
+        api.v3_0_0.psn_node_details_with_radius_service.
+        PsnNodeDetailsWithRadiusService.get_session_service_node_by_id>`_
+        """
+        return self.get_session_service_node_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_session_service_node(self,
                                      page=None,
                                      size=None,
@@ -229,10 +261,12 @@ class PsnNodeDetailsWithRadiusService(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -287,6 +321,22 @@ class PsnNodeDetailsWithRadiusService(object):
 
         return self._object_factory('bpm_dccbf248575cbeb3cd3dda5cdbcf20_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_session_service_node <#ciscoisesdk.
+        api.v3_0_0.psn_node_details_with_radius_service.
+        PsnNodeDetailsWithRadiusService.get_all_session_service_node>`_
+        """
+        return self.get_all_session_service_node(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_session_service_node_generator(self,
                                                page=None,
                                                size=None,
@@ -305,10 +355,12 @@ class PsnNodeDetailsWithRadiusService(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -321,6 +373,23 @@ class PsnNodeDetailsWithRadiusService(object):
         yield from get_next_page(self.get_all_session_service_node, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_session_service_node_generator <#ciscoisesdk.
+        api.v3_0_0.psn_node_details_with_radius_service.
+        PsnNodeDetailsWithRadiusService.get_all_session_service_node_generator>`_
+        """
+        yield from get_next_page(self.get_all_session_service_node, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -337,10 +406,12 @@ class PsnNodeDetailsWithRadiusService(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

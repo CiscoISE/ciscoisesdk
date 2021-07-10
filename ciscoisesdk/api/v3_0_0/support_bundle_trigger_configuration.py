@@ -107,10 +107,12 @@ class SupportBundleTriggerConfiguration(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -189,6 +191,30 @@ class SupportBundleTriggerConfiguration(object):
 
         return self._object_factory('bpm_fac48e5c63abfe2feec6fd1903_v3_0_0', _api_response)
 
+    def create(self,
+               description=None,
+               host_name=None,
+               name=None,
+               support_bundle_include_options=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_support_bundle <#ciscoisesdk.
+        api.v3_0_0.support_bundle_trigger_configuration.
+        SupportBundleTriggerConfiguration.create_support_bundle>`_
+        """
+        return self.create_support_bundle(
+            description=description,
+            host_name=host_name,
+            name=name,
+            support_bundle_include_options=support_bundle_include_options,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -202,10 +228,12 @@ class SupportBundleTriggerConfiguration(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

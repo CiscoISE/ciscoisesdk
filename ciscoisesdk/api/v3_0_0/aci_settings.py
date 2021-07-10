@@ -86,10 +86,12 @@ class AciSettings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -138,6 +140,18 @@ class AciSettings(object):
 
         return self._object_factory('bpm_ea5c865993b56f48f7f43475294a20c_v3_0_0', _api_response)
 
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_aci_settings <#ciscoisesdk.
+        api.v3_0_0.aci_settings.
+        AciSettings.get_all_aci_settings>`_
+        """
+        return self.get_all_aci_settings(
+            headers=headers,
+            **query_parameters
+        )
+
     def test_aci_connectivity(self,
                               headers=None,
                               **query_parameters):
@@ -151,10 +165,12 @@ class AciSettings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -282,10 +298,12 @@ class AciSettings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -398,6 +416,60 @@ class AciSettings(object):
 
         return self._object_factory('bpm_cea2e785ee57908a9ee3b118e49cfa_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     aci50=None,
+                     aci51=None,
+                     admin_name=None,
+                     all_sxp_domain=None,
+                     default_sgt_name=None,
+                     enable_aci=None,
+                     enable_data_plane=None,
+                     enable_elements_limit=None,
+                     ip_address_host_name=None,
+                     l3_route_network=None,
+                     max_num_iepg_from_aci=None,
+                     max_num_sgt_to_aci=None,
+                     specific_sxp_domain=None,
+                     specifix_sxp_domain_list=None,
+                     suffix_to_epg=None,
+                     suffix_to_sgt=None,
+                     tenant_name=None,
+                     untagged_packet_iepg_name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_aci_settings_by_id <#ciscoisesdk.
+        api.v3_0_0.aci_settings.
+        AciSettings.update_aci_settings_by_id>`_
+        """
+        return self.update_aci_settings_by_id(
+            id=id,
+            aci50=aci50,
+            aci51=aci51,
+            admin_name=admin_name,
+            all_sxp_domain=all_sxp_domain,
+            default_sgt_name=default_sgt_name,
+            enable_aci=enable_aci,
+            enable_data_plane=enable_data_plane,
+            enable_elements_limit=enable_elements_limit,
+            ip_address_host_name=ip_address_host_name,
+            l3_route_network=l3_route_network,
+            max_num_iepg_from_aci=max_num_iepg_from_aci,
+            max_num_sgt_to_aci=max_num_sgt_to_aci,
+            specific_sxp_domain=specific_sxp_domain,
+            specifix_sxp_domain_list=specifix_sxp_domain_list,
+            suffix_to_epg=suffix_to_epg,
+            suffix_to_sgt=suffix_to_sgt,
+            tenant_name=tenant_name,
+            untagged_packet_iepg_name=untagged_packet_iepg_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -411,10 +483,12 @@ class AciSettings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

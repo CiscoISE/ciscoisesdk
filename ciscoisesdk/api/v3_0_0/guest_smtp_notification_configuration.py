@@ -89,10 +89,12 @@ class GuestSmtpNotificationConfiguration(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class GuestSmtpNotificationConfiguration(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ca28129793d1569bb50de9f43b0d0ee8_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_guest_smtp_notification_settings_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_smtp_notification_configuration.
+        GuestSmtpNotificationConfiguration.get_guest_smtp_notification_settings_by_id>`_
+        """
+        return self.get_guest_smtp_notification_settings_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_guest_smtp_notification_settings_by_id(self,
                                                       id,
@@ -206,10 +222,12 @@ class GuestSmtpNotificationConfiguration(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -306,6 +324,44 @@ class GuestSmtpNotificationConfiguration(object):
 
         return self._object_factory('bpm_a7500f6e473a50e19452683e303dd021_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     connection_timeout=None,
+                     default_from_address=None,
+                     notification_enabled=None,
+                     password=None,
+                     smtp_port=None,
+                     smtp_server=None,
+                     use_default_from_address=None,
+                     use_password_authentication=None,
+                     use_tlsor_ssl_encryption=None,
+                     user_name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_guest_smtp_notification_settings_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_smtp_notification_configuration.
+        GuestSmtpNotificationConfiguration.update_guest_smtp_notification_settings_by_id>`_
+        """
+        return self.update_guest_smtp_notification_settings_by_id(
+            id=id,
+            connection_timeout=connection_timeout,
+            default_from_address=default_from_address,
+            notification_enabled=notification_enabled,
+            password=password,
+            smtp_port=smtp_port,
+            smtp_server=smtp_server,
+            use_default_from_address=use_default_from_address,
+            use_password_authentication=use_password_authentication,
+            use_tlsor_ssl_encryption=use_tlsor_ssl_encryption,
+            user_name=user_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_guest_smtp_notification_settings(self,
                                                  filter=None,
                                                  filter_type=None,
@@ -368,10 +424,12 @@ class GuestSmtpNotificationConfiguration(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -438,6 +496,30 @@ class GuestSmtpNotificationConfiguration(object):
 
         return self._object_factory('bpm_e4c74e9b4e559e95c73e81183a6c7a_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_guest_smtp_notification_settings <#ciscoisesdk.
+        api.v3_0_0.guest_smtp_notification_configuration.
+        GuestSmtpNotificationConfiguration.get_all_guest_smtp_notification_settings>`_
+        """
+        return self.get_all_guest_smtp_notification_settings(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_guest_smtp_notification_settings_generator(self,
                                                            filter=None,
                                                            filter_type=None,
@@ -501,10 +583,12 @@ class GuestSmtpNotificationConfiguration(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -521,6 +605,31 @@ class GuestSmtpNotificationConfiguration(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_guest_smtp_notification_settings_generator <#ciscoisesdk.
+        api.v3_0_0.guest_smtp_notification_configuration.
+        GuestSmtpNotificationConfiguration.get_all_guest_smtp_notification_settings_generator>`_
+        """
+        yield from get_next_page(self.get_all_guest_smtp_notification_settings, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -582,10 +691,12 @@ class GuestSmtpNotificationConfiguration(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -676,6 +787,42 @@ class GuestSmtpNotificationConfiguration(object):
 
         return self._object_factory('bpm_de7c6f75f68b0d7df00dc72808d_v3_0_0', _api_response)
 
+    def create(self,
+               connection_timeout=None,
+               default_from_address=None,
+               notification_enabled=None,
+               password=None,
+               smtp_port=None,
+               smtp_server=None,
+               use_default_from_address=None,
+               use_password_authentication=None,
+               use_tlsor_ssl_encryption=None,
+               user_name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_guest_smtp_notification_settings <#ciscoisesdk.
+        api.v3_0_0.guest_smtp_notification_configuration.
+        GuestSmtpNotificationConfiguration.create_guest_smtp_notification_settings>`_
+        """
+        return self.create_guest_smtp_notification_settings(
+            connection_timeout=connection_timeout,
+            default_from_address=default_from_address,
+            notification_enabled=notification_enabled,
+            password=password,
+            smtp_port=smtp_port,
+            smtp_server=smtp_server,
+            use_default_from_address=use_default_from_address,
+            use_password_authentication=use_password_authentication,
+            use_tlsor_ssl_encryption=use_tlsor_ssl_encryption,
+            user_name=user_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -689,10 +836,12 @@ class GuestSmtpNotificationConfiguration(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

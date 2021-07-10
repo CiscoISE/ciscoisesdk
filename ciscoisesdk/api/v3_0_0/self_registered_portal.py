@@ -89,10 +89,12 @@ class SelfRegisteredPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class SelfRegisteredPortal(object):
 
         return self._object_factory('bpm_f9c9a5e917af53dbbb91733e82e72ebe_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_self_registered_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.self_registered_portal.
+        SelfRegisteredPortal.get_self_registered_portal_by_id>`_
+        """
+        return self.get_self_registered_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_self_registered_portal_by_id(self,
                                             id,
                                             customizations=None,
@@ -189,10 +205,12 @@ class SelfRegisteredPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -281,6 +299,36 @@ class SelfRegisteredPortal(object):
 
         return self._object_factory('bpm_c4fada6c558d9aba09cc373d5b266_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     customizations=None,
+                     description=None,
+                     name=None,
+                     portal_test_url=None,
+                     portal_type=None,
+                     settings=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_self_registered_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.self_registered_portal.
+        SelfRegisteredPortal.update_self_registered_portal_by_id>`_
+        """
+        return self.update_self_registered_portal_by_id(
+            id=id,
+            customizations=customizations,
+            description=description,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_self_registered_portal_by_id(self,
                                             id,
                                             headers=None,
@@ -295,10 +343,12 @@ class SelfRegisteredPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -350,6 +400,20 @@ class SelfRegisteredPortal(object):
 
         return self._object_factory('bpm_f9ada2e275fa2934fdb4825266a2c_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_self_registered_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.self_registered_portal.
+        SelfRegisteredPortal.delete_self_registered_portal_by_id>`_
+        """
+        return self.delete_self_registered_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_self_registered_portals(self,
                                         filter=None,
                                         filter_type=None,
@@ -360,7 +424,7 @@ class SelfRegisteredPortal(object):
                                         headers=None,
                                         **query_parameters):
         """This API allows the client to get all the self registered
-        portals.   Filter:   [name]   To search guest users by
+        portals.   Filter:   [name]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -411,10 +475,12 @@ class SelfRegisteredPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -481,6 +547,30 @@ class SelfRegisteredPortal(object):
 
         return self._object_factory('bpm_bb165bd00a6653ac9da440f23ee62ecc_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_self_registered_portals <#ciscoisesdk.
+        api.v3_0_0.self_registered_portal.
+        SelfRegisteredPortal.get_all_self_registered_portals>`_
+        """
+        return self.get_all_self_registered_portals(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_self_registered_portals_generator(self,
                                                   filter=None,
                                                   filter_type=None,
@@ -491,7 +581,7 @@ class SelfRegisteredPortal(object):
                                                   headers=None,
                                                   **query_parameters):
         """This API allows the client to get all the self registered
-        portals.   Filter:   [name]   To search guest users by
+        portals.   Filter:   [name]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -543,10 +633,12 @@ class SelfRegisteredPortal(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -563,6 +655,31 @@ class SelfRegisteredPortal(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_self_registered_portals_generator <#ciscoisesdk.
+        api.v3_0_0.self_registered_portal.
+        SelfRegisteredPortal.get_all_self_registered_portals_generator>`_
+        """
+        yield from get_next_page(self.get_all_self_registered_portals, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -607,10 +724,12 @@ class SelfRegisteredPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -693,6 +812,34 @@ class SelfRegisteredPortal(object):
 
         return self._object_factory('bpm_d524614e122d53d68324daf1681eb753_v3_0_0', _api_response)
 
+    def create(self,
+               customizations=None,
+               description=None,
+               name=None,
+               portal_test_url=None,
+               portal_type=None,
+               settings=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_self_registered_portal <#ciscoisesdk.
+        api.v3_0_0.self_registered_portal.
+        SelfRegisteredPortal.create_self_registered_portal>`_
+        """
+        return self.create_self_registered_portal(
+            customizations=customizations,
+            description=description,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -706,10 +853,12 @@ class SelfRegisteredPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

@@ -97,10 +97,12 @@ class ClearThreatsAndVulnerabilities(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -174,6 +176,24 @@ class ClearThreatsAndVulnerabilities(object):
 
         return self._object_factory('bpm_e3110fc63ecb5428a075a8af8497fb35_v3_0_0', _api_response)
 
+    def clear(self,
+              mac_addresses=None,
+              headers=None,
+              payload=None,
+              active_validation=True,
+              **query_parameters):
+        """Alias for `clear_threats_and_vulnerabilities <#ciscoisesdk.
+        api.v3_0_0.clear_threats_and_vulnerabilities.
+        ClearThreatsAndVulnerabilities.clear_threats_and_vulnerabilities>`_
+        """
+        return self.clear_threats_and_vulnerabilities(
+            mac_addresses=mac_addresses,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -187,10 +207,12 @@ class ClearThreatsAndVulnerabilities(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

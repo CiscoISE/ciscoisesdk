@@ -89,10 +89,12 @@ class SecurityGroupToVirtualNetwork(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class SecurityGroupToVirtualNetwork(object):
 
         return self._object_factory('bpm_ea0a65da3ae0346b912a9efac_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_security_groups_to_vn_to_vlan_by_id <#ciscoisesdk.
+        api.v3_0_0.security_group_to_virtual_network.
+        SecurityGroupToVirtualNetwork.get_security_groups_to_vn_to_vlan_by_id>`_
+        """
+        return self.get_security_groups_to_vn_to_vlan_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_security_groups_to_vn_to_vlan_by_id(self,
                                                    id,
                                                    description=None,
@@ -178,10 +194,12 @@ class SecurityGroupToVirtualNetwork(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -268,6 +286,34 @@ class SecurityGroupToVirtualNetwork(object):
 
         return self._object_factory('bpm_eae98db0c24b5ecca77cce8279e20785_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     description=None,
+                     link=None,
+                     name=None,
+                     sgt_id=None,
+                     virtualnetworklist=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_security_groups_to_vn_to_vlan_by_id <#ciscoisesdk.
+        api.v3_0_0.security_group_to_virtual_network.
+        SecurityGroupToVirtualNetwork.update_security_groups_to_vn_to_vlan_by_id>`_
+        """
+        return self.update_security_groups_to_vn_to_vlan_by_id(
+            id=id,
+            description=description,
+            link=link,
+            name=name,
+            sgt_id=sgt_id,
+            virtualnetworklist=virtualnetworklist,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_security_groups_to_vn_to_vlan_by_id(self,
                                                    id,
                                                    headers=None,
@@ -282,10 +328,12 @@ class SecurityGroupToVirtualNetwork(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -336,6 +384,20 @@ class SecurityGroupToVirtualNetwork(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_97c852dbb953860bef3326e0_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_security_groups_to_vn_to_vlan_by_id <#ciscoisesdk.
+        api.v3_0_0.security_group_to_virtual_network.
+        SecurityGroupToVirtualNetwork.delete_security_groups_to_vn_to_vlan_by_id>`_
+        """
+        return self.delete_security_groups_to_vn_to_vlan_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def get_all_security_groups_to_vn_to_vlan(self,
                                               filter=None,
@@ -394,10 +456,12 @@ class SecurityGroupToVirtualNetwork(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -458,6 +522,26 @@ class SecurityGroupToVirtualNetwork(object):
 
         return self._object_factory('bpm_e51b6e745cdb5bdda4de26a27b8d92bb_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_security_groups_to_vn_to_vlan <#ciscoisesdk.
+        api.v3_0_0.security_group_to_virtual_network.
+        SecurityGroupToVirtualNetwork.get_all_security_groups_to_vn_to_vlan>`_
+        """
+        return self.get_all_security_groups_to_vn_to_vlan(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_security_groups_to_vn_to_vlan_generator(self,
                                                         filter=None,
                                                         filter_type=None,
@@ -516,10 +600,12 @@ class SecurityGroupToVirtualNetwork(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -534,6 +620,27 @@ class SecurityGroupToVirtualNetwork(object):
             filter_type=filter_type,
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_security_groups_to_vn_to_vlan_generator <#ciscoisesdk.
+        api.v3_0_0.security_group_to_virtual_network.
+        SecurityGroupToVirtualNetwork.get_all_security_groups_to_vn_to_vlan_generator>`_
+        """
+        yield from get_next_page(self.get_all_security_groups_to_vn_to_vlan, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -569,10 +676,12 @@ class SecurityGroupToVirtualNetwork(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -655,6 +764,34 @@ class SecurityGroupToVirtualNetwork(object):
 
         return self._object_factory('bpm_a0710ba581da4d3fd00e84d59e3_v3_0_0', _api_response)
 
+    def create(self,
+               description=None,
+               id=None,
+               link=None,
+               name=None,
+               sgt_id=None,
+               virtualnetworklist=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_security_groups_to_vn_to_vlan <#ciscoisesdk.
+        api.v3_0_0.security_group_to_virtual_network.
+        SecurityGroupToVirtualNetwork.create_security_groups_to_vn_to_vlan>`_
+        """
+        return self.create_security_groups_to_vn_to_vlan(
+            description=description,
+            id=id,
+            link=link,
+            name=name,
+            sgt_id=sgt_id,
+            virtualnetworklist=virtualnetworklist,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -668,10 +805,12 @@ class SecurityGroupToVirtualNetwork(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -721,7 +860,7 @@ class SecurityGroupToVirtualNetwork(object):
                                                        payload=None,
                                                        active_validation=True,
                                                        **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -738,10 +877,12 @@ class SecurityGroupToVirtualNetwork(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -811,6 +952,26 @@ class SecurityGroupToVirtualNetwork(object):
 
         return self._object_factory('bpm_ff196187ee45a92bf195593ab8f102e_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_security_groups_to_vn_to_vlan <#ciscoisesdk.
+        api.v3_0_0.security_group_to_virtual_network.
+        SecurityGroupToVirtualNetwork.bulk_request_for_security_groups_to_vn_to_vlan>`_
+        """
+        return self.bulk_request_for_security_groups_to_vn_to_vlan(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_security_groups_to_vn_to_vlan(self,
                                                           bulkid,
                                                           headers=None,
@@ -825,10 +986,12 @@ class SecurityGroupToVirtualNetwork(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -873,3 +1036,17 @@ class SecurityGroupToVirtualNetwork(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ea793a0b1b5ac498f7bc74a0aba257_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_security_groups_to_vn_to_vlan <#ciscoisesdk.
+        api.v3_0_0.security_group_to_virtual_network.
+        SecurityGroupToVirtualNetwork.monitor_bulk_status_security_groups_to_vn_to_vlan>`_
+        """
+        return self.monitor_bulk_status_security_groups_to_vn_to_vlan(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

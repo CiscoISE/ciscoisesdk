@@ -100,10 +100,12 @@ class PxGridSettings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -179,6 +181,26 @@ class PxGridSettings(object):
 
         return self._object_factory('bpm_e5dd9b5979a409b9f456265db0_v3_0_0', _api_response)
 
+    def autoapprove(self,
+                    allow_password_based_accounts=None,
+                    auto_approve_cert_based_accounts=None,
+                    headers=None,
+                    payload=None,
+                    active_validation=True,
+                    **query_parameters):
+        """Alias for `autoapprove_px_grid_settings <#ciscoisesdk.
+        api.v3_0_0.px_grid_settings.
+        PxGridSettings.autoapprove_px_grid_settings>`_
+        """
+        return self.autoapprove_px_grid_settings(
+            allow_password_based_accounts=allow_password_based_accounts,
+            auto_approve_cert_based_accounts=auto_approve_cert_based_accounts,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -192,10 +214,12 @@ class PxGridSettings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

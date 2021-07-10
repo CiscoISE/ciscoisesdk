@@ -91,10 +91,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -137,6 +139,20 @@ class NetworkAccessDictionaryAttribute(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_b47094632edd5daea17c82b5fcd812f5_v3_0_0', _api_response)
+
+    def get_all(self,
+                dictionary_name,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_dictionary_attributes_by_dictionary_name <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.get_network_access_dictionary_attributes_by_dictionary_name>`_
+        """
+        return self.get_network_access_dictionary_attributes_by_dictionary_name(
+            dictionary_name=dictionary_name,
+            headers=headers,
+            **query_parameters
+        )
 
     def post_network_access_dictionaries_by_dictionary_name_attribute(self,
                                                                       dictionary_name,
@@ -193,10 +209,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -275,6 +293,38 @@ class NetworkAccessDictionaryAttribute(object):
 
         return self._object_factory('bpm_d3034483aaa5563bb287ef0cd502130_v3_0_0', _api_response)
 
+    def create(self,
+               dictionary_name,
+               allowed_values=None,
+               data_type=None,
+               description=None,
+               direction_type=None,
+               id=None,
+               internal_name=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `post_network_access_dictionaries_by_dictionary_name_attribute <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.post_network_access_dictionaries_by_dictionary_name_attribute>`_
+        """
+        return self.post_network_access_dictionaries_by_dictionary_name_attribute(
+            dictionary_name=dictionary_name,
+            allowed_values=allowed_values,
+            data_type=data_type,
+            description=description,
+            direction_type=direction_type,
+            id=id,
+            internal_name=internal_name,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(self,
                                                                                        attribute_name,
                                                                                        dictionary_name,
@@ -295,10 +345,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -344,6 +396,22 @@ class NetworkAccessDictionaryAttribute(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_cb8619385d265527a56dc7a27527f3a1_v3_0_0', _api_response)
+
+    def get_by_name(self,
+                    attribute_name,
+                    dictionary_name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name>`_
+        """
+        return self.get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
+            attribute_name=attribute_name,
+            dictionary_name=dictionary_name,
+            headers=headers,
+            **query_parameters
+        )
 
     def put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(self,
                                                                                        attribute_name,
@@ -404,10 +472,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -490,6 +560,40 @@ class NetworkAccessDictionaryAttribute(object):
 
         return self._object_factory('bpm_d2810d771d3e5ec580c39e0deb46b2b8_v3_0_0', _api_response)
 
+    def update_by_name(self,
+                       attribute_name,
+                       dictionary_name,
+                       allowed_values=None,
+                       data_type=None,
+                       description=None,
+                       direction_type=None,
+                       id=None,
+                       internal_name=None,
+                       name=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
+        """Alias for `put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name>`_
+        """
+        return self.put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
+            attribute_name=attribute_name,
+            dictionary_name=dictionary_name,
+            allowed_values=allowed_values,
+            data_type=data_type,
+            description=description,
+            direction_type=direction_type,
+            id=id,
+            internal_name=internal_name,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(self,
                                                                                           attribute_name,
                                                                                           dictionary_name,
@@ -510,10 +614,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -559,3 +665,19 @@ class NetworkAccessDictionaryAttribute(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e1725efd8ea253d1930913a85709977f_v3_0_0', _api_response)
+
+    def delete_by_name(self,
+                       attribute_name,
+                       dictionary_name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name>`_
+        """
+        return self.delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
+            attribute_name=attribute_name,
+            dictionary_name=dictionary_name,
+            headers=headers,
+            **query_parameters
+        )

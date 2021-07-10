@@ -88,10 +88,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -142,6 +144,20 @@ class InternalUser(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f403dda9440503191536993f569cc6f_v3_0_0', _api_response)
+
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_internal_user_by_name <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.get_internal_user_by_name>`_
+        """
+        return self.get_internal_user_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_internal_user_by_name(self,
                                      name,
@@ -211,10 +227,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -319,6 +337,52 @@ class InternalUser(object):
 
         return self._object_factory('bpm_19d9509db339e3b27dc56b37_v3_0_0', _api_response)
 
+    def update_by_name(self,
+                       name,
+                       change_password=None,
+                       custom_attributes=None,
+                       description=None,
+                       email=None,
+                       enable_password=None,
+                       enabled=None,
+                       expiry_date=None,
+                       expiry_date_enabled=None,
+                       first_name=None,
+                       id=None,
+                       identity_groups=None,
+                       last_name=None,
+                       password=None,
+                       password_idstore=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
+        """Alias for `update_internal_user_by_name <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.update_internal_user_by_name>`_
+        """
+        return self.update_internal_user_by_name(
+            name=name,
+            change_password=change_password,
+            custom_attributes=custom_attributes,
+            description=description,
+            email=email,
+            enable_password=enable_password,
+            enabled=enabled,
+            expiry_date=expiry_date,
+            expiry_date_enabled=expiry_date_enabled,
+            first_name=first_name,
+            id=id,
+            identity_groups=identity_groups,
+            last_name=last_name,
+            password=password,
+            password_idstore=password_idstore,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_internal_user_by_name(self,
                                      name,
                                      headers=None,
@@ -333,10 +397,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -388,6 +454,20 @@ class InternalUser(object):
 
         return self._object_factory('bpm_b4e2fc3e595aa1be86d6589614b9_v3_0_0', _api_response)
 
+    def delete_by_name(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_internal_user_by_name <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.delete_internal_user_by_name>`_
+        """
+        return self.delete_internal_user_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_internal_user_by_id(self,
                                 id,
                                 headers=None,
@@ -402,10 +482,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -456,6 +538,20 @@ class InternalUser(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_bacf1abfc35e509183c9a7f055cbbfec_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_internal_user_by_id <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.get_internal_user_by_id>`_
+        """
+        return self.get_internal_user_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_internal_user_by_id(self,
                                    id,
@@ -525,10 +621,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -633,6 +731,52 @@ class InternalUser(object):
 
         return self._object_factory('bpm_f7227b280b745b94bb801369b168a529_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     change_password=None,
+                     custom_attributes=None,
+                     description=None,
+                     email=None,
+                     enable_password=None,
+                     enabled=None,
+                     expiry_date=None,
+                     expiry_date_enabled=None,
+                     first_name=None,
+                     identity_groups=None,
+                     last_name=None,
+                     name=None,
+                     password=None,
+                     password_idstore=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_internal_user_by_id <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.update_internal_user_by_id>`_
+        """
+        return self.update_internal_user_by_id(
+            id=id,
+            change_password=change_password,
+            custom_attributes=custom_attributes,
+            description=description,
+            email=email,
+            enable_password=enable_password,
+            enabled=enabled,
+            expiry_date=expiry_date,
+            expiry_date_enabled=expiry_date_enabled,
+            first_name=first_name,
+            identity_groups=identity_groups,
+            last_name=last_name,
+            name=name,
+            password=password,
+            password_idstore=password_idstore,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_internal_user_by_id(self,
                                    id,
                                    headers=None,
@@ -647,10 +791,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -702,6 +848,20 @@ class InternalUser(object):
 
         return self._object_factory('bpm_dcf28db5184e51139b15f9ffccd10b67_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_internal_user_by_id <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.delete_internal_user_by_id>`_
+        """
+        return self.delete_internal_user_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_internal_user(self,
                               filter=None,
                               filter_type=None,
@@ -713,7 +873,7 @@ class InternalUser(object):
                               **query_parameters):
         """This API allows the client to get all the internal users.
         Filter:   [firstName, lastName, identityGroup, name,
-        description, email, enabled]   To search guest users by
+        description, email, enabled]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -764,10 +924,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -834,6 +996,30 @@ class InternalUser(object):
 
         return self._object_factory('bpm_ccba98a61555ae495f6a05284e3b5ae_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_internal_user <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.get_all_internal_user>`_
+        """
+        return self.get_all_internal_user(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_internal_user_generator(self,
                                         filter=None,
                                         filter_type=None,
@@ -845,7 +1031,7 @@ class InternalUser(object):
                                         **query_parameters):
         """This API allows the client to get all the internal users.
         Filter:   [firstName, lastName, identityGroup, name,
-        description, email, enabled]   To search guest users by
+        description, email, enabled]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -897,10 +1083,12 @@ class InternalUser(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -917,6 +1105,31 @@ class InternalUser(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_internal_user_generator <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.get_all_internal_user_generator>`_
+        """
+        yield from get_next_page(self.get_all_internal_user, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -985,10 +1198,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1087,6 +1302,50 @@ class InternalUser(object):
 
         return self._object_factory('bpm_bf175c04fcb051b9a6fd70a2252903fa_v3_0_0', _api_response)
 
+    def create(self,
+               change_password=None,
+               custom_attributes=None,
+               description=None,
+               email=None,
+               enable_password=None,
+               enabled=None,
+               expiry_date=None,
+               expiry_date_enabled=None,
+               first_name=None,
+               identity_groups=None,
+               last_name=None,
+               name=None,
+               password=None,
+               password_idstore=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_internal_user <#ciscoisesdk.
+        api.v3_0_0.internal_user.
+        InternalUser.create_internal_user>`_
+        """
+        return self.create_internal_user(
+            change_password=change_password,
+            custom_attributes=custom_attributes,
+            description=description,
+            email=email,
+            enable_password=enable_password,
+            enabled=enabled,
+            expiry_date=expiry_date,
+            expiry_date_enabled=expiry_date_enabled,
+            first_name=first_name,
+            identity_groups=identity_groups,
+            last_name=last_name,
+            name=name,
+            password=password,
+            password_idstore=password_idstore,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -1100,10 +1359,12 @@ class InternalUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

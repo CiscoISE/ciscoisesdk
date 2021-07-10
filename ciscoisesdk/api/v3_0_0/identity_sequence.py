@@ -88,10 +88,12 @@ class IdentitySequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class IdentitySequence(object):
 
         return self._object_factory('bpm_db686413cf4558188ea60ccc05c3e920_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_identity_sequence_by_name <#ciscoisesdk.
+        api.v3_0_0.identity_sequence.
+        IdentitySequence.get_identity_sequence_by_name>`_
+        """
+        return self.get_identity_sequence_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_identity_sequence_by_id(self,
                                     id,
                                     headers=None,
@@ -157,10 +173,12 @@ class IdentitySequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -212,6 +230,20 @@ class IdentitySequence(object):
 
         return self._object_factory('bpm_cb9345e58f5433ae80f5d8f855978b_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_identity_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.identity_sequence.
+        IdentitySequence.get_identity_sequence_by_id>`_
+        """
+        return self.get_identity_sequence_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_identity_sequence_by_id(self,
                                        id,
                                        break_on_store_fail=None,
@@ -249,10 +281,12 @@ class IdentitySequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -339,6 +373,34 @@ class IdentitySequence(object):
 
         return self._object_factory('bpm_c316d5e2fdd51bdab039ea9e2a417bd_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     break_on_store_fail=None,
+                     certificate_authentication_profile=None,
+                     description=None,
+                     id_seq_item=None,
+                     name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_identity_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.identity_sequence.
+        IdentitySequence.update_identity_sequence_by_id>`_
+        """
+        return self.update_identity_sequence_by_id(
+            id=id,
+            break_on_store_fail=break_on_store_fail,
+            certificate_authentication_profile=certificate_authentication_profile,
+            description=description,
+            id_seq_item=id_seq_item,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_identity_sequence_by_id(self,
                                        id,
                                        headers=None,
@@ -353,10 +415,12 @@ class IdentitySequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -408,6 +472,20 @@ class IdentitySequence(object):
 
         return self._object_factory('bpm_b8258803668534d87781e995c73c23a_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_identity_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.identity_sequence.
+        IdentitySequence.delete_identity_sequence_by_id>`_
+        """
+        return self.delete_identity_sequence_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_identity_sequence(self,
                                   page=None,
                                   size=None,
@@ -425,10 +503,12 @@ class IdentitySequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -483,6 +563,22 @@ class IdentitySequence(object):
 
         return self._object_factory('bpm_feb30ca768795eed82c118d009d7bcd4_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_identity_sequence <#ciscoisesdk.
+        api.v3_0_0.identity_sequence.
+        IdentitySequence.get_all_identity_sequence>`_
+        """
+        return self.get_all_identity_sequence(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_identity_sequence_generator(self,
                                             page=None,
                                             size=None,
@@ -501,10 +597,12 @@ class IdentitySequence(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -517,6 +615,23 @@ class IdentitySequence(object):
         yield from get_next_page(self.get_all_identity_sequence, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_identity_sequence_generator <#ciscoisesdk.
+        api.v3_0_0.identity_sequence.
+        IdentitySequence.get_all_identity_sequence_generator>`_
+        """
+        yield from get_next_page(self.get_all_identity_sequence, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -553,10 +668,12 @@ class IdentitySequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -637,6 +754,32 @@ class IdentitySequence(object):
 
         return self._object_factory('bpm_cc0a87094bf5d96af61403dfc3747db_v3_0_0', _api_response)
 
+    def create(self,
+               break_on_store_fail=None,
+               certificate_authentication_profile=None,
+               description=None,
+               id_seq_item=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_identity_sequence <#ciscoisesdk.
+        api.v3_0_0.identity_sequence.
+        IdentitySequence.create_identity_sequence>`_
+        """
+        return self.create_identity_sequence(
+            break_on_store_fail=break_on_store_fail,
+            certificate_authentication_profile=certificate_authentication_profile,
+            description=description,
+            id_seq_item=id_seq_item,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -650,10 +793,12 @@ class IdentitySequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

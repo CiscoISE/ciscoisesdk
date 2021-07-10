@@ -89,10 +89,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -135,6 +137,20 @@ class DeviceAdministrationAuthenticationRules(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e8bd869250105a2ba30dd2cb65b0b3f2_v3_0_0', _api_response)
+
+    def get_all(self,
+                policy_id,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_policy_by_id_authentication_rule_list <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.get_device_admin_policy_by_id_authentication_rule_list>`_
+        """
+        return self.get_device_admin_policy_by_id_authentication_rule_list(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
 
     def create_device_admin_policy_by_id_authentication_rule(self,
                                                              policy_id,
@@ -180,10 +196,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -258,6 +276,36 @@ class DeviceAdministrationAuthenticationRules(object):
 
         return self._object_factory('bpm_e92c5af5344b4d9fdc45a282ce5_v3_0_0', _api_response)
 
+    def create(self,
+               policy_id,
+               identity_source_name=None,
+               if_auth_fail=None,
+               if_process_fail=None,
+               if_user_not_found=None,
+               link=None,
+               rule=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_device_admin_policy_by_id_authentication_rule <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.create_device_admin_policy_by_id_authentication_rule>`_
+        """
+        return self.create_device_admin_policy_by_id_authentication_rule(
+            policy_id=policy_id,
+            identity_source_name=identity_source_name,
+            if_auth_fail=if_auth_fail,
+            if_process_fail=if_process_fail,
+            if_user_not_found=if_user_not_found,
+            link=link,
+            rule=rule,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def reset_hit_counts_device_admin_policy_by_id_authentication_rules(self,
                                                                         policy_id,
                                                                         headers=None,
@@ -273,10 +321,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -321,6 +371,20 @@ class DeviceAdministrationAuthenticationRules(object):
 
         return self._object_factory('bpm_a1a3596305814bab0a6d05cf86280_v3_0_0', _api_response)
 
+    def reset_hit_counts_by_id(self,
+                               policy_id,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `reset_hit_counts_device_admin_policy_by_id_authentication_rules <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.reset_hit_counts_device_admin_policy_by_id_authentication_rules>`_
+        """
+        return self.reset_hit_counts_device_admin_policy_by_id_authentication_rules(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_policy_by_id_authentication_rule_by_id(self,
                                                                 policy_id,
                                                                 rule_id,
@@ -338,10 +402,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -387,6 +453,22 @@ class DeviceAdministrationAuthenticationRules(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_d71c8af3b55abb8e5959965baf2043_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  policy_id,
+                  rule_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.get_device_admin_policy_by_id_authentication_rule_by_id>`_
+        """
+        return self.get_device_admin_policy_by_id_authentication_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_device_admin_policy_by_id_authentication_rule_by_id(self,
                                                                    policy_id,
@@ -434,10 +516,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -516,6 +600,38 @@ class DeviceAdministrationAuthenticationRules(object):
 
         return self._object_factory('bpm_dc678d472905ab5bce9f4cba7cd7004_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     policy_id,
+                     rule_id,
+                     identity_source_name=None,
+                     if_auth_fail=None,
+                     if_process_fail=None,
+                     if_user_not_found=None,
+                     link=None,
+                     rule=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_device_admin_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.update_device_admin_policy_by_id_authentication_rule_by_id>`_
+        """
+        return self.update_device_admin_policy_by_id_authentication_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            identity_source_name=identity_source_name,
+            if_auth_fail=if_auth_fail,
+            if_process_fail=if_process_fail,
+            if_user_not_found=if_user_not_found,
+            link=link,
+            rule=rule,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_policy_by_id_authentication_rule_by_id(self,
                                                                    policy_id,
                                                                    rule_id,
@@ -533,10 +649,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -582,3 +700,19 @@ class DeviceAdministrationAuthenticationRules(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a0a005e87c6755e0bf5d4454a98f08c5_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     policy_id,
+                     rule_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.delete_device_admin_policy_by_id_authentication_rule_by_id>`_
+        """
+        return self.delete_device_admin_policy_by_id_authentication_rule_by_id(
+            policy_id=policy_id,
+            rule_id=rule_id,
+            headers=headers,
+            **query_parameters
+        )

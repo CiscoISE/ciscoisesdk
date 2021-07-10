@@ -89,10 +89,12 @@ class NativeSupplicantProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class NativeSupplicantProfile(object):
 
         return self._object_factory('bpm_d1b9755414c5dcbb61987b2dd06839a_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_native_supplicant_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.native_supplicant_profile.
+        NativeSupplicantProfile.get_native_supplicant_profile_by_id>`_
+        """
+        return self.get_native_supplicant_profile_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_native_supplicant_profile_by_id(self,
                                                id,
                                                description=None,
@@ -174,10 +190,12 @@ class NativeSupplicantProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -260,6 +278,30 @@ class NativeSupplicantProfile(object):
 
         return self._object_factory('bpm_c54a2ad63f46527dbec140a05f1213b7_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     description=None,
+                     name=None,
+                     wireless_profiles=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_native_supplicant_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.native_supplicant_profile.
+        NativeSupplicantProfile.update_native_supplicant_profile_by_id>`_
+        """
+        return self.update_native_supplicant_profile_by_id(
+            id=id,
+            description=description,
+            name=name,
+            wireless_profiles=wireless_profiles,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_native_supplicant_profile_by_id(self,
                                                id,
                                                headers=None,
@@ -274,10 +316,12 @@ class NativeSupplicantProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -329,6 +373,20 @@ class NativeSupplicantProfile(object):
 
         return self._object_factory('bpm_fff9d421c78597d98a54dd08a9a99f9_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_native_supplicant_profile_by_id <#ciscoisesdk.
+        api.v3_0_0.native_supplicant_profile.
+        NativeSupplicantProfile.delete_native_supplicant_profile_by_id>`_
+        """
+        return self.delete_native_supplicant_profile_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_native_supplicant_profile(self,
                                           page=None,
                                           size=None,
@@ -347,10 +405,12 @@ class NativeSupplicantProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -405,6 +465,22 @@ class NativeSupplicantProfile(object):
 
         return self._object_factory('bpm_fa9802505d7bbdf85b951581db47_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_native_supplicant_profile <#ciscoisesdk.
+        api.v3_0_0.native_supplicant_profile.
+        NativeSupplicantProfile.get_all_native_supplicant_profile>`_
+        """
+        return self.get_all_native_supplicant_profile(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_native_supplicant_profile_generator(self,
                                                     page=None,
                                                     size=None,
@@ -424,10 +500,12 @@ class NativeSupplicantProfile(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -440,6 +518,23 @@ class NativeSupplicantProfile(object):
         yield from get_next_page(self.get_all_native_supplicant_profile, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_native_supplicant_profile_generator <#ciscoisesdk.
+        api.v3_0_0.native_supplicant_profile.
+        NativeSupplicantProfile.get_all_native_supplicant_profile_generator>`_
+        """
+        yield from get_next_page(self.get_all_native_supplicant_profile, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -456,10 +551,12 @@ class NativeSupplicantProfile(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

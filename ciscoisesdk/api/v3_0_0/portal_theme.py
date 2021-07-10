@@ -88,10 +88,12 @@ class PortalTheme(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class PortalTheme(object):
 
         return self._object_factory('bpm_e58eabefef15feb880ecfe2906d805f_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_portal_theme_by_id <#ciscoisesdk.
+        api.v3_0_0.portal_theme.
+        PortalTheme.get_portal_theme_by_id>`_
+        """
+        return self.get_portal_theme_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_portal_theme_by_id(self,
                                   id,
                                   description=None,
@@ -172,10 +188,12 @@ class PortalTheme(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -258,6 +276,30 @@ class PortalTheme(object):
 
         return self._object_factory('bpm_c82dcf6f2c3d5d399045050b02208db2_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     description=None,
+                     name=None,
+                     theme_data=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_portal_theme_by_id <#ciscoisesdk.
+        api.v3_0_0.portal_theme.
+        PortalTheme.update_portal_theme_by_id>`_
+        """
+        return self.update_portal_theme_by_id(
+            id=id,
+            description=description,
+            name=name,
+            theme_data=theme_data,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_portal_theme_by_id(self,
                                   id,
                                   headers=None,
@@ -272,10 +314,12 @@ class PortalTheme(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -327,6 +371,20 @@ class PortalTheme(object):
 
         return self._object_factory('bpm_c39e537955888cc23e4f90e6449b_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_portal_theme_by_id <#ciscoisesdk.
+        api.v3_0_0.portal_theme.
+        PortalTheme.delete_portal_theme_by_id>`_
+        """
+        return self.delete_portal_theme_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_portal_themes(self,
                               filter=None,
                               filter_type=None,
@@ -337,8 +395,8 @@ class PortalTheme(object):
                               headers=None,
                               **query_parameters):
         """This API allows the client to get all the portal themes.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -388,10 +446,12 @@ class PortalTheme(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -458,6 +518,30 @@ class PortalTheme(object):
 
         return self._object_factory('bpm_ad233598ed75e0c97ddd3c3f1af50e4_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_portal_themes <#ciscoisesdk.
+        api.v3_0_0.portal_theme.
+        PortalTheme.get_all_portal_themes>`_
+        """
+        return self.get_all_portal_themes(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_portal_themes_generator(self,
                                         filter=None,
                                         filter_type=None,
@@ -468,8 +552,8 @@ class PortalTheme(object):
                                         headers=None,
                                         **query_parameters):
         """This API allows the client to get all the portal themes.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -520,10 +604,12 @@ class PortalTheme(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -540,6 +626,31 @@ class PortalTheme(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_portal_themes_generator <#ciscoisesdk.
+        api.v3_0_0.portal_theme.
+        PortalTheme.get_all_portal_themes_generator>`_
+        """
+        yield from get_next_page(self.get_all_portal_themes, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -569,10 +680,12 @@ class PortalTheme(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -649,6 +762,28 @@ class PortalTheme(object):
 
         return self._object_factory('bpm_eb833980f55025bfacbfcb8de814c8_v3_0_0', _api_response)
 
+    def create(self,
+               description=None,
+               name=None,
+               theme_data=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_portal_theme <#ciscoisesdk.
+        api.v3_0_0.portal_theme.
+        PortalTheme.create_portal_theme>`_
+        """
+        return self.create_portal_theme(
+            description=description,
+            name=name,
+            theme_data=theme_data,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -662,10 +797,12 @@ class PortalTheme(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

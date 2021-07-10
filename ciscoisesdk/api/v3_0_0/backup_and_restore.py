@@ -116,10 +116,12 @@ class BackupAndRestore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -182,6 +184,28 @@ class BackupAndRestore(object):
 
         return self._object_factory('bpm_b9638a67f60d5a6aa476af13632d96bd_v3_0_0', _api_response)
 
+    def config(self,
+               backup_encryption_key=None,
+               backup_name=None,
+               repository_name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `config_backup <#ciscoisesdk.
+        api.v3_0_0.backup_and_restore.
+        BackupAndRestore.config_backup>`_
+        """
+        return self.config_backup(
+            backup_encryption_key=backup_encryption_key,
+            backup_name=backup_name,
+            repository_name=repository_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def cancel_backup(self,
                       headers=None,
                       **query_parameters):
@@ -194,10 +218,12 @@ class BackupAndRestore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -236,6 +262,18 @@ class BackupAndRestore(object):
 
         return self._object_factory('bpm_e9813ff50a9bcbbd5d539ed19d8_v3_0_0', _api_response)
 
+    def cancel(self,
+               headers=None,
+               **query_parameters):
+        """Alias for `cancel_backup <#ciscoisesdk.
+        api.v3_0_0.backup_and_restore.
+        BackupAndRestore.cancel_backup>`_
+        """
+        return self.cancel_backup(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_last_config_backup_status(self,
                                       headers=None,
                                       **query_parameters):
@@ -248,10 +286,12 @@ class BackupAndRestore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -288,6 +328,18 @@ class BackupAndRestore(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_b0b71a5f25825202b6cb339ce1a5a8d4_v3_0_0', _api_response)
+
+    def get_last_status(self,
+                        headers=None,
+                        **query_parameters):
+        """Alias for `get_last_config_backup_status <#ciscoisesdk.
+        api.v3_0_0.backup_and_restore.
+        BackupAndRestore.get_last_config_backup_status>`_
+        """
+        return self.get_last_config_backup_status(
+            headers=headers,
+            **query_parameters
+        )
 
     def restore_config_backup(self,
                               backup_encryption_key=None,
@@ -326,10 +378,12 @@ class BackupAndRestore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -393,6 +447,30 @@ class BackupAndRestore(object):
                                                **request_params)
 
         return self._object_factory('bpm_db3505847b4e5f37a5c74bc41df54be3_v3_0_0', _api_response)
+
+    def restore(self,
+                backup_encryption_key=None,
+                repository_name=None,
+                restore_file=None,
+                restore_include_adeos=None,
+                headers=None,
+                payload=None,
+                active_validation=True,
+                **query_parameters):
+        """Alias for `restore_config_backup <#ciscoisesdk.
+        api.v3_0_0.backup_and_restore.
+        BackupAndRestore.restore_config_backup>`_
+        """
+        return self.restore_config_backup(
+            backup_encryption_key=backup_encryption_key,
+            repository_name=repository_name,
+            restore_file=restore_file,
+            restore_include_adeos=restore_include_adeos,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_scheduled_config_backup(self,
                                        backup_description=None,
@@ -477,10 +555,12 @@ class BackupAndRestore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -559,6 +639,44 @@ class BackupAndRestore(object):
                                               **request_params)
 
         return self._object_factory('bpm_d31fa60f5575a2ed23cee473c0fc_v3_0_0', _api_response)
+
+    def update(self,
+               backup_description=None,
+               backup_encryption_key=None,
+               backup_name=None,
+               end_date=None,
+               frequency=None,
+               month_day=None,
+               repository_name=None,
+               start_date=None,
+               status=None,
+               time=None,
+               week_day=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `update_scheduled_config_backup <#ciscoisesdk.
+        api.v3_0_0.backup_and_restore.
+        BackupAndRestore.update_scheduled_config_backup>`_
+        """
+        return self.update_scheduled_config_backup(
+            backup_description=backup_description,
+            backup_encryption_key=backup_encryption_key,
+            backup_name=backup_name,
+            end_date=end_date,
+            frequency=frequency,
+            month_day=month_day,
+            repository_name=repository_name,
+            start_date=start_date,
+            status=status,
+            time=time,
+            week_day=week_day,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
 
     def create_scheduled_config_backup(self,
                                        backup_description=None,
@@ -643,10 +761,12 @@ class BackupAndRestore(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -724,3 +844,41 @@ class BackupAndRestore(object):
                                                **request_params)
 
         return self._object_factory('bpm_dd4581dd32f65e8c83cca2f0a97af3e2_v3_0_0', _api_response)
+
+    def create(self,
+               backup_description=None,
+               backup_encryption_key=None,
+               backup_name=None,
+               end_date=None,
+               frequency=None,
+               month_day=None,
+               repository_name=None,
+               start_date=None,
+               status=None,
+               time=None,
+               week_day=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_scheduled_config_backup <#ciscoisesdk.
+        api.v3_0_0.backup_and_restore.
+        BackupAndRestore.create_scheduled_config_backup>`_
+        """
+        return self.create_scheduled_config_backup(
+            backup_description=backup_description,
+            backup_encryption_key=backup_encryption_key,
+            backup_name=backup_name,
+            end_date=end_date,
+            frequency=frequency,
+            month_day=month_day,
+            repository_name=repository_name,
+            start_date=start_date,
+            status=status,
+            time=time,
+            week_day=week_day,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )

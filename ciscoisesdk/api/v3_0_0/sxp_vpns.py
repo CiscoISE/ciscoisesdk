@@ -88,10 +88,12 @@ class SxpVpns(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class SxpVpns(object):
 
         return self._object_factory('bpm_cd59f40aa9305587b69944a9c819f7a9_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_sxp_vpn_by_id <#ciscoisesdk.
+        api.v3_0_0.sxp_vpns.
+        SxpVpns.get_sxp_vpn_by_id>`_
+        """
+        return self.get_sxp_vpn_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_sxp_vpn_by_id(self,
                              id,
                              headers=None,
@@ -157,10 +173,12 @@ class SxpVpns(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -212,6 +230,20 @@ class SxpVpns(object):
 
         return self._object_factory('bpm_a0501930cc9517ea1cb4103db6e0af7_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_sxp_vpn_by_id <#ciscoisesdk.
+        api.v3_0_0.sxp_vpns.
+        SxpVpns.delete_sxp_vpn_by_id>`_
+        """
+        return self.delete_sxp_vpn_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sxp_vpns(self,
                          filter=None,
                          filter_type=None,
@@ -222,7 +254,7 @@ class SxpVpns(object):
                          headers=None,
                          **query_parameters):
         """This API allows the client to get all the SXP VPNs.   Filter:
-        [name, description]   To search guest users by using
+        [name, description]   To search resources by using
         toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -273,10 +305,12 @@ class SxpVpns(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -343,6 +377,30 @@ class SxpVpns(object):
 
         return self._object_factory('bpm_a93d058764b51dc922e41bbe4ff7cd6_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_sxp_vpns <#ciscoisesdk.
+        api.v3_0_0.sxp_vpns.
+        SxpVpns.get_all_sxp_vpns>`_
+        """
+        return self.get_all_sxp_vpns(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sxp_vpns_generator(self,
                                    filter=None,
                                    filter_type=None,
@@ -353,7 +411,7 @@ class SxpVpns(object):
                                    headers=None,
                                    **query_parameters):
         """This API allows the client to get all the SXP VPNs.   Filter:
-        [name, description]   To search guest users by using
+        [name, description]   To search resources by using
         toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -405,10 +463,12 @@ class SxpVpns(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -425,6 +485,31 @@ class SxpVpns(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_sxp_vpns_generator <#ciscoisesdk.
+        api.v3_0_0.sxp_vpns.
+        SxpVpns.get_all_sxp_vpns_generator>`_
+        """
+        yield from get_next_page(self.get_all_sxp_vpns, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -449,10 +534,12 @@ class SxpVpns(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -525,6 +612,24 @@ class SxpVpns(object):
 
         return self._object_factory('bpm_a693347bdd15bb19d69a75f088498ce_v3_0_0', _api_response)
 
+    def create(self,
+               sxp_vpn_name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_sxp_vpn <#ciscoisesdk.
+        api.v3_0_0.sxp_vpns.
+        SxpVpns.create_sxp_vpn>`_
+        """
+        return self.create_sxp_vpn(
+            sxp_vpn_name=sxp_vpn_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -538,10 +643,12 @@ class SxpVpns(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -591,7 +698,7 @@ class SxpVpns(object):
                                   payload=None,
                                   active_validation=True,
                                   **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -608,10 +715,12 @@ class SxpVpns(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -681,6 +790,26 @@ class SxpVpns(object):
 
         return self._object_factory('bpm_be45eed0938a5143bf85ffd5fd4205d0_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_sxp_vpns <#ciscoisesdk.
+        api.v3_0_0.sxp_vpns.
+        SxpVpns.bulk_request_for_sxp_vpns>`_
+        """
+        return self.bulk_request_for_sxp_vpns(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_sxp_vpns(self,
                                      bulkid,
                                      headers=None,
@@ -695,10 +824,12 @@ class SxpVpns(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -743,3 +874,17 @@ class SxpVpns(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ba771c958ccc5f499c3a819fb2c67f57_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_sxp_vpns <#ciscoisesdk.
+        api.v3_0_0.sxp_vpns.
+        SxpVpns.monitor_bulk_status_sxp_vpns>`_
+        """
+        return self.monitor_bulk_status_sxp_vpns(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

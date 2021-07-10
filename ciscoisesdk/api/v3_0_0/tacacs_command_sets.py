@@ -88,10 +88,12 @@ class TacacsCommandSets(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class TacacsCommandSets(object):
 
         return self._object_factory('bpm_f8ba0e97135ca6bacff94d5a76df97_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_tacacs_command_sets_by_name <#ciscoisesdk.
+        api.v3_0_0.tacacs_command_sets.
+        TacacsCommandSets.get_tacacs_command_sets_by_name>`_
+        """
+        return self.get_tacacs_command_sets_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_tacacs_command_sets_by_id(self,
                                       id,
                                       headers=None,
@@ -157,10 +173,12 @@ class TacacsCommandSets(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -212,6 +230,20 @@ class TacacsCommandSets(object):
 
         return self._object_factory('bpm_caefe2cb042513ab4a4a76f227330cb_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_tacacs_command_sets_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_command_sets.
+        TacacsCommandSets.get_tacacs_command_sets_by_id>`_
+        """
+        return self.get_tacacs_command_sets_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_tacacs_command_sets_by_id(self,
                                          id,
                                          commands=None,
@@ -244,10 +276,12 @@ class TacacsCommandSets(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -332,6 +366,32 @@ class TacacsCommandSets(object):
 
         return self._object_factory('bpm_eb6323be425816a4116eea48f16f4b_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     commands=None,
+                     description=None,
+                     name=None,
+                     permit_unmatched=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_tacacs_command_sets_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_command_sets.
+        TacacsCommandSets.update_tacacs_command_sets_by_id>`_
+        """
+        return self.update_tacacs_command_sets_by_id(
+            id=id,
+            commands=commands,
+            description=description,
+            name=name,
+            permit_unmatched=permit_unmatched,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_tacacs_command_sets_by_id(self,
                                          id,
                                          headers=None,
@@ -346,10 +406,12 @@ class TacacsCommandSets(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -401,6 +463,20 @@ class TacacsCommandSets(object):
 
         return self._object_factory('bpm_a319a83b14252eba0f00bb4c4ab0d7c_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_tacacs_command_sets_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_command_sets.
+        TacacsCommandSets.delete_tacacs_command_sets_by_id>`_
+        """
+        return self.delete_tacacs_command_sets_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_tacacs_command_sets(self,
                                     page=None,
                                     size=None,
@@ -418,10 +494,12 @@ class TacacsCommandSets(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -476,6 +554,22 @@ class TacacsCommandSets(object):
 
         return self._object_factory('bpm_c9a67d3e9015580f93a52627f19e9916_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_tacacs_command_sets <#ciscoisesdk.
+        api.v3_0_0.tacacs_command_sets.
+        TacacsCommandSets.get_all_tacacs_command_sets>`_
+        """
+        return self.get_all_tacacs_command_sets(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_tacacs_command_sets_generator(self,
                                               page=None,
                                               size=None,
@@ -494,10 +588,12 @@ class TacacsCommandSets(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -510,6 +606,23 @@ class TacacsCommandSets(object):
         yield from get_next_page(self.get_all_tacacs_command_sets, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_tacacs_command_sets_generator <#ciscoisesdk.
+        api.v3_0_0.tacacs_command_sets.
+        TacacsCommandSets.get_all_tacacs_command_sets_generator>`_
+        """
+        yield from get_next_page(self.get_all_tacacs_command_sets, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -542,10 +655,12 @@ class TacacsCommandSets(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -624,6 +739,30 @@ class TacacsCommandSets(object):
 
         return self._object_factory('bpm_d9cc879878ee5a34ac1c32f2f0cb8c6d_v3_0_0', _api_response)
 
+    def create(self,
+               commands=None,
+               description=None,
+               name=None,
+               permit_unmatched=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_tacacs_command_sets <#ciscoisesdk.
+        api.v3_0_0.tacacs_command_sets.
+        TacacsCommandSets.create_tacacs_command_sets>`_
+        """
+        return self.create_tacacs_command_sets(
+            commands=commands,
+            description=description,
+            name=name,
+            permit_unmatched=permit_unmatched,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -637,10 +776,12 @@ class TacacsCommandSets(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

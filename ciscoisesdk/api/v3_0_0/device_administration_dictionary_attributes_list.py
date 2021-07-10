@@ -87,10 +87,12 @@ class DeviceAdministrationDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -130,6 +132,18 @@ class DeviceAdministrationDictionaryAttributesList(object):
 
         return self._object_factory('bpm_f1ff6e8bb2d5c7fbcf39fbadf5da2d5_v3_0_0', _api_response)
 
+    def get_all_authentication(self,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `get_device_admin_dictionaries_authentication <#ciscoisesdk.
+        api.v3_0_0.device_administration_dictionary_attributes_list.
+        DeviceAdministrationDictionaryAttributesList.get_device_admin_dictionaries_authentication>`_
+        """
+        return self.get_device_admin_dictionaries_authentication(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_dictionaries_authorization(self,
                                                     headers=None,
                                                     **query_parameters):
@@ -143,10 +157,12 @@ class DeviceAdministrationDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -186,6 +202,18 @@ class DeviceAdministrationDictionaryAttributesList(object):
 
         return self._object_factory('bpm_e2f955f29ce511993a189f2d234048d_v3_0_0', _api_response)
 
+    def get_all_authorization(self,
+                              headers=None,
+                              **query_parameters):
+        """Alias for `get_device_admin_dictionaries_authorization <#ciscoisesdk.
+        api.v3_0_0.device_administration_dictionary_attributes_list.
+        DeviceAdministrationDictionaryAttributesList.get_device_admin_dictionaries_authorization>`_
+        """
+        return self.get_device_admin_dictionaries_authorization(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_dictionaries_policyset(self,
                                                 headers=None,
                                                 **query_parameters):
@@ -199,10 +227,12 @@ class DeviceAdministrationDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -241,3 +271,15 @@ class DeviceAdministrationDictionaryAttributesList(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e064032895c8098927d3a39ef6af2_v3_0_0', _api_response)
+
+    def get_all_policyset(self,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_device_admin_dictionaries_policyset <#ciscoisesdk.
+        api.v3_0_0.device_administration_dictionary_attributes_list.
+        DeviceAdministrationDictionaryAttributesList.get_device_admin_dictionaries_policyset>`_
+        """
+        return self.get_device_admin_dictionaries_policyset(
+            headers=headers,
+            **query_parameters
+        )

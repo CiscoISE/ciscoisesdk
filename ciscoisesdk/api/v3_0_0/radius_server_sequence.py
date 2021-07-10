@@ -89,10 +89,12 @@ class RadiusServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class RadiusServerSequence(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_d1df0e230765104863b8d63d5beb68e_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_radius_server_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.radius_server_sequence.
+        RadiusServerSequence.get_radius_server_sequence_by_id>`_
+        """
+        return self.get_radius_server_sequence_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_radius_server_sequence_by_id(self,
                                             id,
@@ -216,10 +232,12 @@ class RadiusServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -324,6 +342,52 @@ class RadiusServerSequence(object):
 
         return self._object_factory('bpm_df9ab8ff636353279d5c787585dcb6af_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     before_accept_attr_manipulators_list=None,
+                     continue_authorz_policy=None,
+                     description=None,
+                     local_accounting=None,
+                     name=None,
+                     on_request_attr_manipulator_list=None,
+                     prefix_separator=None,
+                     radius_server_list=None,
+                     remote_accounting=None,
+                     strip_prefix=None,
+                     strip_suffix=None,
+                     suffix_separator=None,
+                     use_attr_set_before_acc=None,
+                     use_attr_set_on_request=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_radius_server_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.radius_server_sequence.
+        RadiusServerSequence.update_radius_server_sequence_by_id>`_
+        """
+        return self.update_radius_server_sequence_by_id(
+            id=id,
+            before_accept_attr_manipulators_list=before_accept_attr_manipulators_list,
+            continue_authorz_policy=continue_authorz_policy,
+            description=description,
+            local_accounting=local_accounting,
+            name=name,
+            on_request_attr_manipulator_list=on_request_attr_manipulator_list,
+            prefix_separator=prefix_separator,
+            radius_server_list=radius_server_list,
+            remote_accounting=remote_accounting,
+            strip_prefix=strip_prefix,
+            strip_suffix=strip_suffix,
+            suffix_separator=suffix_separator,
+            use_attr_set_before_acc=use_attr_set_before_acc,
+            use_attr_set_on_request=use_attr_set_on_request,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_radius_server_sequence_by_id(self,
                                             id,
                                             headers=None,
@@ -338,10 +402,12 @@ class RadiusServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -393,6 +459,20 @@ class RadiusServerSequence(object):
 
         return self._object_factory('bpm_b13838fa75d6e8d970f6eeb6a4510_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_radius_server_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.radius_server_sequence.
+        RadiusServerSequence.delete_radius_server_sequence_by_id>`_
+        """
+        return self.delete_radius_server_sequence_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_radius_server_sequence(self,
                                        page=None,
                                        size=None,
@@ -411,10 +491,12 @@ class RadiusServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -469,6 +551,22 @@ class RadiusServerSequence(object):
 
         return self._object_factory('bpm_c6c330dace185a548f70f4e5d67776ea_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_radius_server_sequence <#ciscoisesdk.
+        api.v3_0_0.radius_server_sequence.
+        RadiusServerSequence.get_all_radius_server_sequence>`_
+        """
+        return self.get_all_radius_server_sequence(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_radius_server_sequence_generator(self,
                                                  page=None,
                                                  size=None,
@@ -488,10 +586,12 @@ class RadiusServerSequence(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -504,6 +604,23 @@ class RadiusServerSequence(object):
         yield from get_next_page(self.get_all_radius_server_sequence, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_radius_server_sequence_generator <#ciscoisesdk.
+        api.v3_0_0.radius_server_sequence.
+        RadiusServerSequence.get_all_radius_server_sequence_generator>`_
+        """
+        yield from get_next_page(self.get_all_radius_server_sequence, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -576,10 +693,12 @@ class RadiusServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -678,6 +797,50 @@ class RadiusServerSequence(object):
 
         return self._object_factory('bpm_ad6ca0642c5750af6ca9905721a9d7_v3_0_0', _api_response)
 
+    def create(self,
+               before_accept_attr_manipulators_list=None,
+               continue_authorz_policy=None,
+               description=None,
+               local_accounting=None,
+               name=None,
+               on_request_attr_manipulator_list=None,
+               prefix_separator=None,
+               radius_server_list=None,
+               remote_accounting=None,
+               strip_prefix=None,
+               strip_suffix=None,
+               suffix_separator=None,
+               use_attr_set_before_acc=None,
+               use_attr_set_on_request=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_radius_server_sequence <#ciscoisesdk.
+        api.v3_0_0.radius_server_sequence.
+        RadiusServerSequence.create_radius_server_sequence>`_
+        """
+        return self.create_radius_server_sequence(
+            before_accept_attr_manipulators_list=before_accept_attr_manipulators_list,
+            continue_authorz_policy=continue_authorz_policy,
+            description=description,
+            local_accounting=local_accounting,
+            name=name,
+            on_request_attr_manipulator_list=on_request_attr_manipulator_list,
+            prefix_separator=prefix_separator,
+            radius_server_list=radius_server_list,
+            remote_accounting=remote_accounting,
+            strip_prefix=strip_prefix,
+            strip_suffix=strip_suffix,
+            suffix_separator=suffix_separator,
+            use_attr_set_before_acc=use_attr_set_before_acc,
+            use_attr_set_on_request=use_attr_set_on_request,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -691,10 +854,12 @@ class RadiusServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

@@ -88,10 +88,12 @@ class SxpConnections(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class SxpConnections(object):
 
         return self._object_factory('bpm_a5b160a5675039b7ddf3dc960c7968_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_sxp_connections_by_id <#ciscoisesdk.
+        api.v3_0_0.sxp_connections.
+        SxpConnections.get_sxp_connections_by_id>`_
+        """
+        return self.get_sxp_connections_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_sxp_connections_by_id(self,
                                      id,
                                      description=None,
@@ -183,10 +199,12 @@ class SxpConnections(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -279,6 +297,40 @@ class SxpConnections(object):
 
         return self._object_factory('bpm_cab8440e21553c3a807d23d05e5e1aa_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     description=None,
+                     enabled=None,
+                     ip_address=None,
+                     sxp_mode=None,
+                     sxp_node=None,
+                     sxp_peer=None,
+                     sxp_version=None,
+                     sxp_vpn=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_sxp_connections_by_id <#ciscoisesdk.
+        api.v3_0_0.sxp_connections.
+        SxpConnections.update_sxp_connections_by_id>`_
+        """
+        return self.update_sxp_connections_by_id(
+            id=id,
+            description=description,
+            enabled=enabled,
+            ip_address=ip_address,
+            sxp_mode=sxp_mode,
+            sxp_node=sxp_node,
+            sxp_peer=sxp_peer,
+            sxp_version=sxp_version,
+            sxp_vpn=sxp_vpn,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_sxp_connections_by_id(self,
                                      id,
                                      headers=None,
@@ -293,10 +345,12 @@ class SxpConnections(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -348,6 +402,20 @@ class SxpConnections(object):
 
         return self._object_factory('bpm_fb665776b98ba815b52515a6_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_sxp_connections_by_id <#ciscoisesdk.
+        api.v3_0_0.sxp_connections.
+        SxpConnections.delete_sxp_connections_by_id>`_
+        """
+        return self.delete_sxp_connections_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sxp_connections(self,
                                 filter=None,
                                 filter_type=None,
@@ -358,7 +426,7 @@ class SxpConnections(object):
                                 headers=None,
                                 **query_parameters):
         """This API allows the client to get all the SXP connections.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -409,10 +477,12 @@ class SxpConnections(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -479,6 +549,30 @@ class SxpConnections(object):
 
         return self._object_factory('bpm_c56dfcff6285f9b882c884873d5d6c1_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_sxp_connections <#ciscoisesdk.
+        api.v3_0_0.sxp_connections.
+        SxpConnections.get_all_sxp_connections>`_
+        """
+        return self.get_all_sxp_connections(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sxp_connections_generator(self,
                                           filter=None,
                                           filter_type=None,
@@ -489,7 +583,7 @@ class SxpConnections(object):
                                           headers=None,
                                           **query_parameters):
         """This API allows the client to get all the SXP connections.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -541,10 +635,12 @@ class SxpConnections(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -561,6 +657,31 @@ class SxpConnections(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_sxp_connections_generator <#ciscoisesdk.
+        api.v3_0_0.sxp_connections.
+        SxpConnections.get_all_sxp_connections_generator>`_
+        """
+        yield from get_next_page(self.get_all_sxp_connections, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -601,10 +722,12 @@ class SxpConnections(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -691,6 +814,38 @@ class SxpConnections(object):
 
         return self._object_factory('bpm_c371214c759f791c0a522b9eaf5b5_v3_0_0', _api_response)
 
+    def create(self,
+               description=None,
+               enabled=None,
+               ip_address=None,
+               sxp_mode=None,
+               sxp_node=None,
+               sxp_peer=None,
+               sxp_version=None,
+               sxp_vpn=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_sxp_connections <#ciscoisesdk.
+        api.v3_0_0.sxp_connections.
+        SxpConnections.create_sxp_connections>`_
+        """
+        return self.create_sxp_connections(
+            description=description,
+            enabled=enabled,
+            ip_address=ip_address,
+            sxp_mode=sxp_mode,
+            sxp_node=sxp_node,
+            sxp_peer=sxp_peer,
+            sxp_version=sxp_version,
+            sxp_vpn=sxp_vpn,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -704,10 +859,12 @@ class SxpConnections(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -757,7 +914,7 @@ class SxpConnections(object):
                                          payload=None,
                                          active_validation=True,
                                          **query_parameters):
-        """This API allows the client to submit the bulk request\.
+        """This API allows the client to submit the bulk request.
 
         Args:
             operation_type(string): operationType, property of the
@@ -774,10 +931,12 @@ class SxpConnections(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -847,6 +1006,26 @@ class SxpConnections(object):
 
         return self._object_factory('bpm_a9d9ce4538605d439015d3ed7ef88c41_v3_0_0', _api_response)
 
+    def bulk_request(self,
+                     operation_type=None,
+                     resource_media_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `bulk_request_for_sxp_connections <#ciscoisesdk.
+        api.v3_0_0.sxp_connections.
+        SxpConnections.bulk_request_for_sxp_connections>`_
+        """
+        return self.bulk_request_for_sxp_connections(
+            operation_type=operation_type,
+            resource_media_type=resource_media_type,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def monitor_bulk_status_sxp_connections(self,
                                             bulkid,
                                             headers=None,
@@ -861,10 +1040,12 @@ class SxpConnections(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -909,3 +1090,17 @@ class SxpConnections(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c2fb20ca5eb79facdda896457507_v3_0_0', _api_response)
+
+    def monitor_bulk_status(self,
+                            bulkid,
+                            headers=None,
+                            **query_parameters):
+        """Alias for `monitor_bulk_status_sxp_connections <#ciscoisesdk.
+        api.v3_0_0.sxp_connections.
+        SxpConnections.monitor_bulk_status_sxp_connections>`_
+        """
+        return self.monitor_bulk_status_sxp_connections(
+            bulkid=bulkid,
+            headers=headers,
+            **query_parameters
+        )

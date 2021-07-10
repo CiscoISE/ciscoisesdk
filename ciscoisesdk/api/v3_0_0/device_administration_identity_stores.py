@@ -88,10 +88,12 @@ class DeviceAdministrationIdentityStores(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -130,3 +132,15 @@ class DeviceAdministrationIdentityStores(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ae7d98a7b185837af8d15ae864616e0_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_identity_stores <#ciscoisesdk.
+        api.v3_0_0.device_administration_identity_stores.
+        DeviceAdministrationIdentityStores.get_device_admin_identity_stores>`_
+        """
+        return self.get_device_admin_identity_stores(
+            headers=headers,
+            **query_parameters
+        )

@@ -97,10 +97,12 @@ class GuestType(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -177,6 +179,26 @@ class GuestType(object):
 
         return self._object_factory('bpm_c7aed7320e54bfac29f13c8717a6b5_v3_0_0', _api_response)
 
+    def update_email(self,
+                     id,
+                     additional_data=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_guest_type_email <#ciscoisesdk.
+        api.v3_0_0.guest_type.
+        GuestType.update_guest_type_email>`_
+        """
+        return self.update_guest_type_email(
+            id=id,
+            additional_data=additional_data,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_guest_type_sms(self,
                               id,
                               additional_data=None,
@@ -200,10 +222,12 @@ class GuestType(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -280,6 +304,26 @@ class GuestType(object):
 
         return self._object_factory('bpm_f9661f7c85c2570897cffc3d02668263_v3_0_0', _api_response)
 
+    def update_sms(self,
+                   id,
+                   additional_data=None,
+                   headers=None,
+                   payload=None,
+                   active_validation=True,
+                   **query_parameters):
+        """Alias for `update_guest_type_sms <#ciscoisesdk.
+        api.v3_0_0.guest_type.
+        GuestType.update_guest_type_sms>`_
+        """
+        return self.update_guest_type_sms(
+            id=id,
+            additional_data=additional_data,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_guest_type_by_id(self,
                              id,
                              headers=None,
@@ -294,10 +338,12 @@ class GuestType(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -349,6 +395,20 @@ class GuestType(object):
 
         return self._object_factory('bpm_acb5a41fe395b158a3fe1cda996b0cf_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_guest_type_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_type.
+        GuestType.get_guest_type_by_id>`_
+        """
+        return self.get_guest_type_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_guest_type_by_id(self,
                                 id,
                                 access_time=None,
@@ -390,10 +450,12 @@ class GuestType(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -484,6 +546,38 @@ class GuestType(object):
 
         return self._object_factory('bpm_bac6d4d95ac45a0a8933b8712dcbe70d_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     access_time=None,
+                     description=None,
+                     expiration_notification=None,
+                     is_default_type=None,
+                     login_options=None,
+                     name=None,
+                     sponsor_groups=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_guest_type_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_type.
+        GuestType.update_guest_type_by_id>`_
+        """
+        return self.update_guest_type_by_id(
+            id=id,
+            access_time=access_time,
+            description=description,
+            expiration_notification=expiration_notification,
+            is_default_type=is_default_type,
+            login_options=login_options,
+            name=name,
+            sponsor_groups=sponsor_groups,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_guest_type_by_id(self,
                                 id,
                                 headers=None,
@@ -498,10 +592,12 @@ class GuestType(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -553,6 +649,20 @@ class GuestType(object):
 
         return self._object_factory('bpm_faa7211d68e5b329034e17c82b78694_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_guest_type_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_type.
+        GuestType.delete_guest_type_by_id>`_
+        """
+        return self.delete_guest_type_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_guest_type(self,
                            filter=None,
                            filter_type=None,
@@ -563,7 +673,7 @@ class GuestType(object):
                            headers=None,
                            **query_parameters):
         """This API allows the client to get all the guest types.   Filter:
-        [name]   To search guest users by using  toDate
+        [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -614,10 +724,12 @@ class GuestType(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -684,6 +796,30 @@ class GuestType(object):
 
         return self._object_factory('bpm_f41a1e47105581fabf212f259626903_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_guest_type <#ciscoisesdk.
+        api.v3_0_0.guest_type.
+        GuestType.get_all_guest_type>`_
+        """
+        return self.get_all_guest_type(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_guest_type_generator(self,
                                      filter=None,
                                      filter_type=None,
@@ -694,7 +830,7 @@ class GuestType(object):
                                      headers=None,
                                      **query_parameters):
         """This API allows the client to get all the guest types.   Filter:
-        [name]   To search guest users by using  toDate
+        [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -746,10 +882,12 @@ class GuestType(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -766,6 +904,31 @@ class GuestType(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_guest_type_generator <#ciscoisesdk.
+        api.v3_0_0.guest_type.
+        GuestType.get_all_guest_type_generator>`_
+        """
+        yield from get_next_page(self.get_all_guest_type, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -807,10 +970,12 @@ class GuestType(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -895,6 +1060,36 @@ class GuestType(object):
 
         return self._object_factory('bpm_f46c01449d585b088490c4db530c56d5_v3_0_0', _api_response)
 
+    def create(self,
+               access_time=None,
+               description=None,
+               expiration_notification=None,
+               is_default_type=None,
+               login_options=None,
+               name=None,
+               sponsor_groups=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_guest_type <#ciscoisesdk.
+        api.v3_0_0.guest_type.
+        GuestType.create_guest_type>`_
+        """
+        return self.create_guest_type(
+            access_time=access_time,
+            description=description,
+            expiration_notification=expiration_notification,
+            is_default_type=is_default_type,
+            login_options=login_options,
+            name=name,
+            sponsor_groups=sponsor_groups,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -908,10 +1103,12 @@ class GuestType(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

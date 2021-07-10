@@ -88,10 +88,12 @@ class SponsorGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -142,6 +144,20 @@ class SponsorGroup(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_eaa0d7c339d152b688876c2e10f51fe7_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_sponsor_group_by_id <#ciscoisesdk.
+        api.v3_0_0.sponsor_group.
+        SponsorGroup.get_sponsor_group_by_id>`_
+        """
+        return self.get_sponsor_group_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_sponsor_group_by_id(self,
                                    id,
@@ -196,10 +212,12 @@ class SponsorGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -298,6 +316,46 @@ class SponsorGroup(object):
 
         return self._object_factory('bpm_dfc44f7f24d153d789efa48e904b3832_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     auto_notification=None,
+                     create_permissions=None,
+                     description=None,
+                     guest_types=None,
+                     is_default_group=None,
+                     is_enabled=None,
+                     locations=None,
+                     manage_permission=None,
+                     member_groups=None,
+                     name=None,
+                     other_permissions=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_sponsor_group_by_id <#ciscoisesdk.
+        api.v3_0_0.sponsor_group.
+        SponsorGroup.update_sponsor_group_by_id>`_
+        """
+        return self.update_sponsor_group_by_id(
+            id=id,
+            auto_notification=auto_notification,
+            create_permissions=create_permissions,
+            description=description,
+            guest_types=guest_types,
+            is_default_group=is_default_group,
+            is_enabled=is_enabled,
+            locations=locations,
+            manage_permission=manage_permission,
+            member_groups=member_groups,
+            name=name,
+            other_permissions=other_permissions,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_sponsor_group_by_id(self,
                                    id,
                                    headers=None,
@@ -312,10 +370,12 @@ class SponsorGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -367,6 +427,20 @@ class SponsorGroup(object):
 
         return self._object_factory('bpm_c28a45acf05fec98879d8d2ac51129_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_sponsor_group_by_id <#ciscoisesdk.
+        api.v3_0_0.sponsor_group.
+        SponsorGroup.delete_sponsor_group_by_id>`_
+        """
+        return self.delete_sponsor_group_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sponsor_group(self,
                               filter=None,
                               filter_type=None,
@@ -377,8 +451,8 @@ class SponsorGroup(object):
                               headers=None,
                               **query_parameters):
         """This API allows the client to get all the sponsor groups.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -428,10 +502,12 @@ class SponsorGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -498,6 +574,30 @@ class SponsorGroup(object):
 
         return self._object_factory('bpm_f1196f1f6fde5978b0522f096926d443_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_sponsor_group <#ciscoisesdk.
+        api.v3_0_0.sponsor_group.
+        SponsorGroup.get_all_sponsor_group>`_
+        """
+        return self.get_all_sponsor_group(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sponsor_group_generator(self,
                                         filter=None,
                                         filter_type=None,
@@ -508,8 +608,8 @@ class SponsorGroup(object):
                                         headers=None,
                                         **query_parameters):
         """This API allows the client to get all the sponsor groups.
-        Filter:   [name]   To search guest users by using
-        toDate  column,follow the format:   DD-MON-YY
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -560,10 +660,12 @@ class SponsorGroup(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -580,6 +682,31 @@ class SponsorGroup(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_sponsor_group_generator <#ciscoisesdk.
+        api.v3_0_0.sponsor_group.
+        SponsorGroup.get_all_sponsor_group_generator>`_
+        """
+        yield from get_next_page(self.get_all_sponsor_group, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -633,10 +760,12 @@ class SponsorGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -729,6 +858,44 @@ class SponsorGroup(object):
 
         return self._object_factory('bpm_acd30d35ee2ae16ff23757de7d8_v3_0_0', _api_response)
 
+    def create(self,
+               auto_notification=None,
+               create_permissions=None,
+               description=None,
+               guest_types=None,
+               is_default_group=None,
+               is_enabled=None,
+               locations=None,
+               manage_permission=None,
+               member_groups=None,
+               name=None,
+               other_permissions=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_sponsor_group <#ciscoisesdk.
+        api.v3_0_0.sponsor_group.
+        SponsorGroup.create_sponsor_group>`_
+        """
+        return self.create_sponsor_group(
+            auto_notification=auto_notification,
+            create_permissions=create_permissions,
+            description=description,
+            guest_types=guest_types,
+            is_default_group=is_default_group,
+            is_enabled=is_enabled,
+            locations=locations,
+            manage_permission=manage_permission,
+            member_groups=member_groups,
+            name=name,
+            other_permissions=other_permissions,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -742,10 +909,12 @@ class SponsorGroup(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

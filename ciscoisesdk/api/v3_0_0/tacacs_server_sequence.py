@@ -89,10 +89,12 @@ class TacacsServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -144,6 +146,20 @@ class TacacsServerSequence(object):
 
         return self._object_factory('bpm_b03900a2e5027b615d9f1bdcf9f63_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_tacacs_server_sequence_by_name <#ciscoisesdk.
+        api.v3_0_0.tacacs_server_sequence.
+        TacacsServerSequence.get_tacacs_server_sequence_by_name>`_
+        """
+        return self.get_tacacs_server_sequence_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_tacacs_server_sequence_by_id(self,
                                          id,
                                          headers=None,
@@ -159,10 +175,12 @@ class TacacsServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -213,6 +231,20 @@ class TacacsServerSequence(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_b9eb9547216547cab8b9e686eee674b_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_tacacs_server_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_server_sequence.
+        TacacsServerSequence.get_tacacs_server_sequence_by_id>`_
+        """
+        return self.get_tacacs_server_sequence_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_tacacs_server_sequence_by_id(self,
                                             id,
@@ -269,10 +301,12 @@ class TacacsServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -367,6 +401,42 @@ class TacacsServerSequence(object):
 
         return self._object_factory('bpm_a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     description=None,
+                     local_accounting=None,
+                     name=None,
+                     prefix_delimiter=None,
+                     prefix_strip=None,
+                     remote_accounting=None,
+                     server_list=None,
+                     suffix_delimiter=None,
+                     suffix_strip=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_tacacs_server_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_server_sequence.
+        TacacsServerSequence.update_tacacs_server_sequence_by_id>`_
+        """
+        return self.update_tacacs_server_sequence_by_id(
+            id=id,
+            description=description,
+            local_accounting=local_accounting,
+            name=name,
+            prefix_delimiter=prefix_delimiter,
+            prefix_strip=prefix_strip,
+            remote_accounting=remote_accounting,
+            server_list=server_list,
+            suffix_delimiter=suffix_delimiter,
+            suffix_strip=suffix_strip,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_tacacs_server_sequence_by_id(self,
                                             id,
                                             headers=None,
@@ -381,10 +451,12 @@ class TacacsServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -436,6 +508,20 @@ class TacacsServerSequence(object):
 
         return self._object_factory('bpm_2564523798353b885b115048_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_tacacs_server_sequence_by_id <#ciscoisesdk.
+        api.v3_0_0.tacacs_server_sequence.
+        TacacsServerSequence.delete_tacacs_server_sequence_by_id>`_
+        """
+        return self.delete_tacacs_server_sequence_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_tacacs_server_sequence(self,
                                        page=None,
                                        size=None,
@@ -454,10 +540,12 @@ class TacacsServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -512,6 +600,22 @@ class TacacsServerSequence(object):
 
         return self._object_factory('bpm_c189f2f5f6b8bab3931c206c949_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_tacacs_server_sequence <#ciscoisesdk.
+        api.v3_0_0.tacacs_server_sequence.
+        TacacsServerSequence.get_all_tacacs_server_sequence>`_
+        """
+        return self.get_all_tacacs_server_sequence(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_tacacs_server_sequence_generator(self,
                                                  page=None,
                                                  size=None,
@@ -531,10 +635,12 @@ class TacacsServerSequence(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -547,6 +653,23 @@ class TacacsServerSequence(object):
         yield from get_next_page(self.get_all_tacacs_server_sequence, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_tacacs_server_sequence_generator <#ciscoisesdk.
+        api.v3_0_0.tacacs_server_sequence.
+        TacacsServerSequence.get_all_tacacs_server_sequence_generator>`_
+        """
+        yield from get_next_page(self.get_all_tacacs_server_sequence, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -602,10 +725,12 @@ class TacacsServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -694,6 +819,40 @@ class TacacsServerSequence(object):
 
         return self._object_factory('bpm_a1e26e595667bd98f84dd29232e2_v3_0_0', _api_response)
 
+    def create(self,
+               description=None,
+               local_accounting=None,
+               name=None,
+               prefix_delimiter=None,
+               prefix_strip=None,
+               remote_accounting=None,
+               server_list=None,
+               suffix_delimiter=None,
+               suffix_strip=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_tacacs_server_sequence <#ciscoisesdk.
+        api.v3_0_0.tacacs_server_sequence.
+        TacacsServerSequence.create_tacacs_server_sequence>`_
+        """
+        return self.create_tacacs_server_sequence(
+            description=description,
+            local_accounting=local_accounting,
+            name=name,
+            prefix_delimiter=prefix_delimiter,
+            prefix_strip=prefix_strip,
+            remote_accounting=remote_accounting,
+            server_list=server_list,
+            suffix_delimiter=suffix_delimiter,
+            suffix_strip=suffix_strip,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -707,10 +866,12 @@ class TacacsServerSequence(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

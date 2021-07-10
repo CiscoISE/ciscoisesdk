@@ -98,10 +98,12 @@ class SystemCertificate(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -176,6 +178,26 @@ class SystemCertificate(object):
 
         return self._object_factory('bpm_dd469dcee9445c72a3861ef94fb3b096_v3_0_0', _api_response)
 
+    def create(self,
+               ers_local_cert_stub=None,
+               node_id=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_system_certificate <#ciscoisesdk.
+        api.v3_0_0.system_certificate.
+        SystemCertificate.create_system_certificate>`_
+        """
+        return self.create_system_certificate(
+            ers_local_cert_stub=ers_local_cert_stub,
+            node_id=node_id,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -189,10 +211,12 @@ class SystemCertificate(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

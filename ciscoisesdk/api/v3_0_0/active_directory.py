@@ -88,10 +88,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_c6be021c4ca59e48c97afe218219bb1_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_active_directory_by_name <#ciscoisesdk.
+        api.v3_0_0.active_directory.
+        ActiveDirectory.get_active_directory_by_name>`_
+        """
+        return self.get_active_directory_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_user_groups(self,
                             id,
                             additional_data=None,
@@ -167,10 +183,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -302,10 +320,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -422,10 +442,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -525,10 +547,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -620,10 +644,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -700,10 +726,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -804,10 +832,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -907,10 +937,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1002,10 +1034,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1057,6 +1091,20 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_cfcc7615d0492e2dd1b04dd03a9_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_active_directory_by_id <#ciscoisesdk.
+        api.v3_0_0.active_directory.
+        ActiveDirectory.get_active_directory_by_id>`_
+        """
+        return self.get_active_directory_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_active_directory_by_id(self,
                                       id,
                                       headers=None,
@@ -1071,10 +1119,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1126,6 +1176,20 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_febbe79ed5bb780d97a98f292b606_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_active_directory_by_id <#ciscoisesdk.
+        api.v3_0_0.active_directory.
+        ActiveDirectory.delete_active_directory_by_id>`_
+        """
+        return self.delete_active_directory_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def join_domain(self,
                     id,
                     additional_data=None,
@@ -1149,10 +1213,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1247,10 +1313,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1305,6 +1373,22 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_c8dbec9679d453f78cb47d894c507a7b_v3_0_0', _api_response)
 
+    def get_all(self,
+                page=None,
+                size=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_active_directory <#ciscoisesdk.
+        api.v3_0_0.active_directory.
+        ActiveDirectory.get_all_active_directory>`_
+        """
+        return self.get_all_active_directory(
+            page=page,
+            size=size,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_active_directory_generator(self,
                                            page=None,
                                            size=None,
@@ -1324,10 +1408,12 @@ class ActiveDirectory(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -1340,6 +1426,23 @@ class ActiveDirectory(object):
         yield from get_next_page(self.get_all_active_directory, dict(
             page=page,
             size=size,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_active_directory_generator <#ciscoisesdk.
+        api.v3_0_0.active_directory.
+        ActiveDirectory.get_all_active_directory_generator>`_
+        """
+        yield from get_next_page(self.get_all_active_directory, dict(
+            page=page,
+            size=size,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -1396,10 +1499,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -1488,6 +1593,40 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_e9318040a456978757d7abfa3e66b1_v3_0_0', _api_response)
 
+    def create(self,
+               ad_attributes=None,
+               ad_scopes_names=None,
+               adgroups=None,
+               advanced_settings=None,
+               description=None,
+               domain=None,
+               enable_domain_white_list=None,
+               id=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_active_directory <#ciscoisesdk.
+        api.v3_0_0.active_directory.
+        ActiveDirectory.create_active_directory>`_
+        """
+        return self.create_active_directory(
+            ad_attributes=ad_attributes,
+            ad_scopes_names=ad_scopes_names,
+            adgroups=adgroups,
+            advanced_settings=advanced_settings,
+            description=description,
+            domain=domain,
+            enable_domain_white_list=enable_domain_white_list,
+            id=id,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -1501,10 +1640,12 @@ class ActiveDirectory(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

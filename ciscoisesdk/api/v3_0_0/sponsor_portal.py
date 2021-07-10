@@ -88,10 +88,12 @@ class SponsorPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class SponsorPortal(object):
 
         return self._object_factory('bpm_cd6793a4a8e7576c8b290bdc88001f6f_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_sponsor_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.sponsor_portal.
+        SponsorPortal.get_sponsor_portal_by_id>`_
+        """
+        return self.get_sponsor_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_sponsor_portal_by_id(self,
                                     id,
                                     customizations=None,
@@ -186,10 +202,12 @@ class SponsorPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -278,6 +296,36 @@ class SponsorPortal(object):
 
         return self._object_factory('bpm_bd8691c5d9435e48a3c7a08658bda585_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     customizations=None,
+                     description=None,
+                     name=None,
+                     portal_test_url=None,
+                     portal_type=None,
+                     settings=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_sponsor_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.sponsor_portal.
+        SponsorPortal.update_sponsor_portal_by_id>`_
+        """
+        return self.update_sponsor_portal_by_id(
+            id=id,
+            customizations=customizations,
+            description=description,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_sponsor_portal_by_id(self,
                                     id,
                                     headers=None,
@@ -292,10 +340,12 @@ class SponsorPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -347,6 +397,20 @@ class SponsorPortal(object):
 
         return self._object_factory('bpm_d8d4c7451f7f5e2faae4e8ac530b5f08_v3_0_0', _api_response)
 
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_sponsor_portal_by_id <#ciscoisesdk.
+        api.v3_0_0.sponsor_portal.
+        SponsorPortal.delete_sponsor_portal_by_id>`_
+        """
+        return self.delete_sponsor_portal_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sponsor_portal(self,
                                filter=None,
                                filter_type=None,
@@ -357,7 +421,7 @@ class SponsorPortal(object):
                                headers=None,
                                **query_parameters):
         """This API allows the client to get all the sponsor portals.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -408,10 +472,12 @@ class SponsorPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -478,6 +544,30 @@ class SponsorPortal(object):
 
         return self._object_factory('bpm_aa24c1260a568b93c283ecd2c3510e_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_sponsor_portal <#ciscoisesdk.
+        api.v3_0_0.sponsor_portal.
+        SponsorPortal.get_all_sponsor_portal>`_
+        """
+        return self.get_all_sponsor_portal(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_sponsor_portal_generator(self,
                                          filter=None,
                                          filter_type=None,
@@ -488,7 +578,7 @@ class SponsorPortal(object):
                                          headers=None,
                                          **query_parameters):
         """This API allows the client to get all the sponsor portals.
-        Filter:   [name, description]   To search guest users by
+        Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
         (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
@@ -540,10 +630,12 @@ class SponsorPortal(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -560,6 +652,31 @@ class SponsorPortal(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_sponsor_portal_generator <#ciscoisesdk.
+        api.v3_0_0.sponsor_portal.
+        SponsorPortal.get_all_sponsor_portal_generator>`_
+        """
+        yield from get_next_page(self.get_all_sponsor_portal, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -603,10 +720,12 @@ class SponsorPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -689,6 +808,34 @@ class SponsorPortal(object):
 
         return self._object_factory('bpm_f15d19b858d59218ab56b7323ca2fae_v3_0_0', _api_response)
 
+    def create(self,
+               customizations=None,
+               description=None,
+               name=None,
+               portal_test_url=None,
+               portal_type=None,
+               settings=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_sponsor_portal <#ciscoisesdk.
+        api.v3_0_0.sponsor_portal.
+        SponsorPortal.create_sponsor_portal>`_
+        """
+        return self.create_sponsor_portal(
+            customizations=customizations,
+            description=description,
+            name=name,
+            portal_test_url=portal_test_url,
+            portal_type=portal_type,
+            settings=settings,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):
@@ -702,10 +849,12 @@ class SponsorPortal(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

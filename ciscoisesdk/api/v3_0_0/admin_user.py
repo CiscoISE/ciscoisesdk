@@ -88,10 +88,12 @@ class AdminUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -143,6 +145,20 @@ class AdminUser(object):
 
         return self._object_factory('bpm_adac9b81d9235be3b656acf9436583dd_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_admin_user_by_id <#ciscoisesdk.
+        api.v3_0_0.admin_user.
+        AdminUser.get_admin_user_by_id>`_
+        """
+        return self.get_admin_user_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_admin_users(self,
                             filter=None,
                             filter_type=None,
@@ -156,7 +172,7 @@ class AdminUser(object):
         [firstName, lastName, adminGroups, name, description,
         inactiveAccountNeverDisabled,
         includeSystemAlarmsInEmail, email, enabled]   To search
-        guest users by using  toDate  column,follow the format:
+        resources by using  toDate  column,follow the format:
         DD-MON-YY (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -206,10 +222,12 @@ class AdminUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -276,6 +294,30 @@ class AdminUser(object):
 
         return self._object_factory('bpm_a109d72fa5ac0a64d357302f26669_v3_0_0', _api_response)
 
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_all_admin_users <#ciscoisesdk.
+        api.v3_0_0.admin_user.
+        AdminUser.get_all_admin_users>`_
+        """
+        return self.get_all_admin_users(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_all_admin_users_generator(self,
                                       filter=None,
                                       filter_type=None,
@@ -289,7 +331,7 @@ class AdminUser(object):
         [firstName, lastName, adminGroups, name, description,
         inactiveAccountNeverDisabled,
         includeSystemAlarmsInEmail, email, enabled]   To search
-        guest users by using  toDate  column,follow the format:
+        resources by using  toDate  column,follow the format:
         DD-MON-YY (Example:13-SEP-18)     Day or Year:GET
         /ers/config/guestuser/?filter=toDate.CONTAINS.13
         Month:GET
@@ -340,10 +382,12 @@ class AdminUser(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -360,6 +404,31 @@ class AdminUser(object):
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_all_admin_users_generator <#ciscoisesdk.
+        api.v3_0_0.admin_user.
+        AdminUser.get_all_admin_users_generator>`_
+        """
+        yield from get_next_page(self.get_all_admin_users, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
@@ -376,10 +445,12 @@ class AdminUser(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
