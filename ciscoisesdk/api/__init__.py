@@ -127,10 +127,10 @@ from .v3_0_0.guest_user import \
     GuestUser as GuestUser_v3_0_0
 from .v3_0_0.hotspot_portal import \
     HotspotPortal as HotspotPortal_v3_0_0
-from .v3_0_0.i_p_to_sgt_mapping import \
-    IPToSgtMapping as IPToSgtMapping_v3_0_0
-from .v3_0_0.i_p_to_sgt_mapping_group import \
-    IPToSgtMappingGroup as IPToSgtMappingGroup_v3_0_0
+from .v3_0_0.ip_to_sgt_mapping import \
+    IpToSgtMapping as IpToSgtMapping_v3_0_0
+from .v3_0_0.ip_to_sgt_mapping_group import \
+    IpToSgtMappingGroup as IpToSgtMappingGroup_v3_0_0
 from .v3_0_0.identity_groups import \
     IdentityGroups as IdentityGroups_v3_0_0
 from .v3_0_0.identity_sequence import \
@@ -720,12 +720,12 @@ class IdentityServicesEngineAPI(object):
                 HotspotPortal_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.i_p_to_sgt_mapping = \
-                IPToSgtMapping_v3_0_0(
+            self.ip_to_sgt_mapping = \
+                IpToSgtMapping_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.i_p_to_sgt_mapping_group = \
-                IPToSgtMappingGroup_v3_0_0(
+            self.ip_to_sgt_mapping_group = \
+                IpToSgtMappingGroup_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.identity_groups = \

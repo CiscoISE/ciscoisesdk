@@ -416,21 +416,21 @@ hotspot_portal
 
 
 
-.. _i_p_to_sgt_mapping_3_0_0:
+.. _ip_to_sgt_mapping_3_0_0:
 
-i_p_to_sgt_mapping
-------------------
+ip_to_sgt_mapping
+-----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.i_p_to_sgt_mapping.IPToSgtMapping()
+.. autoclass:: ciscoisesdk.api.v3_0_0.ip_to_sgt_mapping.IpToSgtMapping()
 
 
 
-.. _i_p_to_sgt_mapping_group_3_0_0:
+.. _ip_to_sgt_mapping_group_3_0_0:
 
-i_p_to_sgt_mapping_group
-------------------------
+ip_to_sgt_mapping_group
+-----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.i_p_to_sgt_mapping_group.IPToSgtMappingGroup()
+.. autoclass:: ciscoisesdk.api.v3_0_0.ip_to_sgt_mapping_group.IpToSgtMappingGroup()
 
 
 

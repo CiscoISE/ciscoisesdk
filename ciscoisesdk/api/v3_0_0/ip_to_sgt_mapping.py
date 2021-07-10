@@ -45,7 +45,7 @@ from ...utils import (
 import urllib.parse
 
 
-class IPToSgtMapping(object):
+class IpToSgtMapping(object):
     """Identity Services Engine IPToSGTMapping API (version: 3.0.0).
 
     Wraps the Identity Services Engine IPToSGTMapping
@@ -55,7 +55,7 @@ class IPToSgtMapping(object):
     """
 
     def __init__(self, session, object_factory, request_validator):
-        """Initialize a new IPToSgtMapping
+        """Initialize a new IpToSgtMapping
         object with the provided RestSession.
 
         Args:
@@ -68,7 +68,7 @@ class IPToSgtMapping(object):
         """
         check_type(session, RestSession)
 
-        super(IPToSgtMapping, self).__init__()
+        super(IpToSgtMapping, self).__init__()
 
         self._session = session
         self._object_factory = object_factory

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""IdentityServicesEngineAPI i_p_to_sgt_mapping_group API fixtures and tests.
+"""IdentityServicesEngineAPI ip_to_sgt_mapping_group API fixtures and tests.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -41,7 +41,7 @@ def is_valid_deploy_ip_to_sgt_mapping_group_by_id(json_schema_validate, obj):
 
 
 def deploy_ip_to_sgt_mapping_group_by_id(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.deploy_ip_to_sgt_mapping_group_by_id(
+    endpoint_result = api.ip_to_sgt_mapping_group.deploy_ip_to_sgt_mapping_group_by_id(
         active_validation=False,
         id='string',
         payload=None
@@ -49,7 +49,7 @@ def deploy_ip_to_sgt_mapping_group_by_id(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_deploy_ip_to_sgt_mapping_group_by_id(api, validator):
     try:
         assert is_valid_deploy_ip_to_sgt_mapping_group_by_id(
@@ -63,7 +63,7 @@ def test_deploy_ip_to_sgt_mapping_group_by_id(api, validator):
 
 
 def deploy_ip_to_sgt_mapping_group_by_id_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.deploy_ip_to_sgt_mapping_group_by_id(
+    endpoint_result = api.ip_to_sgt_mapping_group.deploy_ip_to_sgt_mapping_group_by_id(
         active_validation=False,
         id='string',
         payload=None
@@ -71,7 +71,7 @@ def deploy_ip_to_sgt_mapping_group_by_id_default(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_deploy_ip_to_sgt_mapping_group_by_id_default(api, validator):
     try:
         assert is_valid_deploy_ip_to_sgt_mapping_group_by_id(
@@ -95,14 +95,14 @@ def is_valid_deploy_all_ip_to_sgt_mapping_group(json_schema_validate, obj):
 
 
 def deploy_all_ip_to_sgt_mapping_group(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.deploy_all_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.deploy_all_ip_to_sgt_mapping_group(
         active_validation=False,
         payload=None
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_deploy_all_ip_to_sgt_mapping_group(api, validator):
     try:
         assert is_valid_deploy_all_ip_to_sgt_mapping_group(
@@ -116,14 +116,14 @@ def test_deploy_all_ip_to_sgt_mapping_group(api, validator):
 
 
 def deploy_all_ip_to_sgt_mapping_group_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.deploy_all_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.deploy_all_ip_to_sgt_mapping_group(
         active_validation=False,
         payload=None
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_deploy_all_ip_to_sgt_mapping_group_default(api, validator):
     try:
         assert is_valid_deploy_all_ip_to_sgt_mapping_group(
@@ -147,14 +147,14 @@ def is_valid_get_deploy_status_ip_to_sgt_mapping_group(json_schema_validate, obj
 
 
 def get_deploy_status_ip_to_sgt_mapping_group(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.get_deploy_status_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.get_deploy_status_ip_to_sgt_mapping_group(
         active_validation=False,
         payload=None
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_get_deploy_status_ip_to_sgt_mapping_group(api, validator):
     try:
         assert is_valid_get_deploy_status_ip_to_sgt_mapping_group(
@@ -168,14 +168,14 @@ def test_get_deploy_status_ip_to_sgt_mapping_group(api, validator):
 
 
 def get_deploy_status_ip_to_sgt_mapping_group_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.get_deploy_status_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.get_deploy_status_ip_to_sgt_mapping_group(
         active_validation=False,
         payload=None
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_get_deploy_status_ip_to_sgt_mapping_group_default(api, validator):
     try:
         assert is_valid_get_deploy_status_ip_to_sgt_mapping_group(
@@ -199,13 +199,13 @@ def is_valid_get_ip_to_sgt_mapping_group_by_id(json_schema_validate, obj):
 
 
 def get_ip_to_sgt_mapping_group_by_id(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.get_ip_to_sgt_mapping_group_by_id(
+    endpoint_result = api.ip_to_sgt_mapping_group.get_ip_to_sgt_mapping_group_by_id(
         id='string'
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_get_ip_to_sgt_mapping_group_by_id(api, validator):
     try:
         assert is_valid_get_ip_to_sgt_mapping_group_by_id(
@@ -219,13 +219,13 @@ def test_get_ip_to_sgt_mapping_group_by_id(api, validator):
 
 
 def get_ip_to_sgt_mapping_group_by_id_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.get_ip_to_sgt_mapping_group_by_id(
+    endpoint_result = api.ip_to_sgt_mapping_group.get_ip_to_sgt_mapping_group_by_id(
         id='string'
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_get_ip_to_sgt_mapping_group_by_id_default(api, validator):
     try:
         assert is_valid_get_ip_to_sgt_mapping_group_by_id(
@@ -249,7 +249,7 @@ def is_valid_update_ip_to_sgt_mapping_group_by_id(json_schema_validate, obj):
 
 
 def update_ip_to_sgt_mapping_group_by_id(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.update_ip_to_sgt_mapping_group_by_id(
+    endpoint_result = api.ip_to_sgt_mapping_group.update_ip_to_sgt_mapping_group_by_id(
         active_validation=False,
         deploy_to='string',
         deploy_type='string',
@@ -261,7 +261,7 @@ def update_ip_to_sgt_mapping_group_by_id(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_update_ip_to_sgt_mapping_group_by_id(api, validator):
     try:
         assert is_valid_update_ip_to_sgt_mapping_group_by_id(
@@ -275,7 +275,7 @@ def test_update_ip_to_sgt_mapping_group_by_id(api, validator):
 
 
 def update_ip_to_sgt_mapping_group_by_id_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.update_ip_to_sgt_mapping_group_by_id(
+    endpoint_result = api.ip_to_sgt_mapping_group.update_ip_to_sgt_mapping_group_by_id(
         active_validation=False,
         id='string',
         deploy_to=None,
@@ -287,7 +287,7 @@ def update_ip_to_sgt_mapping_group_by_id_default(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_update_ip_to_sgt_mapping_group_by_id_default(api, validator):
     try:
         assert is_valid_update_ip_to_sgt_mapping_group_by_id(
@@ -311,13 +311,13 @@ def is_valid_delete_ip_to_sgt_mapping_group_by_id(json_schema_validate, obj):
 
 
 def delete_ip_to_sgt_mapping_group_by_id(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.delete_ip_to_sgt_mapping_group_by_id(
+    endpoint_result = api.ip_to_sgt_mapping_group.delete_ip_to_sgt_mapping_group_by_id(
         id='string'
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_delete_ip_to_sgt_mapping_group_by_id(api, validator):
     try:
         assert is_valid_delete_ip_to_sgt_mapping_group_by_id(
@@ -331,13 +331,13 @@ def test_delete_ip_to_sgt_mapping_group_by_id(api, validator):
 
 
 def delete_ip_to_sgt_mapping_group_by_id_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.delete_ip_to_sgt_mapping_group_by_id(
+    endpoint_result = api.ip_to_sgt_mapping_group.delete_ip_to_sgt_mapping_group_by_id(
         id='string'
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_delete_ip_to_sgt_mapping_group_by_id_default(api, validator):
     try:
         assert is_valid_delete_ip_to_sgt_mapping_group_by_id(
@@ -361,7 +361,7 @@ def is_valid_get_all_ip_to_sgt_mapping_group(json_schema_validate, obj):
 
 
 def get_all_ip_to_sgt_mapping_group(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.get_all_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.get_all_ip_to_sgt_mapping_group(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -372,7 +372,7 @@ def get_all_ip_to_sgt_mapping_group(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_get_all_ip_to_sgt_mapping_group(api, validator):
     try:
         assert is_valid_get_all_ip_to_sgt_mapping_group(
@@ -386,7 +386,7 @@ def test_get_all_ip_to_sgt_mapping_group(api, validator):
 
 
 def get_all_ip_to_sgt_mapping_group_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.get_all_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.get_all_ip_to_sgt_mapping_group(
         filter=None,
         filter_type=None,
         page=None,
@@ -397,7 +397,7 @@ def get_all_ip_to_sgt_mapping_group_default(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_get_all_ip_to_sgt_mapping_group_default(api, validator):
     try:
         assert is_valid_get_all_ip_to_sgt_mapping_group(
@@ -421,7 +421,7 @@ def is_valid_create_ip_to_sgt_mapping_group(json_schema_validate, obj):
 
 
 def create_ip_to_sgt_mapping_group(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.create_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.create_ip_to_sgt_mapping_group(
         active_validation=False,
         deploy_to='string',
         deploy_type='string',
@@ -432,7 +432,7 @@ def create_ip_to_sgt_mapping_group(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_create_ip_to_sgt_mapping_group(api, validator):
     try:
         assert is_valid_create_ip_to_sgt_mapping_group(
@@ -446,7 +446,7 @@ def test_create_ip_to_sgt_mapping_group(api, validator):
 
 
 def create_ip_to_sgt_mapping_group_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.create_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.create_ip_to_sgt_mapping_group(
         active_validation=False,
         deploy_to=None,
         deploy_type=None,
@@ -457,7 +457,7 @@ def create_ip_to_sgt_mapping_group_default(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_create_ip_to_sgt_mapping_group_default(api, validator):
     try:
         assert is_valid_create_ip_to_sgt_mapping_group(
@@ -481,13 +481,13 @@ def is_valid_get_version(json_schema_validate, obj):
 
 
 def get_version(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.get_version(
+    endpoint_result = api.ip_to_sgt_mapping_group.get_version(
 
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_get_version(api, validator):
     try:
         assert is_valid_get_version(
@@ -501,13 +501,13 @@ def test_get_version(api, validator):
 
 
 def get_version_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.get_version(
+    endpoint_result = api.ip_to_sgt_mapping_group.get_version(
 
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_get_version_default(api, validator):
     try:
         assert is_valid_get_version(
@@ -531,7 +531,7 @@ def is_valid_bulk_request_for_ip_to_sgt_mapping_group(json_schema_validate, obj)
 
 
 def bulk_request_for_ip_to_sgt_mapping_group(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.bulk_request_for_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.bulk_request_for_ip_to_sgt_mapping_group(
         active_validation=False,
         operation_type='string',
         payload=None,
@@ -540,7 +540,7 @@ def bulk_request_for_ip_to_sgt_mapping_group(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_bulk_request_for_ip_to_sgt_mapping_group(api, validator):
     try:
         assert is_valid_bulk_request_for_ip_to_sgt_mapping_group(
@@ -554,7 +554,7 @@ def test_bulk_request_for_ip_to_sgt_mapping_group(api, validator):
 
 
 def bulk_request_for_ip_to_sgt_mapping_group_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.bulk_request_for_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.bulk_request_for_ip_to_sgt_mapping_group(
         active_validation=False,
         operation_type=None,
         payload=None,
@@ -563,7 +563,7 @@ def bulk_request_for_ip_to_sgt_mapping_group_default(api):
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_bulk_request_for_ip_to_sgt_mapping_group_default(api, validator):
     try:
         assert is_valid_bulk_request_for_ip_to_sgt_mapping_group(
@@ -587,13 +587,13 @@ def is_valid_monitor_bulk_status_ip_to_sgt_mapping_group(json_schema_validate, o
 
 
 def monitor_bulk_status_ip_to_sgt_mapping_group(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.monitor_bulk_status_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.monitor_bulk_status_ip_to_sgt_mapping_group(
         bulkid='string'
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_monitor_bulk_status_ip_to_sgt_mapping_group(api, validator):
     try:
         assert is_valid_monitor_bulk_status_ip_to_sgt_mapping_group(
@@ -607,13 +607,13 @@ def test_monitor_bulk_status_ip_to_sgt_mapping_group(api, validator):
 
 
 def monitor_bulk_status_ip_to_sgt_mapping_group_default(api):
-    endpoint_result = api.i_p_to_sgt_mapping_group.monitor_bulk_status_ip_to_sgt_mapping_group(
+    endpoint_result = api.ip_to_sgt_mapping_group.monitor_bulk_status_ip_to_sgt_mapping_group(
         bulkid='string'
     )
     return endpoint_result
 
 
-@pytest.mark.i_p_to_sgt_mapping_group
+@pytest.mark.ip_to_sgt_mapping_group
 def test_monitor_bulk_status_ip_to_sgt_mapping_group_default(api, validator):
     try:
         assert is_valid_monitor_bulk_status_ip_to_sgt_mapping_group(

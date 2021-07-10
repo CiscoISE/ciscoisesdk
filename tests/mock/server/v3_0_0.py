@@ -400,28 +400,28 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     INTERNAL_USER_3ccba98a61555ae495f6a05284e3b5ae_PATTERN = re.compile(r"/ers/config/internaluser")
     INTERNAL_USER_bf175c04fcb051b9a6fd70a2252903fa_PATTERN = re.compile(r"/ers/config/internaluser")
     INTERNAL_USER_2af99828533e58a2b84996b85bacc9ff_PATTERN = re.compile(r"/ers/config/internaluser/versioninfo")
-    I_P_TO_SGT_MAPPING_GROUP_bd7f3fb27d71596ebafecca578c85bc7_PATTERN = re.compile(r"/ers/config/sgmappinggroup/string/deploy")
-    I_P_TO_SGT_MAPPING_GROUP_0b8ef94d6d5554a4b57d37c52612ad7d_PATTERN = re.compile(r"/ers/config/sgmappinggroup/deployall")
-    I_P_TO_SGT_MAPPING_GROUP_d6c25690e3a854c5be7763a4106e379e_PATTERN = re.compile(r"/ers/config/sgmappinggroup/deploy/status")
-    I_P_TO_SGT_MAPPING_GROUP_e56b94dafa5652228fd71abd2b4d6df3_PATTERN = re.compile(r"/ers/config/sgmappinggroup/string")
-    I_P_TO_SGT_MAPPING_GROUP_02a5a26c964e53b3be3f9f0c103f304c_PATTERN = re.compile(r"/ers/config/sgmappinggroup/string")
-    I_P_TO_SGT_MAPPING_GROUP_73ebc15160cf5c0184d3eaff3be14508_PATTERN = re.compile(r"/ers/config/sgmappinggroup/string")
-    I_P_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf_PATTERN = re.compile(r"/ers/config/sgmappinggroup")
-    I_P_TO_SGT_MAPPING_GROUP_55c2e3af6da356009f6499f00a4115e9_PATTERN = re.compile(r"/ers/config/sgmappinggroup")
-    I_P_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb_PATTERN = re.compile(r"/ers/config/sgmappinggroup/versioninfo")
-    I_P_TO_SGT_MAPPING_GROUP_a39fa17ffcd45736aa221dd27916e843_PATTERN = re.compile(r"/ers/config/sgmappinggroup/bulk/submit")
-    I_P_TO_SGT_MAPPING_GROUP_bb5f9095ca7953d3bdb16155e263f25a_PATTERN = re.compile(r"/ers/config/sgmappinggroup/bulk/string")
-    I_P_TO_SGT_MAPPING_b5711af534e557749661afb5b6c90cee_PATTERN = re.compile(r"/ers/config/sgmapping/string/deploy")
-    I_P_TO_SGT_MAPPING_83343989df7a50feb38d8729b99553e9_PATTERN = re.compile(r"/ers/config/sgmapping/deployall")
-    I_P_TO_SGT_MAPPING_dcd55e1e57d25e65b625526a1d341afd_PATTERN = re.compile(r"/ers/config/sgmapping/deploy/status")
-    I_P_TO_SGT_MAPPING_17ddc6729af25f8b8c060b20d09f0057_PATTERN = re.compile(r"/ers/config/sgmapping/string")
-    I_P_TO_SGT_MAPPING_94de3cecd62e5153881245a8613fbeea_PATTERN = re.compile(r"/ers/config/sgmapping/string")
-    I_P_TO_SGT_MAPPING_582650f0cb1e55c9baee89c136c8ec47_PATTERN = re.compile(r"/ers/config/sgmapping/string")
-    I_P_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17_PATTERN = re.compile(r"/ers/config/sgmapping")
-    I_P_TO_SGT_MAPPING_52dd838b268f5dd298a123ac58448ea9_PATTERN = re.compile(r"/ers/config/sgmapping")
-    I_P_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e_PATTERN = re.compile(r"/ers/config/sgmapping/versioninfo")
-    I_P_TO_SGT_MAPPING_ab203a1dd0015924bf2005a84ae85477_PATTERN = re.compile(r"/ers/config/sgmapping/bulk/submit")
-    I_P_TO_SGT_MAPPING_9f36d3f43a6157978ec529318ce506e0_PATTERN = re.compile(r"/ers/config/sgmapping/bulk/string")
+    IP_TO_SGT_MAPPING_GROUP_bd7f3fb27d71596ebafecca578c85bc7_PATTERN = re.compile(r"/ers/config/sgmappinggroup/string/deploy")
+    IP_TO_SGT_MAPPING_GROUP_0b8ef94d6d5554a4b57d37c52612ad7d_PATTERN = re.compile(r"/ers/config/sgmappinggroup/deployall")
+    IP_TO_SGT_MAPPING_GROUP_d6c25690e3a854c5be7763a4106e379e_PATTERN = re.compile(r"/ers/config/sgmappinggroup/deploy/status")
+    IP_TO_SGT_MAPPING_GROUP_e56b94dafa5652228fd71abd2b4d6df3_PATTERN = re.compile(r"/ers/config/sgmappinggroup/string")
+    IP_TO_SGT_MAPPING_GROUP_02a5a26c964e53b3be3f9f0c103f304c_PATTERN = re.compile(r"/ers/config/sgmappinggroup/string")
+    IP_TO_SGT_MAPPING_GROUP_73ebc15160cf5c0184d3eaff3be14508_PATTERN = re.compile(r"/ers/config/sgmappinggroup/string")
+    IP_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf_PATTERN = re.compile(r"/ers/config/sgmappinggroup")
+    IP_TO_SGT_MAPPING_GROUP_55c2e3af6da356009f6499f00a4115e9_PATTERN = re.compile(r"/ers/config/sgmappinggroup")
+    IP_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb_PATTERN = re.compile(r"/ers/config/sgmappinggroup/versioninfo")
+    IP_TO_SGT_MAPPING_GROUP_a39fa17ffcd45736aa221dd27916e843_PATTERN = re.compile(r"/ers/config/sgmappinggroup/bulk/submit")
+    IP_TO_SGT_MAPPING_GROUP_bb5f9095ca7953d3bdb16155e263f25a_PATTERN = re.compile(r"/ers/config/sgmappinggroup/bulk/string")
+    IP_TO_SGT_MAPPING_b5711af534e557749661afb5b6c90cee_PATTERN = re.compile(r"/ers/config/sgmapping/string/deploy")
+    IP_TO_SGT_MAPPING_83343989df7a50feb38d8729b99553e9_PATTERN = re.compile(r"/ers/config/sgmapping/deployall")
+    IP_TO_SGT_MAPPING_dcd55e1e57d25e65b625526a1d341afd_PATTERN = re.compile(r"/ers/config/sgmapping/deploy/status")
+    IP_TO_SGT_MAPPING_17ddc6729af25f8b8c060b20d09f0057_PATTERN = re.compile(r"/ers/config/sgmapping/string")
+    IP_TO_SGT_MAPPING_94de3cecd62e5153881245a8613fbeea_PATTERN = re.compile(r"/ers/config/sgmapping/string")
+    IP_TO_SGT_MAPPING_582650f0cb1e55c9baee89c136c8ec47_PATTERN = re.compile(r"/ers/config/sgmapping/string")
+    IP_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17_PATTERN = re.compile(r"/ers/config/sgmapping")
+    IP_TO_SGT_MAPPING_52dd838b268f5dd298a123ac58448ea9_PATTERN = re.compile(r"/ers/config/sgmapping")
+    IP_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e_PATTERN = re.compile(r"/ers/config/sgmapping/versioninfo")
+    IP_TO_SGT_MAPPING_ab203a1dd0015924bf2005a84ae85477_PATTERN = re.compile(r"/ers/config/sgmapping/bulk/submit")
+    IP_TO_SGT_MAPPING_9f36d3f43a6157978ec529318ce506e0_PATTERN = re.compile(r"/ers/config/sgmapping/bulk/string")
     MY_DEVICE_PORTAL_4bb3528d280652678f8e211b9e418e66_PATTERN = re.compile(r"/ers/config/mydeviceportal/string")
     MY_DEVICE_PORTAL_83079c64b769537ea7c586565f6ed2a2_PATTERN = re.compile(r"/ers/config/mydeviceportal/string")
     MY_DEVICE_PORTAL_c04f18d6afee5f649a5700bf3074adb9_PATTERN = re.compile(r"/ers/config/mydeviceportal/string")
@@ -7748,13 +7748,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_bd7f3fb27d71596ebafecca578c85bc7(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_bd7f3fb27d71596ebafecca578c85bc7(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_bd7f3fb27d71596ebafecca578c85bc7_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_bd7f3fb27d71596ebafecca578c85bc7_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_deploy_ip_to_sgt_mapping_group_by_id_response(self):
+    def ip_to_sgt_mapping_group_deploy_ip_to_sgt_mapping_group_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7766,13 +7766,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_0b8ef94d6d5554a4b57d37c52612ad7d(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_0b8ef94d6d5554a4b57d37c52612ad7d(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_0b8ef94d6d5554a4b57d37c52612ad7d_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_0b8ef94d6d5554a4b57d37c52612ad7d_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_deploy_all_ip_to_sgt_mapping_group_response(self):
+    def ip_to_sgt_mapping_group_deploy_all_ip_to_sgt_mapping_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7784,13 +7784,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_d6c25690e3a854c5be7763a4106e379e(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_d6c25690e3a854c5be7763a4106e379e(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_d6c25690e3a854c5be7763a4106e379e_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_d6c25690e3a854c5be7763a4106e379e_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_get_deploy_status_ip_to_sgt_mapping_group_response(self):
+    def ip_to_sgt_mapping_group_get_deploy_status_ip_to_sgt_mapping_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7802,13 +7802,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_e56b94dafa5652228fd71abd2b4d6df3(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_e56b94dafa5652228fd71abd2b4d6df3(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_e56b94dafa5652228fd71abd2b4d6df3_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_e56b94dafa5652228fd71abd2b4d6df3_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_get_ip_to_sgt_mapping_group_by_id_response(self):
+    def ip_to_sgt_mapping_group_get_ip_to_sgt_mapping_group_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7820,13 +7820,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_02a5a26c964e53b3be3f9f0c103f304c(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_02a5a26c964e53b3be3f9f0c103f304c(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_02a5a26c964e53b3be3f9f0c103f304c_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_02a5a26c964e53b3be3f9f0c103f304c_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_update_ip_to_sgt_mapping_group_by_id_response(self):
+    def ip_to_sgt_mapping_group_update_ip_to_sgt_mapping_group_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7838,13 +7838,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_73ebc15160cf5c0184d3eaff3be14508(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_73ebc15160cf5c0184d3eaff3be14508(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_73ebc15160cf5c0184d3eaff3be14508_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_73ebc15160cf5c0184d3eaff3be14508_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_delete_ip_to_sgt_mapping_group_by_id_response(self):
+    def ip_to_sgt_mapping_group_delete_ip_to_sgt_mapping_group_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7856,13 +7856,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_get_all_ip_to_sgt_mapping_group_response(self):
+    def ip_to_sgt_mapping_group_get_all_ip_to_sgt_mapping_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7874,13 +7874,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_55c2e3af6da356009f6499f00a4115e9(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_55c2e3af6da356009f6499f00a4115e9(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_55c2e3af6da356009f6499f00a4115e9_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_55c2e3af6da356009f6499f00a4115e9_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_create_ip_to_sgt_mapping_group_response(self):
+    def ip_to_sgt_mapping_group_create_ip_to_sgt_mapping_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7892,13 +7892,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_get_version_response(self):
+    def ip_to_sgt_mapping_group_get_version_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7910,13 +7910,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_a39fa17ffcd45736aa221dd27916e843(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_a39fa17ffcd45736aa221dd27916e843(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_a39fa17ffcd45736aa221dd27916e843_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_a39fa17ffcd45736aa221dd27916e843_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_bulk_request_for_ip_to_sgt_mapping_group_response(self):
+    def ip_to_sgt_mapping_group_bulk_request_for_ip_to_sgt_mapping_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7928,13 +7928,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_GROUP_bb5f9095ca7953d3bdb16155e263f25a(self):
+    def matches_IP_TO_SGT_MAPPING_GROUP_bb5f9095ca7953d3bdb16155e263f25a(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_GROUP_bb5f9095ca7953d3bdb16155e263f25a_PATTERN,
+            self.IP_TO_SGT_MAPPING_GROUP_bb5f9095ca7953d3bdb16155e263f25a_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_group_monitor_bulk_status_ip_to_sgt_mapping_group_response(self):
+    def ip_to_sgt_mapping_group_monitor_bulk_status_ip_to_sgt_mapping_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7946,13 +7946,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_b5711af534e557749661afb5b6c90cee(self):
+    def matches_IP_TO_SGT_MAPPING_b5711af534e557749661afb5b6c90cee(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_b5711af534e557749661afb5b6c90cee_PATTERN,
+            self.IP_TO_SGT_MAPPING_b5711af534e557749661afb5b6c90cee_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_deploy_ip_to_sgt_mapping_by_id_response(self):
+    def ip_to_sgt_mapping_deploy_ip_to_sgt_mapping_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7964,13 +7964,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_83343989df7a50feb38d8729b99553e9(self):
+    def matches_IP_TO_SGT_MAPPING_83343989df7a50feb38d8729b99553e9(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_83343989df7a50feb38d8729b99553e9_PATTERN,
+            self.IP_TO_SGT_MAPPING_83343989df7a50feb38d8729b99553e9_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_deploy_all_ip_to_sgt_mapping_response(self):
+    def ip_to_sgt_mapping_deploy_all_ip_to_sgt_mapping_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7982,13 +7982,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_dcd55e1e57d25e65b625526a1d341afd(self):
+    def matches_IP_TO_SGT_MAPPING_dcd55e1e57d25e65b625526a1d341afd(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_dcd55e1e57d25e65b625526a1d341afd_PATTERN,
+            self.IP_TO_SGT_MAPPING_dcd55e1e57d25e65b625526a1d341afd_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_get_deploy_status_ip_to_sgt_mapping_response(self):
+    def ip_to_sgt_mapping_get_deploy_status_ip_to_sgt_mapping_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8000,13 +8000,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_17ddc6729af25f8b8c060b20d09f0057(self):
+    def matches_IP_TO_SGT_MAPPING_17ddc6729af25f8b8c060b20d09f0057(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_17ddc6729af25f8b8c060b20d09f0057_PATTERN,
+            self.IP_TO_SGT_MAPPING_17ddc6729af25f8b8c060b20d09f0057_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_get_ip_to_sgt_mapping_by_id_response(self):
+    def ip_to_sgt_mapping_get_ip_to_sgt_mapping_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8018,13 +8018,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_94de3cecd62e5153881245a8613fbeea(self):
+    def matches_IP_TO_SGT_MAPPING_94de3cecd62e5153881245a8613fbeea(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_94de3cecd62e5153881245a8613fbeea_PATTERN,
+            self.IP_TO_SGT_MAPPING_94de3cecd62e5153881245a8613fbeea_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_update_ip_to_sgt_mapping_by_id_response(self):
+    def ip_to_sgt_mapping_update_ip_to_sgt_mapping_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8036,13 +8036,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_582650f0cb1e55c9baee89c136c8ec47(self):
+    def matches_IP_TO_SGT_MAPPING_582650f0cb1e55c9baee89c136c8ec47(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_582650f0cb1e55c9baee89c136c8ec47_PATTERN,
+            self.IP_TO_SGT_MAPPING_582650f0cb1e55c9baee89c136c8ec47_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_delete_ip_to_sgt_mapping_by_id_response(self):
+    def ip_to_sgt_mapping_delete_ip_to_sgt_mapping_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8054,13 +8054,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17(self):
+    def matches_IP_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17_PATTERN,
+            self.IP_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_get_all_ip_to_sgt_mapping_response(self):
+    def ip_to_sgt_mapping_get_all_ip_to_sgt_mapping_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8072,13 +8072,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_52dd838b268f5dd298a123ac58448ea9(self):
+    def matches_IP_TO_SGT_MAPPING_52dd838b268f5dd298a123ac58448ea9(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_52dd838b268f5dd298a123ac58448ea9_PATTERN,
+            self.IP_TO_SGT_MAPPING_52dd838b268f5dd298a123ac58448ea9_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_create_ip_to_sgt_mapping_response(self):
+    def ip_to_sgt_mapping_create_ip_to_sgt_mapping_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8090,13 +8090,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e(self):
+    def matches_IP_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e_PATTERN,
+            self.IP_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_get_version_response(self):
+    def ip_to_sgt_mapping_get_version_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8108,13 +8108,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_ab203a1dd0015924bf2005a84ae85477(self):
+    def matches_IP_TO_SGT_MAPPING_ab203a1dd0015924bf2005a84ae85477(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_ab203a1dd0015924bf2005a84ae85477_PATTERN,
+            self.IP_TO_SGT_MAPPING_ab203a1dd0015924bf2005a84ae85477_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_bulk_request_for_ip_to_sgt_mapping_response(self):
+    def ip_to_sgt_mapping_bulk_request_for_ip_to_sgt_mapping_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8126,13 +8126,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_I_P_TO_SGT_MAPPING_9f36d3f43a6157978ec529318ce506e0(self):
+    def matches_IP_TO_SGT_MAPPING_9f36d3f43a6157978ec529318ce506e0(self):
         return re.search(
-            self.I_P_TO_SGT_MAPPING_9f36d3f43a6157978ec529318ce506e0_PATTERN,
+            self.IP_TO_SGT_MAPPING_9f36d3f43a6157978ec529318ce506e0_PATTERN,
             self.path
         )
 
-    def i_p_to_sgt_mapping_monitor_bulk_status_ip_to_sgt_mapping_response(self):
+    def ip_to_sgt_mapping_monitor_bulk_status_ip_to_sgt_mapping_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -12792,36 +12792,36 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.internal_user_get_version_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_e56b94dafa5652228fd71abd2b4d6df3():
-            self.i_p_to_sgt_mapping_group_get_ip_to_sgt_mapping_group_by_id_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_e56b94dafa5652228fd71abd2b4d6df3():
+            self.ip_to_sgt_mapping_group_get_ip_to_sgt_mapping_group_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf():
-            self.i_p_to_sgt_mapping_group_get_all_ip_to_sgt_mapping_group_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf():
+            self.ip_to_sgt_mapping_group_get_all_ip_to_sgt_mapping_group_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb():
-            self.i_p_to_sgt_mapping_group_get_version_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb():
+            self.ip_to_sgt_mapping_group_get_version_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_bb5f9095ca7953d3bdb16155e263f25a():
-            self.i_p_to_sgt_mapping_group_monitor_bulk_status_ip_to_sgt_mapping_group_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_bb5f9095ca7953d3bdb16155e263f25a():
+            self.ip_to_sgt_mapping_group_monitor_bulk_status_ip_to_sgt_mapping_group_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_17ddc6729af25f8b8c060b20d09f0057():
-            self.i_p_to_sgt_mapping_get_ip_to_sgt_mapping_by_id_response()
+        if self.matches_IP_TO_SGT_MAPPING_17ddc6729af25f8b8c060b20d09f0057():
+            self.ip_to_sgt_mapping_get_ip_to_sgt_mapping_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17():
-            self.i_p_to_sgt_mapping_get_all_ip_to_sgt_mapping_response()
+        if self.matches_IP_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17():
+            self.ip_to_sgt_mapping_get_all_ip_to_sgt_mapping_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e():
-            self.i_p_to_sgt_mapping_get_version_response()
+        if self.matches_IP_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e():
+            self.ip_to_sgt_mapping_get_version_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_9f36d3f43a6157978ec529318ce506e0():
-            self.i_p_to_sgt_mapping_monitor_bulk_status_ip_to_sgt_mapping_response()
+        if self.matches_IP_TO_SGT_MAPPING_9f36d3f43a6157978ec529318ce506e0():
+            self.ip_to_sgt_mapping_monitor_bulk_status_ip_to_sgt_mapping_response()
             return
 
         if self.matches_MY_DEVICE_PORTAL_4bb3528d280652678f8e211b9e418e66():
@@ -13542,12 +13542,12 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.internal_user_create_internal_user_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_55c2e3af6da356009f6499f00a4115e9():
-            self.i_p_to_sgt_mapping_group_create_ip_to_sgt_mapping_group_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_55c2e3af6da356009f6499f00a4115e9():
+            self.ip_to_sgt_mapping_group_create_ip_to_sgt_mapping_group_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_52dd838b268f5dd298a123ac58448ea9():
-            self.i_p_to_sgt_mapping_create_ip_to_sgt_mapping_response()
+        if self.matches_IP_TO_SGT_MAPPING_52dd838b268f5dd298a123ac58448ea9():
+            self.ip_to_sgt_mapping_create_ip_to_sgt_mapping_response()
             return
 
         if self.matches_MY_DEVICE_PORTAL_e643a5ac8bca55f58ea8d6260c57eafe():
@@ -14092,44 +14092,44 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.internal_user_update_internal_user_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_bd7f3fb27d71596ebafecca578c85bc7():
-            self.i_p_to_sgt_mapping_group_deploy_ip_to_sgt_mapping_group_by_id_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_bd7f3fb27d71596ebafecca578c85bc7():
+            self.ip_to_sgt_mapping_group_deploy_ip_to_sgt_mapping_group_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_0b8ef94d6d5554a4b57d37c52612ad7d():
-            self.i_p_to_sgt_mapping_group_deploy_all_ip_to_sgt_mapping_group_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_0b8ef94d6d5554a4b57d37c52612ad7d():
+            self.ip_to_sgt_mapping_group_deploy_all_ip_to_sgt_mapping_group_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_d6c25690e3a854c5be7763a4106e379e():
-            self.i_p_to_sgt_mapping_group_get_deploy_status_ip_to_sgt_mapping_group_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_d6c25690e3a854c5be7763a4106e379e():
+            self.ip_to_sgt_mapping_group_get_deploy_status_ip_to_sgt_mapping_group_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_02a5a26c964e53b3be3f9f0c103f304c():
-            self.i_p_to_sgt_mapping_group_update_ip_to_sgt_mapping_group_by_id_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_02a5a26c964e53b3be3f9f0c103f304c():
+            self.ip_to_sgt_mapping_group_update_ip_to_sgt_mapping_group_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_a39fa17ffcd45736aa221dd27916e843():
-            self.i_p_to_sgt_mapping_group_bulk_request_for_ip_to_sgt_mapping_group_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_a39fa17ffcd45736aa221dd27916e843():
+            self.ip_to_sgt_mapping_group_bulk_request_for_ip_to_sgt_mapping_group_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_b5711af534e557749661afb5b6c90cee():
-            self.i_p_to_sgt_mapping_deploy_ip_to_sgt_mapping_by_id_response()
+        if self.matches_IP_TO_SGT_MAPPING_b5711af534e557749661afb5b6c90cee():
+            self.ip_to_sgt_mapping_deploy_ip_to_sgt_mapping_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_83343989df7a50feb38d8729b99553e9():
-            self.i_p_to_sgt_mapping_deploy_all_ip_to_sgt_mapping_response()
+        if self.matches_IP_TO_SGT_MAPPING_83343989df7a50feb38d8729b99553e9():
+            self.ip_to_sgt_mapping_deploy_all_ip_to_sgt_mapping_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_dcd55e1e57d25e65b625526a1d341afd():
-            self.i_p_to_sgt_mapping_get_deploy_status_ip_to_sgt_mapping_response()
+        if self.matches_IP_TO_SGT_MAPPING_dcd55e1e57d25e65b625526a1d341afd():
+            self.ip_to_sgt_mapping_get_deploy_status_ip_to_sgt_mapping_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_94de3cecd62e5153881245a8613fbeea():
-            self.i_p_to_sgt_mapping_update_ip_to_sgt_mapping_by_id_response()
+        if self.matches_IP_TO_SGT_MAPPING_94de3cecd62e5153881245a8613fbeea():
+            self.ip_to_sgt_mapping_update_ip_to_sgt_mapping_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_ab203a1dd0015924bf2005a84ae85477():
-            self.i_p_to_sgt_mapping_bulk_request_for_ip_to_sgt_mapping_response()
+        if self.matches_IP_TO_SGT_MAPPING_ab203a1dd0015924bf2005a84ae85477():
+            self.ip_to_sgt_mapping_bulk_request_for_ip_to_sgt_mapping_response()
             return
 
         if self.matches_MY_DEVICE_PORTAL_83079c64b769537ea7c586565f6ed2a2():
@@ -14446,12 +14446,12 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.internal_user_delete_internal_user_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_GROUP_73ebc15160cf5c0184d3eaff3be14508():
-            self.i_p_to_sgt_mapping_group_delete_ip_to_sgt_mapping_group_by_id_response()
+        if self.matches_IP_TO_SGT_MAPPING_GROUP_73ebc15160cf5c0184d3eaff3be14508():
+            self.ip_to_sgt_mapping_group_delete_ip_to_sgt_mapping_group_by_id_response()
             return
 
-        if self.matches_I_P_TO_SGT_MAPPING_582650f0cb1e55c9baee89c136c8ec47():
-            self.i_p_to_sgt_mapping_delete_ip_to_sgt_mapping_by_id_response()
+        if self.matches_IP_TO_SGT_MAPPING_582650f0cb1e55c9baee89c136c8ec47():
+            self.ip_to_sgt_mapping_delete_ip_to_sgt_mapping_by_id_response()
             return
 
         if self.matches_MY_DEVICE_PORTAL_c04f18d6afee5f649a5700bf3074adb9():

@@ -168,10 +168,10 @@ def pytest_configure(config):
         "markers", "hotspot_portal: hotspot_portal wrapper test"
     )
     config.addinivalue_line(
-        "markers", "i_p_to_sgt_mapping: i_p_to_sgt_mapping wrapper test"
+        "markers", "ip_to_sgt_mapping: ip_to_sgt_mapping wrapper test"
     )
     config.addinivalue_line(
-        "markers", "i_p_to_sgt_mapping_group: i_p_to_sgt_mapping_group wrapper test"
+        "markers", "ip_to_sgt_mapping_group: ip_to_sgt_mapping_group wrapper test"
     )
     config.addinivalue_line(
         "markers", "identity_groups: identity_groups wrapper test"
