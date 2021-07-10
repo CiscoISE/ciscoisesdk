@@ -77,7 +77,7 @@ class NetworkAccessNetworkConditions(object):
     def get_network_access_network_conditions(self,
                                               headers=None,
                                               **query_parameters):
-        """Network Access - Returns a list of network conditions.
+        """Network Access Returns a list of network conditions.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -158,13 +158,13 @@ class NetworkAccessNetworkConditions(object):
                                               payload=None,
                                               active_validation=True,
                                               **query_parameters):
-        """Network Access - Creates network condition.
+        """Network Access Creates network condition.
 
         Args:
             cliDnisList(list): This field should contain a Caller ID
                 (CLI), comma, and Called ID (DNIS).
-                Line format -  Caller ID (CLI), Called
-                ID (DNIS), property of the request body
+                Line format  Caller ID (CLI), Called ID
+                (DNIS), property of the request body
                 (list of strings).
             condition_type(string): This field determines the
                 content of the conditions field,
@@ -176,13 +176,13 @@ class NetworkAccessNetworkConditions(object):
                 request body.
             deviceGroupList(list): This field should contain a tuple
                 with NDG Root, comma, and an NDG (that
-                it under the root).  Line format - NDG
+                it under the root).  Line format NDG
                 Root Name, NDG, Port, property of the
                 request body (list of strings).
             deviceList(list): This field should contain Device-
                 Name,port-number. The device name must
                 be the same as the name field in a
-                Network Device object.  Line format -
+                Network Device object.  Line format
                 Device Name,Port, property of the
                 request body (list of strings).
             id(string): id, property of the request body.
@@ -191,7 +191,7 @@ class NetworkAccessNetworkConditions(object):
                 IPV4 format (n.n.n.n) or IPV6 format
                 (n:n:n:n:n:n:n:n).  IP subnet can be
                 IPV4 format (n.n.n.n/m) or IPV6 format
-                (n:n:n:n:n:n:n:n/m).  Line format - IP
+                (n:n:n:n:n:n:n:n/m).  Line format IP
                 Address or subnet,Port, property of the
                 request body (list of strings).
             link(object): link, property of the request body.
@@ -201,7 +201,7 @@ class NetworkAccessNetworkConditions(object):
                 include twelve hexadecimal digits using
                 formats nn:nn:nn:nn:nn:nn or nn-nn-nn-
                 nn-nn-nn or nnnn.nnnn.nnnn or
-                nnnnnnnnnnnn.  Line format - Endstation
+                nnnnnnnnnnnn.  Line format Endstation
                 MAC,Destination MAC , property of the
                 request body (list of strings).
             name(string): Network Condition name, property of the
@@ -340,7 +340,7 @@ class NetworkAccessNetworkConditions(object):
                                                              condition_id,
                                                              headers=None,
                                                              **query_parameters):
-        """Network Access - Returns a network condition.
+        """Network Access Returns a network condition.
 
         Args:
             condition_id(basestring): conditionId path parameter.
@@ -430,13 +430,13 @@ class NetworkAccessNetworkConditions(object):
                                                              payload=None,
                                                              active_validation=True,
                                                              **query_parameters):
-        """Network Access - Update network condition.
+        """Network Access Update network condition.
 
         Args:
             cliDnisList(list): This field should contain a Caller ID
                 (CLI), comma, and Called ID (DNIS).
-                Line format -  Caller ID (CLI), Called
-                ID (DNIS), property of the request body
+                Line format  Caller ID (CLI), Called ID
+                (DNIS), property of the request body
                 (list of strings).
             condition_type(string): This field determines the
                 content of the conditions field,
@@ -448,13 +448,13 @@ class NetworkAccessNetworkConditions(object):
                 request body.
             deviceGroupList(list): This field should contain a tuple
                 with NDG Root, comma, and an NDG (that
-                it under the root).  Line format - NDG
+                it under the root).  Line format NDG
                 Root Name, NDG, Port, property of the
                 request body (list of strings).
             deviceList(list): This field should contain Device-
                 Name,port-number. The device name must
                 be the same as the name field in a
-                Network Device object.  Line format -
+                Network Device object.  Line format
                 Device Name,Port, property of the
                 request body (list of strings).
             id(string): id, property of the request body.
@@ -463,7 +463,7 @@ class NetworkAccessNetworkConditions(object):
                 IPV4 format (n.n.n.n) or IPV6 format
                 (n:n:n:n:n:n:n:n).  IP subnet can be
                 IPV4 format (n.n.n.n/m) or IPV6 format
-                (n:n:n:n:n:n:n:n/m).  Line format - IP
+                (n:n:n:n:n:n:n:n/m).  Line format IP
                 Address or subnet,Port, property of the
                 request body (list of strings).
             link(object): link, property of the request body.
@@ -473,7 +473,7 @@ class NetworkAccessNetworkConditions(object):
                 include twelve hexadecimal digits using
                 formats nn:nn:nn:nn:nn:nn or nn-nn-nn-
                 nn-nn-nn or nnnn.nnnn.nnnn or
-                nnnnnnnnnnnn.  Line format - Endstation
+                nnnnnnnnnnnn.  Line format Endstation
                 MAC,Destination MAC , property of the
                 request body (list of strings).
             name(string): Network Condition name, property of the
@@ -621,7 +621,7 @@ class NetworkAccessNetworkConditions(object):
                                                                 condition_id,
                                                                 headers=None,
                                                                 **query_parameters):
-        """Network Access - Delete network condition.
+        """Network Access Delete network condition.
 
         Args:
             condition_id(basestring): conditionId path parameter.

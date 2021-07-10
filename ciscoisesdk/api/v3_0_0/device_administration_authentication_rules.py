@@ -78,7 +78,7 @@ class DeviceAdministrationAuthenticationRules(object):
                                                                policy_id,
                                                                headers=None,
                                                                **query_parameters):
-        """Device Admin - Get authentication rules.
+        """Device Admin Get authentication rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -164,7 +164,7 @@ class DeviceAdministrationAuthenticationRules(object):
                                                              payload=None,
                                                              active_validation=True,
                                                              **query_parameters):
-        """Device Admin - Create authentication rule.
+        """Device Admin Create authentication rule.
 
         Args:
             identity_source_name(string): Identity source name from
@@ -310,7 +310,7 @@ class DeviceAdministrationAuthenticationRules(object):
                                                                         policy_id,
                                                                         headers=None,
                                                                         **query_parameters):
-        """Device Admin - Reset HitCount for Authentication Rules.
+        """Device Admin Reset HitCount for Authentication Rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -390,7 +390,7 @@ class DeviceAdministrationAuthenticationRules(object):
                                                                 rule_id,
                                                                 headers=None,
                                                                 **query_parameters):
-        """Device Admin - Get rule attributes.
+        """Device Admin Get rule attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -483,7 +483,7 @@ class DeviceAdministrationAuthenticationRules(object):
                                                                    payload=None,
                                                                    active_validation=True,
                                                                    **query_parameters):
-        """Device Admin - - Update rule.
+        """Device Admin Update rule.
 
         Args:
             identity_source_name(string): Identity source name from
@@ -637,7 +637,7 @@ class DeviceAdministrationAuthenticationRules(object):
                                                                    rule_id,
                                                                    headers=None,
                                                                    **query_parameters):
-        """Device Admin - Delete rule.
+        """Device Admin Delete rule.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy

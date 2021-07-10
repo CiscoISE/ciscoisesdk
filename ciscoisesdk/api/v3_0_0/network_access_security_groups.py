@@ -77,7 +77,7 @@ class NetworkAccessSecurityGroups(object):
     def get_network_access_security_groups(self,
                                            headers=None,
                                            **query_parameters):
-        """Network Access - Return list of available security groups for
+        """Network Access Return list of available security groups for
         authorization policy definition.  (Other CRUD APIs
         available throught ERS).
 

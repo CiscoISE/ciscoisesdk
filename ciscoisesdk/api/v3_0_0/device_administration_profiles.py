@@ -77,7 +77,7 @@ class DeviceAdministrationProfiles(object):
     def get_device_admin_profiles(self,
                                   headers=None,
                                   **query_parameters):
-        """Device Admin - Returns list of profiles.  (Other CRUD APIs
+        """Device Admin Returns list of profiles.  (Other CRUD APIs
         available throught ERS).
 
         Args:

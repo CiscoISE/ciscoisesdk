@@ -77,7 +77,7 @@ class NetworkAccessDictionaryAttributesList(object):
     def get_network_access_dictionaries_authentication(self,
                                                        headers=None,
                                                        **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+        """Network Access Returns list of dictionary attributes for
         authentication.
 
         Args:
@@ -147,7 +147,7 @@ class NetworkAccessDictionaryAttributesList(object):
     def get_network_access_dictionaries_authorization(self,
                                                       headers=None,
                                                       **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+        """Network Access Returns list of dictionary attributes for
         authorization.
 
         Args:
@@ -217,7 +217,7 @@ class NetworkAccessDictionaryAttributesList(object):
     def get_network_access_dictionaries_policyset(self,
                                                   headers=None,
                                                   **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+        """Network Access Returns list of dictionary attributes for
         policyset.
 
         Args:

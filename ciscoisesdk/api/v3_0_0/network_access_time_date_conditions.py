@@ -77,7 +77,7 @@ class NetworkAccessTimeDateConditions(object):
     def get_network_access_time_conditions(self,
                                            headers=None,
                                            **query_parameters):
-        """Network Access - Returns a list of time and date conditions.
+        """Network Access Returns a list of time and date conditions.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -166,7 +166,7 @@ class NetworkAccessTimeDateConditions(object):
                                            payload=None,
                                            active_validation=True,
                                            **query_parameters):
-        """Network Access - Creates time/date condition.
+        """Network Access Creates time/date condition.
 
         Args:
             attribute_name(string): Dictionary attribute name,
@@ -202,25 +202,25 @@ class NetworkAccessTimeDateConditions(object):
             dates_range(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             dates_range_exception(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             description(string): Condition description, property of
                 the request body.
             dictionary_name(string): Dictionary name, property of
@@ -230,15 +230,15 @@ class NetworkAccessTimeDateConditions(object):
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             hours_range_exception(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             id(string): id, property of the request body.
             is_negate(boolean): Indicates whereas this condition is
                 in negate mode, property of the request
@@ -257,21 +257,21 @@ class NetworkAccessTimeDateConditions(object):
                 'ipGreaterThan', 'ipLessThan',
                 'ipEquals' and 'ipNotEquals'.
             weekDays(list): Defines for which days this condition
-                will be matched  Days format - Arrays of
-                WeekDay enums   Default - List of All
-                week days, property of the request body
-                (list of strings. Available values are
+                will be matched  Days format Arrays of
+                WeekDay enums   Default List of All week
+                days, property of the request body (list
+                of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
             weekDaysException(list): Defines for which days this
                 condition will NOT be matched  Days
-                format - Arrays of WeekDay enums
-                Default - Not enabled, property of the
-                request body (list of strings. Available
-                values are 'Sunday', 'Monday',
-                'Tuesday', 'Wednesday', 'Thursday',
-                'Friday' and 'Saturday').
+                format Arrays of WeekDay enums   Default
+                Not enabled, property of the request
+                body (list of strings. Available values
+                are 'Sunday', 'Monday', 'Tuesday',
+                'Wednesday', 'Thursday', 'Friday' and
+                'Saturday').
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -438,7 +438,7 @@ class NetworkAccessTimeDateConditions(object):
                                                           condition_id,
                                                           headers=None,
                                                           **query_parameters):
-        """Network Access - returns a network condition.
+        """Network Access returns a network condition.
 
         Args:
             condition_id(basestring): conditionId path parameter.
@@ -535,7 +535,7 @@ class NetworkAccessTimeDateConditions(object):
                                                           payload=None,
                                                           active_validation=True,
                                                           **query_parameters):
-        """Network Access - Update network condition.
+        """Network Access Update network condition.
 
         Args:
             attribute_name(string): Dictionary attribute name,
@@ -571,25 +571,25 @@ class NetworkAccessTimeDateConditions(object):
             dates_range(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             dates_range_exception(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             description(string): Condition description, property of
                 the request body.
             dictionary_name(string): Dictionary name, property of
@@ -599,15 +599,15 @@ class NetworkAccessTimeDateConditions(object):
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             hours_range_exception(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             id(string): id, property of the request body.
             is_negate(boolean): Indicates whereas this condition is
                 in negate mode, property of the request
@@ -626,21 +626,21 @@ class NetworkAccessTimeDateConditions(object):
                 'ipGreaterThan', 'ipLessThan',
                 'ipEquals' and 'ipNotEquals'.
             weekDays(list): Defines for which days this condition
-                will be matched  Days format - Arrays of
-                WeekDay enums   Default - List of All
-                week days, property of the request body
-                (list of strings. Available values are
+                will be matched  Days format Arrays of
+                WeekDay enums   Default List of All week
+                days, property of the request body (list
+                of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
             weekDaysException(list): Defines for which days this
                 condition will NOT be matched  Days
-                format - Arrays of WeekDay enums
-                Default - Not enabled, property of the
-                request body (list of strings. Available
-                values are 'Sunday', 'Monday',
-                'Tuesday', 'Wednesday', 'Thursday',
-                'Friday' and 'Saturday').
+                format Arrays of WeekDay enums   Default
+                Not enabled, property of the request
+                body (list of strings. Available values
+                are 'Sunday', 'Monday', 'Tuesday',
+                'Wednesday', 'Thursday', 'Friday' and
+                'Saturday').
             condition_id(basestring): conditionId path parameter.
                 Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -815,7 +815,7 @@ class NetworkAccessTimeDateConditions(object):
                                                              condition_id,
                                                              headers=None,
                                                              **query_parameters):
-        """Network Access - Delete Time/Date condition.
+        """Network Access Delete Time/Date condition.
 
         Args:
             condition_id(basestring): conditionId path parameter.

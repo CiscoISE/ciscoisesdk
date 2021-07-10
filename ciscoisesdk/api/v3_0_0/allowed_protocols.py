@@ -335,9 +335,9 @@ class AllowedProtocols(object):
                 is required only if
                 allowPreferredEapProtocol is true,
                 otherwise it must be ignored. Allowed
-                Values:  - EAP_FAST, - PEAP, - LEAP, -
-                EAP_MD5, - EAP_TLS, - EAP_TTLS, - TEAP,
-                property of the request body.
+                Values:  EAP_FAST, PEAP, LEAP, EAP_MD5,
+                EAP_TLS, EAP_TTLS, TEAP, property of the
+                request body.
             process_host_lookup(boolean): processHostLookup,
                 property of the request body.
             require_message_auth(boolean): requireMessageAuth,
@@ -883,9 +883,9 @@ class AllowedProtocols(object):
                 is required only if
                 allowPreferredEapProtocol is true,
                 otherwise it must be ignored. Allowed
-                Values:  - EAP_FAST, - PEAP, - LEAP, -
-                EAP_MD5, - EAP_TLS, - EAP_TTLS, - TEAP,
-                property of the request body.
+                Values:  EAP_FAST, PEAP, LEAP, EAP_MD5,
+                EAP_TLS, EAP_TTLS, TEAP, property of the
+                request body.
             process_host_lookup(boolean): processHostLookup,
                 property of the request body.
             require_message_auth(boolean): requireMessageAuth,

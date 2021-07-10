@@ -78,7 +78,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
                                                                   policy_id,
                                                                   headers=None,
                                                                   **query_parameters):
-        """Network Access - Get local exception rules.
+        """Network Access Get local exception rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -162,7 +162,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
                                                                 payload=None,
                                                                 active_validation=True,
                                                                 **query_parameters):
-        """Network Access - Create local authorization exception rule:
+        """Network Access Create local authorization exception rule:
         Rule must include name and condition.     Condition has
         hierarchical structure which define a set of conditions
         for which authoriztion policy rule could be match.
@@ -300,7 +300,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
                                                                       policy_id,
                                                                       headers=None,
                                                                       **query_parameters):
-        """Network Access - Reset HitCount for local exceptions.
+        """Network Access Reset HitCount for local exceptions.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -380,7 +380,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
                                                                    rule_id,
                                                                    headers=None,
                                                                    **query_parameters):
-        """Network Access - Get local exception rule attributes.
+        """Network Access Get local exception rule attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -471,7 +471,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
                                                                       payload=None,
                                                                       active_validation=True,
                                                                       **query_parameters):
-        """Network Access - Update local exception rule.
+        """Network Access Update local exception rule.
 
         Args:
             link(object): link, property of the request body.
@@ -609,7 +609,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
                                                                       rule_id,
                                                                       headers=None,
                                                                       **query_parameters):
-        """Network Access - Delete local exception rule.
+        """Network Access Delete local exception rule.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy

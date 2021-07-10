@@ -95,8 +95,8 @@ class AciBindings(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter_by(basestring, list, set, tuple): filterBy query
@@ -226,8 +226,8 @@ class AciBindings(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter_by(basestring, list, set, tuple): filterBy query

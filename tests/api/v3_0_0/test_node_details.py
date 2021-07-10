@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_node_by_name(json_schema_validate, obj):
+def is_valid_get_node_detail_by_name(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_node_by_name(json_schema_validate, obj):
     return True
 
 
-def get_node_by_name(api):
-    endpoint_result = api.node_details.get_node_by_name(
+def get_node_detail_by_name(api):
+    endpoint_result = api.node_details.get_node_detail_by_name(
         name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.node_details
-def test_get_node_by_name(api, validator):
+def test_get_node_detail_by_name(api, validator):
     try:
-        assert is_valid_get_node_by_name(
+        assert is_valid_get_node_detail_by_name(
             validator,
-            get_node_by_name(api)
+            get_node_detail_by_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,26 +60,26 @@ def test_get_node_by_name(api, validator):
             raise original_e
 
 
-def get_node_by_name_default(api):
-    endpoint_result = api.node_details.get_node_by_name(
+def get_node_detail_by_name_default(api):
+    endpoint_result = api.node_details.get_node_detail_by_name(
         name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.node_details
-def test_get_node_by_name_default(api, validator):
+def test_get_node_detail_by_name_default(api, validator):
     try:
-        assert is_valid_get_node_by_name(
+        assert is_valid_get_node_detail_by_name(
             validator,
-            get_node_by_name_default(api)
+            get_node_detail_by_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_node_by_id(json_schema_validate, obj):
+def is_valid_get_node_detail_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,19 +90,19 @@ def is_valid_get_node_by_id(json_schema_validate, obj):
     return True
 
 
-def get_node_by_id(api):
-    endpoint_result = api.node_details.get_node_by_id(
+def get_node_detail_by_id(api):
+    endpoint_result = api.node_details.get_node_detail_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.node_details
-def test_get_node_by_id(api, validator):
+def test_get_node_detail_by_id(api, validator):
     try:
-        assert is_valid_get_node_by_id(
+        assert is_valid_get_node_detail_by_id(
             validator,
-            get_node_by_id(api)
+            get_node_detail_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -110,26 +110,26 @@ def test_get_node_by_id(api, validator):
             raise original_e
 
 
-def get_node_by_id_default(api):
-    endpoint_result = api.node_details.get_node_by_id(
+def get_node_detail_by_id_default(api):
+    endpoint_result = api.node_details.get_node_detail_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.node_details
-def test_get_node_by_id_default(api, validator):
+def test_get_node_detail_by_id_default(api, validator):
     try:
-        assert is_valid_get_node_by_id(
+        assert is_valid_get_node_detail_by_id(
             validator,
-            get_node_by_id_default(api)
+            get_node_detail_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_all_nodes(json_schema_validate, obj):
+def is_valid_get_all_node_details(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -140,8 +140,8 @@ def is_valid_get_all_nodes(json_schema_validate, obj):
     return True
 
 
-def get_all_nodes(api):
-    endpoint_result = api.node_details.get_all_nodes(
+def get_all_node_details(api):
+    endpoint_result = api.node_details.get_all_node_details(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -151,11 +151,11 @@ def get_all_nodes(api):
 
 
 @pytest.mark.node_details
-def test_get_all_nodes(api, validator):
+def test_get_all_node_details(api, validator):
     try:
-        assert is_valid_get_all_nodes(
+        assert is_valid_get_all_node_details(
             validator,
-            get_all_nodes(api)
+            get_all_node_details(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -163,8 +163,8 @@ def test_get_all_nodes(api, validator):
             raise original_e
 
 
-def get_all_nodes_default(api):
-    endpoint_result = api.node_details.get_all_nodes(
+def get_all_node_details_default(api):
+    endpoint_result = api.node_details.get_all_node_details(
         filter=None,
         filter_type=None,
         page=None,
@@ -174,11 +174,11 @@ def get_all_nodes_default(api):
 
 
 @pytest.mark.node_details
-def test_get_all_nodes_default(api, validator):
+def test_get_all_node_details_default(api, validator):
     try:
-        assert is_valid_get_all_nodes(
+        assert is_valid_get_all_node_details(
             validator,
-            get_all_nodes_default(api)
+            get_all_node_details_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

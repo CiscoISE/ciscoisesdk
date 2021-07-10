@@ -93,8 +93,8 @@ class Certificates(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter(basestring, list, set, tuple): filter query
@@ -208,8 +208,8 @@ class Certificates(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter(basestring, list, set, tuple): filter query
@@ -322,9 +322,9 @@ class Certificates(object):
         Tag when using certificate for PORTAL service   Default
         Portal Certificate Group         NOTE:  For
         allowWildCardCert to be false, the below mentioned
-        parameter is mandatory:  - hostnames    When Certificate
+        parameter is mandatory:  hostnames    When Certificate
         is selected to be used for Portal Service, the below
-        mentioned parameter is mandatory:  - portalGroupTag    .
+        mentioned parameter is mandatory:  portalGroupTag    .
 
         Args:
             allow_wild_card_cert(boolean): allowWildCardCert,
@@ -507,6 +507,8 @@ class Certificates(object):
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
+            DownloadFailure: If was not able to download the raw
+            response to a file.
         """
         check_type(headers, dict)
 
@@ -1201,6 +1203,8 @@ class Certificates(object):
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
+            DownloadFailure: If was not able to download the raw
+            response to a file.
         """
         check_type(headers, dict)
 
@@ -1522,8 +1526,8 @@ class Certificates(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter(basestring, list, set, tuple): filter query
@@ -1647,8 +1651,8 @@ class Certificates(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter(basestring, list, set, tuple): filter query
@@ -2091,8 +2095,8 @@ class Certificates(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter(basestring, list, set, tuple): filter query
@@ -2210,8 +2214,8 @@ class Certificates(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter(basestring, list, set, tuple): filter query
@@ -2377,7 +2381,7 @@ class Certificates(object):
         validateCertificateExtensions   Validate extensions for
         trust certificate   false         NOTE:  If name is not
         set, a default name of the following format will be
-        generated:   - common-name#issuer#nnnnn       where
+        generated:   common-name#issuer#nnnnn       where
         "nnnnn"  is a unique number. You can always change the
         friendly name later by editing the certificate.
         You must choose how this certificate will be trusted in

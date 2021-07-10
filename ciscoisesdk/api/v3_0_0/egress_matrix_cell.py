@@ -436,16 +436,15 @@ class EgressMatrixCell(object):
         """This API allows the client to update an egress matrix cell.
 
         Args:
-            default_rule(string): Allowed values: - NONE, - DENY_IP,
-                - PERMIT_IP, property of the request
-                body.
+            default_rule(string): Allowed values: NONE, DENY_IP,
+                PERMIT_IP, property of the request body.
             description(string): description, property of the
                 request body.
             destination_sgt_id(string): destinationSgtId, property
                 of the request body.
             id(string): id, property of the request body.
-            matrix_cell_status(string): Allowed values: - DISABLED,
-                - ENABLED, - MONITOR, property of the
+            matrix_cell_status(string): Allowed values: DISABLED,
+                ENABLED, MONITOR, property of the
                 request body.
             name(string): name, property of the request body.
             sgacls(list): sgacls, property of the request body (list
@@ -964,15 +963,14 @@ class EgressMatrixCell(object):
         """This API creates an egress matrix cell.
 
         Args:
-            default_rule(string): Allowed values: - NONE, - DENY_IP,
-                - PERMIT_IP, property of the request
-                body.
+            default_rule(string): Allowed values: NONE, DENY_IP,
+                PERMIT_IP, property of the request body.
             description(string): description, property of the
                 request body.
             destination_sgt_id(string): destinationSgtId, property
                 of the request body.
-            matrix_cell_status(string): Allowed values: - DISABLED,
-                - ENABLED, - MONITOR, property of the
+            matrix_cell_status(string): Allowed values: DISABLED,
+                ENABLED, MONITOR, property of the
                 request body.
             name(string): name, property of the request body.
             sgacls(list): sgacls, property of the request body (list

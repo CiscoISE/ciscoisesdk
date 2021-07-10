@@ -171,7 +171,7 @@ class PortalGlobalSetting(object):
         by id.
 
         Args:
-            customization(string): Allowed values: - HTML, -
+            customization(string): Allowed values: HTML,
                 HTMLANDJAVASCRIPT, property of the
                 request body.
             id(string): id, property of the request body.

@@ -390,7 +390,7 @@ class IpToSgtMappingGroup(object):
             deploy_to(string): Mandatory unless mappingGroup is set
                 or unless deployType=ALL, property of
                 the request body.
-            deploy_type(string): Allowed values: - ALL, - ND, - NDG,
+            deploy_type(string): Allowed values: ALL, ND, NDG,
                 property of the request body.
             name(string): name, property of the request body.
             sgt(string): Mandatory unless mappingGroup is set,
@@ -889,7 +889,7 @@ class IpToSgtMappingGroup(object):
             deploy_to(string): Mandatory unless mappingGroup is set
                 or unless deployType=ALL, property of
                 the request body.
-            deploy_type(string): Allowed values: - ALL, - ND, - NDG,
+            deploy_type(string): Allowed values: ALL, ND, NDG,
                 property of the request body.
             name(string): name, property of the request body.
             sgt(string): Mandatory unless mappingGroup is set,

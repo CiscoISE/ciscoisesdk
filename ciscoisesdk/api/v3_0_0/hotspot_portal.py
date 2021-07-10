@@ -178,9 +178,8 @@ class HotspotPortal(object):
             portal_test_url(string): URL to bring up a test page for
                 this portal, property of the request
                 body.
-            portal_type(string): Allowed values: - BYOD, -
-                HOTSPOTGUEST, - MYDEVICE, -
-                SELFREGGUEST, - SPONSOR, -
+            portal_type(string): Allowed values: BYOD, HOTSPOTGUEST,
+                MYDEVICE, SELFREGGUEST, SPONSOR,
                 SPONSOREDGUEST, property of the request
                 body.
             settings(object): Defines all of the settings groups
@@ -686,9 +685,8 @@ class HotspotPortal(object):
             portal_test_url(string): URL to bring up a test page for
                 this portal, property of the request
                 body.
-            portal_type(string): Allowed values: - BYOD, -
-                HOTSPOTGUEST, - MYDEVICE, -
-                SELFREGGUEST, - SPONSOR, -
+            portal_type(string): Allowed values: BYOD, HOTSPOTGUEST,
+                MYDEVICE, SELFREGGUEST, SPONSOR,
                 SPONSOREDGUEST, property of the request
                 body.
             settings(object): Defines all of the settings groups

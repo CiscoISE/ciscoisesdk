@@ -77,9 +77,9 @@ class NetworkAccessIdentityStores(object):
     def get_network_access_identity_stores(self,
                                            headers=None,
                                            **query_parameters):
-        """Network Access - Return list of identity stores for
-        authentication policy definition.  (Other CRUD APIs
-        available throught ERS).
+        """Network Access Return list of identity stores for authentication
+        policy definition.  (Other CRUD APIs available throught
+        ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request

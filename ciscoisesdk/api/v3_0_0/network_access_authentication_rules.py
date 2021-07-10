@@ -78,7 +78,7 @@ class NetworkAccessAuthenticationRules(object):
                                                                  policy_id,
                                                                  headers=None,
                                                                  **query_parameters):
-        """Network Access - Get authentication rules.
+        """Network Access Get authentication rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -164,14 +164,14 @@ class NetworkAccessAuthenticationRules(object):
                                                                payload=None,
                                                                active_validation=True,
                                                                **query_parameters):
-        """Network Access - Create authentication rule:     Rule must
-        include name and condition.     Condition has
-        hierarchical structure which define a set of conditions
-        for which authentication policy rule could be match.
-        Condition can be either reference to a stored Library
-        condition, using model  ConditionReference    or
-        dynamically built conditions which are not stored in the
-        conditions Library, using models  ConditionAttributes,
+        """Network Access Create authentication rule:     Rule must include
+        name and condition.     Condition has hierarchical
+        structure which define a set of conditions for which
+        authentication policy rule could be match.     Condition
+        can be either reference to a stored Library condition,
+        using model  ConditionReference    or dynamically built
+        conditions which are not stored in the conditions
+        Library, using models  ConditionAttributes,
         ConditionAndBlock, ConditionOrBlock .    .
 
         Args:
@@ -318,7 +318,7 @@ class NetworkAccessAuthenticationRules(object):
                                                                           policy_id,
                                                                           headers=None,
                                                                           **query_parameters):
-        """Network Access - Reset HitCount for Authentication Rules.
+        """Network Access Reset HitCount for Authentication Rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -398,7 +398,7 @@ class NetworkAccessAuthenticationRules(object):
                                                                   rule_id,
                                                                   headers=None,
                                                                   **query_parameters):
-        """Network Access - Get rule attributes.
+        """Network Access Get rule attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -491,7 +491,7 @@ class NetworkAccessAuthenticationRules(object):
                                                                      payload=None,
                                                                      active_validation=True,
                                                                      **query_parameters):
-        """Network Access - Update rule.
+        """Network Access Update rule.
 
         Args:
             identity_source_name(string): Identity source name from
@@ -645,7 +645,7 @@ class NetworkAccessAuthenticationRules(object):
                                                                      rule_id,
                                                                      headers=None,
                                                                      **query_parameters):
-        """Network Access - Delete rule.
+        """Network Access Delete rule.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy

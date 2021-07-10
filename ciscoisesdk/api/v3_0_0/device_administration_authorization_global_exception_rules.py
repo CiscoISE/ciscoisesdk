@@ -77,7 +77,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
     def get_device_admin_policy_set_global_exception_rule_list(self,
                                                                headers=None,
                                                                **query_parameters):
-        """Device Admin - Get global execption rules.
+        """Device Admin Get global execption rules.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -152,7 +152,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                                                         payload=None,
                                                         active_validation=True,
                                                         **query_parameters):
-        """Device Admin - Create global exception authorization rule.
+        """Device Admin Create global exception authorization rule.
 
         Args:
             commands(list): Command sets enforce the specified list
@@ -276,7 +276,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
     def reset_hit_counts_device_admin_global_exceptions(self,
                                                         headers=None,
                                                         **query_parameters):
-        """Device Admin - Reset HitCount for Global Exceptions.
+        """Device Admin Reset HitCount for Global Exceptions.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -348,7 +348,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                                                                 rule_id,
                                                                 headers=None,
                                                                 **query_parameters):
-        """Device Admin - Get global exception rule attribute.
+        """Device Admin Get global exception rule attribute.
 
         Args:
             rule_id(basestring): ruleId path parameter. Rule id.
@@ -431,7 +431,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                                                                 payload=None,
                                                                 active_validation=True,
                                                                 **query_parameters):
-        """Device Admin - Update global exception authorization rule.
+        """Device Admin Update global exception authorization rule.
 
         Args:
             commands(list): Command sets enforce the specified list
@@ -564,7 +564,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                                                                   rule_id,
                                                                   headers=None,
                                                                   **query_parameters):
-        """Device Admin - Delete global exception authorization rule.
+        """Device Admin Delete global exception authorization rule.
 
         Args:
             rule_id(basestring): ruleId path parameter. Rule id.

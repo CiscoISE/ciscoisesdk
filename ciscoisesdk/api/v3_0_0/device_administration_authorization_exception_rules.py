@@ -78,7 +78,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                                                                 policy_id,
                                                                 headers=None,
                                                                 **query_parameters):
-        """Device Admin - Get local exception rules.
+        """Device Admin Get local exception rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -161,7 +161,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                                                               payload=None,
                                                               active_validation=True,
                                                               **query_parameters):
-        """Device Admin - Create local authorization exception rule.
+        """Device Admin Create local authorization exception rule.
 
         Args:
             commands(list): Command sets enforce the specified list
@@ -293,7 +293,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                                                                     policy_id,
                                                                     headers=None,
                                                                     **query_parameters):
-        """Device Admin - Reset HitCount for local exceptions.
+        """Device Admin Reset HitCount for local exceptions.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -373,7 +373,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                                                                  rule_id,
                                                                  headers=None,
                                                                  **query_parameters):
-        """Device Admin - Get local exception rule attributes.
+        """Device Admin Get local exception rule attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -464,7 +464,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                                                                     payload=None,
                                                                     active_validation=True,
                                                                     **query_parameters):
-        """Device Admin - Update local exception rule.
+        """Device Admin Update local exception rule.
 
         Args:
             commands(list): Command sets enforce the specified list
@@ -605,7 +605,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                                                                     rule_id,
                                                                     headers=None,
                                                                     **query_parameters):
-        """Device Admin - Delete local exception rule.
+        """Device Admin Delete local exception rule.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy

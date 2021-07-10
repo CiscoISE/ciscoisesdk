@@ -89,14 +89,13 @@ class BackupAndRestore(object):
         Args:
             backup_encryption_key(string): The encyption key for the
                 backed up file. Encryption key must
-                satisfy the following criteria -
-                Contains at least one uppercase letter
-                [A-Z], Contains at least one lowercase
-                letter [a-z], Contains at least one
-                digit [0-9], Contain only
-                [A-Z][a-z][0-9]_#, Has at least 8
-                characters, Has not more than 15
-                characters, Must not contain
+                satisfy the following criteria Contains
+                at least one uppercase letter [A-Z],
+                Contains at least one lowercase letter
+                [a-z], Contains at least one digit
+                [0-9], Contain only [A-Z][a-z][0-9]_#,
+                Has at least 8 characters, Has not more
+                than 15 characters, Must not contain
                 'CcIiSsCco', Must not begin with,
                 property of the request body.
             backup_name(string): The backup file will get saved with
@@ -497,14 +496,13 @@ class BackupAndRestore(object):
                 property of the request body.
             backup_encryption_key(string): The encyption key for the
                 backed up file. Encryption key must
-                satisfy the following criteria -
-                Contains at least one uppercase letter
-                [A-Z], Contains at least one lowercase
-                letter [a-z], Contains at least one
-                digit [0-9], Contain only
-                [A-Z][a-z][0-9]_#, Has at least 8
-                characters, Has not more than 15
-                characters, Must not contain
+                satisfy the following criteria Contains
+                at least one uppercase letter [A-Z],
+                Contains at least one lowercase letter
+                [a-z], Contains at least one digit
+                [0-9], Contain only [A-Z][a-z][0-9]_#,
+                Has at least 8 characters, Has not more
+                than 15 characters, Must not contain
                 'CcIiSsCco', Must not begin with,
                 property of the request body.
             backup_name(string): The backup file will get saved with
@@ -517,13 +515,13 @@ class BackupAndRestore(object):
                 body.
             frequency(string): Frequency with which the backup will
                 get scheduled in the ISE node. Allowed
-                values - ONCE, DAILY, WEEKLY, MONTHLY,
+                values ONCE, DAILY, WEEKLY, MONTHLY,
                 property of the request body. Available
                 values are 'ONCE', 'DAILY', 'WEEKLY' and
                 'MONTHLY'.
             month_day(string): Day of month you want backup to be
                 performed on when scheduled frequency is
-                MONTHLY. Allowed values - from 1 to 28.,
+                MONTHLY. Allowed values from 1 to 28.,
                 property of the request body.
             repository_name(string): Name of the configured
                 repository where the generated backup
@@ -536,11 +534,11 @@ class BackupAndRestore(object):
                 property of the request body. Available
                 values are 'ENABLE' and 'DISABLE'.
             time(string): Time at which backup job get scheduled.
-                example- 12:00 AM, property of the
-                request body.
+                example12:00 AM, property of the request
+                body.
             week_day(string): Day of week you want backup to be
                 performed on when scheduled frequency is
-                WEEKLY. Allowed values - MON, TUE, WED,
+                WEEKLY. Allowed values MON, TUE, WED,
                 THU, FRI, SAT, SUN., property of the
                 request body. Available values are
                 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'
@@ -703,14 +701,13 @@ class BackupAndRestore(object):
                 property of the request body.
             backup_encryption_key(string): The encyption key for the
                 backed up file. Encryption key must
-                satisfy the following criteria -
-                Contains at least one uppercase letter
-                [A-Z], Contains at least one lowercase
-                letter [a-z], Contains at least one
-                digit [0-9], Contain only
-                [A-Z][a-z][0-9]_#, Has at least 8
-                characters, Has not more than 15
-                characters, Must not contain
+                satisfy the following criteria Contains
+                at least one uppercase letter [A-Z],
+                Contains at least one lowercase letter
+                [a-z], Contains at least one digit
+                [0-9], Contain only [A-Z][a-z][0-9]_#,
+                Has at least 8 characters, Has not more
+                than 15 characters, Must not contain
                 'CcIiSsCco', Must not begin with,
                 property of the request body.
             backup_name(string): The backup file will get saved with
@@ -723,13 +720,13 @@ class BackupAndRestore(object):
                 body.
             frequency(string): Frequency with which the backup will
                 get scheduled in the ISE node. Allowed
-                values - ONCE, DAILY, WEEKLY, MONTHLY,
+                values ONCE, DAILY, WEEKLY, MONTHLY,
                 property of the request body. Available
                 values are 'ONCE', 'DAILY', 'WEEKLY' and
                 'MONTHLY'.
             month_day(string): Day of month you want backup to be
                 performed on when scheduled frequency is
-                MONTHLY. Allowed values - from 1 to 28.,
+                MONTHLY. Allowed values from 1 to 28.,
                 property of the request body.
             repository_name(string): Name of the configured
                 repository where the generated backup
@@ -742,11 +739,11 @@ class BackupAndRestore(object):
                 property of the request body. Available
                 values are 'ENABLE' and 'DISABLE'.
             time(string): Time at which backup job get scheduled.
-                example- 12:00 AM, property of the
-                request body.
+                example12:00 AM, property of the request
+                body.
             week_day(string): Day of week you want backup to be
                 performed on when scheduled frequency is
-                WEEKLY. Allowed values - MON, TUE, WED,
+                WEEKLY. Allowed values MON, TUE, WED,
                 THU, FRI, SAT, SUN., property of the
                 request body. Available values are
                 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'

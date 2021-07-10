@@ -427,9 +427,9 @@ class IpToSgtMapping(object):
             deploy_to(string): Mandatory unless mappingGroup is set
                 or unless deployType=ALL, property of
                 the request body.
-            deploy_type(string): Allowed values: - ALL, - ND, - NDG,
+            deploy_type(string): Allowed values: ALL, ND, NDG,
                 property of the request body.
-            host_ip(string): Mandatory if hostName is empty -- valid
+            host_ip(string): Mandatory if hostName is empty -valid
                 IP, property of the request body.
             host_name(string): Mandatory if hostIp is empty,
                 property of the request body.
@@ -951,9 +951,9 @@ class IpToSgtMapping(object):
             deploy_to(string): Mandatory unless mappingGroup is set
                 or unless deployType=ALL, property of
                 the request body.
-            deploy_type(string): Allowed values: - ALL, - ND, - NDG,
+            deploy_type(string): Allowed values: ALL, ND, NDG,
                 property of the request body.
-            host_ip(string): Mandatory if hostName is empty -- valid
+            host_ip(string): Mandatory if hostName is empty -valid
                 IP, property of the request body.
             host_name(string): Mandatory if hostIp is empty,
                 property of the request body.

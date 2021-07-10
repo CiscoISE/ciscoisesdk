@@ -77,7 +77,7 @@ class NetworkAccessProfiles(object):
     def get_network_access_profiles(self,
                                     headers=None,
                                     **query_parameters):
-        """Network Access - Returns list of profiles.  (Other CRUD APIs
+        """Network Access Returns list of profiles.  (Other CRUD APIs
         available throught ERS).
 
         Args:

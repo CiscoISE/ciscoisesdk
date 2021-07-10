@@ -77,9 +77,8 @@ class DeviceAdministrationIdentityStores(object):
     def get_device_admin_identity_stores(self,
                                          headers=None,
                                          **query_parameters):
-        """Device Admin - Return list of identity stores for
-        authentication.  (Other CRUD APIs available throught
-        ERS).
+        """Device Admin Return list of identity stores for authentication.
+        (Other CRUD APIs available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request

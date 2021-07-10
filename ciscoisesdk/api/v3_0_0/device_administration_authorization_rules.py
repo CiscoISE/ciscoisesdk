@@ -78,7 +78,7 @@ class DeviceAdministrationAuthorizationRules(object):
                                                               policy_id,
                                                               headers=None,
                                                               **query_parameters):
-        """Device Admin - Get authorization rules.
+        """Device Admin Get authorization rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -162,7 +162,7 @@ class DeviceAdministrationAuthorizationRules(object):
                                                             payload=None,
                                                             active_validation=True,
                                                             **query_parameters):
-        """Device Admin - Create authorization rule.
+        """Device Admin Create authorization rule.
 
         Args:
             commands(list): Command sets enforce the specified list
@@ -295,7 +295,7 @@ class DeviceAdministrationAuthorizationRules(object):
                                                                        policy_id,
                                                                        headers=None,
                                                                        **query_parameters):
-        """Device Admin - Reset HitCount for Authorization Rules.
+        """Device Admin Reset HitCount for Authorization Rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -375,7 +375,7 @@ class DeviceAdministrationAuthorizationRules(object):
                                                                rule_id,
                                                                headers=None,
                                                                **query_parameters):
-        """Device Admin - Get authorization rule attributes.
+        """Device Admin Get authorization rule attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -466,7 +466,7 @@ class DeviceAdministrationAuthorizationRules(object):
                                                                   payload=None,
                                                                   active_validation=True,
                                                                   **query_parameters):
-        """Device Admin - Update authorization rule.
+        """Device Admin Update authorization rule.
 
         Args:
             commands(list): Command sets enforce the specified list
@@ -607,7 +607,7 @@ class DeviceAdministrationAuthorizationRules(object):
                                                                   rule_id,
                                                                   headers=None,
                                                                   **query_parameters):
-        """Device Admin - Delete authorization rule.
+        """Device Admin Delete authorization rule.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy

@@ -93,9 +93,9 @@ class EndpointCertificate(object):
             certificate_request(object): Key value map. Must have CN
                 and SAN entries, property of the request
                 body.
-            format(string): Allowed values: - PKCS12, -
-                PKCS12_CHAIN, - PKCS8, - PKCS8_CHAIN,
-                property of the request body.
+            format(string): Allowed values: PKCS12, PKCS12_CHAIN,
+                PKCS8, PKCS8_CHAIN, property of the
+                request body.
             password(string): Protects the private key. Must have
                 more than 8 characters, less than 15
                 characters, at least one upper case
@@ -124,6 +124,8 @@ class EndpointCertificate(object):
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
+            DownloadFailure: If was not able to download the raw
+            response to a file.
         """
         check_type(headers, dict)
 

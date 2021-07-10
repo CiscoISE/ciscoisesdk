@@ -283,7 +283,7 @@ class AuthorizationProfile(object):
         """This API allows the client to update an authorization profile.
 
         Args:
-            access_type(string): Allowed Values: - ACCESS_ACCEPT, -
+            access_type(string): Allowed Values: ACCESS_ACCEPT,
                 ACCESS_REJECT, property of the request
                 body.
             acl(string): acl, property of the request body.
@@ -296,8 +296,8 @@ class AuthorizationProfile(object):
             airespace_i_pv6_acl(string): airespaceIPv6ACL, property
                 of the request body.
             asa_vpn(string): asaVpn, property of the request body.
-            authz_profile_type(string): Allowed Values: - SWITCH, -
-                TRUSTSEC, - TACACS SWITCH is used for
+            authz_profile_type(string): Allowed Values: SWITCH,
+                TRUSTSEC, TACACS SWITCH is used for
                 Standard Authorization Profiles,
                 property of the request body.
             auto_smart_port(string): autoSmartPort, property of the
@@ -320,9 +320,9 @@ class AuthorizationProfile(object):
             ipv6_dacl_name(string): ipv6DaclName, property of the
                 request body.
             link(object): link, property of the request body.
-            mac_sec_policy(string): Allowed Values: - MUST_SECURE, -
-                MUST_NOT_SECURE, - SHOULD_SECURE,
-                property of the request body.
+            mac_sec_policy(string): Allowed Values: MUST_SECURE,
+                MUST_NOT_SECURE, SHOULD_SECURE, property
+                of the request body.
             name(string): Resource Name, property of the request
                 body.
             neat(boolean): neat, property of the request body.
@@ -834,7 +834,7 @@ class AuthorizationProfile(object):
         """This API creates an authorization profile.
 
         Args:
-            access_type(string): Allowed Values: - ACCESS_ACCEPT, -
+            access_type(string): Allowed Values: ACCESS_ACCEPT,
                 ACCESS_REJECT, property of the request
                 body.
             acl(string): acl, property of the request body.
@@ -847,8 +847,8 @@ class AuthorizationProfile(object):
             airespace_i_pv6_acl(string): airespaceIPv6ACL, property
                 of the request body.
             asa_vpn(string): asaVpn, property of the request body.
-            authz_profile_type(string): Allowed Values: - SWITCH, -
-                TRUSTSEC, - TACACS SWITCH is used for
+            authz_profile_type(string): Allowed Values: SWITCH,
+                TRUSTSEC, TACACS SWITCH is used for
                 Standard Authorization Profiles,
                 property of the request body.
             auto_smart_port(string): autoSmartPort, property of the
@@ -871,9 +871,9 @@ class AuthorizationProfile(object):
             ipv6_dacl_name(string): ipv6DaclName, property of the
                 request body.
             link(object): link, property of the request body.
-            mac_sec_policy(string): Allowed Values: - MUST_SECURE, -
-                MUST_NOT_SECURE, - SHOULD_SECURE,
-                property of the request body.
+            mac_sec_policy(string): Allowed Values: MUST_SECURE,
+                MUST_NOT_SECURE, SHOULD_SECURE, property
+                of the request body.
             name(string): Resource Name, property of the request
                 body.
             neat(boolean): neat, property of the request body.

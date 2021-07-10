@@ -159,15 +159,15 @@ class NetworkAccessPolicySet(object):
                                          payload=None,
                                          active_validation=True,
                                          **query_parameters):
-        """Network Access - Create a new policy set:     Policy must
-        include name , service identifier (either server
-        sequence or allowed protocol) and a condition.
-        Condition has hierarchical structure which define a set
-        of condition for which policy could be match.
-        Condition can be either reference to a stored Library
-        condition, using model  ConditionReference , or,
-        dynamically built conditions which are not stored in the
-        conditions Library, using models  ConditionAttributes,
+        """Network Access Create a new policy set:     Policy must include
+        name , service identifier (either server sequence or
+        allowed protocol) and a condition.     Condition has
+        hierarchical structure which define a set of condition
+        for which policy could be match.     Condition can be
+        either reference to a stored Library condition, using
+        model  ConditionReference , or, dynamically built
+        conditions which are not stored in the conditions
+        Library, using models  ConditionAttributes,
         ConditionAndBlock, ConditionOrBlock .    .
 
         Args:
@@ -195,7 +195,7 @@ class NetworkAccessPolicySet(object):
             rank(integer): The rank(priority) in relation to other
                 policy set. Lower rank is higher
                 priority., property of the request body.
-            service_name(string): Policy set service identifier -
+            service_name(string): Policy set service identifier
                 Allowed Protocols,Server Sequence..,
                 property of the request body.
             state(string): The state that the policy set is in. A
@@ -340,7 +340,7 @@ class NetworkAccessPolicySet(object):
     def reset_hit_counts_network_access_policy_sets(self,
                                                     headers=None,
                                                     **query_parameters):
-        """Network Access - Reset HitCount for PolicySets.
+        """Network Access Reset HitCount for PolicySets.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -411,7 +411,7 @@ class NetworkAccessPolicySet(object):
                                             policy_id,
                                             headers=None,
                                             **query_parameters):
-        """Network Access - Get policy set attributes.
+        """Network Access Get policy set attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -501,7 +501,7 @@ class NetworkAccessPolicySet(object):
                                                payload=None,
                                                active_validation=True,
                                                **query_parameters):
-        """Network Access - Update a policy set.
+        """Network Access Update a policy set.
 
         Args:
             condition(object): condition, property of the request
@@ -528,7 +528,7 @@ class NetworkAccessPolicySet(object):
             rank(integer): The rank(priority) in relation to other
                 policy set. Lower rank is higher
                 priority., property of the request body.
-            service_name(string): Policy set service identifier -
+            service_name(string): Policy set service identifier
                 Allowed Protocols,Server Sequence..,
                 property of the request body.
             state(string): The state that the policy set is in. A
@@ -682,7 +682,7 @@ class NetworkAccessPolicySet(object):
                                                policy_id,
                                                headers=None,
                                                **query_parameters):
-        """Network Access - Delete a policy set.
+        """Network Access Delete a policy set.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy

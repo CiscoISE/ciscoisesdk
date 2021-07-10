@@ -154,7 +154,7 @@ class NetworkAccessDictionary(object):
                                          payload=None,
                                          active_validation=True,
                                          **query_parameters):
-        """Network Access - Create a new Dictionary.
+        """Network Access Create a new Dictionary.
 
         Args:
             description(string): The description of the Dictionary,
@@ -378,7 +378,7 @@ class NetworkAccessDictionary(object):
                                                 payload=None,
                                                 active_validation=True,
                                                 **query_parameters):
-        """Network Access - Update a Dictionary.
+        """Network Access Update a Dictionary.
 
         Args:
             description(string): The description of the Dictionary,
@@ -524,7 +524,7 @@ class NetworkAccessDictionary(object):
                                                    name,
                                                    headers=None,
                                                    **query_parameters):
-        """Network Access - Delete a Dictionary.
+        """Network Access Delete a Dictionary.
 
         Args:
             name(basestring): name path parameter. the dictionary

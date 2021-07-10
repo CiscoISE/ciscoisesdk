@@ -294,14 +294,13 @@ class ExternalRadiusServer(object):
                 HEXADECIMAL characters (depend on
                 selection in field 'keyInputFormat'),
                 property of the request body.
-            host_ip(string): The IP of the host - must be a valid
-                IPV4 address, property of the request
-                body.
+            host_ip(string): The IP of the host must be a valid IPV4
+                address, property of the request body.
             id(string): id, property of the request body.
             key_input_format(string): Specifies the format of the
                 input for fields 'encryptionKey' and
-                'authenticatorKey'. Allowed Values: -
-                ASCII - HEXADECIMAL, property of the
+                'authenticatorKey'. Allowed Values:
+                ASCII HEXADECIMAL, property of the
                 request body.
             name(string): Resource Name. Allowed charactera are
                 alphanumeric and _ (underscore).,
@@ -761,13 +760,12 @@ class ExternalRadiusServer(object):
                 HEXADECIMAL characters (depend on
                 selection in field 'keyInputFormat'),
                 property of the request body.
-            host_ip(string): The IP of the host - must be a valid
-                IPV4 address, property of the request
-                body.
+            host_ip(string): The IP of the host must be a valid IPV4
+                address, property of the request body.
             key_input_format(string): Specifies the format of the
                 input for fields 'encryptionKey' and
-                'authenticatorKey'. Allowed Values: -
-                ASCII - HEXADECIMAL, property of the
+                'authenticatorKey'. Allowed Values:
+                ASCII HEXADECIMAL, property of the
                 request body.
             name(string): Resource Name. Allowed charactera are
                 alphanumeric and _ (underscore).,

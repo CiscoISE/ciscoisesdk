@@ -77,7 +77,7 @@ class DeviceAdministrationConditions(object):
     def get_device_admin_conditions(self,
                                     headers=None,
                                     **query_parameters):
-        """Device Admin - Returns list of library conditions.
+        """Device Admin Returns list of library conditions.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -166,7 +166,7 @@ class DeviceAdministrationConditions(object):
                                     payload=None,
                                     active_validation=True,
                                     **query_parameters):
-        """Device Admin - Creates a library condition.
+        """Device Admin Creates a library condition.
 
         Args:
             attribute_name(string): Dictionary attribute name,
@@ -202,25 +202,25 @@ class DeviceAdministrationConditions(object):
             dates_range(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             dates_range_exception(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             description(string): Condition description, property of
                 the request body.
             dictionary_name(string): Dictionary name, property of
@@ -230,15 +230,15 @@ class DeviceAdministrationConditions(object):
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             hours_range_exception(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             id(string): id, property of the request body.
             is_negate(boolean): Indicates whereas this condition is
                 in negate mode, property of the request
@@ -257,21 +257,21 @@ class DeviceAdministrationConditions(object):
                 'ipGreaterThan', 'ipLessThan',
                 'ipEquals' and 'ipNotEquals'.
             weekDays(list): Defines for which days this condition
-                will be matched  Days format - Arrays of
-                WeekDay enums   Default - List of All
-                week days, property of the request body
-                (list of strings. Available values are
+                will be matched  Days format Arrays of
+                WeekDay enums   Default List of All week
+                days, property of the request body (list
+                of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
             weekDaysException(list): Defines for which days this
                 condition will NOT be matched  Days
-                format - Arrays of WeekDay enums
-                Default - Not enabled, property of the
-                request body (list of strings. Available
-                values are 'Sunday', 'Monday',
-                'Tuesday', 'Wednesday', 'Thursday',
-                'Friday' and 'Saturday').
+                format Arrays of WeekDay enums   Default
+                Not enabled, property of the request
+                body (list of strings. Available values
+                are 'Sunday', 'Monday', 'Tuesday',
+                'Wednesday', 'Thursday', 'Friday' and
+                'Saturday').
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -437,7 +437,7 @@ class DeviceAdministrationConditions(object):
     def get_device_admin_conditions_for_authentication_rule(self,
                                                             headers=None,
                                                             **query_parameters):
-        """Device Admin - Returns list of library conditions for
+        """Device Admin Returns list of library conditions for
         authentication rules.
 
         Args:
@@ -495,7 +495,7 @@ class DeviceAdministrationConditions(object):
     def get_device_admin_conditions_for_authorization_rule(self,
                                                            headers=None,
                                                            **query_parameters):
-        """Device Admin - Returns list of library conditions for
+        """Device Admin Returns list of library conditions for
         authorization rules.
 
         Args:
@@ -554,7 +554,7 @@ class DeviceAdministrationConditions(object):
                                                      condition_name,
                                                      headers=None,
                                                      **query_parameters):
-        """Device Admin - Returns a library condition.
+        """Device Admin Returns a library condition.
 
         Args:
             condition_name(basestring): conditionName path
@@ -652,7 +652,7 @@ class DeviceAdministrationConditions(object):
                                                      payload=None,
                                                      active_validation=True,
                                                      **query_parameters):
-        """Device Admin - Update library condition using condition name.
+        """Device Admin Update library condition using condition name.
 
         Args:
             attribute_name(string): Dictionary attribute name,
@@ -688,25 +688,25 @@ class DeviceAdministrationConditions(object):
             dates_range(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             dates_range_exception(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             description(string): Condition description, property of
                 the request body.
             dictionary_name(string): Dictionary name, property of
@@ -716,15 +716,15 @@ class DeviceAdministrationConditions(object):
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             hours_range_exception(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             id(string): id, property of the request body.
             is_negate(boolean): Indicates whereas this condition is
                 in negate mode, property of the request
@@ -743,21 +743,21 @@ class DeviceAdministrationConditions(object):
                 'ipGreaterThan', 'ipLessThan',
                 'ipEquals' and 'ipNotEquals'.
             weekDays(list): Defines for which days this condition
-                will be matched  Days format - Arrays of
-                WeekDay enums   Default - List of All
-                week days, property of the request body
-                (list of strings. Available values are
+                will be matched  Days format Arrays of
+                WeekDay enums   Default List of All week
+                days, property of the request body (list
+                of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
             weekDaysException(list): Defines for which days this
                 condition will NOT be matched  Days
-                format - Arrays of WeekDay enums
-                Default - Not enabled, property of the
-                request body (list of strings. Available
-                values are 'Sunday', 'Monday',
-                'Tuesday', 'Wednesday', 'Thursday',
-                'Friday' and 'Saturday').
+                format Arrays of WeekDay enums   Default
+                Not enabled, property of the request
+                body (list of strings. Available values
+                are 'Sunday', 'Monday', 'Tuesday',
+                'Wednesday', 'Thursday', 'Friday' and
+                'Saturday').
             condition_name(basestring): conditionName path
                 parameter. Condition name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -933,7 +933,7 @@ class DeviceAdministrationConditions(object):
                                                         condition_name,
                                                         headers=None,
                                                         **query_parameters):
-        """NDevice Admin - Delete a library condition using condition Name.
+        """NDevice Admin Delete a library condition using condition Name.
 
         Args:
             condition_name(basestring): conditionName path
@@ -1010,8 +1010,7 @@ class DeviceAdministrationConditions(object):
     def get_device_admin_conditions_for_policy_set(self,
                                                    headers=None,
                                                    **query_parameters):
-        """Device Admin - Returns list of library conditions for policy
-        sets.
+        """Device Admin Returns list of library conditions for policy sets.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1069,7 +1068,7 @@ class DeviceAdministrationConditions(object):
                                                    condition_id,
                                                    headers=None,
                                                    **query_parameters):
-        """Device Admin - Returns a library condition.
+        """Device Admin Returns a library condition.
 
         Args:
             condition_id(basestring): conditionId path parameter.
@@ -1166,7 +1165,7 @@ class DeviceAdministrationConditions(object):
                                                    payload=None,
                                                    active_validation=True,
                                                    **query_parameters):
-        """Device Admin - Update library condition.
+        """Device Admin Update library condition.
 
         Args:
             attribute_name(string): Dictionary attribute name,
@@ -1202,25 +1201,25 @@ class DeviceAdministrationConditions(object):
             dates_range(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             dates_range_exception(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             description(string): Condition description, property of
                 the request body.
             dictionary_name(string): Dictionary name, property of
@@ -1230,15 +1229,15 @@ class DeviceAdministrationConditions(object):
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             hours_range_exception(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             id(string): id, property of the request body.
             is_negate(boolean): Indicates whereas this condition is
                 in negate mode, property of the request
@@ -1257,21 +1256,21 @@ class DeviceAdministrationConditions(object):
                 'ipGreaterThan', 'ipLessThan',
                 'ipEquals' and 'ipNotEquals'.
             weekDays(list): Defines for which days this condition
-                will be matched  Days format - Arrays of
-                WeekDay enums   Default - List of All
-                week days, property of the request body
-                (list of strings. Available values are
+                will be matched  Days format Arrays of
+                WeekDay enums   Default List of All week
+                days, property of the request body (list
+                of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
             weekDaysException(list): Defines for which days this
                 condition will NOT be matched  Days
-                format - Arrays of WeekDay enums
-                Default - Not enabled, property of the
-                request body (list of strings. Available
-                values are 'Sunday', 'Monday',
-                'Tuesday', 'Wednesday', 'Thursday',
-                'Friday' and 'Saturday').
+                format Arrays of WeekDay enums   Default
+                Not enabled, property of the request
+                body (list of strings. Available values
+                are 'Sunday', 'Monday', 'Tuesday',
+                'Wednesday', 'Thursday', 'Friday' and
+                'Saturday').
             condition_id(basestring): conditionId path parameter.
                 Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1446,7 +1445,7 @@ class DeviceAdministrationConditions(object):
                                                       condition_id,
                                                       headers=None,
                                                       **query_parameters):
-        """Device Admin - Delete a library condition.
+        """Device Admin Delete a library condition.
 
         Args:
             condition_id(basestring): conditionId path parameter.

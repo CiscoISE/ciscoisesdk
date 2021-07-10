@@ -172,12 +172,12 @@ class DownloadableAcl(object):
         """This API allows the client to update a downloadable ACL.
 
         Args:
-            dacl(string): The DACL Content. Use the string \n for a
+            dacl(string): The DACL Content. Use the string \\n for a
                 newline, property of the request body.
-            dacl_type(string): Allowed values: - IPV4, - IPV6, -
+            dacl_type(string): Allowed values: IPV4, IPV6,
                 IP_AGNOSTIC, property of the request
                 body.
-            description(string): Use the string \n for a newline,
+            description(string): Use the string \\n for a newline,
                 property of the request body.
             id(string): id, property of the request body.
             name(string): Resource Name. Name may contain
@@ -557,12 +557,12 @@ class DownloadableAcl(object):
         """This API creates a downloadable ACL.
 
         Args:
-            dacl(string): The DACL Content. Use the string \n for a
+            dacl(string): The DACL Content. Use the string \\n for a
                 newline, property of the request body.
-            dacl_type(string): Allowed values: - IPV4, - IPV6, -
+            dacl_type(string): Allowed values: IPV4, IPV6,
                 IP_AGNOSTIC, property of the request
                 body.
-            description(string): Use the string \n for a newline,
+            description(string): Use the string \\n for a newline,
                 property of the request body.
             name(string): Resource Name. Name may contain
                 alphanumeric or any of the following

@@ -182,7 +182,7 @@ class SecurityGroupsAcls(object):
             generation_id(string): generationId, property of the
                 request body.
             id(string): id, property of the request body.
-            ip_version(string): Allowed values: - IPV4, - IPV6, -
+            ip_version(string): Allowed values: IPV4, IPV6,
                 IP_AGNOSTIC, property of the request
                 body.
             is_read_only(boolean): isReadOnly, property of the
@@ -704,7 +704,7 @@ class SecurityGroupsAcls(object):
                 request body.
             generation_id(string): generationId, property of the
                 request body.
-            ip_version(string): Allowed values: - IPV4, - IPV6, -
+            ip_version(string): Allowed values: IPV4, IPV6,
                 IP_AGNOSTIC, property of the request
                 body.
             is_read_only(boolean): isReadOnly, property of the

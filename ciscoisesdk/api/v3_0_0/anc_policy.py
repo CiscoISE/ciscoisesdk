@@ -256,16 +256,15 @@ class AncPolicy(object):
         """This API allows the client to update an ANC policy.
 
         Args:
-            action(list): - QUARANTINE: Allows you to use Exception
+            action(list): QUARANTINE: Allows you to use Exception
                 policies (authorization policies) to
                 limit or deny an endpoint access to the
-                network. - PORTBOUNCE: Resets the port
-                on the network device to which the
-                endpoint is connected. - SHUTDOWN :
-                Shuts down the port on the network
-                device to which the endpoint is
-                connected. - RE_AUTHENTICATE: Re-
-                authenticates the session from the
+                network. PORTBOUNCE: Resets the port on
+                the network device to which the endpoint
+                is connected. SHUTDOWN : Shuts down the
+                port on the network device to which the
+                endpoint is connected. RE_AUTHENTICATE:
+                Re-authenticates the session from the
                 endpoint., property of the request body
                 (list of strings. Available values are
                 'QUARANTINE', 'PORTBOUNCE', 'SHUTDOWN'
@@ -762,16 +761,15 @@ class AncPolicy(object):
         """This API allows the client to create an ANC policy.
 
         Args:
-            action(list): - QUARANTINE: Allows you to use Exception
+            action(list): QUARANTINE: Allows you to use Exception
                 policies (authorization policies) to
                 limit or deny an endpoint access to the
-                network. - PORTBOUNCE: Resets the port
-                on the network device to which the
-                endpoint is connected. - SHUTDOWN :
-                Shuts down the port on the network
-                device to which the endpoint is
-                connected. - RE_AUTHENTICATE: Re-
-                authenticates the session from the
+                network. PORTBOUNCE: Resets the port on
+                the network device to which the endpoint
+                is connected. SHUTDOWN : Shuts down the
+                port on the network device to which the
+                endpoint is connected. RE_AUTHENTICATE:
+                Re-authenticates the session from the
                 endpoint., property of the request body
                 (list of strings. Available values are
                 'QUARANTINE', 'PORTBOUNCE', 'SHUTDOWN'

@@ -262,15 +262,15 @@ class CertificateProfile(object):
             allowed_as_user_name(boolean): allowedAsUserName,
                 property of the request body.
             certificate_attribute_name(string): Attribute name of
-                the Certificate Profile - used only when
+                the Certificate Profile used only when
                 CERTIFICATE is chosen in usernameFrom.
-                Allowed values: - SUBJECT_COMMON_NAME -
-                SUBJECT_ALTERNATIVE_NAME -
-                SUBJECT_SERIAL_NUMBER - SUBJECT -
-                SUBJECT_ALTERNATIVE_NAME_OTHER_NAME -
-                SUBJECT_ALTERNATIVE_NAME_EMAIL -
-                SUBJECT_ALTERNATIVE_NAME_DNS. -
-                Additional internal value
+                Allowed values: SUBJECT_COMMON_NAME
+                SUBJECT_ALTERNATIVE_NAME
+                SUBJECT_SERIAL_NUMBER SUBJECT
+                SUBJECT_ALTERNATIVE_NAME_OTHER_NAME
+                SUBJECT_ALTERNATIVE_NAME_EMAIL
+                SUBJECT_ALTERNATIVE_NAME_DNS. Additional
+                internal value
                 ALL_SUBJECT_AND_ALTERNATIVE_NAMES is
                 used automatically when
                 usernameFrom=UPN, property of the
@@ -281,20 +281,20 @@ class CertificateProfile(object):
                 chosen, property of the request body.
             id(string): id, property of the request body.
             match_mode(string): Match mode of the Certificate
-                Profile. Allowed values: - NEVER -
-                RESOLVE_IDENTITY_AMBIGUITY -
+                Profile. Allowed values: NEVER
+                RESOLVE_IDENTITY_AMBIGUITY
                 BINARY_COMPARISON, property of the
                 request body.
             name(string): name, property of the request body.
             username_from(string): The attribute in the certificate
                 where the user name should be taken
-                from. Allowed values: - CERTIFICATE (for
-                a specific attribute as defined in
-                certificateAttributeName) - UPN (for
-                using any Subject or Alternative Name
-                Attributes in the Certificate - an
-                option only in AD), property of the
-                request body.
+                from. Allowed values: CERTIFICATE (for a
+                specific attribute as defined in
+                certificateAttributeName) UPN (for using
+                any Subject or Alternative Name
+                Attributes in the Certificate an option
+                only in AD), property of the request
+                body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -597,15 +597,15 @@ class CertificateProfile(object):
             allowed_as_user_name(boolean): allowedAsUserName,
                 property of the request body.
             certificate_attribute_name(string): Attribute name of
-                the Certificate Profile - used only when
+                the Certificate Profile used only when
                 CERTIFICATE is chosen in usernameFrom.
-                Allowed values: - SUBJECT_COMMON_NAME -
-                SUBJECT_ALTERNATIVE_NAME -
-                SUBJECT_SERIAL_NUMBER - SUBJECT -
-                SUBJECT_ALTERNATIVE_NAME_OTHER_NAME -
-                SUBJECT_ALTERNATIVE_NAME_EMAIL -
-                SUBJECT_ALTERNATIVE_NAME_DNS. -
-                Additional internal value
+                Allowed values: SUBJECT_COMMON_NAME
+                SUBJECT_ALTERNATIVE_NAME
+                SUBJECT_SERIAL_NUMBER SUBJECT
+                SUBJECT_ALTERNATIVE_NAME_OTHER_NAME
+                SUBJECT_ALTERNATIVE_NAME_EMAIL
+                SUBJECT_ALTERNATIVE_NAME_DNS. Additional
+                internal value
                 ALL_SUBJECT_AND_ALTERNATIVE_NAMES is
                 used automatically when
                 usernameFrom=UPN, property of the
@@ -616,20 +616,20 @@ class CertificateProfile(object):
                 chosen, property of the request body.
             id(string): id, property of the request body.
             match_mode(string): Match mode of the Certificate
-                Profile. Allowed values: - NEVER -
-                RESOLVE_IDENTITY_AMBIGUITY -
+                Profile. Allowed values: NEVER
+                RESOLVE_IDENTITY_AMBIGUITY
                 BINARY_COMPARISON, property of the
                 request body.
             name(string): name, property of the request body.
             username_from(string): The attribute in the certificate
                 where the user name should be taken
-                from. Allowed values: - CERTIFICATE (for
-                a specific attribute as defined in
-                certificateAttributeName) - UPN (for
-                using any Subject or Alternative Name
-                Attributes in the Certificate - an
-                option only in AD), property of the
-                request body.
+                from. Allowed values: CERTIFICATE (for a
+                specific attribute as defined in
+                certificateAttributeName) UPN (for using
+                any Subject or Alternative Name
+                Attributes in the Certificate an option
+                only in AD), property of the request
+                body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the

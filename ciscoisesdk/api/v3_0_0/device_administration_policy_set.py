@@ -77,7 +77,7 @@ class DeviceAdministrationPolicySet(object):
     def get_device_admin_policy_set_list(self,
                                          headers=None,
                                          **query_parameters):
-        """Device Admin - List of policy sets.
+        """Device Admin List of policy sets.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -159,7 +159,7 @@ class DeviceAdministrationPolicySet(object):
                                        payload=None,
                                        active_validation=True,
                                        **query_parameters):
-        """Device Admin - Create a new policy set.
+        """Device Admin Create a new policy set.
 
         Args:
             condition(object): condition, property of the request
@@ -186,7 +186,7 @@ class DeviceAdministrationPolicySet(object):
             rank(integer): The rank(priority) in relation to other
                 policy set. Lower rank is higher
                 priority., property of the request body.
-            service_name(string): Policy set service identifier -
+            service_name(string): Policy set service identifier
                 Allowed Protocols,Server Sequence..,
                 property of the request body.
             state(string): The state that the policy set is in. A
@@ -331,7 +331,7 @@ class DeviceAdministrationPolicySet(object):
     def reset_hit_counts_device_admin_policy_sets(self,
                                                   headers=None,
                                                   **query_parameters):
-        """Device Admin - Reset HitCount for PolicySets.
+        """Device Admin Reset HitCount for PolicySets.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -402,7 +402,7 @@ class DeviceAdministrationPolicySet(object):
                                           policy_id,
                                           headers=None,
                                           **query_parameters):
-        """Device Admin - Get policy set attributes.
+        """Device Admin Get policy set attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -492,7 +492,7 @@ class DeviceAdministrationPolicySet(object):
                                              payload=None,
                                              active_validation=True,
                                              **query_parameters):
-        """Device Admin - Update a policy set.
+        """Device Admin Update a policy set.
 
         Args:
             condition(object): condition, property of the request
@@ -519,7 +519,7 @@ class DeviceAdministrationPolicySet(object):
             rank(integer): The rank(priority) in relation to other
                 policy set. Lower rank is higher
                 priority., property of the request body.
-            service_name(string): Policy set service identifier -
+            service_name(string): Policy set service identifier
                 Allowed Protocols,Server Sequence..,
                 property of the request body.
             state(string): The state that the policy set is in. A
@@ -673,7 +673,7 @@ class DeviceAdministrationPolicySet(object):
                                              policy_id,
                                              headers=None,
                                              **query_parameters):
-        """Device Admin - Delete a policy set.
+        """Device Admin Delete a policy set.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy

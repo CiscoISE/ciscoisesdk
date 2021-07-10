@@ -77,7 +77,7 @@ class DeviceAdministrationCommandSet(object):
     def get_device_admin_command_sets(self,
                                       headers=None,
                                       **query_parameters):
-        """Device Admin - Return list of command sets.  (Other CRUD APIs
+        """Device Admin Return list of command sets.  (Other CRUD APIs
         available throught ERS).
 
         Args:

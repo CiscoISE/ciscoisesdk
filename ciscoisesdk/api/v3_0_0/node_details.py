@@ -74,10 +74,10 @@ class NodeDetails(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_node_by_name(self,
-                         name,
-                         headers=None,
-                         **query_parameters):
+    def get_node_detail_by_name(self,
+                                name,
+                                headers=None,
+                                **query_parameters):
         """This API allows the client to get node details by name.
 
         Args:
@@ -149,20 +149,20 @@ class NodeDetails(object):
                     name,
                     headers=None,
                     **query_parameters):
-        """Alias for `get_node_by_name <#ciscoisesdk.
+        """Alias for `get_node_detail_by_name <#ciscoisesdk.
         api.v3_0_0.node_details.
-        NodeDetails.get_node_by_name>`_
+        NodeDetails.get_node_detail_by_name>`_
         """
-        return self.get_node_by_name(
+        return self.get_node_detail_by_name(
             name=name,
             headers=headers,
             **query_parameters
         )
 
-    def get_node_by_id(self,
-                       id,
-                       headers=None,
-                       **query_parameters):
+    def get_node_detail_by_id(self,
+                              id,
+                              headers=None,
+                              **query_parameters):
         """This API allows the client to get node details by ID.
 
         Args:
@@ -234,23 +234,23 @@ class NodeDetails(object):
                   id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_node_by_id <#ciscoisesdk.
+        """Alias for `get_node_detail_by_id <#ciscoisesdk.
         api.v3_0_0.node_details.
-        NodeDetails.get_node_by_id>`_
+        NodeDetails.get_node_detail_by_id>`_
         """
-        return self.get_node_by_id(
+        return self.get_node_detail_by_id(
             id=id,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_nodes(self,
-                      filter=None,
-                      filter_type=None,
-                      page=None,
-                      size=None,
-                      headers=None,
-                      **query_parameters):
+    def get_all_node_details(self,
+                             filter=None,
+                             filter_type=None,
+                             page=None,
+                             size=None,
+                             headers=None,
+                             **query_parameters):
         """This API allows the client to get all the node details.
         Filter:   [nodeservicetypes]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -374,11 +374,11 @@ class NodeDetails(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_nodes <#ciscoisesdk.
+        """Alias for `get_all_node_details <#ciscoisesdk.
         api.v3_0_0.node_details.
-        NodeDetails.get_all_nodes>`_
+        NodeDetails.get_all_node_details>`_
         """
-        return self.get_all_nodes(
+        return self.get_all_node_details(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -387,13 +387,13 @@ class NodeDetails(object):
             **query_parameters
         )
 
-    def get_all_nodes_generator(self,
-                                filter=None,
-                                filter_type=None,
-                                page=None,
-                                size=None,
-                                headers=None,
-                                **query_parameters):
+    def get_all_node_details_generator(self,
+                                       filter=None,
+                                       filter_type=None,
+                                       page=None,
+                                       size=None,
+                                       headers=None,
+                                       **query_parameters):
         """This API allows the client to get all the node details.
         Filter:   [nodeservicetypes]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -460,7 +460,7 @@ class NodeDetails(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_nodes, dict(
+        yield from get_next_page(self.get_all_node_details, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -476,11 +476,11 @@ class NodeDetails(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_nodes_generator <#ciscoisesdk.
+        """Alias for `get_all_node_details_generator <#ciscoisesdk.
         api.v3_0_0.node_details.
-        NodeDetails.get_all_nodes_generator>`_
+        NodeDetails.get_all_node_details_generator>`_
         """
-        yield from get_next_page(self.get_all_nodes, dict(
+        yield from get_next_page(self.get_all_node_details, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

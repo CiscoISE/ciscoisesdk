@@ -78,7 +78,7 @@ class NetworkAccessAuthorizationRules(object):
                                                                 policy_id,
                                                                 headers=None,
                                                                 **query_parameters):
-        """Network Access - Get authorization rules.
+        """Network Access Get authorization rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -162,14 +162,14 @@ class NetworkAccessAuthorizationRules(object):
                                                               payload=None,
                                                               active_validation=True,
                                                               **query_parameters):
-        """Network Access - Create authorization rule:     Rule must
-        include name and condition.     Condition has
-        hierarchical structure which define a set of conditions
-        for which authoriztion policy rule could be match.
-        Condition can be either reference to a stored Library
-        condition, using model  ConditionReference    or
-        dynamically built conditions which are not stored in the
-        conditions Library, using models  ConditionAttributes,
+        """Network Access Create authorization rule:     Rule must include
+        name and condition.     Condition has hierarchical
+        structure which define a set of conditions for which
+        authoriztion policy rule could be match.     Condition
+        can be either reference to a stored Library condition,
+        using model  ConditionReference    or dynamically built
+        conditions which are not stored in the conditions
+        Library, using models  ConditionAttributes,
         ConditionAndBlock, ConditionOrBlock .    .
 
         Args:
@@ -300,7 +300,7 @@ class NetworkAccessAuthorizationRules(object):
                                                                          policy_id,
                                                                          headers=None,
                                                                          **query_parameters):
-        """Network Access - Reset HitCount for Authorization Rules.
+        """Network Access Reset HitCount for Authorization Rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -380,7 +380,7 @@ class NetworkAccessAuthorizationRules(object):
                                                                  rule_id,
                                                                  headers=None,
                                                                  **query_parameters):
-        """Network Access - Get authorization rule attributes.
+        """Network Access Get authorization rule attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -471,7 +471,7 @@ class NetworkAccessAuthorizationRules(object):
                                                                     payload=None,
                                                                     active_validation=True,
                                                                     **query_parameters):
-        """Network Access - Update authorization rule.
+        """Network Access Update authorization rule.
 
         Args:
             link(object): link, property of the request body.
@@ -609,7 +609,7 @@ class NetworkAccessAuthorizationRules(object):
                                                                     rule_id,
                                                                     headers=None,
                                                                     **query_parameters):
-        """Network Access - Delete authorization rule.
+        """Network Access Delete authorization rule.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy

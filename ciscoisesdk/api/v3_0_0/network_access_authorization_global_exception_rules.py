@@ -77,7 +77,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
     def get_network_access_policy_set_global_exception_rule_list(self,
                                                                  headers=None,
                                                                  **query_parameters):
-        """Network Access - Get global execption rules.
+        """Network Access Get global execption rules.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -140,7 +140,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
                                                                payload=None,
                                                                active_validation=True,
                                                                **query_parameters):
-        """Network Access - Create global exception authorization rule:
+        """Network Access Create global exception authorization rule:
         Rule must include name and condition.     Condition has
         hierarchical structure which define a set of conditions
         for which authoriztion policy rule could be match.
@@ -269,7 +269,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
     def reset_hit_counts_network_access_global_exceptions(self,
                                                           headers=None,
                                                           **query_parameters):
-        """Network Access - Reset HitCount for Global Exceptions.
+        """Network Access Reset HitCount for Global Exceptions.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -341,7 +341,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
                                                                   rule_id,
                                                                   headers=None,
                                                                   **query_parameters):
-        """Network Access - Get global exception rule attributes.
+        """Network Access Get global exception rule attributes.
 
         Args:
             rule_id(basestring): ruleId path parameter. Rule id.
@@ -424,7 +424,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
                                                                      payload=None,
                                                                      active_validation=True,
                                                                      **query_parameters):
-        """Network Access - Update global exception authorization rule.
+        """Network Access Update global exception authorization rule.
 
         Args:
             link(object): link, property of the request body.
@@ -554,7 +554,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
                                                                      rule_id,
                                                                      headers=None,
                                                                      **query_parameters):
-        """Network Access - Delete global exception authorization rule.
+        """Network Access Delete global exception authorization rule.
 
         Args:
             rule_id(basestring): ruleId path parameter. Rule id.

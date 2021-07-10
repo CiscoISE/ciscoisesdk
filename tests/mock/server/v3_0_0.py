@@ -1508,7 +1508,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def node_details_get_node_by_name_response(self):
+    def node_details_get_node_detail_by_name_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1526,7 +1526,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def node_details_get_node_by_id_response(self):
+    def node_details_get_node_detail_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1544,7 +1544,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def node_details_get_all_nodes_response(self):
+    def node_details_get_all_node_details_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -12105,15 +12105,15 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NODE_DETAILS_ab48268c76aa598788a5ebc370226f3a():
-            self.node_details_get_node_by_name_response()
+            self.node_details_get_node_detail_by_name_response()
             return
 
         if self.matches_NODE_DETAILS_0397bb2e9d6651c7bf18c1b60ff7eb14():
-            self.node_details_get_node_by_id_response()
+            self.node_details_get_node_detail_by_id_response()
             return
 
         if self.matches_NODE_DETAILS_775d9b8599f55fc4a1bd9d6ac02619eb():
-            self.node_details_get_all_nodes_response()
+            self.node_details_get_all_node_details_response()
             return
 
         if self.matches_NODE_DETAILS_ca9a3d8217d5507aa11020bee82ef228():

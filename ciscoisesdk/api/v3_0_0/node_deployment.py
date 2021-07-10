@@ -131,18 +131,6 @@ class NodeDeployment(object):
 
         return self._object_factory('bpm_fa838e78175e51b4bcfb0821c19b81b7_v3_0_0', _api_response)
 
-    def get_all(self,
-                headers=None,
-                **query_parameters):
-        """Alias for `get_all_nodes <#ciscoisesdk.
-        api.v3_0_0.node_deployment.
-        NodeDeployment.get_all_nodes>`_
-        """
-        return self.get_all_nodes(
-            headers=headers,
-            **query_parameters
-        )
-
     def register_node(self,
                       administration=None,
                       fdqn=None,
