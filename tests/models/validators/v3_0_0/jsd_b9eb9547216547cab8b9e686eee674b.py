@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getTACACSServerSequenceById data model.
+"""Identity Services Engine getTACACSExternalServersById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,17 +38,23 @@ from builtins import *
 
 
 class JSONSchemaValidatorB9Eb9547216547CAb8B9E686Eee674B(object):
-    """getTACACSServerSequenceById request schema definition."""
+    """getTACACSExternalServersById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB9Eb9547216547CAb8B9E686Eee674B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "TacacsServerSequence": {
+                "TacacsExternalServer": {
                 "properties": {
+                "connectionPort": {
+                "type": "integer"
+                },
                 "description":
                  {
+                "type": "string"
+                },
+                "hostIP": {
                 "type": "string"
                 },
                 "id": {
@@ -68,29 +74,17 @@ class JSONSchemaValidatorB9Eb9547216547CAb8B9E686Eee674B(object):
                 },
                 "type": "object"
                 },
-                "localAccounting": {
-                "type": "boolean"
-                },
                 "name": {
                 "type": "string"
                 },
-                "prefixDelimiter": {
+                "sharedSecret": {
                 "type": "string"
                 },
-                "prefixStrip": {
+                "singleConnect": {
                 "type": "boolean"
                 },
-                "remoteAccounting": {
-                "type": "boolean"
-                },
-                "serverList": {
-                "type": "string"
-                },
-                "suffixDelimiter": {
-                "type": "string"
-                },
-                "suffixStrip": {
-                "type": "boolean"
+                "timeout": {
+                "type": "integer"
                 }
                 },
                 "type": "object"

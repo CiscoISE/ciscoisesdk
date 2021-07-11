@@ -158,13 +158,13 @@ def is_valid_get_device_admin_network_condition_by_condition_id(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a3640f918edb5df99d09001ca9e12688_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_240e81a05d1f5cb5ba7bcc2351c0bfd6_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_network_condition_by_condition_id(api):
     endpoint_result = api.device_administration_network_conditions.get_device_admin_network_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -184,7 +184,7 @@ def test_get_device_admin_network_condition_by_condition_id(api, validator):
 
 def get_device_admin_network_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_network_conditions.get_device_admin_network_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -208,7 +208,7 @@ def is_valid_put_device_admin_network_condition_by_condition_id(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b371441bddfd5d819a7aedfa215f4aeb_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_cd32d094f1815c388d1392bb90f3744d_v3_0_0').validate(obj.response)
     return True
 
 
@@ -216,7 +216,6 @@ def put_device_admin_network_condition_by_condition_id(api):
     endpoint_result = api.device_administration_network_conditions.put_device_admin_network_condition_by_condition_id(
         active_validation=False,
         cli_dnis_list=['string'],
-        condition_id='string',
         condition_type='string',
         description='string',
         device_group_list=['string'],
@@ -247,13 +246,12 @@ def test_put_device_admin_network_condition_by_condition_id(api, validator):
 def put_device_admin_network_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_network_conditions.put_device_admin_network_condition_by_condition_id(
         active_validation=False,
-        condition_id='string',
+        id='string',
         cli_dnis_list=None,
         condition_type=None,
         description=None,
         device_group_list=None,
         device_list=None,
-        id=None,
         ip_addr_list=None,
         link=None,
         mac_addr_list=None,
@@ -282,13 +280,13 @@ def is_valid_delete_device_admin_network_condition_by_condition_id(json_schema_v
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_037e7b011df45066b55be86033ecd17a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ac9ced821bc2503fa0d22badea9834ad_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_network_condition_by_condition_id(api):
     endpoint_result = api.device_administration_network_conditions.delete_device_admin_network_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -308,7 +306,7 @@ def test_delete_device_admin_network_condition_by_condition_id(api, validator):
 
 def delete_device_admin_network_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_network_conditions.delete_device_admin_network_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 

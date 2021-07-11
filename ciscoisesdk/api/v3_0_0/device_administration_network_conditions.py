@@ -337,14 +337,13 @@ class DeviceAdministrationNetworkConditions(object):
         )
 
     def get_device_admin_network_condition_by_condition_id(self,
-                                                           condition_id,
+                                                           id,
                                                            headers=None,
                                                            **query_parameters):
         """Device Admin Returns a network condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -377,7 +376,7 @@ class DeviceAdministrationNetworkConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -386,10 +385,10 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/network-condition/{conditionId}')
+        e_url = ('/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -397,10 +396,10 @@ class DeviceAdministrationNetworkConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a3640f918edb5df99d09001ca9e12688_v3_0_0', _api_response)
+        return self._object_factory('bpm_e81a05d1f5cb5ba7bcc2351c0bfd6_v3_0_0', _api_response)
 
     def get_by_id(self,
-                  condition_id,
+                  id,
                   headers=None,
                   **query_parameters):
         """Alias for `get_device_admin_network_condition_by_condition_id <#ciscoisesdk.
@@ -408,19 +407,18 @@ class DeviceAdministrationNetworkConditions(object):
         DeviceAdministrationNetworkConditions.get_device_admin_network_condition_by_condition_id>`_
         """
         return self.get_device_admin_network_condition_by_condition_id(
-            condition_id=condition_id,
+            id=id,
             headers=headers,
             **query_parameters
         )
 
     def put_device_admin_network_condition_by_condition_id(self,
-                                                           condition_id,
+                                                           id,
                                                            cli_dnis_list=None,
                                                            condition_type=None,
                                                            description=None,
                                                            device_group_list=None,
                                                            device_list=None,
-                                                           id=None,
                                                            ip_addr_list=None,
                                                            link=None,
                                                            mac_addr_list=None,
@@ -477,8 +475,7 @@ class DeviceAdministrationNetworkConditions(object):
                 request body (list of strings).
             name(string): Network Condition name, property of the
                 request body.
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -520,7 +517,7 @@ class DeviceAdministrationNetworkConditions(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -529,7 +526,7 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -559,10 +556,10 @@ class DeviceAdministrationNetworkConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b371441bddfd5d819a7aedfa215f4aeb_v3_0_0')\
+            self._request_validator('jsd_cd32d094f1815c388d1392bb90f3744d_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/network-condition/{conditionId}')
+        e_url = ('/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -575,16 +572,15 @@ class DeviceAdministrationNetworkConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_b371441bddfd5d819a7aedfa215f4aeb_v3_0_0', _api_response)
+        return self._object_factory('bpm_cd32d094f1815c388d1392bb90f3744d_v3_0_0', _api_response)
 
     def update_by_id(self,
-                     condition_id,
+                     id,
                      cli_dnis_list=None,
                      condition_type=None,
                      description=None,
                      device_group_list=None,
                      device_list=None,
-                     id=None,
                      ip_addr_list=None,
                      link=None,
                      mac_addr_list=None,
@@ -598,13 +594,12 @@ class DeviceAdministrationNetworkConditions(object):
         DeviceAdministrationNetworkConditions.put_device_admin_network_condition_by_condition_id>`_
         """
         return self.put_device_admin_network_condition_by_condition_id(
-            condition_id=condition_id,
+            id=id,
             cli_dnis_list=cli_dnis_list,
             condition_type=condition_type,
             description=description,
             device_group_list=device_group_list,
             device_list=device_list,
-            id=id,
             ip_addr_list=ip_addr_list,
             link=link,
             mac_addr_list=mac_addr_list,
@@ -616,14 +611,13 @@ class DeviceAdministrationNetworkConditions(object):
         )
 
     def delete_device_admin_network_condition_by_condition_id(self,
-                                                              condition_id,
+                                                              id,
                                                               headers=None,
                                                               **query_parameters):
         """Device Admin Delete network condition.
 
         Args:
-            condition_id(basestring): conditionId path parameter.
-                Condition id.
+            id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -656,7 +650,7 @@ class DeviceAdministrationNetworkConditions(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(condition_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -665,10 +659,10 @@ class DeviceAdministrationNetworkConditions(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'conditionId': condition_id,
+            'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/network-condition/{conditionId}')
+        e_url = ('/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -676,10 +670,10 @@ class DeviceAdministrationNetworkConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e7b011df45066b55be86033ecd17a_v3_0_0', _api_response)
+        return self._object_factory('bpm_ac9ced821bc2503fa0d22badea9834ad_v3_0_0', _api_response)
 
     def delete_by_id(self,
-                     condition_id,
+                     id,
                      headers=None,
                      **query_parameters):
         """Alias for `delete_device_admin_network_condition_by_condition_id <#ciscoisesdk.
@@ -687,7 +681,7 @@ class DeviceAdministrationNetworkConditions(object):
         DeviceAdministrationNetworkConditions.delete_device_admin_network_condition_by_condition_id>`_
         """
         return self.delete_device_admin_network_condition_by_condition_id(
-            condition_id=condition_id,
+            id=id,
             headers=headers,
             **query_parameters
         )

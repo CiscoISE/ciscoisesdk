@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateTACACSServerSequenceById data model.
+"""Identity Services Engine updateTACACSExternalServersById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA7Cffe3Bfae55Aa81B7B4447519E4Cd(object):
-    """updateTACACSServerSequenceById request schema definition."""
+    """updateTACACSExternalServersById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA7Cffe3Bfae55Aa81B7B4447519E4Cd, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -338,13 +338,13 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         )
 
     def get_network_access_policy_set_global_exception_rule_by_id(self,
-                                                                  rule_id,
+                                                                  id,
                                                                   headers=None,
                                                                   **query_parameters):
         """Network Access Get global exception rule attributes.
 
         Args:
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -377,7 +377,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -386,11 +386,11 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/v1/policy/network-access/policy-set/global-'
-                 + 'exception/{ruleId}')
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -398,10 +398,10 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b71b104d553520aafc4ce52b537a482_v3_0_0', _api_response)
+        return self._object_factory('bpm_cc29d2730d9b52708b34f59633aacfa0_v3_0_0', _api_response)
 
     def get_by_id(self,
-                  rule_id,
+                  id,
                   headers=None,
                   **query_parameters):
         """Alias for `get_network_access_policy_set_global_exception_rule_by_id <#ciscoisesdk.
@@ -409,13 +409,13 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         NetworkAccessAuthorizationGlobalExceptionRules.get_network_access_policy_set_global_exception_rule_by_id>`_
         """
         return self.get_network_access_policy_set_global_exception_rule_by_id(
-            rule_id=rule_id,
+            id=id,
             headers=headers,
             **query_parameters
         )
 
     def update_network_access_policy_set_global_exception_rule_by_id(self,
-                                                                     rule_id,
+                                                                     id,
                                                                      link=None,
                                                                      profile=None,
                                                                      rule=None,
@@ -436,7 +436,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             security_group(string): Security group used in
                 authorization policies, property of the
                 request body.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -478,7 +478,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -487,7 +487,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'ruleId': rule_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -505,11 +505,11 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_458c51c99e8f35329c276126_v3_0_0')\
+            self._request_validator('jsd_fccec47b460255028363021e7936d17a_v3_0_0')\
                 .validate(_payload)
 
         e_url = ('/v1/policy/network-access/policy-set/global-'
-                 + 'exception/{ruleId}')
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -522,10 +522,10 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_458c51c99e8f35329c276126_v3_0_0', _api_response)
+        return self._object_factory('bpm_fccec47b460255028363021e7936d17a_v3_0_0', _api_response)
 
     def update_by_id(self,
-                     rule_id,
+                     id,
                      link=None,
                      profile=None,
                      rule=None,
@@ -539,7 +539,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         NetworkAccessAuthorizationGlobalExceptionRules.update_network_access_policy_set_global_exception_rule_by_id>`_
         """
         return self.update_network_access_policy_set_global_exception_rule_by_id(
-            rule_id=rule_id,
+            id=id,
             link=link,
             profile=profile,
             rule=rule,
@@ -551,13 +551,13 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         )
 
     def delete_network_access_policy_set_global_exception_rule_by_id(self,
-                                                                     rule_id,
+                                                                     id,
                                                                      headers=None,
                                                                      **query_parameters):
         """Network Access Delete global exception authorization rule.
 
         Args:
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -590,7 +590,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -599,11 +599,11 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/v1/policy/network-access/policy-set/global-'
-                 + 'exception/{ruleId}')
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -611,10 +611,10 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e00af18a485a9283811feb84b04843_v3_0_0', _api_response)
+        return self._object_factory('bpm_e7b62515c4dc5de18f9a8ebf019e76af_v3_0_0', _api_response)
 
     def delete_by_id(self,
-                     rule_id,
+                     id,
                      headers=None,
                      **query_parameters):
         """Alias for `delete_network_access_policy_set_global_exception_rule_by_id <#ciscoisesdk.
@@ -622,7 +622,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         NetworkAccessAuthorizationGlobalExceptionRules.delete_network_access_policy_set_global_exception_rule_by_id>`_
         """
         return self.delete_network_access_policy_set_global_exception_rule_by_id(
-            rule_id=rule_id,
+            id=id,
             headers=headers,
             **query_parameters
         )

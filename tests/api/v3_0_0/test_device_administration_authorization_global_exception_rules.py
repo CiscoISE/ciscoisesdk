@@ -97,7 +97,7 @@ def create_device_admin_policy_set_global_exception(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         profile='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -198,13 +198,13 @@ def is_valid_get_device_admin_policy_set_global_exception_by_rule_id(json_schema
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3a3d7e48a50d58a8a5d5720f9d55cf45_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2df71c84d9345b9c9caefaafe96c951e_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_policy_set_global_exception_by_rule_id(api):
     endpoint_result = api.device_administration_authorization_global_exception_rules.get_device_admin_policy_set_global_exception_by_rule_id(
-        rule_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -224,7 +224,7 @@ def test_get_device_admin_policy_set_global_exception_by_rule_id(api, validator)
 
 def get_device_admin_policy_set_global_exception_by_rule_id_default(api):
     endpoint_result = api.device_administration_authorization_global_exception_rules.get_device_admin_policy_set_global_exception_by_rule_id(
-        rule_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -248,7 +248,7 @@ def is_valid_put_device_admin_policy_set_global_exception_by_rule_id(json_schema
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_28042265da96552991705623287a164c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_552a3c8e0ddc5b40a250affc4be1700a_v3_0_0').validate(obj.response)
     return True
 
 
@@ -256,11 +256,11 @@ def put_device_admin_policy_set_global_exception_by_rule_id(api):
     endpoint_result = api.device_administration_authorization_global_exception_rules.put_device_admin_policy_set_global_exception_by_rule_id(
         active_validation=False,
         commands=['string'],
+        id='string',
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         profile='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
-        rule_id='string'
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -281,7 +281,7 @@ def test_put_device_admin_policy_set_global_exception_by_rule_id(api, validator)
 def put_device_admin_policy_set_global_exception_by_rule_id_default(api):
     endpoint_result = api.device_administration_authorization_global_exception_rules.put_device_admin_policy_set_global_exception_by_rule_id(
         active_validation=False,
-        rule_id='string',
+        id='string',
         commands=None,
         link=None,
         payload=None,
@@ -310,13 +310,13 @@ def is_valid_delete_device_admin_policyset_global_exception_by_rule_id(json_sche
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_10281a20040d51a1ba61f4d210195e59_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1b15ed907cbb582ab6a6a3cc446febb8_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_policyset_global_exception_by_rule_id(api):
     endpoint_result = api.device_administration_authorization_global_exception_rules.delete_device_admin_policyset_global_exception_by_rule_id(
-        rule_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -336,7 +336,7 @@ def test_delete_device_admin_policyset_global_exception_by_rule_id(api, validato
 
 def delete_device_admin_policyset_global_exception_by_rule_id_default(api):
     endpoint_result = api.device_administration_authorization_global_exception_rules.delete_device_admin_policyset_global_exception_by_rule_id(
-        rule_id='string'
+        id='string'
     )
     return endpoint_result
 

@@ -86,7 +86,7 @@ def is_valid_get_tacacs_server_sequence_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8b9eb9547216547cab8b9e686eee674b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f3b45b8e4089574c9912407f88b1a5d2_v3_0_0').validate(obj.response)
     return True
 
 
@@ -136,7 +136,7 @@ def is_valid_update_tacacs_server_sequence_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_7a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_18f6de5797735bbd95dc8683c6a7aebf_v3_0_0').validate(obj.response)
     return True
 
 
@@ -208,7 +208,7 @@ def is_valid_delete_tacacs_server_sequence_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_896816622564523798353b885b115048_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_a1465b72911359bdbb1430469801d4be_v3_0_0').validate(obj.response)
     return True
 
 

@@ -158,13 +158,13 @@ def is_valid_get_network_access_network_condition_by_condition_id(json_schema_va
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_64faeb3bb3f25787844f6973d5a1658f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c3b840797ab85dbe85b8a322be86278e_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_network_condition_by_condition_id(api):
     endpoint_result = api.network_access_network_conditions.get_network_access_network_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -184,7 +184,7 @@ def test_get_network_access_network_condition_by_condition_id(api, validator):
 
 def get_network_access_network_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_network_conditions.get_network_access_network_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -208,7 +208,7 @@ def is_valid_put_network_access_network_condition_by_condition_id(json_schema_va
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_5aaa481aaad35f8b8a7cbf2e063eac2b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_74ad357457f45e07a13674d462c4270d_v3_0_0').validate(obj.response)
     return True
 
 
@@ -216,7 +216,6 @@ def put_network_access_network_condition_by_condition_id(api):
     endpoint_result = api.network_access_network_conditions.put_network_access_network_condition_by_condition_id(
         active_validation=False,
         cli_dnis_list=['string'],
-        condition_id='string',
         condition_type='string',
         description='string',
         device_group_list=['string'],
@@ -247,13 +246,12 @@ def test_put_network_access_network_condition_by_condition_id(api, validator):
 def put_network_access_network_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_network_conditions.put_network_access_network_condition_by_condition_id(
         active_validation=False,
-        condition_id='string',
+        id='string',
         cli_dnis_list=None,
         condition_type=None,
         description=None,
         device_group_list=None,
         device_list=None,
-        id=None,
         ip_addr_list=None,
         link=None,
         mac_addr_list=None,
@@ -282,13 +280,13 @@ def is_valid_delete_network_access_network_condition_by_condition_id(json_schema
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8e345ca7adb75b1bacfa42771a4d242c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0e7e4151251d56a6a72f3e147ddde891_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_network_condition_by_condition_id(api):
     endpoint_result = api.network_access_network_conditions.delete_network_access_network_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -308,7 +306,7 @@ def test_delete_network_access_network_condition_by_condition_id(api, validator)
 
 def delete_network_access_network_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_network_conditions.delete_network_access_network_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 

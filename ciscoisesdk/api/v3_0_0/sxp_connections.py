@@ -988,10 +988,10 @@ class SxpConnections(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_a9d9ce4538605d439015d3ed7ef88c41_v3_0_0')\
+            self._request_validator('jsd_e390313557e95aa9b8c2453d6f1de1e8_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/sxpconnections/submit')
+        e_url = ('/ers/config/sxpconnections/bulk/submit')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1004,7 +1004,7 @@ class SxpConnections(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_a9d9ce4538605d439015d3ed7ef88c41_v3_0_0', _api_response)
+        return self._object_factory('bpm_e390313557e95aa9b8c2453d6f1de1e8_v3_0_0', _api_response)
 
     def bulk_request(self,
                      operation_type=None,

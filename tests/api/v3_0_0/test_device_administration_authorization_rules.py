@@ -98,7 +98,7 @@ def create_device_admin_policy_by_id_authorization_rule(api):
         payload=None,
         policy_id='string',
         profile='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -202,14 +202,14 @@ def is_valid_get_device_admin_policy_by_id_authorization_rule_by_id(json_schema_
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f1d11ab85a0a5597b9513d92a894ef1b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b61dd057422755baa748a72973cbc6f0_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_policy_by_id_authorization_rule_by_id(api):
     endpoint_result = api.device_administration_authorization_rules.get_device_admin_policy_by_id_authorization_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -229,8 +229,8 @@ def test_get_device_admin_policy_by_id_authorization_rule_by_id(api, validator):
 
 def get_device_admin_policy_by_id_authorization_rule_by_id_default(api):
     endpoint_result = api.device_administration_authorization_rules.get_device_admin_policy_by_id_authorization_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -254,7 +254,7 @@ def is_valid_update_device_admin_policy_by_id_authorization_rule_by_id(json_sche
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_80b60ed1eed75d7d9091344f4e38e2f1_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b5151e49a2b65befb488985ed973fed2_v3_0_0').validate(obj.response)
     return True
 
 
@@ -262,12 +262,12 @@ def update_device_admin_policy_by_id_authorization_rule_by_id(api):
     endpoint_result = api.device_administration_authorization_rules.update_device_admin_policy_by_id_authorization_rule_by_id(
         active_validation=False,
         commands=['string'],
+        id='string',
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
         profile='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
-        rule_id='string'
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -288,8 +288,8 @@ def test_update_device_admin_policy_by_id_authorization_rule_by_id(api, validato
 def update_device_admin_policy_by_id_authorization_rule_by_id_default(api):
     endpoint_result = api.device_administration_authorization_rules.update_device_admin_policy_by_id_authorization_rule_by_id(
         active_validation=False,
+        id='string',
         policy_id='string',
-        rule_id='string',
         commands=None,
         link=None,
         payload=None,
@@ -318,14 +318,14 @@ def is_valid_delete_device_admin_policy_by_id_authorization_rule_by_id(json_sche
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e7979abd11155f12b1336bbf02a99687_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_7ae9522fa1505322b5da072346d58e92_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_policy_by_id_authorization_rule_by_id(api):
     endpoint_result = api.device_administration_authorization_rules.delete_device_admin_policy_by_id_authorization_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -345,8 +345,8 @@ def test_delete_device_admin_policy_by_id_authorization_rule_by_id(api, validato
 
 def delete_device_admin_policy_by_id_authorization_rule_by_id_default(api):
     endpoint_result = api.device_administration_authorization_rules.delete_device_admin_policy_by_id_authorization_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 

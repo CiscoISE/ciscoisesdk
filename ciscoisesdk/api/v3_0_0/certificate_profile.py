@@ -135,7 +135,7 @@ class CertificateProfile(object):
             'name': name,
         }
 
-        e_url = ('/ers/config/certificateprofile/{name}')
+        e_url = ('/ers/config/certificateprofile/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -143,7 +143,7 @@ class CertificateProfile(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d473b3690e951be9375d770225b9657_v3_0_0', _api_response)
+        return self._object_factory('bpm_e7884eb9c548698cdc54e033f35f4_v3_0_0', _api_response)
 
     def get_by_name(self,
                     name,

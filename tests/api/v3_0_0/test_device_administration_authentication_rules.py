@@ -100,7 +100,7 @@ def create_device_admin_policy_by_id_authentication_rule(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -206,14 +206,14 @@ def is_valid_get_device_admin_policy_by_id_authentication_rule_by_id(json_schema
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_87d71c8af3b55abb8e5959965baf2043_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_4cdab0d4e5bf56b68624029a9cdad13e_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_policy_by_id_authentication_rule_by_id(api):
     endpoint_result = api.device_administration_authentication_rules.get_device_admin_policy_by_id_authentication_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -233,8 +233,8 @@ def test_get_device_admin_policy_by_id_authentication_rule_by_id(api, validator)
 
 def get_device_admin_policy_by_id_authentication_rule_by_id_default(api):
     endpoint_result = api.device_administration_authentication_rules.get_device_admin_policy_by_id_authentication_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -258,13 +258,14 @@ def is_valid_update_device_admin_policy_by_id_authentication_rule_by_id(json_sch
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_7dc678d472905ab5bce9f4cba7cd7004_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_fe40d457cbdb5794a5ed2808469ed2e2_v3_0_0').validate(obj.response)
     return True
 
 
 def update_device_admin_policy_by_id_authentication_rule_by_id(api):
     endpoint_result = api.device_administration_authentication_rules.update_device_admin_policy_by_id_authentication_rule_by_id(
         active_validation=False,
+        id='string',
         identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
@@ -272,8 +273,7 @@ def update_device_admin_policy_by_id_authentication_rule_by_id(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
-        rule_id='string'
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -294,8 +294,8 @@ def test_update_device_admin_policy_by_id_authentication_rule_by_id(api, validat
 def update_device_admin_policy_by_id_authentication_rule_by_id_default(api):
     endpoint_result = api.device_administration_authentication_rules.update_device_admin_policy_by_id_authentication_rule_by_id(
         active_validation=False,
+        id='string',
         policy_id='string',
-        rule_id='string',
         identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,
@@ -326,14 +326,14 @@ def is_valid_delete_device_admin_policy_by_id_authentication_rule_by_id(json_sch
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a0a005e87c6755e0bf5d4454a98f08c5_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2f3569aca419588999d58eac5fe2a120_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_policy_by_id_authentication_rule_by_id(api):
     endpoint_result = api.device_administration_authentication_rules.delete_device_admin_policy_by_id_authentication_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -353,8 +353,8 @@ def test_delete_device_admin_policy_by_id_authentication_rule_by_id(api, validat
 
 def delete_device_admin_policy_by_id_authentication_rule_by_id_default(api):
     endpoint_result = api.device_administration_authentication_rules.delete_device_admin_policy_by_id_authentication_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 

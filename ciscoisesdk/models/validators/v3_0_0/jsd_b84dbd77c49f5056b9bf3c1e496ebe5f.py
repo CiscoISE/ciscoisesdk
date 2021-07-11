@@ -44,9 +44,6 @@ class JSONSchemaValidatorB84Dbd77C49F5056B9Bf3C1E496Ebe5F(object):
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "properties": {
-                "attributeName": {
-                "type": "string"
-                },
                 "attributeValue": {
                 "type": "string"
                 },

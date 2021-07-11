@@ -300,7 +300,7 @@ def is_valid_bulk_request_for_sxp_vpns(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_be45eed0938a5143bf85ffd5fd4205d0_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2549a746755c588c928d15a59f8a693d_v3_0_0').validate(obj.response)
     return True
 
 

@@ -154,14 +154,14 @@ def is_valid_get_network_access_dictionaries_by_dictionary_name_attribute_by_att
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_cb8619385d265527a56dc7a27527f3a1_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_48218d25b3c952abbde0711fec866e74_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(api):
     endpoint_result = api.network_access_dictionary_attribute.get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
-        attribute_name='string',
-        dictionary_name='string'
+        dictionary_name='string',
+        name='string'
     )
     return endpoint_result
 
@@ -181,8 +181,8 @@ def test_get_network_access_dictionaries_by_dictionary_name_attribute_by_attribu
 
 def get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
-        attribute_name='string',
-        dictionary_name='string'
+        dictionary_name='string',
+        name='string'
     )
     return endpoint_result
 
@@ -206,7 +206,7 @@ def is_valid_put_network_access_dictionaries_by_dictionary_name_attribute_by_att
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d2810d771d3e5ec580c39e0deb46b2b8_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b734aeeb768d568684706bff5e3fa5bb_v3_0_0').validate(obj.response)
     return True
 
 
@@ -214,7 +214,6 @@ def put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_na
     endpoint_result = api.network_access_dictionary_attribute.put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
         active_validation=False,
         allowed_values=[{'isDefault': True, 'key': 'string', 'value': 'string'}],
-        attribute_name='string',
         data_type='string',
         description='string',
         dictionary_name='string',
@@ -243,15 +242,14 @@ def test_put_network_access_dictionaries_by_dictionary_name_attribute_by_attribu
 def put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
         active_validation=False,
-        attribute_name='string',
         dictionary_name='string',
+        name='string',
         allowed_values=None,
         data_type=None,
         description=None,
         direction_type=None,
         id=None,
         internal_name=None,
-        name=None,
         payload=None
     )
     return endpoint_result
@@ -276,14 +274,14 @@ def is_valid_delete_network_access_dictionaries_by_dictionary_name_attribute_by_
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e1725efd8ea253d1930913a85709977f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_6636e1a0a94b543c974b537bdda17a7c_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(api):
     endpoint_result = api.network_access_dictionary_attribute.delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
-        attribute_name='string',
-        dictionary_name='string'
+        dictionary_name='string',
+        name='string'
     )
     return endpoint_result
 
@@ -303,8 +301,8 @@ def test_delete_network_access_dictionaries_by_dictionary_name_attribute_by_attr
 
 def delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name_default(api):
     endpoint_result = api.network_access_dictionary_attribute.delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
-        attribute_name='string',
-        dictionary_name='string'
+        dictionary_name='string',
+        name='string'
     )
     return endpoint_result
 

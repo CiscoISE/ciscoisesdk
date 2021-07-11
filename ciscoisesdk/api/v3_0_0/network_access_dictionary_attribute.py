@@ -326,16 +326,15 @@ class NetworkAccessDictionaryAttribute(object):
         )
 
     def get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(self,
-                                                                                       attribute_name,
                                                                                        dictionary_name,
+                                                                                       name,
                                                                                        headers=None,
                                                                                        **query_parameters):
         """Get a Dictionary Attribute.
 
         Args:
-            attribute_name(basestring): attributeName path
-                parameter. the dictionary attribute
-                name.
+            name(basestring): name path parameter. the dictionary
+                attribute name.
             dictionary_name(basestring): dictionaryName path
                 parameter. the name of the dictionary
                 the dictionary attribute belongs to.
@@ -371,7 +370,7 @@ class NetworkAccessDictionaryAttribute(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(attribute_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
         check_type(dictionary_name, basestring,
                    may_be_none=False)
@@ -382,12 +381,12 @@ class NetworkAccessDictionaryAttribute(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'attributeName': attribute_name,
+            'name': name,
             'dictionaryName': dictionary_name,
         }
 
-        e_url = ('/v1/policy/network-access/dictionaries/{dictionaryName}/'
-                 + 'attribute/{attributeName}')
+        e_url = ('/v1/policy/network-'
+                 + 'access/dictionaries/{dictionaryName}/attribute/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -395,11 +394,11 @@ class NetworkAccessDictionaryAttribute(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_cb8619385d265527a56dc7a27527f3a1_v3_0_0', _api_response)
+        return self._object_factory('bpm_d25b3c952abbde0711fec866e74_v3_0_0', _api_response)
 
     def get_by_name(self,
-                    attribute_name,
                     dictionary_name,
+                    name,
                     headers=None,
                     **query_parameters):
         """Alias for `get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name <#ciscoisesdk.
@@ -407,22 +406,21 @@ class NetworkAccessDictionaryAttribute(object):
         NetworkAccessDictionaryAttribute.get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name>`_
         """
         return self.get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
-            attribute_name=attribute_name,
             dictionary_name=dictionary_name,
+            name=name,
             headers=headers,
             **query_parameters
         )
 
     def put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(self,
-                                                                                       attribute_name,
                                                                                        dictionary_name,
+                                                                                       name,
                                                                                        allowed_values=None,
                                                                                        data_type=None,
                                                                                        description=None,
                                                                                        direction_type=None,
                                                                                        id=None,
                                                                                        internal_name=None,
-                                                                                       name=None,
                                                                                        headers=None,
                                                                                        payload=None,
                                                                                        active_validation=True,
@@ -456,9 +454,8 @@ class NetworkAccessDictionaryAttribute(object):
                 request body.
             name(string): The dictionary attribute's name, property
                 of the request body.
-            attribute_name(basestring): attributeName path
-                parameter. the dictionary attribute
-                name.
+            name(basestring): name path parameter. the dictionary
+                attribute name.
             dictionary_name(basestring): dictionaryName path
                 parameter. the name of the dictionary
                 the dictionary attribute belongs to.
@@ -503,7 +500,7 @@ class NetworkAccessDictionaryAttribute(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(attribute_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
         check_type(dictionary_name, basestring,
                    may_be_none=False)
@@ -514,7 +511,7 @@ class NetworkAccessDictionaryAttribute(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'attributeName': attribute_name,
+            'name': name,
             'dictionaryName': dictionary_name,
         }
         if is_xml_payload:
@@ -541,11 +538,11 @@ class NetworkAccessDictionaryAttribute(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_d2810d771d3e5ec580c39e0deb46b2b8_v3_0_0')\
+            self._request_validator('jsd_b734aeeb768d568684706bff5e3fa5bb_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/network-access/dictionaries/{dictionaryName}/'
-                 + 'attribute/{attributeName}')
+        e_url = ('/v1/policy/network-'
+                 + 'access/dictionaries/{dictionaryName}/attribute/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -558,18 +555,17 @@ class NetworkAccessDictionaryAttribute(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_d2810d771d3e5ec580c39e0deb46b2b8_v3_0_0', _api_response)
+        return self._object_factory('bpm_b734aeeb768d568684706bff5e3fa5bb_v3_0_0', _api_response)
 
     def update_by_name(self,
-                       attribute_name,
                        dictionary_name,
+                       name,
                        allowed_values=None,
                        data_type=None,
                        description=None,
                        direction_type=None,
                        id=None,
                        internal_name=None,
-                       name=None,
                        headers=None,
                        payload=None,
                        active_validation=True,
@@ -579,15 +575,14 @@ class NetworkAccessDictionaryAttribute(object):
         NetworkAccessDictionaryAttribute.put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name>`_
         """
         return self.put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
-            attribute_name=attribute_name,
             dictionary_name=dictionary_name,
+            name=name,
             allowed_values=allowed_values,
             data_type=data_type,
             description=description,
             direction_type=direction_type,
             id=id,
             internal_name=internal_name,
-            name=name,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
@@ -595,16 +590,15 @@ class NetworkAccessDictionaryAttribute(object):
         )
 
     def delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(self,
-                                                                                          attribute_name,
                                                                                           dictionary_name,
+                                                                                          name,
                                                                                           headers=None,
                                                                                           **query_parameters):
         """Delete a Dictionary Attribute.
 
         Args:
-            attribute_name(basestring): attributeName path
-                parameter. the dictionary attribute
-                name.
+            name(basestring): name path parameter. the dictionary
+                attribute name.
             dictionary_name(basestring): dictionaryName path
                 parameter. the name of the dictionary
                 the dictionary attribute belongs to.
@@ -640,7 +634,7 @@ class NetworkAccessDictionaryAttribute(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(attribute_name, basestring,
+        check_type(name, basestring,
                    may_be_none=False)
         check_type(dictionary_name, basestring,
                    may_be_none=False)
@@ -651,12 +645,12 @@ class NetworkAccessDictionaryAttribute(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'attributeName': attribute_name,
+            'name': name,
             'dictionaryName': dictionary_name,
         }
 
-        e_url = ('/v1/policy/network-access/dictionaries/{dictionaryName}/'
-                 + 'attribute/{attributeName}')
+        e_url = ('/v1/policy/network-'
+                 + 'access/dictionaries/{dictionaryName}/attribute/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -664,11 +658,11 @@ class NetworkAccessDictionaryAttribute(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e1725efd8ea253d1930913a85709977f_v3_0_0', _api_response)
+        return self._object_factory('bpm_e1a0a94b543c974b537bdda17a7c_v3_0_0', _api_response)
 
     def delete_by_name(self,
-                       attribute_name,
                        dictionary_name,
+                       name,
                        headers=None,
                        **query_parameters):
         """Alias for `delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name <#ciscoisesdk.
@@ -676,8 +670,8 @@ class NetworkAccessDictionaryAttribute(object):
         NetworkAccessDictionaryAttribute.delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name>`_
         """
         return self.delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name(
-            attribute_name=attribute_name,
             dictionary_name=dictionary_name,
+            name=name,
             headers=headers,
             **query_parameters
         )

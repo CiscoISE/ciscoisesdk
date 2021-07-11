@@ -93,7 +93,6 @@ def is_valid_post_device_admin_condition(json_schema_validate, obj):
 def post_device_admin_condition(api):
     endpoint_result = api.device_administration_conditions.post_device_admin_condition(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
@@ -132,7 +131,6 @@ def test_post_device_admin_condition(api, validator):
 def post_device_admin_condition_default(api):
     endpoint_result = api.device_administration_conditions.post_device_admin_condition(
         active_validation=False,
-        attribute_name=None,
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -274,13 +272,13 @@ def is_valid_get_device_admin_condition_by_condition_name(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3d9fe67eb28858609eca3907c8343015_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_4dca887341a85881abd996fb46d39272_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_condition_by_condition_name(api):
     endpoint_result = api.device_administration_conditions.get_device_admin_condition_by_condition_name(
-        condition_name='string'
+        name='string'
     )
     return endpoint_result
 
@@ -300,7 +298,7 @@ def test_get_device_admin_condition_by_condition_name(api, validator):
 
 def get_device_admin_condition_by_condition_name_default(api):
     endpoint_result = api.device_administration_conditions.get_device_admin_condition_by_condition_name(
-        condition_name='string'
+        name='string'
     )
     return endpoint_result
 
@@ -324,17 +322,15 @@ def is_valid_put_device_admin_condition_by_condition_name(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f0540adc16725e00adffdf57b67fb6ba_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0e3e7b0bc717508a979ccac3b986792d_v3_0_0').validate(obj.response)
     return True
 
 
 def put_device_admin_condition_by_condition_name(api):
     endpoint_result = api.device_administration_conditions.put_device_admin_condition_by_condition_name(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
-        condition_name='string',
         condition_type='string',
         dates_range={'endDate': 'string', 'startDate': 'string'},
         dates_range_exception={'endDate': 'string', 'startDate': 'string'},
@@ -371,8 +367,7 @@ def test_put_device_admin_condition_by_condition_name(api, validator):
 def put_device_admin_condition_by_condition_name_default(api):
     endpoint_result = api.device_administration_conditions.put_device_admin_condition_by_condition_name(
         active_validation=False,
-        condition_name='string',
-        attribute_name=None,
+        name='string',
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -386,7 +381,6 @@ def put_device_admin_condition_by_condition_name_default(api):
         id=None,
         is_negate=None,
         link=None,
-        name=None,
         operator=None,
         payload=None,
         week_days=None,
@@ -414,13 +408,13 @@ def is_valid_delete_device_admin_condition_by_condition_name(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c276cf1dc9545d45ae3f871966cb664b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_5a2afb4b40b450e7ad69d78fc92ad00f_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_condition_by_condition_name(api):
     endpoint_result = api.device_administration_conditions.delete_device_admin_condition_by_condition_name(
-        condition_name='string'
+        name='string'
     )
     return endpoint_result
 
@@ -440,7 +434,7 @@ def test_delete_device_admin_condition_by_condition_name(api, validator):
 
 def delete_device_admin_condition_by_condition_name_default(api):
     endpoint_result = api.device_administration_conditions.delete_device_admin_condition_by_condition_name(
-        condition_name='string'
+        name='string'
     )
     return endpoint_result
 
@@ -514,13 +508,13 @@ def is_valid_get_device_admin_condition_by_condition_id(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_27c0cf6ab73353ffa2b6986a9b16c54e_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_55a451c9de4d5f86add6829e064d1cdf_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_condition_by_condition_id(api):
     endpoint_result = api.device_administration_conditions.get_device_admin_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -540,7 +534,7 @@ def test_get_device_admin_condition_by_condition_id(api, validator):
 
 def get_device_admin_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_conditions.get_device_admin_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -564,17 +558,15 @@ def is_valid_put_device_admin_condition_by_condition_id(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3b9b1bfd0f4151eb9812b474e4e4fa3c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_46a9f304a4ec54afa6e3484978aacbbb_v3_0_0').validate(obj.response)
     return True
 
 
 def put_device_admin_condition_by_condition_id(api):
     endpoint_result = api.device_administration_conditions.put_device_admin_condition_by_condition_id(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
-        condition_id='string',
         condition_type='string',
         dates_range={'endDate': 'string', 'startDate': 'string'},
         dates_range_exception={'endDate': 'string', 'startDate': 'string'},
@@ -611,8 +603,7 @@ def test_put_device_admin_condition_by_condition_id(api, validator):
 def put_device_admin_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_conditions.put_device_admin_condition_by_condition_id(
         active_validation=False,
-        condition_id='string',
-        attribute_name=None,
+        id='string',
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -623,7 +614,6 @@ def put_device_admin_condition_by_condition_id_default(api):
         dictionary_value=None,
         hours_range=None,
         hours_range_exception=None,
-        id=None,
         is_negate=None,
         link=None,
         name=None,
@@ -654,13 +644,13 @@ def is_valid_delete_device_admin_condition_by_condition_id(json_schema_validate,
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2a6c1759c65b51a09ed7981397ece5c6_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_55f327ba525e5d76b6166d80a58ddd34_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_condition_by_condition_id(api):
     endpoint_result = api.device_administration_conditions.delete_device_admin_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -680,7 +670,7 @@ def test_delete_device_admin_condition_by_condition_id(api, validator):
 
 def delete_device_admin_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_conditions.delete_device_admin_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 

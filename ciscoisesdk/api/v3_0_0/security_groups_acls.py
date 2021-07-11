@@ -984,10 +984,10 @@ class SecurityGroupsAcls(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_bfff136597e25df5ae1d135251fee263_v3_0_0')\
+            self._request_validator('jsd_da250e23ac05e6a8dcf32a81effcee9_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/sgacl/submit')
+        e_url = ('/ers/config/sgacl/bulk/submit')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1000,7 +1000,7 @@ class SecurityGroupsAcls(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_bfff136597e25df5ae1d135251fee263_v3_0_0', _api_response)
+        return self._object_factory('bpm_da250e23ac05e6a8dcf32a81effcee9_v3_0_0', _api_response)
 
     def bulk_request(self,
                      operation_type=None,

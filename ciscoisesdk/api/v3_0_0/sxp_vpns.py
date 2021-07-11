@@ -772,10 +772,10 @@ class SxpVpns(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_be45eed0938a5143bf85ffd5fd4205d0_v3_0_0')\
+            self._request_validator('jsd_a746755c588c928d15a59f8a693d_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/sxpvpns/submit')
+        e_url = ('/ers/config/sxpvpns/bulk/submit')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -788,7 +788,7 @@ class SxpVpns(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_be45eed0938a5143bf85ffd5fd4205d0_v3_0_0', _api_response)
+        return self._object_factory('bpm_a746755c588c928d15a59f8a693d_v3_0_0', _api_response)
 
     def bulk_request(self,
                      operation_type=None,

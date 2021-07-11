@@ -97,7 +97,7 @@ def create_network_access_policy_by_id_local_exception_rule(api):
         payload=None,
         policy_id='string',
         profile=['string'],
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
         security_group='string'
     )
     return endpoint_result
@@ -202,14 +202,14 @@ def is_valid_get_network_access_policy_by_id_local_exception_rule_by_id(json_sch
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d01cc518eafd5daeaf80b7e83f4d6ad1_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d04e336df639589d81e933fcefeb710c_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_policy_by_id_local_exception_rule_by_id(api):
     endpoint_result = api.network_access_authorization_exception_rules.get_network_access_policy_by_id_local_exception_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -229,8 +229,8 @@ def test_get_network_access_policy_by_id_local_exception_rule_by_id(api, validat
 
 def get_network_access_policy_by_id_local_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_exception_rules.get_network_access_policy_by_id_local_exception_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -254,19 +254,19 @@ def is_valid_update_network_access_policy_by_id_local_exception_rule_by_id(json_
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d5c906da96395858b888f382e2ab9d79_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_62576f014ee45351ba163e3be6fa217b_v3_0_0').validate(obj.response)
     return True
 
 
 def update_network_access_policy_by_id_local_exception_rule_by_id(api):
     endpoint_result = api.network_access_authorization_exception_rules.update_network_access_policy_by_id_local_exception_rule_by_id(
         active_validation=False,
+        id='string',
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
         profile=['string'],
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
-        rule_id='string',
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
         security_group='string'
     )
     return endpoint_result
@@ -288,8 +288,8 @@ def test_update_network_access_policy_by_id_local_exception_rule_by_id(api, vali
 def update_network_access_policy_by_id_local_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_exception_rules.update_network_access_policy_by_id_local_exception_rule_by_id(
         active_validation=False,
+        id='string',
         policy_id='string',
-        rule_id='string',
         link=None,
         payload=None,
         profile=None,
@@ -318,14 +318,14 @@ def is_valid_delete_network_access_policy_by_id_local_exception_rule_by_id(json_
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0d60e4de79065869a39a937f02e3e885_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_91b471a018ef52fdb04c366d86279727_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_policy_by_id_local_exception_rule_by_id(api):
     endpoint_result = api.network_access_authorization_exception_rules.delete_network_access_policy_by_id_local_exception_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 
@@ -345,8 +345,8 @@ def test_delete_network_access_policy_by_id_local_exception_rule_by_id(api, vali
 
 def delete_network_access_policy_by_id_local_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_exception_rules.delete_network_access_policy_by_id_local_exception_rule_by_id(
-        policy_id='string',
-        rule_id='string'
+        id='string',
+        policy_id='string'
     )
     return endpoint_result
 

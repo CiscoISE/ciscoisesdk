@@ -374,7 +374,7 @@ def is_valid_bulk_request_for_sxp_local_bindings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2b97435f47305f5da136a0d68ac6d466_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0615c21f51995bff8d6468a1e9c0b2e9_v3_0_0').validate(obj.response)
     return True
 
 

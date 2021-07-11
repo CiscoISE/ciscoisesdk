@@ -96,7 +96,7 @@ def create_network_access_policy_set_global_exception_rule(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         profile=['string'],
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
         security_group='string'
     )
     return endpoint_result
@@ -198,13 +198,13 @@ def is_valid_get_network_access_policy_set_global_exception_rule_by_id(json_sche
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9b71b104d553520aafc4ce52b537a482_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_cc29d2730d9b52708b34f59633aacfa0_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_policy_set_global_exception_rule_by_id(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.get_network_access_policy_set_global_exception_rule_by_id(
-        rule_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -224,7 +224,7 @@ def test_get_network_access_policy_set_global_exception_rule_by_id(api, validato
 
 def get_network_access_policy_set_global_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.get_network_access_policy_set_global_exception_rule_by_id(
-        rule_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -248,18 +248,18 @@ def is_valid_update_network_access_policy_set_global_exception_rule_by_id(json_s
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_42639223458c51c99e8f35329c276126_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_fccec47b460255028363021e7936d17a_v3_0_0').validate(obj.response)
     return True
 
 
 def update_network_access_policy_set_global_exception_rule_by_id(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.update_network_access_policy_set_global_exception_rule_by_id(
         active_validation=False,
+        id='string',
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         profile=['string'],
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
-        rule_id='string',
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'},
         security_group='string'
     )
     return endpoint_result
@@ -281,7 +281,7 @@ def test_update_network_access_policy_set_global_exception_rule_by_id(api, valid
 def update_network_access_policy_set_global_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.update_network_access_policy_set_global_exception_rule_by_id(
         active_validation=False,
-        rule_id='string',
+        id='string',
         link=None,
         payload=None,
         profile=None,
@@ -310,13 +310,13 @@ def is_valid_delete_network_access_policy_set_global_exception_rule_by_id(json_s
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_61e00af18a485a9283811feb84b04843_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e7b62515c4dc5de18f9a8ebf019e76af_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_policy_set_global_exception_rule_by_id(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.delete_network_access_policy_set_global_exception_rule_by_id(
-        rule_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -336,7 +336,7 @@ def test_delete_network_access_policy_set_global_exception_rule_by_id(api, valid
 
 def delete_network_access_policy_set_global_exception_rule_by_id_default(api):
     endpoint_result = api.network_access_authorization_global_exception_rules.delete_network_access_policy_set_global_exception_rule_by_id(
-        rule_id='string'
+        id='string'
     )
     return endpoint_result
 

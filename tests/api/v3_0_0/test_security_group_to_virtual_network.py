@@ -370,7 +370,7 @@ def is_valid_bulk_request_for_security_groups_to_vn_to_vlan(json_schema_validate
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0ff196187ee45a92bf195593ab8f102e_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_86bd1af169fa52c59cbc87b010c36f9e_v3_0_0').validate(obj.response)
     return True
 
 

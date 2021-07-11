@@ -376,8 +376,8 @@ class NetworkAccessAuthorizationExceptionRules(object):
         )
 
     def get_network_access_policy_by_id_local_exception_rule_by_id(self,
+                                                                   id,
                                                                    policy_id,
-                                                                   rule_id,
                                                                    headers=None,
                                                                    **query_parameters):
         """Network Access Get local exception rule attributes.
@@ -385,7 +385,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
         Args:
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -420,7 +420,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
             with_custom_headers = True
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -430,11 +430,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/exception/{ruleId}')
+                 + 'set/{policyId}/exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -442,11 +442,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d01cc518eafd5daeaf80b7e83f4d6ad1_v3_0_0', _api_response)
+        return self._object_factory('bpm_d04e336df639589d81e933fcefeb710c_v3_0_0', _api_response)
 
     def get_by_id(self,
+                  id,
                   policy_id,
-                  rule_id,
                   headers=None,
                   **query_parameters):
         """Alias for `get_network_access_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
@@ -454,15 +454,15 @@ class NetworkAccessAuthorizationExceptionRules(object):
         NetworkAccessAuthorizationExceptionRules.get_network_access_policy_by_id_local_exception_rule_by_id>`_
         """
         return self.get_network_access_policy_by_id_local_exception_rule_by_id(
+            id=id,
             policy_id=policy_id,
-            rule_id=rule_id,
             headers=headers,
             **query_parameters
         )
 
     def update_network_access_policy_by_id_local_exception_rule_by_id(self,
+                                                                      id,
                                                                       policy_id,
-                                                                      rule_id,
                                                                       link=None,
                                                                       profile=None,
                                                                       rule=None,
@@ -485,7 +485,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
                 request body.
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -529,7 +529,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
             check_type(payload, dict)
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -539,7 +539,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -557,11 +557,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_d5c906da96395858b888f382e2ab9d79_v3_0_0')\
+            self._request_validator('jsd_f014ee45351ba163e3be6fa217b_v3_0_0')\
                 .validate(_payload)
 
         e_url = ('/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/exception/{ruleId}')
+                 + 'set/{policyId}/exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -574,11 +574,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_d5c906da96395858b888f382e2ab9d79_v3_0_0', _api_response)
+        return self._object_factory('bpm_f014ee45351ba163e3be6fa217b_v3_0_0', _api_response)
 
     def update_by_id(self,
+                     id,
                      policy_id,
-                     rule_id,
                      link=None,
                      profile=None,
                      rule=None,
@@ -592,8 +592,8 @@ class NetworkAccessAuthorizationExceptionRules(object):
         NetworkAccessAuthorizationExceptionRules.update_network_access_policy_by_id_local_exception_rule_by_id>`_
         """
         return self.update_network_access_policy_by_id_local_exception_rule_by_id(
+            id=id,
             policy_id=policy_id,
-            rule_id=rule_id,
             link=link,
             profile=profile,
             rule=rule,
@@ -605,8 +605,8 @@ class NetworkAccessAuthorizationExceptionRules(object):
         )
 
     def delete_network_access_policy_by_id_local_exception_rule_by_id(self,
+                                                                      id,
                                                                       policy_id,
-                                                                      rule_id,
                                                                       headers=None,
                                                                       **query_parameters):
         """Network Access Delete local exception rule.
@@ -614,7 +614,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
         Args:
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -649,7 +649,7 @@ class NetworkAccessAuthorizationExceptionRules(object):
             with_custom_headers = True
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -659,11 +659,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/exception/{ruleId}')
+                 + 'set/{policyId}/exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -671,11 +671,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d60e4de79065869a39a937f02e3e885_v3_0_0', _api_response)
+        return self._object_factory('bpm_b471a018ef52fdb04c366d86279727_v3_0_0', _api_response)
 
     def delete_by_id(self,
+                     id,
                      policy_id,
-                     rule_id,
                      headers=None,
                      **query_parameters):
         """Alias for `delete_network_access_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
@@ -683,8 +683,8 @@ class NetworkAccessAuthorizationExceptionRules(object):
         NetworkAccessAuthorizationExceptionRules.delete_network_access_policy_by_id_local_exception_rule_by_id>`_
         """
         return self.delete_network_access_policy_by_id_local_exception_rule_by_id(
+            id=id,
             policy_id=policy_id,
-            rule_id=rule_id,
             headers=headers,
             **query_parameters
         )

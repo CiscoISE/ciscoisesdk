@@ -63,12 +63,12 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_05c0bfee23f95034842993a83d77c4e4_PATTERN = re.compile(r"/ers/config/sessionservicenode/versioninfo")
     PULL_DEPLOYMENT_INFO_f9159c9f9a1951568daee7080e1dda47_PATTERN = re.compile(r"/ers/config/deploymentinfo/getAllInfo")
     PULL_DEPLOYMENT_INFO_8698cc09209259dcbde7c851b5a6eda6_PATTERN = re.compile(r"/ers/config/deploymentinfo/versioninfo")
-    PX_GRID_NODE_a2a7f23f85105113954c87a917b7455f_PATTERN = re.compile(r"/ers/config/ers/config/pxgridNode/name/string/approve")
-    PX_GRID_NODE_111a9d109aac585a89bdd3fae400064b_PATTERN = re.compile(r"/ers/config/pxgridNode/name/string")
-    PX_GRID_NODE_849e718d5054593b94a2fef39461c24a_PATTERN = re.compile(r"/ers/config/pxgridNode/name/string")
-    PX_GRID_NODE_d24ade0b53405fbc898cb0cc1ea57fb8_PATTERN = re.compile(r"/ers/config/pxgridNode/string")
-    PX_GRID_NODE_52661028d97156379640002f79b2007c_PATTERN = re.compile(r"/ers/config/pxgridNode")
-    PX_GRID_NODE_73c2962d70ef5964be55cfeae68e5ba6_PATTERN = re.compile(r"/ers/config/pxgridNode/versioninfo")
+    PX_GRID_NODE_a2a7f23f85105113954c87a917b7455f_PATTERN = re.compile(r"/ers/config/ers/config/pxgridnode/name/string/approve")
+    PX_GRID_NODE_111a9d109aac585a89bdd3fae400064b_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string")
+    PX_GRID_NODE_849e718d5054593b94a2fef39461c24a_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string")
+    PX_GRID_NODE_d24ade0b53405fbc898cb0cc1ea57fb8_PATTERN = re.compile(r"/ers/config/pxgridnode/string")
+    PX_GRID_NODE_52661028d97156379640002f79b2007c_PATTERN = re.compile(r"/ers/config/pxgridnode")
+    PX_GRID_NODE_73c2962d70ef5964be55cfeae68e5ba6_PATTERN = re.compile(r"/ers/config/pxgridnode/versioninfo")
     SUPPORT_BUNDLE_DOWNLOAD_737531846d125b968b9d362a3458621d_PATTERN = re.compile(r"/ers/config/supportbundledownload")
     SUPPORT_BUNDLE_DOWNLOAD_25c57752629f546fb86e84c59285350f_PATTERN = re.compile(r"/ers/config/supportbundledownload/versioninfo")
     SUPPORT_BUNDLE_STATUS_cec7dc317e875ff0a315a7c0556f9c51_PATTERN = re.compile(r"/ers/config/supportbundlestatus/string")
@@ -100,96 +100,96 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_e8bd869250105a2ba30dd2cb65b0b3f2_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication")
     DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_73164e92c5af5344b4d9fdc45a282ce5_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication")
     DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_573a1a3596305814bab0a6d05cf86280_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication/reset-hitcount")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_87d71c8af3b55abb8e5959965baf2043_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication/string")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7dc678d472905ab5bce9f4cba7cd7004_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication/string")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_a0a005e87c6755e0bf5d4454a98f08c5_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication/string")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_4cdab0d4e5bf56b68624029a9cdad13e_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication/string")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_fe40d457cbdb5794a5ed2808469ed2e2_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication/string")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_2f3569aca419588999d58eac5fe2a120_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authentication/string")
     DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_0eb446266e3d54f4a657050d4f9b0bf9_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception")
     DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_c730e85640aa5a59bc0e0fd95dacf889_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception")
     DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_2dde23cf27e65a60a949d8f1f599b3d2_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception/reset-hitcount")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_5afaa335e2545c6f8f5530cd5686366a_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e326f7a61069587f9a27e69433229cc7_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_7c12c4eb2a5650c2b6e26a84131ef65b_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e608505e4a1250808bb68dc86d8a51ea_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_1b84eb28aeb55ab7af7469c854ca1814_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_4f318129029b5bec8761e56304824c77_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/exception/string")
     DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d407475db88f596390eab0a3e8c1d162_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception")
     DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_8558ade26d445251a45cc753f68d21bc_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception")
     DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_6b273ca0ffac58c3921f658152c03dbb_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception/reset-hitcount")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3a3d7e48a50d58a8a5d5720f9d55cf45_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28042265da96552991705623287a164c_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_10281a20040d51a1ba61f4d210195e59_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_2df71c84d9345b9c9caefaafe96c951e_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_552a3c8e0ddc5b40a250affc4be1700a_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_1b15ed907cbb582ab6a6a3cc446febb8_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/global-exception/string")
     DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4e4ac2543c3b53b5982168169f0b29b4_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization")
     DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_8440a5fd2b5d5306b9941387f400c7a0_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization")
     DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_38edb17577d9503ba1155c2916dcf663_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization/reset-hitcount")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f1d11ab85a0a5597b9513d92a894ef1b_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_80b60ed1eed75d7d9091344f4e38e2f1_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_e7979abd11155f12b1336bbf02a99687_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b61dd057422755baa748a72973cbc6f0_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b5151e49a2b65befb488985ed973fed2_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_7ae9522fa1505322b5da072346d58e92_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string/authorization/string")
     DEVICE_ADMINISTRATION_COMMAND_SET_273e0977618453b1b00e1c2b4cfa1999_PATTERN = re.compile(r"/v1/policy/device-admin/command-sets")
     DEVICE_ADMINISTRATION_CONDITIONS_fdfa9b301f925a34a848f29f223e5b8d_PATTERN = re.compile(r"/v1/policy/device-admin/condition")
     DEVICE_ADMINISTRATION_CONDITIONS_b84dbd77c49f5056b9bf3c1e496ebe5f_PATTERN = re.compile(r"/v1/policy/device-admin/condition")
     DEVICE_ADMINISTRATION_CONDITIONS_316863dcb2ca563999b2d3691e1def79_PATTERN = re.compile(r"/v1/policy/device-admin/condition/authentication")
     DEVICE_ADMINISTRATION_CONDITIONS_e67076b912ef5362949be22842642596_PATTERN = re.compile(r"/v1/policy/device-admin/condition/authorization")
-    DEVICE_ADMINISTRATION_CONDITIONS_3d9fe67eb28858609eca3907c8343015_PATTERN = re.compile(r"/v1/policy/device-admin/condition/condition-by-name/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_f0540adc16725e00adffdf57b67fb6ba_PATTERN = re.compile(r"/v1/policy/device-admin/condition/condition-by-name/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_c276cf1dc9545d45ae3f871966cb664b_PATTERN = re.compile(r"/v1/policy/device-admin/condition/condition-by-name/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_4dca887341a85881abd996fb46d39272_PATTERN = re.compile(r"/v1/policy/device-admin/condition/condition-by-name/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_0e3e7b0bc717508a979ccac3b986792d_PATTERN = re.compile(r"/v1/policy/device-admin/condition/condition-by-name/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_5a2afb4b40b450e7ad69d78fc92ad00f_PATTERN = re.compile(r"/v1/policy/device-admin/condition/condition-by-name/string")
     DEVICE_ADMINISTRATION_CONDITIONS_68b404b307a35c2d9438da695bb49c54_PATTERN = re.compile(r"/v1/policy/device-admin/condition/policyset")
-    DEVICE_ADMINISTRATION_CONDITIONS_27c0cf6ab73353ffa2b6986a9b16c54e_PATTERN = re.compile(r"/v1/policy/device-admin/condition/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_3b9b1bfd0f4151eb9812b474e4e4fa3c_PATTERN = re.compile(r"/v1/policy/device-admin/condition/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_2a6c1759c65b51a09ed7981397ece5c6_PATTERN = re.compile(r"/v1/policy/device-admin/condition/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_55a451c9de4d5f86add6829e064d1cdf_PATTERN = re.compile(r"/v1/policy/device-admin/condition/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_46a9f304a4ec54afa6e3484978aacbbb_PATTERN = re.compile(r"/v1/policy/device-admin/condition/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_55f327ba525e5d76b6166d80a58ddd34_PATTERN = re.compile(r"/v1/policy/device-admin/condition/string")
     DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_7f1ff6e8bb2d5c7fbcf39fbadf5da2d5_PATTERN = re.compile(r"/v1/policy/device-admin/dictionaries/authentication")
     DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_6e2f955f29ce511993a189f2d234048d_PATTERN = re.compile(r"/v1/policy/device-admin/dictionaries/authorization")
     DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_892e064032895c8098927d3a39ef6af2_PATTERN = re.compile(r"/v1/policy/device-admin/dictionaries/policyset")
     DEVICE_ADMINISTRATION_IDENTITY_STORES_7ae7d98a7b185837af8d15ae864616e0_PATTERN = re.compile(r"/v1/policy/device-admin/identity-stores")
     DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_bda58fc63575503b80c024dbe02cf547_PATTERN = re.compile(r"/v1/policy/device-admin/network-condition")
     DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_83ea4e38c44e5b1c90b19af25b88546e_PATTERN = re.compile(r"/v1/policy/device-admin/network-condition")
-    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_a3640f918edb5df99d09001ca9e12688_PATTERN = re.compile(r"/v1/policy/device-admin/network-condition/string")
-    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b371441bddfd5d819a7aedfa215f4aeb_PATTERN = re.compile(r"/v1/policy/device-admin/network-condition/string")
-    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_037e7b011df45066b55be86033ecd17a_PATTERN = re.compile(r"/v1/policy/device-admin/network-condition/string")
+    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_240e81a05d1f5cb5ba7bcc2351c0bfd6_PATTERN = re.compile(r"/v1/policy/device-admin/network-condition/string")
+    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_cd32d094f1815c388d1392bb90f3744d_PATTERN = re.compile(r"/v1/policy/device-admin/network-condition/string")
+    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_ac9ced821bc2503fa0d22badea9834ad_PATTERN = re.compile(r"/v1/policy/device-admin/network-condition/string")
     DEVICE_ADMINISTRATION_POLICY_SET_923587ed5920513e92b1728b824771cc_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set")
     DEVICE_ADMINISTRATION_POLICY_SET_5767ac3ccf225801ad8ba0bb1ad9de0b_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set")
     DEVICE_ADMINISTRATION_POLICY_SET_ed47964d442d52dca1f7da967f37b3e2_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/reset-hitcount")
-    DEVICE_ADMINISTRATION_POLICY_SET_49f36918d98a546ab6ca2618d1844984_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string")
-    DEVICE_ADMINISTRATION_POLICY_SET_b6cc40e0f4b45e8da5908776d124ed5a_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string")
-    DEVICE_ADMINISTRATION_POLICY_SET_f602e2f88378502a8d8bca6dff274afe_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string")
+    DEVICE_ADMINISTRATION_POLICY_SET_f9f969574cde5a439f66811ed08650d0_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string")
+    DEVICE_ADMINISTRATION_POLICY_SET_532619181872577f8d1efe131783009c_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string")
+    DEVICE_ADMINISTRATION_POLICY_SET_a82a5481eec257af981767634a941263_PATTERN = re.compile(r"/v1/policy/device-admin/policy-set/string")
     DEVICE_ADMINISTRATION_PROFILES_8ca669963ed0563e96bb009bf14a417b_PATTERN = re.compile(r"/v1/policy/device-admin/profiles")
     DEVICE_ADMINISTRATION_SERVICE_NAMES_36e8018e15b053f39046b5bec0243d3f_PATTERN = re.compile(r"/v1/policy/device-admin/service-names")
     DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_816bf923264c53f98d5c347fa50b9c15_PATTERN = re.compile(r"/v1/policy/device-admin/time-condition")
     DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_98b30f809e275589bd7154b5b4093d3f_PATTERN = re.compile(r"/v1/policy/device-admin/time-condition")
-    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_15ffd94d339a5fea8a4777dccccb926f_PATTERN = re.compile(r"/v1/policy/device-admin/time-condition/string")
-    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_e3241242740252b2814e0b474c314e9b_PATTERN = re.compile(r"/v1/policy/device-admin/time-condition/string")
-    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_cf9f01129179555aa60c446f0a65c65a_PATTERN = re.compile(r"/v1/policy/device-admin/time-condition/string")
+    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_225098756ffe5da1b4ee14a72427f2a1_PATTERN = re.compile(r"/v1/policy/device-admin/time-condition/string")
+    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_9f47dca835fa58fcb08bcdd672dfbaa7_PATTERN = re.compile(r"/v1/policy/device-admin/time-condition/string")
+    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_2407e1579b485baa9317791997bec3d0_PATTERN = re.compile(r"/v1/policy/device-admin/time-condition/string")
     NETWORK_ACCESS_AUTHENTICATION_RULES_7956d836da955609bd9a5243101f3536_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication")
     NETWORK_ACCESS_AUTHENTICATION_RULES_c26e318c3c405713a55b4e162be8c890_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication")
     NETWORK_ACCESS_AUTHENTICATION_RULES_362ffc5178ed53749ebcaadd1c2af785_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication/reset-hitcount")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_85a98a9a386755939fe1f1633be33689_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication/string")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_ec5180b8603d5cf78c13d6d3c0be18c2_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication/string")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_da4f3b797ace547fa8f298d8c5197ce8_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication/string")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_db7274c43d695aa7af540ecced06c02c_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication/string")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_b9500d6c2f365927aa3dbe6d7ecbae22_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication/string")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_4bac6ffe32d85cbeac3b12a2e85b094b_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authentication/string")
     NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_9b2117ae65635dfd9c9d7042eb649261_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception")
     NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2d40ae38628c51c49af42a4ede3d66d9_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception")
     NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_7d45668b438c59a6b92eb3c79386935b_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception/reset-hitcount")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d01cc518eafd5daeaf80b7e83f4d6ad1_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d5c906da96395858b888f382e2ab9d79_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0d60e4de79065869a39a937f02e3e885_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d04e336df639589d81e933fcefeb710c_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_62576f014ee45351ba163e3be6fa217b_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_91b471a018ef52fdb04c366d86279727_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/exception/string")
     NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_8de9a19a8393543da5814b1dce75abf6_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception")
     NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f9df6a3c6cf953319db3b8c36720997d_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception")
     NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_31254fb8a2895e8982180d5f9339f8e4_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception/reset-hitcount")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_9b71b104d553520aafc4ce52b537a482_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_42639223458c51c99e8f35329c276126_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_61e00af18a485a9283811feb84b04843_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_cc29d2730d9b52708b34f59633aacfa0_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_fccec47b460255028363021e7936d17a_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e7b62515c4dc5de18f9a8ebf019e76af_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/global-exception/string")
     NETWORK_ACCESS_AUTHORIZATION_RULES_565fef1c1b1c53eeb784322caec31573_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization")
     NETWORK_ACCESS_AUTHORIZATION_RULES_b9de636ff2e25f849f468556c53b7b9a_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization")
     NETWORK_ACCESS_AUTHORIZATION_RULES_e263dfc3d6e5513fa6ae916a22d14e5d_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization/reset-hitcount")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_b19f79dd969d5444a6ba7b2acbf0f3cf_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization/string")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_a8c6432bf3c8523e9876c4ac9d92c8b5_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization/string")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_0f8c47fa229d5f749f7432510709876c_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization/string")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_4d187140e89a5578bbada778ee346f5a_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization/string")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_6a48341446b15729abf624695b20b9f5_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization/string")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_9302c0eed78258d39d1378cfd4d4eb3a_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/string/authorization/string")
     NETWORK_ACCESS_CONDITIONS_daaac00241cc57a1a360043cbce63df6_PATTERN = re.compile(r"/v1/policy/network-access/condition")
     NETWORK_ACCESS_CONDITIONS_36e5dd2909045a90bdce4848865662c2_PATTERN = re.compile(r"/v1/policy/network-access/condition")
     NETWORK_ACCESS_CONDITIONS_3a155387e56e5f9ba511dc4e4c9f46b4_PATTERN = re.compile(r"/v1/policy/network-access/condition/authentication")
     NETWORK_ACCESS_CONDITIONS_3e196799ee895b3981634d93ec48f58c_PATTERN = re.compile(r"/v1/policy/network-access/condition/authorization")
-    NETWORK_ACCESS_CONDITIONS_9c98c10af4da50d99fb62c7097f07736_PATTERN = re.compile(r"/v1/policy/network-access/condition/condition-by-name/string")
-    NETWORK_ACCESS_CONDITIONS_bbc720f738bf5b83a20de7e28e3c4c5f_PATTERN = re.compile(r"/v1/policy/network-access/condition/condition-by-name/string")
-    NETWORK_ACCESS_CONDITIONS_1ccbc1ec86665500b4520ba48304eab7_PATTERN = re.compile(r"/v1/policy/network-access/condition/condition-by-name/string")
+    NETWORK_ACCESS_CONDITIONS_5a3de79a23005a1b8674d75adbce5dde_PATTERN = re.compile(r"/v1/policy/network-access/condition/condition-by-name/string")
+    NETWORK_ACCESS_CONDITIONS_015275726e4f594f8a8980361d0ab9e1_PATTERN = re.compile(r"/v1/policy/network-access/condition/condition-by-name/string")
+    NETWORK_ACCESS_CONDITIONS_4a2e8aa155a554dcbfaf07ac249594f6_PATTERN = re.compile(r"/v1/policy/network-access/condition/condition-by-name/string")
     NETWORK_ACCESS_CONDITIONS_902bf0cf46ba5b60b00176d2897fc7d3_PATTERN = re.compile(r"/v1/policy/network-access/condition/policyset")
-    NETWORK_ACCESS_CONDITIONS_150027701d3053acae2eb596718a9ca3_PATTERN = re.compile(r"/v1/policy/network-access/condition/string")
-    NETWORK_ACCESS_CONDITIONS_1f0d3cb73c4e59208d9ee04ffa787b3c_PATTERN = re.compile(r"/v1/policy/network-access/condition/string")
-    NETWORK_ACCESS_CONDITIONS_010c97b4161c5b95a6a83b6917ce26d6_PATTERN = re.compile(r"/v1/policy/network-access/condition/string")
+    NETWORK_ACCESS_CONDITIONS_1cc593ed1f8451258789c09299f3bb88_PATTERN = re.compile(r"/v1/policy/network-access/condition/string")
+    NETWORK_ACCESS_CONDITIONS_d30aa7529c245c549eafde4c17a809a4_PATTERN = re.compile(r"/v1/policy/network-access/condition/string")
+    NETWORK_ACCESS_CONDITIONS_f49832d63b1d5463b923c06536558994_PATTERN = re.compile(r"/v1/policy/network-access/condition/string")
     NETWORK_ACCESS_DICTIONARY_1eb2cef3895d5bc68b7a28eca42ef630_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries")
     NETWORK_ACCESS_DICTIONARY_7205be755dae5251bd2d8348eeebfdde_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries")
     NETWORK_ACCESS_DICTIONARY_e60234354578568697b6740d08170678_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string")
@@ -197,18 +197,18 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     NETWORK_ACCESS_DICTIONARY_2b80087f14af51d186a7bfa89f5a494b_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string")
     NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_b47094632edd5daea17c82b5fcd812f5_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string/attribute")
     NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_9d3034483aaa5563bb287ef0cd502130_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string/attribute")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_cb8619385d265527a56dc7a27527f3a1_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string/attribute/string")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d2810d771d3e5ec580c39e0deb46b2b8_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string/attribute/string")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_e1725efd8ea253d1930913a85709977f_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string/attribute/string")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_48218d25b3c952abbde0711fec866e74_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string/attribute/string")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_b734aeeb768d568684706bff5e3fa5bb_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string/attribute/string")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_6636e1a0a94b543c974b537bdda17a7c_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/string/attribute/string")
     NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_469345c8455c5c6fac438317f314f407_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/authentication")
     NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_e86076c61aa9548dacaf5eb77e98a20c_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/authorization")
     NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_5bce945bea7456fd930ee327ece18828_PATTERN = re.compile(r"/v1/policy/network-access/dictionaries/policyset")
     NETWORK_ACCESS_IDENTITY_STORES_4ef75d8c1654508aae4fc2ee9b34fabc_PATTERN = re.compile(r"/v1/policy/network-access/identity-stores")
     NETWORK_ACCESS_NETWORK_CONDITIONS_da2d8b2763ed53d9bec7f9427c4ce344_PATTERN = re.compile(r"/v1/policy/network-access/network-condition")
     NETWORK_ACCESS_NETWORK_CONDITIONS_858ad86a47e15d45ab1cc0cadc5b248f_PATTERN = re.compile(r"/v1/policy/network-access/network-condition")
-    NETWORK_ACCESS_NETWORK_CONDITIONS_64faeb3bb3f25787844f6973d5a1658f_PATTERN = re.compile(r"/v1/policy/network-access/network-condition/string")
-    NETWORK_ACCESS_NETWORK_CONDITIONS_5aaa481aaad35f8b8a7cbf2e063eac2b_PATTERN = re.compile(r"/v1/policy/network-access/network-condition/string")
-    NETWORK_ACCESS_NETWORK_CONDITIONS_8e345ca7adb75b1bacfa42771a4d242c_PATTERN = re.compile(r"/v1/policy/network-access/network-condition/string")
+    NETWORK_ACCESS_NETWORK_CONDITIONS_c3b840797ab85dbe85b8a322be86278e_PATTERN = re.compile(r"/v1/policy/network-access/network-condition/string")
+    NETWORK_ACCESS_NETWORK_CONDITIONS_74ad357457f45e07a13674d462c4270d_PATTERN = re.compile(r"/v1/policy/network-access/network-condition/string")
+    NETWORK_ACCESS_NETWORK_CONDITIONS_0e7e4151251d56a6a72f3e147ddde891_PATTERN = re.compile(r"/v1/policy/network-access/network-condition/string")
     NETWORK_ACCESS_POLICY_SET_229b904117c35daf8833398c262c403d_PATTERN = re.compile(r"/v1/policy/network-access/policy-set")
     NETWORK_ACCESS_POLICY_SET_42e1af4e392c5790a01685b9687208c0_PATTERN = re.compile(r"/v1/policy/network-access/policy-set")
     NETWORK_ACCESS_POLICY_SET_678aef73e11e56edb468869d663b5e85_PATTERN = re.compile(r"/v1/policy/network-access/policy-set/reset-hitcount")
@@ -220,9 +220,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     NETWORK_ACCESS_SERVICE_NAMES_ca8f50a31b325fd281ae7f7b69f31d3f_PATTERN = re.compile(r"/v1/policy/network-access/service-names")
     NETWORK_ACCESS_TIME_DATE_CONDITIONS_1533f65d301c5ee3a66ac5220cac3348_PATTERN = re.compile(r"/v1/policy/network-access/time-condition")
     NETWORK_ACCESS_TIME_DATE_CONDITIONS_fc5800b01699562cb563664affdd7757_PATTERN = re.compile(r"/v1/policy/network-access/time-condition")
-    NETWORK_ACCESS_TIME_DATE_CONDITIONS_e8c39503b29051bea788021a168833da_PATTERN = re.compile(r"/v1/policy/network-access/time-condition/string")
-    NETWORK_ACCESS_TIME_DATE_CONDITIONS_fef057ddea8d56a98189b1db3bf5f240_PATTERN = re.compile(r"/v1/policy/network-access/time-condition/string")
-    NETWORK_ACCESS_TIME_DATE_CONDITIONS_10517292296559f2847ac681d93cf40b_PATTERN = re.compile(r"/v1/policy/network-access/time-condition/string")
+    NETWORK_ACCESS_TIME_DATE_CONDITIONS_7495473c838652eab2df320764235146_PATTERN = re.compile(r"/v1/policy/network-access/time-condition/string")
+    NETWORK_ACCESS_TIME_DATE_CONDITIONS_e5f90d642cfa5ee6a1645dd99fb3065e_PATTERN = re.compile(r"/v1/policy/network-access/time-condition/string")
+    NETWORK_ACCESS_TIME_DATE_CONDITIONS_a946651bf00654e1a27da97fb7203f52_PATTERN = re.compile(r"/v1/policy/network-access/time-condition/string")
     ACI_BINDINGS_3d1448851f0154d0b6e9c856ec6cc6f0_PATTERN = re.compile(r"/ers/config/acibindings/getall")
     ACI_BINDINGS_d74b5214bad656c98f21e4968661c3c0_PATTERN = re.compile(r"/ers/config/acibindings/versioninfo")
     ACI_SETTINGS_2ea5c865993b56f48f7f43475294a20c_PATTERN = re.compile(r"/ers/config/acisettings")
@@ -267,7 +267,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     BYOD_PORTAL_41a23b580495514394b125800e073c9a_PATTERN = re.compile(r"/ers/config/byodportal")
     BYOD_PORTAL_afcce33ec863567f94f3b9b73719ff8d_PATTERN = re.compile(r"/ers/config/byodportal")
     BYOD_PORTAL_c5d2d9d8c20b58049cd3326850f2292f_PATTERN = re.compile(r"/ers/config/byodportal/versioninfo")
-    CERTIFICATE_PROFILE_1d473b3690e951be9375d770225b9657_PATTERN = re.compile(r"/ers/config/certificateprofile/string")
+    CERTIFICATE_PROFILE_337e7884eb9c548698cdc54e033f35f4_PATTERN = re.compile(r"/ers/config/certificateprofile/name/string")
     CERTIFICATE_PROFILE_d24a3f485ff758d099b1e4713f18f1c1_PATTERN = re.compile(r"/ers/config/certificateprofile/string")
     CERTIFICATE_PROFILE_e09287aba99c56a6a9171b7e3a635a43_PATTERN = re.compile(r"/ers/config/certificateprofile/string")
     CERTIFICATE_PROFILE_3be38700993b5f70acfdc8e44f5558d8_PATTERN = re.compile(r"/ers/config/certificateprofile")
@@ -490,7 +490,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     SECURITY_GROUPS_ACLS_999b22d6ad9f595ab7e3eee5cf44de8a_PATTERN = re.compile(r"/ers/config/sgacl")
     SECURITY_GROUPS_ACLS_9ab61f24bdaf508590f7686e1130913f_PATTERN = re.compile(r"/ers/config/sgacl")
     SECURITY_GROUPS_ACLS_6704e67a1131578aa794d8377da9a1de_PATTERN = re.compile(r"/ers/config/sgacl/versioninfo")
-    SECURITY_GROUPS_ACLS_bfff136597e25df5ae1d135251fee263_PATTERN = re.compile(r"/ers/config/sgacl/submit")
+    SECURITY_GROUPS_ACLS_7da250e23ac05e6a8dcf32a81effcee9_PATTERN = re.compile(r"/ers/config/sgacl/bulk/submit")
     SECURITY_GROUPS_ACLS_07af5ee576605a5a915d888924c1e804_PATTERN = re.compile(r"/ers/config/sgacl/bulk/string")
     SECURITY_GROUP_TO_VIRTUAL_NETWORK_2112393ea0a65da3ae0346b912a9efac_PATTERN = re.compile(r"/ers/config/sgtvnvlan/string")
     SECURITY_GROUP_TO_VIRTUAL_NETWORK_eae98db0c24b5ecca77cce8279e20785_PATTERN = re.compile(r"/ers/config/sgtvnvlan/string")
@@ -498,7 +498,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     SECURITY_GROUP_TO_VIRTUAL_NETWORK_e51b6e745cdb5bdda4de26a27b8d92bb_PATTERN = re.compile(r"/ers/config/sgtvnvlan")
     SECURITY_GROUP_TO_VIRTUAL_NETWORK_97830a0710ba581da4d3fd00e84d59e3_PATTERN = re.compile(r"/ers/config/sgtvnvlan")
     SECURITY_GROUP_TO_VIRTUAL_NETWORK_7b2811387f4e55c8839c94ea241a3236_PATTERN = re.compile(r"/ers/config/sgtvnvlan/versioninfo")
-    SECURITY_GROUP_TO_VIRTUAL_NETWORK_0ff196187ee45a92bf195593ab8f102e_PATTERN = re.compile(r"/ers/config/sgtvnvlan/submit")
+    SECURITY_GROUP_TO_VIRTUAL_NETWORK_86bd1af169fa52c59cbc87b010c36f9e_PATTERN = re.compile(r"/ers/config/sgtvnvlan/bulk/submit")
     SECURITY_GROUP_TO_VIRTUAL_NETWORK_10ea793a0b1b5ac498f7bc74a0aba257_PATTERN = re.compile(r"/ers/config/sgtvnvlan/bulk/string")
     SECURITY_GROUPS_ea658190e73c5ce1b27e7def4aea28e3_PATTERN = re.compile(r"/ers/config/sgt/string")
     SECURITY_GROUPS_42ce666e64a958229cfd8da70945935e_PATTERN = re.compile(r"/ers/config/sgt/string")
@@ -506,7 +506,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     SECURITY_GROUPS_b3c356cfc48a5da4b13b8ecbae5748b7_PATTERN = re.compile(r"/ers/config/sgt")
     SECURITY_GROUPS_1d0290eb241f5bd79221afc8d6cb32da_PATTERN = re.compile(r"/ers/config/sgt")
     SECURITY_GROUPS_ad87f41ef4845f19a19bfadac0928ae6_PATTERN = re.compile(r"/ers/config/sgt/versioninfo")
-    SECURITY_GROUPS_fe0ac7fc07885c6f877768654aefd189_PATTERN = re.compile(r"/ers/config/sgt/submit")
+    SECURITY_GROUPS_742f7bd03a835c95b7a759b39ce7f680_PATTERN = re.compile(r"/ers/config/sgt/bulk/submit")
     SECURITY_GROUPS_a3148b789a935070b99caed1e99592cf_PATTERN = re.compile(r"/ers/config/sgt/bulk/string")
     SELF_REGISTERED_PORTAL_f9c9a5e917af53dbbb91733e82e72ebe_PATTERN = re.compile(r"/ers/config/selfregportal/string")
     SELF_REGISTERED_PORTAL_400c4fada6c558d9aba09cc373d5b266_PATTERN = re.compile(r"/ers/config/selfregportal/string")
@@ -542,7 +542,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     SXP_CONNECTIONS_7c56dfcff6285f9b882c884873d5d6c1_PATTERN = re.compile(r"/ers/config/sxpconnections")
     SXP_CONNECTIONS_789c371214c759f791c0a522b9eaf5b5_PATTERN = re.compile(r"/ers/config/sxpconnections")
     SXP_CONNECTIONS_c1ceea62877152f6a4cf7ce709f4d0f8_PATTERN = re.compile(r"/ers/config/sxpconnections/versioninfo")
-    SXP_CONNECTIONS_a9d9ce4538605d439015d3ed7ef88c41_PATTERN = re.compile(r"/ers/config/sxpconnections/submit")
+    SXP_CONNECTIONS_e390313557e95aa9b8c2453d6f1de1e8_PATTERN = re.compile(r"/ers/config/sxpconnections/bulk/submit")
     SXP_CONNECTIONS_9462c2fb20ca5eb79facdda896457507_PATTERN = re.compile(r"/ers/config/sxpconnections/bulk/string")
     SXP_LOCAL_BINDINGS_e56bea5248a25f799b02fcb6098a7b10_PATTERN = re.compile(r"/ers/config/sxplocalbindings/string")
     SXP_LOCAL_BINDINGS_313e07cb8ea65820863cce345c67926b_PATTERN = re.compile(r"/ers/config/sxplocalbindings/string")
@@ -550,14 +550,14 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     SXP_LOCAL_BINDINGS_91f845bd746a5c00967fe66178c5edbf_PATTERN = re.compile(r"/ers/config/sxplocalbindings")
     SXP_LOCAL_BINDINGS_84610cf67e0155eab895b50d1a377f21_PATTERN = re.compile(r"/ers/config/sxplocalbindings")
     SXP_LOCAL_BINDINGS_ee22235f36835dec897ed6381e3e15fc_PATTERN = re.compile(r"/ers/config/sxplocalbindings/versioninfo")
-    SXP_LOCAL_BINDINGS_2b97435f47305f5da136a0d68ac6d466_PATTERN = re.compile(r"/ers/config/sxplocalbindings/submit")
+    SXP_LOCAL_BINDINGS_0615c21f51995bff8d6468a1e9c0b2e9_PATTERN = re.compile(r"/ers/config/sxplocalbindings/bulk/submit")
     SXP_LOCAL_BINDINGS_475db866e1125ca0b7cd7cc13ac4bdd4_PATTERN = re.compile(r"/ers/config/sxplocalbindings/bulk/string")
     SXP_VPNS_cd59f40aa9305587b69944a9c819f7a9_PATTERN = re.compile(r"/ers/config/sxpvpns/string")
     SXP_VPNS_8a0501930cc9517ea1cb4103db6e0af7_PATTERN = re.compile(r"/ers/config/sxpvpns/string")
     SXP_VPNS_2a93d058764b51dc922e41bbe4ff7cd6_PATTERN = re.compile(r"/ers/config/sxpvpns")
     SXP_VPNS_1a693347bdd15bb19d69a75f088498ce_PATTERN = re.compile(r"/ers/config/sxpvpns")
     SXP_VPNS_36ca67bf525555b086ecee4cb93e9aee_PATTERN = re.compile(r"/ers/config/sxpvpns/versioninfo")
-    SXP_VPNS_be45eed0938a5143bf85ffd5fd4205d0_PATTERN = re.compile(r"/ers/config/sxpvpns/submit")
+    SXP_VPNS_2549a746755c588c928d15a59f8a693d_PATTERN = re.compile(r"/ers/config/sxpvpns/bulk/submit")
     SXP_VPNS_ba771c958ccc5f499c3a819fb2c67f57_PATTERN = re.compile(r"/ers/config/sxpvpns/bulk/string")
     SYSTEM_CERTIFICATE_dd469dcee9445c72a3861ef94fb3b096_PATTERN = re.compile(r"/ers/config/systemcertificate")
     SYSTEM_CERTIFICATE_3512a19fb8fe5fe9b069aa19d2dd74d5_PATTERN = re.compile(r"/ers/config/systemcertificate/versioninfo")
@@ -583,9 +583,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     TACACS_PROFILE_c094086382485201ad36d4641fc6822e_PATTERN = re.compile(r"/ers/config/tacacsprofile")
     TACACS_PROFILE_17b22259a4415709a97bd2b7646f734f_PATTERN = re.compile(r"/ers/config/tacacsprofile/versioninfo")
     TACACS_SERVER_SEQUENCE_493b03900a2e5027b615d9f1bdcf9f63_PATTERN = re.compile(r"/ers/config/tacacsserversequence/name/string")
-    TACACS_SERVER_SEQUENCE_8b9eb9547216547cab8b9e686eee674b_PATTERN = re.compile(r"/ers/config/tacacsexternalservers/string")
-    TACACS_SERVER_SEQUENCE_7a7cffe3bfae55aa81b7b4447519e4cd_PATTERN = re.compile(r"/ers/config/tacacsexternalservers/string")
-    TACACS_SERVER_SEQUENCE_896816622564523798353b885b115048_PATTERN = re.compile(r"/ers/config/tacacsexternalservers/string")
+    TACACS_SERVER_SEQUENCE_f3b45b8e4089574c9912407f88b1a5d2_PATTERN = re.compile(r"/ers/config/tacacsserversequence/string")
+    TACACS_SERVER_SEQUENCE_18f6de5797735bbd95dc8683c6a7aebf_PATTERN = re.compile(r"/ers/config/tacacsserversequence/string")
+    TACACS_SERVER_SEQUENCE_a1465b72911359bdbb1430469801d4be_PATTERN = re.compile(r"/ers/config/tacacsserversequence/string")
     TACACS_SERVER_SEQUENCE_54187c189f2f5f6b8bab3931c206c949_PATTERN = re.compile(r"/ers/config/tacacsserversequence")
     TACACS_SERVER_SEQUENCE_5902a1e26e595667bd98f84dd29232e2_PATTERN = re.compile(r"/ers/config/tacacsserversequence")
     TACACS_SERVER_SEQUENCE_aa8e1dc47a445d44ab86020f421ee721_PATTERN = re.compile(r"/ers/config/tacacsserversequence/versioninfo")
@@ -2326,7 +2326,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2348,9 +2348,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_87d71c8af3b55abb8e5959965baf2043(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_4cdab0d4e5bf56b68624029a9cdad13e(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_87d71c8af3b55abb8e5959965baf2043_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_4cdab0d4e5bf56b68624029a9cdad13e_PATTERN,
             self.path
         )
 
@@ -2362,13 +2362,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7dc678d472905ab5bce9f4cba7cd7004(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_fe40d457cbdb5794a5ed2808469ed2e2(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7dc678d472905ab5bce9f4cba7cd7004_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_fe40d457cbdb5794a5ed2808469ed2e2_PATTERN,
             self.path
         )
 
@@ -2380,13 +2380,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_a0a005e87c6755e0bf5d4454a98f08c5(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_2f3569aca419588999d58eac5fe2a120(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_a0a005e87c6755e0bf5d4454a98f08c5_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_2f3569aca419588999d58eac5fe2a120_PATTERN,
             self.path
         )
 
@@ -2434,7 +2434,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2456,9 +2456,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_5afaa335e2545c6f8f5530cd5686366a(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e608505e4a1250808bb68dc86d8a51ea(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_5afaa335e2545c6f8f5530cd5686366a_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e608505e4a1250808bb68dc86d8a51ea_PATTERN,
             self.path
         )
 
@@ -2470,13 +2470,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e326f7a61069587f9a27e69433229cc7(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_1b84eb28aeb55ab7af7469c854ca1814(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e326f7a61069587f9a27e69433229cc7_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_1b84eb28aeb55ab7af7469c854ca1814_PATTERN,
             self.path
         )
 
@@ -2488,13 +2488,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_7c12c4eb2a5650c2b6e26a84131ef65b(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_4f318129029b5bec8761e56304824c77(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_7c12c4eb2a5650c2b6e26a84131ef65b_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_4f318129029b5bec8761e56304824c77_PATTERN,
             self.path
         )
 
@@ -2542,7 +2542,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2564,9 +2564,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3a3d7e48a50d58a8a5d5720f9d55cf45(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_2df71c84d9345b9c9caefaafe96c951e(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3a3d7e48a50d58a8a5d5720f9d55cf45_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_2df71c84d9345b9c9caefaafe96c951e_PATTERN,
             self.path
         )
 
@@ -2578,13 +2578,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28042265da96552991705623287a164c(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_552a3c8e0ddc5b40a250affc4be1700a(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28042265da96552991705623287a164c_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_552a3c8e0ddc5b40a250affc4be1700a_PATTERN,
             self.path
         )
 
@@ -2596,13 +2596,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_10281a20040d51a1ba61f4d210195e59(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_1b15ed907cbb582ab6a6a3cc446febb8(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_10281a20040d51a1ba61f4d210195e59_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_1b15ed907cbb582ab6a6a3cc446febb8_PATTERN,
             self.path
         )
 
@@ -2650,7 +2650,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2672,9 +2672,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f1d11ab85a0a5597b9513d92a894ef1b(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b61dd057422755baa748a72973cbc6f0(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f1d11ab85a0a5597b9513d92a894ef1b_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b61dd057422755baa748a72973cbc6f0_PATTERN,
             self.path
         )
 
@@ -2686,13 +2686,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_80b60ed1eed75d7d9091344f4e38e2f1(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b5151e49a2b65befb488985ed973fed2(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_80b60ed1eed75d7d9091344f4e38e2f1_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b5151e49a2b65befb488985ed973fed2_PATTERN,
             self.path
         )
 
@@ -2704,13 +2704,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_e7979abd11155f12b1336bbf02a99687(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_7ae9522fa1505322b5da072346d58e92(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_e7979abd11155f12b1336bbf02a99687_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_7ae9522fa1505322b5da072346d58e92_PATTERN,
             self.path
         )
 
@@ -2758,7 +2758,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2776,7 +2776,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2794,7 +2794,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2812,13 +2812,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_3d9fe67eb28858609eca3907c8343015(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_4dca887341a85881abd996fb46d39272(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_3d9fe67eb28858609eca3907c8343015_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_4dca887341a85881abd996fb46d39272_PATTERN,
             self.path
         )
 
@@ -2830,13 +2830,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_f0540adc16725e00adffdf57b67fb6ba(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_0e3e7b0bc717508a979ccac3b986792d(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_f0540adc16725e00adffdf57b67fb6ba_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_0e3e7b0bc717508a979ccac3b986792d_PATTERN,
             self.path
         )
 
@@ -2848,13 +2848,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_c276cf1dc9545d45ae3f871966cb664b(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_5a2afb4b40b450e7ad69d78fc92ad00f(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_c276cf1dc9545d45ae3f871966cb664b_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_5a2afb4b40b450e7ad69d78fc92ad00f_PATTERN,
             self.path
         )
 
@@ -2884,13 +2884,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_27c0cf6ab73353ffa2b6986a9b16c54e(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_55a451c9de4d5f86add6829e064d1cdf(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_27c0cf6ab73353ffa2b6986a9b16c54e_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_55a451c9de4d5f86add6829e064d1cdf_PATTERN,
             self.path
         )
 
@@ -2902,13 +2902,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_3b9b1bfd0f4151eb9812b474e4e4fa3c(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_46a9f304a4ec54afa6e3484978aacbbb(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_3b9b1bfd0f4151eb9812b474e4e4fa3c_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_46a9f304a4ec54afa6e3484978aacbbb_PATTERN,
             self.path
         )
 
@@ -2920,13 +2920,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_2a6c1759c65b51a09ed7981397ece5c6(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_55f327ba525e5d76b6166d80a58ddd34(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_2a6c1759c65b51a09ed7981397ece5c6_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_55f327ba525e5d76b6166d80a58ddd34_PATTERN,
             self.path
         )
 
@@ -3050,9 +3050,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_a3640f918edb5df99d09001ca9e12688(self):
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_240e81a05d1f5cb5ba7bcc2351c0bfd6(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_a3640f918edb5df99d09001ca9e12688_PATTERN,
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_240e81a05d1f5cb5ba7bcc2351c0bfd6_PATTERN,
             self.path
         )
 
@@ -3068,9 +3068,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b371441bddfd5d819a7aedfa215f4aeb(self):
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_cd32d094f1815c388d1392bb90f3744d(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b371441bddfd5d819a7aedfa215f4aeb_PATTERN,
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_cd32d094f1815c388d1392bb90f3744d_PATTERN,
             self.path
         )
 
@@ -3086,9 +3086,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_037e7b011df45066b55be86033ecd17a(self):
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_ac9ced821bc2503fa0d22badea9834ad(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_037e7b011df45066b55be86033ecd17a_PATTERN,
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_ac9ced821bc2503fa0d22badea9834ad_PATTERN,
             self.path
         )
 
@@ -3136,7 +3136,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3158,9 +3158,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_49f36918d98a546ab6ca2618d1844984(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_f9f969574cde5a439f66811ed08650d0(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_49f36918d98a546ab6ca2618d1844984_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_f9f969574cde5a439f66811ed08650d0_PATTERN,
             self.path
         )
 
@@ -3172,13 +3172,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_b6cc40e0f4b45e8da5908776d124ed5a(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_532619181872577f8d1efe131783009c(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_b6cc40e0f4b45e8da5908776d124ed5a_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_532619181872577f8d1efe131783009c_PATTERN,
             self.path
         )
 
@@ -3190,13 +3190,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_f602e2f88378502a8d8bca6dff274afe(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_a82a5481eec257af981767634a941263(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_f602e2f88378502a8d8bca6dff274afe_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_a82a5481eec257af981767634a941263_PATTERN,
             self.path
         )
 
@@ -3284,9 +3284,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_15ffd94d339a5fea8a4777dccccb926f(self):
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_225098756ffe5da1b4ee14a72427f2a1(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_15ffd94d339a5fea8a4777dccccb926f_PATTERN,
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_225098756ffe5da1b4ee14a72427f2a1_PATTERN,
             self.path
         )
 
@@ -3302,9 +3302,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_e3241242740252b2814e0b474c314e9b(self):
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_9f47dca835fa58fcb08bcdd672dfbaa7(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_e3241242740252b2814e0b474c314e9b_PATTERN,
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_9f47dca835fa58fcb08bcdd672dfbaa7_PATTERN,
             self.path
         )
 
@@ -3320,9 +3320,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_cf9f01129179555aa60c446f0a65c65a(self):
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_2407e1579b485baa9317791997bec3d0(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_cf9f01129179555aa60c446f0a65c65a_PATTERN,
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_2407e1579b485baa9317791997bec3d0_PATTERN,
             self.path
         )
 
@@ -3370,7 +3370,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3392,9 +3392,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_85a98a9a386755939fe1f1633be33689(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_db7274c43d695aa7af540ecced06c02c(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_85a98a9a386755939fe1f1633be33689_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_db7274c43d695aa7af540ecced06c02c_PATTERN,
             self.path
         )
 
@@ -3406,13 +3406,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_ec5180b8603d5cf78c13d6d3c0be18c2(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_b9500d6c2f365927aa3dbe6d7ecbae22(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_ec5180b8603d5cf78c13d6d3c0be18c2_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_b9500d6c2f365927aa3dbe6d7ecbae22_PATTERN,
             self.path
         )
 
@@ -3424,13 +3424,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_da4f3b797ace547fa8f298d8c5197ce8(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_4bac6ffe32d85cbeac3b12a2e85b094b(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_da4f3b797ace547fa8f298d8c5197ce8_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_4bac6ffe32d85cbeac3b12a2e85b094b_PATTERN,
             self.path
         )
 
@@ -3478,7 +3478,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3500,9 +3500,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d01cc518eafd5daeaf80b7e83f4d6ad1(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d04e336df639589d81e933fcefeb710c(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d01cc518eafd5daeaf80b7e83f4d6ad1_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d04e336df639589d81e933fcefeb710c_PATTERN,
             self.path
         )
 
@@ -3514,13 +3514,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d5c906da96395858b888f382e2ab9d79(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_62576f014ee45351ba163e3be6fa217b(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d5c906da96395858b888f382e2ab9d79_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_62576f014ee45351ba163e3be6fa217b_PATTERN,
             self.path
         )
 
@@ -3532,13 +3532,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0d60e4de79065869a39a937f02e3e885(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_91b471a018ef52fdb04c366d86279727(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0d60e4de79065869a39a937f02e3e885_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_91b471a018ef52fdb04c366d86279727_PATTERN,
             self.path
         )
 
@@ -3586,7 +3586,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3608,9 +3608,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_9b71b104d553520aafc4ce52b537a482(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_cc29d2730d9b52708b34f59633aacfa0(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_9b71b104d553520aafc4ce52b537a482_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_cc29d2730d9b52708b34f59633aacfa0_PATTERN,
             self.path
         )
 
@@ -3622,13 +3622,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_42639223458c51c99e8f35329c276126(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_fccec47b460255028363021e7936d17a(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_42639223458c51c99e8f35329c276126_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_fccec47b460255028363021e7936d17a_PATTERN,
             self.path
         )
 
@@ -3640,13 +3640,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_61e00af18a485a9283811feb84b04843(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e7b62515c4dc5de18f9a8ebf019e76af(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_61e00af18a485a9283811feb84b04843_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e7b62515c4dc5de18f9a8ebf019e76af_PATTERN,
             self.path
         )
 
@@ -3694,7 +3694,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3716,9 +3716,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_b19f79dd969d5444a6ba7b2acbf0f3cf(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_4d187140e89a5578bbada778ee346f5a(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_b19f79dd969d5444a6ba7b2acbf0f3cf_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_4d187140e89a5578bbada778ee346f5a_PATTERN,
             self.path
         )
 
@@ -3730,13 +3730,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_a8c6432bf3c8523e9876c4ac9d92c8b5(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_6a48341446b15729abf624695b20b9f5(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_a8c6432bf3c8523e9876c4ac9d92c8b5_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_6a48341446b15729abf624695b20b9f5_PATTERN,
             self.path
         )
 
@@ -3748,13 +3748,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_0f8c47fa229d5f749f7432510709876c(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_9302c0eed78258d39d1378cfd4d4eb3a(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_0f8c47fa229d5f749f7432510709876c_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_9302c0eed78258d39d1378cfd4d4eb3a_PATTERN,
             self.path
         )
 
@@ -3784,7 +3784,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3802,7 +3802,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3820,7 +3820,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3838,13 +3838,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_9c98c10af4da50d99fb62c7097f07736(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_5a3de79a23005a1b8674d75adbce5dde(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_9c98c10af4da50d99fb62c7097f07736_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_5a3de79a23005a1b8674d75adbce5dde_PATTERN,
             self.path
         )
 
@@ -3856,13 +3856,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_bbc720f738bf5b83a20de7e28e3c4c5f(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_015275726e4f594f8a8980361d0ab9e1(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_bbc720f738bf5b83a20de7e28e3c4c5f_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_015275726e4f594f8a8980361d0ab9e1_PATTERN,
             self.path
         )
 
@@ -3874,13 +3874,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_1ccbc1ec86665500b4520ba48304eab7(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_4a2e8aa155a554dcbfaf07ac249594f6(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_1ccbc1ec86665500b4520ba48304eab7_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_4a2e8aa155a554dcbfaf07ac249594f6_PATTERN,
             self.path
         )
 
@@ -3910,13 +3910,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_150027701d3053acae2eb596718a9ca3(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_1cc593ed1f8451258789c09299f3bb88(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_150027701d3053acae2eb596718a9ca3_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_1cc593ed1f8451258789c09299f3bb88_PATTERN,
             self.path
         )
 
@@ -3928,13 +3928,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_1f0d3cb73c4e59208d9ee04ffa787b3c(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_d30aa7529c245c549eafde4c17a809a4(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_1f0d3cb73c4e59208d9ee04ffa787b3c_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_d30aa7529c245c549eafde4c17a809a4_PATTERN,
             self.path
         )
 
@@ -3946,13 +3946,13 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_010c97b4161c5b95a6a83b6917ce26d6(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_f49832d63b1d5463b923c06536558994(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_010c97b4161c5b95a6a83b6917ce26d6_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_f49832d63b1d5463b923c06536558994_PATTERN,
             self.path
         )
 
@@ -4094,9 +4094,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_cb8619385d265527a56dc7a27527f3a1(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_48218d25b3c952abbde0711fec866e74(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_cb8619385d265527a56dc7a27527f3a1_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_48218d25b3c952abbde0711fec866e74_PATTERN,
             self.path
         )
 
@@ -4112,9 +4112,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d2810d771d3e5ec580c39e0deb46b2b8(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_b734aeeb768d568684706bff5e3fa5bb(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d2810d771d3e5ec580c39e0deb46b2b8_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_b734aeeb768d568684706bff5e3fa5bb_PATTERN,
             self.path
         )
 
@@ -4130,9 +4130,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_e1725efd8ea253d1930913a85709977f(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_6636e1a0a94b543c974b537bdda17a7c(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_e1725efd8ea253d1930913a85709977f_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_6636e1a0a94b543c974b537bdda17a7c_PATTERN,
             self.path
         )
 
@@ -4256,9 +4256,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_64faeb3bb3f25787844f6973d5a1658f(self):
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_c3b840797ab85dbe85b8a322be86278e(self):
         return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_64faeb3bb3f25787844f6973d5a1658f_PATTERN,
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_c3b840797ab85dbe85b8a322be86278e_PATTERN,
             self.path
         )
 
@@ -4274,9 +4274,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_5aaa481aaad35f8b8a7cbf2e063eac2b(self):
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_74ad357457f45e07a13674d462c4270d(self):
         return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_5aaa481aaad35f8b8a7cbf2e063eac2b_PATTERN,
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_74ad357457f45e07a13674d462c4270d_PATTERN,
             self.path
         )
 
@@ -4292,9 +4292,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_8e345ca7adb75b1bacfa42771a4d242c(self):
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_0e7e4151251d56a6a72f3e147ddde891(self):
         return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_8e345ca7adb75b1bacfa42771a4d242c_PATTERN,
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_0e7e4151251d56a6a72f3e147ddde891_PATTERN,
             self.path
         )
 
@@ -4342,7 +4342,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4378,7 +4378,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4396,7 +4396,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4508,9 +4508,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e8c39503b29051bea788021a168833da(self):
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_7495473c838652eab2df320764235146(self):
         return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_e8c39503b29051bea788021a168833da_PATTERN,
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_7495473c838652eab2df320764235146_PATTERN,
             self.path
         )
 
@@ -4526,9 +4526,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_fef057ddea8d56a98189b1db3bf5f240(self):
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e5f90d642cfa5ee6a1645dd99fb3065e(self):
         return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_fef057ddea8d56a98189b1db3bf5f240_PATTERN,
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_e5f90d642cfa5ee6a1645dd99fb3065e_PATTERN,
             self.path
         )
 
@@ -4544,9 +4544,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_10517292296559f2847ac681d93cf40b(self):
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_a946651bf00654e1a27da97fb7203f52(self):
         return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_10517292296559f2847ac681d93cf40b_PATTERN,
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_a946651bf00654e1a27da97fb7203f52_PATTERN,
             self.path
         )
 
@@ -5354,9 +5354,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_CERTIFICATE_PROFILE_1d473b3690e951be9375d770225b9657(self):
+    def matches_CERTIFICATE_PROFILE_337e7884eb9c548698cdc54e033f35f4(self):
         return re.search(
-            self.CERTIFICATE_PROFILE_1d473b3690e951be9375d770225b9657_PATTERN,
+            self.CERTIFICATE_PROFILE_337e7884eb9c548698cdc54e033f35f4_PATTERN,
             self.path
         )
 
@@ -9368,9 +9368,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_SECURITY_GROUPS_ACLS_bfff136597e25df5ae1d135251fee263(self):
+    def matches_SECURITY_GROUPS_ACLS_7da250e23ac05e6a8dcf32a81effcee9(self):
         return re.search(
-            self.SECURITY_GROUPS_ACLS_bfff136597e25df5ae1d135251fee263_PATTERN,
+            self.SECURITY_GROUPS_ACLS_7da250e23ac05e6a8dcf32a81effcee9_PATTERN,
             self.path
         )
 
@@ -9512,9 +9512,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_SECURITY_GROUP_TO_VIRTUAL_NETWORK_0ff196187ee45a92bf195593ab8f102e(self):
+    def matches_SECURITY_GROUP_TO_VIRTUAL_NETWORK_86bd1af169fa52c59cbc87b010c36f9e(self):
         return re.search(
-            self.SECURITY_GROUP_TO_VIRTUAL_NETWORK_0ff196187ee45a92bf195593ab8f102e_PATTERN,
+            self.SECURITY_GROUP_TO_VIRTUAL_NETWORK_86bd1af169fa52c59cbc87b010c36f9e_PATTERN,
             self.path
         )
 
@@ -9656,9 +9656,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_SECURITY_GROUPS_fe0ac7fc07885c6f877768654aefd189(self):
+    def matches_SECURITY_GROUPS_742f7bd03a835c95b7a759b39ce7f680(self):
         return re.search(
-            self.SECURITY_GROUPS_fe0ac7fc07885c6f877768654aefd189_PATTERN,
+            self.SECURITY_GROUPS_742f7bd03a835c95b7a759b39ce7f680_PATTERN,
             self.path
         )
 
@@ -10304,9 +10304,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_SXP_CONNECTIONS_a9d9ce4538605d439015d3ed7ef88c41(self):
+    def matches_SXP_CONNECTIONS_e390313557e95aa9b8c2453d6f1de1e8(self):
         return re.search(
-            self.SXP_CONNECTIONS_a9d9ce4538605d439015d3ed7ef88c41_PATTERN,
+            self.SXP_CONNECTIONS_e390313557e95aa9b8c2453d6f1de1e8_PATTERN,
             self.path
         )
 
@@ -10448,9 +10448,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_SXP_LOCAL_BINDINGS_2b97435f47305f5da136a0d68ac6d466(self):
+    def matches_SXP_LOCAL_BINDINGS_0615c21f51995bff8d6468a1e9c0b2e9(self):
         return re.search(
-            self.SXP_LOCAL_BINDINGS_2b97435f47305f5da136a0d68ac6d466_PATTERN,
+            self.SXP_LOCAL_BINDINGS_0615c21f51995bff8d6468a1e9c0b2e9_PATTERN,
             self.path
         )
 
@@ -10574,9 +10574,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_SXP_VPNS_be45eed0938a5143bf85ffd5fd4205d0(self):
+    def matches_SXP_VPNS_2549a746755c588c928d15a59f8a693d(self):
         return re.search(
-            self.SXP_VPNS_be45eed0938a5143bf85ffd5fd4205d0_PATTERN,
+            self.SXP_VPNS_2549a746755c588c928d15a59f8a693d_PATTERN,
             self.path
         )
 
@@ -11042,9 +11042,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_TACACS_SERVER_SEQUENCE_8b9eb9547216547cab8b9e686eee674b(self):
+    def matches_TACACS_SERVER_SEQUENCE_f3b45b8e4089574c9912407f88b1a5d2(self):
         return re.search(
-            self.TACACS_SERVER_SEQUENCE_8b9eb9547216547cab8b9e686eee674b_PATTERN,
+            self.TACACS_SERVER_SEQUENCE_f3b45b8e4089574c9912407f88b1a5d2_PATTERN,
             self.path
         )
 
@@ -11060,9 +11060,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_TACACS_SERVER_SEQUENCE_7a7cffe3bfae55aa81b7b4447519e4cd(self):
+    def matches_TACACS_SERVER_SEQUENCE_18f6de5797735bbd95dc8683c6a7aebf(self):
         return re.search(
-            self.TACACS_SERVER_SEQUENCE_7a7cffe3bfae55aa81b7b4447519e4cd_PATTERN,
+            self.TACACS_SERVER_SEQUENCE_18f6de5797735bbd95dc8683c6a7aebf_PATTERN,
             self.path
         )
 
@@ -11078,9 +11078,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_TACACS_SERVER_SEQUENCE_896816622564523798353b885b115048(self):
+    def matches_TACACS_SERVER_SEQUENCE_a1465b72911359bdbb1430469801d4be(self):
         return re.search(
-            self.TACACS_SERVER_SEQUENCE_896816622564523798353b885b115048_PATTERN,
+            self.TACACS_SERVER_SEQUENCE_a1465b72911359bdbb1430469801d4be_PATTERN,
             self.path
         )
 
@@ -12216,7 +12216,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_authentication_rules_get_device_admin_policy_by_id_authentication_rule_list_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_87d71c8af3b55abb8e5959965baf2043():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_4cdab0d4e5bf56b68624029a9cdad13e():
             self.device_administration_authentication_rules_get_device_admin_policy_by_id_authentication_rule_by_id_response()
             return
 
@@ -12224,7 +12224,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_authorization_exception_rules_get_device_admin_policy_by_id_local_exception_rule_list_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_5afaa335e2545c6f8f5530cd5686366a():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e608505e4a1250808bb68dc86d8a51ea():
             self.device_administration_authorization_exception_rules_get_device_admin_policy_by_id_local_exception_rule_by_id_response()
             return
 
@@ -12232,7 +12232,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_rule_list_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3a3d7e48a50d58a8a5d5720f9d55cf45():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_2df71c84d9345b9c9caefaafe96c951e():
             self.device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_by_rule_id_response()
             return
 
@@ -12240,7 +12240,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_authorization_rules_get_device_admin_policy_by_id_authorization_rule_list_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f1d11ab85a0a5597b9513d92a894ef1b():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b61dd057422755baa748a72973cbc6f0():
             self.device_administration_authorization_rules_get_device_admin_policy_by_id_authorization_rule_by_id_response()
             return
 
@@ -12260,7 +12260,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_conditions_get_device_admin_conditions_for_authorization_rule_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_3d9fe67eb28858609eca3907c8343015():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_4dca887341a85881abd996fb46d39272():
             self.device_administration_conditions_get_device_admin_condition_by_condition_name_response()
             return
 
@@ -12268,7 +12268,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_conditions_get_device_admin_conditions_for_policy_set_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_27c0cf6ab73353ffa2b6986a9b16c54e():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_55a451c9de4d5f86add6829e064d1cdf():
             self.device_administration_conditions_get_device_admin_condition_by_condition_id_response()
             return
 
@@ -12292,7 +12292,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_network_conditions_get_device_admin_network_conditions_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_a3640f918edb5df99d09001ca9e12688():
+        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_240e81a05d1f5cb5ba7bcc2351c0bfd6():
             self.device_administration_network_conditions_get_device_admin_network_condition_by_condition_id_response()
             return
 
@@ -12300,7 +12300,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_policy_set_get_device_admin_policy_set_list_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_49f36918d98a546ab6ca2618d1844984():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_f9f969574cde5a439f66811ed08650d0():
             self.device_administration_policy_set_get_device_admin_policy_set_by_id_response()
             return
 
@@ -12316,7 +12316,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.device_administration_time_date_conditions_get_device_admin_time_conditions_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_15ffd94d339a5fea8a4777dccccb926f():
+        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_225098756ffe5da1b4ee14a72427f2a1():
             self.device_administration_time_date_conditions_get_device_admin_time_condition_by_condition_id_response()
             return
 
@@ -12324,7 +12324,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_authentication_rules_get_network_access_policy_by_id_authentication_rule_list_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_85a98a9a386755939fe1f1633be33689():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_db7274c43d695aa7af540ecced06c02c():
             self.network_access_authentication_rules_get_network_access_policy_by_id_authentication_rule_by_id_response()
             return
 
@@ -12332,7 +12332,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_authorization_exception_rules_get_network_access_policy_by_id_local_exception_rule_list_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d01cc518eafd5daeaf80b7e83f4d6ad1():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d04e336df639589d81e933fcefeb710c():
             self.network_access_authorization_exception_rules_get_network_access_policy_by_id_local_exception_rule_by_id_response()
             return
 
@@ -12340,7 +12340,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rule_list_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_9b71b104d553520aafc4ce52b537a482():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_cc29d2730d9b52708b34f59633aacfa0():
             self.network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rule_by_id_response()
             return
 
@@ -12348,7 +12348,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_authorization_rules_get_network_access_policy_by_id_authorization_rule_list_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_b19f79dd969d5444a6ba7b2acbf0f3cf():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_4d187140e89a5578bbada778ee346f5a():
             self.network_access_authorization_rules_get_network_access_policy_by_id_authorization_rule_by_id_response()
             return
 
@@ -12364,7 +12364,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_conditions_get_network_access_conditions_for_authorization_rule_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_9c98c10af4da50d99fb62c7097f07736():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_5a3de79a23005a1b8674d75adbce5dde():
             self.network_access_conditions_get_network_access_condition_by_condition_name_response()
             return
 
@@ -12372,7 +12372,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_conditions_get_network_access_conditions_for_policy_set_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_150027701d3053acae2eb596718a9ca3():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_1cc593ed1f8451258789c09299f3bb88():
             self.network_access_conditions_get_network_access_condition_by_condition_id_response()
             return
 
@@ -12388,7 +12388,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_dictionary_attribute_get_network_access_dictionary_attributes_by_dictionary_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_cb8619385d265527a56dc7a27527f3a1():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_48218d25b3c952abbde0711fec866e74():
             self.network_access_dictionary_attribute_get_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name_response()
             return
 
@@ -12412,7 +12412,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_network_conditions_get_network_access_network_conditions_response()
             return
 
-        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_64faeb3bb3f25787844f6973d5a1658f():
+        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_c3b840797ab85dbe85b8a322be86278e():
             self.network_access_network_conditions_get_network_access_network_condition_by_condition_id_response()
             return
 
@@ -12440,7 +12440,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_time_date_conditions_get_network_access_time_conditions_response()
             return
 
-        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e8c39503b29051bea788021a168833da():
+        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_7495473c838652eab2df320764235146():
             self.network_access_time_date_conditions_get_network_access_time_condition_by_condition_id_response()
             return
 
@@ -12532,7 +12532,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.byod_portal_get_version_response()
             return
 
-        if self.matches_CERTIFICATE_PROFILE_1d473b3690e951be9375d770225b9657():
+        if self.matches_CERTIFICATE_PROFILE_337e7884eb9c548698cdc54e033f35f4():
             self.certificate_profile_get_certificate_profile_by_name_response()
             return
 
@@ -13180,7 +13180,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.tacacs_server_sequence_get_tacacs_server_sequence_by_name_response()
             return
 
-        if self.matches_TACACS_SERVER_SEQUENCE_8b9eb9547216547cab8b9e686eee674b():
+        if self.matches_TACACS_SERVER_SEQUENCE_f3b45b8e4089574c9912407f88b1a5d2():
             self.tacacs_server_sequence_get_tacacs_server_sequence_by_id_response()
             return
 
@@ -13800,63 +13800,63 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.certificates_update_trusted_certificate_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7dc678d472905ab5bce9f4cba7cd7004():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_fe40d457cbdb5794a5ed2808469ed2e2():
             self.device_administration_authentication_rules_update_device_admin_policy_by_id_authentication_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e326f7a61069587f9a27e69433229cc7():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_1b84eb28aeb55ab7af7469c854ca1814():
             self.device_administration_authorization_exception_rules_update_device_admin_policy_by_id_local_exception_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28042265da96552991705623287a164c():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_552a3c8e0ddc5b40a250affc4be1700a():
             self.device_administration_authorization_global_exception_rules_put_device_admin_policy_set_global_exception_by_rule_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_80b60ed1eed75d7d9091344f4e38e2f1():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b5151e49a2b65befb488985ed973fed2():
             self.device_administration_authorization_rules_update_device_admin_policy_by_id_authorization_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_f0540adc16725e00adffdf57b67fb6ba():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_0e3e7b0bc717508a979ccac3b986792d():
             self.device_administration_conditions_put_device_admin_condition_by_condition_name_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_3b9b1bfd0f4151eb9812b474e4e4fa3c():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_46a9f304a4ec54afa6e3484978aacbbb():
             self.device_administration_conditions_put_device_admin_condition_by_condition_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b371441bddfd5d819a7aedfa215f4aeb():
+        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_cd32d094f1815c388d1392bb90f3744d():
             self.device_administration_network_conditions_put_device_admin_network_condition_by_condition_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_b6cc40e0f4b45e8da5908776d124ed5a():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_532619181872577f8d1efe131783009c():
             self.device_administration_policy_set_update_device_admin_policy_set_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_e3241242740252b2814e0b474c314e9b():
+        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_9f47dca835fa58fcb08bcdd672dfbaa7():
             self.device_administration_time_date_conditions_put_device_admin_time_condition_by_condition_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_ec5180b8603d5cf78c13d6d3c0be18c2():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_b9500d6c2f365927aa3dbe6d7ecbae22():
             self.network_access_authentication_rules_update_network_access_policy_by_id_authentication_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_d5c906da96395858b888f382e2ab9d79():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_62576f014ee45351ba163e3be6fa217b():
             self.network_access_authorization_exception_rules_update_network_access_policy_by_id_local_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_42639223458c51c99e8f35329c276126():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_fccec47b460255028363021e7936d17a():
             self.network_access_authorization_global_exception_rules_update_network_access_policy_set_global_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_a8c6432bf3c8523e9876c4ac9d92c8b5():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_6a48341446b15729abf624695b20b9f5():
             self.network_access_authorization_rules_update_network_access_policy_by_id_authorization_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_bbc720f738bf5b83a20de7e28e3c4c5f():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_015275726e4f594f8a8980361d0ab9e1():
             self.network_access_conditions_put_network_access_condition_by_condition_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_1f0d3cb73c4e59208d9ee04ffa787b3c():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_d30aa7529c245c549eafde4c17a809a4():
             self.network_access_conditions_put_network_access_condition_by_condition_id_response()
             return
 
@@ -13864,11 +13864,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_dictionary_put_network_access_dictionaries_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d2810d771d3e5ec580c39e0deb46b2b8():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_b734aeeb768d568684706bff5e3fa5bb():
             self.network_access_dictionary_attribute_put_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_5aaa481aaad35f8b8a7cbf2e063eac2b():
+        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_74ad357457f45e07a13674d462c4270d():
             self.network_access_network_conditions_put_network_access_network_condition_by_condition_id_response()
             return
 
@@ -13876,7 +13876,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_policy_set_update_network_access_policy_set_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_fef057ddea8d56a98189b1db3bf5f240():
+        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e5f90d642cfa5ee6a1645dd99fb3065e():
             self.network_access_time_date_conditions_put_network_access_time_condition_by_condition_id_response()
             return
 
@@ -14184,7 +14184,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.security_groups_acls_update_security_groups_acl_by_id_response()
             return
 
-        if self.matches_SECURITY_GROUPS_ACLS_bfff136597e25df5ae1d135251fee263():
+        if self.matches_SECURITY_GROUPS_ACLS_7da250e23ac05e6a8dcf32a81effcee9():
             self.security_groups_acls_bulk_request_for_security_groups_acl_response()
             return
 
@@ -14192,7 +14192,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.security_group_to_virtual_network_update_security_groups_to_vn_to_vlan_by_id_response()
             return
 
-        if self.matches_SECURITY_GROUP_TO_VIRTUAL_NETWORK_0ff196187ee45a92bf195593ab8f102e():
+        if self.matches_SECURITY_GROUP_TO_VIRTUAL_NETWORK_86bd1af169fa52c59cbc87b010c36f9e():
             self.security_group_to_virtual_network_bulk_request_for_security_groups_to_vn_to_vlan_response()
             return
 
@@ -14200,7 +14200,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.security_groups_update_security_group_by_id_response()
             return
 
-        if self.matches_SECURITY_GROUPS_fe0ac7fc07885c6f877768654aefd189():
+        if self.matches_SECURITY_GROUPS_742f7bd03a835c95b7a759b39ce7f680():
             self.security_groups_bulk_request_for_security_group_response()
             return
 
@@ -14224,7 +14224,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.sxp_connections_update_sxp_connections_by_id_response()
             return
 
-        if self.matches_SXP_CONNECTIONS_a9d9ce4538605d439015d3ed7ef88c41():
+        if self.matches_SXP_CONNECTIONS_e390313557e95aa9b8c2453d6f1de1e8():
             self.sxp_connections_bulk_request_for_sxp_connections_response()
             return
 
@@ -14232,11 +14232,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.sxp_local_bindings_update_sxp_local_bindings_by_id_response()
             return
 
-        if self.matches_SXP_LOCAL_BINDINGS_2b97435f47305f5da136a0d68ac6d466():
+        if self.matches_SXP_LOCAL_BINDINGS_0615c21f51995bff8d6468a1e9c0b2e9():
             self.sxp_local_bindings_bulk_request_for_sxp_local_bindings_response()
             return
 
-        if self.matches_SXP_VPNS_be45eed0938a5143bf85ffd5fd4205d0():
+        if self.matches_SXP_VPNS_2549a746755c588c928d15a59f8a693d():
             self.sxp_vpns_bulk_request_for_sxp_vpns_response()
             return
 
@@ -14252,7 +14252,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.tacacs_profile_update_tacacs_profile_by_id_response()
             return
 
-        if self.matches_TACACS_SERVER_SEQUENCE_7a7cffe3bfae55aa81b7b4447519e4cd():
+        if self.matches_TACACS_SERVER_SEQUENCE_18f6de5797735bbd95dc8683c6a7aebf():
             self.tacacs_server_sequence_update_tacacs_server_sequence_by_id_response()
             return
 
@@ -14294,63 +14294,63 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.certificates_delete_trusted_certificate_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_a0a005e87c6755e0bf5d4454a98f08c5():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_2f3569aca419588999d58eac5fe2a120():
             self.device_administration_authentication_rules_delete_device_admin_policy_by_id_authentication_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_7c12c4eb2a5650c2b6e26a84131ef65b():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_4f318129029b5bec8761e56304824c77():
             self.device_administration_authorization_exception_rules_delete_device_admin_policy_by_id_local_exception_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_10281a20040d51a1ba61f4d210195e59():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_1b15ed907cbb582ab6a6a3cc446febb8():
             self.device_administration_authorization_global_exception_rules_delete_device_admin_policyset_global_exception_by_rule_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_e7979abd11155f12b1336bbf02a99687():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_7ae9522fa1505322b5da072346d58e92():
             self.device_administration_authorization_rules_delete_device_admin_policy_by_id_authorization_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_c276cf1dc9545d45ae3f871966cb664b():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_5a2afb4b40b450e7ad69d78fc92ad00f():
             self.device_administration_conditions_delete_device_admin_condition_by_condition_name_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_2a6c1759c65b51a09ed7981397ece5c6():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_55f327ba525e5d76b6166d80a58ddd34():
             self.device_administration_conditions_delete_device_admin_condition_by_condition_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_037e7b011df45066b55be86033ecd17a():
+        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_ac9ced821bc2503fa0d22badea9834ad():
             self.device_administration_network_conditions_delete_device_admin_network_condition_by_condition_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_f602e2f88378502a8d8bca6dff274afe():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_a82a5481eec257af981767634a941263():
             self.device_administration_policy_set_delete_device_admin_policy_set_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_cf9f01129179555aa60c446f0a65c65a():
+        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_2407e1579b485baa9317791997bec3d0():
             self.device_administration_time_date_conditions_delete_device_admin_time_condition_by_condition_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_da4f3b797ace547fa8f298d8c5197ce8():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_4bac6ffe32d85cbeac3b12a2e85b094b():
             self.network_access_authentication_rules_delete_network_access_policy_by_id_authentication_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0d60e4de79065869a39a937f02e3e885():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_91b471a018ef52fdb04c366d86279727():
             self.network_access_authorization_exception_rules_delete_network_access_policy_by_id_local_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_61e00af18a485a9283811feb84b04843():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e7b62515c4dc5de18f9a8ebf019e76af():
             self.network_access_authorization_global_exception_rules_delete_network_access_policy_set_global_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_0f8c47fa229d5f749f7432510709876c():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_9302c0eed78258d39d1378cfd4d4eb3a():
             self.network_access_authorization_rules_delete_network_access_policy_by_id_authorization_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_1ccbc1ec86665500b4520ba48304eab7():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_4a2e8aa155a554dcbfaf07ac249594f6():
             self.network_access_conditions_delete_network_access_condition_by_condition_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_010c97b4161c5b95a6a83b6917ce26d6():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_f49832d63b1d5463b923c06536558994():
             self.network_access_conditions_delete_network_access_condition_by_condition_id_response()
             return
 
@@ -14358,11 +14358,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_dictionary_delete_network_access_dictionaries_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_e1725efd8ea253d1930913a85709977f():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_6636e1a0a94b543c974b537bdda17a7c():
             self.network_access_dictionary_attribute_delete_network_access_dictionaries_by_dictionary_name_attribute_by_attribute_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_8e345ca7adb75b1bacfa42771a4d242c():
+        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_0e7e4151251d56a6a72f3e147ddde891():
             self.network_access_network_conditions_delete_network_access_network_condition_by_condition_id_response()
             return
 
@@ -14370,7 +14370,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.network_access_policy_set_delete_network_access_policy_set_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_10517292296559f2847ac681d93cf40b():
+        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_a946651bf00654e1a27da97fb7203f52():
             self.network_access_time_date_conditions_delete_network_access_time_condition_by_condition_id_response()
             return
 
@@ -14542,7 +14542,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.tacacs_profile_delete_tacacs_profile_by_id_response()
             return
 
-        if self.matches_TACACS_SERVER_SEQUENCE_896816622564523798353b885b115048():
+        if self.matches_TACACS_SERVER_SEQUENCE_a1465b72911359bdbb1430469801d4be():
             self.tacacs_server_sequence_delete_tacacs_server_sequence_by_id_response()
             return
 

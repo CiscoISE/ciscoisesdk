@@ -399,14 +399,13 @@ class DeviceAdministrationPolicySet(object):
         )
 
     def get_device_admin_policy_set_by_id(self,
-                                          policy_id,
+                                          id,
                                           headers=None,
                                           **query_parameters):
         """Device Admin Get policy set attributes.
 
         Args:
-            policy_id(basestring): policyId path parameter. Policy
-                id.
+            id(basestring): id path parameter. Policy id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -439,7 +438,7 @@ class DeviceAdministrationPolicySet(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(policy_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -448,10 +447,10 @@ class DeviceAdministrationPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'policyId': policy_id,
+            'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/policy-set/{policyId}')
+        e_url = ('/v1/policy/device-admin/policy-set/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -459,10 +458,10 @@ class DeviceAdministrationPolicySet(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f36918d98a546ab6ca2618d1844984_v3_0_0', _api_response)
+        return self._object_factory('bpm_f9f969574cde5a439f66811ed08650d0_v3_0_0', _api_response)
 
     def get_by_id(self,
-                  policy_id,
+                  id,
                   headers=None,
                   **query_parameters):
         """Alias for `get_device_admin_policy_set_by_id <#ciscoisesdk.
@@ -470,18 +469,17 @@ class DeviceAdministrationPolicySet(object):
         DeviceAdministrationPolicySet.get_device_admin_policy_set_by_id>`_
         """
         return self.get_device_admin_policy_set_by_id(
-            policy_id=policy_id,
+            id=id,
             headers=headers,
             **query_parameters
         )
 
     def update_device_admin_policy_set_by_id(self,
-                                             policy_id,
+                                             id,
                                              condition=None,
                                              default=None,
                                              description=None,
                                              hit_counts=None,
-                                             id=None,
                                              is_proxy=None,
                                              link=None,
                                              name=None,
@@ -527,8 +525,7 @@ class DeviceAdministrationPolicySet(object):
                 property of the request body. Available
                 values are 'enabled', 'disabled' and
                 'monitor'.
-            policy_id(basestring): policyId path parameter. Policy
-                id.
+            id(basestring): id path parameter. Policy id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -570,7 +567,7 @@ class DeviceAdministrationPolicySet(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(policy_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -579,7 +576,7 @@ class DeviceAdministrationPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'policyId': policy_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -611,10 +608,10 @@ class DeviceAdministrationPolicySet(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b6cc40e0f4b45e8da5908776d124ed5a_v3_0_0')\
+            self._request_validator('jsd_1872577f8d1efe131783009c_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/policy-set/{policyId}')
+        e_url = ('/v1/policy/device-admin/policy-set/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -627,15 +624,14 @@ class DeviceAdministrationPolicySet(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_b6cc40e0f4b45e8da5908776d124ed5a_v3_0_0', _api_response)
+        return self._object_factory('bpm_1872577f8d1efe131783009c_v3_0_0', _api_response)
 
     def update_by_id(self,
-                     policy_id,
+                     id,
                      condition=None,
                      default=None,
                      description=None,
                      hit_counts=None,
-                     id=None,
                      is_proxy=None,
                      link=None,
                      name=None,
@@ -651,12 +647,11 @@ class DeviceAdministrationPolicySet(object):
         DeviceAdministrationPolicySet.update_device_admin_policy_set_by_id>`_
         """
         return self.update_device_admin_policy_set_by_id(
-            policy_id=policy_id,
+            id=id,
             condition=condition,
             default=default,
             description=description,
             hit_counts=hit_counts,
-            id=id,
             is_proxy=is_proxy,
             link=link,
             name=name,
@@ -670,14 +665,13 @@ class DeviceAdministrationPolicySet(object):
         )
 
     def delete_device_admin_policy_set_by_id(self,
-                                             policy_id,
+                                             id,
                                              headers=None,
                                              **query_parameters):
         """Device Admin Delete a policy set.
 
         Args:
-            policy_id(basestring): policyId path parameter. Policy
-                id.
+            id(basestring): id path parameter. Policy id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -710,7 +704,7 @@ class DeviceAdministrationPolicySet(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(policy_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -719,10 +713,10 @@ class DeviceAdministrationPolicySet(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'policyId': policy_id,
+            'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/policy-set/{policyId}')
+        e_url = ('/v1/policy/device-admin/policy-set/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -730,10 +724,10 @@ class DeviceAdministrationPolicySet(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f602e2f88378502a8d8bca6dff274afe_v3_0_0', _api_response)
+        return self._object_factory('bpm_a82a5481eec257af981767634a941263_v3_0_0', _api_response)
 
     def delete_by_id(self,
-                     policy_id,
+                     id,
                      headers=None,
                      **query_parameters):
         """Alias for `delete_device_admin_policy_set_by_id <#ciscoisesdk.
@@ -741,7 +735,7 @@ class DeviceAdministrationPolicySet(object):
         DeviceAdministrationPolicySet.delete_device_admin_policy_set_by_id>`_
         """
         return self.delete_device_admin_policy_set_by_id(
-            policy_id=policy_id,
+            id=id,
             headers=headers,
             **query_parameters
         )

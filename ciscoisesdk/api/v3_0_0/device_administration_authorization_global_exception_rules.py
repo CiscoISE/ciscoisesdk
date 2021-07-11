@@ -345,13 +345,13 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         )
 
     def get_device_admin_policy_set_global_exception_by_rule_id(self,
-                                                                rule_id,
+                                                                id,
                                                                 headers=None,
                                                                 **query_parameters):
         """Device Admin Get global exception rule attribute.
 
         Args:
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -384,7 +384,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -393,11 +393,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'ruleId': rule_id,
+            'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/policy-set/global-'
-                 + 'exception/{ruleId}')
+        e_url = ('/v1/policy/device-admin/policy-set/global-exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -405,10 +404,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a3d7e48a50d58a8a5d5720f9d55cf45_v3_0_0', _api_response)
+        return self._object_factory('bpm_df71c84d9345b9c9caefaafe96c951e_v3_0_0', _api_response)
 
     def get_by_id(self,
-                  rule_id,
+                  id,
                   headers=None,
                   **query_parameters):
         """Alias for `get_device_admin_policy_set_global_exception_by_rule_id <#ciscoisesdk.
@@ -416,13 +415,13 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         DeviceAdministrationAuthorizationGlobalExceptionRules.get_device_admin_policy_set_global_exception_by_rule_id>`_
         """
         return self.get_device_admin_policy_set_global_exception_by_rule_id(
-            rule_id=rule_id,
+            id=id,
             headers=headers,
             **query_parameters
         )
 
     def put_device_admin_policy_set_global_exception_by_rule_id(self,
-                                                                rule_id,
+                                                                id,
                                                                 commands=None,
                                                                 link=None,
                                                                 profile=None,
@@ -446,7 +445,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             rule(object): Common attributes in rule
                 authentication/authorization, property
                 of the request body.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -488,7 +487,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             check_type(payload, basestring)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -497,7 +496,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'ruleId': rule_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -515,11 +514,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_da96552991705623287a164c_v3_0_0')\
+            self._request_validator('jsd_a3c8e0ddc5b40a250affc4be1700a_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/policy-set/global-'
-                 + 'exception/{ruleId}')
+        e_url = ('/v1/policy/device-admin/policy-set/global-exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -532,10 +530,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_da96552991705623287a164c_v3_0_0', _api_response)
+        return self._object_factory('bpm_a3c8e0ddc5b40a250affc4be1700a_v3_0_0', _api_response)
 
     def update_by_id(self,
-                     rule_id,
+                     id,
                      commands=None,
                      link=None,
                      profile=None,
@@ -549,7 +547,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         DeviceAdministrationAuthorizationGlobalExceptionRules.put_device_admin_policy_set_global_exception_by_rule_id>`_
         """
         return self.put_device_admin_policy_set_global_exception_by_rule_id(
-            rule_id=rule_id,
+            id=id,
             commands=commands,
             link=link,
             profile=profile,
@@ -561,13 +559,13 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         )
 
     def delete_device_admin_policyset_global_exception_by_rule_id(self,
-                                                                  rule_id,
+                                                                  id,
                                                                   headers=None,
                                                                   **query_parameters):
         """Device Admin Delete global exception authorization rule.
 
         Args:
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -600,7 +598,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -609,11 +607,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'ruleId': rule_id,
+            'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/policy-set/global-'
-                 + 'exception/{ruleId}')
+        e_url = ('/v1/policy/device-admin/policy-set/global-exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -621,10 +618,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a20040d51a1ba61f4d210195e59_v3_0_0', _api_response)
+        return self._object_factory('bpm_b15ed907cbb582ab6a6a3cc446febb8_v3_0_0', _api_response)
 
     def delete_by_id(self,
-                     rule_id,
+                     id,
                      headers=None,
                      **query_parameters):
         """Alias for `delete_device_admin_policyset_global_exception_by_rule_id <#ciscoisesdk.
@@ -632,7 +629,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         DeviceAdministrationAuthorizationGlobalExceptionRules.delete_device_admin_policyset_global_exception_by_rule_id>`_
         """
         return self.delete_device_admin_policyset_global_exception_by_rule_id(
-            rule_id=rule_id,
+            id=id,
             headers=headers,
             **query_parameters
         )

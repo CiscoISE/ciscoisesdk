@@ -48,9 +48,6 @@ class JSONSchemaValidatorB404B307A35C2D9438Da695Bb49C54(object):
                 "response": {
                 "items": {
                 "properties": {
-                "attributeName": {
-                "type": "string"
-                },
                 "attributeValue": {
                 "type": "string"
                 },

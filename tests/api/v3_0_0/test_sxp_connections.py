@@ -384,7 +384,7 @@ def is_valid_bulk_request_for_sxp_connections(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a9d9ce4538605d439015d3ed7ef88c41_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e390313557e95aa9b8c2453d6f1de1e8_v3_0_0').validate(obj.response)
     return True
 
 

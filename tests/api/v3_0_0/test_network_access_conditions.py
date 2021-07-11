@@ -93,7 +93,6 @@ def is_valid_post_network_access_condition(json_schema_validate, obj):
 def post_network_access_condition(api):
     endpoint_result = api.network_access_conditions.post_network_access_condition(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
@@ -132,7 +131,6 @@ def test_post_network_access_condition(api, validator):
 def post_network_access_condition_default(api):
     endpoint_result = api.network_access_conditions.post_network_access_condition(
         active_validation=False,
-        attribute_name=None,
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -274,13 +272,13 @@ def is_valid_get_network_access_condition_by_condition_name(json_schema_validate
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9c98c10af4da50d99fb62c7097f07736_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_5a3de79a23005a1b8674d75adbce5dde_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_condition_by_condition_name(api):
     endpoint_result = api.network_access_conditions.get_network_access_condition_by_condition_name(
-        condition_name='string'
+        name='string'
     )
     return endpoint_result
 
@@ -300,7 +298,7 @@ def test_get_network_access_condition_by_condition_name(api, validator):
 
 def get_network_access_condition_by_condition_name_default(api):
     endpoint_result = api.network_access_conditions.get_network_access_condition_by_condition_name(
-        condition_name='string'
+        name='string'
     )
     return endpoint_result
 
@@ -324,17 +322,15 @@ def is_valid_put_network_access_condition_by_condition_name(json_schema_validate
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bbc720f738bf5b83a20de7e28e3c4c5f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_015275726e4f594f8a8980361d0ab9e1_v3_0_0').validate(obj.response)
     return True
 
 
 def put_network_access_condition_by_condition_name(api):
     endpoint_result = api.network_access_conditions.put_network_access_condition_by_condition_name(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
-        condition_name='string',
         condition_type='string',
         dates_range={'endDate': 'string', 'startDate': 'string'},
         dates_range_exception={'endDate': 'string', 'startDate': 'string'},
@@ -371,8 +367,7 @@ def test_put_network_access_condition_by_condition_name(api, validator):
 def put_network_access_condition_by_condition_name_default(api):
     endpoint_result = api.network_access_conditions.put_network_access_condition_by_condition_name(
         active_validation=False,
-        condition_name='string',
-        attribute_name=None,
+        name='string',
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -386,7 +381,6 @@ def put_network_access_condition_by_condition_name_default(api):
         id=None,
         is_negate=None,
         link=None,
-        name=None,
         operator=None,
         payload=None,
         week_days=None,
@@ -414,13 +408,13 @@ def is_valid_delete_network_access_condition_by_condition_name(json_schema_valid
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1ccbc1ec86665500b4520ba48304eab7_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_4a2e8aa155a554dcbfaf07ac249594f6_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_condition_by_condition_name(api):
     endpoint_result = api.network_access_conditions.delete_network_access_condition_by_condition_name(
-        condition_name='string'
+        name='string'
     )
     return endpoint_result
 
@@ -440,7 +434,7 @@ def test_delete_network_access_condition_by_condition_name(api, validator):
 
 def delete_network_access_condition_by_condition_name_default(api):
     endpoint_result = api.network_access_conditions.delete_network_access_condition_by_condition_name(
-        condition_name='string'
+        name='string'
     )
     return endpoint_result
 
@@ -514,13 +508,13 @@ def is_valid_get_network_access_condition_by_condition_id(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_150027701d3053acae2eb596718a9ca3_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1cc593ed1f8451258789c09299f3bb88_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_condition_by_condition_id(api):
     endpoint_result = api.network_access_conditions.get_network_access_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -540,7 +534,7 @@ def test_get_network_access_condition_by_condition_id(api, validator):
 
 def get_network_access_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_conditions.get_network_access_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -564,17 +558,15 @@ def is_valid_put_network_access_condition_by_condition_id(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1f0d3cb73c4e59208d9ee04ffa787b3c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d30aa7529c245c549eafde4c17a809a4_v3_0_0').validate(obj.response)
     return True
 
 
 def put_network_access_condition_by_condition_id(api):
     endpoint_result = api.network_access_conditions.put_network_access_condition_by_condition_id(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
-        condition_id='string',
         condition_type='string',
         dates_range={'endDate': 'string', 'startDate': 'string'},
         dates_range_exception={'endDate': 'string', 'startDate': 'string'},
@@ -611,8 +603,7 @@ def test_put_network_access_condition_by_condition_id(api, validator):
 def put_network_access_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_conditions.put_network_access_condition_by_condition_id(
         active_validation=False,
-        condition_id='string',
-        attribute_name=None,
+        id='string',
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -623,7 +614,6 @@ def put_network_access_condition_by_condition_id_default(api):
         dictionary_value=None,
         hours_range=None,
         hours_range_exception=None,
-        id=None,
         is_negate=None,
         link=None,
         name=None,
@@ -654,13 +644,13 @@ def is_valid_delete_network_access_condition_by_condition_id(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_010c97b4161c5b95a6a83b6917ce26d6_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f49832d63b1d5463b923c06536558994_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_condition_by_condition_id(api):
     endpoint_result = api.network_access_conditions.delete_network_access_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -680,7 +670,7 @@ def test_delete_network_access_condition_by_condition_id(api, validator):
 
 def delete_network_access_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_conditions.delete_network_access_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 

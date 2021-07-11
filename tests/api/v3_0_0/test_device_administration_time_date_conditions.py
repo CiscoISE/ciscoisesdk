@@ -93,7 +93,6 @@ def is_valid_post_device_admin_time_condition(json_schema_validate, obj):
 def post_device_admin_time_condition(api):
     endpoint_result = api.device_administration_time_date_conditions.post_device_admin_time_condition(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
@@ -132,7 +131,6 @@ def test_post_device_admin_time_condition(api, validator):
 def post_device_admin_time_condition_default(api):
     endpoint_result = api.device_administration_time_date_conditions.post_device_admin_time_condition(
         active_validation=False,
-        attribute_name=None,
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -174,13 +172,13 @@ def is_valid_get_device_admin_time_condition_by_condition_id(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_15ffd94d339a5fea8a4777dccccb926f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_225098756ffe5da1b4ee14a72427f2a1_v3_0_0').validate(obj.response)
     return True
 
 
 def get_device_admin_time_condition_by_condition_id(api):
     endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -200,7 +198,7 @@ def test_get_device_admin_time_condition_by_condition_id(api, validator):
 
 def get_device_admin_time_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -224,17 +222,15 @@ def is_valid_put_device_admin_time_condition_by_condition_id(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e3241242740252b2814e0b474c314e9b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9f47dca835fa58fcb08bcdd672dfbaa7_v3_0_0').validate(obj.response)
     return True
 
 
 def put_device_admin_time_condition_by_condition_id(api):
     endpoint_result = api.device_administration_time_date_conditions.put_device_admin_time_condition_by_condition_id(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
-        condition_id='string',
         condition_type='string',
         dates_range={'endDate': 'string', 'startDate': 'string'},
         dates_range_exception={'endDate': 'string', 'startDate': 'string'},
@@ -271,8 +267,7 @@ def test_put_device_admin_time_condition_by_condition_id(api, validator):
 def put_device_admin_time_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_time_date_conditions.put_device_admin_time_condition_by_condition_id(
         active_validation=False,
-        condition_id='string',
-        attribute_name=None,
+        id='string',
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -283,7 +278,6 @@ def put_device_admin_time_condition_by_condition_id_default(api):
         dictionary_value=None,
         hours_range=None,
         hours_range_exception=None,
-        id=None,
         is_negate=None,
         link=None,
         name=None,
@@ -314,13 +308,13 @@ def is_valid_delete_device_admin_time_condition_by_condition_id(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_cf9f01129179555aa60c446f0a65c65a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2407e1579b485baa9317791997bec3d0_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_device_admin_time_condition_by_condition_id(api):
     endpoint_result = api.device_administration_time_date_conditions.delete_device_admin_time_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -340,7 +334,7 @@ def test_delete_device_admin_time_condition_by_condition_id(api, validator):
 
 def delete_device_admin_time_condition_by_condition_id_default(api):
     endpoint_result = api.device_administration_time_date_conditions.delete_device_admin_time_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 

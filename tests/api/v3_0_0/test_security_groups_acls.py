@@ -380,7 +380,7 @@ def is_valid_bulk_request_for_security_groups_acl(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bfff136597e25df5ae1d135251fee263_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_7da250e23ac05e6a8dcf32a81effcee9_v3_0_0').validate(obj.response)
     return True
 
 

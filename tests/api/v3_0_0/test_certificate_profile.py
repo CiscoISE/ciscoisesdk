@@ -36,7 +36,7 @@ def is_valid_get_certificate_profile_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1d473b3690e951be9375d770225b9657_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_337e7884eb9c548698cdc54e033f35f4_v3_0_0').validate(obj.response)
     return True
 
 

@@ -93,7 +93,6 @@ def is_valid_post_network_access_time_condition(json_schema_validate, obj):
 def post_network_access_time_condition(api):
     endpoint_result = api.network_access_time_date_conditions.post_network_access_time_condition(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
@@ -132,7 +131,6 @@ def test_post_network_access_time_condition(api, validator):
 def post_network_access_time_condition_default(api):
     endpoint_result = api.network_access_time_date_conditions.post_network_access_time_condition(
         active_validation=False,
-        attribute_name=None,
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -174,13 +172,13 @@ def is_valid_get_network_access_time_condition_by_condition_id(json_schema_valid
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e8c39503b29051bea788021a168833da_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_7495473c838652eab2df320764235146_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_time_condition_by_condition_id(api):
     endpoint_result = api.network_access_time_date_conditions.get_network_access_time_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -200,7 +198,7 @@ def test_get_network_access_time_condition_by_condition_id(api, validator):
 
 def get_network_access_time_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_time_date_conditions.get_network_access_time_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -224,17 +222,15 @@ def is_valid_put_network_access_time_condition_by_condition_id(json_schema_valid
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_fef057ddea8d56a98189b1db3bf5f240_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e5f90d642cfa5ee6a1645dd99fb3065e_v3_0_0').validate(obj.response)
     return True
 
 
 def put_network_access_time_condition_by_condition_id(api):
     endpoint_result = api.network_access_time_date_conditions.put_network_access_time_condition_by_condition_id(
         active_validation=False,
-        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
-        condition_id='string',
         condition_type='string',
         dates_range={'endDate': 'string', 'startDate': 'string'},
         dates_range_exception={'endDate': 'string', 'startDate': 'string'},
@@ -271,8 +267,7 @@ def test_put_network_access_time_condition_by_condition_id(api, validator):
 def put_network_access_time_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_time_date_conditions.put_network_access_time_condition_by_condition_id(
         active_validation=False,
-        condition_id='string',
-        attribute_name=None,
+        id='string',
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -283,7 +278,6 @@ def put_network_access_time_condition_by_condition_id_default(api):
         dictionary_value=None,
         hours_range=None,
         hours_range_exception=None,
-        id=None,
         is_negate=None,
         link=None,
         name=None,
@@ -314,13 +308,13 @@ def is_valid_delete_network_access_time_condition_by_condition_id(json_schema_va
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_10517292296559f2847ac681d93cf40b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_a946651bf00654e1a27da97fb7203f52_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_time_condition_by_condition_id(api):
     endpoint_result = api.network_access_time_date_conditions.delete_network_access_time_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -340,7 +334,7 @@ def test_delete_network_access_time_condition_by_condition_id(api, validator):
 
 def delete_network_access_time_condition_by_condition_id_default(api):
     endpoint_result = api.network_access_time_date_conditions.delete_network_access_time_condition_by_condition_id(
-        condition_id='string'
+        id='string'
     )
     return endpoint_result
 

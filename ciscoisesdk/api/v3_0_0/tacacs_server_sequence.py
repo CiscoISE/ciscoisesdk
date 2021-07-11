@@ -222,7 +222,7 @@ class TacacsServerSequence(object):
             'id': id,
         }
 
-        e_url = ('/ers/config/tacacsexternalservers/{id}')
+        e_url = ('/ers/config/tacacsserversequence/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -230,7 +230,7 @@ class TacacsServerSequence(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b9eb9547216547cab8b9e686eee674b_v3_0_0', _api_response)
+        return self._object_factory('bpm_f3b45b8e4089574c9912407f88b1a5d2_v3_0_0', _api_response)
 
     def get_by_id(self,
                   id,
@@ -383,10 +383,10 @@ class TacacsServerSequence(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0')\
+            self._request_validator('jsd_f6de5797735bbd95dc8683c6a7aebf_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/tacacsexternalservers/{id}')
+        e_url = ('/ers/config/tacacsserversequence/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -399,7 +399,7 @@ class TacacsServerSequence(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0', _api_response)
+        return self._object_factory('bpm_f6de5797735bbd95dc8683c6a7aebf_v3_0_0', _api_response)
 
     def update_by_id(self,
                      id,
@@ -498,7 +498,7 @@ class TacacsServerSequence(object):
             'id': id,
         }
 
-        e_url = ('/ers/config/tacacsexternalservers/{id}')
+        e_url = ('/ers/config/tacacsserversequence/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -506,7 +506,7 @@ class TacacsServerSequence(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_2564523798353b885b115048_v3_0_0', _api_response)
+        return self._object_factory('bpm_a1465b72911359bdbb1430469801d4be_v3_0_0', _api_response)
 
     def delete_by_id(self,
                      id,

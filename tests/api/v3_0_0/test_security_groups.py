@@ -380,7 +380,7 @@ def is_valid_bulk_request_for_security_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_fe0ac7fc07885c6f877768654aefd189_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_742f7bd03a835c95b7a759b39ce7f680_v3_0_0').validate(obj.response)
     return True
 
 

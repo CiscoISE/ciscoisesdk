@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateTACACSServerSequenceById data model.
+"""Identity Services Engine updateTACACSExternalServersById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,45 +38,39 @@ from builtins import *
 
 
 class JSONSchemaValidatorA7Cffe3Bfae55Aa81B7B4447519E4Cd(object):
-    """updateTACACSServerSequenceById request schema definition."""
+    """updateTACACSExternalServersById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA7Cffe3Bfae55Aa81B7B4447519E4Cd, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "TacacsServerSequence": {
+                "TacacsExternalServer": {
                 "properties": {
+                "connectionPort": {
+                "type": "integer"
+                },
                 "description":
                  {
+                "type": "string"
+                },
+                "hostIP": {
                 "type": "string"
                 },
                 "id": {
                 "type": "string"
                 },
-                "localAccounting": {
-                "type": "boolean"
-                },
                 "name": {
                 "type": "string"
                 },
-                "prefixDelimiter": {
+                "sharedSecret": {
                 "type": "string"
                 },
-                "prefixStrip": {
+                "singleConnect": {
                 "type": "boolean"
                 },
-                "remoteAccounting": {
-                "type": "boolean"
-                },
-                "serverList": {
-                "type": "string"
-                },
-                "suffixDelimiter": {
-                "type": "string"
-                },
-                "suffixStrip": {
-                "type": "boolean"
+                "timeout": {
+                "type": "integer"
                 }
                 },
                 "type": "object"

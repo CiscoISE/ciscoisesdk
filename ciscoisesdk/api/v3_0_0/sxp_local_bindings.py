@@ -970,10 +970,10 @@ class SxpLocalBindings(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b97435f47305f5da136a0d68ac6d466_v3_0_0')\
+            self._request_validator('jsd_c21f51995bff8d6468a1e9c0b2e9_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/sxplocalbindings/submit')
+        e_url = ('/ers/config/sxplocalbindings/bulk/submit')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -986,7 +986,7 @@ class SxpLocalBindings(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_b97435f47305f5da136a0d68ac6d466_v3_0_0', _api_response)
+        return self._object_factory('bpm_c21f51995bff8d6468a1e9c0b2e9_v3_0_0', _api_response)
 
     def bulk_request(self,
                      operation_type=None,

@@ -136,7 +136,7 @@ class PxGridNode(object):
             'name': name,
         }
 
-        e_url = ('/ers/config/ers/config/pxgridNode/name/{name}/approve')
+        e_url = ('/ers/config/ers/config/pxgridnode/name/{name}/approve')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         if with_custom_headers:
@@ -222,7 +222,7 @@ class PxGridNode(object):
             'name': name,
         }
 
-        e_url = ('/ers/config/pxgridNode/name/{name}')
+        e_url = ('/ers/config/pxgridnode/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -307,7 +307,7 @@ class PxGridNode(object):
             'name': name,
         }
 
-        e_url = ('/ers/config/pxgridNode/name/{name}')
+        e_url = ('/ers/config/pxgridnode/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -392,7 +392,7 @@ class PxGridNode(object):
             'id': id,
         }
 
-        e_url = ('/ers/config/pxgridNode/{id}')
+        e_url = ('/ers/config/pxgridnode/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -483,7 +483,7 @@ class PxGridNode(object):
         path_params = {
         }
 
-        e_url = ('/ers/config/pxgridNode')
+        e_url = ('/ers/config/pxgridnode')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -616,7 +616,7 @@ class PxGridNode(object):
         path_params = {
         }
 
-        e_url = ('/ers/config/pxgridNode/versioninfo')
+        e_url = ('/ers/config/pxgridnode/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,

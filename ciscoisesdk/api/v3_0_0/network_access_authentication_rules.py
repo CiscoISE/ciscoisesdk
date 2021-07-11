@@ -394,8 +394,8 @@ class NetworkAccessAuthenticationRules(object):
         )
 
     def get_network_access_policy_by_id_authentication_rule_by_id(self,
+                                                                  id,
                                                                   policy_id,
-                                                                  rule_id,
                                                                   headers=None,
                                                                   **query_parameters):
         """Network Access Get rule attributes.
@@ -403,7 +403,7 @@ class NetworkAccessAuthenticationRules(object):
         Args:
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -438,7 +438,7 @@ class NetworkAccessAuthenticationRules(object):
             with_custom_headers = True
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -448,11 +448,11 @@ class NetworkAccessAuthenticationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/authentication/{ruleId}')
+                 + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -460,11 +460,11 @@ class NetworkAccessAuthenticationRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a98a9a386755939fe1f1633be33689_v3_0_0', _api_response)
+        return self._object_factory('bpm_db7274c43d695aa7af540ecced06c02c_v3_0_0', _api_response)
 
     def get_by_id(self,
+                  id,
                   policy_id,
-                  rule_id,
                   headers=None,
                   **query_parameters):
         """Alias for `get_network_access_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
@@ -472,15 +472,15 @@ class NetworkAccessAuthenticationRules(object):
         NetworkAccessAuthenticationRules.get_network_access_policy_by_id_authentication_rule_by_id>`_
         """
         return self.get_network_access_policy_by_id_authentication_rule_by_id(
+            id=id,
             policy_id=policy_id,
-            rule_id=rule_id,
             headers=headers,
             **query_parameters
         )
 
     def update_network_access_policy_by_id_authentication_rule_by_id(self,
+                                                                     id,
                                                                      policy_id,
-                                                                     rule_id,
                                                                      identity_source_name=None,
                                                                      if_auth_fail=None,
                                                                      if_process_fail=None,
@@ -513,7 +513,7 @@ class NetworkAccessAuthenticationRules(object):
                 of the request body.
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -557,7 +557,7 @@ class NetworkAccessAuthenticationRules(object):
             check_type(payload, dict)
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -567,7 +567,7 @@ class NetworkAccessAuthenticationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
         if is_xml_payload:
             _payload = payload
@@ -589,11 +589,11 @@ class NetworkAccessAuthenticationRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ec5180b8603d5cf78c13d6d3c0be18c2_v3_0_0')\
+            self._request_validator('jsd_b9500d6c2f365927aa3dbe6d7ecbae22_v3_0_0')\
                 .validate(_payload)
 
         e_url = ('/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/authentication/{ruleId}')
+                 + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -606,11 +606,11 @@ class NetworkAccessAuthenticationRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_ec5180b8603d5cf78c13d6d3c0be18c2_v3_0_0', _api_response)
+        return self._object_factory('bpm_b9500d6c2f365927aa3dbe6d7ecbae22_v3_0_0', _api_response)
 
     def update_by_id(self,
+                     id,
                      policy_id,
-                     rule_id,
                      identity_source_name=None,
                      if_auth_fail=None,
                      if_process_fail=None,
@@ -626,8 +626,8 @@ class NetworkAccessAuthenticationRules(object):
         NetworkAccessAuthenticationRules.update_network_access_policy_by_id_authentication_rule_by_id>`_
         """
         return self.update_network_access_policy_by_id_authentication_rule_by_id(
+            id=id,
             policy_id=policy_id,
-            rule_id=rule_id,
             identity_source_name=identity_source_name,
             if_auth_fail=if_auth_fail,
             if_process_fail=if_process_fail,
@@ -641,8 +641,8 @@ class NetworkAccessAuthenticationRules(object):
         )
 
     def delete_network_access_policy_by_id_authentication_rule_by_id(self,
+                                                                     id,
                                                                      policy_id,
-                                                                     rule_id,
                                                                      headers=None,
                                                                      **query_parameters):
         """Network Access Delete rule.
@@ -650,7 +650,7 @@ class NetworkAccessAuthenticationRules(object):
         Args:
             policy_id(basestring): policyId path parameter. Policy
                 id.
-            rule_id(basestring): ruleId path parameter. Rule id.
+            id(basestring): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -685,7 +685,7 @@ class NetworkAccessAuthenticationRules(object):
             with_custom_headers = True
         check_type(policy_id, basestring,
                    may_be_none=False)
-        check_type(rule_id, basestring,
+        check_type(id, basestring,
                    may_be_none=False)
 
         _params = {
@@ -695,11 +695,11 @@ class NetworkAccessAuthenticationRules(object):
 
         path_params = {
             'policyId': policy_id,
-            'ruleId': rule_id,
+            'id': id,
         }
 
         e_url = ('/v1/policy/network-access/policy-'
-                 + 'set/{policyId}/authentication/{ruleId}')
+                 + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -707,11 +707,11 @@ class NetworkAccessAuthenticationRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_da4f3b797ace547fa8f298d8c5197ce8_v3_0_0', _api_response)
+        return self._object_factory('bpm_bac6ffe32d85cbeac3b12a2e85b094b_v3_0_0', _api_response)
 
     def delete_by_id(self,
+                     id,
                      policy_id,
-                     rule_id,
                      headers=None,
                      **query_parameters):
         """Alias for `delete_network_access_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
@@ -719,8 +719,8 @@ class NetworkAccessAuthenticationRules(object):
         NetworkAccessAuthenticationRules.delete_network_access_policy_by_id_authentication_rule_by_id>`_
         """
         return self.delete_network_access_policy_by_id_authentication_rule_by_id(
+            id=id,
             policy_id=policy_id,
-            rule_id=rule_id,
             headers=headers,
             **query_parameters
         )
