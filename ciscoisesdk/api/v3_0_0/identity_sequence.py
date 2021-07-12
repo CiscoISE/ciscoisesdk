@@ -486,11 +486,11 @@ class IdentitySequence(object):
             **query_parameters
         )
 
-    def get_all_identity_sequence(self,
-                                  page=None,
-                                  size=None,
-                                  headers=None,
-                                  **query_parameters):
+    def get_identity_sequence(self,
+                              page=None,
+                              size=None,
+                              headers=None,
+                              **query_parameters):
         """This API allows the client to get all the identity sequences.
 
         Args:
@@ -568,22 +568,22 @@ class IdentitySequence(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_identity_sequence <#ciscoisesdk.
+        """Alias for `get_identity_sequence <#ciscoisesdk.
         api.v3_0_0.identity_sequence.
-        IdentitySequence.get_all_identity_sequence>`_
+        IdentitySequence.get_identity_sequence>`_
         """
-        return self.get_all_identity_sequence(
+        return self.get_identity_sequence(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_identity_sequence_generator(self,
-                                            page=None,
-                                            size=None,
-                                            headers=None,
-                                            **query_parameters):
+    def get_identity_sequence_generator(self,
+                                        page=None,
+                                        size=None,
+                                        headers=None,
+                                        **query_parameters):
         """This API allows the client to get all the identity sequences.
 
         Args:
@@ -612,7 +612,7 @@ class IdentitySequence(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_identity_sequence, dict(
+        yield from get_next_page(self.get_identity_sequence, dict(
             page=page,
             size=size,
             headers=headers,
@@ -624,11 +624,11 @@ class IdentitySequence(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_identity_sequence_generator <#ciscoisesdk.
+        """Alias for `get_identity_sequence_generator <#ciscoisesdk.
         api.v3_0_0.identity_sequence.
-        IdentitySequence.get_all_identity_sequence_generator>`_
+        IdentitySequence.get_identity_sequence_generator>`_
         """
-        yield from get_next_page(self.get_all_identity_sequence, dict(
+        yield from get_next_page(self.get_identity_sequence, dict(
             page=page,
             size=size,
             headers=headers,

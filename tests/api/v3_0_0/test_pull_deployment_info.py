@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_deployment_info(json_schema_validate, obj):
+def is_valid_get_deployment_info(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,8 +40,8 @@ def is_valid_get_all_deployment_info(json_schema_validate, obj):
     return True
 
 
-def get_all_deployment_info(api):
-    endpoint_result = api.pull_deployment_info.get_all_deployment_info(
+def get_deployment_info(api):
+    endpoint_result = api.pull_deployment_info.get_deployment_info(
         timeout=None,
 
     )
@@ -49,11 +49,11 @@ def get_all_deployment_info(api):
 
 
 @pytest.mark.pull_deployment_info
-def test_get_all_deployment_info(api, validator):
+def test_get_deployment_info(api, validator):
     try:
-        assert is_valid_get_all_deployment_info(
+        assert is_valid_get_deployment_info(
             validator,
-            get_all_deployment_info(api)
+            get_deployment_info(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -61,8 +61,8 @@ def test_get_all_deployment_info(api, validator):
             raise original_e
 
 
-def get_all_deployment_info_default(api):
-    endpoint_result = api.pull_deployment_info.get_all_deployment_info(
+def get_deployment_info_default(api):
+    endpoint_result = api.pull_deployment_info.get_deployment_info(
         timeout=None,
 
     )
@@ -70,11 +70,11 @@ def get_all_deployment_info_default(api):
 
 
 @pytest.mark.pull_deployment_info
-def test_get_all_deployment_info_default(api, validator):
+def test_get_deployment_info_default(api, validator):
     try:
-        assert is_valid_get_all_deployment_info(
+        assert is_valid_get_deployment_info(
             validator,
-            get_all_deployment_info_default(api)
+            get_deployment_info_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteNetworkAccessPolicyByIdAuthorizationRuleById data model.
+"""Identity Services Engine deleteNetworkAccessAuthorizationRuleById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorDedf09F59E754C6Ae5212D43B1C8Fb2(object):
-    """deleteNetworkAccessPolicyByIdAuthorizationRuleById request schema
+    """deleteNetworkAccessAuthorizationRuleById request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorDedf09F59E754C6Ae5212D43B1C8Fb2, self).__init__()

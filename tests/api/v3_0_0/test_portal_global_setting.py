@@ -135,7 +135,7 @@ def test_update_portal_global_setting_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_portal_global_settings(json_schema_validate, obj):
+def is_valid_get_portal_global_settings(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -146,8 +146,8 @@ def is_valid_get_all_portal_global_settings(json_schema_validate, obj):
     return True
 
 
-def get_all_portal_global_settings(api):
-    endpoint_result = api.portal_global_setting.get_all_portal_global_settings(
+def get_portal_global_settings(api):
+    endpoint_result = api.portal_global_setting.get_portal_global_settings(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -159,11 +159,11 @@ def get_all_portal_global_settings(api):
 
 
 @pytest.mark.portal_global_setting
-def test_get_all_portal_global_settings(api, validator):
+def test_get_portal_global_settings(api, validator):
     try:
-        assert is_valid_get_all_portal_global_settings(
+        assert is_valid_get_portal_global_settings(
             validator,
-            get_all_portal_global_settings(api)
+            get_portal_global_settings(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -171,8 +171,8 @@ def test_get_all_portal_global_settings(api, validator):
             raise original_e
 
 
-def get_all_portal_global_settings_default(api):
-    endpoint_result = api.portal_global_setting.get_all_portal_global_settings(
+def get_portal_global_settings_default(api):
+    endpoint_result = api.portal_global_setting.get_portal_global_settings(
         filter=None,
         filter_type=None,
         page=None,
@@ -184,11 +184,11 @@ def get_all_portal_global_settings_default(api):
 
 
 @pytest.mark.portal_global_setting
-def test_get_all_portal_global_settings_default(api, validator):
+def test_get_portal_global_settings_default(api, validator):
     try:
-        assert is_valid_get_all_portal_global_settings(
+        assert is_valid_get_portal_global_settings(
             validator,
-            get_all_portal_global_settings_default(api)
+            get_portal_global_settings_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

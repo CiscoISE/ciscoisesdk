@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllTrustedDomains data model.
+"""Identity Services Engine getTrustedDomains data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD0Ed84901325292Ad4E2A91A174F6B2(object):
-    """getAllTrustedDomains request schema definition."""
+    """getTrustedDomains request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD0Ed84901325292Ad4E2A91A174F6B2, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

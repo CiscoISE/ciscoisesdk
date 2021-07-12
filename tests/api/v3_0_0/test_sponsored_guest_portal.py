@@ -195,7 +195,7 @@ def test_delete_sponsored_guest_portal_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_sponsored_guest_portals(json_schema_validate, obj):
+def is_valid_get_sponsored_guest_portals(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -206,8 +206,8 @@ def is_valid_get_all_sponsored_guest_portals(json_schema_validate, obj):
     return True
 
 
-def get_all_sponsored_guest_portals(api):
-    endpoint_result = api.sponsored_guest_portal.get_all_sponsored_guest_portals(
+def get_sponsored_guest_portals(api):
+    endpoint_result = api.sponsored_guest_portal.get_sponsored_guest_portals(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -219,11 +219,11 @@ def get_all_sponsored_guest_portals(api):
 
 
 @pytest.mark.sponsored_guest_portal
-def test_get_all_sponsored_guest_portals(api, validator):
+def test_get_sponsored_guest_portals(api, validator):
     try:
-        assert is_valid_get_all_sponsored_guest_portals(
+        assert is_valid_get_sponsored_guest_portals(
             validator,
-            get_all_sponsored_guest_portals(api)
+            get_sponsored_guest_portals(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -231,8 +231,8 @@ def test_get_all_sponsored_guest_portals(api, validator):
             raise original_e
 
 
-def get_all_sponsored_guest_portals_default(api):
-    endpoint_result = api.sponsored_guest_portal.get_all_sponsored_guest_portals(
+def get_sponsored_guest_portals_default(api):
+    endpoint_result = api.sponsored_guest_portal.get_sponsored_guest_portals(
         filter=None,
         filter_type=None,
         page=None,
@@ -244,11 +244,11 @@ def get_all_sponsored_guest_portals_default(api):
 
 
 @pytest.mark.sponsored_guest_portal
-def test_get_all_sponsored_guest_portals_default(api, validator):
+def test_get_sponsored_guest_portals_default(api, validator):
     try:
-        assert is_valid_get_all_sponsored_guest_portals(
+        assert is_valid_get_sponsored_guest_portals(
             validator,
-            get_all_sponsored_guest_portals_default(api)
+            get_sponsored_guest_portals_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

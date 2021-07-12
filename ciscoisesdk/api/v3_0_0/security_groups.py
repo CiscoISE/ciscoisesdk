@@ -413,15 +413,15 @@ class SecurityGroups(object):
             **query_parameters
         )
 
-    def get_all_security_groups(self,
-                                filter=None,
-                                filter_type=None,
-                                page=None,
-                                size=None,
-                                sortasc=None,
-                                sortdsc=None,
-                                headers=None,
-                                **query_parameters):
+    def get_security_groups(self,
+                            filter=None,
+                            filter_type=None,
+                            page=None,
+                            size=None,
+                            sortasc=None,
+                            sortdsc=None,
+                            headers=None,
+                            **query_parameters):
         """This API allows the client to get all the security groups.
         Filter:   [propogateToApic, name, description, value]
         To search resources by using  toDate  column,follow the
@@ -556,11 +556,11 @@ class SecurityGroups(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_security_groups <#ciscoisesdk.
+        """Alias for `get_security_groups <#ciscoisesdk.
         api.v3_0_0.security_groups.
-        SecurityGroups.get_all_security_groups>`_
+        SecurityGroups.get_security_groups>`_
         """
-        return self.get_all_security_groups(
+        return self.get_security_groups(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -571,15 +571,15 @@ class SecurityGroups(object):
             **query_parameters
         )
 
-    def get_all_security_groups_generator(self,
-                                          filter=None,
-                                          filter_type=None,
-                                          page=None,
-                                          size=None,
-                                          sortasc=None,
-                                          sortdsc=None,
-                                          headers=None,
-                                          **query_parameters):
+    def get_security_groups_generator(self,
+                                      filter=None,
+                                      filter_type=None,
+                                      page=None,
+                                      size=None,
+                                      sortasc=None,
+                                      sortdsc=None,
+                                      headers=None,
+                                      **query_parameters):
         """This API allows the client to get all the security groups.
         Filter:   [propogateToApic, name, description, value]
         To search resources by using  toDate  column,follow the
@@ -649,7 +649,7 @@ class SecurityGroups(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_security_groups, dict(
+        yield from get_next_page(self.get_security_groups, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -669,11 +669,11 @@ class SecurityGroups(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_security_groups_generator <#ciscoisesdk.
+        """Alias for `get_security_groups_generator <#ciscoisesdk.
         api.v3_0_0.security_groups.
-        SecurityGroups.get_all_security_groups_generator>`_
+        SecurityGroups.get_security_groups_generator>`_
         """
-        yield from get_next_page(self.get_all_security_groups, dict(
+        yield from get_next_page(self.get_security_groups, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

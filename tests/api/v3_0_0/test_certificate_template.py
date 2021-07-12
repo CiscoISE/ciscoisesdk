@@ -129,7 +129,7 @@ def test_get_certificate_template_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_certificate_template(json_schema_validate, obj):
+def is_valid_get_certificate_template(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -140,8 +140,8 @@ def is_valid_get_all_certificate_template(json_schema_validate, obj):
     return True
 
 
-def get_all_certificate_template(api):
-    endpoint_result = api.certificate_template.get_all_certificate_template(
+def get_certificate_template(api):
+    endpoint_result = api.certificate_template.get_certificate_template(
         page=0,
         size=0
     )
@@ -149,11 +149,11 @@ def get_all_certificate_template(api):
 
 
 @pytest.mark.certificate_template
-def test_get_all_certificate_template(api, validator):
+def test_get_certificate_template(api, validator):
     try:
-        assert is_valid_get_all_certificate_template(
+        assert is_valid_get_certificate_template(
             validator,
-            get_all_certificate_template(api)
+            get_certificate_template(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -161,8 +161,8 @@ def test_get_all_certificate_template(api, validator):
             raise original_e
 
 
-def get_all_certificate_template_default(api):
-    endpoint_result = api.certificate_template.get_all_certificate_template(
+def get_certificate_template_default(api):
+    endpoint_result = api.certificate_template.get_certificate_template(
         page=None,
         size=None
     )
@@ -170,11 +170,11 @@ def get_all_certificate_template_default(api):
 
 
 @pytest.mark.certificate_template
-def test_get_all_certificate_template_default(api, validator):
+def test_get_certificate_template_default(api, validator):
     try:
-        assert is_valid_get_all_certificate_template(
+        assert is_valid_get_certificate_template(
             validator,
-            get_all_certificate_template_default(api)
+            get_certificate_template_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

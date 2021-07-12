@@ -245,11 +245,11 @@ class CertificateTemplate(object):
             **query_parameters
         )
 
-    def get_all_certificate_template(self,
-                                     page=None,
-                                     size=None,
-                                     headers=None,
-                                     **query_parameters):
+    def get_certificate_template(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
         """This API allows the client to get aall the certificate
         templates.
 
@@ -328,22 +328,22 @@ class CertificateTemplate(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_certificate_template <#ciscoisesdk.
+        """Alias for `get_certificate_template <#ciscoisesdk.
         api.v3_0_0.certificate_template.
-        CertificateTemplate.get_all_certificate_template>`_
+        CertificateTemplate.get_certificate_template>`_
         """
-        return self.get_all_certificate_template(
+        return self.get_certificate_template(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_certificate_template_generator(self,
-                                               page=None,
-                                               size=None,
-                                               headers=None,
-                                               **query_parameters):
+    def get_certificate_template_generator(self,
+                                           page=None,
+                                           size=None,
+                                           headers=None,
+                                           **query_parameters):
         """This API allows the client to get aall the certificate
         templates.
 
@@ -373,7 +373,7 @@ class CertificateTemplate(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_certificate_template, dict(
+        yield from get_next_page(self.get_certificate_template, dict(
             page=page,
             size=size,
             headers=headers,
@@ -385,11 +385,11 @@ class CertificateTemplate(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_certificate_template_generator <#ciscoisesdk.
+        """Alias for `get_certificate_template_generator <#ciscoisesdk.
         api.v3_0_0.certificate_template.
-        CertificateTemplate.get_all_certificate_template_generator>`_
+        CertificateTemplate.get_certificate_template_generator>`_
         """
-        yield from get_next_page(self.get_all_certificate_template, dict(
+        yield from get_next_page(self.get_certificate_template, dict(
             page=page,
             size=size,
             headers=headers,

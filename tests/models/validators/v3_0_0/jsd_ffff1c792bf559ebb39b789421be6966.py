@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllTACACSProfile data model.
+"""Identity Services Engine getTACACSProfile data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorFfff1C792Bf559EbB39B789421Be6966(object):
-    """getAllTACACSProfile request schema definition."""
+    """getTACACSProfile request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorFfff1C792Bf559EbB39B789421Be6966, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

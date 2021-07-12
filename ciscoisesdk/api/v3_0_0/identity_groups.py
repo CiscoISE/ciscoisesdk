@@ -384,15 +384,15 @@ class IdentityGroups(object):
             **query_parameters
         )
 
-    def get_all_identity_groups(self,
-                                filter=None,
-                                filter_type=None,
-                                page=None,
-                                size=None,
-                                sortasc=None,
-                                sortdsc=None,
-                                headers=None,
-                                **query_parameters):
+    def get_identity_groups(self,
+                            filter=None,
+                            filter_type=None,
+                            page=None,
+                            size=None,
+                            sortasc=None,
+                            sortdsc=None,
+                            headers=None,
+                            **query_parameters):
         """This API allows the client to get all the identity groups.
         Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -526,11 +526,11 @@ class IdentityGroups(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_identity_groups <#ciscoisesdk.
+        """Alias for `get_identity_groups <#ciscoisesdk.
         api.v3_0_0.identity_groups.
-        IdentityGroups.get_all_identity_groups>`_
+        IdentityGroups.get_identity_groups>`_
         """
-        return self.get_all_identity_groups(
+        return self.get_identity_groups(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -541,15 +541,15 @@ class IdentityGroups(object):
             **query_parameters
         )
 
-    def get_all_identity_groups_generator(self,
-                                          filter=None,
-                                          filter_type=None,
-                                          page=None,
-                                          size=None,
-                                          sortasc=None,
-                                          sortdsc=None,
-                                          headers=None,
-                                          **query_parameters):
+    def get_identity_groups_generator(self,
+                                      filter=None,
+                                      filter_type=None,
+                                      page=None,
+                                      size=None,
+                                      sortasc=None,
+                                      sortdsc=None,
+                                      headers=None,
+                                      **query_parameters):
         """This API allows the client to get all the identity groups.
         Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -618,7 +618,7 @@ class IdentityGroups(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_identity_groups, dict(
+        yield from get_next_page(self.get_identity_groups, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -638,11 +638,11 @@ class IdentityGroups(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_identity_groups_generator <#ciscoisesdk.
+        """Alias for `get_identity_groups_generator <#ciscoisesdk.
         api.v3_0_0.identity_groups.
-        IdentityGroups.get_all_identity_groups_generator>`_
+        IdentityGroups.get_identity_groups_generator>`_
         """
-        yield from get_next_page(self.get_all_identity_groups, dict(
+        yield from get_next_page(self.get_identity_groups, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

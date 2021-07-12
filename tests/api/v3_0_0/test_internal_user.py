@@ -393,7 +393,7 @@ def test_delete_internal_user_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_internal_user(json_schema_validate, obj):
+def is_valid_get_internal_user(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -404,8 +404,8 @@ def is_valid_get_all_internal_user(json_schema_validate, obj):
     return True
 
 
-def get_all_internal_user(api):
-    endpoint_result = api.internal_user.get_all_internal_user(
+def get_internal_user(api):
+    endpoint_result = api.internal_user.get_internal_user(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -417,11 +417,11 @@ def get_all_internal_user(api):
 
 
 @pytest.mark.internal_user
-def test_get_all_internal_user(api, validator):
+def test_get_internal_user(api, validator):
     try:
-        assert is_valid_get_all_internal_user(
+        assert is_valid_get_internal_user(
             validator,
-            get_all_internal_user(api)
+            get_internal_user(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -429,8 +429,8 @@ def test_get_all_internal_user(api, validator):
             raise original_e
 
 
-def get_all_internal_user_default(api):
-    endpoint_result = api.internal_user.get_all_internal_user(
+def get_internal_user_default(api):
+    endpoint_result = api.internal_user.get_internal_user(
         filter=None,
         filter_type=None,
         page=None,
@@ -442,11 +442,11 @@ def get_all_internal_user_default(api):
 
 
 @pytest.mark.internal_user
-def test_get_all_internal_user_default(api, validator):
+def test_get_internal_user_default(api, validator):
     try:
-        assert is_valid_get_all_internal_user(
+        assert is_valid_get_internal_user(
             validator,
-            get_all_internal_user_default(api)
+            get_internal_user_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -879,7 +879,7 @@ def test_delete_guest_user_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_guest_users(json_schema_validate, obj):
+def is_valid_get_guest_users(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -890,8 +890,8 @@ def is_valid_get_all_guest_users(json_schema_validate, obj):
     return True
 
 
-def get_all_guest_users(api):
-    endpoint_result = api.guest_user.get_all_guest_users(
+def get_guest_users(api):
+    endpoint_result = api.guest_user.get_guest_users(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -903,11 +903,11 @@ def get_all_guest_users(api):
 
 
 @pytest.mark.guest_user
-def test_get_all_guest_users(api, validator):
+def test_get_guest_users(api, validator):
     try:
-        assert is_valid_get_all_guest_users(
+        assert is_valid_get_guest_users(
             validator,
-            get_all_guest_users(api)
+            get_guest_users(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -915,8 +915,8 @@ def test_get_all_guest_users(api, validator):
             raise original_e
 
 
-def get_all_guest_users_default(api):
-    endpoint_result = api.guest_user.get_all_guest_users(
+def get_guest_users_default(api):
+    endpoint_result = api.guest_user.get_guest_users(
         filter=None,
         filter_type=None,
         page=None,
@@ -928,11 +928,11 @@ def get_all_guest_users_default(api):
 
 
 @pytest.mark.guest_user
-def test_get_all_guest_users_default(api, validator):
+def test_get_guest_users_default(api, validator):
     try:
-        assert is_valid_get_all_guest_users(
+        assert is_valid_get_guest_users(
             validator,
-            get_all_guest_users_default(api)
+            get_guest_users_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllSXPConnections data model.
+"""Identity Services Engine getSXPConnections data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1(object):
-    """getAllSXPConnections request schema definition."""
+    """getSXPConnections request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

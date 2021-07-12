@@ -74,15 +74,15 @@ class AciBindings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_aci_bindings(self,
-                             filter_by=None,
-                             filter_value=None,
-                             page=None,
-                             size=None,
-                             sort=None,
-                             sort_by=None,
-                             headers=None,
-                             **query_parameters):
+    def get_aci_bindings(self,
+                         filter_by=None,
+                         filter_value=None,
+                         page=None,
+                         size=None,
+                         sort=None,
+                         sort_by=None,
+                         headers=None,
+                         **query_parameters):
         """This API allows clients to retrieve all the bindings that were
         sent to Cisco ISE by ACI or received on ACI from Cisco
         ISE.The binding information will be identical to the
@@ -190,11 +190,11 @@ class AciBindings(object):
                 sort_by=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_aci_bindings <#ciscoisesdk.
+        """Alias for `get_aci_bindings <#ciscoisesdk.
         api.v3_0_0.aci_bindings.
-        AciBindings.get_all_aci_bindings>`_
+        AciBindings.get_aci_bindings>`_
         """
-        return self.get_all_aci_bindings(
+        return self.get_aci_bindings(
             filter_by=filter_by,
             filter_value=filter_value,
             page=page,
@@ -205,15 +205,15 @@ class AciBindings(object):
             **query_parameters
         )
 
-    def get_all_aci_bindings_generator(self,
-                                       filter_by=None,
-                                       filter_value=None,
-                                       page=None,
-                                       size=None,
-                                       sort=None,
-                                       sort_by=None,
-                                       headers=None,
-                                       **query_parameters):
+    def get_aci_bindings_generator(self,
+                                   filter_by=None,
+                                   filter_value=None,
+                                   page=None,
+                                   size=None,
+                                   sort=None,
+                                   sort_by=None,
+                                   headers=None,
+                                   **query_parameters):
         """This API allows clients to retrieve all the bindings that were
         sent to Cisco ISE by ACI or received on ACI from Cisco
         ISE.The binding information will be identical to the
@@ -256,7 +256,7 @@ class AciBindings(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_aci_bindings, dict(
+        yield from get_next_page(self.get_aci_bindings, dict(
             filter_by=filter_by,
             filter_value=filter_value,
             page=page,
@@ -276,11 +276,11 @@ class AciBindings(object):
                           sort_by=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_aci_bindings_generator <#ciscoisesdk.
+        """Alias for `get_aci_bindings_generator <#ciscoisesdk.
         api.v3_0_0.aci_bindings.
-        AciBindings.get_all_aci_bindings_generator>`_
+        AciBindings.get_aci_bindings_generator>`_
         """
-        yield from get_next_page(self.get_all_aci_bindings, dict(
+        yield from get_next_page(self.get_aci_bindings, dict(
             filter_by=filter_by,
             filter_value=filter_value,
             page=page,

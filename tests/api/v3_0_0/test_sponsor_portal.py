@@ -195,7 +195,7 @@ def test_delete_sponsor_portal_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_sponsor_portal(json_schema_validate, obj):
+def is_valid_get_sponsor_portal(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -206,8 +206,8 @@ def is_valid_get_all_sponsor_portal(json_schema_validate, obj):
     return True
 
 
-def get_all_sponsor_portal(api):
-    endpoint_result = api.sponsor_portal.get_all_sponsor_portal(
+def get_sponsor_portal(api):
+    endpoint_result = api.sponsor_portal.get_sponsor_portal(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -219,11 +219,11 @@ def get_all_sponsor_portal(api):
 
 
 @pytest.mark.sponsor_portal
-def test_get_all_sponsor_portal(api, validator):
+def test_get_sponsor_portal(api, validator):
     try:
-        assert is_valid_get_all_sponsor_portal(
+        assert is_valid_get_sponsor_portal(
             validator,
-            get_all_sponsor_portal(api)
+            get_sponsor_portal(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -231,8 +231,8 @@ def test_get_all_sponsor_portal(api, validator):
             raise original_e
 
 
-def get_all_sponsor_portal_default(api):
-    endpoint_result = api.sponsor_portal.get_all_sponsor_portal(
+def get_sponsor_portal_default(api):
+    endpoint_result = api.sponsor_portal.get_sponsor_portal(
         filter=None,
         filter_type=None,
         page=None,
@@ -244,11 +244,11 @@ def get_all_sponsor_portal_default(api):
 
 
 @pytest.mark.sponsor_portal
-def test_get_all_sponsor_portal_default(api, validator):
+def test_get_sponsor_portal_default(api, validator):
     try:
-        assert is_valid_get_all_sponsor_portal(
+        assert is_valid_get_sponsor_portal(
             validator,
-            get_all_sponsor_portal_default(api)
+            get_sponsor_portal_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

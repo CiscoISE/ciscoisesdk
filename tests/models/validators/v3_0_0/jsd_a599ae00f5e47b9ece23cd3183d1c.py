@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllFilterPolicy data model.
+"""Identity Services Engine getFilterPolicy data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA599AE00F5E47B9EcE23Cd3183D1C(object):
-    """getAllFilterPolicy request schema definition."""
+    """getFilterPolicy request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA599AE00F5E47B9EcE23Cd3183D1C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

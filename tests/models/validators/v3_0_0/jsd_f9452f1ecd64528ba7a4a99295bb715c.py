@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine resetHitCountsDeviceAdminPolicyByIdLocalExceptions data model.
+"""Identity Services Engine resetHitCountsDeviceAdminLocalExceptions data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF9452F1ECd64528BA7A4A99295Bb715C(object):
-    """resetHitCountsDeviceAdminPolicyByIdLocalExceptions request schema
+    """resetHitCountsDeviceAdminLocalExceptions request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorF9452F1ECd64528BA7A4A99295Bb715C, self).__init__()

@@ -605,15 +605,15 @@ class IpToSgtMappingGroup(object):
             **query_parameters
         )
 
-    def get_all_ip_to_sgt_mapping_group(self,
-                                        filter=None,
-                                        filter_type=None,
-                                        page=None,
-                                        size=None,
-                                        sortasc=None,
-                                        sortdsc=None,
-                                        headers=None,
-                                        **query_parameters):
+    def get_ip_to_sgt_mapping_group(self,
+                                    filter=None,
+                                    filter_type=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """This API allows the client to get all the IP to SGT mapping
         groups.   Filter:   [name, sgtName]   To search guest
         users by using  toDate  column,follow the format:   DD-
@@ -747,11 +747,11 @@ class IpToSgtMappingGroup(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_ip_to_sgt_mapping_group <#ciscoisesdk.
+        """Alias for `get_ip_to_sgt_mapping_group <#ciscoisesdk.
         api.v3_0_0.ip_to_sgt_mapping_group.
-        IpToSgtMappingGroup.get_all_ip_to_sgt_mapping_group>`_
+        IpToSgtMappingGroup.get_ip_to_sgt_mapping_group>`_
         """
-        return self.get_all_ip_to_sgt_mapping_group(
+        return self.get_ip_to_sgt_mapping_group(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -762,15 +762,15 @@ class IpToSgtMappingGroup(object):
             **query_parameters
         )
 
-    def get_all_ip_to_sgt_mapping_group_generator(self,
-                                                  filter=None,
-                                                  filter_type=None,
-                                                  page=None,
-                                                  size=None,
-                                                  sortasc=None,
-                                                  sortdsc=None,
-                                                  headers=None,
-                                                  **query_parameters):
+    def get_ip_to_sgt_mapping_group_generator(self,
+                                              filter=None,
+                                              filter_type=None,
+                                              page=None,
+                                              size=None,
+                                              sortasc=None,
+                                              sortdsc=None,
+                                              headers=None,
+                                              **query_parameters):
         """This API allows the client to get all the IP to SGT mapping
         groups.   Filter:   [name, sgtName]   To search guest
         users by using  toDate  column,follow the format:   DD-
@@ -839,7 +839,7 @@ class IpToSgtMappingGroup(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_ip_to_sgt_mapping_group, dict(
+        yield from get_next_page(self.get_ip_to_sgt_mapping_group, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -859,11 +859,11 @@ class IpToSgtMappingGroup(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_ip_to_sgt_mapping_group_generator <#ciscoisesdk.
+        """Alias for `get_ip_to_sgt_mapping_group_generator <#ciscoisesdk.
         api.v3_0_0.ip_to_sgt_mapping_group.
-        IpToSgtMappingGroup.get_all_ip_to_sgt_mapping_group_generator>`_
+        IpToSgtMappingGroup.get_ip_to_sgt_mapping_group_generator>`_
         """
-        yield from get_next_page(self.get_all_ip_to_sgt_mapping_group, dict(
+        yield from get_next_page(self.get_ip_to_sgt_mapping_group, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

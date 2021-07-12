@@ -416,11 +416,11 @@ class PxGridNode(object):
             **query_parameters
         )
 
-    def get_all_px_grid_node(self,
-                             page=None,
-                             size=None,
-                             headers=None,
-                             **query_parameters):
+    def get_px_grid_node(self,
+                         page=None,
+                         size=None,
+                         headers=None,
+                         **query_parameters):
         """This API allows the client to get all the npxGrid nodes.
 
         Args:
@@ -498,22 +498,22 @@ class PxGridNode(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_px_grid_node <#ciscoisesdk.
+        """Alias for `get_px_grid_node <#ciscoisesdk.
         api.v3_0_0.px_grid_node.
-        PxGridNode.get_all_px_grid_node>`_
+        PxGridNode.get_px_grid_node>`_
         """
-        return self.get_all_px_grid_node(
+        return self.get_px_grid_node(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_px_grid_node_generator(self,
-                                       page=None,
-                                       size=None,
-                                       headers=None,
-                                       **query_parameters):
+    def get_px_grid_node_generator(self,
+                                   page=None,
+                                   size=None,
+                                   headers=None,
+                                   **query_parameters):
         """This API allows the client to get all the npxGrid nodes.
 
         Args:
@@ -542,7 +542,7 @@ class PxGridNode(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_px_grid_node, dict(
+        yield from get_next_page(self.get_px_grid_node, dict(
             page=page,
             size=size,
             headers=headers,
@@ -554,11 +554,11 @@ class PxGridNode(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_px_grid_node_generator <#ciscoisesdk.
+        """Alias for `get_px_grid_node_generator <#ciscoisesdk.
         api.v3_0_0.px_grid_node.
-        PxGridNode.get_all_px_grid_node_generator>`_
+        PxGridNode.get_px_grid_node_generator>`_
         """
-        yield from get_next_page(self.get_all_px_grid_node, dict(
+        yield from get_next_page(self.get_px_grid_node, dict(
             page=page,
             size=size,
             headers=headers,

@@ -416,15 +416,15 @@ class SxpConnections(object):
             **query_parameters
         )
 
-    def get_all_sxp_connections(self,
-                                filter=None,
-                                filter_type=None,
-                                page=None,
-                                size=None,
-                                sortasc=None,
-                                sortdsc=None,
-                                headers=None,
-                                **query_parameters):
+    def get_sxp_connections(self,
+                            filter=None,
+                            filter_type=None,
+                            page=None,
+                            size=None,
+                            sortasc=None,
+                            sortdsc=None,
+                            headers=None,
+                            **query_parameters):
         """This API allows the client to get all the SXP connections.
         Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -558,11 +558,11 @@ class SxpConnections(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_sxp_connections <#ciscoisesdk.
+        """Alias for `get_sxp_connections <#ciscoisesdk.
         api.v3_0_0.sxp_connections.
-        SxpConnections.get_all_sxp_connections>`_
+        SxpConnections.get_sxp_connections>`_
         """
-        return self.get_all_sxp_connections(
+        return self.get_sxp_connections(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -573,15 +573,15 @@ class SxpConnections(object):
             **query_parameters
         )
 
-    def get_all_sxp_connections_generator(self,
-                                          filter=None,
-                                          filter_type=None,
-                                          page=None,
-                                          size=None,
-                                          sortasc=None,
-                                          sortdsc=None,
-                                          headers=None,
-                                          **query_parameters):
+    def get_sxp_connections_generator(self,
+                                      filter=None,
+                                      filter_type=None,
+                                      page=None,
+                                      size=None,
+                                      sortasc=None,
+                                      sortdsc=None,
+                                      headers=None,
+                                      **query_parameters):
         """This API allows the client to get all the SXP connections.
         Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -650,7 +650,7 @@ class SxpConnections(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_sxp_connections, dict(
+        yield from get_next_page(self.get_sxp_connections, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -670,11 +670,11 @@ class SxpConnections(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_sxp_connections_generator <#ciscoisesdk.
+        """Alias for `get_sxp_connections_generator <#ciscoisesdk.
         api.v3_0_0.sxp_connections.
-        SxpConnections.get_all_sxp_connections_generator>`_
+        SxpConnections.get_sxp_connections_generator>`_
         """
-        yield from get_next_page(self.get_all_sxp_connections, dict(
+        yield from get_next_page(self.get_sxp_connections, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

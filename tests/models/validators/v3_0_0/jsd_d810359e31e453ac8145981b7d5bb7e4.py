@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllRestIdStore data model.
+"""Identity Services Engine getRestIdStore data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD810359E31E453Ac8145981B7D5Bb7E4(object):
-    """getAllRestIdStore request schema definition."""
+    """getRestIdStore request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD810359E31E453Ac8145981B7D5Bb7E4, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

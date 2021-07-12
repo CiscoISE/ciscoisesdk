@@ -189,7 +189,7 @@ def test_delete_portal_theme_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_portal_themes(json_schema_validate, obj):
+def is_valid_get_portal_themes(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -200,8 +200,8 @@ def is_valid_get_all_portal_themes(json_schema_validate, obj):
     return True
 
 
-def get_all_portal_themes(api):
-    endpoint_result = api.portal_theme.get_all_portal_themes(
+def get_portal_themes(api):
+    endpoint_result = api.portal_theme.get_portal_themes(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -213,11 +213,11 @@ def get_all_portal_themes(api):
 
 
 @pytest.mark.portal_theme
-def test_get_all_portal_themes(api, validator):
+def test_get_portal_themes(api, validator):
     try:
-        assert is_valid_get_all_portal_themes(
+        assert is_valid_get_portal_themes(
             validator,
-            get_all_portal_themes(api)
+            get_portal_themes(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -225,8 +225,8 @@ def test_get_all_portal_themes(api, validator):
             raise original_e
 
 
-def get_all_portal_themes_default(api):
-    endpoint_result = api.portal_theme.get_all_portal_themes(
+def get_portal_themes_default(api):
+    endpoint_result = api.portal_theme.get_portal_themes(
         filter=None,
         filter_type=None,
         page=None,
@@ -238,11 +238,11 @@ def get_all_portal_themes_default(api):
 
 
 @pytest.mark.portal_theme
-def test_get_all_portal_themes_default(api, validator):
+def test_get_portal_themes_default(api, validator):
     try:
-        assert is_valid_get_all_portal_themes(
+        assert is_valid_get_portal_themes(
             validator,
-            get_all_portal_themes_default(api)
+            get_portal_themes_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

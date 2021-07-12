@@ -259,7 +259,7 @@ def test_delete_external_radius_server_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_external_radius_server(json_schema_validate, obj):
+def is_valid_get_external_radius_server(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -270,8 +270,8 @@ def is_valid_get_all_external_radius_server(json_schema_validate, obj):
     return True
 
 
-def get_all_external_radius_server(api):
-    endpoint_result = api.external_radius_server.get_all_external_radius_server(
+def get_external_radius_server(api):
+    endpoint_result = api.external_radius_server.get_external_radius_server(
         page=0,
         size=0
     )
@@ -279,11 +279,11 @@ def get_all_external_radius_server(api):
 
 
 @pytest.mark.external_radius_server
-def test_get_all_external_radius_server(api, validator):
+def test_get_external_radius_server(api, validator):
     try:
-        assert is_valid_get_all_external_radius_server(
+        assert is_valid_get_external_radius_server(
             validator,
-            get_all_external_radius_server(api)
+            get_external_radius_server(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -291,8 +291,8 @@ def test_get_all_external_radius_server(api, validator):
             raise original_e
 
 
-def get_all_external_radius_server_default(api):
-    endpoint_result = api.external_radius_server.get_all_external_radius_server(
+def get_external_radius_server_default(api):
+    endpoint_result = api.external_radius_server.get_external_radius_server(
         page=None,
         size=None
     )
@@ -300,11 +300,11 @@ def get_all_external_radius_server_default(api):
 
 
 @pytest.mark.external_radius_server
-def test_get_all_external_radius_server_default(api, validator):
+def test_get_external_radius_server_default(api, validator):
     try:
-        assert is_valid_get_all_external_radius_server(
+        assert is_valid_get_external_radius_server(
             validator,
-            get_all_external_radius_server_default(api)
+            get_external_radius_server_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

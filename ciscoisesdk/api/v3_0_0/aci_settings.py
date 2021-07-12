@@ -74,9 +74,9 @@ class AciSettings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_aci_settings(self,
-                             headers=None,
-                             **query_parameters):
+    def get_aci_settings(self,
+                         headers=None,
+                         **query_parameters):
         """This API allows the client to get ACI Settings.
 
         Args:
@@ -143,11 +143,11 @@ class AciSettings(object):
     def get_all(self,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_aci_settings <#ciscoisesdk.
+        """Alias for `get_aci_settings <#ciscoisesdk.
         api.v3_0_0.aci_settings.
-        AciSettings.get_all_aci_settings>`_
+        AciSettings.get_aci_settings>`_
         """
-        return self.get_all_aci_settings(
+        return self.get_aci_settings(
             headers=headers,
             **query_parameters
         )

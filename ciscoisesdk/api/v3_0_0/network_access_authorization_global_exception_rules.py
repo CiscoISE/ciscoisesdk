@@ -74,9 +74,9 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_policy_set_global_exception_rule_list(self,
-                                                                 headers=None,
-                                                                 **query_parameters):
+    def get_network_access_policy_set_global_exception_rules(self,
+                                                             headers=None,
+                                                             **query_parameters):
         """Network Access Get global execption rules.
 
         Args:
@@ -131,6 +131,18 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a11a1ff1ee5387b669bcde99f86fbf_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_policy_set_global_exception_rules <#ciscoisesdk.
+        api.v3_0_0.network_access_authorization_global_exception_rules.
+        NetworkAccessAuthorizationGlobalExceptionRules.get_network_access_policy_set_global_exception_rules>`_
+        """
+        return self.get_network_access_policy_set_global_exception_rules(
+            headers=headers,
+            **query_parameters
+        )
 
     def create_network_access_policy_set_global_exception_rule(self,
                                                                link=None,

@@ -79,7 +79,7 @@ def test_get_admin_user_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_admin_users(json_schema_validate, obj):
+def is_valid_get_admin_users(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_get_all_admin_users(json_schema_validate, obj):
     return True
 
 
-def get_all_admin_users(api):
-    endpoint_result = api.admin_user.get_all_admin_users(
+def get_admin_users(api):
+    endpoint_result = api.admin_user.get_admin_users(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -103,11 +103,11 @@ def get_all_admin_users(api):
 
 
 @pytest.mark.admin_user
-def test_get_all_admin_users(api, validator):
+def test_get_admin_users(api, validator):
     try:
-        assert is_valid_get_all_admin_users(
+        assert is_valid_get_admin_users(
             validator,
-            get_all_admin_users(api)
+            get_admin_users(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -115,8 +115,8 @@ def test_get_all_admin_users(api, validator):
             raise original_e
 
 
-def get_all_admin_users_default(api):
-    endpoint_result = api.admin_user.get_all_admin_users(
+def get_admin_users_default(api):
+    endpoint_result = api.admin_user.get_admin_users(
         filter=None,
         filter_type=None,
         page=None,
@@ -128,11 +128,11 @@ def get_all_admin_users_default(api):
 
 
 @pytest.mark.admin_user
-def test_get_all_admin_users_default(api, validator):
+def test_get_admin_users_default(api, validator):
     try:
-        assert is_valid_get_all_admin_users(
+        assert is_valid_get_admin_users(
             validator,
-            get_all_admin_users_default(api)
+            get_admin_users_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -1660,15 +1660,15 @@ class GuestUser(object):
             **query_parameters
         )
 
-    def get_all_guest_users(self,
-                            filter=None,
-                            filter_type=None,
-                            page=None,
-                            size=None,
-                            sortasc=None,
-                            sortdsc=None,
-                            headers=None,
-                            **query_parameters):
+    def get_guest_users(self,
+                        filter=None,
+                        filter_type=None,
+                        page=None,
+                        size=None,
+                        sortasc=None,
+                        sortdsc=None,
+                        headers=None,
+                        **query_parameters):
         """This API allows the client to get all the guest users.   Filter:
         [lastName, sponsor, creationTime, personBeingVisited,
         toDate, userName, firstName, emailAddress, phoneNumber,
@@ -1805,11 +1805,11 @@ class GuestUser(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_guest_users <#ciscoisesdk.
+        """Alias for `get_guest_users <#ciscoisesdk.
         api.v3_0_0.guest_user.
-        GuestUser.get_all_guest_users>`_
+        GuestUser.get_guest_users>`_
         """
-        return self.get_all_guest_users(
+        return self.get_guest_users(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -1820,15 +1820,15 @@ class GuestUser(object):
             **query_parameters
         )
 
-    def get_all_guest_users_generator(self,
-                                      filter=None,
-                                      filter_type=None,
-                                      page=None,
-                                      size=None,
-                                      sortasc=None,
-                                      sortdsc=None,
-                                      headers=None,
-                                      **query_parameters):
+    def get_guest_users_generator(self,
+                                  filter=None,
+                                  filter_type=None,
+                                  page=None,
+                                  size=None,
+                                  sortasc=None,
+                                  sortdsc=None,
+                                  headers=None,
+                                  **query_parameters):
         """This API allows the client to get all the guest users.   Filter:
         [lastName, sponsor, creationTime, personBeingVisited,
         toDate, userName, firstName, emailAddress, phoneNumber,
@@ -1900,7 +1900,7 @@ class GuestUser(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_guest_users, dict(
+        yield from get_next_page(self.get_guest_users, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -1920,11 +1920,11 @@ class GuestUser(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_guest_users_generator <#ciscoisesdk.
+        """Alias for `get_guest_users_generator <#ciscoisesdk.
         api.v3_0_0.guest_user.
-        GuestUser.get_all_guest_users_generator>`_
+        GuestUser.get_guest_users_generator>`_
         """
-        yield from get_next_page(self.get_all_guest_users, dict(
+        yield from get_next_page(self.get_guest_users, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

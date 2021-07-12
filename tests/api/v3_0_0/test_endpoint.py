@@ -489,7 +489,7 @@ def test_register_endpoint_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_endpoints(json_schema_validate, obj):
+def is_valid_get_endpoints(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -500,8 +500,8 @@ def is_valid_get_all_endpoints(json_schema_validate, obj):
     return True
 
 
-def get_all_endpoints(api):
-    endpoint_result = api.endpoint.get_all_endpoints(
+def get_endpoints(api):
+    endpoint_result = api.endpoint.get_endpoints(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -513,11 +513,11 @@ def get_all_endpoints(api):
 
 
 @pytest.mark.endpoint
-def test_get_all_endpoints(api, validator):
+def test_get_endpoints(api, validator):
     try:
-        assert is_valid_get_all_endpoints(
+        assert is_valid_get_endpoints(
             validator,
-            get_all_endpoints(api)
+            get_endpoints(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -525,8 +525,8 @@ def test_get_all_endpoints(api, validator):
             raise original_e
 
 
-def get_all_endpoints_default(api):
-    endpoint_result = api.endpoint.get_all_endpoints(
+def get_endpoints_default(api):
+    endpoint_result = api.endpoint.get_endpoints(
         filter=None,
         filter_type=None,
         page=None,
@@ -538,11 +538,11 @@ def get_all_endpoints_default(api):
 
 
 @pytest.mark.endpoint
-def test_get_all_endpoints_default(api, validator):
+def test_get_endpoints_default(api, validator):
     try:
-        assert is_valid_get_all_endpoints(
+        assert is_valid_get_endpoints(
             validator,
-            get_all_endpoints_default(api)
+            get_endpoints_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

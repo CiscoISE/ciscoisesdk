@@ -680,7 +680,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def node_deployment_get_all_nodes_response(self):
+    def node_deployment_get_nodes_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1220,7 +1220,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def anc_endpoint_get_all_anc_endpoint_response(self):
+    def anc_endpoint_get_anc_endpoint_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1382,7 +1382,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def anc_policy_get_all_anc_policy_response(self):
+    def anc_policy_get_anc_policy_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1544,7 +1544,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def node_details_get_all_node_details_response(self):
+    def node_details_get_node_details_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1616,7 +1616,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def psn_node_details_with_radius_service_get_all_session_service_node_response(self):
+    def psn_node_details_with_radius_service_get_session_service_node_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1652,7 +1652,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def pull_deployment_info_get_all_deployment_info_response(self):
+    def pull_deployment_info_get_deployment_info_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1760,7 +1760,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def px_grid_node_get_all_px_grid_node_response(self):
+    def px_grid_node_get_px_grid_node_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1850,7 +1850,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def support_bundle_status_get_all_support_bundle_status_response(self):
+    def support_bundle_status_get_support_bundle_status_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2012,7 +2012,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_delete_csr_response(self):
+    def certificates_delete_csr_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2300,7 +2300,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authentication_rules_get_device_admin_policy_by_id_authentication_rule_list_response(self):
+    def device_administration_authentication_rules_get_device_admin_authentication_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2318,7 +2318,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authentication_rules_create_device_admin_policy_by_id_authentication_rule_response(self):
+    def device_administration_authentication_rules_create_device_admin_authentication_rule_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2336,7 +2336,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authentication_rules_reset_hit_counts_device_admin_policy_by_id_authentication_rules_response(self):
+    def device_administration_authentication_rules_reset_hit_counts_device_admin_authentication_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2354,7 +2354,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authentication_rules_get_device_admin_policy_by_id_authentication_rule_by_id_response(self):
+    def device_administration_authentication_rules_get_device_admin_authentication_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2372,7 +2372,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authentication_rules_update_device_admin_policy_by_id_authentication_rule_by_id_response(self):
+    def device_administration_authentication_rules_update_device_admin_authentication_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2390,7 +2390,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authentication_rules_delete_device_admin_policy_by_id_authentication_rule_by_id_response(self):
+    def device_administration_authentication_rules_delete_device_admin_authentication_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2408,7 +2408,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_exception_rules_get_device_admin_policy_by_id_local_exception_rule_list_response(self):
+    def device_administration_authorization_exception_rules_get_device_admin_local_exception_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2426,7 +2426,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_exception_rules_create_device_admin_policy_by_id_local_exception_rule_response(self):
+    def device_administration_authorization_exception_rules_create_device_admin_local_exception_rule_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2444,7 +2444,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_exception_rules_reset_hit_counts_device_admin_policy_by_id_local_exceptions_response(self):
+    def device_administration_authorization_exception_rules_reset_hit_counts_device_admin_local_exceptions_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2462,7 +2462,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_exception_rules_get_device_admin_policy_by_id_local_exception_rule_by_id_response(self):
+    def device_administration_authorization_exception_rules_get_device_admin_local_exception_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2480,7 +2480,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_exception_rules_update_device_admin_policy_by_id_local_exception_rule_by_id_response(self):
+    def device_administration_authorization_exception_rules_update_device_admin_local_exception_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2498,7 +2498,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_exception_rules_delete_device_admin_policy_by_id_local_exception_rule_by_id_response(self):
+    def device_administration_authorization_exception_rules_delete_device_admin_local_exception_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2516,7 +2516,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_rule_list_response(self):
+    def device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2624,7 +2624,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_rules_get_device_admin_policy_by_id_authorization_rule_list_response(self):
+    def device_administration_authorization_rules_get_device_admin_authorization_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2642,7 +2642,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_rules_create_device_admin_policy_by_id_authorization_rule_response(self):
+    def device_administration_authorization_rules_create_device_admin_authorization_rule_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2660,7 +2660,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_rules_reset_hit_counts_device_admin_policy_by_id_authorization_rules_response(self):
+    def device_administration_authorization_rules_reset_hit_counts_device_admin_authorization_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2678,7 +2678,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_rules_get_device_admin_policy_by_id_authorization_rule_by_id_response(self):
+    def device_administration_authorization_rules_get_device_admin_authorization_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2696,7 +2696,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_rules_update_device_admin_policy_by_id_authorization_rule_by_id_response(self):
+    def device_administration_authorization_rules_update_device_admin_authorization_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2714,7 +2714,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_authorization_rules_delete_device_admin_policy_by_id_authorization_rule_by_id_response(self):
+    def device_administration_authorization_rules_delete_device_admin_authorization_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2984,7 +2984,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_dictionary_attributes_list_get_device_admin_dictionaries_policyset_response(self):
+    def device_administration_dictionary_attributes_list_get_device_admin_dictionaries_policy_set_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3344,7 +3344,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authentication_rules_get_network_access_policy_by_id_authentication_rule_list_response(self):
+    def network_access_authentication_rules_get_network_access_authentication_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3362,7 +3362,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authentication_rules_create_network_access_policy_by_id_authentication_rule_response(self):
+    def network_access_authentication_rules_create_network_access_authentication_rule_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3380,7 +3380,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authentication_rules_reset_hit_counts_network_access_policy_by_id_authentication_rules_response(self):
+    def network_access_authentication_rules_reset_hit_counts_network_access_authentication_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3398,7 +3398,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authentication_rules_get_network_access_policy_by_id_authentication_rule_by_id_response(self):
+    def network_access_authentication_rules_get_network_access_authentication_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3416,7 +3416,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authentication_rules_update_network_access_policy_by_id_authentication_rule_by_id_response(self):
+    def network_access_authentication_rules_update_network_access_authentication_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3434,7 +3434,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authentication_rules_delete_network_access_policy_by_id_authentication_rule_by_id_response(self):
+    def network_access_authentication_rules_delete_network_access_authentication_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3452,7 +3452,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_exception_rules_get_network_access_policy_by_id_local_exception_rule_list_response(self):
+    def network_access_authorization_exception_rules_get_network_access_local_exception_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3470,7 +3470,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_exception_rules_create_network_access_policy_by_id_local_exception_rule_response(self):
+    def network_access_authorization_exception_rules_create_network_access_local_exception_rule_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3488,7 +3488,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_exception_rules_reset_hit_counts_network_access_policy_by_id_local_exceptions_response(self):
+    def network_access_authorization_exception_rules_reset_hit_counts_network_access_local_exceptions_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3506,7 +3506,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_exception_rules_get_network_access_policy_by_id_local_exception_rule_by_id_response(self):
+    def network_access_authorization_exception_rules_get_network_access_local_exception_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3524,7 +3524,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_exception_rules_update_network_access_policy_by_id_local_exception_rule_by_id_response(self):
+    def network_access_authorization_exception_rules_update_network_access_local_exception_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3542,7 +3542,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_exception_rules_delete_network_access_policy_by_id_local_exception_rule_by_id_response(self):
+    def network_access_authorization_exception_rules_delete_network_access_local_exception_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3560,7 +3560,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rule_list_response(self):
+    def network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3668,7 +3668,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_rules_get_network_access_policy_by_id_authorization_rule_list_response(self):
+    def network_access_authorization_rules_get_network_access_authorization_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3686,7 +3686,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_rules_create_network_access_policy_by_id_authorization_rule_response(self):
+    def network_access_authorization_rules_create_network_access_authorization_rule_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3704,7 +3704,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_rules_reset_hit_counts_network_access_policy_by_id_authorization_rules_response(self):
+    def network_access_authorization_rules_reset_hit_counts_network_access_authorization_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3722,7 +3722,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_rules_get_network_access_policy_by_id_authorization_rule_by_id_response(self):
+    def network_access_authorization_rules_get_network_access_authorization_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3740,7 +3740,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_rules_update_network_access_policy_by_id_authorization_rule_by_id_response(self):
+    def network_access_authorization_rules_update_network_access_authorization_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3758,7 +3758,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_authorization_rules_delete_network_access_policy_by_id_authorization_rule_by_id_response(self):
+    def network_access_authorization_rules_delete_network_access_authorization_rule_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4190,7 +4190,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_dictionary_attributes_list_get_network_access_dictionaries_policyset_response(self):
+    def network_access_dictionary_attributes_list_get_network_access_dictionaries_policy_set_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4568,7 +4568,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def aci_bindings_get_all_aci_bindings_response(self):
+    def aci_bindings_get_aci_bindings_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4604,7 +4604,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def aci_settings_get_all_aci_settings_response(self):
+    def aci_settings_get_aci_settings_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4694,7 +4694,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def active_directory_get_all_user_groups_response(self):
+    def active_directory_get_user_groups_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4766,7 +4766,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def active_directory_get_all_trusted_domains_response(self):
+    def active_directory_get_trusted_domains_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4892,7 +4892,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def active_directory_get_all_active_directory_response(self):
+    def active_directory_get_active_directory_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4964,7 +4964,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def admin_user_get_all_admin_users_response(self):
+    def admin_user_get_admin_users_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -5072,7 +5072,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def allowed_protocols_get_all_allowed_protocols_response(self):
+    def allowed_protocols_get_allowed_protocols_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -5198,7 +5198,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def authorization_profile_get_all_authorization_profiles_response(self):
+    def authorization_profile_get_authorization_profiles_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -5306,7 +5306,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def byod_portal_get_all_byod_portal_response(self):
+    def byod_portal_get_byod_portal_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -5414,7 +5414,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificate_profile_get_all_certificate_profile_response(self):
+    def certificate_profile_get_certificate_profile_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -5504,7 +5504,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificate_template_get_all_certificate_template_response(self):
+    def certificate_template_get_certificate_template_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -5594,7 +5594,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def downloadable_acl_get_all_downloadable_acl_response(self):
+    def downloadable_acl_get_downloadable_acl_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -5756,7 +5756,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def egress_matrix_cell_get_all_egress_matrix_cell_response(self):
+    def egress_matrix_cell_get_egress_matrix_cell_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -5954,7 +5954,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def endpoint_identity_group_get_all_endpoint_groups_response(self):
+    def endpoint_identity_group_get_endpoint_groups_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -6152,7 +6152,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def endpoint_get_all_endpoints_response(self):
+    def endpoint_get_endpoints_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -6314,7 +6314,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def external_radius_server_get_all_external_radius_server_response(self):
+    def external_radius_server_get_external_radius_server_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -6422,7 +6422,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def filter_policy_get_all_filter_policy_response(self):
+    def filter_policy_get_filter_policy_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -6494,7 +6494,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def guest_location_get_all_guest_location_response(self):
+    def guest_location_get_guest_location_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -6566,7 +6566,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def guest_smtp_notification_configuration_get_all_guest_smtp_notification_settings_response(self):
+    def guest_smtp_notification_configuration_get_guest_smtp_notification_settings_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -6674,7 +6674,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def guest_ssid_get_all_guest_ssid_response(self):
+    def guest_ssid_get_guest_ssid_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -6818,7 +6818,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def guest_type_get_all_guest_type_response(self):
+    def guest_type_get_guest_type_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7142,7 +7142,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def guest_user_get_all_guest_users_response(self):
+    def guest_user_get_guest_users_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7304,7 +7304,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def hotspot_portal_get_all_hotspot_portal_response(self):
+    def hotspot_portal_get_hotspot_portal_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7412,7 +7412,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def identity_groups_get_all_identity_groups_response(self):
+    def identity_groups_get_identity_groups_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7538,7 +7538,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def identity_sequence_get_all_identity_sequence_response(self):
+    def identity_sequence_get_identity_sequence_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7700,7 +7700,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def internal_user_get_all_internal_user_response(self):
+    def internal_user_get_internal_user_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -7862,7 +7862,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def ip_to_sgt_mapping_group_get_all_ip_to_sgt_mapping_group_response(self):
+    def ip_to_sgt_mapping_group_get_ip_to_sgt_mapping_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8060,7 +8060,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def ip_to_sgt_mapping_get_all_ip_to_sgt_mapping_response(self):
+    def ip_to_sgt_mapping_get_ip_to_sgt_mapping_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8204,7 +8204,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def my_device_portal_get_all_my_device_portal_response(self):
+    def my_device_portal_get_my_device_portal_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8312,7 +8312,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def native_supplicant_profile_get_all_native_supplicant_profile_response(self):
+    def native_supplicant_profile_get_native_supplicant_profile_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8420,7 +8420,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_device_group_get_all_network_device_group_response(self):
+    def network_device_group_get_network_device_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8582,7 +8582,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_device_get_all_network_device_response(self):
+    def network_device_get_network_device_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8708,7 +8708,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def portal_global_setting_get_all_portal_global_settings_response(self):
+    def portal_global_setting_get_portal_global_settings_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8798,7 +8798,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def portal_theme_get_all_portal_themes_response(self):
+    def portal_theme_get_portal_themes_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8870,7 +8870,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def portal_get_all_portals_response(self):
+    def portal_get_portals_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -8924,7 +8924,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def profiler_profile_get_all_profiler_profiles_response(self):
+    def profiler_profile_get_profiler_profiles_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9050,7 +9050,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def radius_server_sequence_get_all_radius_server_sequence_response(self):
+    def radius_server_sequence_get_radius_server_sequence_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9212,7 +9212,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def restid_store_get_all_rest_id_store_response(self):
+    def restid_store_get_rest_id_store_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9320,7 +9320,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def security_groups_acls_get_all_security_groups_acl_response(self):
+    def security_groups_acls_get_security_groups_acl_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9464,7 +9464,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def security_group_to_virtual_network_get_all_security_groups_to_vn_to_vlan_response(self):
+    def security_group_to_virtual_network_get_security_groups_to_vn_to_vlan_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9608,7 +9608,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def security_groups_get_all_security_groups_response(self):
+    def security_groups_get_security_groups_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9752,7 +9752,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def self_registered_portal_get_all_self_registered_portals_response(self):
+    def self_registered_portal_get_self_registered_portals_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9806,7 +9806,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def sms_provider_get_all_sms_provider_response(self):
+    def sms_provider_get_sms_provider_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9842,7 +9842,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def sponsor_group_member_get_all_sponsor_group_member_response(self):
+    def sponsor_group_member_get_sponsor_group_member_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -9932,7 +9932,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def sponsor_group_get_all_sponsor_group_response(self):
+    def sponsor_group_get_sponsor_group_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -10040,7 +10040,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def sponsor_portal_get_all_sponsor_portal_response(self):
+    def sponsor_portal_get_sponsor_portal_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -10148,7 +10148,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def sponsored_guest_portal_get_all_sponsored_guest_portals_response(self):
+    def sponsored_guest_portal_get_sponsored_guest_portals_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -10256,7 +10256,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def sxp_connections_get_all_sxp_connections_response(self):
+    def sxp_connections_get_sxp_connections_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -10400,7 +10400,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def sxp_local_bindings_get_all_sxp_local_bindings_response(self):
+    def sxp_local_bindings_get_sxp_local_bindings_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -10526,7 +10526,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def sxp_vpns_get_all_sxp_vpns_response(self):
+    def sxp_vpns_get_sxp_vpns_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -10724,7 +10724,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def tacacs_command_sets_get_all_tacacs_command_sets_response(self):
+    def tacacs_command_sets_get_tacacs_command_sets_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -10850,7 +10850,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def tacacs_external_servers_get_all_tacacs_external_servers_response(self):
+    def tacacs_external_servers_get_tacacs_external_servers_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -10976,7 +10976,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def tacacs_profile_get_all_tacacs_profile_response(self):
+    def tacacs_profile_get_tacacs_profile_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -11102,7 +11102,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def tacacs_server_sequence_get_all_tacacs_server_sequence_response(self):
+    def tacacs_server_sequence_get_tacacs_server_sequence_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -11174,7 +11174,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def telemetry_information_get_all_telemetry_information_response(self):
+    def telemetry_information_get_telemetry_information_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -12025,7 +12025,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NODE_DEPLOYMENT_fa838e78175e51b4bcfb0821c19b81b7():
-            self.node_deployment_get_all_nodes_response()
+            self.node_deployment_get_nodes_response()
             return
 
         if self.matches_NODE_DEPLOYMENT_ae8d7c8f33bb52ceb04880845f2f45ba():
@@ -12069,7 +12069,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ANC_ENDPOINT_502e681462295b8b8faea9ce6099ff0c():
-            self.anc_endpoint_get_all_anc_endpoint_response()
+            self.anc_endpoint_get_anc_endpoint_response()
             return
 
         if self.matches_ANC_ENDPOINT_d5eb6cea45635ef58f5bc624de004f16():
@@ -12089,7 +12089,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ANC_POLICY_440813c9722c56108cac8ca50bf8f01c():
-            self.anc_policy_get_all_anc_policy_response()
+            self.anc_policy_get_anc_policy_response()
             return
 
         if self.matches_ANC_POLICY_b01a12e2b55e582084fab915465bf962():
@@ -12113,7 +12113,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NODE_DETAILS_775d9b8599f55fc4a1bd9d6ac02619eb():
-            self.node_details_get_all_node_details_response()
+            self.node_details_get_node_details_response()
             return
 
         if self.matches_NODE_DETAILS_ca9a3d8217d5507aa11020bee82ef228():
@@ -12129,7 +12129,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_66dccbf248575cbeb3cd3dda5cdbcf20():
-            self.psn_node_details_with_radius_service_get_all_session_service_node_response()
+            self.psn_node_details_with_radius_service_get_session_service_node_response()
             return
 
         if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_05c0bfee23f95034842993a83d77c4e4():
@@ -12137,7 +12137,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_PULL_DEPLOYMENT_INFO_f9159c9f9a1951568daee7080e1dda47():
-            self.pull_deployment_info_get_all_deployment_info_response()
+            self.pull_deployment_info_get_deployment_info_response()
             return
 
         if self.matches_PULL_DEPLOYMENT_INFO_8698cc09209259dcbde7c851b5a6eda6():
@@ -12153,7 +12153,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_PX_GRID_NODE_52661028d97156379640002f79b2007c():
-            self.px_grid_node_get_all_px_grid_node_response()
+            self.px_grid_node_get_px_grid_node_response()
             return
 
         if self.matches_PX_GRID_NODE_73c2962d70ef5964be55cfeae68e5ba6():
@@ -12169,7 +12169,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SUPPORT_BUNDLE_STATUS_505300e162f051d58c6ae9d5e3851780():
-            self.support_bundle_status_get_all_support_bundle_status_response()
+            self.support_bundle_status_get_support_bundle_status_response()
             return
 
         if self.matches_SUPPORT_BUNDLE_STATUS_7ae30c71acc45385a6b3e9a49a8281a9():
@@ -12213,23 +12213,23 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994():
-            self.device_administration_authentication_rules_get_device_admin_policy_by_id_authentication_rule_list_response()
+            self.device_administration_authentication_rules_get_device_admin_authentication_rules_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a():
-            self.device_administration_authentication_rules_get_device_admin_policy_by_id_authentication_rule_by_id_response()
+            self.device_administration_authentication_rules_get_device_admin_authentication_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7():
-            self.device_administration_authorization_exception_rules_get_device_admin_policy_by_id_local_exception_rule_list_response()
+            self.device_administration_authorization_exception_rules_get_device_admin_local_exception_rules_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46():
-            self.device_administration_authorization_exception_rules_get_device_admin_policy_by_id_local_exception_rule_by_id_response()
+            self.device_administration_authorization_exception_rules_get_device_admin_local_exception_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3():
-            self.device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_rule_list_response()
+            self.device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_rules_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c():
@@ -12237,11 +12237,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046():
-            self.device_administration_authorization_rules_get_device_admin_policy_by_id_authorization_rule_list_response()
+            self.device_administration_authorization_rules_get_device_admin_authorization_rules_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19():
-            self.device_administration_authorization_rules_get_device_admin_policy_by_id_authorization_rule_by_id_response()
+            self.device_administration_authorization_rules_get_device_admin_authorization_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2():
@@ -12281,7 +12281,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2():
-            self.device_administration_dictionary_attributes_list_get_device_admin_dictionaries_policyset_response()
+            self.device_administration_dictionary_attributes_list_get_device_admin_dictionaries_policy_set_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6():
@@ -12321,23 +12321,23 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc():
-            self.network_access_authentication_rules_get_network_access_policy_by_id_authentication_rule_list_response()
+            self.network_access_authentication_rules_get_network_access_authentication_rules_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5():
-            self.network_access_authentication_rules_get_network_access_policy_by_id_authentication_rule_by_id_response()
+            self.network_access_authentication_rules_get_network_access_authentication_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189():
-            self.network_access_authorization_exception_rules_get_network_access_policy_by_id_local_exception_rule_list_response()
+            self.network_access_authorization_exception_rules_get_network_access_local_exception_rules_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e():
-            self.network_access_authorization_exception_rules_get_network_access_policy_by_id_local_exception_rule_by_id_response()
+            self.network_access_authorization_exception_rules_get_network_access_local_exception_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf():
-            self.network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rule_list_response()
+            self.network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rules_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10():
@@ -12345,11 +12345,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369():
-            self.network_access_authorization_rules_get_network_access_policy_by_id_authorization_rule_list_response()
+            self.network_access_authorization_rules_get_network_access_authorization_rules_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880():
-            self.network_access_authorization_rules_get_network_access_policy_by_id_authorization_rule_by_id_response()
+            self.network_access_authorization_rules_get_network_access_authorization_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af():
@@ -12401,7 +12401,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136():
-            self.network_access_dictionary_attributes_list_get_network_access_dictionaries_policyset_response()
+            self.network_access_dictionary_attributes_list_get_network_access_dictionaries_policy_set_response()
             return
 
         if self.matches_NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f():
@@ -12445,7 +12445,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ACI_BINDINGS_3d1448851f0154d0b6e9c856ec6cc6f0():
-            self.aci_bindings_get_all_aci_bindings_response()
+            self.aci_bindings_get_aci_bindings_response()
             return
 
         if self.matches_ACI_BINDINGS_d74b5214bad656c98f21e4968661c3c0():
@@ -12453,7 +12453,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ACI_SETTINGS_2ea5c865993b56f48f7f43475294a20c():
-            self.aci_settings_get_all_aci_settings_response()
+            self.aci_settings_get_aci_settings_response()
             return
 
         if self.matches_ACI_SETTINGS_462410ea47f65521bcf0ab949b5d72b5():
@@ -12469,7 +12469,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ACTIVE_DIRECTORY_c8dbec9679d453f78cb47d894c507a7b():
-            self.active_directory_get_all_active_directory_response()
+            self.active_directory_get_active_directory_response()
             return
 
         if self.matches_ACTIVE_DIRECTORY_c2d0923990e35be1882e4dee000254a9():
@@ -12481,7 +12481,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ADMIN_USER_463a109d72fa5ac0a64d357302f26669():
-            self.admin_user_get_all_admin_users_response()
+            self.admin_user_get_admin_users_response()
             return
 
         if self.matches_ADMIN_USER_9535a5edeb5057839d702e0f490dc28f():
@@ -12497,7 +12497,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ALLOWED_PROTOCOLS_d82fe0f9e4635b74af809beaaf98bd07():
-            self.allowed_protocols_get_all_allowed_protocols_response()
+            self.allowed_protocols_get_allowed_protocols_response()
             return
 
         if self.matches_ALLOWED_PROTOCOLS_c0f61393474f5744ab0a263a232d3b96():
@@ -12513,7 +12513,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_AUTHORIZATION_PROFILE_2e232c5666ab5ed783588f413c3bc644():
-            self.authorization_profile_get_all_authorization_profiles_response()
+            self.authorization_profile_get_authorization_profiles_response()
             return
 
         if self.matches_AUTHORIZATION_PROFILE_3bee8aa3a03a57a3a5eb1418fe1250b6():
@@ -12525,7 +12525,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_BYOD_PORTAL_41a23b580495514394b125800e073c9a():
-            self.byod_portal_get_all_byod_portal_response()
+            self.byod_portal_get_byod_portal_response()
             return
 
         if self.matches_BYOD_PORTAL_c5d2d9d8c20b58049cd3326850f2292f():
@@ -12541,7 +12541,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATE_PROFILE_3be38700993b5f70acfdc8e44f5558d8():
-            self.certificate_profile_get_all_certificate_profile_response()
+            self.certificate_profile_get_certificate_profile_response()
             return
 
         if self.matches_CERTIFICATE_PROFILE_8e00be3b97b85829bef60c09eaa922ac():
@@ -12557,7 +12557,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATE_TEMPLATE_dc1da5c3912a5117878160e27f6b533a():
-            self.certificate_template_get_all_certificate_template_response()
+            self.certificate_template_get_certificate_template_response()
             return
 
         if self.matches_CERTIFICATE_TEMPLATE_3f126f916efd575dbc9acae4ab2a1e4e():
@@ -12569,7 +12569,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DOWNLOADABLE_ACL_9191bc200af85d598885a990ff9bcbf8():
-            self.downloadable_acl_get_all_downloadable_acl_response()
+            self.downloadable_acl_get_downloadable_acl_response()
             return
 
         if self.matches_DOWNLOADABLE_ACL_d10b7914625e5da0861cbeab4cf6440e():
@@ -12581,7 +12581,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_EGRESS_MATRIX_CELL_c5e52706e7095a81b8d32f3024e01cf6():
-            self.egress_matrix_cell_get_all_egress_matrix_cell_response()
+            self.egress_matrix_cell_get_egress_matrix_cell_response()
             return
 
         if self.matches_EGRESS_MATRIX_CELL_703c9da5c04b59358ac8bb1034340df4():
@@ -12605,7 +12605,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ENDPOINT_IDENTITY_GROUP_cd429bb8ff3556a796570480f742028b():
-            self.endpoint_identity_group_get_all_endpoint_groups_response()
+            self.endpoint_identity_group_get_endpoint_groups_response()
             return
 
         if self.matches_ENDPOINT_IDENTITY_GROUP_1d553cc3b48d5689ac45a582a5d98f9b():
@@ -12625,7 +12625,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ENDPOINT_719765b7f7285d71be4645db91b0fc74():
-            self.endpoint_get_all_endpoints_response()
+            self.endpoint_get_endpoints_response()
             return
 
         if self.matches_ENDPOINT_85adcb1d998d54838add3b4d644242af():
@@ -12645,7 +12645,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_EXTERNAL_RADIUS_SERVER_9b641825a9555ecba105cabbdf50fc78():
-            self.external_radius_server_get_all_external_radius_server_response()
+            self.external_radius_server_get_external_radius_server_response()
             return
 
         if self.matches_EXTERNAL_RADIUS_SERVER_a6c3ffe72746500b88be3a5418ead4ba():
@@ -12657,7 +12657,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_FILTER_POLICY_250a599ae00f5e47b9ece23cd3183d1c():
-            self.filter_policy_get_all_filter_policy_response()
+            self.filter_policy_get_filter_policy_response()
             return
 
         if self.matches_FILTER_POLICY_209810ed6cad570d90243b1e0dbbe27b():
@@ -12669,7 +12669,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_GUEST_LOCATION_13ea10f18c3655db84657ad855bf6972():
-            self.guest_location_get_all_guest_location_response()
+            self.guest_location_get_guest_location_response()
             return
 
         if self.matches_GUEST_LOCATION_fdfe562af248561f981549b96f8ed397():
@@ -12681,7 +12681,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_GUEST_SMTP_NOTIFICATION_CONFIGURATION_51e4c74e9b4e559e95c73e81183a6c7a():
-            self.guest_smtp_notification_configuration_get_all_guest_smtp_notification_settings_response()
+            self.guest_smtp_notification_configuration_get_guest_smtp_notification_settings_response()
             return
 
         if self.matches_GUEST_SMTP_NOTIFICATION_CONFIGURATION_0a0c0e67aead55a2b4db67e9d068351a():
@@ -12693,7 +12693,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_GUEST_SSID_c37778a2faa5552894cc60cec13c56c7():
-            self.guest_ssid_get_all_guest_ssid_response()
+            self.guest_ssid_get_guest_ssid_response()
             return
 
         if self.matches_GUEST_SSID_b400ebaa2d1f51398d3b32e7a6e4ba35():
@@ -12705,7 +12705,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_GUEST_TYPE_0f41a1e47105581fabf212f259626903():
-            self.guest_type_get_all_guest_type_response()
+            self.guest_type_get_guest_type_response()
             return
 
         if self.matches_GUEST_TYPE_a6bfaedfca185fb7b6a86621e866a5f6():
@@ -12721,7 +12721,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_GUEST_USER_1a5abd33eeaa52e39e926472751ef79e():
-            self.guest_user_get_all_guest_users_response()
+            self.guest_user_get_guest_users_response()
             return
 
         if self.matches_GUEST_USER_76abe22ea0c45f619731bd568c9f57f4():
@@ -12737,7 +12737,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_HOTSPOT_PORTAL_d912b1c21e2b5dca8b56332d3a8ad13d():
-            self.hotspot_portal_get_all_hotspot_portal_response()
+            self.hotspot_portal_get_hotspot_portal_response()
             return
 
         if self.matches_HOTSPOT_PORTAL_91257d81be4f5a0486cc085499c19b1c():
@@ -12753,7 +12753,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_IDENTITY_GROUPS_9d904c521059563490c4a93871b33d51():
-            self.identity_groups_get_all_identity_groups_response()
+            self.identity_groups_get_identity_groups_response()
             return
 
         if self.matches_IDENTITY_GROUPS_aab79aee0b455bfea8a6d7c6464a2a09():
@@ -12769,7 +12769,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_IDENTITY_SEQUENCE_feb30ca768795eed82c118d009d7bcd4():
-            self.identity_sequence_get_all_identity_sequence_response()
+            self.identity_sequence_get_identity_sequence_response()
             return
 
         if self.matches_IDENTITY_SEQUENCE_dc4c840ad93e53d591ca3a39184e6dde():
@@ -12785,7 +12785,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_INTERNAL_USER_3ccba98a61555ae495f6a05284e3b5ae():
-            self.internal_user_get_all_internal_user_response()
+            self.internal_user_get_internal_user_response()
             return
 
         if self.matches_INTERNAL_USER_2af99828533e58a2b84996b85bacc9ff():
@@ -12797,7 +12797,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_IP_TO_SGT_MAPPING_GROUP_680a1544a7125003b7803c0ed383f4bf():
-            self.ip_to_sgt_mapping_group_get_all_ip_to_sgt_mapping_group_response()
+            self.ip_to_sgt_mapping_group_get_ip_to_sgt_mapping_group_response()
             return
 
         if self.matches_IP_TO_SGT_MAPPING_GROUP_14c9a2546739540eb2c1cb7c411836cb():
@@ -12813,7 +12813,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_IP_TO_SGT_MAPPING_10cd9e91565f5c74b9f32ff0e5be6f17():
-            self.ip_to_sgt_mapping_get_all_ip_to_sgt_mapping_response()
+            self.ip_to_sgt_mapping_get_ip_to_sgt_mapping_response()
             return
 
         if self.matches_IP_TO_SGT_MAPPING_63042762af0b5041b56b12c5c08cc53e():
@@ -12829,7 +12829,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_MY_DEVICE_PORTAL_90a71ccf29f05ee29af909b07bb9c754():
-            self.my_device_portal_get_all_my_device_portal_response()
+            self.my_device_portal_get_my_device_portal_response()
             return
 
         if self.matches_MY_DEVICE_PORTAL_5e356376df735e72aa55332951806f42():
@@ -12841,7 +12841,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NATIVE_SUPPLICANT_PROFILE_6470fa9802505d7bbdf85b951581db47():
-            self.native_supplicant_profile_get_all_native_supplicant_profile_response()
+            self.native_supplicant_profile_get_native_supplicant_profile_response()
             return
 
         if self.matches_NATIVE_SUPPLICANT_PROFILE_f577c55d36b05178b0275dd88c71e118():
@@ -12857,7 +12857,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_DEVICE_GROUP_2a1af553d663556ca429a10ed82effda():
-            self.network_device_group_get_all_network_device_group_response()
+            self.network_device_group_get_network_device_group_response()
             return
 
         if self.matches_NETWORK_DEVICE_GROUP_163f22d64bd4557d856a66ad6599d2d1():
@@ -12873,7 +12873,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_DEVICE_48b986fa0f0d54ef98eb135eeb88808a():
-            self.network_device_get_all_network_device_response()
+            self.network_device_get_network_device_response()
             return
 
         if self.matches_NETWORK_DEVICE_682601e571185718b6ef6e78bfbfdf68():
@@ -12889,7 +12889,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_PORTAL_GLOBAL_SETTING_e9ce4a1e1cf955f098343646760e9d58():
-            self.portal_global_setting_get_all_portal_global_settings_response()
+            self.portal_global_setting_get_portal_global_settings_response()
             return
 
         if self.matches_PORTAL_GLOBAL_SETTING_a9a99c0aacce5a8181e2ff79bf99ae20():
@@ -12901,7 +12901,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_PORTAL_THEME_5ad233598ed75e0c97ddd3c3f1af50e4():
-            self.portal_theme_get_all_portal_themes_response()
+            self.portal_theme_get_portal_themes_response()
             return
 
         if self.matches_PORTAL_THEME_b6bf4f02759a5e7f968896a30575e4c6():
@@ -12913,7 +12913,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_PORTAL_2a72ae8af1075d0c94912b008003b13e():
-            self.portal_get_all_portals_response()
+            self.portal_get_portals_response()
             return
 
         if self.matches_PORTAL_1d754ad0697d54c98c2690c5043e0be6():
@@ -12925,7 +12925,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_PROFILER_PROFILE_688d53f6d85a5d609d49bd38cfd65e57():
-            self.profiler_profile_get_all_profiler_profiles_response()
+            self.profiler_profile_get_profiler_profiles_response()
             return
 
         if self.matches_PROFILER_PROFILE_de35c041dc1456cca42b7b2e32a4713d():
@@ -12941,7 +12941,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_RADIUS_SERVER_SEQUENCE_c6c330dace185a548f70f4e5d67776ea():
-            self.radius_server_sequence_get_all_radius_server_sequence_response()
+            self.radius_server_sequence_get_radius_server_sequence_response()
             return
 
         if self.matches_RADIUS_SERVER_SEQUENCE_8fb1a72ded19590fa0aa85fc59ea8cfc():
@@ -12957,7 +12957,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_RESTID_STORE_d810359e31e453ac8145981b7d5bb7e4():
-            self.restid_store_get_all_rest_id_store_response()
+            self.restid_store_get_rest_id_store_response()
             return
 
         if self.matches_RESTID_STORE_1b8c3846fcf751e4b008eb0a011dea4d():
@@ -12969,7 +12969,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SECURITY_GROUPS_ACLS_999b22d6ad9f595ab7e3eee5cf44de8a():
-            self.security_groups_acls_get_all_security_groups_acl_response()
+            self.security_groups_acls_get_security_groups_acl_response()
             return
 
         if self.matches_SECURITY_GROUPS_ACLS_6704e67a1131578aa794d8377da9a1de():
@@ -12985,7 +12985,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SECURITY_GROUP_TO_VIRTUAL_NETWORK_e51b6e745cdb5bdda4de26a27b8d92bb():
-            self.security_group_to_virtual_network_get_all_security_groups_to_vn_to_vlan_response()
+            self.security_group_to_virtual_network_get_security_groups_to_vn_to_vlan_response()
             return
 
         if self.matches_SECURITY_GROUP_TO_VIRTUAL_NETWORK_7b2811387f4e55c8839c94ea241a3236():
@@ -13001,7 +13001,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SECURITY_GROUPS_b3c356cfc48a5da4b13b8ecbae5748b7():
-            self.security_groups_get_all_security_groups_response()
+            self.security_groups_get_security_groups_response()
             return
 
         if self.matches_SECURITY_GROUPS_ad87f41ef4845f19a19bfadac0928ae6():
@@ -13017,7 +13017,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SELF_REGISTERED_PORTAL_bb165bd00a6653ac9da440f23ee62ecc():
-            self.self_registered_portal_get_all_self_registered_portals_response()
+            self.self_registered_portal_get_self_registered_portals_response()
             return
 
         if self.matches_SELF_REGISTERED_PORTAL_3d8cc0e6962558c58d263f53b857cff0():
@@ -13025,7 +13025,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SMS_PROVIDER_17daac88943a5cd2bd745c483448e231():
-            self.sms_provider_get_all_sms_provider_response()
+            self.sms_provider_get_sms_provider_response()
             return
 
         if self.matches_SMS_PROVIDER_37250017e20e5400a53280d52487ecd6():
@@ -13033,7 +13033,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SPONSOR_GROUP_MEMBER_020659d6b1385f4cb9381c13a1fa4356():
-            self.sponsor_group_member_get_all_sponsor_group_member_response()
+            self.sponsor_group_member_get_sponsor_group_member_response()
             return
 
         if self.matches_SPONSOR_GROUP_MEMBER_0f7c916a2e265c11b8b8535e8f88c7d1():
@@ -13045,7 +13045,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SPONSOR_GROUP_f1196f1f6fde5978b0522f096926d443():
-            self.sponsor_group_get_all_sponsor_group_response()
+            self.sponsor_group_get_sponsor_group_response()
             return
 
         if self.matches_SPONSOR_GROUP_e8d4001b740751e08cfc19e1fdc5fddf():
@@ -13057,7 +13057,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SPONSOR_PORTAL_69aa24c1260a568b93c283ecd2c3510e():
-            self.sponsor_portal_get_all_sponsor_portal_response()
+            self.sponsor_portal_get_sponsor_portal_response()
             return
 
         if self.matches_SPONSOR_PORTAL_fa39b9cc4834522395edcbe0d6830ae4():
@@ -13069,7 +13069,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SPONSORED_GUEST_PORTAL_97886854bdae59219027b4d40b94fa3d():
-            self.sponsored_guest_portal_get_all_sponsored_guest_portals_response()
+            self.sponsored_guest_portal_get_sponsored_guest_portals_response()
             return
 
         if self.matches_SPONSORED_GUEST_PORTAL_2f1aacc5c48654cebbc4d075dc7dde80():
@@ -13081,7 +13081,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SXP_CONNECTIONS_7c56dfcff6285f9b882c884873d5d6c1():
-            self.sxp_connections_get_all_sxp_connections_response()
+            self.sxp_connections_get_sxp_connections_response()
             return
 
         if self.matches_SXP_CONNECTIONS_c1ceea62877152f6a4cf7ce709f4d0f8():
@@ -13097,7 +13097,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SXP_LOCAL_BINDINGS_91f845bd746a5c00967fe66178c5edbf():
-            self.sxp_local_bindings_get_all_sxp_local_bindings_response()
+            self.sxp_local_bindings_get_sxp_local_bindings_response()
             return
 
         if self.matches_SXP_LOCAL_BINDINGS_ee22235f36835dec897ed6381e3e15fc():
@@ -13113,7 +13113,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_SXP_VPNS_2a93d058764b51dc922e41bbe4ff7cd6():
-            self.sxp_vpns_get_all_sxp_vpns_response()
+            self.sxp_vpns_get_sxp_vpns_response()
             return
 
         if self.matches_SXP_VPNS_36ca67bf525555b086ecee4cb93e9aee():
@@ -13137,7 +13137,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_TACACS_COMMAND_SETS_c9a67d3e9015580f93a52627f19e9916():
-            self.tacacs_command_sets_get_all_tacacs_command_sets_response()
+            self.tacacs_command_sets_get_tacacs_command_sets_response()
             return
 
         if self.matches_TACACS_COMMAND_SETS_5865f0adb7f554eb810687bd8699149a():
@@ -13153,7 +13153,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_TACACS_EXTERNAL_SERVERS_8c6c2a4908ee5f48b7e9cae7572f6a94():
-            self.tacacs_external_servers_get_all_tacacs_external_servers_response()
+            self.tacacs_external_servers_get_tacacs_external_servers_response()
             return
 
         if self.matches_TACACS_EXTERNAL_SERVERS_d3e106d187b35547bf1f0463e4fc832f():
@@ -13169,7 +13169,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_TACACS_PROFILE_ffff1c792bf559ebb39b789421be6966():
-            self.tacacs_profile_get_all_tacacs_profile_response()
+            self.tacacs_profile_get_tacacs_profile_response()
             return
 
         if self.matches_TACACS_PROFILE_17b22259a4415709a97bd2b7646f734f():
@@ -13185,7 +13185,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_TACACS_SERVER_SEQUENCE_54187c189f2f5f6b8bab3931c206c949():
-            self.tacacs_server_sequence_get_all_tacacs_server_sequence_response()
+            self.tacacs_server_sequence_get_tacacs_server_sequence_response()
             return
 
         if self.matches_TACACS_SERVER_SEQUENCE_aa8e1dc47a445d44ab86020f421ee721():
@@ -13197,7 +13197,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_TELEMETRY_INFORMATION_8f1a8ae602c95ac08676391c374274f2():
-            self.telemetry_information_get_all_telemetry_information_response()
+            self.telemetry_information_get_telemetry_information_response()
             return
 
         if self.matches_TELEMETRY_INFORMATION_86338cd5bfb6540cb70f4bc100a96aed():
@@ -13355,19 +13355,19 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c():
-            self.device_administration_authentication_rules_create_device_admin_policy_by_id_authentication_rule_response()
+            self.device_administration_authentication_rules_create_device_admin_authentication_rule_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26():
-            self.device_administration_authentication_rules_reset_hit_counts_device_admin_policy_by_id_authentication_rules_response()
+            self.device_administration_authentication_rules_reset_hit_counts_device_admin_authentication_rules_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252():
-            self.device_administration_authorization_exception_rules_create_device_admin_policy_by_id_local_exception_rule_response()
+            self.device_administration_authorization_exception_rules_create_device_admin_local_exception_rule_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c():
-            self.device_administration_authorization_exception_rules_reset_hit_counts_device_admin_policy_by_id_local_exceptions_response()
+            self.device_administration_authorization_exception_rules_reset_hit_counts_device_admin_local_exceptions_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414():
@@ -13379,11 +13379,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b():
-            self.device_administration_authorization_rules_create_device_admin_policy_by_id_authorization_rule_response()
+            self.device_administration_authorization_rules_create_device_admin_authorization_rule_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563():
-            self.device_administration_authorization_rules_reset_hit_counts_device_admin_policy_by_id_authorization_rules_response()
+            self.device_administration_authorization_rules_reset_hit_counts_device_admin_authorization_rules_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49():
@@ -13407,19 +13407,19 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322():
-            self.network_access_authentication_rules_create_network_access_policy_by_id_authentication_rule_response()
+            self.network_access_authentication_rules_create_network_access_authentication_rule_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66():
-            self.network_access_authentication_rules_reset_hit_counts_network_access_policy_by_id_authentication_rules_response()
+            self.network_access_authentication_rules_reset_hit_counts_network_access_authentication_rules_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c():
-            self.network_access_authorization_exception_rules_create_network_access_policy_by_id_local_exception_rule_response()
+            self.network_access_authorization_exception_rules_create_network_access_local_exception_rule_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2():
-            self.network_access_authorization_exception_rules_reset_hit_counts_network_access_policy_by_id_local_exceptions_response()
+            self.network_access_authorization_exception_rules_reset_hit_counts_network_access_local_exceptions_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3():
@@ -13431,11 +13431,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b():
-            self.network_access_authorization_rules_create_network_access_policy_by_id_authorization_rule_response()
+            self.network_access_authorization_rules_create_network_access_authorization_rule_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe():
-            self.network_access_authorization_rules_reset_hit_counts_network_access_policy_by_id_authorization_rules_response()
+            self.network_access_authorization_rules_reset_hit_counts_network_access_authorization_rules_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6():
@@ -13801,11 +13801,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46():
-            self.device_administration_authentication_rules_update_device_admin_policy_by_id_authentication_rule_by_id_response()
+            self.device_administration_authentication_rules_update_device_admin_authentication_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95():
-            self.device_administration_authorization_exception_rules_update_device_admin_policy_by_id_local_exception_rule_by_id_response()
+            self.device_administration_authorization_exception_rules_update_device_admin_local_exception_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa():
@@ -13813,7 +13813,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912():
-            self.device_administration_authorization_rules_update_device_admin_policy_by_id_authorization_rule_by_id_response()
+            self.device_administration_authorization_rules_update_device_admin_authorization_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05():
@@ -13837,11 +13837,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9():
-            self.network_access_authentication_rules_update_network_access_policy_by_id_authentication_rule_by_id_response()
+            self.network_access_authentication_rules_update_network_access_authentication_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65():
-            self.network_access_authorization_exception_rules_update_network_access_policy_by_id_local_exception_rule_by_id_response()
+            self.network_access_authorization_exception_rules_update_network_access_local_exception_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb():
@@ -13849,7 +13849,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946():
-            self.network_access_authorization_rules_update_network_access_policy_by_id_authorization_rule_by_id_response()
+            self.network_access_authorization_rules_update_network_access_authorization_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9():
@@ -13889,7 +13889,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ACTIVE_DIRECTORY_b839d4dee9b958e48ccef056603e253f():
-            self.active_directory_get_all_user_groups_response()
+            self.active_directory_get_user_groups_response()
             return
 
         if self.matches_ACTIVE_DIRECTORY_14104b05e80058df96e685baa727d578():
@@ -13905,7 +13905,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_ACTIVE_DIRECTORY_7d0ed84901325292ad4e2a91a174f6b2():
-            self.active_directory_get_all_trusted_domains_response()
+            self.active_directory_get_trusted_domains_response()
             return
 
         if self.matches_ACTIVE_DIRECTORY_e84705b918955b53afe61fc37911eb8b():
@@ -14283,7 +14283,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_bf792ec664fa5202beb776556908b0c1():
-            self.certificates_delete_csr_response()
+            self.certificates_delete_csr_by_id_response()
             return
 
         if self.matches_CERTIFICATES_35241dc2eec65ad680a3c5de47cd87c8():
@@ -14295,11 +14295,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09():
-            self.device_administration_authentication_rules_delete_device_admin_policy_by_id_authentication_rule_by_id_response()
+            self.device_administration_authentication_rules_delete_device_admin_authentication_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9():
-            self.device_administration_authorization_exception_rules_delete_device_admin_policy_by_id_local_exception_rule_by_id_response()
+            self.device_administration_authorization_exception_rules_delete_device_admin_local_exception_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8():
@@ -14307,7 +14307,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073():
-            self.device_administration_authorization_rules_delete_device_admin_policy_by_id_authorization_rule_by_id_response()
+            self.device_administration_authorization_rules_delete_device_admin_authorization_rule_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d():
@@ -14331,11 +14331,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1():
-            self.network_access_authentication_rules_delete_network_access_policy_by_id_authentication_rule_by_id_response()
+            self.network_access_authentication_rules_delete_network_access_authentication_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a():
-            self.network_access_authorization_exception_rules_delete_network_access_policy_by_id_local_exception_rule_by_id_response()
+            self.network_access_authorization_exception_rules_delete_network_access_local_exception_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6():
@@ -14343,7 +14343,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2():
-            self.network_access_authorization_rules_delete_network_access_policy_by_id_authorization_rule_by_id_response()
+            self.network_access_authorization_rules_delete_network_access_authorization_rule_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc():

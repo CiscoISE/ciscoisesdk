@@ -159,13 +159,13 @@ class ActiveDirectory(object):
             **query_parameters
         )
 
-    def get_all_user_groups(self,
-                            id,
-                            additional_data=None,
-                            headers=None,
-                            payload=None,
-                            active_validation=True,
-                            **query_parameters):
+    def get_user_groups(self,
+                        id,
+                        additional_data=None,
+                        headers=None,
+                        payload=None,
+                        active_validation=True,
+                        **query_parameters):
         """This API allows the client to get groups of which a given user
         is a member.
 
@@ -629,10 +629,10 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_eae60ece5110590e97ddd910e8144ed2_v3_0_0', _api_response)
 
-    def get_all_trusted_domains(self,
-                                id,
-                                headers=None,
-                                **query_parameters):
+    def get_trusted_domains(self,
+                            id,
+                            headers=None,
+                            **query_parameters):
         """This API gets the list of domains that are accessible through
         the given join point via trust relationships.
 
@@ -1295,11 +1295,11 @@ class ActiveDirectory(object):
 
         return self._object_factory('bpm_b3284240745e5b929c51495fe80bc1c4_v3_0_0', _api_response)
 
-    def get_all_active_directory(self,
-                                 page=None,
-                                 size=None,
-                                 headers=None,
-                                 **query_parameters):
+    def get_active_directory(self,
+                             page=None,
+                             size=None,
+                             headers=None,
+                             **query_parameters):
         """This API lists all the join points for Active Directory domains
         in Cisco ISE.
 
@@ -1378,22 +1378,22 @@ class ActiveDirectory(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_active_directory <#ciscoisesdk.
+        """Alias for `get_active_directory <#ciscoisesdk.
         api.v3_0_0.active_directory.
-        ActiveDirectory.get_all_active_directory>`_
+        ActiveDirectory.get_active_directory>`_
         """
-        return self.get_all_active_directory(
+        return self.get_active_directory(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_active_directory_generator(self,
-                                           page=None,
-                                           size=None,
-                                           headers=None,
-                                           **query_parameters):
+    def get_active_directory_generator(self,
+                                       page=None,
+                                       size=None,
+                                       headers=None,
+                                       **query_parameters):
         """This API lists all the join points for Active Directory domains
         in Cisco ISE.
 
@@ -1423,7 +1423,7 @@ class ActiveDirectory(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_active_directory, dict(
+        yield from get_next_page(self.get_active_directory, dict(
             page=page,
             size=size,
             headers=headers,
@@ -1435,11 +1435,11 @@ class ActiveDirectory(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_active_directory_generator <#ciscoisesdk.
+        """Alias for `get_active_directory_generator <#ciscoisesdk.
         api.v3_0_0.active_directory.
-        ActiveDirectory.get_all_active_directory_generator>`_
+        ActiveDirectory.get_active_directory_generator>`_
         """
-        yield from get_next_page(self.get_all_active_directory, dict(
+        yield from get_next_page(self.get_active_directory, dict(
             page=page,
             size=size,
             headers=headers,

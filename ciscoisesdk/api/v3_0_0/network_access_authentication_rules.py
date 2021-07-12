@@ -74,10 +74,10 @@ class NetworkAccessAuthenticationRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_policy_by_id_authentication_rule_list(self,
-                                                                 policy_id,
-                                                                 headers=None,
-                                                                 **query_parameters):
+    def get_network_access_authentication_rules(self,
+                                                policy_id,
+                                                headers=None,
+                                                **query_parameters):
         """Network Access Get authentication rules.
 
         Args:
@@ -142,28 +142,28 @@ class NetworkAccessAuthenticationRules(object):
                 policy_id,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_network_access_policy_by_id_authentication_rule_list <#ciscoisesdk.
+        """Alias for `get_network_access_authentication_rules <#ciscoisesdk.
         api.v3_0_0.network_access_authentication_rules.
-        NetworkAccessAuthenticationRules.get_network_access_policy_by_id_authentication_rule_list>`_
+        NetworkAccessAuthenticationRules.get_network_access_authentication_rules>`_
         """
-        return self.get_network_access_policy_by_id_authentication_rule_list(
+        return self.get_network_access_authentication_rules(
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def create_network_access_policy_by_id_authentication_rule(self,
-                                                               policy_id,
-                                                               identity_source_name=None,
-                                                               if_auth_fail=None,
-                                                               if_process_fail=None,
-                                                               if_user_not_found=None,
-                                                               link=None,
-                                                               rule=None,
-                                                               headers=None,
-                                                               payload=None,
-                                                               active_validation=True,
-                                                               **query_parameters):
+    def create_network_access_authentication_rule(self,
+                                                  policy_id,
+                                                  identity_source_name=None,
+                                                  if_auth_fail=None,
+                                                  if_process_fail=None,
+                                                  if_user_not_found=None,
+                                                  link=None,
+                                                  rule=None,
+                                                  headers=None,
+                                                  payload=None,
+                                                  active_validation=True,
+                                                  **query_parameters):
         """Network Access Create authentication rule:     Rule must include
         name and condition.     Condition has hierarchical
         structure which define a set of conditions for which
@@ -296,11 +296,11 @@ class NetworkAccessAuthenticationRules(object):
                payload=None,
                active_validation=True,
                **query_parameters):
-        """Alias for `create_network_access_policy_by_id_authentication_rule <#ciscoisesdk.
+        """Alias for `create_network_access_authentication_rule <#ciscoisesdk.
         api.v3_0_0.network_access_authentication_rules.
-        NetworkAccessAuthenticationRules.create_network_access_policy_by_id_authentication_rule>`_
+        NetworkAccessAuthenticationRules.create_network_access_authentication_rule>`_
         """
-        return self.create_network_access_policy_by_id_authentication_rule(
+        return self.create_network_access_authentication_rule(
             policy_id=policy_id,
             identity_source_name=identity_source_name,
             if_auth_fail=if_auth_fail,
@@ -314,10 +314,10 @@ class NetworkAccessAuthenticationRules(object):
             **query_parameters
         )
 
-    def reset_hit_counts_network_access_policy_by_id_authentication_rules(self,
-                                                                          policy_id,
-                                                                          headers=None,
-                                                                          **query_parameters):
+    def reset_hit_counts_network_access_authentication_rules(self,
+                                                             policy_id,
+                                                             headers=None,
+                                                             **query_parameters):
         """Network Access Reset HitCount for Authentication Rules.
 
         Args:
@@ -383,21 +383,21 @@ class NetworkAccessAuthenticationRules(object):
                                policy_id,
                                headers=None,
                                **query_parameters):
-        """Alias for `reset_hit_counts_network_access_policy_by_id_authentication_rules <#ciscoisesdk.
+        """Alias for `reset_hit_counts_network_access_authentication_rules <#ciscoisesdk.
         api.v3_0_0.network_access_authentication_rules.
-        NetworkAccessAuthenticationRules.reset_hit_counts_network_access_policy_by_id_authentication_rules>`_
+        NetworkAccessAuthenticationRules.reset_hit_counts_network_access_authentication_rules>`_
         """
-        return self.reset_hit_counts_network_access_policy_by_id_authentication_rules(
+        return self.reset_hit_counts_network_access_authentication_rules(
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def get_network_access_policy_by_id_authentication_rule_by_id(self,
-                                                                  id,
-                                                                  policy_id,
-                                                                  headers=None,
-                                                                  **query_parameters):
+    def get_network_access_authentication_rule_by_id(self,
+                                                     id,
+                                                     policy_id,
+                                                     headers=None,
+                                                     **query_parameters):
         """Network Access Get rule attributes.
 
         Args:
@@ -467,30 +467,30 @@ class NetworkAccessAuthenticationRules(object):
                   policy_id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_network_access_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        """Alias for `get_network_access_authentication_rule_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_authentication_rules.
-        NetworkAccessAuthenticationRules.get_network_access_policy_by_id_authentication_rule_by_id>`_
+        NetworkAccessAuthenticationRules.get_network_access_authentication_rule_by_id>`_
         """
-        return self.get_network_access_policy_by_id_authentication_rule_by_id(
+        return self.get_network_access_authentication_rule_by_id(
             id=id,
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def update_network_access_policy_by_id_authentication_rule_by_id(self,
-                                                                     id,
-                                                                     policy_id,
-                                                                     identity_source_name=None,
-                                                                     if_auth_fail=None,
-                                                                     if_process_fail=None,
-                                                                     if_user_not_found=None,
-                                                                     link=None,
-                                                                     rule=None,
-                                                                     headers=None,
-                                                                     payload=None,
-                                                                     active_validation=True,
-                                                                     **query_parameters):
+    def update_network_access_authentication_rule_by_id(self,
+                                                        id,
+                                                        policy_id,
+                                                        identity_source_name=None,
+                                                        if_auth_fail=None,
+                                                        if_process_fail=None,
+                                                        if_user_not_found=None,
+                                                        link=None,
+                                                        rule=None,
+                                                        headers=None,
+                                                        payload=None,
+                                                        active_validation=True,
+                                                        **query_parameters):
         """Network Access Update rule.
 
         Args:
@@ -621,11 +621,11 @@ class NetworkAccessAuthenticationRules(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `update_network_access_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        """Alias for `update_network_access_authentication_rule_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_authentication_rules.
-        NetworkAccessAuthenticationRules.update_network_access_policy_by_id_authentication_rule_by_id>`_
+        NetworkAccessAuthenticationRules.update_network_access_authentication_rule_by_id>`_
         """
-        return self.update_network_access_policy_by_id_authentication_rule_by_id(
+        return self.update_network_access_authentication_rule_by_id(
             id=id,
             policy_id=policy_id,
             identity_source_name=identity_source_name,
@@ -640,11 +640,11 @@ class NetworkAccessAuthenticationRules(object):
             **query_parameters
         )
 
-    def delete_network_access_policy_by_id_authentication_rule_by_id(self,
-                                                                     id,
-                                                                     policy_id,
-                                                                     headers=None,
-                                                                     **query_parameters):
+    def delete_network_access_authentication_rule_by_id(self,
+                                                        id,
+                                                        policy_id,
+                                                        headers=None,
+                                                        **query_parameters):
         """Network Access Delete rule.
 
         Args:
@@ -714,11 +714,11 @@ class NetworkAccessAuthenticationRules(object):
                      policy_id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_network_access_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        """Alias for `delete_network_access_authentication_rule_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_authentication_rules.
-        NetworkAccessAuthenticationRules.delete_network_access_policy_by_id_authentication_rule_by_id>`_
+        NetworkAccessAuthenticationRules.delete_network_access_authentication_rule_by_id>`_
         """
-        return self.delete_network_access_policy_by_id_authentication_rule_by_id(
+        return self.delete_network_access_authentication_rule_by_id(
             id=id,
             policy_id=policy_id,
             headers=headers,

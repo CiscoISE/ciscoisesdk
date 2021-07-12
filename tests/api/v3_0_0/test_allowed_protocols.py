@@ -283,7 +283,7 @@ def test_delete_allowed_protocol_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_allowed_protocols(json_schema_validate, obj):
+def is_valid_get_allowed_protocols(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -294,8 +294,8 @@ def is_valid_get_all_allowed_protocols(json_schema_validate, obj):
     return True
 
 
-def get_all_allowed_protocols(api):
-    endpoint_result = api.allowed_protocols.get_all_allowed_protocols(
+def get_allowed_protocols(api):
+    endpoint_result = api.allowed_protocols.get_allowed_protocols(
         page=0,
         size=0
     )
@@ -303,11 +303,11 @@ def get_all_allowed_protocols(api):
 
 
 @pytest.mark.allowed_protocols
-def test_get_all_allowed_protocols(api, validator):
+def test_get_allowed_protocols(api, validator):
     try:
-        assert is_valid_get_all_allowed_protocols(
+        assert is_valid_get_allowed_protocols(
             validator,
-            get_all_allowed_protocols(api)
+            get_allowed_protocols(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -315,8 +315,8 @@ def test_get_all_allowed_protocols(api, validator):
             raise original_e
 
 
-def get_all_allowed_protocols_default(api):
-    endpoint_result = api.allowed_protocols.get_all_allowed_protocols(
+def get_allowed_protocols_default(api):
+    endpoint_result = api.allowed_protocols.get_allowed_protocols(
         page=None,
         size=None
     )
@@ -324,11 +324,11 @@ def get_all_allowed_protocols_default(api):
 
 
 @pytest.mark.allowed_protocols
-def test_get_all_allowed_protocols_default(api, validator):
+def test_get_allowed_protocols_default(api, validator):
     try:
-        assert is_valid_get_all_allowed_protocols(
+        assert is_valid_get_allowed_protocols(
             validator,
-            get_all_allowed_protocols_default(api)
+            get_allowed_protocols_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

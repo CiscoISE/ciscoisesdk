@@ -244,15 +244,15 @@ class SxpVpns(object):
             **query_parameters
         )
 
-    def get_all_sxp_vpns(self,
-                         filter=None,
-                         filter_type=None,
-                         page=None,
-                         size=None,
-                         sortasc=None,
-                         sortdsc=None,
-                         headers=None,
-                         **query_parameters):
+    def get_sxp_vpns(self,
+                     filter=None,
+                     filter_type=None,
+                     page=None,
+                     size=None,
+                     sortasc=None,
+                     sortdsc=None,
+                     headers=None,
+                     **query_parameters):
         """This API allows the client to get all the SXP VPNs.   Filter:
         [name, description]   To search resources by using
         toDate  column,follow the format:   DD-MON-YY
@@ -386,11 +386,11 @@ class SxpVpns(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_sxp_vpns <#ciscoisesdk.
+        """Alias for `get_sxp_vpns <#ciscoisesdk.
         api.v3_0_0.sxp_vpns.
-        SxpVpns.get_all_sxp_vpns>`_
+        SxpVpns.get_sxp_vpns>`_
         """
-        return self.get_all_sxp_vpns(
+        return self.get_sxp_vpns(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -401,15 +401,15 @@ class SxpVpns(object):
             **query_parameters
         )
 
-    def get_all_sxp_vpns_generator(self,
-                                   filter=None,
-                                   filter_type=None,
-                                   page=None,
-                                   size=None,
-                                   sortasc=None,
-                                   sortdsc=None,
-                                   headers=None,
-                                   **query_parameters):
+    def get_sxp_vpns_generator(self,
+                               filter=None,
+                               filter_type=None,
+                               page=None,
+                               size=None,
+                               sortasc=None,
+                               sortdsc=None,
+                               headers=None,
+                               **query_parameters):
         """This API allows the client to get all the SXP VPNs.   Filter:
         [name, description]   To search resources by using
         toDate  column,follow the format:   DD-MON-YY
@@ -478,7 +478,7 @@ class SxpVpns(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_sxp_vpns, dict(
+        yield from get_next_page(self.get_sxp_vpns, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -498,11 +498,11 @@ class SxpVpns(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_sxp_vpns_generator <#ciscoisesdk.
+        """Alias for `get_sxp_vpns_generator <#ciscoisesdk.
         api.v3_0_0.sxp_vpns.
-        SxpVpns.get_all_sxp_vpns_generator>`_
+        SxpVpns.get_sxp_vpns_generator>`_
         """
-        yield from get_next_page(self.get_all_sxp_vpns, dict(
+        yield from get_next_page(self.get_sxp_vpns, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

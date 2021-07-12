@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine resetHitCountsNetworkAccessPolicyByIdAuthenticationRules data model.
+"""Identity Services Engine resetHitCountsNetworkAccessAuthenticationRules data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,8 @@ from builtins import *
 
 
 class JSONSchemaValidatorCd727Fc45Ccf8607A744Aa71Df66(object):
-    """resetHitCountsNetworkAccessPolicyByIdAuthenticationRules request
-    schema definition."""
+    """resetHitCountsNetworkAccessAuthenticationRules request schema
+    definition."""
     def __init__(self):
         super(JSONSchemaValidatorCd727Fc45Ccf8607A744Aa71Df66, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

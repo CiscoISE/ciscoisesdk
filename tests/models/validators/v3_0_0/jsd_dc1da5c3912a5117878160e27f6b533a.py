@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllCertificateTemplate data model.
+"""Identity Services Engine getCertificateTemplate data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorDc1Da5C3912A5117878160E27F6B533A(object):
-    """getAllCertificateTemplate request schema definition."""
+    """getCertificateTemplate request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDc1Da5C3912A5117878160E27F6B533A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -289,7 +289,7 @@ def test_delete_authorization_profile_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_authorization_profiles(json_schema_validate, obj):
+def is_valid_get_authorization_profiles(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -300,8 +300,8 @@ def is_valid_get_all_authorization_profiles(json_schema_validate, obj):
     return True
 
 
-def get_all_authorization_profiles(api):
-    endpoint_result = api.authorization_profile.get_all_authorization_profiles(
+def get_authorization_profiles(api):
+    endpoint_result = api.authorization_profile.get_authorization_profiles(
         page=0,
         size=0
     )
@@ -309,11 +309,11 @@ def get_all_authorization_profiles(api):
 
 
 @pytest.mark.authorization_profile
-def test_get_all_authorization_profiles(api, validator):
+def test_get_authorization_profiles(api, validator):
     try:
-        assert is_valid_get_all_authorization_profiles(
+        assert is_valid_get_authorization_profiles(
             validator,
-            get_all_authorization_profiles(api)
+            get_authorization_profiles(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -321,8 +321,8 @@ def test_get_all_authorization_profiles(api, validator):
             raise original_e
 
 
-def get_all_authorization_profiles_default(api):
-    endpoint_result = api.authorization_profile.get_all_authorization_profiles(
+def get_authorization_profiles_default(api):
+    endpoint_result = api.authorization_profile.get_authorization_profiles(
         page=None,
         size=None
     )
@@ -330,11 +330,11 @@ def get_all_authorization_profiles_default(api):
 
 
 @pytest.mark.authorization_profile
-def test_get_all_authorization_profiles_default(api, validator):
+def test_get_authorization_profiles_default(api, validator):
     try:
-        assert is_valid_get_all_authorization_profiles(
+        assert is_valid_get_authorization_profiles(
             validator,
-            get_all_authorization_profiles_default(api)
+            get_authorization_profiles_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

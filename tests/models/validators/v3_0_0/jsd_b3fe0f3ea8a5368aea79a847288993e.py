@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getNetworkAccessPolicyByIdLocalExceptionRuleById data model.
+"""Identity Services Engine getNetworkAccessLocalExceptionRuleById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorB3Fe0F3Ea8A5368Aea79A847288993E(object):
-    """getNetworkAccessPolicyByIdLocalExceptionRuleById request schema
-    definition."""
+    """getNetworkAccessLocalExceptionRuleById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB3Fe0F3Ea8A5368Aea79A847288993E, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

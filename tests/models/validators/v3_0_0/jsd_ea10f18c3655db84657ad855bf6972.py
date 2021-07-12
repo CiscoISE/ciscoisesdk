@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllGuestLocation data model.
+"""Identity Services Engine getGuestLocation data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorEa10F18C3655Db84657Ad855Bf6972(object):
-    """getAllGuestLocation request schema definition."""
+    """getGuestLocation request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEa10F18C3655Db84657Ad855Bf6972, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

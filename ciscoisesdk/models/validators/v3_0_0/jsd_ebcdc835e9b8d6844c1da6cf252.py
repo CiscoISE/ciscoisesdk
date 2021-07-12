@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine createDeviceAdminPolicyByIdLocalExceptionRule data model.
+"""Identity Services Engine createDeviceAdminLocalExceptionRule data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorEbcDc835E9B8D6844C1Da6Cf252(object):
-    """createDeviceAdminPolicyByIdLocalExceptionRule request schema
-    definition."""
+    """createDeviceAdminLocalExceptionRule request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEbcDc835E9B8D6844C1Da6Cf252, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

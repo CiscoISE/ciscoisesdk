@@ -191,7 +191,7 @@ def test_delete_downloadable_acl_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_downloadable_acl(json_schema_validate, obj):
+def is_valid_get_downloadable_acl(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -202,8 +202,8 @@ def is_valid_get_all_downloadable_acl(json_schema_validate, obj):
     return True
 
 
-def get_all_downloadable_acl(api):
-    endpoint_result = api.downloadable_acl.get_all_downloadable_acl(
+def get_downloadable_acl(api):
+    endpoint_result = api.downloadable_acl.get_downloadable_acl(
         page=0,
         size=0
     )
@@ -211,11 +211,11 @@ def get_all_downloadable_acl(api):
 
 
 @pytest.mark.downloadable_acl
-def test_get_all_downloadable_acl(api, validator):
+def test_get_downloadable_acl(api, validator):
     try:
-        assert is_valid_get_all_downloadable_acl(
+        assert is_valid_get_downloadable_acl(
             validator,
-            get_all_downloadable_acl(api)
+            get_downloadable_acl(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -223,8 +223,8 @@ def test_get_all_downloadable_acl(api, validator):
             raise original_e
 
 
-def get_all_downloadable_acl_default(api):
-    endpoint_result = api.downloadable_acl.get_all_downloadable_acl(
+def get_downloadable_acl_default(api):
+    endpoint_result = api.downloadable_acl.get_downloadable_acl(
         page=None,
         size=None
     )
@@ -232,11 +232,11 @@ def get_all_downloadable_acl_default(api):
 
 
 @pytest.mark.downloadable_acl
-def test_get_all_downloadable_acl_default(api, validator):
+def test_get_downloadable_acl_default(api, validator):
     try:
-        assert is_valid_get_all_downloadable_acl(
+        assert is_valid_get_downloadable_acl(
             validator,
-            get_all_downloadable_acl_default(api)
+            get_downloadable_acl_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

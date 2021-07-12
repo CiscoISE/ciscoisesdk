@@ -214,9 +214,9 @@ class DeviceAdministrationDictionaryAttributesList(object):
             **query_parameters
         )
 
-    def get_device_admin_dictionaries_policyset(self,
-                                                headers=None,
-                                                **query_parameters):
+    def get_device_admin_dictionaries_policy_set(self,
+                                                 headers=None,
+                                                 **query_parameters):
         """Network Access Returns list of dictionary attributes for
         policyset.
 
@@ -272,14 +272,14 @@ class DeviceAdministrationDictionaryAttributesList(object):
 
         return self._object_factory('bpm_c8aec23a55399a175acf105dbe1c2_v3_0_0', _api_response)
 
-    def get_all_policyset(self,
-                          headers=None,
-                          **query_parameters):
-        """Alias for `get_device_admin_dictionaries_policyset <#ciscoisesdk.
+    def get_all_policy_set(self,
+                           headers=None,
+                           **query_parameters):
+        """Alias for `get_device_admin_dictionaries_policy_set <#ciscoisesdk.
         api.v3_0_0.device_administration_dictionary_attributes_list.
-        DeviceAdministrationDictionaryAttributesList.get_device_admin_dictionaries_policyset>`_
+        DeviceAdministrationDictionaryAttributesList.get_device_admin_dictionaries_policy_set>`_
         """
-        return self.get_device_admin_dictionaries_policyset(
+        return self.get_device_admin_dictionaries_policy_set(
             headers=headers,
             **query_parameters
         )

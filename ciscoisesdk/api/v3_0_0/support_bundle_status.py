@@ -159,11 +159,11 @@ class SupportBundleStatus(object):
             **query_parameters
         )
 
-    def get_all_support_bundle_status(self,
-                                      page=None,
-                                      size=None,
-                                      headers=None,
-                                      **query_parameters):
+    def get_support_bundle_status(self,
+                                  page=None,
+                                  size=None,
+                                  headers=None,
+                                  **query_parameters):
         """This API allows the client to get all the support bundle status.
 
         Args:
@@ -241,22 +241,22 @@ class SupportBundleStatus(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_support_bundle_status <#ciscoisesdk.
+        """Alias for `get_support_bundle_status <#ciscoisesdk.
         api.v3_0_0.support_bundle_status.
-        SupportBundleStatus.get_all_support_bundle_status>`_
+        SupportBundleStatus.get_support_bundle_status>`_
         """
-        return self.get_all_support_bundle_status(
+        return self.get_support_bundle_status(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_support_bundle_status_generator(self,
-                                                page=None,
-                                                size=None,
-                                                headers=None,
-                                                **query_parameters):
+    def get_support_bundle_status_generator(self,
+                                            page=None,
+                                            size=None,
+                                            headers=None,
+                                            **query_parameters):
         """This API allows the client to get all the support bundle status.
 
         Args:
@@ -285,7 +285,7 @@ class SupportBundleStatus(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_support_bundle_status, dict(
+        yield from get_next_page(self.get_support_bundle_status, dict(
             page=page,
             size=size,
             headers=headers,
@@ -297,11 +297,11 @@ class SupportBundleStatus(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_support_bundle_status_generator <#ciscoisesdk.
+        """Alias for `get_support_bundle_status_generator <#ciscoisesdk.
         api.v3_0_0.support_bundle_status.
-        SupportBundleStatus.get_all_support_bundle_status_generator>`_
+        SupportBundleStatus.get_support_bundle_status_generator>`_
         """
-        yield from get_next_page(self.get_all_support_bundle_status, dict(
+        yield from get_next_page(self.get_support_bundle_status, dict(
             page=page,
             size=size,
             headers=headers,

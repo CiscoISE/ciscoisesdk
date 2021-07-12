@@ -79,7 +79,7 @@ def test_get_support_bundle_status_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_support_bundle_status(json_schema_validate, obj):
+def is_valid_get_support_bundle_status(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_get_all_support_bundle_status(json_schema_validate, obj):
     return True
 
 
-def get_all_support_bundle_status(api):
-    endpoint_result = api.support_bundle_status.get_all_support_bundle_status(
+def get_support_bundle_status(api):
+    endpoint_result = api.support_bundle_status.get_support_bundle_status(
         page=0,
         size=0
     )
@@ -99,11 +99,11 @@ def get_all_support_bundle_status(api):
 
 
 @pytest.mark.support_bundle_status
-def test_get_all_support_bundle_status(api, validator):
+def test_get_support_bundle_status(api, validator):
     try:
-        assert is_valid_get_all_support_bundle_status(
+        assert is_valid_get_support_bundle_status(
             validator,
-            get_all_support_bundle_status(api)
+            get_support_bundle_status(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -111,8 +111,8 @@ def test_get_all_support_bundle_status(api, validator):
             raise original_e
 
 
-def get_all_support_bundle_status_default(api):
-    endpoint_result = api.support_bundle_status.get_all_support_bundle_status(
+def get_support_bundle_status_default(api):
+    endpoint_result = api.support_bundle_status.get_support_bundle_status(
         page=None,
         size=None
     )
@@ -120,11 +120,11 @@ def get_all_support_bundle_status_default(api):
 
 
 @pytest.mark.support_bundle_status
-def test_get_all_support_bundle_status_default(api, validator):
+def test_get_support_bundle_status_default(api, validator):
     try:
-        assert is_valid_get_all_support_bundle_status(
+        assert is_valid_get_support_bundle_status(
             validator,
-            get_all_support_bundle_status_default(api)
+            get_support_bundle_status_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

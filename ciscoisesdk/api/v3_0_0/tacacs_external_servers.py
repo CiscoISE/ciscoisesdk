@@ -500,11 +500,11 @@ class TacacsExternalServers(object):
             **query_parameters
         )
 
-    def get_all_tacacs_external_servers(self,
-                                        page=None,
-                                        size=None,
-                                        headers=None,
-                                        **query_parameters):
+    def get_tacacs_external_servers(self,
+                                    page=None,
+                                    size=None,
+                                    headers=None,
+                                    **query_parameters):
         """This API allows the client to get all the TACACS external
         servers.
 
@@ -583,22 +583,22 @@ class TacacsExternalServers(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_tacacs_external_servers <#ciscoisesdk.
+        """Alias for `get_tacacs_external_servers <#ciscoisesdk.
         api.v3_0_0.tacacs_external_servers.
-        TacacsExternalServers.get_all_tacacs_external_servers>`_
+        TacacsExternalServers.get_tacacs_external_servers>`_
         """
-        return self.get_all_tacacs_external_servers(
+        return self.get_tacacs_external_servers(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_tacacs_external_servers_generator(self,
-                                                  page=None,
-                                                  size=None,
-                                                  headers=None,
-                                                  **query_parameters):
+    def get_tacacs_external_servers_generator(self,
+                                              page=None,
+                                              size=None,
+                                              headers=None,
+                                              **query_parameters):
         """This API allows the client to get all the TACACS external
         servers.
 
@@ -628,7 +628,7 @@ class TacacsExternalServers(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_tacacs_external_servers, dict(
+        yield from get_next_page(self.get_tacacs_external_servers, dict(
             page=page,
             size=size,
             headers=headers,
@@ -640,11 +640,11 @@ class TacacsExternalServers(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_tacacs_external_servers_generator <#ciscoisesdk.
+        """Alias for `get_tacacs_external_servers_generator <#ciscoisesdk.
         api.v3_0_0.tacacs_external_servers.
-        TacacsExternalServers.get_all_tacacs_external_servers_generator>`_
+        TacacsExternalServers.get_tacacs_external_servers_generator>`_
         """
-        yield from get_next_page(self.get_all_tacacs_external_servers, dict(
+        yield from get_next_page(self.get_tacacs_external_servers, dict(
             page=page,
             size=size,
             headers=headers,

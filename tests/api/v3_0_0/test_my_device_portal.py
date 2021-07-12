@@ -197,7 +197,7 @@ def test_delete_my_device_portal_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_my_device_portal(json_schema_validate, obj):
+def is_valid_get_my_device_portal(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -208,8 +208,8 @@ def is_valid_get_all_my_device_portal(json_schema_validate, obj):
     return True
 
 
-def get_all_my_device_portal(api):
-    endpoint_result = api.my_device_portal.get_all_my_device_portal(
+def get_my_device_portal(api):
+    endpoint_result = api.my_device_portal.get_my_device_portal(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -221,11 +221,11 @@ def get_all_my_device_portal(api):
 
 
 @pytest.mark.my_device_portal
-def test_get_all_my_device_portal(api, validator):
+def test_get_my_device_portal(api, validator):
     try:
-        assert is_valid_get_all_my_device_portal(
+        assert is_valid_get_my_device_portal(
             validator,
-            get_all_my_device_portal(api)
+            get_my_device_portal(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -233,8 +233,8 @@ def test_get_all_my_device_portal(api, validator):
             raise original_e
 
 
-def get_all_my_device_portal_default(api):
-    endpoint_result = api.my_device_portal.get_all_my_device_portal(
+def get_my_device_portal_default(api):
+    endpoint_result = api.my_device_portal.get_my_device_portal(
         filter=None,
         filter_type=None,
         page=None,
@@ -246,11 +246,11 @@ def get_all_my_device_portal_default(api):
 
 
 @pytest.mark.my_device_portal
-def test_get_all_my_device_portal_default(api, validator):
+def test_get_my_device_portal_default(api, validator):
     try:
-        assert is_valid_get_all_my_device_portal(
+        assert is_valid_get_my_device_portal(
             validator,
-            get_all_my_device_portal_default(api)
+            get_my_device_portal_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

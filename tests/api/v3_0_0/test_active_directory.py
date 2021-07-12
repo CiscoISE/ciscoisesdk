@@ -79,7 +79,7 @@ def test_get_active_directory_by_name_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_user_groups(json_schema_validate, obj):
+def is_valid_get_user_groups(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_get_all_user_groups(json_schema_validate, obj):
     return True
 
 
-def get_all_user_groups(api):
-    endpoint_result = api.active_directory.get_all_user_groups(
+def get_user_groups(api):
+    endpoint_result = api.active_directory.get_user_groups(
         active_validation=False,
         additional_data=[{'name': 'string', 'value': 'string'}],
         id='string',
@@ -101,11 +101,11 @@ def get_all_user_groups(api):
 
 
 @pytest.mark.active_directory
-def test_get_all_user_groups(api, validator):
+def test_get_user_groups(api, validator):
     try:
-        assert is_valid_get_all_user_groups(
+        assert is_valid_get_user_groups(
             validator,
-            get_all_user_groups(api)
+            get_user_groups(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -113,8 +113,8 @@ def test_get_all_user_groups(api, validator):
             raise original_e
 
 
-def get_all_user_groups_default(api):
-    endpoint_result = api.active_directory.get_all_user_groups(
+def get_user_groups_default(api):
+    endpoint_result = api.active_directory.get_user_groups(
         active_validation=False,
         id='string',
         additional_data=None,
@@ -124,11 +124,11 @@ def get_all_user_groups_default(api):
 
 
 @pytest.mark.active_directory
-def test_get_all_user_groups_default(api, validator):
+def test_get_user_groups_default(api, validator):
     try:
-        assert is_valid_get_all_user_groups(
+        assert is_valid_get_user_groups(
             validator,
-            get_all_user_groups_default(api)
+            get_user_groups_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -317,7 +317,7 @@ def test_is_user_member_of_groups_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_trusted_domains(json_schema_validate, obj):
+def is_valid_get_trusted_domains(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -328,8 +328,8 @@ def is_valid_get_all_trusted_domains(json_schema_validate, obj):
     return True
 
 
-def get_all_trusted_domains(api):
-    endpoint_result = api.active_directory.get_all_trusted_domains(
+def get_trusted_domains(api):
+    endpoint_result = api.active_directory.get_trusted_domains(
         active_validation=False,
         id='string',
         payload=None
@@ -338,11 +338,11 @@ def get_all_trusted_domains(api):
 
 
 @pytest.mark.active_directory
-def test_get_all_trusted_domains(api, validator):
+def test_get_trusted_domains(api, validator):
     try:
-        assert is_valid_get_all_trusted_domains(
+        assert is_valid_get_trusted_domains(
             validator,
-            get_all_trusted_domains(api)
+            get_trusted_domains(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -350,8 +350,8 @@ def test_get_all_trusted_domains(api, validator):
             raise original_e
 
 
-def get_all_trusted_domains_default(api):
-    endpoint_result = api.active_directory.get_all_trusted_domains(
+def get_trusted_domains_default(api):
+    endpoint_result = api.active_directory.get_trusted_domains(
         active_validation=False,
         id='string',
         payload=None
@@ -360,11 +360,11 @@ def get_all_trusted_domains_default(api):
 
 
 @pytest.mark.active_directory
-def test_get_all_trusted_domains_default(api, validator):
+def test_get_trusted_domains_default(api, validator):
     try:
-        assert is_valid_get_all_trusted_domains(
+        assert is_valid_get_trusted_domains(
             validator,
-            get_all_trusted_domains_default(api)
+            get_trusted_domains_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -695,7 +695,7 @@ def test_join_domain_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_active_directory(json_schema_validate, obj):
+def is_valid_get_active_directory(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -706,8 +706,8 @@ def is_valid_get_all_active_directory(json_schema_validate, obj):
     return True
 
 
-def get_all_active_directory(api):
-    endpoint_result = api.active_directory.get_all_active_directory(
+def get_active_directory(api):
+    endpoint_result = api.active_directory.get_active_directory(
         page=0,
         size=0
     )
@@ -715,11 +715,11 @@ def get_all_active_directory(api):
 
 
 @pytest.mark.active_directory
-def test_get_all_active_directory(api, validator):
+def test_get_active_directory(api, validator):
     try:
-        assert is_valid_get_all_active_directory(
+        assert is_valid_get_active_directory(
             validator,
-            get_all_active_directory(api)
+            get_active_directory(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -727,8 +727,8 @@ def test_get_all_active_directory(api, validator):
             raise original_e
 
 
-def get_all_active_directory_default(api):
-    endpoint_result = api.active_directory.get_all_active_directory(
+def get_active_directory_default(api):
+    endpoint_result = api.active_directory.get_active_directory(
         page=None,
         size=None
     )
@@ -736,11 +736,11 @@ def get_all_active_directory_default(api):
 
 
 @pytest.mark.active_directory
-def test_get_all_active_directory_default(api, validator):
+def test_get_active_directory_default(api, validator):
     try:
-        assert is_valid_get_all_active_directory(
+        assert is_valid_get_active_directory(
             validator,
-            get_all_active_directory_default(api)
+            get_active_directory_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -191,7 +191,7 @@ def test_delete_filter_policy_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_filter_policy(json_schema_validate, obj):
+def is_valid_get_filter_policy(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -202,8 +202,8 @@ def is_valid_get_all_filter_policy(json_schema_validate, obj):
     return True
 
 
-def get_all_filter_policy(api):
-    endpoint_result = api.filter_policy.get_all_filter_policy(
+def get_filter_policy(api):
+    endpoint_result = api.filter_policy.get_filter_policy(
         page=0,
         size=0
     )
@@ -211,11 +211,11 @@ def get_all_filter_policy(api):
 
 
 @pytest.mark.filter_policy
-def test_get_all_filter_policy(api, validator):
+def test_get_filter_policy(api, validator):
     try:
-        assert is_valid_get_all_filter_policy(
+        assert is_valid_get_filter_policy(
             validator,
-            get_all_filter_policy(api)
+            get_filter_policy(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -223,8 +223,8 @@ def test_get_all_filter_policy(api, validator):
             raise original_e
 
 
-def get_all_filter_policy_default(api):
-    endpoint_result = api.filter_policy.get_all_filter_policy(
+def get_filter_policy_default(api):
+    endpoint_result = api.filter_policy.get_filter_policy(
         page=None,
         size=None
     )
@@ -232,11 +232,11 @@ def get_all_filter_policy_default(api):
 
 
 @pytest.mark.filter_policy
-def test_get_all_filter_policy_default(api, validator):
+def test_get_filter_policy_default(api, validator):
     try:
-        assert is_valid_get_all_filter_policy(
+        assert is_valid_get_filter_policy(
             validator,
-            get_all_filter_policy_default(api)
+            get_filter_policy_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

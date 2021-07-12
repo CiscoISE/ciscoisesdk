@@ -309,7 +309,7 @@ def test_delete_guest_type_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_guest_type(json_schema_validate, obj):
+def is_valid_get_guest_type(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -320,8 +320,8 @@ def is_valid_get_all_guest_type(json_schema_validate, obj):
     return True
 
 
-def get_all_guest_type(api):
-    endpoint_result = api.guest_type.get_all_guest_type(
+def get_guest_type(api):
+    endpoint_result = api.guest_type.get_guest_type(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -333,11 +333,11 @@ def get_all_guest_type(api):
 
 
 @pytest.mark.guest_type
-def test_get_all_guest_type(api, validator):
+def test_get_guest_type(api, validator):
     try:
-        assert is_valid_get_all_guest_type(
+        assert is_valid_get_guest_type(
             validator,
-            get_all_guest_type(api)
+            get_guest_type(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -345,8 +345,8 @@ def test_get_all_guest_type(api, validator):
             raise original_e
 
 
-def get_all_guest_type_default(api):
-    endpoint_result = api.guest_type.get_all_guest_type(
+def get_guest_type_default(api):
+    endpoint_result = api.guest_type.get_guest_type(
         filter=None,
         filter_type=None,
         page=None,
@@ -358,11 +358,11 @@ def get_all_guest_type_default(api):
 
 
 @pytest.mark.guest_type
-def test_get_all_guest_type_default(api, validator):
+def test_get_guest_type_default(api, validator):
     try:
-        assert is_valid_get_all_guest_type(
+        assert is_valid_get_guest_type(
             validator,
-            get_all_guest_type_default(api)
+            get_guest_type_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

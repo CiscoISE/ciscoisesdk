@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine createNetworkAccessPolicyByIdLocalExceptionRule data model.
+"""Identity Services Engine createNetworkAccessLocalExceptionRule data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC475Afd2A5E57E4Bd0952F2C5349C6C(object):
-    """createNetworkAccessPolicyByIdLocalExceptionRule request schema
-    definition."""
+    """createNetworkAccessLocalExceptionRule request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC475Afd2A5E57E4Bd0952F2C5349C6C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -675,11 +675,11 @@ class Certificates(object):
 
         return self._object_factory('bpm_b8104a50fc565ae9a756d6d0152e0e5b_v3_0_0', _api_response)
 
-    def delete_csr(self,
-                   host_name,
-                   id,
-                   headers=None,
-                   **query_parameters):
+    def delete_csr_by_id(self,
+                         host_name,
+                         id,
+                         headers=None,
+                         **query_parameters):
         """This API deletes a Certificate Signing Request of a particular
         node based on a given HostName and ID.
 

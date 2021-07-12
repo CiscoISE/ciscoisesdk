@@ -396,11 +396,11 @@ class DownloadableAcl(object):
             **query_parameters
         )
 
-    def get_all_downloadable_acl(self,
-                                 page=None,
-                                 size=None,
-                                 headers=None,
-                                 **query_parameters):
+    def get_downloadable_acl(self,
+                             page=None,
+                             size=None,
+                             headers=None,
+                             **query_parameters):
         """This API allows the client to get all downloadable ACLs.
 
         Args:
@@ -478,22 +478,22 @@ class DownloadableAcl(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_downloadable_acl <#ciscoisesdk.
+        """Alias for `get_downloadable_acl <#ciscoisesdk.
         api.v3_0_0.downloadable_acl.
-        DownloadableAcl.get_all_downloadable_acl>`_
+        DownloadableAcl.get_downloadable_acl>`_
         """
-        return self.get_all_downloadable_acl(
+        return self.get_downloadable_acl(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_downloadable_acl_generator(self,
-                                           page=None,
-                                           size=None,
-                                           headers=None,
-                                           **query_parameters):
+    def get_downloadable_acl_generator(self,
+                                       page=None,
+                                       size=None,
+                                       headers=None,
+                                       **query_parameters):
         """This API allows the client to get all downloadable ACLs.
 
         Args:
@@ -522,7 +522,7 @@ class DownloadableAcl(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_downloadable_acl, dict(
+        yield from get_next_page(self.get_downloadable_acl, dict(
             page=page,
             size=size,
             headers=headers,
@@ -534,11 +534,11 @@ class DownloadableAcl(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_downloadable_acl_generator <#ciscoisesdk.
+        """Alias for `get_downloadable_acl_generator <#ciscoisesdk.
         api.v3_0_0.downloadable_acl.
-        DownloadableAcl.get_all_downloadable_acl_generator>`_
+        DownloadableAcl.get_downloadable_acl_generator>`_
         """
-        yield from get_next_page(self.get_all_downloadable_acl, dict(
+        yield from get_next_page(self.get_downloadable_acl, dict(
             page=page,
             size=size,
             headers=headers,

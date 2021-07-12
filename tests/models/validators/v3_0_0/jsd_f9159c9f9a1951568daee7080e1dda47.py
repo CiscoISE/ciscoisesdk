@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeploymentInfo data model.
+"""Identity Services Engine getDeploymentInfo data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
-    """getAllDeploymentInfo request schema definition."""
+    """getDeploymentInfo request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

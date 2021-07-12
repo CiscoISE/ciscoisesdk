@@ -189,7 +189,7 @@ def test_delete_native_supplicant_profile_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_native_supplicant_profile(json_schema_validate, obj):
+def is_valid_get_native_supplicant_profile(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -200,8 +200,8 @@ def is_valid_get_all_native_supplicant_profile(json_schema_validate, obj):
     return True
 
 
-def get_all_native_supplicant_profile(api):
-    endpoint_result = api.native_supplicant_profile.get_all_native_supplicant_profile(
+def get_native_supplicant_profile(api):
+    endpoint_result = api.native_supplicant_profile.get_native_supplicant_profile(
         page=0,
         size=0
     )
@@ -209,11 +209,11 @@ def get_all_native_supplicant_profile(api):
 
 
 @pytest.mark.native_supplicant_profile
-def test_get_all_native_supplicant_profile(api, validator):
+def test_get_native_supplicant_profile(api, validator):
     try:
-        assert is_valid_get_all_native_supplicant_profile(
+        assert is_valid_get_native_supplicant_profile(
             validator,
-            get_all_native_supplicant_profile(api)
+            get_native_supplicant_profile(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -221,8 +221,8 @@ def test_get_all_native_supplicant_profile(api, validator):
             raise original_e
 
 
-def get_all_native_supplicant_profile_default(api):
-    endpoint_result = api.native_supplicant_profile.get_all_native_supplicant_profile(
+def get_native_supplicant_profile_default(api):
+    endpoint_result = api.native_supplicant_profile.get_native_supplicant_profile(
         page=None,
         size=None
     )
@@ -230,11 +230,11 @@ def get_all_native_supplicant_profile_default(api):
 
 
 @pytest.mark.native_supplicant_profile
-def test_get_all_native_supplicant_profile_default(api, validator):
+def test_get_native_supplicant_profile_default(api, validator):
     try:
-        assert is_valid_get_all_native_supplicant_profile(
+        assert is_valid_get_native_supplicant_profile(
             validator,
-            get_all_native_supplicant_profile_default(api)
+            get_native_supplicant_profile_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

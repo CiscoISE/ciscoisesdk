@@ -159,13 +159,13 @@ class TelemetryInformation(object):
             **query_parameters
         )
 
-    def get_all_telemetry_information(self,
-                                      filter=None,
-                                      filter_type=None,
-                                      page=None,
-                                      size=None,
-                                      headers=None,
-                                      **query_parameters):
+    def get_telemetry_information(self,
+                                  filter=None,
+                                  filter_type=None,
+                                  page=None,
+                                  size=None,
+                                  headers=None,
+                                  **query_parameters):
         """This API allows the client to get all the telemetry information.
         Filter:   [deploymentId]   To search resources by using
         toDate  column,follow the format:   DD-MON-YY
@@ -289,11 +289,11 @@ class TelemetryInformation(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_telemetry_information <#ciscoisesdk.
+        """Alias for `get_telemetry_information <#ciscoisesdk.
         api.v3_0_0.telemetry_information.
-        TelemetryInformation.get_all_telemetry_information>`_
+        TelemetryInformation.get_telemetry_information>`_
         """
-        return self.get_all_telemetry_information(
+        return self.get_telemetry_information(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -302,13 +302,13 @@ class TelemetryInformation(object):
             **query_parameters
         )
 
-    def get_all_telemetry_information_generator(self,
-                                                filter=None,
-                                                filter_type=None,
-                                                page=None,
-                                                size=None,
-                                                headers=None,
-                                                **query_parameters):
+    def get_telemetry_information_generator(self,
+                                            filter=None,
+                                            filter_type=None,
+                                            page=None,
+                                            size=None,
+                                            headers=None,
+                                            **query_parameters):
         """This API allows the client to get all the telemetry information.
         Filter:   [deploymentId]   To search resources by using
         toDate  column,follow the format:   DD-MON-YY
@@ -375,7 +375,7 @@ class TelemetryInformation(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_telemetry_information, dict(
+        yield from get_next_page(self.get_telemetry_information, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -391,11 +391,11 @@ class TelemetryInformation(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_telemetry_information_generator <#ciscoisesdk.
+        """Alias for `get_telemetry_information_generator <#ciscoisesdk.
         api.v3_0_0.telemetry_information.
-        TelemetryInformation.get_all_telemetry_information_generator>`_
+        TelemetryInformation.get_telemetry_information_generator>`_
         """
-        yield from get_next_page(self.get_all_telemetry_information, dict(
+        yield from get_next_page(self.get_telemetry_information, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

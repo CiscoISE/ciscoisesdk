@@ -195,7 +195,7 @@ def test_update_certificate_profile_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_certificate_profile(json_schema_validate, obj):
+def is_valid_get_certificate_profile(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -206,8 +206,8 @@ def is_valid_get_all_certificate_profile(json_schema_validate, obj):
     return True
 
 
-def get_all_certificate_profile(api):
-    endpoint_result = api.certificate_profile.get_all_certificate_profile(
+def get_certificate_profile(api):
+    endpoint_result = api.certificate_profile.get_certificate_profile(
         page=0,
         size=0
     )
@@ -215,11 +215,11 @@ def get_all_certificate_profile(api):
 
 
 @pytest.mark.certificate_profile
-def test_get_all_certificate_profile(api, validator):
+def test_get_certificate_profile(api, validator):
     try:
-        assert is_valid_get_all_certificate_profile(
+        assert is_valid_get_certificate_profile(
             validator,
-            get_all_certificate_profile(api)
+            get_certificate_profile(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -227,8 +227,8 @@ def test_get_all_certificate_profile(api, validator):
             raise original_e
 
 
-def get_all_certificate_profile_default(api):
-    endpoint_result = api.certificate_profile.get_all_certificate_profile(
+def get_certificate_profile_default(api):
+    endpoint_result = api.certificate_profile.get_certificate_profile(
         page=None,
         size=None
     )
@@ -236,11 +236,11 @@ def get_all_certificate_profile_default(api):
 
 
 @pytest.mark.certificate_profile
-def test_get_all_certificate_profile_default(api, validator):
+def test_get_certificate_profile_default(api, validator):
     try:
-        assert is_valid_get_all_certificate_profile(
+        assert is_valid_get_certificate_profile(
             validator,
-            get_all_certificate_profile_default(api)
+            get_certificate_profile_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

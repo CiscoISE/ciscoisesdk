@@ -129,7 +129,7 @@ def test_delete_sxp_vpn_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_sxp_vpns(json_schema_validate, obj):
+def is_valid_get_sxp_vpns(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -140,8 +140,8 @@ def is_valid_get_all_sxp_vpns(json_schema_validate, obj):
     return True
 
 
-def get_all_sxp_vpns(api):
-    endpoint_result = api.sxp_vpns.get_all_sxp_vpns(
+def get_sxp_vpns(api):
+    endpoint_result = api.sxp_vpns.get_sxp_vpns(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -153,11 +153,11 @@ def get_all_sxp_vpns(api):
 
 
 @pytest.mark.sxp_vpns
-def test_get_all_sxp_vpns(api, validator):
+def test_get_sxp_vpns(api, validator):
     try:
-        assert is_valid_get_all_sxp_vpns(
+        assert is_valid_get_sxp_vpns(
             validator,
-            get_all_sxp_vpns(api)
+            get_sxp_vpns(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -165,8 +165,8 @@ def test_get_all_sxp_vpns(api, validator):
             raise original_e
 
 
-def get_all_sxp_vpns_default(api):
-    endpoint_result = api.sxp_vpns.get_all_sxp_vpns(
+def get_sxp_vpns_default(api):
+    endpoint_result = api.sxp_vpns.get_sxp_vpns(
         filter=None,
         filter_type=None,
         page=None,
@@ -178,11 +178,11 @@ def get_all_sxp_vpns_default(api):
 
 
 @pytest.mark.sxp_vpns
-def test_get_all_sxp_vpns_default(api, validator):
+def test_get_sxp_vpns_default(api, validator):
     try:
-        assert is_valid_get_all_sxp_vpns(
+        assert is_valid_get_sxp_vpns(
             validator,
-            get_all_sxp_vpns_default(api)
+            get_sxp_vpns_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

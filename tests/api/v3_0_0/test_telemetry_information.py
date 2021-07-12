@@ -79,7 +79,7 @@ def test_get_telemetry_info_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_telemetry_information(json_schema_validate, obj):
+def is_valid_get_telemetry_information(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_get_all_telemetry_information(json_schema_validate, obj):
     return True
 
 
-def get_all_telemetry_information(api):
-    endpoint_result = api.telemetry_information.get_all_telemetry_information(
+def get_telemetry_information(api):
+    endpoint_result = api.telemetry_information.get_telemetry_information(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -101,11 +101,11 @@ def get_all_telemetry_information(api):
 
 
 @pytest.mark.telemetry_information
-def test_get_all_telemetry_information(api, validator):
+def test_get_telemetry_information(api, validator):
     try:
-        assert is_valid_get_all_telemetry_information(
+        assert is_valid_get_telemetry_information(
             validator,
-            get_all_telemetry_information(api)
+            get_telemetry_information(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -113,8 +113,8 @@ def test_get_all_telemetry_information(api, validator):
             raise original_e
 
 
-def get_all_telemetry_information_default(api):
-    endpoint_result = api.telemetry_information.get_all_telemetry_information(
+def get_telemetry_information_default(api):
+    endpoint_result = api.telemetry_information.get_telemetry_information(
         filter=None,
         filter_type=None,
         page=None,
@@ -124,11 +124,11 @@ def get_all_telemetry_information_default(api):
 
 
 @pytest.mark.telemetry_information
-def test_get_all_telemetry_information_default(api, validator):
+def test_get_telemetry_information_default(api, validator):
     try:
-        assert is_valid_get_all_telemetry_information(
+        assert is_valid_get_telemetry_information(
             validator,
-            get_all_telemetry_information_default(api)
+            get_telemetry_information_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

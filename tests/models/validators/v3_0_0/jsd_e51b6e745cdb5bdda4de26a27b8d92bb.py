@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllSecurityGroupsToVnToVlan data model.
+"""Identity Services Engine getSecurityGroupsToVnToVlan data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorE51B6E745Cdb5BddA4De26A27B8D92Bb(object):
-    """getAllSecurityGroupsToVnToVlan request schema definition."""
+    """getSecurityGroupsToVnToVlan request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE51B6E745Cdb5BddA4De26A27B8D92Bb, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

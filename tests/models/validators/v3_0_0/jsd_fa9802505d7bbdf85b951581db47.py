@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllNativeSupplicantProfile data model.
+"""Identity Services Engine getNativeSupplicantProfile data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorFa9802505D7BBdf85B951581Db47(object):
-    """getAllNativeSupplicantProfile request schema definition."""
+    """getNativeSupplicantProfile request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorFa9802505D7BBdf85B951581Db47, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

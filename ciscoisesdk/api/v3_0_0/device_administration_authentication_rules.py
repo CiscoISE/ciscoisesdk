@@ -74,10 +74,10 @@ class DeviceAdministrationAuthenticationRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_device_admin_policy_by_id_authentication_rule_list(self,
-                                                               policy_id,
-                                                               headers=None,
-                                                               **query_parameters):
+    def get_device_admin_authentication_rules(self,
+                                              policy_id,
+                                              headers=None,
+                                              **query_parameters):
         """Device Admin Get authentication rules.
 
         Args:
@@ -142,28 +142,28 @@ class DeviceAdministrationAuthenticationRules(object):
                 policy_id,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_device_admin_policy_by_id_authentication_rule_list <#ciscoisesdk.
+        """Alias for `get_device_admin_authentication_rules <#ciscoisesdk.
         api.v3_0_0.device_administration_authentication_rules.
-        DeviceAdministrationAuthenticationRules.get_device_admin_policy_by_id_authentication_rule_list>`_
+        DeviceAdministrationAuthenticationRules.get_device_admin_authentication_rules>`_
         """
-        return self.get_device_admin_policy_by_id_authentication_rule_list(
+        return self.get_device_admin_authentication_rules(
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def create_device_admin_policy_by_id_authentication_rule(self,
-                                                             policy_id,
-                                                             identity_source_name=None,
-                                                             if_auth_fail=None,
-                                                             if_process_fail=None,
-                                                             if_user_not_found=None,
-                                                             link=None,
-                                                             rule=None,
-                                                             headers=None,
-                                                             payload=None,
-                                                             active_validation=True,
-                                                             **query_parameters):
+    def create_device_admin_authentication_rule(self,
+                                                policy_id,
+                                                identity_source_name=None,
+                                                if_auth_fail=None,
+                                                if_process_fail=None,
+                                                if_user_not_found=None,
+                                                link=None,
+                                                rule=None,
+                                                headers=None,
+                                                payload=None,
+                                                active_validation=True,
+                                                **query_parameters):
         """Device Admin Create authentication rule.
 
         Args:
@@ -288,11 +288,11 @@ class DeviceAdministrationAuthenticationRules(object):
                payload=None,
                active_validation=True,
                **query_parameters):
-        """Alias for `create_device_admin_policy_by_id_authentication_rule <#ciscoisesdk.
+        """Alias for `create_device_admin_authentication_rule <#ciscoisesdk.
         api.v3_0_0.device_administration_authentication_rules.
-        DeviceAdministrationAuthenticationRules.create_device_admin_policy_by_id_authentication_rule>`_
+        DeviceAdministrationAuthenticationRules.create_device_admin_authentication_rule>`_
         """
-        return self.create_device_admin_policy_by_id_authentication_rule(
+        return self.create_device_admin_authentication_rule(
             policy_id=policy_id,
             identity_source_name=identity_source_name,
             if_auth_fail=if_auth_fail,
@@ -306,10 +306,10 @@ class DeviceAdministrationAuthenticationRules(object):
             **query_parameters
         )
 
-    def reset_hit_counts_device_admin_policy_by_id_authentication_rules(self,
-                                                                        policy_id,
-                                                                        headers=None,
-                                                                        **query_parameters):
+    def reset_hit_counts_device_admin_authentication_rules(self,
+                                                           policy_id,
+                                                           headers=None,
+                                                           **query_parameters):
         """Device Admin Reset HitCount for Authentication Rules.
 
         Args:
@@ -375,21 +375,21 @@ class DeviceAdministrationAuthenticationRules(object):
                                policy_id,
                                headers=None,
                                **query_parameters):
-        """Alias for `reset_hit_counts_device_admin_policy_by_id_authentication_rules <#ciscoisesdk.
+        """Alias for `reset_hit_counts_device_admin_authentication_rules <#ciscoisesdk.
         api.v3_0_0.device_administration_authentication_rules.
-        DeviceAdministrationAuthenticationRules.reset_hit_counts_device_admin_policy_by_id_authentication_rules>`_
+        DeviceAdministrationAuthenticationRules.reset_hit_counts_device_admin_authentication_rules>`_
         """
-        return self.reset_hit_counts_device_admin_policy_by_id_authentication_rules(
+        return self.reset_hit_counts_device_admin_authentication_rules(
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def get_device_admin_policy_by_id_authentication_rule_by_id(self,
-                                                                id,
-                                                                policy_id,
-                                                                headers=None,
-                                                                **query_parameters):
+    def get_device_admin_authentication_rule_by_id(self,
+                                                   id,
+                                                   policy_id,
+                                                   headers=None,
+                                                   **query_parameters):
         """Device Admin Get rule attributes.
 
         Args:
@@ -459,30 +459,30 @@ class DeviceAdministrationAuthenticationRules(object):
                   policy_id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_device_admin_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        """Alias for `get_device_admin_authentication_rule_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_authentication_rules.
-        DeviceAdministrationAuthenticationRules.get_device_admin_policy_by_id_authentication_rule_by_id>`_
+        DeviceAdministrationAuthenticationRules.get_device_admin_authentication_rule_by_id>`_
         """
-        return self.get_device_admin_policy_by_id_authentication_rule_by_id(
+        return self.get_device_admin_authentication_rule_by_id(
             id=id,
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def update_device_admin_policy_by_id_authentication_rule_by_id(self,
-                                                                   id,
-                                                                   policy_id,
-                                                                   identity_source_name=None,
-                                                                   if_auth_fail=None,
-                                                                   if_process_fail=None,
-                                                                   if_user_not_found=None,
-                                                                   link=None,
-                                                                   rule=None,
-                                                                   headers=None,
-                                                                   payload=None,
-                                                                   active_validation=True,
-                                                                   **query_parameters):
+    def update_device_admin_authentication_rule_by_id(self,
+                                                      id,
+                                                      policy_id,
+                                                      identity_source_name=None,
+                                                      if_auth_fail=None,
+                                                      if_process_fail=None,
+                                                      if_user_not_found=None,
+                                                      link=None,
+                                                      rule=None,
+                                                      headers=None,
+                                                      payload=None,
+                                                      active_validation=True,
+                                                      **query_parameters):
         """Device Admin Update rule.
 
         Args:
@@ -613,11 +613,11 @@ class DeviceAdministrationAuthenticationRules(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `update_device_admin_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        """Alias for `update_device_admin_authentication_rule_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_authentication_rules.
-        DeviceAdministrationAuthenticationRules.update_device_admin_policy_by_id_authentication_rule_by_id>`_
+        DeviceAdministrationAuthenticationRules.update_device_admin_authentication_rule_by_id>`_
         """
-        return self.update_device_admin_policy_by_id_authentication_rule_by_id(
+        return self.update_device_admin_authentication_rule_by_id(
             id=id,
             policy_id=policy_id,
             identity_source_name=identity_source_name,
@@ -632,11 +632,11 @@ class DeviceAdministrationAuthenticationRules(object):
             **query_parameters
         )
 
-    def delete_device_admin_policy_by_id_authentication_rule_by_id(self,
-                                                                   id,
-                                                                   policy_id,
-                                                                   headers=None,
-                                                                   **query_parameters):
+    def delete_device_admin_authentication_rule_by_id(self,
+                                                      id,
+                                                      policy_id,
+                                                      headers=None,
+                                                      **query_parameters):
         """Device Admin Delete rule.
 
         Args:
@@ -706,11 +706,11 @@ class DeviceAdministrationAuthenticationRules(object):
                      policy_id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_device_admin_policy_by_id_authentication_rule_by_id <#ciscoisesdk.
+        """Alias for `delete_device_admin_authentication_rule_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_authentication_rules.
-        DeviceAdministrationAuthenticationRules.delete_device_admin_policy_by_id_authentication_rule_by_id>`_
+        DeviceAdministrationAuthenticationRules.delete_device_admin_authentication_rule_by_id>`_
         """
-        return self.delete_device_admin_policy_by_id_authentication_rule_by_id(
+        return self.delete_device_admin_authentication_rule_by_id(
             id=id,
             policy_id=policy_id,
             headers=headers,

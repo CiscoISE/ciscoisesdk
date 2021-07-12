@@ -648,11 +648,11 @@ class AuthorizationProfile(object):
             **query_parameters
         )
 
-    def get_all_authorization_profiles(self,
-                                       page=None,
-                                       size=None,
-                                       headers=None,
-                                       **query_parameters):
+    def get_authorization_profiles(self,
+                                   page=None,
+                                   size=None,
+                                   headers=None,
+                                   **query_parameters):
         """This API allows the client to get all authorization profiles.
 
         Args:
@@ -730,22 +730,22 @@ class AuthorizationProfile(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_authorization_profiles <#ciscoisesdk.
+        """Alias for `get_authorization_profiles <#ciscoisesdk.
         api.v3_0_0.authorization_profile.
-        AuthorizationProfile.get_all_authorization_profiles>`_
+        AuthorizationProfile.get_authorization_profiles>`_
         """
-        return self.get_all_authorization_profiles(
+        return self.get_authorization_profiles(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_authorization_profiles_generator(self,
-                                                 page=None,
-                                                 size=None,
-                                                 headers=None,
-                                                 **query_parameters):
+    def get_authorization_profiles_generator(self,
+                                             page=None,
+                                             size=None,
+                                             headers=None,
+                                             **query_parameters):
         """This API allows the client to get all authorization profiles.
 
         Args:
@@ -774,7 +774,7 @@ class AuthorizationProfile(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_authorization_profiles, dict(
+        yield from get_next_page(self.get_authorization_profiles, dict(
             page=page,
             size=size,
             headers=headers,
@@ -786,11 +786,11 @@ class AuthorizationProfile(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_authorization_profiles_generator <#ciscoisesdk.
+        """Alias for `get_authorization_profiles_generator <#ciscoisesdk.
         api.v3_0_0.authorization_profile.
-        AuthorizationProfile.get_all_authorization_profiles_generator>`_
+        AuthorizationProfile.get_authorization_profiles_generator>`_
         """
-        yield from get_next_page(self.get_all_authorization_profiles, dict(
+        yield from get_next_page(self.get_authorization_profiles, dict(
             page=page,
             size=size,
             headers=headers,

@@ -663,15 +663,15 @@ class GuestType(object):
             **query_parameters
         )
 
-    def get_all_guest_type(self,
-                           filter=None,
-                           filter_type=None,
-                           page=None,
-                           size=None,
-                           sortasc=None,
-                           sortdsc=None,
-                           headers=None,
-                           **query_parameters):
+    def get_guest_type(self,
+                       filter=None,
+                       filter_type=None,
+                       page=None,
+                       size=None,
+                       sortasc=None,
+                       sortdsc=None,
+                       headers=None,
+                       **query_parameters):
         """This API allows the client to get all the guest types.   Filter:
         [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -805,11 +805,11 @@ class GuestType(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_guest_type <#ciscoisesdk.
+        """Alias for `get_guest_type <#ciscoisesdk.
         api.v3_0_0.guest_type.
-        GuestType.get_all_guest_type>`_
+        GuestType.get_guest_type>`_
         """
-        return self.get_all_guest_type(
+        return self.get_guest_type(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -820,15 +820,15 @@ class GuestType(object):
             **query_parameters
         )
 
-    def get_all_guest_type_generator(self,
-                                     filter=None,
-                                     filter_type=None,
-                                     page=None,
-                                     size=None,
-                                     sortasc=None,
-                                     sortdsc=None,
-                                     headers=None,
-                                     **query_parameters):
+    def get_guest_type_generator(self,
+                                 filter=None,
+                                 filter_type=None,
+                                 page=None,
+                                 size=None,
+                                 sortasc=None,
+                                 sortdsc=None,
+                                 headers=None,
+                                 **query_parameters):
         """This API allows the client to get all the guest types.   Filter:
         [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -897,7 +897,7 @@ class GuestType(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_guest_type, dict(
+        yield from get_next_page(self.get_guest_type, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -917,11 +917,11 @@ class GuestType(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_guest_type_generator <#ciscoisesdk.
+        """Alias for `get_guest_type_generator <#ciscoisesdk.
         api.v3_0_0.guest_type.
-        GuestType.get_all_guest_type_generator>`_
+        GuestType.get_guest_type_generator>`_
         """
-        yield from get_next_page(self.get_all_guest_type, dict(
+        yield from get_next_page(self.get_guest_type, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

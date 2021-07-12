@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllAncPolicy data model.
+"""Identity Services Engine getAncPolicy data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC9722C56108Cac8Ca50Bf8F01C(object):
-    """getAllAncPolicy request schema definition."""
+    """getAncPolicy request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC9722C56108Cac8Ca50Bf8F01C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

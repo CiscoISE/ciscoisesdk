@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllAuthorizationProfiles data model.
+"""Identity Services Engine getAuthorizationProfiles data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorE232C5666Ab5Ed783588F413C3Bc644(object):
-    """getAllAuthorizationProfiles request schema definition."""
+    """getAuthorizationProfiles request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE232C5666Ab5Ed783588F413C3Bc644, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

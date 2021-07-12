@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllMyDevicePortal data model.
+"""Identity Services Engine getMyDevicePortal data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA71Ccf29F05Ee29Af909B07Bb9C754(object):
-    """getAllMyDevicePortal request schema definition."""
+    """getMyDevicePortal request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA71Ccf29F05Ee29Af909B07Bb9C754, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

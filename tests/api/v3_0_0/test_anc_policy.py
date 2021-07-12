@@ -239,7 +239,7 @@ def test_delete_anc_policy_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_anc_policy(json_schema_validate, obj):
+def is_valid_get_anc_policy(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -250,8 +250,8 @@ def is_valid_get_all_anc_policy(json_schema_validate, obj):
     return True
 
 
-def get_all_anc_policy(api):
-    endpoint_result = api.anc_policy.get_all_anc_policy(
+def get_anc_policy(api):
+    endpoint_result = api.anc_policy.get_anc_policy(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -263,11 +263,11 @@ def get_all_anc_policy(api):
 
 
 @pytest.mark.anc_policy
-def test_get_all_anc_policy(api, validator):
+def test_get_anc_policy(api, validator):
     try:
-        assert is_valid_get_all_anc_policy(
+        assert is_valid_get_anc_policy(
             validator,
-            get_all_anc_policy(api)
+            get_anc_policy(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -275,8 +275,8 @@ def test_get_all_anc_policy(api, validator):
             raise original_e
 
 
-def get_all_anc_policy_default(api):
-    endpoint_result = api.anc_policy.get_all_anc_policy(
+def get_anc_policy_default(api):
+    endpoint_result = api.anc_policy.get_anc_policy(
         filter=None,
         filter_type=None,
         page=None,
@@ -288,11 +288,11 @@ def get_all_anc_policy_default(api):
 
 
 @pytest.mark.anc_policy
-def test_get_all_anc_policy_default(api, validator):
+def test_get_anc_policy_default(api, validator):
     try:
-        assert is_valid_get_all_anc_policy(
+        assert is_valid_get_anc_policy(
             validator,
-            get_all_anc_policy_default(api)
+            get_anc_policy_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

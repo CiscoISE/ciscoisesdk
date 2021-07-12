@@ -473,11 +473,11 @@ class RadiusServerSequence(object):
             **query_parameters
         )
 
-    def get_all_radius_server_sequence(self,
-                                       page=None,
-                                       size=None,
-                                       headers=None,
-                                       **query_parameters):
+    def get_radius_server_sequence(self,
+                                   page=None,
+                                   size=None,
+                                   headers=None,
+                                   **query_parameters):
         """This API allows the client to get all the RADIUS server
         sequences.
 
@@ -556,22 +556,22 @@ class RadiusServerSequence(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_radius_server_sequence <#ciscoisesdk.
+        """Alias for `get_radius_server_sequence <#ciscoisesdk.
         api.v3_0_0.radius_server_sequence.
-        RadiusServerSequence.get_all_radius_server_sequence>`_
+        RadiusServerSequence.get_radius_server_sequence>`_
         """
-        return self.get_all_radius_server_sequence(
+        return self.get_radius_server_sequence(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_radius_server_sequence_generator(self,
-                                                 page=None,
-                                                 size=None,
-                                                 headers=None,
-                                                 **query_parameters):
+    def get_radius_server_sequence_generator(self,
+                                             page=None,
+                                             size=None,
+                                             headers=None,
+                                             **query_parameters):
         """This API allows the client to get all the RADIUS server
         sequences.
 
@@ -601,7 +601,7 @@ class RadiusServerSequence(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_radius_server_sequence, dict(
+        yield from get_next_page(self.get_radius_server_sequence, dict(
             page=page,
             size=size,
             headers=headers,
@@ -613,11 +613,11 @@ class RadiusServerSequence(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_radius_server_sequence_generator <#ciscoisesdk.
+        """Alias for `get_radius_server_sequence_generator <#ciscoisesdk.
         api.v3_0_0.radius_server_sequence.
-        RadiusServerSequence.get_all_radius_server_sequence_generator>`_
+        RadiusServerSequence.get_radius_server_sequence_generator>`_
         """
-        yield from get_next_page(self.get_all_radius_server_sequence, dict(
+        yield from get_next_page(self.get_radius_server_sequence, dict(
             page=page,
             size=size,
             headers=headers,

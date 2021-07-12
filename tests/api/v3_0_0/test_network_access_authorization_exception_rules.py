@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_network_access_policy_by_id_local_exception_rule_list(json_schema_validate, obj):
+def is_valid_get_network_access_local_exception_rules(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_network_access_policy_by_id_local_exception_rule_list(json_sche
     return True
 
 
-def get_network_access_policy_by_id_local_exception_rule_list(api):
-    endpoint_result = api.network_access_authorization_exception_rules.get_network_access_policy_by_id_local_exception_rule_list(
+def get_network_access_local_exception_rules(api):
+    endpoint_result = api.network_access_authorization_exception_rules.get_network_access_local_exception_rules(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_get_network_access_policy_by_id_local_exception_rule_list(api, validator):
+def test_get_network_access_local_exception_rules(api, validator):
     try:
-        assert is_valid_get_network_access_policy_by_id_local_exception_rule_list(
+        assert is_valid_get_network_access_local_exception_rules(
             validator,
-            get_network_access_policy_by_id_local_exception_rule_list(api)
+            get_network_access_local_exception_rules(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,26 +60,26 @@ def test_get_network_access_policy_by_id_local_exception_rule_list(api, validato
             raise original_e
 
 
-def get_network_access_policy_by_id_local_exception_rule_list_default(api):
-    endpoint_result = api.network_access_authorization_exception_rules.get_network_access_policy_by_id_local_exception_rule_list(
+def get_network_access_local_exception_rules_default(api):
+    endpoint_result = api.network_access_authorization_exception_rules.get_network_access_local_exception_rules(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_get_network_access_policy_by_id_local_exception_rule_list_default(api, validator):
+def test_get_network_access_local_exception_rules_default(api, validator):
     try:
-        assert is_valid_get_network_access_policy_by_id_local_exception_rule_list(
+        assert is_valid_get_network_access_local_exception_rules(
             validator,
-            get_network_access_policy_by_id_local_exception_rule_list_default(api)
+            get_network_access_local_exception_rules_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_create_network_access_policy_by_id_local_exception_rule(json_schema_validate, obj):
+def is_valid_create_network_access_local_exception_rule(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_create_network_access_policy_by_id_local_exception_rule(json_schema
     return True
 
 
-def create_network_access_policy_by_id_local_exception_rule(api):
-    endpoint_result = api.network_access_authorization_exception_rules.create_network_access_policy_by_id_local_exception_rule(
+def create_network_access_local_exception_rule(api):
+    endpoint_result = api.network_access_authorization_exception_rules.create_network_access_local_exception_rule(
         active_validation=False,
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
@@ -104,11 +104,11 @@ def create_network_access_policy_by_id_local_exception_rule(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_create_network_access_policy_by_id_local_exception_rule(api, validator):
+def test_create_network_access_local_exception_rule(api, validator):
     try:
-        assert is_valid_create_network_access_policy_by_id_local_exception_rule(
+        assert is_valid_create_network_access_local_exception_rule(
             validator,
-            create_network_access_policy_by_id_local_exception_rule(api)
+            create_network_access_local_exception_rule(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -116,8 +116,8 @@ def test_create_network_access_policy_by_id_local_exception_rule(api, validator)
             raise original_e
 
 
-def create_network_access_policy_by_id_local_exception_rule_default(api):
-    endpoint_result = api.network_access_authorization_exception_rules.create_network_access_policy_by_id_local_exception_rule(
+def create_network_access_local_exception_rule_default(api):
+    endpoint_result = api.network_access_authorization_exception_rules.create_network_access_local_exception_rule(
         active_validation=False,
         policy_id='string',
         link=None,
@@ -130,18 +130,18 @@ def create_network_access_policy_by_id_local_exception_rule_default(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_create_network_access_policy_by_id_local_exception_rule_default(api, validator):
+def test_create_network_access_local_exception_rule_default(api, validator):
     try:
-        assert is_valid_create_network_access_policy_by_id_local_exception_rule(
+        assert is_valid_create_network_access_local_exception_rule(
             validator,
-            create_network_access_policy_by_id_local_exception_rule_default(api)
+            create_network_access_local_exception_rule_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_reset_hit_counts_network_access_policy_by_id_local_exceptions(json_schema_validate, obj):
+def is_valid_reset_hit_counts_network_access_local_exceptions(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -152,8 +152,8 @@ def is_valid_reset_hit_counts_network_access_policy_by_id_local_exceptions(json_
     return True
 
 
-def reset_hit_counts_network_access_policy_by_id_local_exceptions(api):
-    endpoint_result = api.network_access_authorization_exception_rules.reset_hit_counts_network_access_policy_by_id_local_exceptions(
+def reset_hit_counts_network_access_local_exceptions(api):
+    endpoint_result = api.network_access_authorization_exception_rules.reset_hit_counts_network_access_local_exceptions(
         active_validation=False,
         payload=None,
         policy_id='string'
@@ -162,11 +162,11 @@ def reset_hit_counts_network_access_policy_by_id_local_exceptions(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_reset_hit_counts_network_access_policy_by_id_local_exceptions(api, validator):
+def test_reset_hit_counts_network_access_local_exceptions(api, validator):
     try:
-        assert is_valid_reset_hit_counts_network_access_policy_by_id_local_exceptions(
+        assert is_valid_reset_hit_counts_network_access_local_exceptions(
             validator,
-            reset_hit_counts_network_access_policy_by_id_local_exceptions(api)
+            reset_hit_counts_network_access_local_exceptions(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -174,8 +174,8 @@ def test_reset_hit_counts_network_access_policy_by_id_local_exceptions(api, vali
             raise original_e
 
 
-def reset_hit_counts_network_access_policy_by_id_local_exceptions_default(api):
-    endpoint_result = api.network_access_authorization_exception_rules.reset_hit_counts_network_access_policy_by_id_local_exceptions(
+def reset_hit_counts_network_access_local_exceptions_default(api):
+    endpoint_result = api.network_access_authorization_exception_rules.reset_hit_counts_network_access_local_exceptions(
         active_validation=False,
         policy_id='string',
         payload=None
@@ -184,18 +184,18 @@ def reset_hit_counts_network_access_policy_by_id_local_exceptions_default(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_reset_hit_counts_network_access_policy_by_id_local_exceptions_default(api, validator):
+def test_reset_hit_counts_network_access_local_exceptions_default(api, validator):
     try:
-        assert is_valid_reset_hit_counts_network_access_policy_by_id_local_exceptions(
+        assert is_valid_reset_hit_counts_network_access_local_exceptions(
             validator,
-            reset_hit_counts_network_access_policy_by_id_local_exceptions_default(api)
+            reset_hit_counts_network_access_local_exceptions_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_network_access_policy_by_id_local_exception_rule_by_id(json_schema_validate, obj):
+def is_valid_get_network_access_local_exception_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -206,8 +206,8 @@ def is_valid_get_network_access_policy_by_id_local_exception_rule_by_id(json_sch
     return True
 
 
-def get_network_access_policy_by_id_local_exception_rule_by_id(api):
-    endpoint_result = api.network_access_authorization_exception_rules.get_network_access_policy_by_id_local_exception_rule_by_id(
+def get_network_access_local_exception_rule_by_id(api):
+    endpoint_result = api.network_access_authorization_exception_rules.get_network_access_local_exception_rule_by_id(
         id='string',
         policy_id='string'
     )
@@ -215,11 +215,11 @@ def get_network_access_policy_by_id_local_exception_rule_by_id(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_get_network_access_policy_by_id_local_exception_rule_by_id(api, validator):
+def test_get_network_access_local_exception_rule_by_id(api, validator):
     try:
-        assert is_valid_get_network_access_policy_by_id_local_exception_rule_by_id(
+        assert is_valid_get_network_access_local_exception_rule_by_id(
             validator,
-            get_network_access_policy_by_id_local_exception_rule_by_id(api)
+            get_network_access_local_exception_rule_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -227,8 +227,8 @@ def test_get_network_access_policy_by_id_local_exception_rule_by_id(api, validat
             raise original_e
 
 
-def get_network_access_policy_by_id_local_exception_rule_by_id_default(api):
-    endpoint_result = api.network_access_authorization_exception_rules.get_network_access_policy_by_id_local_exception_rule_by_id(
+def get_network_access_local_exception_rule_by_id_default(api):
+    endpoint_result = api.network_access_authorization_exception_rules.get_network_access_local_exception_rule_by_id(
         id='string',
         policy_id='string'
     )
@@ -236,18 +236,18 @@ def get_network_access_policy_by_id_local_exception_rule_by_id_default(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_get_network_access_policy_by_id_local_exception_rule_by_id_default(api, validator):
+def test_get_network_access_local_exception_rule_by_id_default(api, validator):
     try:
-        assert is_valid_get_network_access_policy_by_id_local_exception_rule_by_id(
+        assert is_valid_get_network_access_local_exception_rule_by_id(
             validator,
-            get_network_access_policy_by_id_local_exception_rule_by_id_default(api)
+            get_network_access_local_exception_rule_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_network_access_policy_by_id_local_exception_rule_by_id(json_schema_validate, obj):
+def is_valid_update_network_access_local_exception_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -258,8 +258,8 @@ def is_valid_update_network_access_policy_by_id_local_exception_rule_by_id(json_
     return True
 
 
-def update_network_access_policy_by_id_local_exception_rule_by_id(api):
-    endpoint_result = api.network_access_authorization_exception_rules.update_network_access_policy_by_id_local_exception_rule_by_id(
+def update_network_access_local_exception_rule_by_id(api):
+    endpoint_result = api.network_access_authorization_exception_rules.update_network_access_local_exception_rule_by_id(
         active_validation=False,
         id='string',
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
@@ -273,11 +273,11 @@ def update_network_access_policy_by_id_local_exception_rule_by_id(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_update_network_access_policy_by_id_local_exception_rule_by_id(api, validator):
+def test_update_network_access_local_exception_rule_by_id(api, validator):
     try:
-        assert is_valid_update_network_access_policy_by_id_local_exception_rule_by_id(
+        assert is_valid_update_network_access_local_exception_rule_by_id(
             validator,
-            update_network_access_policy_by_id_local_exception_rule_by_id(api)
+            update_network_access_local_exception_rule_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -285,8 +285,8 @@ def test_update_network_access_policy_by_id_local_exception_rule_by_id(api, vali
             raise original_e
 
 
-def update_network_access_policy_by_id_local_exception_rule_by_id_default(api):
-    endpoint_result = api.network_access_authorization_exception_rules.update_network_access_policy_by_id_local_exception_rule_by_id(
+def update_network_access_local_exception_rule_by_id_default(api):
+    endpoint_result = api.network_access_authorization_exception_rules.update_network_access_local_exception_rule_by_id(
         active_validation=False,
         id='string',
         policy_id='string',
@@ -300,18 +300,18 @@ def update_network_access_policy_by_id_local_exception_rule_by_id_default(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_update_network_access_policy_by_id_local_exception_rule_by_id_default(api, validator):
+def test_update_network_access_local_exception_rule_by_id_default(api, validator):
     try:
-        assert is_valid_update_network_access_policy_by_id_local_exception_rule_by_id(
+        assert is_valid_update_network_access_local_exception_rule_by_id(
             validator,
-            update_network_access_policy_by_id_local_exception_rule_by_id_default(api)
+            update_network_access_local_exception_rule_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_network_access_policy_by_id_local_exception_rule_by_id(json_schema_validate, obj):
+def is_valid_delete_network_access_local_exception_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -322,8 +322,8 @@ def is_valid_delete_network_access_policy_by_id_local_exception_rule_by_id(json_
     return True
 
 
-def delete_network_access_policy_by_id_local_exception_rule_by_id(api):
-    endpoint_result = api.network_access_authorization_exception_rules.delete_network_access_policy_by_id_local_exception_rule_by_id(
+def delete_network_access_local_exception_rule_by_id(api):
+    endpoint_result = api.network_access_authorization_exception_rules.delete_network_access_local_exception_rule_by_id(
         id='string',
         policy_id='string'
     )
@@ -331,11 +331,11 @@ def delete_network_access_policy_by_id_local_exception_rule_by_id(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_delete_network_access_policy_by_id_local_exception_rule_by_id(api, validator):
+def test_delete_network_access_local_exception_rule_by_id(api, validator):
     try:
-        assert is_valid_delete_network_access_policy_by_id_local_exception_rule_by_id(
+        assert is_valid_delete_network_access_local_exception_rule_by_id(
             validator,
-            delete_network_access_policy_by_id_local_exception_rule_by_id(api)
+            delete_network_access_local_exception_rule_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -343,8 +343,8 @@ def test_delete_network_access_policy_by_id_local_exception_rule_by_id(api, vali
             raise original_e
 
 
-def delete_network_access_policy_by_id_local_exception_rule_by_id_default(api):
-    endpoint_result = api.network_access_authorization_exception_rules.delete_network_access_policy_by_id_local_exception_rule_by_id(
+def delete_network_access_local_exception_rule_by_id_default(api):
+    endpoint_result = api.network_access_authorization_exception_rules.delete_network_access_local_exception_rule_by_id(
         id='string',
         policy_id='string'
     )
@@ -352,11 +352,11 @@ def delete_network_access_policy_by_id_local_exception_rule_by_id_default(api):
 
 
 @pytest.mark.network_access_authorization_exception_rules
-def test_delete_network_access_policy_by_id_local_exception_rule_by_id_default(api, validator):
+def test_delete_network_access_local_exception_rule_by_id_default(api, validator):
     try:
-        assert is_valid_delete_network_access_policy_by_id_local_exception_rule_by_id(
+        assert is_valid_delete_network_access_local_exception_rule_by_id(
             validator,
-            delete_network_access_policy_by_id_local_exception_rule_by_id_default(api)
+            delete_network_access_local_exception_rule_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

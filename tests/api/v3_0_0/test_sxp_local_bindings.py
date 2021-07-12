@@ -193,7 +193,7 @@ def test_delete_sxp_local_bindings_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_sxp_local_bindings(json_schema_validate, obj):
+def is_valid_get_sxp_local_bindings(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -204,8 +204,8 @@ def is_valid_get_all_sxp_local_bindings(json_schema_validate, obj):
     return True
 
 
-def get_all_sxp_local_bindings(api):
-    endpoint_result = api.sxp_local_bindings.get_all_sxp_local_bindings(
+def get_sxp_local_bindings(api):
+    endpoint_result = api.sxp_local_bindings.get_sxp_local_bindings(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -217,11 +217,11 @@ def get_all_sxp_local_bindings(api):
 
 
 @pytest.mark.sxp_local_bindings
-def test_get_all_sxp_local_bindings(api, validator):
+def test_get_sxp_local_bindings(api, validator):
     try:
-        assert is_valid_get_all_sxp_local_bindings(
+        assert is_valid_get_sxp_local_bindings(
             validator,
-            get_all_sxp_local_bindings(api)
+            get_sxp_local_bindings(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -229,8 +229,8 @@ def test_get_all_sxp_local_bindings(api, validator):
             raise original_e
 
 
-def get_all_sxp_local_bindings_default(api):
-    endpoint_result = api.sxp_local_bindings.get_all_sxp_local_bindings(
+def get_sxp_local_bindings_default(api):
+    endpoint_result = api.sxp_local_bindings.get_sxp_local_bindings(
         filter=None,
         filter_type=None,
         page=None,
@@ -242,11 +242,11 @@ def get_all_sxp_local_bindings_default(api):
 
 
 @pytest.mark.sxp_local_bindings
-def test_get_all_sxp_local_bindings_default(api, validator):
+def test_get_sxp_local_bindings_default(api, validator):
     try:
-        assert is_valid_get_all_sxp_local_bindings(
+        assert is_valid_get_sxp_local_bindings(
             validator,
-            get_all_sxp_local_bindings_default(api)
+            get_sxp_local_bindings_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -193,7 +193,7 @@ def test_delete_security_groups_to_vn_to_vlan_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_security_groups_to_vn_to_vlan(json_schema_validate, obj):
+def is_valid_get_security_groups_to_vn_to_vlan(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -204,8 +204,8 @@ def is_valid_get_all_security_groups_to_vn_to_vlan(json_schema_validate, obj):
     return True
 
 
-def get_all_security_groups_to_vn_to_vlan(api):
-    endpoint_result = api.security_group_to_virtual_network.get_all_security_groups_to_vn_to_vlan(
+def get_security_groups_to_vn_to_vlan(api):
+    endpoint_result = api.security_group_to_virtual_network.get_security_groups_to_vn_to_vlan(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -215,11 +215,11 @@ def get_all_security_groups_to_vn_to_vlan(api):
 
 
 @pytest.mark.security_group_to_virtual_network
-def test_get_all_security_groups_to_vn_to_vlan(api, validator):
+def test_get_security_groups_to_vn_to_vlan(api, validator):
     try:
-        assert is_valid_get_all_security_groups_to_vn_to_vlan(
+        assert is_valid_get_security_groups_to_vn_to_vlan(
             validator,
-            get_all_security_groups_to_vn_to_vlan(api)
+            get_security_groups_to_vn_to_vlan(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -227,8 +227,8 @@ def test_get_all_security_groups_to_vn_to_vlan(api, validator):
             raise original_e
 
 
-def get_all_security_groups_to_vn_to_vlan_default(api):
-    endpoint_result = api.security_group_to_virtual_network.get_all_security_groups_to_vn_to_vlan(
+def get_security_groups_to_vn_to_vlan_default(api):
+    endpoint_result = api.security_group_to_virtual_network.get_security_groups_to_vn_to_vlan(
         filter=None,
         filter_type=None,
         page=None,
@@ -238,11 +238,11 @@ def get_all_security_groups_to_vn_to_vlan_default(api):
 
 
 @pytest.mark.security_group_to_virtual_network
-def test_get_all_security_groups_to_vn_to_vlan_default(api, validator):
+def test_get_security_groups_to_vn_to_vlan_default(api, validator):
     try:
-        assert is_valid_get_all_security_groups_to_vn_to_vlan(
+        assert is_valid_get_security_groups_to_vn_to_vlan(
             validator,
-            get_all_security_groups_to_vn_to_vlan_default(api)
+            get_security_groups_to_vn_to_vlan_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

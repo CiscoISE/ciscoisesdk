@@ -74,9 +74,9 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_device_admin_policy_set_global_exception_rule_list(self,
-                                                               headers=None,
-                                                               **query_parameters):
+    def get_device_admin_policy_set_global_exception_rules(self,
+                                                           headers=None,
+                                                           **query_parameters):
         """Device Admin Get global execption rules.
 
         Args:
@@ -134,11 +134,11 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
     def get_all(self,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_device_admin_policy_set_global_exception_rule_list <#ciscoisesdk.
+        """Alias for `get_device_admin_policy_set_global_exception_rules <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_global_exception_rules.
-        DeviceAdministrationAuthorizationGlobalExceptionRules.get_device_admin_policy_set_global_exception_rule_list>`_
+        DeviceAdministrationAuthorizationGlobalExceptionRules.get_device_admin_policy_set_global_exception_rules>`_
         """
-        return self.get_device_admin_policy_set_global_exception_rule_list(
+        return self.get_device_admin_policy_set_global_exception_rules(
             headers=headers,
             **query_parameters
         )

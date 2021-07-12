@@ -399,13 +399,13 @@ class SecurityGroupToVirtualNetwork(object):
             **query_parameters
         )
 
-    def get_all_security_groups_to_vn_to_vlan(self,
-                                              filter=None,
-                                              filter_type=None,
-                                              page=None,
-                                              size=None,
-                                              headers=None,
-                                              **query_parameters):
+    def get_security_groups_to_vn_to_vlan(self,
+                                          filter=None,
+                                          filter_type=None,
+                                          page=None,
+                                          size=None,
+                                          headers=None,
+                                          **query_parameters):
         """This API allows the client to get all the security group ACL to
         virtual networks.   Filter:   [sgtId]   To search guest
         users by using  toDate  column,follow the format:   DD-
@@ -529,11 +529,11 @@ class SecurityGroupToVirtualNetwork(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_security_groups_to_vn_to_vlan <#ciscoisesdk.
+        """Alias for `get_security_groups_to_vn_to_vlan <#ciscoisesdk.
         api.v3_0_0.security_group_to_virtual_network.
-        SecurityGroupToVirtualNetwork.get_all_security_groups_to_vn_to_vlan>`_
+        SecurityGroupToVirtualNetwork.get_security_groups_to_vn_to_vlan>`_
         """
-        return self.get_all_security_groups_to_vn_to_vlan(
+        return self.get_security_groups_to_vn_to_vlan(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -542,13 +542,13 @@ class SecurityGroupToVirtualNetwork(object):
             **query_parameters
         )
 
-    def get_all_security_groups_to_vn_to_vlan_generator(self,
-                                                        filter=None,
-                                                        filter_type=None,
-                                                        page=None,
-                                                        size=None,
-                                                        headers=None,
-                                                        **query_parameters):
+    def get_security_groups_to_vn_to_vlan_generator(self,
+                                                    filter=None,
+                                                    filter_type=None,
+                                                    page=None,
+                                                    size=None,
+                                                    headers=None,
+                                                    **query_parameters):
         """This API allows the client to get all the security group ACL to
         virtual networks.   Filter:   [sgtId]   To search guest
         users by using  toDate  column,follow the format:   DD-
@@ -615,7 +615,7 @@ class SecurityGroupToVirtualNetwork(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_security_groups_to_vn_to_vlan, dict(
+        yield from get_next_page(self.get_security_groups_to_vn_to_vlan, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -631,11 +631,11 @@ class SecurityGroupToVirtualNetwork(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_security_groups_to_vn_to_vlan_generator <#ciscoisesdk.
+        """Alias for `get_security_groups_to_vn_to_vlan_generator <#ciscoisesdk.
         api.v3_0_0.security_group_to_virtual_network.
-        SecurityGroupToVirtualNetwork.get_all_security_groups_to_vn_to_vlan_generator>`_
+        SecurityGroupToVirtualNetwork.get_security_groups_to_vn_to_vlan_generator>`_
         """
-        yield from get_next_page(self.get_all_security_groups_to_vn_to_vlan, dict(
+        yield from get_next_page(self.get_security_groups_to_vn_to_vlan, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

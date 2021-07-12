@@ -233,7 +233,7 @@ def test_get_px_grid_node_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_px_grid_node(json_schema_validate, obj):
+def is_valid_get_px_grid_node(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -244,8 +244,8 @@ def is_valid_get_all_px_grid_node(json_schema_validate, obj):
     return True
 
 
-def get_all_px_grid_node(api):
-    endpoint_result = api.px_grid_node.get_all_px_grid_node(
+def get_px_grid_node(api):
+    endpoint_result = api.px_grid_node.get_px_grid_node(
         page=0,
         size=0
     )
@@ -253,11 +253,11 @@ def get_all_px_grid_node(api):
 
 
 @pytest.mark.px_grid_node
-def test_get_all_px_grid_node(api, validator):
+def test_get_px_grid_node(api, validator):
     try:
-        assert is_valid_get_all_px_grid_node(
+        assert is_valid_get_px_grid_node(
             validator,
-            get_all_px_grid_node(api)
+            get_px_grid_node(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -265,8 +265,8 @@ def test_get_all_px_grid_node(api, validator):
             raise original_e
 
 
-def get_all_px_grid_node_default(api):
-    endpoint_result = api.px_grid_node.get_all_px_grid_node(
+def get_px_grid_node_default(api):
+    endpoint_result = api.px_grid_node.get_px_grid_node(
         page=None,
         size=None
     )
@@ -274,11 +274,11 @@ def get_all_px_grid_node_default(api):
 
 
 @pytest.mark.px_grid_node
-def test_get_all_px_grid_node_default(api, validator):
+def test_get_px_grid_node_default(api, validator):
     try:
-        assert is_valid_get_all_px_grid_node(
+        assert is_valid_get_px_grid_node(
             validator,
-            get_all_px_grid_node_default(api)
+            get_px_grid_node_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

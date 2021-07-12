@@ -430,11 +430,11 @@ class CertificateProfile(object):
             **query_parameters
         )
 
-    def get_all_certificate_profile(self,
-                                    page=None,
-                                    size=None,
-                                    headers=None,
-                                    **query_parameters):
+    def get_certificate_profile(self,
+                                page=None,
+                                size=None,
+                                headers=None,
+                                **query_parameters):
         """This API allows the client to get all the certificate profiles.
 
         Args:
@@ -512,22 +512,22 @@ class CertificateProfile(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_certificate_profile <#ciscoisesdk.
+        """Alias for `get_certificate_profile <#ciscoisesdk.
         api.v3_0_0.certificate_profile.
-        CertificateProfile.get_all_certificate_profile>`_
+        CertificateProfile.get_certificate_profile>`_
         """
-        return self.get_all_certificate_profile(
+        return self.get_certificate_profile(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_certificate_profile_generator(self,
-                                              page=None,
-                                              size=None,
-                                              headers=None,
-                                              **query_parameters):
+    def get_certificate_profile_generator(self,
+                                          page=None,
+                                          size=None,
+                                          headers=None,
+                                          **query_parameters):
         """This API allows the client to get all the certificate profiles.
 
         Args:
@@ -556,7 +556,7 @@ class CertificateProfile(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_certificate_profile, dict(
+        yield from get_next_page(self.get_certificate_profile, dict(
             page=page,
             size=size,
             headers=headers,
@@ -568,11 +568,11 @@ class CertificateProfile(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_certificate_profile_generator <#ciscoisesdk.
+        """Alias for `get_certificate_profile_generator <#ciscoisesdk.
         api.v3_0_0.certificate_profile.
-        CertificateProfile.get_all_certificate_profile_generator>`_
+        CertificateProfile.get_certificate_profile_generator>`_
         """
-        yield from get_next_page(self.get_all_certificate_profile, dict(
+        yield from get_next_page(self.get_certificate_profile, dict(
             page=page,
             size=size,
             headers=headers,

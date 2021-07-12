@@ -361,7 +361,7 @@ def test_delete_egress_matrix_cell_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_egress_matrix_cell(json_schema_validate, obj):
+def is_valid_get_egress_matrix_cell(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -372,8 +372,8 @@ def is_valid_get_all_egress_matrix_cell(json_schema_validate, obj):
     return True
 
 
-def get_all_egress_matrix_cell(api):
-    endpoint_result = api.egress_matrix_cell.get_all_egress_matrix_cell(
+def get_egress_matrix_cell(api):
+    endpoint_result = api.egress_matrix_cell.get_egress_matrix_cell(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -385,11 +385,11 @@ def get_all_egress_matrix_cell(api):
 
 
 @pytest.mark.egress_matrix_cell
-def test_get_all_egress_matrix_cell(api, validator):
+def test_get_egress_matrix_cell(api, validator):
     try:
-        assert is_valid_get_all_egress_matrix_cell(
+        assert is_valid_get_egress_matrix_cell(
             validator,
-            get_all_egress_matrix_cell(api)
+            get_egress_matrix_cell(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -397,8 +397,8 @@ def test_get_all_egress_matrix_cell(api, validator):
             raise original_e
 
 
-def get_all_egress_matrix_cell_default(api):
-    endpoint_result = api.egress_matrix_cell.get_all_egress_matrix_cell(
+def get_egress_matrix_cell_default(api):
+    endpoint_result = api.egress_matrix_cell.get_egress_matrix_cell(
         filter=None,
         filter_type=None,
         page=None,
@@ -410,11 +410,11 @@ def get_all_egress_matrix_cell_default(api):
 
 
 @pytest.mark.egress_matrix_cell
-def test_get_all_egress_matrix_cell_default(api, validator):
+def test_get_egress_matrix_cell_default(api, validator):
     try:
-        assert is_valid_get_all_egress_matrix_cell(
+        assert is_valid_get_egress_matrix_cell(
             validator,
-            get_all_egress_matrix_cell_default(api)
+            get_egress_matrix_cell_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -337,7 +337,7 @@ def test_get_csr_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_delete_csr(json_schema_validate, obj):
+def is_valid_delete_csr_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -348,8 +348,8 @@ def is_valid_delete_csr(json_schema_validate, obj):
     return True
 
 
-def delete_csr(api):
-    endpoint_result = api.certificates.delete_csr(
+def delete_csr_by_id(api):
+    endpoint_result = api.certificates.delete_csr_by_id(
         host_name='string',
         id='string'
     )
@@ -357,11 +357,11 @@ def delete_csr(api):
 
 
 @pytest.mark.certificates
-def test_delete_csr(api, validator):
+def test_delete_csr_by_id(api, validator):
     try:
-        assert is_valid_delete_csr(
+        assert is_valid_delete_csr_by_id(
             validator,
-            delete_csr(api)
+            delete_csr_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -369,8 +369,8 @@ def test_delete_csr(api, validator):
             raise original_e
 
 
-def delete_csr_default(api):
-    endpoint_result = api.certificates.delete_csr(
+def delete_csr_by_id_default(api):
+    endpoint_result = api.certificates.delete_csr_by_id(
         host_name='string',
         id='string'
     )
@@ -378,11 +378,11 @@ def delete_csr_default(api):
 
 
 @pytest.mark.certificates
-def test_delete_csr_default(api, validator):
+def test_delete_csr_by_id_default(api, validator):
     try:
-        assert is_valid_delete_csr(
+        assert is_valid_delete_csr_by_id(
             validator,
-            delete_csr_default(api)
+            delete_csr_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

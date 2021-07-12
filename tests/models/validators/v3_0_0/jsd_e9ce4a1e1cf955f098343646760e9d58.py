@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllPortalGlobalSettings data model.
+"""Identity Services Engine getPortalGlobalSettings data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorE9Ce4A1E1Cf955F098343646760E9D58(object):
-    """getAllPortalGlobalSettings request schema definition."""
+    """getPortalGlobalSettings request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE9Ce4A1E1Cf955F098343646760E9D58, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

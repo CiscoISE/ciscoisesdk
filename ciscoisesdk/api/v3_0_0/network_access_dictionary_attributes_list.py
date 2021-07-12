@@ -215,9 +215,9 @@ class NetworkAccessDictionaryAttributesList(object):
             **query_parameters
         )
 
-    def get_network_access_dictionaries_policyset(self,
-                                                  headers=None,
-                                                  **query_parameters):
+    def get_network_access_dictionaries_policy_set(self,
+                                                   headers=None,
+                                                   **query_parameters):
         """Network Access Returns list of dictionary attributes for
         policyset.
 
@@ -273,14 +273,14 @@ class NetworkAccessDictionaryAttributesList(object):
 
         return self._object_factory('bpm_c53b22885f5e5d82fb8cadd0332136_v3_0_0', _api_response)
 
-    def get_all_policyset(self,
-                          headers=None,
-                          **query_parameters):
-        """Alias for `get_network_access_dictionaries_policyset <#ciscoisesdk.
+    def get_all_policy_set(self,
+                           headers=None,
+                           **query_parameters):
+        """Alias for `get_network_access_dictionaries_policy_set <#ciscoisesdk.
         api.v3_0_0.network_access_dictionary_attributes_list.
-        NetworkAccessDictionaryAttributesList.get_network_access_dictionaries_policyset>`_
+        NetworkAccessDictionaryAttributesList.get_network_access_dictionaries_policy_set>`_
         """
-        return self.get_network_access_dictionaries_policyset(
+        return self.get_network_access_dictionaries_policy_set(
             headers=headers,
             **query_parameters
         )

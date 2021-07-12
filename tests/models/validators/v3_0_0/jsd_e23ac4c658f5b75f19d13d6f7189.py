@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getNetworkAccessPolicyByIdLocalExceptionRuleList data model.
+"""Identity Services Engine getNetworkAccessLocalExceptionRules data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorE23AC4C658F5B75F19D13D6F7189(object):
-    """getNetworkAccessPolicyByIdLocalExceptionRuleList request schema
-    definition."""
+    """getNetworkAccessLocalExceptionRules request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE23AC4C658F5B75F19D13D6F7189, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

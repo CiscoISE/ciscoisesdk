@@ -74,9 +74,9 @@ class NodeDeployment(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_nodes(self,
-                      headers=None,
-                      **query_parameters):
+    def get_nodes(self,
+                  headers=None,
+                  **query_parameters):
         """Discovers all deployment nodes in the cluster. It provides basic
         information about each of deployed nodes in the cluster
         like Hostname, personas, status, roles and services. .
@@ -395,6 +395,20 @@ class NodeDeployment(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ae8d7c8f33bb52ceb04880845f2f45ba_v3_0_0', _api_response)
+
+    def get_all(self,
+                hostname,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_node_details <#ciscoisesdk.
+        api.v3_0_0.node_deployment.
+        NodeDeployment.get_node_details>`_
+        """
+        return self.get_node_details(
+            hostname=hostname,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_node(self,
                     hostname,

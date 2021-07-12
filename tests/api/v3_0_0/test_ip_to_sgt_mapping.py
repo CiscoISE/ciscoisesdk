@@ -355,7 +355,7 @@ def test_delete_ip_to_sgt_mapping_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_ip_to_sgt_mapping(json_schema_validate, obj):
+def is_valid_get_ip_to_sgt_mapping(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -366,8 +366,8 @@ def is_valid_get_all_ip_to_sgt_mapping(json_schema_validate, obj):
     return True
 
 
-def get_all_ip_to_sgt_mapping(api):
-    endpoint_result = api.ip_to_sgt_mapping.get_all_ip_to_sgt_mapping(
+def get_ip_to_sgt_mapping(api):
+    endpoint_result = api.ip_to_sgt_mapping.get_ip_to_sgt_mapping(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -379,11 +379,11 @@ def get_all_ip_to_sgt_mapping(api):
 
 
 @pytest.mark.ip_to_sgt_mapping
-def test_get_all_ip_to_sgt_mapping(api, validator):
+def test_get_ip_to_sgt_mapping(api, validator):
     try:
-        assert is_valid_get_all_ip_to_sgt_mapping(
+        assert is_valid_get_ip_to_sgt_mapping(
             validator,
-            get_all_ip_to_sgt_mapping(api)
+            get_ip_to_sgt_mapping(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -391,8 +391,8 @@ def test_get_all_ip_to_sgt_mapping(api, validator):
             raise original_e
 
 
-def get_all_ip_to_sgt_mapping_default(api):
-    endpoint_result = api.ip_to_sgt_mapping.get_all_ip_to_sgt_mapping(
+def get_ip_to_sgt_mapping_default(api):
+    endpoint_result = api.ip_to_sgt_mapping.get_ip_to_sgt_mapping(
         filter=None,
         filter_type=None,
         page=None,
@@ -404,11 +404,11 @@ def get_all_ip_to_sgt_mapping_default(api):
 
 
 @pytest.mark.ip_to_sgt_mapping
-def test_get_all_ip_to_sgt_mapping_default(api, validator):
+def test_get_ip_to_sgt_mapping_default(api, validator):
     try:
-        assert is_valid_get_all_ip_to_sgt_mapping(
+        assert is_valid_get_ip_to_sgt_mapping(
             validator,
-            get_all_ip_to_sgt_mapping_default(api)
+            get_ip_to_sgt_mapping_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

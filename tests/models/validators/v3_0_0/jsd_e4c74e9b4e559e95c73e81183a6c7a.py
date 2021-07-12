@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllGuestSmtpNotificationSettings data model.
+"""Identity Services Engine getGuestSmtpNotificationSettings data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorE4C74E9B4E559E95C73E81183A6C7A(object):
-    """getAllGuestSmtpNotificationSettings request schema definition."""
+    """getGuestSmtpNotificationSettings request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE4C74E9B4E559E95C73E81183A6C7A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

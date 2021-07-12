@@ -159,15 +159,15 @@ class GuestLocation(object):
             **query_parameters
         )
 
-    def get_all_guest_location(self,
-                               filter=None,
-                               filter_type=None,
-                               page=None,
-                               size=None,
-                               sortasc=None,
-                               sortdsc=None,
-                               headers=None,
-                               **query_parameters):
+    def get_guest_location(self,
+                           filter=None,
+                           filter_type=None,
+                           page=None,
+                           size=None,
+                           sortasc=None,
+                           sortdsc=None,
+                           headers=None,
+                           **query_parameters):
         """This API allows the client to get all the guest locations.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -301,11 +301,11 @@ class GuestLocation(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_guest_location <#ciscoisesdk.
+        """Alias for `get_guest_location <#ciscoisesdk.
         api.v3_0_0.guest_location.
-        GuestLocation.get_all_guest_location>`_
+        GuestLocation.get_guest_location>`_
         """
-        return self.get_all_guest_location(
+        return self.get_guest_location(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -316,15 +316,15 @@ class GuestLocation(object):
             **query_parameters
         )
 
-    def get_all_guest_location_generator(self,
-                                         filter=None,
-                                         filter_type=None,
-                                         page=None,
-                                         size=None,
-                                         sortasc=None,
-                                         sortdsc=None,
-                                         headers=None,
-                                         **query_parameters):
+    def get_guest_location_generator(self,
+                                     filter=None,
+                                     filter_type=None,
+                                     page=None,
+                                     size=None,
+                                     sortasc=None,
+                                     sortdsc=None,
+                                     headers=None,
+                                     **query_parameters):
         """This API allows the client to get all the guest locations.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -393,7 +393,7 @@ class GuestLocation(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_guest_location, dict(
+        yield from get_next_page(self.get_guest_location, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -413,11 +413,11 @@ class GuestLocation(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_guest_location_generator <#ciscoisesdk.
+        """Alias for `get_guest_location_generator <#ciscoisesdk.
         api.v3_0_0.guest_location.
-        GuestLocation.get_all_guest_location_generator>`_
+        GuestLocation.get_guest_location_generator>`_
         """
-        yield from get_next_page(self.get_all_guest_location, dict(
+        yield from get_next_page(self.get_guest_location, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

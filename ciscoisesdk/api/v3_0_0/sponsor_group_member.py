@@ -74,15 +74,15 @@ class SponsorGroupMember(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_sponsor_group_member(self,
-                                     filter=None,
-                                     filter_type=None,
-                                     page=None,
-                                     size=None,
-                                     sortasc=None,
-                                     sortdsc=None,
-                                     headers=None,
-                                     **query_parameters):
+    def get_sponsor_group_member(self,
+                                 filter=None,
+                                 filter_type=None,
+                                 page=None,
+                                 size=None,
+                                 sortasc=None,
+                                 sortdsc=None,
+                                 headers=None,
+                                 **query_parameters):
         """This API allows the client to get all the sponsor group members.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -216,11 +216,11 @@ class SponsorGroupMember(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_sponsor_group_member <#ciscoisesdk.
+        """Alias for `get_sponsor_group_member <#ciscoisesdk.
         api.v3_0_0.sponsor_group_member.
-        SponsorGroupMember.get_all_sponsor_group_member>`_
+        SponsorGroupMember.get_sponsor_group_member>`_
         """
-        return self.get_all_sponsor_group_member(
+        return self.get_sponsor_group_member(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -231,15 +231,15 @@ class SponsorGroupMember(object):
             **query_parameters
         )
 
-    def get_all_sponsor_group_member_generator(self,
-                                               filter=None,
-                                               filter_type=None,
-                                               page=None,
-                                               size=None,
-                                               sortasc=None,
-                                               sortdsc=None,
-                                               headers=None,
-                                               **query_parameters):
+    def get_sponsor_group_member_generator(self,
+                                           filter=None,
+                                           filter_type=None,
+                                           page=None,
+                                           size=None,
+                                           sortasc=None,
+                                           sortdsc=None,
+                                           headers=None,
+                                           **query_parameters):
         """This API allows the client to get all the sponsor group members.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -308,7 +308,7 @@ class SponsorGroupMember(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_sponsor_group_member, dict(
+        yield from get_next_page(self.get_sponsor_group_member, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -328,11 +328,11 @@ class SponsorGroupMember(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_sponsor_group_member_generator <#ciscoisesdk.
+        """Alias for `get_sponsor_group_member_generator <#ciscoisesdk.
         api.v3_0_0.sponsor_group_member.
-        SponsorGroupMember.get_all_sponsor_group_member_generator>`_
+        SponsorGroupMember.get_sponsor_group_member_generator>`_
         """
-        yield from get_next_page(self.get_all_sponsor_group_member, dict(
+        yield from get_next_page(self.get_sponsor_group_member, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

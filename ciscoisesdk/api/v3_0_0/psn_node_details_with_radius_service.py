@@ -244,11 +244,11 @@ class PsnNodeDetailsWithRadiusService(object):
             **query_parameters
         )
 
-    def get_all_session_service_node(self,
-                                     page=None,
-                                     size=None,
-                                     headers=None,
-                                     **query_parameters):
+    def get_session_service_node(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
         """This API allows the client to get all the PSN node details.
 
         Args:
@@ -326,22 +326,22 @@ class PsnNodeDetailsWithRadiusService(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_session_service_node <#ciscoisesdk.
+        """Alias for `get_session_service_node <#ciscoisesdk.
         api.v3_0_0.psn_node_details_with_radius_service.
-        PsnNodeDetailsWithRadiusService.get_all_session_service_node>`_
+        PsnNodeDetailsWithRadiusService.get_session_service_node>`_
         """
-        return self.get_all_session_service_node(
+        return self.get_session_service_node(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_session_service_node_generator(self,
-                                               page=None,
-                                               size=None,
-                                               headers=None,
-                                               **query_parameters):
+    def get_session_service_node_generator(self,
+                                           page=None,
+                                           size=None,
+                                           headers=None,
+                                           **query_parameters):
         """This API allows the client to get all the PSN node details.
 
         Args:
@@ -370,7 +370,7 @@ class PsnNodeDetailsWithRadiusService(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_session_service_node, dict(
+        yield from get_next_page(self.get_session_service_node, dict(
             page=page,
             size=size,
             headers=headers,
@@ -382,11 +382,11 @@ class PsnNodeDetailsWithRadiusService(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_session_service_node_generator <#ciscoisesdk.
+        """Alias for `get_session_service_node_generator <#ciscoisesdk.
         api.v3_0_0.psn_node_details_with_radius_service.
-        PsnNodeDetailsWithRadiusService.get_all_session_service_node_generator>`_
+        PsnNodeDetailsWithRadiusService.get_session_service_node_generator>`_
         """
-        yield from get_next_page(self.get_all_session_service_node, dict(
+        yield from get_next_page(self.get_session_service_node, dict(
             page=page,
             size=size,
             headers=headers,

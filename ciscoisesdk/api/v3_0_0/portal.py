@@ -159,15 +159,15 @@ class Portal(object):
             **query_parameters
         )
 
-    def get_all_portals(self,
-                        filter=None,
-                        filter_type=None,
-                        page=None,
-                        size=None,
-                        sortasc=None,
-                        sortdsc=None,
-                        headers=None,
-                        **query_parameters):
+    def get_portals(self,
+                    filter=None,
+                    filter_type=None,
+                    page=None,
+                    size=None,
+                    sortasc=None,
+                    sortdsc=None,
+                    headers=None,
+                    **query_parameters):
         """This API allows the client to get all the portals.   Filter:
         [name, description]   To search resources by using
         toDate  column,follow the format:   DD-MON-YY
@@ -301,11 +301,11 @@ class Portal(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_portals <#ciscoisesdk.
+        """Alias for `get_portals <#ciscoisesdk.
         api.v3_0_0.portal.
-        Portal.get_all_portals>`_
+        Portal.get_portals>`_
         """
-        return self.get_all_portals(
+        return self.get_portals(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -316,15 +316,15 @@ class Portal(object):
             **query_parameters
         )
 
-    def get_all_portals_generator(self,
-                                  filter=None,
-                                  filter_type=None,
-                                  page=None,
-                                  size=None,
-                                  sortasc=None,
-                                  sortdsc=None,
-                                  headers=None,
-                                  **query_parameters):
+    def get_portals_generator(self,
+                              filter=None,
+                              filter_type=None,
+                              page=None,
+                              size=None,
+                              sortasc=None,
+                              sortdsc=None,
+                              headers=None,
+                              **query_parameters):
         """This API allows the client to get all the portals.   Filter:
         [name, description]   To search resources by using
         toDate  column,follow the format:   DD-MON-YY
@@ -393,7 +393,7 @@ class Portal(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_portals, dict(
+        yield from get_next_page(self.get_portals, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -413,11 +413,11 @@ class Portal(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_portals_generator <#ciscoisesdk.
+        """Alias for `get_portals_generator <#ciscoisesdk.
         api.v3_0_0.portal.
-        Portal.get_all_portals_generator>`_
+        Portal.get_portals_generator>`_
         """
-        yield from get_next_page(self.get_all_portals, dict(
+        yield from get_next_page(self.get_portals, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

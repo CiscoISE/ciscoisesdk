@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllPxGridNode data model.
+"""Identity Services Engine getPxGridNode data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD97156379640002F79B2007C(object):
-    """getAllPxGridNode request schema definition."""
+    """getPxGridNode request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD97156379640002F79B2007C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

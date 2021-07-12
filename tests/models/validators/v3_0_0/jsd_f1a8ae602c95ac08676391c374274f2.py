@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllTelemetryInformation data model.
+"""Identity Services Engine getTelemetryInformation data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF1A8Ae602C95Ac08676391C374274F2(object):
-    """getAllTelemetryInformation request schema definition."""
+    """getTelemetryInformation request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF1A8Ae602C95Ac08676391C374274F2, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

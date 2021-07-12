@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllActiveDirectory data model.
+"""Identity Services Engine getActiveDirectory data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC8Dbec9679D453F78Cb47D894C507A7B(object):
-    """getAllActiveDirectory request schema definition."""
+    """getActiveDirectory request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC8Dbec9679D453F78Cb47D894C507A7B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

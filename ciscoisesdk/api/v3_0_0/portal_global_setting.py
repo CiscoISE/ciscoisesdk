@@ -290,15 +290,15 @@ class PortalGlobalSetting(object):
             **query_parameters
         )
 
-    def get_all_portal_global_settings(self,
-                                       filter=None,
-                                       filter_type=None,
-                                       page=None,
-                                       size=None,
-                                       sortasc=None,
-                                       sortdsc=None,
-                                       headers=None,
-                                       **query_parameters):
+    def get_portal_global_settings(self,
+                                   filter=None,
+                                   filter_type=None,
+                                   page=None,
+                                   size=None,
+                                   sortasc=None,
+                                   sortdsc=None,
+                                   headers=None,
+                                   **query_parameters):
         """This API allows the client to get all the portal global
         settings.   Filter:   [name]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -432,11 +432,11 @@ class PortalGlobalSetting(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_portal_global_settings <#ciscoisesdk.
+        """Alias for `get_portal_global_settings <#ciscoisesdk.
         api.v3_0_0.portal_global_setting.
-        PortalGlobalSetting.get_all_portal_global_settings>`_
+        PortalGlobalSetting.get_portal_global_settings>`_
         """
-        return self.get_all_portal_global_settings(
+        return self.get_portal_global_settings(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -447,15 +447,15 @@ class PortalGlobalSetting(object):
             **query_parameters
         )
 
-    def get_all_portal_global_settings_generator(self,
-                                                 filter=None,
-                                                 filter_type=None,
-                                                 page=None,
-                                                 size=None,
-                                                 sortasc=None,
-                                                 sortdsc=None,
-                                                 headers=None,
-                                                 **query_parameters):
+    def get_portal_global_settings_generator(self,
+                                             filter=None,
+                                             filter_type=None,
+                                             page=None,
+                                             size=None,
+                                             sortasc=None,
+                                             sortdsc=None,
+                                             headers=None,
+                                             **query_parameters):
         """This API allows the client to get all the portal global
         settings.   Filter:   [name]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -524,7 +524,7 @@ class PortalGlobalSetting(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_portal_global_settings, dict(
+        yield from get_next_page(self.get_portal_global_settings, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -544,11 +544,11 @@ class PortalGlobalSetting(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_portal_global_settings_generator <#ciscoisesdk.
+        """Alias for `get_portal_global_settings_generator <#ciscoisesdk.
         api.v3_0_0.portal_global_setting.
-        PortalGlobalSetting.get_all_portal_global_settings_generator>`_
+        PortalGlobalSetting.get_portal_global_settings_generator>`_
         """
-        yield from get_next_page(self.get_all_portal_global_settings, dict(
+        yield from get_next_page(self.get_portal_global_settings, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

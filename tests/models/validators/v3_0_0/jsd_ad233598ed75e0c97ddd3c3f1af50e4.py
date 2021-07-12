@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllPortalThemes data model.
+"""Identity Services Engine getPortalThemes data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorAd233598Ed75E0C97DdD3C3F1Af50E4(object):
-    """getAllPortalThemes request schema definition."""
+    """getPortalThemes request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorAd233598Ed75E0C97DdD3C3F1Af50E4, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

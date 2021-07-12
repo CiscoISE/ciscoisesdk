@@ -410,15 +410,15 @@ class SponsorPortal(object):
             **query_parameters
         )
 
-    def get_all_sponsor_portal(self,
-                               filter=None,
-                               filter_type=None,
-                               page=None,
-                               size=None,
-                               sortasc=None,
-                               sortdsc=None,
-                               headers=None,
-                               **query_parameters):
+    def get_sponsor_portal(self,
+                           filter=None,
+                           filter_type=None,
+                           page=None,
+                           size=None,
+                           sortasc=None,
+                           sortdsc=None,
+                           headers=None,
+                           **query_parameters):
         """This API allows the client to get all the sponsor portals.
         Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -552,11 +552,11 @@ class SponsorPortal(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_sponsor_portal <#ciscoisesdk.
+        """Alias for `get_sponsor_portal <#ciscoisesdk.
         api.v3_0_0.sponsor_portal.
-        SponsorPortal.get_all_sponsor_portal>`_
+        SponsorPortal.get_sponsor_portal>`_
         """
-        return self.get_all_sponsor_portal(
+        return self.get_sponsor_portal(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -567,15 +567,15 @@ class SponsorPortal(object):
             **query_parameters
         )
 
-    def get_all_sponsor_portal_generator(self,
-                                         filter=None,
-                                         filter_type=None,
-                                         page=None,
-                                         size=None,
-                                         sortasc=None,
-                                         sortdsc=None,
-                                         headers=None,
-                                         **query_parameters):
+    def get_sponsor_portal_generator(self,
+                                     filter=None,
+                                     filter_type=None,
+                                     page=None,
+                                     size=None,
+                                     sortasc=None,
+                                     sortdsc=None,
+                                     headers=None,
+                                     **query_parameters):
         """This API allows the client to get all the sponsor portals.
         Filter:   [name, description]   To search resources by
         using  toDate  column,follow the format:   DD-MON-YY
@@ -644,7 +644,7 @@ class SponsorPortal(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_sponsor_portal, dict(
+        yield from get_next_page(self.get_sponsor_portal, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -664,11 +664,11 @@ class SponsorPortal(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_sponsor_portal_generator <#ciscoisesdk.
+        """Alias for `get_sponsor_portal_generator <#ciscoisesdk.
         api.v3_0_0.sponsor_portal.
-        SponsorPortal.get_all_sponsor_portal_generator>`_
+        SponsorPortal.get_sponsor_portal_generator>`_
         """
-        yield from get_next_page(self.get_all_sponsor_portal, dict(
+        yield from get_next_page(self.get_sponsor_portal, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

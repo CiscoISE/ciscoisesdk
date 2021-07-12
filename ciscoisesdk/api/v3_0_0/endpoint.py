@@ -967,15 +967,15 @@ class Endpoint(object):
             **query_parameters
         )
 
-    def get_all_endpoints(self,
-                          filter=None,
-                          filter_type=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_endpoints(self,
+                      filter=None,
+                      filter_type=None,
+                      page=None,
+                      size=None,
+                      sortasc=None,
+                      sortdsc=None,
+                      headers=None,
+                      **query_parameters):
         """This API allows the client to get all the endpoints.   Filter:
         Filters can be used to filter out Endpoints based on a
         set of attributes. This API currently provides the
@@ -1121,11 +1121,11 @@ class Endpoint(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_endpoints <#ciscoisesdk.
+        """Alias for `get_endpoints <#ciscoisesdk.
         api.v3_0_0.endpoint.
-        Endpoint.get_all_endpoints>`_
+        Endpoint.get_endpoints>`_
         """
-        return self.get_all_endpoints(
+        return self.get_endpoints(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -1136,15 +1136,15 @@ class Endpoint(object):
             **query_parameters
         )
 
-    def get_all_endpoints_generator(self,
-                                    filter=None,
-                                    filter_type=None,
-                                    page=None,
-                                    size=None,
-                                    sortasc=None,
-                                    sortdsc=None,
-                                    headers=None,
-                                    **query_parameters):
+    def get_endpoints_generator(self,
+                                filter=None,
+                                filter_type=None,
+                                page=None,
+                                size=None,
+                                sortasc=None,
+                                sortdsc=None,
+                                headers=None,
+                                **query_parameters):
         """This API allows the client to get all the endpoints.   Filter:
         Filters can be used to filter out Endpoints based on a
         set of attributes. This API currently provides the
@@ -1225,7 +1225,7 @@ class Endpoint(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_endpoints, dict(
+        yield from get_next_page(self.get_endpoints, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -1245,11 +1245,11 @@ class Endpoint(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_endpoints_generator <#ciscoisesdk.
+        """Alias for `get_endpoints_generator <#ciscoisesdk.
         api.v3_0_0.endpoint.
-        Endpoint.get_all_endpoints_generator>`_
+        Endpoint.get_endpoints_generator>`_
         """
-        yield from get_next_page(self.get_all_endpoints, dict(
+        yield from get_next_page(self.get_endpoints, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

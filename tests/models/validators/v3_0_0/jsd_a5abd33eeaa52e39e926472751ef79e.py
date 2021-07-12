@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllGuestUsers data model.
+"""Identity Services Engine getGuestUsers data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA5Abd33Eeaa52E39E926472751Ef79E(object):
-    """getAllGuestUsers request schema definition."""
+    """getGuestUsers request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA5Abd33Eeaa52E39E926472751Ef79E, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

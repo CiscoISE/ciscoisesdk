@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllByodPortal data model.
+"""Identity Services Engine getByodPortal data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA23B580495514394B125800E073C9A(object):
-    """getAllByodPortal request schema definition."""
+    """getByodPortal request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA23B580495514394B125800E073C9A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -385,15 +385,15 @@ class PortalTheme(object):
             **query_parameters
         )
 
-    def get_all_portal_themes(self,
-                              filter=None,
-                              filter_type=None,
-                              page=None,
-                              size=None,
-                              sortasc=None,
-                              sortdsc=None,
-                              headers=None,
-                              **query_parameters):
+    def get_portal_themes(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """This API allows the client to get all the portal themes.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -527,11 +527,11 @@ class PortalTheme(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_portal_themes <#ciscoisesdk.
+        """Alias for `get_portal_themes <#ciscoisesdk.
         api.v3_0_0.portal_theme.
-        PortalTheme.get_all_portal_themes>`_
+        PortalTheme.get_portal_themes>`_
         """
-        return self.get_all_portal_themes(
+        return self.get_portal_themes(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -542,15 +542,15 @@ class PortalTheme(object):
             **query_parameters
         )
 
-    def get_all_portal_themes_generator(self,
-                                        filter=None,
-                                        filter_type=None,
-                                        page=None,
-                                        size=None,
-                                        sortasc=None,
-                                        sortdsc=None,
-                                        headers=None,
-                                        **query_parameters):
+    def get_portal_themes_generator(self,
+                                    filter=None,
+                                    filter_type=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """This API allows the client to get all the portal themes.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -619,7 +619,7 @@ class PortalTheme(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_portal_themes, dict(
+        yield from get_next_page(self.get_portal_themes, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -639,11 +639,11 @@ class PortalTheme(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_portal_themes_generator <#ciscoisesdk.
+        """Alias for `get_portal_themes_generator <#ciscoisesdk.
         api.v3_0_0.portal_theme.
-        PortalTheme.get_all_portal_themes_generator>`_
+        PortalTheme.get_portal_themes_generator>`_
         """
-        yield from get_next_page(self.get_all_portal_themes, dict(
+        yield from get_next_page(self.get_portal_themes, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

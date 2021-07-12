@@ -485,6 +485,18 @@ class DeviceAdministrationConditions(object):
 
         return self._object_factory('bpm_f1b8eaf23e795f1a8525eb5905187aa9_v3_0_0', _api_response)
 
+    def get_all_authentication_rule(self,
+                                    headers=None,
+                                    **query_parameters):
+        """Alias for `get_device_admin_conditions_for_authentication_rule <#ciscoisesdk.
+        api.v3_0_0.device_administration_conditions.
+        DeviceAdministrationConditions.get_device_admin_conditions_for_authentication_rule>`_
+        """
+        return self.get_device_admin_conditions_for_authentication_rule(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_conditions_for_authorization_rule(self,
                                                            headers=None,
                                                            **query_parameters):
@@ -542,6 +554,18 @@ class DeviceAdministrationConditions(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ecff2eb67fe5591f8d9026f928a0d8aa_v3_0_0', _api_response)
+
+    def get_all_authorization_rule(self,
+                                   headers=None,
+                                   **query_parameters):
+        """Alias for `get_device_admin_conditions_for_authorization_rule <#ciscoisesdk.
+        api.v3_0_0.device_administration_conditions.
+        DeviceAdministrationConditions.get_device_admin_conditions_for_authorization_rule>`_
+        """
+        return self.get_device_admin_conditions_for_authorization_rule(
+            headers=headers,
+            **query_parameters
+        )
 
     def get_device_admin_condition_by_condition_name(self,
                                                      name,
@@ -1043,6 +1067,18 @@ class DeviceAdministrationConditions(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a40f9e169a95d6dbf3ebbb020291007_v3_0_0', _api_response)
+
+    def get_all_for_policy_set(self,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `get_device_admin_conditions_for_policy_set <#ciscoisesdk.
+        api.v3_0_0.device_administration_conditions.
+        DeviceAdministrationConditions.get_device_admin_conditions_for_policy_set>`_
+        """
+        return self.get_device_admin_conditions_for_policy_set(
+            headers=headers,
+            **query_parameters
+        )
 
     def get_device_admin_condition_by_condition_id(self,
                                                    id,

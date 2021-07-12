@@ -862,15 +862,15 @@ class InternalUser(object):
             **query_parameters
         )
 
-    def get_all_internal_user(self,
-                              filter=None,
-                              filter_type=None,
-                              page=None,
-                              size=None,
-                              sortasc=None,
-                              sortdsc=None,
-                              headers=None,
-                              **query_parameters):
+    def get_internal_user(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """This API allows the client to get all the internal users.
         Filter:   [firstName, lastName, identityGroup, name,
         description, email, enabled]   To search resources by
@@ -1005,11 +1005,11 @@ class InternalUser(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_internal_user <#ciscoisesdk.
+        """Alias for `get_internal_user <#ciscoisesdk.
         api.v3_0_0.internal_user.
-        InternalUser.get_all_internal_user>`_
+        InternalUser.get_internal_user>`_
         """
-        return self.get_all_internal_user(
+        return self.get_internal_user(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -1020,15 +1020,15 @@ class InternalUser(object):
             **query_parameters
         )
 
-    def get_all_internal_user_generator(self,
-                                        filter=None,
-                                        filter_type=None,
-                                        page=None,
-                                        size=None,
-                                        sortasc=None,
-                                        sortdsc=None,
-                                        headers=None,
-                                        **query_parameters):
+    def get_internal_user_generator(self,
+                                    filter=None,
+                                    filter_type=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """This API allows the client to get all the internal users.
         Filter:   [firstName, lastName, identityGroup, name,
         description, email, enabled]   To search resources by
@@ -1098,7 +1098,7 @@ class InternalUser(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_internal_user, dict(
+        yield from get_next_page(self.get_internal_user, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -1118,11 +1118,11 @@ class InternalUser(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_internal_user_generator <#ciscoisesdk.
+        """Alias for `get_internal_user_generator <#ciscoisesdk.
         api.v3_0_0.internal_user.
-        InternalUser.get_all_internal_user_generator>`_
+        InternalUser.get_internal_user_generator>`_
         """
-        yield from get_next_page(self.get_all_internal_user, dict(
+        yield from get_next_page(self.get_internal_user, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

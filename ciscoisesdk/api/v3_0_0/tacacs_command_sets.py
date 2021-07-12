@@ -477,11 +477,11 @@ class TacacsCommandSets(object):
             **query_parameters
         )
 
-    def get_all_tacacs_command_sets(self,
-                                    page=None,
-                                    size=None,
-                                    headers=None,
-                                    **query_parameters):
+    def get_tacacs_command_sets(self,
+                                page=None,
+                                size=None,
+                                headers=None,
+                                **query_parameters):
         """This API allows the client to get all the TACACS command sets.
 
         Args:
@@ -559,22 +559,22 @@ class TacacsCommandSets(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_tacacs_command_sets <#ciscoisesdk.
+        """Alias for `get_tacacs_command_sets <#ciscoisesdk.
         api.v3_0_0.tacacs_command_sets.
-        TacacsCommandSets.get_all_tacacs_command_sets>`_
+        TacacsCommandSets.get_tacacs_command_sets>`_
         """
-        return self.get_all_tacacs_command_sets(
+        return self.get_tacacs_command_sets(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_tacacs_command_sets_generator(self,
-                                              page=None,
-                                              size=None,
-                                              headers=None,
-                                              **query_parameters):
+    def get_tacacs_command_sets_generator(self,
+                                          page=None,
+                                          size=None,
+                                          headers=None,
+                                          **query_parameters):
         """This API allows the client to get all the TACACS command sets.
 
         Args:
@@ -603,7 +603,7 @@ class TacacsCommandSets(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_tacacs_command_sets, dict(
+        yield from get_next_page(self.get_tacacs_command_sets, dict(
             page=page,
             size=size,
             headers=headers,
@@ -615,11 +615,11 @@ class TacacsCommandSets(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_tacacs_command_sets_generator <#ciscoisesdk.
+        """Alias for `get_tacacs_command_sets_generator <#ciscoisesdk.
         api.v3_0_0.tacacs_command_sets.
-        TacacsCommandSets.get_all_tacacs_command_sets_generator>`_
+        TacacsCommandSets.get_tacacs_command_sets_generator>`_
         """
-        yield from get_next_page(self.get_all_tacacs_command_sets, dict(
+        yield from get_next_page(self.get_tacacs_command_sets, dict(
             page=page,
             size=size,
             headers=headers,

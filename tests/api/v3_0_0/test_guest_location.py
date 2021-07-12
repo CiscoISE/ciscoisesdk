@@ -79,7 +79,7 @@ def test_get_guest_location_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_guest_location(json_schema_validate, obj):
+def is_valid_get_guest_location(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_get_all_guest_location(json_schema_validate, obj):
     return True
 
 
-def get_all_guest_location(api):
-    endpoint_result = api.guest_location.get_all_guest_location(
+def get_guest_location(api):
+    endpoint_result = api.guest_location.get_guest_location(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -103,11 +103,11 @@ def get_all_guest_location(api):
 
 
 @pytest.mark.guest_location
-def test_get_all_guest_location(api, validator):
+def test_get_guest_location(api, validator):
     try:
-        assert is_valid_get_all_guest_location(
+        assert is_valid_get_guest_location(
             validator,
-            get_all_guest_location(api)
+            get_guest_location(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -115,8 +115,8 @@ def test_get_all_guest_location(api, validator):
             raise original_e
 
 
-def get_all_guest_location_default(api):
-    endpoint_result = api.guest_location.get_all_guest_location(
+def get_guest_location_default(api):
+    endpoint_result = api.guest_location.get_guest_location(
         filter=None,
         filter_type=None,
         page=None,
@@ -128,11 +128,11 @@ def get_all_guest_location_default(api):
 
 
 @pytest.mark.guest_location
-def test_get_all_guest_location_default(api, validator):
+def test_get_guest_location_default(api, validator):
     try:
-        assert is_valid_get_all_guest_location(
+        assert is_valid_get_guest_location(
             validator,
-            get_all_guest_location_default(api)
+            get_guest_location_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

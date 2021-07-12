@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateDeviceAdminPolicyByIdAuthenticationRuleById data model.
+"""Identity Services Engine updateDeviceAdminAuthenticationRuleById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorCa61Ff725FedB94FBa602D7Afe46(object):
-    """updateDeviceAdminPolicyByIdAuthenticationRuleById request schema
-    definition."""
+    """updateDeviceAdminAuthenticationRuleById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCa61Ff725FedB94FBa602D7Afe46, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

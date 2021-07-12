@@ -1072,6 +1072,18 @@ class NetworkAccessConditions(object):
 
         return self._object_factory('bpm_c0984cde5e925c209ab87472ab905476_v3_0_0', _api_response)
 
+    def get_all_for_policy_set(self,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `get_network_access_conditions_for_policy_set <#ciscoisesdk.
+        api.v3_0_0.network_access_conditions.
+        NetworkAccessConditions.get_network_access_conditions_for_policy_set>`_
+        """
+        return self.get_network_access_conditions_for_policy_set(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_network_access_condition_by_condition_id(self,
                                                      id,
                                                      headers=None,

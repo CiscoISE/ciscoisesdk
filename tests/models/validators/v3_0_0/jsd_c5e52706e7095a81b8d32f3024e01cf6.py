@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllEgressMatrixCell data model.
+"""Identity Services Engine getEgressMatrixCell data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC5E52706E7095A81B8D32F3024E01Cf6(object):
-    """getAllEgressMatrixCell request schema definition."""
+    """getEgressMatrixCell request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC5E52706E7095A81B8D32F3024E01Cf6, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

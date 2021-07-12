@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteDeviceAdminPolicyByIdAuthenticationRuleById data model.
+"""Identity Services Engine deleteDeviceAdminAuthenticationRuleById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA9F1F24542DBd244E31691A2E09(object):
-    """deleteDeviceAdminPolicyByIdAuthenticationRuleById request schema
-    definition."""
+    """deleteDeviceAdminAuthenticationRuleById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA9F1F24542DBd244E31691A2E09, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

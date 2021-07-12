@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDownloadableAcl data model.
+"""Identity Services Engine getDownloadableAcl data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorBc200Af85D598885A990Ff9Bcbf8(object):
-    """getAllDownloadableAcl request schema definition."""
+    """getDownloadableAcl request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorBc200Af85D598885A990Ff9Bcbf8, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

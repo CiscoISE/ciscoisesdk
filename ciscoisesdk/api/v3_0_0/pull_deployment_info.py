@@ -74,10 +74,10 @@ class PullDeploymentInfo(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_deployment_info(self,
-                                timeout=None,
-                                headers=None,
-                                **query_parameters):
+    def get_deployment_info(self,
+                            timeout=None,
+                            headers=None,
+                            **query_parameters):
         """This API allows the client to pull the deployment information.
 
         Args:
@@ -149,11 +149,11 @@ class PullDeploymentInfo(object):
                 timeout=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_deployment_info <#ciscoisesdk.
+        """Alias for `get_deployment_info <#ciscoisesdk.
         api.v3_0_0.pull_deployment_info.
-        PullDeploymentInfo.get_all_deployment_info>`_
+        PullDeploymentInfo.get_deployment_info>`_
         """
-        return self.get_all_deployment_info(
+        return self.get_deployment_info(
             timeout=timeout,
             headers=headers,
             **query_parameters

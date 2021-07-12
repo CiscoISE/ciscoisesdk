@@ -387,11 +387,11 @@ class NativeSupplicantProfile(object):
             **query_parameters
         )
 
-    def get_all_native_supplicant_profile(self,
-                                          page=None,
-                                          size=None,
-                                          headers=None,
-                                          **query_parameters):
+    def get_native_supplicant_profile(self,
+                                      page=None,
+                                      size=None,
+                                      headers=None,
+                                      **query_parameters):
         """This API allows the client to get all the native supplicant
         profiles.
 
@@ -470,22 +470,22 @@ class NativeSupplicantProfile(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_native_supplicant_profile <#ciscoisesdk.
+        """Alias for `get_native_supplicant_profile <#ciscoisesdk.
         api.v3_0_0.native_supplicant_profile.
-        NativeSupplicantProfile.get_all_native_supplicant_profile>`_
+        NativeSupplicantProfile.get_native_supplicant_profile>`_
         """
-        return self.get_all_native_supplicant_profile(
+        return self.get_native_supplicant_profile(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_native_supplicant_profile_generator(self,
-                                                    page=None,
-                                                    size=None,
-                                                    headers=None,
-                                                    **query_parameters):
+    def get_native_supplicant_profile_generator(self,
+                                                page=None,
+                                                size=None,
+                                                headers=None,
+                                                **query_parameters):
         """This API allows the client to get all the native supplicant
         profiles.
 
@@ -515,7 +515,7 @@ class NativeSupplicantProfile(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_native_supplicant_profile, dict(
+        yield from get_next_page(self.get_native_supplicant_profile, dict(
             page=page,
             size=size,
             headers=headers,
@@ -527,11 +527,11 @@ class NativeSupplicantProfile(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_native_supplicant_profile_generator <#ciscoisesdk.
+        """Alias for `get_native_supplicant_profile_generator <#ciscoisesdk.
         api.v3_0_0.native_supplicant_profile.
-        NativeSupplicantProfile.get_all_native_supplicant_profile_generator>`_
+        NativeSupplicantProfile.get_native_supplicant_profile_generator>`_
         """
-        yield from get_next_page(self.get_all_native_supplicant_profile, dict(
+        yield from get_next_page(self.get_native_supplicant_profile, dict(
             page=page,
             size=size,
             headers=headers,

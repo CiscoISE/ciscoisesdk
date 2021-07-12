@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_sms_provider(json_schema_validate, obj):
+def is_valid_get_sms_provider(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,8 +40,8 @@ def is_valid_get_all_sms_provider(json_schema_validate, obj):
     return True
 
 
-def get_all_sms_provider(api):
-    endpoint_result = api.sms_provider.get_all_sms_provider(
+def get_sms_provider(api):
+    endpoint_result = api.sms_provider.get_sms_provider(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -53,11 +53,11 @@ def get_all_sms_provider(api):
 
 
 @pytest.mark.sms_provider
-def test_get_all_sms_provider(api, validator):
+def test_get_sms_provider(api, validator):
     try:
-        assert is_valid_get_all_sms_provider(
+        assert is_valid_get_sms_provider(
             validator,
-            get_all_sms_provider(api)
+            get_sms_provider(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -65,8 +65,8 @@ def test_get_all_sms_provider(api, validator):
             raise original_e
 
 
-def get_all_sms_provider_default(api):
-    endpoint_result = api.sms_provider.get_all_sms_provider(
+def get_sms_provider_default(api):
+    endpoint_result = api.sms_provider.get_sms_provider(
         filter=None,
         filter_type=None,
         page=None,
@@ -78,11 +78,11 @@ def get_all_sms_provider_default(api):
 
 
 @pytest.mark.sms_provider
-def test_get_all_sms_provider_default(api, validator):
+def test_get_sms_provider_default(api, validator):
     try:
-        assert is_valid_get_all_sms_provider(
+        assert is_valid_get_sms_provider(
             validator,
-            get_all_sms_provider_default(api)
+            get_sms_provider_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

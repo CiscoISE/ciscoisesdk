@@ -74,10 +74,10 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_device_admin_policy_by_id_local_exception_rule_list(self,
-                                                                policy_id,
-                                                                headers=None,
-                                                                **query_parameters):
+    def get_device_admin_local_exception_rules(self,
+                                               policy_id,
+                                               headers=None,
+                                               **query_parameters):
         """Device Admin Get local exception rules.
 
         Args:
@@ -142,26 +142,26 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                 policy_id,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_device_admin_policy_by_id_local_exception_rule_list <#ciscoisesdk.
+        """Alias for `get_device_admin_local_exception_rules <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_exception_rules.
-        DeviceAdministrationAuthorizationExceptionRules.get_device_admin_policy_by_id_local_exception_rule_list>`_
+        DeviceAdministrationAuthorizationExceptionRules.get_device_admin_local_exception_rules>`_
         """
-        return self.get_device_admin_policy_by_id_local_exception_rule_list(
+        return self.get_device_admin_local_exception_rules(
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def create_device_admin_policy_by_id_local_exception_rule(self,
-                                                              policy_id,
-                                                              commands=None,
-                                                              link=None,
-                                                              profile=None,
-                                                              rule=None,
-                                                              headers=None,
-                                                              payload=None,
-                                                              active_validation=True,
-                                                              **query_parameters):
+    def create_device_admin_local_exception_rule(self,
+                                                 policy_id,
+                                                 commands=None,
+                                                 link=None,
+                                                 profile=None,
+                                                 rule=None,
+                                                 headers=None,
+                                                 payload=None,
+                                                 active_validation=True,
+                                                 **query_parameters):
         """Device Admin Create local authorization exception rule.
 
         Args:
@@ -275,11 +275,11 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                payload=None,
                active_validation=True,
                **query_parameters):
-        """Alias for `create_device_admin_policy_by_id_local_exception_rule <#ciscoisesdk.
+        """Alias for `create_device_admin_local_exception_rule <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_exception_rules.
-        DeviceAdministrationAuthorizationExceptionRules.create_device_admin_policy_by_id_local_exception_rule>`_
+        DeviceAdministrationAuthorizationExceptionRules.create_device_admin_local_exception_rule>`_
         """
-        return self.create_device_admin_policy_by_id_local_exception_rule(
+        return self.create_device_admin_local_exception_rule(
             policy_id=policy_id,
             commands=commands,
             link=link,
@@ -291,10 +291,10 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             **query_parameters
         )
 
-    def reset_hit_counts_device_admin_policy_by_id_local_exceptions(self,
-                                                                    policy_id,
-                                                                    headers=None,
-                                                                    **query_parameters):
+    def reset_hit_counts_device_admin_local_exceptions(self,
+                                                       policy_id,
+                                                       headers=None,
+                                                       **query_parameters):
         """Device Admin Reset HitCount for local exceptions.
 
         Args:
@@ -360,21 +360,21 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                                policy_id,
                                headers=None,
                                **query_parameters):
-        """Alias for `reset_hit_counts_device_admin_policy_by_id_local_exceptions <#ciscoisesdk.
+        """Alias for `reset_hit_counts_device_admin_local_exceptions <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_exception_rules.
-        DeviceAdministrationAuthorizationExceptionRules.reset_hit_counts_device_admin_policy_by_id_local_exceptions>`_
+        DeviceAdministrationAuthorizationExceptionRules.reset_hit_counts_device_admin_local_exceptions>`_
         """
-        return self.reset_hit_counts_device_admin_policy_by_id_local_exceptions(
+        return self.reset_hit_counts_device_admin_local_exceptions(
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def get_device_admin_policy_by_id_local_exception_rule_by_id(self,
-                                                                 id,
-                                                                 policy_id,
-                                                                 headers=None,
-                                                                 **query_parameters):
+    def get_device_admin_local_exception_rule_by_id(self,
+                                                    id,
+                                                    policy_id,
+                                                    headers=None,
+                                                    **query_parameters):
         """Device Admin Get local exception rule attributes.
 
         Args:
@@ -444,28 +444,28 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                   policy_id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_device_admin_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        """Alias for `get_device_admin_local_exception_rule_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_exception_rules.
-        DeviceAdministrationAuthorizationExceptionRules.get_device_admin_policy_by_id_local_exception_rule_by_id>`_
+        DeviceAdministrationAuthorizationExceptionRules.get_device_admin_local_exception_rule_by_id>`_
         """
-        return self.get_device_admin_policy_by_id_local_exception_rule_by_id(
+        return self.get_device_admin_local_exception_rule_by_id(
             id=id,
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def update_device_admin_policy_by_id_local_exception_rule_by_id(self,
-                                                                    id,
-                                                                    policy_id,
-                                                                    commands=None,
-                                                                    link=None,
-                                                                    profile=None,
-                                                                    rule=None,
-                                                                    headers=None,
-                                                                    payload=None,
-                                                                    active_validation=True,
-                                                                    **query_parameters):
+    def update_device_admin_local_exception_rule_by_id(self,
+                                                       id,
+                                                       policy_id,
+                                                       commands=None,
+                                                       link=None,
+                                                       profile=None,
+                                                       rule=None,
+                                                       headers=None,
+                                                       payload=None,
+                                                       active_validation=True,
+                                                       **query_parameters):
         """Device Admin Update local exception rule.
 
         Args:
@@ -585,11 +585,11 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `update_device_admin_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        """Alias for `update_device_admin_local_exception_rule_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_exception_rules.
-        DeviceAdministrationAuthorizationExceptionRules.update_device_admin_policy_by_id_local_exception_rule_by_id>`_
+        DeviceAdministrationAuthorizationExceptionRules.update_device_admin_local_exception_rule_by_id>`_
         """
-        return self.update_device_admin_policy_by_id_local_exception_rule_by_id(
+        return self.update_device_admin_local_exception_rule_by_id(
             id=id,
             policy_id=policy_id,
             commands=commands,
@@ -602,11 +602,11 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             **query_parameters
         )
 
-    def delete_device_admin_policy_by_id_local_exception_rule_by_id(self,
-                                                                    id,
-                                                                    policy_id,
-                                                                    headers=None,
-                                                                    **query_parameters):
+    def delete_device_admin_local_exception_rule_by_id(self,
+                                                       id,
+                                                       policy_id,
+                                                       headers=None,
+                                                       **query_parameters):
         """Device Admin Delete local exception rule.
 
         Args:
@@ -676,11 +676,11 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
                      policy_id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_device_admin_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        """Alias for `delete_device_admin_local_exception_rule_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_exception_rules.
-        DeviceAdministrationAuthorizationExceptionRules.delete_device_admin_policy_by_id_local_exception_rule_by_id>`_
+        DeviceAdministrationAuthorizationExceptionRules.delete_device_admin_local_exception_rule_by_id>`_
         """
-        return self.delete_device_admin_policy_by_id_local_exception_rule_by_id(
+        return self.delete_device_admin_local_exception_rule_by_id(
             id=id,
             policy_id=policy_id,
             headers=headers,

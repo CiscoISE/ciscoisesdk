@@ -239,7 +239,7 @@ def test_delete_network_device_group_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_network_device_group(json_schema_validate, obj):
+def is_valid_get_network_device_group(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -250,8 +250,8 @@ def is_valid_get_all_network_device_group(json_schema_validate, obj):
     return True
 
 
-def get_all_network_device_group(api):
-    endpoint_result = api.network_device_group.get_all_network_device_group(
+def get_network_device_group(api):
+    endpoint_result = api.network_device_group.get_network_device_group(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -263,11 +263,11 @@ def get_all_network_device_group(api):
 
 
 @pytest.mark.network_device_group
-def test_get_all_network_device_group(api, validator):
+def test_get_network_device_group(api, validator):
     try:
-        assert is_valid_get_all_network_device_group(
+        assert is_valid_get_network_device_group(
             validator,
-            get_all_network_device_group(api)
+            get_network_device_group(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -275,8 +275,8 @@ def test_get_all_network_device_group(api, validator):
             raise original_e
 
 
-def get_all_network_device_group_default(api):
-    endpoint_result = api.network_device_group.get_all_network_device_group(
+def get_network_device_group_default(api):
+    endpoint_result = api.network_device_group.get_network_device_group(
         filter=None,
         filter_type=None,
         page=None,
@@ -288,11 +288,11 @@ def get_all_network_device_group_default(api):
 
 
 @pytest.mark.network_device_group
-def test_get_all_network_device_group_default(api, validator):
+def test_get_network_device_group_default(api, validator):
     try:
-        assert is_valid_get_all_network_device_group(
+        assert is_valid_get_network_device_group(
             validator,
-            get_all_network_device_group_default(api)
+            get_network_device_group_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -129,7 +129,7 @@ def test_get_network_access_dictionaries_authorization_default(api, validator):
             raise original_e
 
 
-def is_valid_get_network_access_dictionaries_policyset(json_schema_validate, obj):
+def is_valid_get_network_access_dictionaries_policy_set(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -140,19 +140,19 @@ def is_valid_get_network_access_dictionaries_policyset(json_schema_validate, obj
     return True
 
 
-def get_network_access_dictionaries_policyset(api):
-    endpoint_result = api.network_access_dictionary_attributes_list.get_network_access_dictionaries_policyset(
+def get_network_access_dictionaries_policy_set(api):
+    endpoint_result = api.network_access_dictionary_attributes_list.get_network_access_dictionaries_policy_set(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_dictionary_attributes_list
-def test_get_network_access_dictionaries_policyset(api, validator):
+def test_get_network_access_dictionaries_policy_set(api, validator):
     try:
-        assert is_valid_get_network_access_dictionaries_policyset(
+        assert is_valid_get_network_access_dictionaries_policy_set(
             validator,
-            get_network_access_dictionaries_policyset(api)
+            get_network_access_dictionaries_policy_set(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -160,19 +160,19 @@ def test_get_network_access_dictionaries_policyset(api, validator):
             raise original_e
 
 
-def get_network_access_dictionaries_policyset_default(api):
-    endpoint_result = api.network_access_dictionary_attributes_list.get_network_access_dictionaries_policyset(
+def get_network_access_dictionaries_policy_set_default(api):
+    endpoint_result = api.network_access_dictionary_attributes_list.get_network_access_dictionaries_policy_set(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_dictionary_attributes_list
-def test_get_network_access_dictionaries_policyset_default(api, validator):
+def test_get_network_access_dictionaries_policy_set_default(api, validator):
     try:
-        assert is_valid_get_network_access_dictionaries_policyset(
+        assert is_valid_get_network_access_dictionaries_policy_set(
             validator,
-            get_network_access_dictionaries_policyset_default(api)
+            get_network_access_dictionaries_policy_set_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

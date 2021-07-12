@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllIPToSGTMapping data model.
+"""Identity Services Engine getIPToSGTMapping data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorCd9E91565F5C74B9F32Ff0E5Be6F17(object):
-    """getAllIPToSGTMapping request schema definition."""
+    """getIPToSGTMapping request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCd9E91565F5C74B9F32Ff0E5Be6F17, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

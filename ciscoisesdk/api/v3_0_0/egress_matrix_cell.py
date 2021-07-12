@@ -675,15 +675,15 @@ class EgressMatrixCell(object):
             **query_parameters
         )
 
-    def get_all_egress_matrix_cell(self,
-                                   filter=None,
-                                   filter_type=None,
-                                   page=None,
-                                   size=None,
-                                   sortasc=None,
-                                   sortdsc=None,
-                                   headers=None,
-                                   **query_parameters):
+    def get_egress_matrix_cell(self,
+                               filter=None,
+                               filter_type=None,
+                               page=None,
+                               size=None,
+                               sortasc=None,
+                               sortdsc=None,
+                               headers=None,
+                               **query_parameters):
         """This API allows the client to get all the egress matrix cell.
         Filter:   [sgtSrcValue, matrixStatus, description,
         sgtSrcName, sgtDstName, sgtDstValue]   To search
@@ -819,11 +819,11 @@ class EgressMatrixCell(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_egress_matrix_cell <#ciscoisesdk.
+        """Alias for `get_egress_matrix_cell <#ciscoisesdk.
         api.v3_0_0.egress_matrix_cell.
-        EgressMatrixCell.get_all_egress_matrix_cell>`_
+        EgressMatrixCell.get_egress_matrix_cell>`_
         """
-        return self.get_all_egress_matrix_cell(
+        return self.get_egress_matrix_cell(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -834,15 +834,15 @@ class EgressMatrixCell(object):
             **query_parameters
         )
 
-    def get_all_egress_matrix_cell_generator(self,
-                                             filter=None,
-                                             filter_type=None,
-                                             page=None,
-                                             size=None,
-                                             sortasc=None,
-                                             sortdsc=None,
-                                             headers=None,
-                                             **query_parameters):
+    def get_egress_matrix_cell_generator(self,
+                                         filter=None,
+                                         filter_type=None,
+                                         page=None,
+                                         size=None,
+                                         sortasc=None,
+                                         sortdsc=None,
+                                         headers=None,
+                                         **query_parameters):
         """This API allows the client to get all the egress matrix cell.
         Filter:   [sgtSrcValue, matrixStatus, description,
         sgtSrcName, sgtDstName, sgtDstValue]   To search
@@ -913,7 +913,7 @@ class EgressMatrixCell(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_egress_matrix_cell, dict(
+        yield from get_next_page(self.get_egress_matrix_cell, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -933,11 +933,11 @@ class EgressMatrixCell(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_egress_matrix_cell_generator <#ciscoisesdk.
+        """Alias for `get_egress_matrix_cell_generator <#ciscoisesdk.
         api.v3_0_0.egress_matrix_cell.
-        EgressMatrixCell.get_all_egress_matrix_cell_generator>`_
+        EgressMatrixCell.get_egress_matrix_cell_generator>`_
         """
-        yield from get_next_page(self.get_all_egress_matrix_cell, dict(
+        yield from get_next_page(self.get_egress_matrix_cell, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

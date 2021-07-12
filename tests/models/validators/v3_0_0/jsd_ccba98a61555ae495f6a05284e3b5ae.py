@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllInternalUser data model.
+"""Identity Services Engine getInternalUser data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorCcba98A61555Ae495F6A05284E3B5Ae(object):
-    """getAllInternalUser request schema definition."""
+    """getInternalUser request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCcba98A61555Ae495F6A05284E3B5Ae, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

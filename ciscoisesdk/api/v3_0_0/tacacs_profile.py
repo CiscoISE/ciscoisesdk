@@ -472,11 +472,11 @@ class TacacsProfile(object):
             **query_parameters
         )
 
-    def get_all_tacacs_profile(self,
-                               page=None,
-                               size=None,
-                               headers=None,
-                               **query_parameters):
+    def get_tacacs_profile(self,
+                           page=None,
+                           size=None,
+                           headers=None,
+                           **query_parameters):
         """This API allows the client to get all the TACACS profiles.
 
         Args:
@@ -554,22 +554,22 @@ class TacacsProfile(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_tacacs_profile <#ciscoisesdk.
+        """Alias for `get_tacacs_profile <#ciscoisesdk.
         api.v3_0_0.tacacs_profile.
-        TacacsProfile.get_all_tacacs_profile>`_
+        TacacsProfile.get_tacacs_profile>`_
         """
-        return self.get_all_tacacs_profile(
+        return self.get_tacacs_profile(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_tacacs_profile_generator(self,
-                                         page=None,
-                                         size=None,
-                                         headers=None,
-                                         **query_parameters):
+    def get_tacacs_profile_generator(self,
+                                     page=None,
+                                     size=None,
+                                     headers=None,
+                                     **query_parameters):
         """This API allows the client to get all the TACACS profiles.
 
         Args:
@@ -598,7 +598,7 @@ class TacacsProfile(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_tacacs_profile, dict(
+        yield from get_next_page(self.get_tacacs_profile, dict(
             page=page,
             size=size,
             headers=headers,
@@ -610,11 +610,11 @@ class TacacsProfile(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_tacacs_profile_generator <#ciscoisesdk.
+        """Alias for `get_tacacs_profile_generator <#ciscoisesdk.
         api.v3_0_0.tacacs_profile.
-        TacacsProfile.get_all_tacacs_profile_generator>`_
+        TacacsProfile.get_tacacs_profile_generator>`_
         """
-        yield from get_next_page(self.get_all_tacacs_profile, dict(
+        yield from get_next_page(self.get_tacacs_profile, dict(
             page=page,
             size=size,
             headers=headers,

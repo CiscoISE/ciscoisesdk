@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllExternalRadiusServer data model.
+"""Identity Services Engine getExternalRadiusServer data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorB641825A9555EcbA105Cabbdf50Fc78(object):
-    """getAllExternalRadiusServer request schema definition."""
+    """getExternalRadiusServer request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB641825A9555EcbA105Cabbdf50Fc78, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

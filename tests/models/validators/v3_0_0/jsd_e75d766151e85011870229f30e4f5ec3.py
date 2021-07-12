@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getDeviceAdminPolicySetGlobalExceptionRuleList data model.
+"""Identity Services Engine getDeviceAdminPolicySetGlobalExceptionRules data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorE75D766151E85011870229F30E4F5Ec3(object):
-    """getDeviceAdminPolicySetGlobalExceptionRuleList request schema
+    """getDeviceAdminPolicySetGlobalExceptionRules request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorE75D766151E85011870229F30E4F5Ec3, self).__init__()

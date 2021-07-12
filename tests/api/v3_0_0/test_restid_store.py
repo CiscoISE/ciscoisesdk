@@ -351,7 +351,7 @@ def test_delete_rest_id_store_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_rest_id_store(json_schema_validate, obj):
+def is_valid_get_rest_id_store(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -362,8 +362,8 @@ def is_valid_get_all_rest_id_store(json_schema_validate, obj):
     return True
 
 
-def get_all_rest_id_store(api):
-    endpoint_result = api.restid_store.get_all_rest_id_store(
+def get_rest_id_store(api):
+    endpoint_result = api.restid_store.get_rest_id_store(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -375,11 +375,11 @@ def get_all_rest_id_store(api):
 
 
 @pytest.mark.restid_store
-def test_get_all_rest_id_store(api, validator):
+def test_get_rest_id_store(api, validator):
     try:
-        assert is_valid_get_all_rest_id_store(
+        assert is_valid_get_rest_id_store(
             validator,
-            get_all_rest_id_store(api)
+            get_rest_id_store(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -387,8 +387,8 @@ def test_get_all_rest_id_store(api, validator):
             raise original_e
 
 
-def get_all_rest_id_store_default(api):
-    endpoint_result = api.restid_store.get_all_rest_id_store(
+def get_rest_id_store_default(api):
+    endpoint_result = api.restid_store.get_rest_id_store(
         filter=None,
         filter_type=None,
         page=None,
@@ -400,11 +400,11 @@ def get_all_rest_id_store_default(api):
 
 
 @pytest.mark.restid_store
-def test_get_all_rest_id_store_default(api, validator):
+def test_get_rest_id_store_default(api, validator):
     try:
-        assert is_valid_get_all_rest_id_store(
+        assert is_valid_get_rest_id_store(
             validator,
-            get_all_rest_id_store_default(api)
+            get_rest_id_store_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

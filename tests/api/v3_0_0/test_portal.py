@@ -79,7 +79,7 @@ def test_get_portal_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_portals(json_schema_validate, obj):
+def is_valid_get_portals(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_get_all_portals(json_schema_validate, obj):
     return True
 
 
-def get_all_portals(api):
-    endpoint_result = api.portal.get_all_portals(
+def get_portals(api):
+    endpoint_result = api.portal.get_portals(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -103,11 +103,11 @@ def get_all_portals(api):
 
 
 @pytest.mark.portal
-def test_get_all_portals(api, validator):
+def test_get_portals(api, validator):
     try:
-        assert is_valid_get_all_portals(
+        assert is_valid_get_portals(
             validator,
-            get_all_portals(api)
+            get_portals(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -115,8 +115,8 @@ def test_get_all_portals(api, validator):
             raise original_e
 
 
-def get_all_portals_default(api):
-    endpoint_result = api.portal.get_all_portals(
+def get_portals_default(api):
+    endpoint_result = api.portal.get_portals(
         filter=None,
         filter_type=None,
         page=None,
@@ -128,11 +128,11 @@ def get_all_portals_default(api):
 
 
 @pytest.mark.portal
-def test_get_all_portals_default(api, validator):
+def test_get_portals_default(api, validator):
     try:
-        assert is_valid_get_all_portals(
+        assert is_valid_get_portals(
             validator,
-            get_all_portals_default(api)
+            get_portals_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

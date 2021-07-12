@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getNetworkAccessPolicySetGlobalExceptionRuleList data model.
+"""Identity Services Engine getNetworkAccessPolicySetGlobalExceptionRules data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA11A1FF1Ee5387B669Bcde99F86Fbf(object):
-    """getNetworkAccessPolicySetGlobalExceptionRuleList request schema
+    """getNetworkAccessPolicySetGlobalExceptionRules request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorA11A1FF1Ee5387B669Bcde99F86Fbf, self).__init__()

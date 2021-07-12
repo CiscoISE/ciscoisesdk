@@ -239,7 +239,7 @@ def test_delete_tacacs_profile_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_tacacs_profile(json_schema_validate, obj):
+def is_valid_get_tacacs_profile(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -250,8 +250,8 @@ def is_valid_get_all_tacacs_profile(json_schema_validate, obj):
     return True
 
 
-def get_all_tacacs_profile(api):
-    endpoint_result = api.tacacs_profile.get_all_tacacs_profile(
+def get_tacacs_profile(api):
+    endpoint_result = api.tacacs_profile.get_tacacs_profile(
         page=0,
         size=0
     )
@@ -259,11 +259,11 @@ def get_all_tacacs_profile(api):
 
 
 @pytest.mark.tacacs_profile
-def test_get_all_tacacs_profile(api, validator):
+def test_get_tacacs_profile(api, validator):
     try:
-        assert is_valid_get_all_tacacs_profile(
+        assert is_valid_get_tacacs_profile(
             validator,
-            get_all_tacacs_profile(api)
+            get_tacacs_profile(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -271,8 +271,8 @@ def test_get_all_tacacs_profile(api, validator):
             raise original_e
 
 
-def get_all_tacacs_profile_default(api):
-    endpoint_result = api.tacacs_profile.get_all_tacacs_profile(
+def get_tacacs_profile_default(api):
+    endpoint_result = api.tacacs_profile.get_tacacs_profile(
         page=None,
         size=None
     )
@@ -280,11 +280,11 @@ def get_all_tacacs_profile_default(api):
 
 
 @pytest.mark.tacacs_profile
-def test_get_all_tacacs_profile_default(api, validator):
+def test_get_tacacs_profile_default(api, validator):
     try:
-        assert is_valid_get_all_tacacs_profile(
+        assert is_valid_get_tacacs_profile(
             validator,
-            get_all_tacacs_profile_default(api)
+            get_tacacs_profile_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

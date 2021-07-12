@@ -133,7 +133,7 @@ def test_clear_anc_endpoint_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_anc_endpoint(json_schema_validate, obj):
+def is_valid_get_anc_endpoint(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -144,8 +144,8 @@ def is_valid_get_all_anc_endpoint(json_schema_validate, obj):
     return True
 
 
-def get_all_anc_endpoint(api):
-    endpoint_result = api.anc_endpoint.get_all_anc_endpoint(
+def get_anc_endpoint(api):
+    endpoint_result = api.anc_endpoint.get_anc_endpoint(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -157,11 +157,11 @@ def get_all_anc_endpoint(api):
 
 
 @pytest.mark.anc_endpoint
-def test_get_all_anc_endpoint(api, validator):
+def test_get_anc_endpoint(api, validator):
     try:
-        assert is_valid_get_all_anc_endpoint(
+        assert is_valid_get_anc_endpoint(
             validator,
-            get_all_anc_endpoint(api)
+            get_anc_endpoint(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -169,8 +169,8 @@ def test_get_all_anc_endpoint(api, validator):
             raise original_e
 
 
-def get_all_anc_endpoint_default(api):
-    endpoint_result = api.anc_endpoint.get_all_anc_endpoint(
+def get_anc_endpoint_default(api):
+    endpoint_result = api.anc_endpoint.get_anc_endpoint(
         filter=None,
         filter_type=None,
         page=None,
@@ -182,11 +182,11 @@ def get_all_anc_endpoint_default(api):
 
 
 @pytest.mark.anc_endpoint
-def test_get_all_anc_endpoint_default(api, validator):
+def test_get_anc_endpoint_default(api, validator):
     try:
-        assert is_valid_get_all_anc_endpoint(
+        assert is_valid_get_anc_endpoint(
             validator,
-            get_all_anc_endpoint_default(api)
+            get_anc_endpoint_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

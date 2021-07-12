@@ -393,15 +393,15 @@ class HotspotPortal(object):
             **query_parameters
         )
 
-    def get_all_hotspot_portal(self,
-                               filter=None,
-                               filter_type=None,
-                               page=None,
-                               size=None,
-                               sortasc=None,
-                               sortdsc=None,
-                               headers=None,
-                               **query_parameters):
+    def get_hotspot_portal(self,
+                           filter=None,
+                           filter_type=None,
+                           page=None,
+                           size=None,
+                           sortasc=None,
+                           sortdsc=None,
+                           headers=None,
+                           **query_parameters):
         """This API allows the client to get all the hotspot portals.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -535,11 +535,11 @@ class HotspotPortal(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_hotspot_portal <#ciscoisesdk.
+        """Alias for `get_hotspot_portal <#ciscoisesdk.
         api.v3_0_0.hotspot_portal.
-        HotspotPortal.get_all_hotspot_portal>`_
+        HotspotPortal.get_hotspot_portal>`_
         """
-        return self.get_all_hotspot_portal(
+        return self.get_hotspot_portal(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -550,15 +550,15 @@ class HotspotPortal(object):
             **query_parameters
         )
 
-    def get_all_hotspot_portal_generator(self,
-                                         filter=None,
-                                         filter_type=None,
-                                         page=None,
-                                         size=None,
-                                         sortasc=None,
-                                         sortdsc=None,
-                                         headers=None,
-                                         **query_parameters):
+    def get_hotspot_portal_generator(self,
+                                     filter=None,
+                                     filter_type=None,
+                                     page=None,
+                                     size=None,
+                                     sortasc=None,
+                                     sortdsc=None,
+                                     headers=None,
+                                     **query_parameters):
         """This API allows the client to get all the hotspot portals.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -627,7 +627,7 @@ class HotspotPortal(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_hotspot_portal, dict(
+        yield from get_next_page(self.get_hotspot_portal, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -647,11 +647,11 @@ class HotspotPortal(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_hotspot_portal_generator <#ciscoisesdk.
+        """Alias for `get_hotspot_portal_generator <#ciscoisesdk.
         api.v3_0_0.hotspot_portal.
-        HotspotPortal.get_all_hotspot_portal_generator>`_
+        HotspotPortal.get_hotspot_portal_generator>`_
         """
-        yield from get_next_page(self.get_all_hotspot_portal, dict(
+        yield from get_next_page(self.get_hotspot_portal, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

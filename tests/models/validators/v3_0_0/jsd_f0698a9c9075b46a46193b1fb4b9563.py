@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine resetHitCountsDeviceAdminPolicyByIdAuthorizationRules data model.
+"""Identity Services Engine resetHitCountsDeviceAdminAuthorizationRules data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,8 @@ from builtins import *
 
 
 class JSONSchemaValidatorF0698A9C9075B46A46193B1Fb4B9563(object):
-    """resetHitCountsDeviceAdminPolicyByIdAuthorizationRules request
-    schema definition."""
+    """resetHitCountsDeviceAdminAuthorizationRules request schema
+    definition."""
     def __init__(self):
         super(JSONSchemaValidatorF0698A9C9075B46A46193B1Fb4B9563, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

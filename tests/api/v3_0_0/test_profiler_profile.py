@@ -79,7 +79,7 @@ def test_get_profiler_profile_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_profiler_profiles(json_schema_validate, obj):
+def is_valid_get_profiler_profiles(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_get_all_profiler_profiles(json_schema_validate, obj):
     return True
 
 
-def get_all_profiler_profiles(api):
-    endpoint_result = api.profiler_profile.get_all_profiler_profiles(
+def get_profiler_profiles(api):
+    endpoint_result = api.profiler_profile.get_profiler_profiles(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -103,11 +103,11 @@ def get_all_profiler_profiles(api):
 
 
 @pytest.mark.profiler_profile
-def test_get_all_profiler_profiles(api, validator):
+def test_get_profiler_profiles(api, validator):
     try:
-        assert is_valid_get_all_profiler_profiles(
+        assert is_valid_get_profiler_profiles(
             validator,
-            get_all_profiler_profiles(api)
+            get_profiler_profiles(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -115,8 +115,8 @@ def test_get_all_profiler_profiles(api, validator):
             raise original_e
 
 
-def get_all_profiler_profiles_default(api):
-    endpoint_result = api.profiler_profile.get_all_profiler_profiles(
+def get_profiler_profiles_default(api):
+    endpoint_result = api.profiler_profile.get_profiler_profiles(
         filter=None,
         filter_type=None,
         page=None,
@@ -128,11 +128,11 @@ def get_all_profiler_profiles_default(api):
 
 
 @pytest.mark.profiler_profile
-def test_get_all_profiler_profiles_default(api, validator):
+def test_get_profiler_profiles_default(api, validator):
     try:
-        assert is_valid_get_all_profiler_profiles(
+        assert is_valid_get_profiler_profiles(
             validator,
-            get_all_profiler_profiles_default(api)
+            get_profiler_profiles_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

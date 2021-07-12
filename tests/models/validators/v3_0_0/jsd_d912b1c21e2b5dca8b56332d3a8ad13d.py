@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllHotspotPortal data model.
+"""Identity Services Engine getHotspotPortal data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD912B1C21E2B5Dca8B56332D3A8Ad13D(object):
-    """getAllHotspotPortal request schema definition."""
+    """getHotspotPortal request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD912B1C21E2B5Dca8B56332D3A8Ad13D, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

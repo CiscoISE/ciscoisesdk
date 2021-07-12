@@ -251,7 +251,7 @@ def test_delete_tacacs_server_sequence_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_tacacs_server_sequence(json_schema_validate, obj):
+def is_valid_get_tacacs_server_sequence(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -262,8 +262,8 @@ def is_valid_get_all_tacacs_server_sequence(json_schema_validate, obj):
     return True
 
 
-def get_all_tacacs_server_sequence(api):
-    endpoint_result = api.tacacs_server_sequence.get_all_tacacs_server_sequence(
+def get_tacacs_server_sequence(api):
+    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence(
         page=0,
         size=0
     )
@@ -271,11 +271,11 @@ def get_all_tacacs_server_sequence(api):
 
 
 @pytest.mark.tacacs_server_sequence
-def test_get_all_tacacs_server_sequence(api, validator):
+def test_get_tacacs_server_sequence(api, validator):
     try:
-        assert is_valid_get_all_tacacs_server_sequence(
+        assert is_valid_get_tacacs_server_sequence(
             validator,
-            get_all_tacacs_server_sequence(api)
+            get_tacacs_server_sequence(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -283,8 +283,8 @@ def test_get_all_tacacs_server_sequence(api, validator):
             raise original_e
 
 
-def get_all_tacacs_server_sequence_default(api):
-    endpoint_result = api.tacacs_server_sequence.get_all_tacacs_server_sequence(
+def get_tacacs_server_sequence_default(api):
+    endpoint_result = api.tacacs_server_sequence.get_tacacs_server_sequence(
         page=None,
         size=None
     )
@@ -292,11 +292,11 @@ def get_all_tacacs_server_sequence_default(api):
 
 
 @pytest.mark.tacacs_server_sequence
-def test_get_all_tacacs_server_sequence_default(api, validator):
+def test_get_tacacs_server_sequence_default(api, validator):
     try:
-        assert is_valid_get_all_tacacs_server_sequence(
+        assert is_valid_get_tacacs_server_sequence(
             validator,
-            get_all_tacacs_server_sequence_default(api)
+            get_tacacs_server_sequence_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

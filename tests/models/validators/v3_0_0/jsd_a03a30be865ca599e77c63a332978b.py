@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine createDeviceAdminPolicyByIdAuthorizationRule data model.
+"""Identity Services Engine createDeviceAdminAuthorizationRule data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA03A30Be865Ca599E77C63A332978B(object):
-    """createDeviceAdminPolicyByIdAuthorizationRule request schema
-    definition."""
+    """createDeviceAdminAuthorizationRule request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA03A30Be865Ca599E77C63A332978B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

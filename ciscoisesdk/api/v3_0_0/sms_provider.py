@@ -74,15 +74,15 @@ class SmsProvider(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_sms_provider(self,
-                             filter=None,
-                             filter_type=None,
-                             page=None,
-                             size=None,
-                             sortasc=None,
-                             sortdsc=None,
-                             headers=None,
-                             **query_parameters):
+    def get_sms_provider(self,
+                         filter=None,
+                         filter_type=None,
+                         page=None,
+                         size=None,
+                         sortasc=None,
+                         sortdsc=None,
+                         headers=None,
+                         **query_parameters):
         """This API allows the client to get all the SMS providers.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -216,11 +216,11 @@ class SmsProvider(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_sms_provider <#ciscoisesdk.
+        """Alias for `get_sms_provider <#ciscoisesdk.
         api.v3_0_0.sms_provider.
-        SmsProvider.get_all_sms_provider>`_
+        SmsProvider.get_sms_provider>`_
         """
-        return self.get_all_sms_provider(
+        return self.get_sms_provider(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -231,15 +231,15 @@ class SmsProvider(object):
             **query_parameters
         )
 
-    def get_all_sms_provider_generator(self,
-                                       filter=None,
-                                       filter_type=None,
-                                       page=None,
-                                       size=None,
-                                       sortasc=None,
-                                       sortdsc=None,
-                                       headers=None,
-                                       **query_parameters):
+    def get_sms_provider_generator(self,
+                                   filter=None,
+                                   filter_type=None,
+                                   page=None,
+                                   size=None,
+                                   sortasc=None,
+                                   sortdsc=None,
+                                   headers=None,
+                                   **query_parameters):
         """This API allows the client to get all the SMS providers.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -308,7 +308,7 @@ class SmsProvider(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_sms_provider, dict(
+        yield from get_next_page(self.get_sms_provider, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -328,11 +328,11 @@ class SmsProvider(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_sms_provider_generator <#ciscoisesdk.
+        """Alias for `get_sms_provider_generator <#ciscoisesdk.
         api.v3_0_0.sms_provider.
-        SmsProvider.get_all_sms_provider_generator>`_
+        SmsProvider.get_sms_provider_generator>`_
         """
-        yield from get_next_page(self.get_all_sms_provider, dict(
+        yield from get_next_page(self.get_sms_provider, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

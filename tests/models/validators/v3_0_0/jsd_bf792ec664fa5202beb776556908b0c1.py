@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteCSR data model.
+"""Identity Services Engine deleteCSRById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorBf792Ec664Fa5202Beb776556908B0C1(object):
-    """deleteCSR request schema definition."""
+    """deleteCSRById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorBf792Ec664Fa5202Beb776556908B0C1, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

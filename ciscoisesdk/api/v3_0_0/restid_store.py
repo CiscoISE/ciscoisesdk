@@ -704,15 +704,15 @@ class RestidStore(object):
             **query_parameters
         )
 
-    def get_all_rest_id_store(self,
-                              filter=None,
-                              filter_type=None,
-                              page=None,
-                              size=None,
-                              sortasc=None,
-                              sortdsc=None,
-                              headers=None,
-                              **query_parameters):
+    def get_rest_id_store(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """This API allows the client to get all the REST ID stores.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -846,11 +846,11 @@ class RestidStore(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_rest_id_store <#ciscoisesdk.
+        """Alias for `get_rest_id_store <#ciscoisesdk.
         api.v3_0_0.restid_store.
-        RestidStore.get_all_rest_id_store>`_
+        RestidStore.get_rest_id_store>`_
         """
-        return self.get_all_rest_id_store(
+        return self.get_rest_id_store(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -861,15 +861,15 @@ class RestidStore(object):
             **query_parameters
         )
 
-    def get_all_rest_id_store_generator(self,
-                                        filter=None,
-                                        filter_type=None,
-                                        page=None,
-                                        size=None,
-                                        sortasc=None,
-                                        sortdsc=None,
-                                        headers=None,
-                                        **query_parameters):
+    def get_rest_id_store_generator(self,
+                                    filter=None,
+                                    filter_type=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """This API allows the client to get all the REST ID stores.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -938,7 +938,7 @@ class RestidStore(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_rest_id_store, dict(
+        yield from get_next_page(self.get_rest_id_store, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -958,11 +958,11 @@ class RestidStore(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_rest_id_store_generator <#ciscoisesdk.
+        """Alias for `get_rest_id_store_generator <#ciscoisesdk.
         api.v3_0_0.restid_store.
-        RestidStore.get_all_rest_id_store_generator>`_
+        RestidStore.get_rest_id_store_generator>`_
         """
-        yield from get_next_page(self.get_all_rest_id_store, dict(
+        yield from get_next_page(self.get_rest_id_store, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

@@ -159,15 +159,15 @@ class ProfilerProfile(object):
             **query_parameters
         )
 
-    def get_all_profiler_profiles(self,
-                                  filter=None,
-                                  filter_type=None,
-                                  page=None,
-                                  size=None,
-                                  sortasc=None,
-                                  sortdsc=None,
-                                  headers=None,
-                                  **query_parameters):
+    def get_profiler_profiles(self,
+                              filter=None,
+                              filter_type=None,
+                              page=None,
+                              size=None,
+                              sortasc=None,
+                              sortdsc=None,
+                              headers=None,
+                              **query_parameters):
         """This API allows the client to get all the profiler profiles.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -301,11 +301,11 @@ class ProfilerProfile(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_profiler_profiles <#ciscoisesdk.
+        """Alias for `get_profiler_profiles <#ciscoisesdk.
         api.v3_0_0.profiler_profile.
-        ProfilerProfile.get_all_profiler_profiles>`_
+        ProfilerProfile.get_profiler_profiles>`_
         """
-        return self.get_all_profiler_profiles(
+        return self.get_profiler_profiles(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -316,15 +316,15 @@ class ProfilerProfile(object):
             **query_parameters
         )
 
-    def get_all_profiler_profiles_generator(self,
-                                            filter=None,
-                                            filter_type=None,
-                                            page=None,
-                                            size=None,
-                                            sortasc=None,
-                                            sortdsc=None,
-                                            headers=None,
-                                            **query_parameters):
+    def get_profiler_profiles_generator(self,
+                                        filter=None,
+                                        filter_type=None,
+                                        page=None,
+                                        size=None,
+                                        sortasc=None,
+                                        sortdsc=None,
+                                        headers=None,
+                                        **query_parameters):
         """This API allows the client to get all the profiler profiles.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -393,7 +393,7 @@ class ProfilerProfile(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_profiler_profiles, dict(
+        yield from get_next_page(self.get_profiler_profiles, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -413,11 +413,11 @@ class ProfilerProfile(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_profiler_profiles_generator <#ciscoisesdk.
+        """Alias for `get_profiler_profiles_generator <#ciscoisesdk.
         api.v3_0_0.profiler_profile.
-        ProfilerProfile.get_all_profiler_profiles_generator>`_
+        ProfilerProfile.get_profiler_profiles_generator>`_
         """
-        yield from get_next_page(self.get_all_profiler_profiles, dict(
+        yield from get_next_page(self.get_profiler_profiles, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

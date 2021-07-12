@@ -74,10 +74,10 @@ class NetworkAccessAuthorizationExceptionRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_network_access_policy_by_id_local_exception_rule_list(self,
-                                                                  policy_id,
-                                                                  headers=None,
-                                                                  **query_parameters):
+    def get_network_access_local_exception_rules(self,
+                                                 policy_id,
+                                                 headers=None,
+                                                 **query_parameters):
         """Network Access Get local exception rules.
 
         Args:
@@ -142,26 +142,26 @@ class NetworkAccessAuthorizationExceptionRules(object):
                 policy_id,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_network_access_policy_by_id_local_exception_rule_list <#ciscoisesdk.
+        """Alias for `get_network_access_local_exception_rules <#ciscoisesdk.
         api.v3_0_0.network_access_authorization_exception_rules.
-        NetworkAccessAuthorizationExceptionRules.get_network_access_policy_by_id_local_exception_rule_list>`_
+        NetworkAccessAuthorizationExceptionRules.get_network_access_local_exception_rules>`_
         """
-        return self.get_network_access_policy_by_id_local_exception_rule_list(
+        return self.get_network_access_local_exception_rules(
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def create_network_access_policy_by_id_local_exception_rule(self,
-                                                                policy_id,
-                                                                link=None,
-                                                                profile=None,
-                                                                rule=None,
-                                                                security_group=None,
-                                                                headers=None,
-                                                                payload=None,
-                                                                active_validation=True,
-                                                                **query_parameters):
+    def create_network_access_local_exception_rule(self,
+                                                   policy_id,
+                                                   link=None,
+                                                   profile=None,
+                                                   rule=None,
+                                                   security_group=None,
+                                                   headers=None,
+                                                   payload=None,
+                                                   active_validation=True,
+                                                   **query_parameters):
         """Network Access Create local authorization exception rule:
         Rule must include name and condition.     Condition has
         hierarchical structure which define a set of conditions
@@ -280,11 +280,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
                payload=None,
                active_validation=True,
                **query_parameters):
-        """Alias for `create_network_access_policy_by_id_local_exception_rule <#ciscoisesdk.
+        """Alias for `create_network_access_local_exception_rule <#ciscoisesdk.
         api.v3_0_0.network_access_authorization_exception_rules.
-        NetworkAccessAuthorizationExceptionRules.create_network_access_policy_by_id_local_exception_rule>`_
+        NetworkAccessAuthorizationExceptionRules.create_network_access_local_exception_rule>`_
         """
-        return self.create_network_access_policy_by_id_local_exception_rule(
+        return self.create_network_access_local_exception_rule(
             policy_id=policy_id,
             link=link,
             profile=profile,
@@ -296,10 +296,10 @@ class NetworkAccessAuthorizationExceptionRules(object):
             **query_parameters
         )
 
-    def reset_hit_counts_network_access_policy_by_id_local_exceptions(self,
-                                                                      policy_id,
-                                                                      headers=None,
-                                                                      **query_parameters):
+    def reset_hit_counts_network_access_local_exceptions(self,
+                                                         policy_id,
+                                                         headers=None,
+                                                         **query_parameters):
         """Network Access Reset HitCount for local exceptions.
 
         Args:
@@ -365,21 +365,21 @@ class NetworkAccessAuthorizationExceptionRules(object):
                                policy_id,
                                headers=None,
                                **query_parameters):
-        """Alias for `reset_hit_counts_network_access_policy_by_id_local_exceptions <#ciscoisesdk.
+        """Alias for `reset_hit_counts_network_access_local_exceptions <#ciscoisesdk.
         api.v3_0_0.network_access_authorization_exception_rules.
-        NetworkAccessAuthorizationExceptionRules.reset_hit_counts_network_access_policy_by_id_local_exceptions>`_
+        NetworkAccessAuthorizationExceptionRules.reset_hit_counts_network_access_local_exceptions>`_
         """
-        return self.reset_hit_counts_network_access_policy_by_id_local_exceptions(
+        return self.reset_hit_counts_network_access_local_exceptions(
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def get_network_access_policy_by_id_local_exception_rule_by_id(self,
-                                                                   id,
-                                                                   policy_id,
-                                                                   headers=None,
-                                                                   **query_parameters):
+    def get_network_access_local_exception_rule_by_id(self,
+                                                      id,
+                                                      policy_id,
+                                                      headers=None,
+                                                      **query_parameters):
         """Network Access Get local exception rule attributes.
 
         Args:
@@ -449,28 +449,28 @@ class NetworkAccessAuthorizationExceptionRules(object):
                   policy_id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_network_access_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        """Alias for `get_network_access_local_exception_rule_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_authorization_exception_rules.
-        NetworkAccessAuthorizationExceptionRules.get_network_access_policy_by_id_local_exception_rule_by_id>`_
+        NetworkAccessAuthorizationExceptionRules.get_network_access_local_exception_rule_by_id>`_
         """
-        return self.get_network_access_policy_by_id_local_exception_rule_by_id(
+        return self.get_network_access_local_exception_rule_by_id(
             id=id,
             policy_id=policy_id,
             headers=headers,
             **query_parameters
         )
 
-    def update_network_access_policy_by_id_local_exception_rule_by_id(self,
-                                                                      id,
-                                                                      policy_id,
-                                                                      link=None,
-                                                                      profile=None,
-                                                                      rule=None,
-                                                                      security_group=None,
-                                                                      headers=None,
-                                                                      payload=None,
-                                                                      active_validation=True,
-                                                                      **query_parameters):
+    def update_network_access_local_exception_rule_by_id(self,
+                                                         id,
+                                                         policy_id,
+                                                         link=None,
+                                                         profile=None,
+                                                         rule=None,
+                                                         security_group=None,
+                                                         headers=None,
+                                                         payload=None,
+                                                         active_validation=True,
+                                                         **query_parameters):
         """Network Access Update local exception rule.
 
         Args:
@@ -587,11 +587,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `update_network_access_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        """Alias for `update_network_access_local_exception_rule_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_authorization_exception_rules.
-        NetworkAccessAuthorizationExceptionRules.update_network_access_policy_by_id_local_exception_rule_by_id>`_
+        NetworkAccessAuthorizationExceptionRules.update_network_access_local_exception_rule_by_id>`_
         """
-        return self.update_network_access_policy_by_id_local_exception_rule_by_id(
+        return self.update_network_access_local_exception_rule_by_id(
             id=id,
             policy_id=policy_id,
             link=link,
@@ -604,11 +604,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
             **query_parameters
         )
 
-    def delete_network_access_policy_by_id_local_exception_rule_by_id(self,
-                                                                      id,
-                                                                      policy_id,
-                                                                      headers=None,
-                                                                      **query_parameters):
+    def delete_network_access_local_exception_rule_by_id(self,
+                                                         id,
+                                                         policy_id,
+                                                         headers=None,
+                                                         **query_parameters):
         """Network Access Delete local exception rule.
 
         Args:
@@ -678,11 +678,11 @@ class NetworkAccessAuthorizationExceptionRules(object):
                      policy_id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_network_access_policy_by_id_local_exception_rule_by_id <#ciscoisesdk.
+        """Alias for `delete_network_access_local_exception_rule_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_authorization_exception_rules.
-        NetworkAccessAuthorizationExceptionRules.delete_network_access_policy_by_id_local_exception_rule_by_id>`_
+        NetworkAccessAuthorizationExceptionRules.delete_network_access_local_exception_rule_by_id>`_
         """
-        return self.delete_network_access_policy_by_id_local_exception_rule_by_id(
+        return self.delete_network_access_local_exception_rule_by_id(
             id=id,
             policy_id=policy_id,
             headers=headers,

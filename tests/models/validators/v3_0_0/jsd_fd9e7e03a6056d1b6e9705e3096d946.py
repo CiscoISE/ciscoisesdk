@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateNetworkAccessPolicyByIdAuthorizationRuleById data model.
+"""Identity Services Engine updateNetworkAccessAuthorizationRuleById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorFd9E7E03A6056D1B6E9705E3096D946(object):
-    """updateNetworkAccessPolicyByIdAuthorizationRuleById request schema
+    """updateNetworkAccessAuthorizationRuleById request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorFd9E7E03A6056D1B6E9705E3096D946, self).__init__()

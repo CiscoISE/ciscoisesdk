@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllSponsorPortal data model.
+"""Identity Services Engine getSponsorPortal data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorAa24C1260A568B93C283Ecd2C3510E(object):
-    """getAllSponsorPortal request schema definition."""
+    """getSponsorPortal request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorAa24C1260A568B93C283Ecd2C3510E, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

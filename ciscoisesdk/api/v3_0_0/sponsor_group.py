@@ -441,15 +441,15 @@ class SponsorGroup(object):
             **query_parameters
         )
 
-    def get_all_sponsor_group(self,
-                              filter=None,
-                              filter_type=None,
-                              page=None,
-                              size=None,
-                              sortasc=None,
-                              sortdsc=None,
-                              headers=None,
-                              **query_parameters):
+    def get_sponsor_group(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """This API allows the client to get all the sponsor groups.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -583,11 +583,11 @@ class SponsorGroup(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_sponsor_group <#ciscoisesdk.
+        """Alias for `get_sponsor_group <#ciscoisesdk.
         api.v3_0_0.sponsor_group.
-        SponsorGroup.get_all_sponsor_group>`_
+        SponsorGroup.get_sponsor_group>`_
         """
-        return self.get_all_sponsor_group(
+        return self.get_sponsor_group(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -598,15 +598,15 @@ class SponsorGroup(object):
             **query_parameters
         )
 
-    def get_all_sponsor_group_generator(self,
-                                        filter=None,
-                                        filter_type=None,
-                                        page=None,
-                                        size=None,
-                                        sortasc=None,
-                                        sortdsc=None,
-                                        headers=None,
-                                        **query_parameters):
+    def get_sponsor_group_generator(self,
+                                    filter=None,
+                                    filter_type=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """This API allows the client to get all the sponsor groups.
         Filter:   [name]   To search resources by using  toDate
         column,follow the format:   DD-MON-YY
@@ -675,7 +675,7 @@ class SponsorGroup(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_sponsor_group, dict(
+        yield from get_next_page(self.get_sponsor_group, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -695,11 +695,11 @@ class SponsorGroup(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_sponsor_group_generator <#ciscoisesdk.
+        """Alias for `get_sponsor_group_generator <#ciscoisesdk.
         api.v3_0_0.sponsor_group.
-        SponsorGroup.get_all_sponsor_group_generator>`_
+        SponsorGroup.get_sponsor_group_generator>`_
         """
-        yield from get_next_page(self.get_all_sponsor_group, dict(
+        yield from get_next_page(self.get_sponsor_group, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

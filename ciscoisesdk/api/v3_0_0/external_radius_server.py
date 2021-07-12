@@ -562,11 +562,11 @@ class ExternalRadiusServer(object):
             **query_parameters
         )
 
-    def get_all_external_radius_server(self,
-                                       page=None,
-                                       size=None,
-                                       headers=None,
-                                       **query_parameters):
+    def get_external_radius_server(self,
+                                   page=None,
+                                   size=None,
+                                   headers=None,
+                                   **query_parameters):
         """This API allows the client to get all the external RADIUS
         servers.
 
@@ -645,22 +645,22 @@ class ExternalRadiusServer(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_external_radius_server <#ciscoisesdk.
+        """Alias for `get_external_radius_server <#ciscoisesdk.
         api.v3_0_0.external_radius_server.
-        ExternalRadiusServer.get_all_external_radius_server>`_
+        ExternalRadiusServer.get_external_radius_server>`_
         """
-        return self.get_all_external_radius_server(
+        return self.get_external_radius_server(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_external_radius_server_generator(self,
-                                                 page=None,
-                                                 size=None,
-                                                 headers=None,
-                                                 **query_parameters):
+    def get_external_radius_server_generator(self,
+                                             page=None,
+                                             size=None,
+                                             headers=None,
+                                             **query_parameters):
         """This API allows the client to get all the external RADIUS
         servers.
 
@@ -690,7 +690,7 @@ class ExternalRadiusServer(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_external_radius_server, dict(
+        yield from get_next_page(self.get_external_radius_server, dict(
             page=page,
             size=size,
             headers=headers,
@@ -702,11 +702,11 @@ class ExternalRadiusServer(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_external_radius_server_generator <#ciscoisesdk.
+        """Alias for `get_external_radius_server_generator <#ciscoisesdk.
         api.v3_0_0.external_radius_server.
-        ExternalRadiusServer.get_all_external_radius_server_generator>`_
+        ExternalRadiusServer.get_external_radius_server_generator>`_
         """
-        yield from get_next_page(self.get_all_external_radius_server, dict(
+        yield from get_next_page(self.get_external_radius_server, dict(
             page=page,
             size=size,
             headers=headers,

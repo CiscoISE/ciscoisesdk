@@ -414,15 +414,15 @@ class SecurityGroupsAcls(object):
             **query_parameters
         )
 
-    def get_all_security_groups_acl(self,
-                                    filter=None,
-                                    filter_type=None,
-                                    page=None,
-                                    size=None,
-                                    sortasc=None,
-                                    sortdsc=None,
-                                    headers=None,
-                                    **query_parameters):
+    def get_security_groups_acl(self,
+                                filter=None,
+                                filter_type=None,
+                                page=None,
+                                size=None,
+                                sortasc=None,
+                                sortdsc=None,
+                                headers=None,
+                                **query_parameters):
         """This API allows the client to get all the security group ACLs.
         Filter:   [ipVersion, name, description]   To search
         guest users by using  toDate  column,follow the format:
@@ -556,11 +556,11 @@ class SecurityGroupsAcls(object):
                 sortdsc=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_security_groups_acl <#ciscoisesdk.
+        """Alias for `get_security_groups_acl <#ciscoisesdk.
         api.v3_0_0.security_groups_acls.
-        SecurityGroupsAcls.get_all_security_groups_acl>`_
+        SecurityGroupsAcls.get_security_groups_acl>`_
         """
-        return self.get_all_security_groups_acl(
+        return self.get_security_groups_acl(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -571,15 +571,15 @@ class SecurityGroupsAcls(object):
             **query_parameters
         )
 
-    def get_all_security_groups_acl_generator(self,
-                                              filter=None,
-                                              filter_type=None,
-                                              page=None,
-                                              size=None,
-                                              sortasc=None,
-                                              sortdsc=None,
-                                              headers=None,
-                                              **query_parameters):
+    def get_security_groups_acl_generator(self,
+                                          filter=None,
+                                          filter_type=None,
+                                          page=None,
+                                          size=None,
+                                          sortasc=None,
+                                          sortdsc=None,
+                                          headers=None,
+                                          **query_parameters):
         """This API allows the client to get all the security group ACLs.
         Filter:   [ipVersion, name, description]   To search
         guest users by using  toDate  column,follow the format:
@@ -648,7 +648,7 @@ class SecurityGroupsAcls(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_security_groups_acl, dict(
+        yield from get_next_page(self.get_security_groups_acl, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
@@ -668,11 +668,11 @@ class SecurityGroupsAcls(object):
                           sortdsc=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_security_groups_acl_generator <#ciscoisesdk.
+        """Alias for `get_security_groups_acl_generator <#ciscoisesdk.
         api.v3_0_0.security_groups_acls.
-        SecurityGroupsAcls.get_all_security_groups_acl_generator>`_
+        SecurityGroupsAcls.get_security_groups_acl_generator>`_
         """
-        yield from get_next_page(self.get_all_security_groups_acl, dict(
+        yield from get_next_page(self.get_security_groups_acl, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,

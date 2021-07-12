@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateDeviceAdminPolicyByIdLocalExceptionRuleById data model.
+"""Identity Services Engine updateDeviceAdminLocalExceptionRuleById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA87D60D590485830Aed781Bfb15B5C95(object):
-    """updateDeviceAdminPolicyByIdLocalExceptionRuleById request schema
-    definition."""
+    """updateDeviceAdminLocalExceptionRuleById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA87D60D590485830Aed781Bfb15B5C95, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

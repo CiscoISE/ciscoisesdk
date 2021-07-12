@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllIdentityGroups data model.
+"""Identity Services Engine getIdentityGroups data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD904C521059563490C4A93871B33D51(object):
-    """getAllIdentityGroups request schema definition."""
+    """getIdentityGroups request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD904C521059563490C4A93871B33D51, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

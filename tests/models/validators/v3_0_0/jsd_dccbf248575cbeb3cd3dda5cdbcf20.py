@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllSessionServiceNode data model.
+"""Identity Services Engine getSessionServiceNode data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorDccbf248575CbeB3Cd3Dda5Cdbcf20(object):
-    """getAllSessionServiceNode request schema definition."""
+    """getSessionServiceNode request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDccbf248575CbeB3Cd3Dda5Cdbcf20, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

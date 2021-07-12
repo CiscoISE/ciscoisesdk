@@ -394,11 +394,11 @@ class FilterPolicy(object):
             **query_parameters
         )
 
-    def get_all_filter_policy(self,
-                              page=None,
-                              size=None,
-                              headers=None,
-                              **query_parameters):
+    def get_filter_policy(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
         """This API allows the client to get all the filter policies.
 
         Args:
@@ -476,22 +476,22 @@ class FilterPolicy(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_filter_policy <#ciscoisesdk.
+        """Alias for `get_filter_policy <#ciscoisesdk.
         api.v3_0_0.filter_policy.
-        FilterPolicy.get_all_filter_policy>`_
+        FilterPolicy.get_filter_policy>`_
         """
-        return self.get_all_filter_policy(
+        return self.get_filter_policy(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_filter_policy_generator(self,
-                                        page=None,
-                                        size=None,
-                                        headers=None,
-                                        **query_parameters):
+    def get_filter_policy_generator(self,
+                                    page=None,
+                                    size=None,
+                                    headers=None,
+                                    **query_parameters):
         """This API allows the client to get all the filter policies.
 
         Args:
@@ -520,7 +520,7 @@ class FilterPolicy(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_filter_policy, dict(
+        yield from get_next_page(self.get_filter_policy, dict(
             page=page,
             size=size,
             headers=headers,
@@ -532,11 +532,11 @@ class FilterPolicy(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_filter_policy_generator <#ciscoisesdk.
+        """Alias for `get_filter_policy_generator <#ciscoisesdk.
         api.v3_0_0.filter_policy.
-        FilterPolicy.get_all_filter_policy_generator>`_
+        FilterPolicy.get_filter_policy_generator>`_
         """
-        yield from get_next_page(self.get_all_filter_policy, dict(
+        yield from get_next_page(self.get_filter_policy, dict(
             page=page,
             size=size,
             headers=headers,

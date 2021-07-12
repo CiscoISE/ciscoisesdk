@@ -522,11 +522,11 @@ class TacacsServerSequence(object):
             **query_parameters
         )
 
-    def get_all_tacacs_server_sequence(self,
-                                       page=None,
-                                       size=None,
-                                       headers=None,
-                                       **query_parameters):
+    def get_tacacs_server_sequence(self,
+                                   page=None,
+                                   size=None,
+                                   headers=None,
+                                   **query_parameters):
         """This API allows the client to get all the TACACS server
         sequences.
 
@@ -605,22 +605,22 @@ class TacacsServerSequence(object):
                 size=None,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_all_tacacs_server_sequence <#ciscoisesdk.
+        """Alias for `get_tacacs_server_sequence <#ciscoisesdk.
         api.v3_0_0.tacacs_server_sequence.
-        TacacsServerSequence.get_all_tacacs_server_sequence>`_
+        TacacsServerSequence.get_tacacs_server_sequence>`_
         """
-        return self.get_all_tacacs_server_sequence(
+        return self.get_tacacs_server_sequence(
             page=page,
             size=size,
             headers=headers,
             **query_parameters
         )
 
-    def get_all_tacacs_server_sequence_generator(self,
-                                                 page=None,
-                                                 size=None,
-                                                 headers=None,
-                                                 **query_parameters):
+    def get_tacacs_server_sequence_generator(self,
+                                             page=None,
+                                             size=None,
+                                             headers=None,
+                                             **query_parameters):
         """This API allows the client to get all the TACACS server
         sequences.
 
@@ -650,7 +650,7 @@ class TacacsServerSequence(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_tacacs_server_sequence, dict(
+        yield from get_next_page(self.get_tacacs_server_sequence, dict(
             page=page,
             size=size,
             headers=headers,
@@ -662,11 +662,11 @@ class TacacsServerSequence(object):
                           size=None,
                           headers=None,
                           **query_parameters):
-        """Alias for `get_all_tacacs_server_sequence_generator <#ciscoisesdk.
+        """Alias for `get_tacacs_server_sequence_generator <#ciscoisesdk.
         api.v3_0_0.tacacs_server_sequence.
-        TacacsServerSequence.get_all_tacacs_server_sequence_generator>`_
+        TacacsServerSequence.get_tacacs_server_sequence_generator>`_
         """
-        yield from get_next_page(self.get_all_tacacs_server_sequence, dict(
+        yield from get_next_page(self.get_tacacs_server_sequence, dict(
             page=page,
             size=size,
             headers=headers,
