@@ -145,6 +145,20 @@ class AllowedProtocols(object):
 
         return self._object_factory('bpm_ac8c8cb9b5007a1e1a6434a20a881_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_allowed_protocol_by_name <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.get_allowed_protocol_by_name>`_
+        """
+        return self.get_allowed_protocol_by_name(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_allowed_protocol_by_id(self,
                                    id,
                                    headers=None,
@@ -215,6 +229,20 @@ class AllowedProtocols(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e3ddfddd45e299f14ed194926f8de_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_allowed_protocol_by_id <#ciscoisesdk.
+        api.v3_0_0.allowed_protocols.
+        AllowedProtocols.get_allowed_protocol_by_id>`_
+        """
+        return self.get_allowed_protocol_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
 
     def update_allowed_protocol_by_id(self,
                                       id,
