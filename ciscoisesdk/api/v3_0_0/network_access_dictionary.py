@@ -284,10 +284,10 @@ class NetworkAccessDictionary(object):
             **query_parameters
         )
 
-    def get_network_access_dictionary(self,
-                                      name,
-                                      headers=None,
-                                      **query_parameters):
+    def get_network_access_dictionary_by_name(self,
+                                              name,
+                                              headers=None,
+                                              **query_parameters):
         """GET a dictionary by name.
 
         Args:
@@ -357,11 +357,11 @@ class NetworkAccessDictionary(object):
                     name,
                     headers=None,
                     **query_parameters):
-        """Alias for `get_network_access_dictionary <#ciscoisesdk.
+        """Alias for `get_network_access_dictionary_by_name <#ciscoisesdk.
         api.v3_0_0.network_access_dictionary.
-        NetworkAccessDictionary.get_network_access_dictionary>`_
+        NetworkAccessDictionary.get_network_access_dictionary_by_name>`_
         """
-        return self.get_network_access_dictionary(
+        return self.get_network_access_dictionary_by_name(
             name=name,
             headers=headers,
             **query_parameters

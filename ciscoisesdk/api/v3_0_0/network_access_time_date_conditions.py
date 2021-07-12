@@ -427,10 +427,10 @@ class NetworkAccessTimeDateConditions(object):
             **query_parameters
         )
 
-    def get_network_access_time_condition_by_condition_id(self,
-                                                          id,
-                                                          headers=None,
-                                                          **query_parameters):
+    def get_network_access_time_condition_by_id(self,
+                                                id,
+                                                headers=None,
+                                                **query_parameters):
         """Network Access returns a network condition.
 
         Args:
@@ -493,38 +493,38 @@ class NetworkAccessTimeDateConditions(object):
                   id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_network_access_time_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `get_network_access_time_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_time_date_conditions.
-        NetworkAccessTimeDateConditions.get_network_access_time_condition_by_condition_id>`_
+        NetworkAccessTimeDateConditions.get_network_access_time_condition_by_id>`_
         """
-        return self.get_network_access_time_condition_by_condition_id(
+        return self.get_network_access_time_condition_by_id(
             id=id,
             headers=headers,
             **query_parameters
         )
 
-    def update_network_access_time_condition_by_condition_id(self,
-                                                             id,
-                                                             attribute_value=None,
-                                                             children=None,
-                                                             condition_type=None,
-                                                             dates_range=None,
-                                                             dates_range_exception=None,
-                                                             description=None,
-                                                             dictionary_name=None,
-                                                             dictionary_value=None,
-                                                             hours_range=None,
-                                                             hours_range_exception=None,
-                                                             is_negate=None,
-                                                             link=None,
-                                                             name=None,
-                                                             operator=None,
-                                                             week_days=None,
-                                                             week_days_exception=None,
-                                                             headers=None,
-                                                             payload=None,
-                                                             active_validation=True,
-                                                             **query_parameters):
+    def update_network_access_time_condition_by_id(self,
+                                                   id,
+                                                   attribute_value=None,
+                                                   children=None,
+                                                   condition_type=None,
+                                                   dates_range=None,
+                                                   dates_range_exception=None,
+                                                   description=None,
+                                                   dictionary_name=None,
+                                                   dictionary_value=None,
+                                                   hours_range=None,
+                                                   hours_range_exception=None,
+                                                   is_negate=None,
+                                                   link=None,
+                                                   name=None,
+                                                   operator=None,
+                                                   week_days=None,
+                                                   week_days_exception=None,
+                                                   headers=None,
+                                                   payload=None,
+                                                   active_validation=True,
+                                                   **query_parameters):
         """Network Access Update network condition.
 
         Args:
@@ -764,11 +764,11 @@ class NetworkAccessTimeDateConditions(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `update_network_access_time_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `update_network_access_time_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_time_date_conditions.
-        NetworkAccessTimeDateConditions.update_network_access_time_condition_by_condition_id>`_
+        NetworkAccessTimeDateConditions.update_network_access_time_condition_by_id>`_
         """
-        return self.update_network_access_time_condition_by_condition_id(
+        return self.update_network_access_time_condition_by_id(
             id=id,
             attribute_value=attribute_value,
             children=children,
@@ -792,10 +792,10 @@ class NetworkAccessTimeDateConditions(object):
             **query_parameters
         )
 
-    def delete_network_access_time_condition_by_condition_id(self,
-                                                             id,
-                                                             headers=None,
-                                                             **query_parameters):
+    def delete_network_access_time_condition_by_id(self,
+                                                   id,
+                                                   headers=None,
+                                                   **query_parameters):
         """Network Access Delete Time/Date condition.
 
         Args:
@@ -858,11 +858,11 @@ class NetworkAccessTimeDateConditions(object):
                      id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_network_access_time_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `delete_network_access_time_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_time_date_conditions.
-        NetworkAccessTimeDateConditions.delete_network_access_time_condition_by_condition_id>`_
+        NetworkAccessTimeDateConditions.delete_network_access_time_condition_by_id>`_
         """
-        return self.delete_network_access_time_condition_by_condition_id(
+        return self.delete_network_access_time_condition_by_id(
             id=id,
             headers=headers,
             **query_parameters

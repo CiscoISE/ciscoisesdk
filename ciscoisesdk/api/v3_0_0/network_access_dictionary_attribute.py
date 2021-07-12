@@ -154,19 +154,19 @@ class NetworkAccessDictionaryAttribute(object):
             **query_parameters
         )
 
-    def create_network_access_dictionary_attribute_by_dictionary_name(self,
-                                                                      dictionary_name,
-                                                                      allowed_values=None,
-                                                                      data_type=None,
-                                                                      description=None,
-                                                                      direction_type=None,
-                                                                      id=None,
-                                                                      internal_name=None,
-                                                                      name=None,
-                                                                      headers=None,
-                                                                      payload=None,
-                                                                      active_validation=True,
-                                                                      **query_parameters):
+    def create_network_access_dictionary_attribute(self,
+                                                   dictionary_name,
+                                                   allowed_values=None,
+                                                   data_type=None,
+                                                   description=None,
+                                                   direction_type=None,
+                                                   id=None,
+                                                   internal_name=None,
+                                                   name=None,
+                                                   headers=None,
+                                                   payload=None,
+                                                   active_validation=True,
+                                                   **query_parameters):
         """Create a new Dictionary Attribute for an existing Dictionary.
 
         Args:
@@ -306,11 +306,11 @@ class NetworkAccessDictionaryAttribute(object):
                payload=None,
                active_validation=True,
                **query_parameters):
-        """Alias for `create_network_access_dictionary_attribute_by_dictionary_name <#ciscoisesdk.
+        """Alias for `create_network_access_dictionary_attribute <#ciscoisesdk.
         api.v3_0_0.network_access_dictionary_attribute.
-        NetworkAccessDictionaryAttribute.create_network_access_dictionary_attribute_by_dictionary_name>`_
+        NetworkAccessDictionaryAttribute.create_network_access_dictionary_attribute>`_
         """
-        return self.create_network_access_dictionary_attribute_by_dictionary_name(
+        return self.create_network_access_dictionary_attribute(
             dictionary_name=dictionary_name,
             allowed_values=allowed_values,
             data_type=data_type,

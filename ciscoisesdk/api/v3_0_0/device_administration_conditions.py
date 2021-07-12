@@ -427,9 +427,9 @@ class DeviceAdministrationConditions(object):
             **query_parameters
         )
 
-    def get_device_admin_conditions_for_authentication_rule(self,
-                                                            headers=None,
-                                                            **query_parameters):
+    def get_device_admin_conditions_for_authentication_rules(self,
+                                                             headers=None,
+                                                             **query_parameters):
         """Device Admin Returns list of library conditions for
         authentication rules.
 
@@ -485,21 +485,21 @@ class DeviceAdministrationConditions(object):
 
         return self._object_factory('bpm_f1b8eaf23e795f1a8525eb5905187aa9_v3_0_0', _api_response)
 
-    def get_all_authentication_rule(self,
-                                    headers=None,
-                                    **query_parameters):
-        """Alias for `get_device_admin_conditions_for_authentication_rule <#ciscoisesdk.
+    def get_all_authentication_rules(self,
+                                     headers=None,
+                                     **query_parameters):
+        """Alias for `get_device_admin_conditions_for_authentication_rules <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.get_device_admin_conditions_for_authentication_rule>`_
+        DeviceAdministrationConditions.get_device_admin_conditions_for_authentication_rules>`_
         """
-        return self.get_device_admin_conditions_for_authentication_rule(
+        return self.get_device_admin_conditions_for_authentication_rules(
             headers=headers,
             **query_parameters
         )
 
-    def get_device_admin_conditions_for_authorization_rule(self,
-                                                           headers=None,
-                                                           **query_parameters):
+    def get_device_admin_conditions_for_authorization_rules(self,
+                                                            headers=None,
+                                                            **query_parameters):
         """Device Admin Returns list of library conditions for
         authorization rules.
 
@@ -555,22 +555,22 @@ class DeviceAdministrationConditions(object):
 
         return self._object_factory('bpm_ecff2eb67fe5591f8d9026f928a0d8aa_v3_0_0', _api_response)
 
-    def get_all_authorization_rule(self,
-                                   headers=None,
-                                   **query_parameters):
-        """Alias for `get_device_admin_conditions_for_authorization_rule <#ciscoisesdk.
+    def get_all_authorization_rules(self,
+                                    headers=None,
+                                    **query_parameters):
+        """Alias for `get_device_admin_conditions_for_authorization_rules <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.get_device_admin_conditions_for_authorization_rule>`_
+        DeviceAdministrationConditions.get_device_admin_conditions_for_authorization_rules>`_
         """
-        return self.get_device_admin_conditions_for_authorization_rule(
+        return self.get_device_admin_conditions_for_authorization_rules(
             headers=headers,
             **query_parameters
         )
 
-    def get_device_admin_condition_by_condition_name(self,
-                                                     name,
-                                                     headers=None,
-                                                     **query_parameters):
+    def get_device_admin_condition_by_name(self,
+                                           name,
+                                           headers=None,
+                                           **query_parameters):
         """Device Admin Returns a library condition.
 
         Args:
@@ -634,38 +634,38 @@ class DeviceAdministrationConditions(object):
                     name,
                     headers=None,
                     **query_parameters):
-        """Alias for `get_device_admin_condition_by_condition_name <#ciscoisesdk.
+        """Alias for `get_device_admin_condition_by_name <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.get_device_admin_condition_by_condition_name>`_
+        DeviceAdministrationConditions.get_device_admin_condition_by_name>`_
         """
-        return self.get_device_admin_condition_by_condition_name(
+        return self.get_device_admin_condition_by_name(
             name=name,
             headers=headers,
             **query_parameters
         )
 
-    def update_device_admin_condition_by_condition_name(self,
-                                                        name,
-                                                        attribute_value=None,
-                                                        children=None,
-                                                        condition_type=None,
-                                                        dates_range=None,
-                                                        dates_range_exception=None,
-                                                        description=None,
-                                                        dictionary_name=None,
-                                                        dictionary_value=None,
-                                                        hours_range=None,
-                                                        hours_range_exception=None,
-                                                        id=None,
-                                                        is_negate=None,
-                                                        link=None,
-                                                        operator=None,
-                                                        week_days=None,
-                                                        week_days_exception=None,
-                                                        headers=None,
-                                                        payload=None,
-                                                        active_validation=True,
-                                                        **query_parameters):
+    def update_device_admin_condition_by_name(self,
+                                              name,
+                                              attribute_value=None,
+                                              children=None,
+                                              condition_type=None,
+                                              dates_range=None,
+                                              dates_range_exception=None,
+                                              description=None,
+                                              dictionary_name=None,
+                                              dictionary_value=None,
+                                              hours_range=None,
+                                              hours_range_exception=None,
+                                              id=None,
+                                              is_negate=None,
+                                              link=None,
+                                              operator=None,
+                                              week_days=None,
+                                              week_days_exception=None,
+                                              headers=None,
+                                              payload=None,
+                                              active_validation=True,
+                                              **query_parameters):
         """Device Admin Update library condition using condition name.
 
         Args:
@@ -906,11 +906,11 @@ class DeviceAdministrationConditions(object):
                        payload=None,
                        active_validation=True,
                        **query_parameters):
-        """Alias for `update_device_admin_condition_by_condition_name <#ciscoisesdk.
+        """Alias for `update_device_admin_condition_by_name <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.update_device_admin_condition_by_condition_name>`_
+        DeviceAdministrationConditions.update_device_admin_condition_by_name>`_
         """
-        return self.update_device_admin_condition_by_condition_name(
+        return self.update_device_admin_condition_by_name(
             name=name,
             attribute_value=attribute_value,
             children=children,
@@ -934,10 +934,10 @@ class DeviceAdministrationConditions(object):
             **query_parameters
         )
 
-    def delete_device_admin_condition_by_condition_name(self,
-                                                        name,
-                                                        headers=None,
-                                                        **query_parameters):
+    def delete_device_admin_condition_by_name(self,
+                                              name,
+                                              headers=None,
+                                              **query_parameters):
         """NDevice Admin Delete a library condition using condition Name.
 
         Args:
@@ -1001,19 +1001,19 @@ class DeviceAdministrationConditions(object):
                        name,
                        headers=None,
                        **query_parameters):
-        """Alias for `delete_device_admin_condition_by_condition_name <#ciscoisesdk.
+        """Alias for `delete_device_admin_condition_by_name <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.delete_device_admin_condition_by_condition_name>`_
+        DeviceAdministrationConditions.delete_device_admin_condition_by_name>`_
         """
-        return self.delete_device_admin_condition_by_condition_name(
+        return self.delete_device_admin_condition_by_name(
             name=name,
             headers=headers,
             **query_parameters
         )
 
-    def get_device_admin_conditions_for_policy_set(self,
-                                                   headers=None,
-                                                   **query_parameters):
+    def get_device_admin_conditions_for_policy_sets(self,
+                                                    headers=None,
+                                                    **query_parameters):
         """Device Admin Returns list of library conditions for policy sets.
 
         Args:
@@ -1068,22 +1068,22 @@ class DeviceAdministrationConditions(object):
 
         return self._object_factory('bpm_a40f9e169a95d6dbf3ebbb020291007_v3_0_0', _api_response)
 
-    def get_all_for_policy_set(self,
-                               headers=None,
-                               **query_parameters):
-        """Alias for `get_device_admin_conditions_for_policy_set <#ciscoisesdk.
+    def get_all_for_policy_sets(self,
+                                headers=None,
+                                **query_parameters):
+        """Alias for `get_device_admin_conditions_for_policy_sets <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.get_device_admin_conditions_for_policy_set>`_
+        DeviceAdministrationConditions.get_device_admin_conditions_for_policy_sets>`_
         """
-        return self.get_device_admin_conditions_for_policy_set(
+        return self.get_device_admin_conditions_for_policy_sets(
             headers=headers,
             **query_parameters
         )
 
-    def get_device_admin_condition_by_condition_id(self,
-                                                   id,
-                                                   headers=None,
-                                                   **query_parameters):
+    def get_device_admin_condition_by_id(self,
+                                         id,
+                                         headers=None,
+                                         **query_parameters):
         """Device Admin Returns a library condition.
 
         Args:
@@ -1146,38 +1146,38 @@ class DeviceAdministrationConditions(object):
                   id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_device_admin_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `get_device_admin_condition_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.get_device_admin_condition_by_condition_id>`_
+        DeviceAdministrationConditions.get_device_admin_condition_by_id>`_
         """
-        return self.get_device_admin_condition_by_condition_id(
+        return self.get_device_admin_condition_by_id(
             id=id,
             headers=headers,
             **query_parameters
         )
 
-    def update_device_admin_condition_by_condition_id(self,
-                                                      id,
-                                                      attribute_value=None,
-                                                      children=None,
-                                                      condition_type=None,
-                                                      dates_range=None,
-                                                      dates_range_exception=None,
-                                                      description=None,
-                                                      dictionary_name=None,
-                                                      dictionary_value=None,
-                                                      hours_range=None,
-                                                      hours_range_exception=None,
-                                                      is_negate=None,
-                                                      link=None,
-                                                      name=None,
-                                                      operator=None,
-                                                      week_days=None,
-                                                      week_days_exception=None,
-                                                      headers=None,
-                                                      payload=None,
-                                                      active_validation=True,
-                                                      **query_parameters):
+    def update_device_admin_condition_by_id(self,
+                                            id,
+                                            attribute_value=None,
+                                            children=None,
+                                            condition_type=None,
+                                            dates_range=None,
+                                            dates_range_exception=None,
+                                            description=None,
+                                            dictionary_name=None,
+                                            dictionary_value=None,
+                                            hours_range=None,
+                                            hours_range_exception=None,
+                                            is_negate=None,
+                                            link=None,
+                                            name=None,
+                                            operator=None,
+                                            week_days=None,
+                                            week_days_exception=None,
+                                            headers=None,
+                                            payload=None,
+                                            active_validation=True,
+                                            **query_parameters):
         """Device Admin Update library condition.
 
         Args:
@@ -1417,11 +1417,11 @@ class DeviceAdministrationConditions(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `update_device_admin_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `update_device_admin_condition_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.update_device_admin_condition_by_condition_id>`_
+        DeviceAdministrationConditions.update_device_admin_condition_by_id>`_
         """
-        return self.update_device_admin_condition_by_condition_id(
+        return self.update_device_admin_condition_by_id(
             id=id,
             attribute_value=attribute_value,
             children=children,
@@ -1445,10 +1445,10 @@ class DeviceAdministrationConditions(object):
             **query_parameters
         )
 
-    def delete_device_admin_condition_by_condition_id(self,
-                                                      id,
-                                                      headers=None,
-                                                      **query_parameters):
+    def delete_device_admin_condition_by_id(self,
+                                            id,
+                                            headers=None,
+                                            **query_parameters):
         """Device Admin Delete a library condition.
 
         Args:
@@ -1511,11 +1511,11 @@ class DeviceAdministrationConditions(object):
                      id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_device_admin_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `delete_device_admin_condition_by_id <#ciscoisesdk.
         api.v3_0_0.device_administration_conditions.
-        DeviceAdministrationConditions.delete_device_admin_condition_by_condition_id>`_
+        DeviceAdministrationConditions.delete_device_admin_condition_by_id>`_
         """
-        return self.delete_device_admin_condition_by_condition_id(
+        return self.delete_device_admin_condition_by_id(
             id=id,
             headers=headers,
             **query_parameters

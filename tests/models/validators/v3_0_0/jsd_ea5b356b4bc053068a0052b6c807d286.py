@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteDeviceAdminConditionByConditionId data model.
+"""Identity Services Engine deleteDeviceAdminConditionById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorEa5B356B4Bc053068A0052B6C807D286(object):
-    """deleteDeviceAdminConditionByConditionId request schema definition."""
+    """deleteDeviceAdminConditionById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEa5B356B4Bc053068A0052B6C807D286, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

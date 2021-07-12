@@ -79,7 +79,7 @@ def test_get_network_access_dictionary_attributes_by_dictionary_name_default(api
             raise original_e
 
 
-def is_valid_create_network_access_dictionary_attribute_by_dictionary_name(json_schema_validate, obj):
+def is_valid_create_network_access_dictionary_attribute(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_create_network_access_dictionary_attribute_by_dictionary_name(json_
     return True
 
 
-def create_network_access_dictionary_attribute_by_dictionary_name(api):
-    endpoint_result = api.network_access_dictionary_attribute.create_network_access_dictionary_attribute_by_dictionary_name(
+def create_network_access_dictionary_attribute(api):
+    endpoint_result = api.network_access_dictionary_attribute.create_network_access_dictionary_attribute(
         active_validation=False,
         allowed_values=[{'isDefault': True, 'key': 'string', 'value': 'string'}],
         data_type='string',
@@ -107,11 +107,11 @@ def create_network_access_dictionary_attribute_by_dictionary_name(api):
 
 
 @pytest.mark.network_access_dictionary_attribute
-def test_create_network_access_dictionary_attribute_by_dictionary_name(api, validator):
+def test_create_network_access_dictionary_attribute(api, validator):
     try:
-        assert is_valid_create_network_access_dictionary_attribute_by_dictionary_name(
+        assert is_valid_create_network_access_dictionary_attribute(
             validator,
-            create_network_access_dictionary_attribute_by_dictionary_name(api)
+            create_network_access_dictionary_attribute(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -119,8 +119,8 @@ def test_create_network_access_dictionary_attribute_by_dictionary_name(api, vali
             raise original_e
 
 
-def create_network_access_dictionary_attribute_by_dictionary_name_default(api):
-    endpoint_result = api.network_access_dictionary_attribute.create_network_access_dictionary_attribute_by_dictionary_name(
+def create_network_access_dictionary_attribute_default(api):
+    endpoint_result = api.network_access_dictionary_attribute.create_network_access_dictionary_attribute(
         active_validation=False,
         dictionary_name='string',
         allowed_values=None,
@@ -136,11 +136,11 @@ def create_network_access_dictionary_attribute_by_dictionary_name_default(api):
 
 
 @pytest.mark.network_access_dictionary_attribute
-def test_create_network_access_dictionary_attribute_by_dictionary_name_default(api, validator):
+def test_create_network_access_dictionary_attribute_default(api, validator):
     try:
-        assert is_valid_create_network_access_dictionary_attribute_by_dictionary_name(
+        assert is_valid_create_network_access_dictionary_attribute(
             validator,
-            create_network_access_dictionary_attribute_by_dictionary_name_default(api)
+            create_network_access_dictionary_attribute_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

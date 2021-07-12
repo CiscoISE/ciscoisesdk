@@ -74,9 +74,9 @@ class DeviceAdministrationPolicySet(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_device_admin_policy_set_list(self,
-                                         headers=None,
-                                         **query_parameters):
+    def get_device_admin_policy_sets(self,
+                                     headers=None,
+                                     **query_parameters):
         """Device Admin List of policy sets.
 
         Args:
@@ -134,11 +134,11 @@ class DeviceAdministrationPolicySet(object):
     def get_all(self,
                 headers=None,
                 **query_parameters):
-        """Alias for `get_device_admin_policy_set_list <#ciscoisesdk.
+        """Alias for `get_device_admin_policy_sets <#ciscoisesdk.
         api.v3_0_0.device_administration_policy_set.
-        DeviceAdministrationPolicySet.get_device_admin_policy_set_list>`_
+        DeviceAdministrationPolicySet.get_device_admin_policy_sets>`_
         """
-        return self.get_device_admin_policy_set_list(
+        return self.get_device_admin_policy_sets(
             headers=headers,
             **query_parameters
         )

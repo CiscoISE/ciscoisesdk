@@ -151,7 +151,7 @@ def test_create_device_admin_network_condition_default(api, validator):
             raise original_e
 
 
-def is_valid_get_device_admin_network_condition_by_condition_id(json_schema_validate, obj):
+def is_valid_get_device_admin_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -162,19 +162,19 @@ def is_valid_get_device_admin_network_condition_by_condition_id(json_schema_vali
     return True
 
 
-def get_device_admin_network_condition_by_condition_id(api):
-    endpoint_result = api.device_administration_network_conditions.get_device_admin_network_condition_by_condition_id(
+def get_device_admin_network_condition_by_id(api):
+    endpoint_result = api.device_administration_network_conditions.get_device_admin_network_condition_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_network_conditions
-def test_get_device_admin_network_condition_by_condition_id(api, validator):
+def test_get_device_admin_network_condition_by_id(api, validator):
     try:
-        assert is_valid_get_device_admin_network_condition_by_condition_id(
+        assert is_valid_get_device_admin_network_condition_by_id(
             validator,
-            get_device_admin_network_condition_by_condition_id(api)
+            get_device_admin_network_condition_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -182,26 +182,26 @@ def test_get_device_admin_network_condition_by_condition_id(api, validator):
             raise original_e
 
 
-def get_device_admin_network_condition_by_condition_id_default(api):
-    endpoint_result = api.device_administration_network_conditions.get_device_admin_network_condition_by_condition_id(
+def get_device_admin_network_condition_by_id_default(api):
+    endpoint_result = api.device_administration_network_conditions.get_device_admin_network_condition_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_network_conditions
-def test_get_device_admin_network_condition_by_condition_id_default(api, validator):
+def test_get_device_admin_network_condition_by_id_default(api, validator):
     try:
-        assert is_valid_get_device_admin_network_condition_by_condition_id(
+        assert is_valid_get_device_admin_network_condition_by_id(
             validator,
-            get_device_admin_network_condition_by_condition_id_default(api)
+            get_device_admin_network_condition_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_device_admin_network_condition_by_condition_id(json_schema_validate, obj):
+def is_valid_update_device_admin_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -212,8 +212,8 @@ def is_valid_update_device_admin_network_condition_by_condition_id(json_schema_v
     return True
 
 
-def update_device_admin_network_condition_by_condition_id(api):
-    endpoint_result = api.device_administration_network_conditions.update_device_admin_network_condition_by_condition_id(
+def update_device_admin_network_condition_by_id(api):
+    endpoint_result = api.device_administration_network_conditions.update_device_admin_network_condition_by_id(
         active_validation=False,
         cli_dnis_list=['string'],
         condition_type='string',
@@ -231,11 +231,11 @@ def update_device_admin_network_condition_by_condition_id(api):
 
 
 @pytest.mark.device_administration_network_conditions
-def test_update_device_admin_network_condition_by_condition_id(api, validator):
+def test_update_device_admin_network_condition_by_id(api, validator):
     try:
-        assert is_valid_update_device_admin_network_condition_by_condition_id(
+        assert is_valid_update_device_admin_network_condition_by_id(
             validator,
-            update_device_admin_network_condition_by_condition_id(api)
+            update_device_admin_network_condition_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -243,8 +243,8 @@ def test_update_device_admin_network_condition_by_condition_id(api, validator):
             raise original_e
 
 
-def update_device_admin_network_condition_by_condition_id_default(api):
-    endpoint_result = api.device_administration_network_conditions.update_device_admin_network_condition_by_condition_id(
+def update_device_admin_network_condition_by_id_default(api):
+    endpoint_result = api.device_administration_network_conditions.update_device_admin_network_condition_by_id(
         active_validation=False,
         id='string',
         cli_dnis_list=None,
@@ -262,18 +262,18 @@ def update_device_admin_network_condition_by_condition_id_default(api):
 
 
 @pytest.mark.device_administration_network_conditions
-def test_update_device_admin_network_condition_by_condition_id_default(api, validator):
+def test_update_device_admin_network_condition_by_id_default(api, validator):
     try:
-        assert is_valid_update_device_admin_network_condition_by_condition_id(
+        assert is_valid_update_device_admin_network_condition_by_id(
             validator,
-            update_device_admin_network_condition_by_condition_id_default(api)
+            update_device_admin_network_condition_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_device_admin_network_condition_by_condition_id(json_schema_validate, obj):
+def is_valid_delete_device_admin_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -284,19 +284,19 @@ def is_valid_delete_device_admin_network_condition_by_condition_id(json_schema_v
     return True
 
 
-def delete_device_admin_network_condition_by_condition_id(api):
-    endpoint_result = api.device_administration_network_conditions.delete_device_admin_network_condition_by_condition_id(
+def delete_device_admin_network_condition_by_id(api):
+    endpoint_result = api.device_administration_network_conditions.delete_device_admin_network_condition_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_network_conditions
-def test_delete_device_admin_network_condition_by_condition_id(api, validator):
+def test_delete_device_admin_network_condition_by_id(api, validator):
     try:
-        assert is_valid_delete_device_admin_network_condition_by_condition_id(
+        assert is_valid_delete_device_admin_network_condition_by_id(
             validator,
-            delete_device_admin_network_condition_by_condition_id(api)
+            delete_device_admin_network_condition_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -304,19 +304,19 @@ def test_delete_device_admin_network_condition_by_condition_id(api, validator):
             raise original_e
 
 
-def delete_device_admin_network_condition_by_condition_id_default(api):
-    endpoint_result = api.device_administration_network_conditions.delete_device_admin_network_condition_by_condition_id(
+def delete_device_admin_network_condition_by_id_default(api):
+    endpoint_result = api.device_administration_network_conditions.delete_device_admin_network_condition_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_network_conditions
-def test_delete_device_admin_network_condition_by_condition_id_default(api, validator):
+def test_delete_device_admin_network_condition_by_id_default(api, validator):
     try:
-        assert is_valid_delete_device_admin_network_condition_by_condition_id(
+        assert is_valid_delete_device_admin_network_condition_by_id(
             validator,
-            delete_device_admin_network_condition_by_condition_id_default(api)
+            delete_device_admin_network_condition_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

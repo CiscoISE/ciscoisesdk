@@ -336,10 +336,10 @@ class NetworkAccessNetworkConditions(object):
             **query_parameters
         )
 
-    def get_network_access_network_condition_by_condition_id(self,
-                                                             id,
-                                                             headers=None,
-                                                             **query_parameters):
+    def get_network_access_network_condition_by_id(self,
+                                                   id,
+                                                   headers=None,
+                                                   **query_parameters):
         """Network Access Returns a network condition.
 
         Args:
@@ -402,31 +402,31 @@ class NetworkAccessNetworkConditions(object):
                   id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_network_access_network_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `get_network_access_network_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_network_conditions.
-        NetworkAccessNetworkConditions.get_network_access_network_condition_by_condition_id>`_
+        NetworkAccessNetworkConditions.get_network_access_network_condition_by_id>`_
         """
-        return self.get_network_access_network_condition_by_condition_id(
+        return self.get_network_access_network_condition_by_id(
             id=id,
             headers=headers,
             **query_parameters
         )
 
-    def update_network_access_network_condition_by_condition_id(self,
-                                                                id,
-                                                                cli_dnis_list=None,
-                                                                condition_type=None,
-                                                                description=None,
-                                                                device_group_list=None,
-                                                                device_list=None,
-                                                                ip_addr_list=None,
-                                                                link=None,
-                                                                mac_addr_list=None,
-                                                                name=None,
-                                                                headers=None,
-                                                                payload=None,
-                                                                active_validation=True,
-                                                                **query_parameters):
+    def update_network_access_network_condition_by_id(self,
+                                                      id,
+                                                      cli_dnis_list=None,
+                                                      condition_type=None,
+                                                      description=None,
+                                                      device_group_list=None,
+                                                      device_list=None,
+                                                      ip_addr_list=None,
+                                                      link=None,
+                                                      mac_addr_list=None,
+                                                      name=None,
+                                                      headers=None,
+                                                      payload=None,
+                                                      active_validation=True,
+                                                      **query_parameters):
         """Network Access Update network condition.
 
         Args:
@@ -589,11 +589,11 @@ class NetworkAccessNetworkConditions(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `update_network_access_network_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `update_network_access_network_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_network_conditions.
-        NetworkAccessNetworkConditions.update_network_access_network_condition_by_condition_id>`_
+        NetworkAccessNetworkConditions.update_network_access_network_condition_by_id>`_
         """
-        return self.update_network_access_network_condition_by_condition_id(
+        return self.update_network_access_network_condition_by_id(
             id=id,
             cli_dnis_list=cli_dnis_list,
             condition_type=condition_type,
@@ -610,10 +610,10 @@ class NetworkAccessNetworkConditions(object):
             **query_parameters
         )
 
-    def delete_network_access_network_condition_by_condition_id(self,
-                                                                id,
-                                                                headers=None,
-                                                                **query_parameters):
+    def delete_network_access_network_condition_by_id(self,
+                                                      id,
+                                                      headers=None,
+                                                      **query_parameters):
         """Network Access Delete network condition.
 
         Args:
@@ -676,11 +676,11 @@ class NetworkAccessNetworkConditions(object):
                      id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_network_access_network_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `delete_network_access_network_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_network_conditions.
-        NetworkAccessNetworkConditions.delete_network_access_network_condition_by_condition_id>`_
+        NetworkAccessNetworkConditions.delete_network_access_network_condition_by_id>`_
         """
-        return self.delete_network_access_network_condition_by_condition_id(
+        return self.delete_network_access_network_condition_by_id(
             id=id,
             headers=headers,
             **query_parameters

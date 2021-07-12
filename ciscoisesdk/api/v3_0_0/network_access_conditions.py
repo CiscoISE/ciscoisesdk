@@ -454,9 +454,9 @@ class NetworkAccessConditions(object):
             **query_parameters
         )
 
-    def get_network_access_conditions_for_authentication_rule(self,
-                                                              headers=None,
-                                                              **query_parameters):
+    def get_network_access_conditions_for_authentication_rules(self,
+                                                               headers=None,
+                                                               **query_parameters):
         """Network Access Returns list of library conditions for
         Authentication rules scope.
 
@@ -512,9 +512,9 @@ class NetworkAccessConditions(object):
 
         return self._object_factory('bpm_e34177d675622acd0a532f5b7c41b_v3_0_0', _api_response)
 
-    def get_network_access_conditions_for_authorization_rule(self,
-                                                             headers=None,
-                                                             **query_parameters):
+    def get_network_access_conditions_for_authorization_rules(self,
+                                                              headers=None,
+                                                              **query_parameters):
         """Network Access Returns list of library conditions for
         Authorization rules scope.
 
@@ -570,10 +570,10 @@ class NetworkAccessConditions(object):
 
         return self._object_factory('bpm_fff985b5159a0aa52bfe9e62ba7_v3_0_0', _api_response)
 
-    def get_network_access_condition_by_condition_name(self,
-                                                       name,
-                                                       headers=None,
-                                                       **query_parameters):
+    def get_network_access_condition_by_name(self,
+                                             name,
+                                             headers=None,
+                                             **query_parameters):
         """Network Access Returns a library condition.
 
         Args:
@@ -637,38 +637,38 @@ class NetworkAccessConditions(object):
                     name,
                     headers=None,
                     **query_parameters):
-        """Alias for `get_network_access_condition_by_condition_name <#ciscoisesdk.
+        """Alias for `get_network_access_condition_by_name <#ciscoisesdk.
         api.v3_0_0.network_access_conditions.
-        NetworkAccessConditions.get_network_access_condition_by_condition_name>`_
+        NetworkAccessConditions.get_network_access_condition_by_name>`_
         """
-        return self.get_network_access_condition_by_condition_name(
+        return self.get_network_access_condition_by_name(
             name=name,
             headers=headers,
             **query_parameters
         )
 
-    def update_network_access_condition_by_condition_name(self,
-                                                          name,
-                                                          attribute_value=None,
-                                                          children=None,
-                                                          condition_type=None,
-                                                          dates_range=None,
-                                                          dates_range_exception=None,
-                                                          description=None,
-                                                          dictionary_name=None,
-                                                          dictionary_value=None,
-                                                          hours_range=None,
-                                                          hours_range_exception=None,
-                                                          id=None,
-                                                          is_negate=None,
-                                                          link=None,
-                                                          operator=None,
-                                                          week_days=None,
-                                                          week_days_exception=None,
-                                                          headers=None,
-                                                          payload=None,
-                                                          active_validation=True,
-                                                          **query_parameters):
+    def update_network_access_condition_by_name(self,
+                                                name,
+                                                attribute_value=None,
+                                                children=None,
+                                                condition_type=None,
+                                                dates_range=None,
+                                                dates_range_exception=None,
+                                                description=None,
+                                                dictionary_name=None,
+                                                dictionary_value=None,
+                                                hours_range=None,
+                                                hours_range_exception=None,
+                                                id=None,
+                                                is_negate=None,
+                                                link=None,
+                                                operator=None,
+                                                week_days=None,
+                                                week_days_exception=None,
+                                                headers=None,
+                                                payload=None,
+                                                active_validation=True,
+                                                **query_parameters):
         """Network Access Update library condition using condition name.
 
         Args:
@@ -909,11 +909,11 @@ class NetworkAccessConditions(object):
                        payload=None,
                        active_validation=True,
                        **query_parameters):
-        """Alias for `update_network_access_condition_by_condition_name <#ciscoisesdk.
+        """Alias for `update_network_access_condition_by_name <#ciscoisesdk.
         api.v3_0_0.network_access_conditions.
-        NetworkAccessConditions.update_network_access_condition_by_condition_name>`_
+        NetworkAccessConditions.update_network_access_condition_by_name>`_
         """
-        return self.update_network_access_condition_by_condition_name(
+        return self.update_network_access_condition_by_name(
             name=name,
             attribute_value=attribute_value,
             children=children,
@@ -937,10 +937,10 @@ class NetworkAccessConditions(object):
             **query_parameters
         )
 
-    def delete_network_access_condition_by_condition_name(self,
-                                                          name,
-                                                          headers=None,
-                                                          **query_parameters):
+    def delete_network_access_condition_by_name(self,
+                                                name,
+                                                headers=None,
+                                                **query_parameters):
         """Network Access Delete a library condition using condition Name.
 
         Args:
@@ -1004,19 +1004,19 @@ class NetworkAccessConditions(object):
                        name,
                        headers=None,
                        **query_parameters):
-        """Alias for `delete_network_access_condition_by_condition_name <#ciscoisesdk.
+        """Alias for `delete_network_access_condition_by_name <#ciscoisesdk.
         api.v3_0_0.network_access_conditions.
-        NetworkAccessConditions.delete_network_access_condition_by_condition_name>`_
+        NetworkAccessConditions.delete_network_access_condition_by_name>`_
         """
-        return self.delete_network_access_condition_by_condition_name(
+        return self.delete_network_access_condition_by_name(
             name=name,
             headers=headers,
             **query_parameters
         )
 
-    def get_network_access_conditions_for_policy_set(self,
-                                                     headers=None,
-                                                     **query_parameters):
+    def get_network_access_conditions_for_policy_sets(self,
+                                                      headers=None,
+                                                      **query_parameters):
         """Network Access Returns list of library conditions for PolicySet
         scope.
 
@@ -1072,22 +1072,22 @@ class NetworkAccessConditions(object):
 
         return self._object_factory('bpm_c0984cde5e925c209ab87472ab905476_v3_0_0', _api_response)
 
-    def get_all_for_policy_set(self,
-                               headers=None,
-                               **query_parameters):
-        """Alias for `get_network_access_conditions_for_policy_set <#ciscoisesdk.
+    def get_all_for_policy_sets(self,
+                                headers=None,
+                                **query_parameters):
+        """Alias for `get_network_access_conditions_for_policy_sets <#ciscoisesdk.
         api.v3_0_0.network_access_conditions.
-        NetworkAccessConditions.get_network_access_conditions_for_policy_set>`_
+        NetworkAccessConditions.get_network_access_conditions_for_policy_sets>`_
         """
-        return self.get_network_access_conditions_for_policy_set(
+        return self.get_network_access_conditions_for_policy_sets(
             headers=headers,
             **query_parameters
         )
 
-    def get_network_access_condition_by_condition_id(self,
-                                                     id,
-                                                     headers=None,
-                                                     **query_parameters):
+    def get_network_access_condition_by_id(self,
+                                           id,
+                                           headers=None,
+                                           **query_parameters):
         """Network Access Returns a library condition.
 
         Args:
@@ -1150,38 +1150,38 @@ class NetworkAccessConditions(object):
                   id,
                   headers=None,
                   **query_parameters):
-        """Alias for `get_network_access_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `get_network_access_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_conditions.
-        NetworkAccessConditions.get_network_access_condition_by_condition_id>`_
+        NetworkAccessConditions.get_network_access_condition_by_id>`_
         """
-        return self.get_network_access_condition_by_condition_id(
+        return self.get_network_access_condition_by_id(
             id=id,
             headers=headers,
             **query_parameters
         )
 
-    def update_network_access_condition_by_condition_id(self,
-                                                        id,
-                                                        attribute_value=None,
-                                                        children=None,
-                                                        condition_type=None,
-                                                        dates_range=None,
-                                                        dates_range_exception=None,
-                                                        description=None,
-                                                        dictionary_name=None,
-                                                        dictionary_value=None,
-                                                        hours_range=None,
-                                                        hours_range_exception=None,
-                                                        is_negate=None,
-                                                        link=None,
-                                                        name=None,
-                                                        operator=None,
-                                                        week_days=None,
-                                                        week_days_exception=None,
-                                                        headers=None,
-                                                        payload=None,
-                                                        active_validation=True,
-                                                        **query_parameters):
+    def update_network_access_condition_by_id(self,
+                                              id,
+                                              attribute_value=None,
+                                              children=None,
+                                              condition_type=None,
+                                              dates_range=None,
+                                              dates_range_exception=None,
+                                              description=None,
+                                              dictionary_name=None,
+                                              dictionary_value=None,
+                                              hours_range=None,
+                                              hours_range_exception=None,
+                                              is_negate=None,
+                                              link=None,
+                                              name=None,
+                                              operator=None,
+                                              week_days=None,
+                                              week_days_exception=None,
+                                              headers=None,
+                                              payload=None,
+                                              active_validation=True,
+                                              **query_parameters):
         """Network Access Update library condition.
 
         Args:
@@ -1421,11 +1421,11 @@ class NetworkAccessConditions(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `update_network_access_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `update_network_access_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_conditions.
-        NetworkAccessConditions.update_network_access_condition_by_condition_id>`_
+        NetworkAccessConditions.update_network_access_condition_by_id>`_
         """
-        return self.update_network_access_condition_by_condition_id(
+        return self.update_network_access_condition_by_id(
             id=id,
             attribute_value=attribute_value,
             children=children,
@@ -1449,10 +1449,10 @@ class NetworkAccessConditions(object):
             **query_parameters
         )
 
-    def delete_network_access_condition_by_condition_id(self,
-                                                        id,
-                                                        headers=None,
-                                                        **query_parameters):
+    def delete_network_access_condition_by_id(self,
+                                              id,
+                                              headers=None,
+                                              **query_parameters):
         """Network Access Delete a library condition.
 
         Args:
@@ -1515,11 +1515,11 @@ class NetworkAccessConditions(object):
                      id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_network_access_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `delete_network_access_condition_by_id <#ciscoisesdk.
         api.v3_0_0.network_access_conditions.
-        NetworkAccessConditions.delete_network_access_condition_by_condition_id>`_
+        NetworkAccessConditions.delete_network_access_condition_by_id>`_
         """
-        return self.delete_network_access_condition_by_condition_id(
+        return self.delete_network_access_condition_by_id(
             id=id,
             headers=headers,
             **query_parameters

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getDeviceAdminConditionByConditionId data model.
+"""Identity Services Engine getDeviceAdminConditionById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorDec8E9D819B5Bc088E351B69Efd0369(object):
-    """getDeviceAdminConditionByConditionId request schema definition."""
+    """getDeviceAdminConditionById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDec8E9D819B5Bc088E351B69Efd0369, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

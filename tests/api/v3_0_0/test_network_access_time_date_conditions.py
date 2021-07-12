@@ -165,7 +165,7 @@ def test_create_network_access_time_condition_default(api, validator):
             raise original_e
 
 
-def is_valid_get_network_access_time_condition_by_condition_id(json_schema_validate, obj):
+def is_valid_get_network_access_time_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -176,19 +176,19 @@ def is_valid_get_network_access_time_condition_by_condition_id(json_schema_valid
     return True
 
 
-def get_network_access_time_condition_by_condition_id(api):
-    endpoint_result = api.network_access_time_date_conditions.get_network_access_time_condition_by_condition_id(
+def get_network_access_time_condition_by_id(api):
+    endpoint_result = api.network_access_time_date_conditions.get_network_access_time_condition_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_time_date_conditions
-def test_get_network_access_time_condition_by_condition_id(api, validator):
+def test_get_network_access_time_condition_by_id(api, validator):
     try:
-        assert is_valid_get_network_access_time_condition_by_condition_id(
+        assert is_valid_get_network_access_time_condition_by_id(
             validator,
-            get_network_access_time_condition_by_condition_id(api)
+            get_network_access_time_condition_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -196,26 +196,26 @@ def test_get_network_access_time_condition_by_condition_id(api, validator):
             raise original_e
 
 
-def get_network_access_time_condition_by_condition_id_default(api):
-    endpoint_result = api.network_access_time_date_conditions.get_network_access_time_condition_by_condition_id(
+def get_network_access_time_condition_by_id_default(api):
+    endpoint_result = api.network_access_time_date_conditions.get_network_access_time_condition_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_time_date_conditions
-def test_get_network_access_time_condition_by_condition_id_default(api, validator):
+def test_get_network_access_time_condition_by_id_default(api, validator):
     try:
-        assert is_valid_get_network_access_time_condition_by_condition_id(
+        assert is_valid_get_network_access_time_condition_by_id(
             validator,
-            get_network_access_time_condition_by_condition_id_default(api)
+            get_network_access_time_condition_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_network_access_time_condition_by_condition_id(json_schema_validate, obj):
+def is_valid_update_network_access_time_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -226,8 +226,8 @@ def is_valid_update_network_access_time_condition_by_condition_id(json_schema_va
     return True
 
 
-def update_network_access_time_condition_by_condition_id(api):
-    endpoint_result = api.network_access_time_date_conditions.update_network_access_time_condition_by_condition_id(
+def update_network_access_time_condition_by_id(api):
+    endpoint_result = api.network_access_time_date_conditions.update_network_access_time_condition_by_id(
         active_validation=False,
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -252,11 +252,11 @@ def update_network_access_time_condition_by_condition_id(api):
 
 
 @pytest.mark.network_access_time_date_conditions
-def test_update_network_access_time_condition_by_condition_id(api, validator):
+def test_update_network_access_time_condition_by_id(api, validator):
     try:
-        assert is_valid_update_network_access_time_condition_by_condition_id(
+        assert is_valid_update_network_access_time_condition_by_id(
             validator,
-            update_network_access_time_condition_by_condition_id(api)
+            update_network_access_time_condition_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -264,8 +264,8 @@ def test_update_network_access_time_condition_by_condition_id(api, validator):
             raise original_e
 
 
-def update_network_access_time_condition_by_condition_id_default(api):
-    endpoint_result = api.network_access_time_date_conditions.update_network_access_time_condition_by_condition_id(
+def update_network_access_time_condition_by_id_default(api):
+    endpoint_result = api.network_access_time_date_conditions.update_network_access_time_condition_by_id(
         active_validation=False,
         id='string',
         attribute_value=None,
@@ -290,18 +290,18 @@ def update_network_access_time_condition_by_condition_id_default(api):
 
 
 @pytest.mark.network_access_time_date_conditions
-def test_update_network_access_time_condition_by_condition_id_default(api, validator):
+def test_update_network_access_time_condition_by_id_default(api, validator):
     try:
-        assert is_valid_update_network_access_time_condition_by_condition_id(
+        assert is_valid_update_network_access_time_condition_by_id(
             validator,
-            update_network_access_time_condition_by_condition_id_default(api)
+            update_network_access_time_condition_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_network_access_time_condition_by_condition_id(json_schema_validate, obj):
+def is_valid_delete_network_access_time_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -312,19 +312,19 @@ def is_valid_delete_network_access_time_condition_by_condition_id(json_schema_va
     return True
 
 
-def delete_network_access_time_condition_by_condition_id(api):
-    endpoint_result = api.network_access_time_date_conditions.delete_network_access_time_condition_by_condition_id(
+def delete_network_access_time_condition_by_id(api):
+    endpoint_result = api.network_access_time_date_conditions.delete_network_access_time_condition_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_time_date_conditions
-def test_delete_network_access_time_condition_by_condition_id(api, validator):
+def test_delete_network_access_time_condition_by_id(api, validator):
     try:
-        assert is_valid_delete_network_access_time_condition_by_condition_id(
+        assert is_valid_delete_network_access_time_condition_by_id(
             validator,
-            delete_network_access_time_condition_by_condition_id(api)
+            delete_network_access_time_condition_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -332,19 +332,19 @@ def test_delete_network_access_time_condition_by_condition_id(api, validator):
             raise original_e
 
 
-def delete_network_access_time_condition_by_condition_id_default(api):
-    endpoint_result = api.network_access_time_date_conditions.delete_network_access_time_condition_by_condition_id(
+def delete_network_access_time_condition_by_id_default(api):
+    endpoint_result = api.network_access_time_date_conditions.delete_network_access_time_condition_by_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_time_date_conditions
-def test_delete_network_access_time_condition_by_condition_id_default(api, validator):
+def test_delete_network_access_time_condition_by_id_default(api, validator):
     try:
-        assert is_valid_delete_network_access_time_condition_by_condition_id(
+        assert is_valid_delete_network_access_time_condition_by_id(
             validator,
-            delete_network_access_time_condition_by_condition_id_default(api)
+            delete_network_access_time_condition_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

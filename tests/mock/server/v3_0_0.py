@@ -2786,7 +2786,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_get_device_admin_conditions_for_authentication_rule_response(self):
+    def device_administration_conditions_get_device_admin_conditions_for_authentication_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2804,7 +2804,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_get_device_admin_conditions_for_authorization_rule_response(self):
+    def device_administration_conditions_get_device_admin_conditions_for_authorization_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2822,7 +2822,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_get_device_admin_condition_by_condition_name_response(self):
+    def device_administration_conditions_get_device_admin_condition_by_name_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2840,7 +2840,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_update_device_admin_condition_by_condition_name_response(self):
+    def device_administration_conditions_update_device_admin_condition_by_name_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2858,7 +2858,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_delete_device_admin_condition_by_condition_name_response(self):
+    def device_administration_conditions_delete_device_admin_condition_by_name_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2876,7 +2876,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_get_device_admin_conditions_for_policy_set_response(self):
+    def device_administration_conditions_get_device_admin_conditions_for_policy_sets_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2894,7 +2894,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_get_device_admin_condition_by_condition_id_response(self):
+    def device_administration_conditions_get_device_admin_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2912,7 +2912,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_update_device_admin_condition_by_condition_id_response(self):
+    def device_administration_conditions_update_device_admin_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2930,7 +2930,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_conditions_delete_device_admin_condition_by_condition_id_response(self):
+    def device_administration_conditions_delete_device_admin_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3056,7 +3056,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_network_conditions_get_device_admin_network_condition_by_condition_id_response(self):
+    def device_administration_network_conditions_get_device_admin_network_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3074,7 +3074,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_network_conditions_update_device_admin_network_condition_by_condition_id_response(self):
+    def device_administration_network_conditions_update_device_admin_network_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3092,7 +3092,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_network_conditions_delete_device_admin_network_condition_by_condition_id_response(self):
+    def device_administration_network_conditions_delete_device_admin_network_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3110,7 +3110,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_policy_set_get_device_admin_policy_set_list_response(self):
+    def device_administration_policy_set_get_device_admin_policy_sets_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3290,7 +3290,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_time_date_conditions_get_device_admin_time_condition_by_condition_id_response(self):
+    def device_administration_time_date_conditions_get_device_admin_time_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3308,7 +3308,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_time_date_conditions_update_device_admin_time_condition_by_condition_id_response(self):
+    def device_administration_time_date_conditions_update_device_admin_time_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3326,7 +3326,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def device_administration_time_date_conditions_delete_device_admin_time_condition_by_condition_id_response(self):
+    def device_administration_time_date_conditions_delete_device_admin_time_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3812,7 +3812,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_get_network_access_conditions_for_authentication_rule_response(self):
+    def network_access_conditions_get_network_access_conditions_for_authentication_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3830,7 +3830,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_get_network_access_conditions_for_authorization_rule_response(self):
+    def network_access_conditions_get_network_access_conditions_for_authorization_rules_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3848,7 +3848,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_get_network_access_condition_by_condition_name_response(self):
+    def network_access_conditions_get_network_access_condition_by_name_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3866,7 +3866,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_update_network_access_condition_by_condition_name_response(self):
+    def network_access_conditions_update_network_access_condition_by_name_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3884,7 +3884,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_delete_network_access_condition_by_condition_name_response(self):
+    def network_access_conditions_delete_network_access_condition_by_name_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3902,7 +3902,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_get_network_access_conditions_for_policy_set_response(self):
+    def network_access_conditions_get_network_access_conditions_for_policy_sets_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3920,7 +3920,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_get_network_access_condition_by_condition_id_response(self):
+    def network_access_conditions_get_network_access_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3938,7 +3938,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_update_network_access_condition_by_condition_id_response(self):
+    def network_access_conditions_update_network_access_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3956,7 +3956,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_conditions_delete_network_access_condition_by_condition_id_response(self):
+    def network_access_conditions_delete_network_access_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4010,7 +4010,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_dictionary_get_network_access_dictionary_response(self):
+    def network_access_dictionary_get_network_access_dictionary_by_name_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4082,7 +4082,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_dictionary_attribute_create_network_access_dictionary_attribute_by_dictionary_name_response(self):
+    def network_access_dictionary_attribute_create_network_access_dictionary_attribute_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4262,7 +4262,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_network_conditions_get_network_access_network_condition_by_condition_id_response(self):
+    def network_access_network_conditions_get_network_access_network_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4280,7 +4280,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_network_conditions_update_network_access_network_condition_by_condition_id_response(self):
+    def network_access_network_conditions_update_network_access_network_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4298,7 +4298,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_network_conditions_delete_network_access_network_condition_by_condition_id_response(self):
+    def network_access_network_conditions_delete_network_access_network_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4514,7 +4514,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_time_date_conditions_get_network_access_time_condition_by_condition_id_response(self):
+    def network_access_time_date_conditions_get_network_access_time_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4532,7 +4532,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_time_date_conditions_update_network_access_time_condition_by_condition_id_response(self):
+    def network_access_time_date_conditions_update_network_access_time_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -4550,7 +4550,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def network_access_time_date_conditions_delete_network_access_time_condition_by_condition_id_response(self):
+    def network_access_time_date_conditions_delete_network_access_time_condition_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -12253,23 +12253,23 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9():
-            self.device_administration_conditions_get_device_admin_conditions_for_authentication_rule_response()
+            self.device_administration_conditions_get_device_admin_conditions_for_authentication_rules_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa():
-            self.device_administration_conditions_get_device_admin_conditions_for_authorization_rule_response()
+            self.device_administration_conditions_get_device_admin_conditions_for_authorization_rules_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae():
-            self.device_administration_conditions_get_device_admin_condition_by_condition_name_response()
+            self.device_administration_conditions_get_device_admin_condition_by_name_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007():
-            self.device_administration_conditions_get_device_admin_conditions_for_policy_set_response()
+            self.device_administration_conditions_get_device_admin_conditions_for_policy_sets_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369():
-            self.device_administration_conditions_get_device_admin_condition_by_condition_id_response()
+            self.device_administration_conditions_get_device_admin_condition_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969():
@@ -12293,11 +12293,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846():
-            self.device_administration_network_conditions_get_device_admin_network_condition_by_condition_id_response()
+            self.device_administration_network_conditions_get_device_admin_network_condition_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb():
-            self.device_administration_policy_set_get_device_admin_policy_set_list_response()
+            self.device_administration_policy_set_get_device_admin_policy_sets_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017():
@@ -12317,7 +12317,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70():
-            self.device_administration_time_date_conditions_get_device_admin_time_condition_by_condition_id_response()
+            self.device_administration_time_date_conditions_get_device_admin_time_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc():
@@ -12357,23 +12357,23 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b():
-            self.network_access_conditions_get_network_access_conditions_for_authentication_rule_response()
+            self.network_access_conditions_get_network_access_conditions_for_authentication_rules_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7():
-            self.network_access_conditions_get_network_access_conditions_for_authorization_rule_response()
+            self.network_access_conditions_get_network_access_conditions_for_authorization_rules_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb():
-            self.network_access_conditions_get_network_access_condition_by_condition_name_response()
+            self.network_access_conditions_get_network_access_condition_by_name_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476():
-            self.network_access_conditions_get_network_access_conditions_for_policy_set_response()
+            self.network_access_conditions_get_network_access_conditions_for_policy_sets_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc():
-            self.network_access_conditions_get_network_access_condition_by_condition_id_response()
+            self.network_access_conditions_get_network_access_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e():
@@ -12381,7 +12381,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137():
-            self.network_access_dictionary_get_network_access_dictionary_response()
+            self.network_access_dictionary_get_network_access_dictionary_by_name_response()
             return
 
         if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d():
@@ -12413,7 +12413,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2():
-            self.network_access_network_conditions_get_network_access_network_condition_by_condition_id_response()
+            self.network_access_network_conditions_get_network_access_network_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365():
@@ -12441,7 +12441,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874():
-            self.network_access_time_date_conditions_get_network_access_time_condition_by_condition_id_response()
+            self.network_access_time_date_conditions_get_network_access_time_condition_by_id_response()
             return
 
         if self.matches_ACI_BINDINGS_3d1448851f0154d0b6e9c856ec6cc6f0():
@@ -13447,7 +13447,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50():
-            self.network_access_dictionary_attribute_create_network_access_dictionary_attribute_by_dictionary_name_response()
+            self.network_access_dictionary_attribute_create_network_access_dictionary_attribute_response()
             return
 
         if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e():
@@ -13817,15 +13817,15 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05():
-            self.device_administration_conditions_update_device_admin_condition_by_condition_name_response()
+            self.device_administration_conditions_update_device_admin_condition_by_name_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2():
-            self.device_administration_conditions_update_device_admin_condition_by_condition_id_response()
+            self.device_administration_conditions_update_device_admin_condition_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e():
-            self.device_administration_network_conditions_update_device_admin_network_condition_by_condition_id_response()
+            self.device_administration_network_conditions_update_device_admin_network_condition_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084():
@@ -13833,7 +13833,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721():
-            self.device_administration_time_date_conditions_update_device_admin_time_condition_by_condition_id_response()
+            self.device_administration_time_date_conditions_update_device_admin_time_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9():
@@ -13853,11 +13853,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9():
-            self.network_access_conditions_update_network_access_condition_by_condition_name_response()
+            self.network_access_conditions_update_network_access_condition_by_name_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5():
-            self.network_access_conditions_update_network_access_condition_by_condition_id_response()
+            self.network_access_conditions_update_network_access_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7():
@@ -13869,7 +13869,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14():
-            self.network_access_network_conditions_update_network_access_network_condition_by_condition_id_response()
+            self.network_access_network_conditions_update_network_access_network_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b():
@@ -13877,7 +13877,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6():
-            self.network_access_time_date_conditions_update_network_access_time_condition_by_condition_id_response()
+            self.network_access_time_date_conditions_update_network_access_time_condition_by_id_response()
             return
 
         if self.matches_ACI_SETTINGS_1b155c91eec153338302d492db1afb80():
@@ -14311,15 +14311,15 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d():
-            self.device_administration_conditions_delete_device_admin_condition_by_condition_name_response()
+            self.device_administration_conditions_delete_device_admin_condition_by_name_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286():
-            self.device_administration_conditions_delete_device_admin_condition_by_condition_id_response()
+            self.device_administration_conditions_delete_device_admin_condition_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41():
-            self.device_administration_network_conditions_delete_device_admin_network_condition_by_condition_id_response()
+            self.device_administration_network_conditions_delete_device_admin_network_condition_by_id_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d():
@@ -14327,7 +14327,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015():
-            self.device_administration_time_date_conditions_delete_device_admin_time_condition_by_condition_id_response()
+            self.device_administration_time_date_conditions_delete_device_admin_time_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1():
@@ -14347,11 +14347,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc():
-            self.network_access_conditions_delete_network_access_condition_by_condition_name_response()
+            self.network_access_conditions_delete_network_access_condition_by_name_response()
             return
 
         if self.matches_NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb():
-            self.network_access_conditions_delete_network_access_condition_by_condition_id_response()
+            self.network_access_conditions_delete_network_access_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0():
@@ -14363,7 +14363,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219():
-            self.network_access_network_conditions_delete_network_access_network_condition_by_condition_id_response()
+            self.network_access_network_conditions_delete_network_access_network_condition_by_id_response()
             return
 
         if self.matches_NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f():
@@ -14371,7 +14371,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6():
-            self.network_access_time_date_conditions_delete_network_access_time_condition_by_condition_id_response()
+            self.network_access_time_date_conditions_delete_network_access_time_condition_by_id_response()
             return
 
         if self.matches_ACTIVE_DIRECTORY_786febbe79ed5bb780d97a98f292b606():

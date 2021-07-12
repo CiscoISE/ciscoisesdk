@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteNetworkAccessConditionByConditionName data model.
+"""Identity Services Engine deleteNetworkAccessConditionByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorEa1C05D19955Fd4801E6C996705F3Fc(object):
-    """deleteNetworkAccessConditionByConditionName request schema
-    definition."""
+    """deleteNetworkAccessConditionByName request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEa1C05D19955Fd4801E6C996705F3Fc, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
