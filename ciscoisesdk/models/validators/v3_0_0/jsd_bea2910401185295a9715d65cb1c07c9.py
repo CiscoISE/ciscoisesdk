@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine putNetworkAccessConditionByConditionName data model.
+"""Identity Services Engine updateNetworkAccessConditionByConditionName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorBea2910401185295A9715D65Cb1C07C9(object):
-    """putNetworkAccessConditionByConditionName request schema
+    """updateNetworkAccessConditionByConditionName request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorBea2910401185295A9715D65Cb1C07C9, self).__init__()

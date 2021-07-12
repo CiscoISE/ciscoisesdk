@@ -143,17 +143,17 @@ class NetworkAccessDictionary(object):
             **query_parameters
         )
 
-    def post_network_access_dictionaries(self,
-                                         description=None,
-                                         dictionary_attr_type=None,
-                                         id=None,
-                                         link=None,
-                                         name=None,
-                                         version=None,
-                                         headers=None,
-                                         payload=None,
-                                         active_validation=True,
-                                         **query_parameters):
+    def create_network_access_dictionaries(self,
+                                           description=None,
+                                           dictionary_attr_type=None,
+                                           id=None,
+                                           link=None,
+                                           name=None,
+                                           version=None,
+                                           headers=None,
+                                           payload=None,
+                                           active_validation=True,
+                                           **query_parameters):
         """Network Access Create a new Dictionary.
 
         Args:
@@ -267,11 +267,11 @@ class NetworkAccessDictionary(object):
                payload=None,
                active_validation=True,
                **query_parameters):
-        """Alias for `post_network_access_dictionaries <#ciscoisesdk.
+        """Alias for `create_network_access_dictionaries <#ciscoisesdk.
         api.v3_0_0.network_access_dictionary.
-        NetworkAccessDictionary.post_network_access_dictionaries>`_
+        NetworkAccessDictionary.create_network_access_dictionaries>`_
         """
-        return self.post_network_access_dictionaries(
+        return self.create_network_access_dictionaries(
             description=description,
             dictionary_attr_type=dictionary_attr_type,
             id=id,
@@ -367,17 +367,17 @@ class NetworkAccessDictionary(object):
             **query_parameters
         )
 
-    def put_network_access_dictionaries_by_name(self,
-                                                name,
-                                                description=None,
-                                                dictionary_attr_type=None,
-                                                id=None,
-                                                link=None,
-                                                version=None,
-                                                headers=None,
-                                                payload=None,
-                                                active_validation=True,
-                                                **query_parameters):
+    def update_network_access_dictionary_by_name(self,
+                                                 name,
+                                                 description=None,
+                                                 dictionary_attr_type=None,
+                                                 id=None,
+                                                 link=None,
+                                                 version=None,
+                                                 headers=None,
+                                                 payload=None,
+                                                 active_validation=True,
+                                                 **query_parameters):
         """Network Access Update a Dictionary.
 
         Args:
@@ -503,11 +503,11 @@ class NetworkAccessDictionary(object):
                        payload=None,
                        active_validation=True,
                        **query_parameters):
-        """Alias for `put_network_access_dictionaries_by_name <#ciscoisesdk.
+        """Alias for `update_network_access_dictionary_by_name <#ciscoisesdk.
         api.v3_0_0.network_access_dictionary.
-        NetworkAccessDictionary.put_network_access_dictionaries_by_name>`_
+        NetworkAccessDictionary.update_network_access_dictionary_by_name>`_
         """
-        return self.put_network_access_dictionaries_by_name(
+        return self.update_network_access_dictionary_by_name(
             name=name,
             description=description,
             dictionary_attr_type=dictionary_attr_type,
@@ -520,10 +520,10 @@ class NetworkAccessDictionary(object):
             **query_parameters
         )
 
-    def delete_network_access_dictionaries_by_name(self,
-                                                   name,
-                                                   headers=None,
-                                                   **query_parameters):
+    def delete_network_access_dictionary_by_name(self,
+                                                 name,
+                                                 headers=None,
+                                                 **query_parameters):
         """Network Access Delete a Dictionary.
 
         Args:
@@ -593,11 +593,11 @@ class NetworkAccessDictionary(object):
                        name,
                        headers=None,
                        **query_parameters):
-        """Alias for `delete_network_access_dictionaries_by_name <#ciscoisesdk.
+        """Alias for `delete_network_access_dictionary_by_name <#ciscoisesdk.
         api.v3_0_0.network_access_dictionary.
-        NetworkAccessDictionary.delete_network_access_dictionaries_by_name>`_
+        NetworkAccessDictionary.delete_network_access_dictionary_by_name>`_
         """
-        return self.delete_network_access_dictionaries_by_name(
+        return self.delete_network_access_dictionary_by_name(
             name=name,
             headers=headers,
             **query_parameters

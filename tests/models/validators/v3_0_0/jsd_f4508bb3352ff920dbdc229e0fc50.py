@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine postNetworkAccessDictionariesByDictionaryNameAttribute data model.
+"""Identity Services Engine createNetworkAccessDictionaryAttributeByDictionaryName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF4508Bb3352Ff920DBdc229E0Fc50(object):
-    """postNetworkAccessDictionariesByDictionaryNameAttribute request
+    """createNetworkAccessDictionaryAttributeByDictionaryName request
     schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF4508Bb3352Ff920DBdc229E0Fc50, self).__init__()

@@ -143,28 +143,28 @@ class DeviceAdministrationTimeDateConditions(object):
             **query_parameters
         )
 
-    def post_device_admin_time_condition(self,
-                                         attribute_value=None,
-                                         children=None,
-                                         condition_type=None,
-                                         dates_range=None,
-                                         dates_range_exception=None,
-                                         description=None,
-                                         dictionary_name=None,
-                                         dictionary_value=None,
-                                         hours_range=None,
-                                         hours_range_exception=None,
-                                         id=None,
-                                         is_negate=None,
-                                         link=None,
-                                         name=None,
-                                         operator=None,
-                                         week_days=None,
-                                         week_days_exception=None,
-                                         headers=None,
-                                         payload=None,
-                                         active_validation=True,
-                                         **query_parameters):
+    def create_device_admin_time_condition(self,
+                                           attribute_value=None,
+                                           children=None,
+                                           condition_type=None,
+                                           dates_range=None,
+                                           dates_range_exception=None,
+                                           description=None,
+                                           dictionary_name=None,
+                                           dictionary_value=None,
+                                           hours_range=None,
+                                           hours_range_exception=None,
+                                           id=None,
+                                           is_negate=None,
+                                           link=None,
+                                           name=None,
+                                           operator=None,
+                                           week_days=None,
+                                           week_days_exception=None,
+                                           headers=None,
+                                           payload=None,
+                                           active_validation=True,
+                                           **query_parameters):
         """Device Admin Creates time/date condition.
 
         Args:
@@ -399,11 +399,11 @@ class DeviceAdministrationTimeDateConditions(object):
                payload=None,
                active_validation=True,
                **query_parameters):
-        """Alias for `post_device_admin_time_condition <#ciscoisesdk.
+        """Alias for `create_device_admin_time_condition <#ciscoisesdk.
         api.v3_0_0.device_administration_time_date_conditions.
-        DeviceAdministrationTimeDateConditions.post_device_admin_time_condition>`_
+        DeviceAdministrationTimeDateConditions.create_device_admin_time_condition>`_
         """
-        return self.post_device_admin_time_condition(
+        return self.create_device_admin_time_condition(
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,
@@ -503,28 +503,28 @@ class DeviceAdministrationTimeDateConditions(object):
             **query_parameters
         )
 
-    def put_device_admin_time_condition_by_condition_id(self,
-                                                        id,
-                                                        attribute_value=None,
-                                                        children=None,
-                                                        condition_type=None,
-                                                        dates_range=None,
-                                                        dates_range_exception=None,
-                                                        description=None,
-                                                        dictionary_name=None,
-                                                        dictionary_value=None,
-                                                        hours_range=None,
-                                                        hours_range_exception=None,
-                                                        is_negate=None,
-                                                        link=None,
-                                                        name=None,
-                                                        operator=None,
-                                                        week_days=None,
-                                                        week_days_exception=None,
-                                                        headers=None,
-                                                        payload=None,
-                                                        active_validation=True,
-                                                        **query_parameters):
+    def update_device_admin_time_condition_by_condition_id(self,
+                                                           id,
+                                                           attribute_value=None,
+                                                           children=None,
+                                                           condition_type=None,
+                                                           dates_range=None,
+                                                           dates_range_exception=None,
+                                                           description=None,
+                                                           dictionary_name=None,
+                                                           dictionary_value=None,
+                                                           hours_range=None,
+                                                           hours_range_exception=None,
+                                                           is_negate=None,
+                                                           link=None,
+                                                           name=None,
+                                                           operator=None,
+                                                           week_days=None,
+                                                           week_days_exception=None,
+                                                           headers=None,
+                                                           payload=None,
+                                                           active_validation=True,
+                                                           **query_parameters):
         """Device Admin Update network condition.
 
         Args:
@@ -764,11 +764,11 @@ class DeviceAdministrationTimeDateConditions(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `put_device_admin_time_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `update_device_admin_time_condition_by_condition_id <#ciscoisesdk.
         api.v3_0_0.device_administration_time_date_conditions.
-        DeviceAdministrationTimeDateConditions.put_device_admin_time_condition_by_condition_id>`_
+        DeviceAdministrationTimeDateConditions.update_device_admin_time_condition_by_condition_id>`_
         """
-        return self.put_device_admin_time_condition_by_condition_id(
+        return self.update_device_admin_time_condition_by_condition_id(
             id=id,
             attribute_value=attribute_value,
             children=children,

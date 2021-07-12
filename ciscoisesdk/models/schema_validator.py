@@ -521,9 +521,6 @@ from .validators.v3_0_0.jsd_d1f92a9024975e9dad6114255be546bd \
 from .validators.v3_0_0.jsd_d524614e122d53d68324daf1681eb753 \
     import JSONSchemaValidatorD524614E122D53D68324Daf1681Eb753 \
     as JSONSchemaValidatorD524614E122D53D68324Daf1681Eb753_v3_0_0
-from .validators.v3_0_0.jsd_d5e00a8e6aa0577ea81e11e796912053 \
-    import JSONSchemaValidatorD5E00A8E6Aa0577EA81E11E796912053 \
-    as JSONSchemaValidatorD5E00A8E6Aa0577EA81E11E796912053_v3_0_0
 from .validators.v3_0_0.jsd_d9cc879878ee5a34ac1c32f2f0cb8c6d \
     import JSONSchemaValidatorD9Cc879878Ee5A34Ac1C32F2F0Cb8C6D \
     as JSONSchemaValidatorD9Cc879878Ee5A34Ac1C32F2F0Cb8C6D_v3_0_0
@@ -611,6 +608,9 @@ from .validators.v3_0_0.jsd_f9661f7c85c2570897cffc3d02668263 \
 from .validators.v3_0_0.jsd_fc9a4ee495785518bd2251b6b4fb41f4 \
     import JSONSchemaValidatorFc9A4Ee495785518Bd2251B6B4Fb41F4 \
     as JSONSchemaValidatorFc9A4Ee495785518Bd2251B6B4Fb41F4_v3_0_0
+from .validators.v3_0_0.jsd_ff0055f9ef115a42bea6ffdd8e57d41b \
+    import JSONSchemaValidatorFf0055F9Ef115A42Bea6Ffdd8E57D41B \
+    as JSONSchemaValidatorFf0055F9Ef115A42Bea6Ffdd8E57D41B_v3_0_0
 
 
 class JSONSchemaValidator(object):
@@ -956,8 +956,6 @@ class SchemaValidator:
                 JSONSchemaValidatorD1F92A9024975E9DAd6114255Be546Bd_v3_0_0()
             self.json_schema_validators['jsd_d524614e122d53d68324daf1681eb753_v3_0_0'] =\
                 JSONSchemaValidatorD524614E122D53D68324Daf1681Eb753_v3_0_0()
-            self.json_schema_validators['jsd_d5e00a8e6aa0577ea81e11e796912053_v3_0_0'] =\
-                JSONSchemaValidatorD5E00A8E6Aa0577EA81E11E796912053_v3_0_0()
             self.json_schema_validators['jsd_d9cc879878ee5a34ac1c32f2f0cb8c6d_v3_0_0'] =\
                 JSONSchemaValidatorD9Cc879878Ee5A34Ac1C32F2F0Cb8C6D_v3_0_0()
             self.json_schema_validators['jsd_d9ddc2557a495493bca08b8b973601aa_v3_0_0'] =\
@@ -1016,6 +1014,8 @@ class SchemaValidator:
                 JSONSchemaValidatorF9661F7C85C2570897CfFc3D02668263_v3_0_0()
             self.json_schema_validators['jsd_fc9a4ee495785518bd2251b6b4fb41f4_v3_0_0'] =\
                 JSONSchemaValidatorFc9A4Ee495785518Bd2251B6B4Fb41F4_v3_0_0()
+            self.json_schema_validators['jsd_ff0055f9ef115a42bea6ffdd8e57d41b_v3_0_0'] =\
+                JSONSchemaValidatorFf0055F9Ef115A42Bea6Ffdd8E57D41B_v3_0_0()
 
     def json_schema_validate(self, model):
         """Factory function for creating JSONSchemaValidator objects.

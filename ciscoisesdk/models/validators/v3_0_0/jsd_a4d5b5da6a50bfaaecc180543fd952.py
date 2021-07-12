@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine postDeviceAdminTimeCondition data model.
+"""Identity Services Engine createDeviceAdminTimeCondition data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952(object):
-    """postDeviceAdminTimeCondition request schema definition."""
+    """createDeviceAdminTimeCondition request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -79,7 +79,7 @@ def test_get_device_admin_conditions_default(api, validator):
             raise original_e
 
 
-def is_valid_post_device_admin_condition(json_schema_validate, obj):
+def is_valid_create_device_admin_condition(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,8 +90,8 @@ def is_valid_post_device_admin_condition(json_schema_validate, obj):
     return True
 
 
-def post_device_admin_condition(api):
-    endpoint_result = api.device_administration_conditions.post_device_admin_condition(
+def create_device_admin_condition(api):
+    endpoint_result = api.device_administration_conditions.create_device_admin_condition(
         active_validation=False,
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -116,11 +116,11 @@ def post_device_admin_condition(api):
 
 
 @pytest.mark.device_administration_conditions
-def test_post_device_admin_condition(api, validator):
+def test_create_device_admin_condition(api, validator):
     try:
-        assert is_valid_post_device_admin_condition(
+        assert is_valid_create_device_admin_condition(
             validator,
-            post_device_admin_condition(api)
+            create_device_admin_condition(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -128,8 +128,8 @@ def test_post_device_admin_condition(api, validator):
             raise original_e
 
 
-def post_device_admin_condition_default(api):
-    endpoint_result = api.device_administration_conditions.post_device_admin_condition(
+def create_device_admin_condition_default(api):
+    endpoint_result = api.device_administration_conditions.create_device_admin_condition(
         active_validation=False,
         attribute_value=None,
         children=None,
@@ -154,11 +154,11 @@ def post_device_admin_condition_default(api):
 
 
 @pytest.mark.device_administration_conditions
-def test_post_device_admin_condition_default(api, validator):
+def test_create_device_admin_condition_default(api, validator):
     try:
-        assert is_valid_post_device_admin_condition(
+        assert is_valid_create_device_admin_condition(
             validator,
-            post_device_admin_condition_default(api)
+            create_device_admin_condition_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -315,7 +315,7 @@ def test_get_device_admin_condition_by_condition_name_default(api, validator):
             raise original_e
 
 
-def is_valid_put_device_admin_condition_by_condition_name(json_schema_validate, obj):
+def is_valid_update_device_admin_condition_by_condition_name(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -326,8 +326,8 @@ def is_valid_put_device_admin_condition_by_condition_name(json_schema_validate, 
     return True
 
 
-def put_device_admin_condition_by_condition_name(api):
-    endpoint_result = api.device_administration_conditions.put_device_admin_condition_by_condition_name(
+def update_device_admin_condition_by_condition_name(api):
+    endpoint_result = api.device_administration_conditions.update_device_admin_condition_by_condition_name(
         active_validation=False,
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -352,11 +352,11 @@ def put_device_admin_condition_by_condition_name(api):
 
 
 @pytest.mark.device_administration_conditions
-def test_put_device_admin_condition_by_condition_name(api, validator):
+def test_update_device_admin_condition_by_condition_name(api, validator):
     try:
-        assert is_valid_put_device_admin_condition_by_condition_name(
+        assert is_valid_update_device_admin_condition_by_condition_name(
             validator,
-            put_device_admin_condition_by_condition_name(api)
+            update_device_admin_condition_by_condition_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -364,8 +364,8 @@ def test_put_device_admin_condition_by_condition_name(api, validator):
             raise original_e
 
 
-def put_device_admin_condition_by_condition_name_default(api):
-    endpoint_result = api.device_administration_conditions.put_device_admin_condition_by_condition_name(
+def update_device_admin_condition_by_condition_name_default(api):
+    endpoint_result = api.device_administration_conditions.update_device_admin_condition_by_condition_name(
         active_validation=False,
         name='string',
         attribute_value=None,
@@ -390,11 +390,11 @@ def put_device_admin_condition_by_condition_name_default(api):
 
 
 @pytest.mark.device_administration_conditions
-def test_put_device_admin_condition_by_condition_name_default(api, validator):
+def test_update_device_admin_condition_by_condition_name_default(api, validator):
     try:
-        assert is_valid_put_device_admin_condition_by_condition_name(
+        assert is_valid_update_device_admin_condition_by_condition_name(
             validator,
-            put_device_admin_condition_by_condition_name_default(api)
+            update_device_admin_condition_by_condition_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -551,7 +551,7 @@ def test_get_device_admin_condition_by_condition_id_default(api, validator):
             raise original_e
 
 
-def is_valid_put_device_admin_condition_by_condition_id(json_schema_validate, obj):
+def is_valid_update_device_admin_condition_by_condition_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -562,8 +562,8 @@ def is_valid_put_device_admin_condition_by_condition_id(json_schema_validate, ob
     return True
 
 
-def put_device_admin_condition_by_condition_id(api):
-    endpoint_result = api.device_administration_conditions.put_device_admin_condition_by_condition_id(
+def update_device_admin_condition_by_condition_id(api):
+    endpoint_result = api.device_administration_conditions.update_device_admin_condition_by_condition_id(
         active_validation=False,
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -588,11 +588,11 @@ def put_device_admin_condition_by_condition_id(api):
 
 
 @pytest.mark.device_administration_conditions
-def test_put_device_admin_condition_by_condition_id(api, validator):
+def test_update_device_admin_condition_by_condition_id(api, validator):
     try:
-        assert is_valid_put_device_admin_condition_by_condition_id(
+        assert is_valid_update_device_admin_condition_by_condition_id(
             validator,
-            put_device_admin_condition_by_condition_id(api)
+            update_device_admin_condition_by_condition_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -600,8 +600,8 @@ def test_put_device_admin_condition_by_condition_id(api, validator):
             raise original_e
 
 
-def put_device_admin_condition_by_condition_id_default(api):
-    endpoint_result = api.device_administration_conditions.put_device_admin_condition_by_condition_id(
+def update_device_admin_condition_by_condition_id_default(api):
+    endpoint_result = api.device_administration_conditions.update_device_admin_condition_by_condition_id(
         active_validation=False,
         id='string',
         attribute_value=None,
@@ -626,11 +626,11 @@ def put_device_admin_condition_by_condition_id_default(api):
 
 
 @pytest.mark.device_administration_conditions
-def test_put_device_admin_condition_by_condition_id_default(api, validator):
+def test_update_device_admin_condition_by_condition_id_default(api, validator):
     try:
-        assert is_valid_put_device_admin_condition_by_condition_id(
+        assert is_valid_update_device_admin_condition_by_condition_id(
             validator,
-            put_device_admin_condition_by_condition_id_default(api)
+            update_device_admin_condition_by_condition_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

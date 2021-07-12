@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_network_access_policy_set_list(json_schema_validate, obj):
+def is_valid_get_network_access_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_network_access_policy_set_list(json_schema_validate, obj):
     return True
 
 
-def get_network_access_policy_set_list(api):
-    endpoint_result = api.network_access_policy_set.get_network_access_policy_set_list(
+def get_network_access_policy_sets(api):
+    endpoint_result = api.network_access_policy_set.get_network_access_policy_sets(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_policy_set
-def test_get_network_access_policy_set_list(api, validator):
+def test_get_network_access_policy_sets(api, validator):
     try:
-        assert is_valid_get_network_access_policy_set_list(
+        assert is_valid_get_network_access_policy_sets(
             validator,
-            get_network_access_policy_set_list(api)
+            get_network_access_policy_sets(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_network_access_policy_set_list(api, validator):
             raise original_e
 
 
-def get_network_access_policy_set_list_default(api):
-    endpoint_result = api.network_access_policy_set.get_network_access_policy_set_list(
+def get_network_access_policy_sets_default(api):
+    endpoint_result = api.network_access_policy_set.get_network_access_policy_sets(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_policy_set
-def test_get_network_access_policy_set_list_default(api, validator):
+def test_get_network_access_policy_sets_default(api, validator):
     try:
-        assert is_valid_get_network_access_policy_set_list(
+        assert is_valid_get_network_access_policy_sets(
             validator,
-            get_network_access_policy_set_list_default(api)
+            get_network_access_policy_sets_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -212,13 +212,13 @@ def is_valid_get_network_access_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_91b58a72c9ff567896a15555ecc9564f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_768d9f17adde53e2a08a650b9fe1714c_v3_0_0').validate(obj.response)
     return True
 
 
 def get_network_access_policy_set_by_id(api):
     endpoint_result = api.network_access_policy_set.get_network_access_policy_set_by_id(
-        policy_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -238,7 +238,7 @@ def test_get_network_access_policy_set_by_id(api, validator):
 
 def get_network_access_policy_set_by_id_default(api):
     endpoint_result = api.network_access_policy_set.get_network_access_policy_set_by_id(
-        policy_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -262,7 +262,7 @@ def is_valid_update_network_access_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d5e00a8e6aa0577ea81e11e796912053_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ff0055f9ef115a42bea6ffdd8e57d41b_v3_0_0').validate(obj.response)
     return True
 
 
@@ -278,7 +278,6 @@ def update_network_access_policy_set_by_id(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         payload=None,
-        policy_id='string',
         rank=0,
         service_name='string',
         state='string'
@@ -302,12 +301,11 @@ def test_update_network_access_policy_set_by_id(api, validator):
 def update_network_access_policy_set_by_id_default(api):
     endpoint_result = api.network_access_policy_set.update_network_access_policy_set_by_id(
         active_validation=False,
-        policy_id='string',
+        id='string',
         condition=None,
         default=None,
         description=None,
         hit_counts=None,
-        id=None,
         is_proxy=None,
         link=None,
         name=None,
@@ -338,13 +336,13 @@ def is_valid_delete_network_access_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f5175ff711535ff2b1b85a3a4525e886_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_fd4b5a56f8bd5f8f919e9fffc172e72f_v3_0_0').validate(obj.response)
     return True
 
 
 def delete_network_access_policy_set_by_id(api):
     endpoint_result = api.network_access_policy_set.delete_network_access_policy_set_by_id(
-        policy_id='string'
+        id='string'
     )
     return endpoint_result
 
@@ -364,7 +362,7 @@ def test_delete_network_access_policy_set_by_id(api, validator):
 
 def delete_network_access_policy_set_by_id_default(api):
     endpoint_result = api.network_access_policy_set.delete_network_access_policy_set_by_id(
-        policy_id='string'
+        id='string'
     )
     return endpoint_result
 

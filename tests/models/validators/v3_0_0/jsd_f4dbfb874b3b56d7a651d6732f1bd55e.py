@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine postNetworkAccessNetworkCondition data model.
+"""Identity Services Engine createNetworkAccessNetworkCondition data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF4Dbfb874B3B56D7A651D6732F1Bd55E(object):
-    """postNetworkAccessNetworkCondition request schema definition."""
+    """createNetworkAccessNetworkCondition request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF4Dbfb874B3B56D7A651D6732F1Bd55E, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -421,16 +421,16 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             **query_parameters
         )
 
-    def put_device_admin_policy_set_global_exception_by_rule_id(self,
-                                                                id,
-                                                                commands=None,
-                                                                link=None,
-                                                                profile=None,
-                                                                rule=None,
-                                                                headers=None,
-                                                                payload=None,
-                                                                active_validation=True,
-                                                                **query_parameters):
+    def update_device_admin_policy_set_global_exception_by_rule_id(self,
+                                                                   id,
+                                                                   commands=None,
+                                                                   link=None,
+                                                                   profile=None,
+                                                                   rule=None,
+                                                                   headers=None,
+                                                                   payload=None,
+                                                                   active_validation=True,
+                                                                   **query_parameters):
         """Device Admin Update global exception authorization rule.
 
         Args:
@@ -544,11 +544,11 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `put_device_admin_policy_set_global_exception_by_rule_id <#ciscoisesdk.
+        """Alias for `update_device_admin_policy_set_global_exception_by_rule_id <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_global_exception_rules.
-        DeviceAdministrationAuthorizationGlobalExceptionRules.put_device_admin_policy_set_global_exception_by_rule_id>`_
+        DeviceAdministrationAuthorizationGlobalExceptionRules.update_device_admin_policy_set_global_exception_by_rule_id>`_
         """
-        return self.put_device_admin_policy_set_global_exception_by_rule_id(
+        return self.update_device_admin_policy_set_global_exception_by_rule_id(
             id=id,
             commands=commands,
             link=link,
@@ -560,10 +560,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             **query_parameters
         )
 
-    def delete_device_admin_policyset_global_exception_by_rule_id(self,
-                                                                  id,
-                                                                  headers=None,
-                                                                  **query_parameters):
+    def delete_device_admin_policy_set_global_exception_by_rule_id(self,
+                                                                   id,
+                                                                   headers=None,
+                                                                   **query_parameters):
         """Device Admin Delete global exception authorization rule.
 
         Args:
@@ -627,11 +627,11 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
                      id,
                      headers=None,
                      **query_parameters):
-        """Alias for `delete_device_admin_policyset_global_exception_by_rule_id <#ciscoisesdk.
+        """Alias for `delete_device_admin_policy_set_global_exception_by_rule_id <#ciscoisesdk.
         api.v3_0_0.device_administration_authorization_global_exception_rules.
-        DeviceAdministrationAuthorizationGlobalExceptionRules.delete_device_admin_policyset_global_exception_by_rule_id>`_
+        DeviceAdministrationAuthorizationGlobalExceptionRules.delete_device_admin_policy_set_global_exception_by_rule_id>`_
         """
-        return self.delete_device_admin_policyset_global_exception_by_rule_id(
+        return self.delete_device_admin_policy_set_global_exception_by_rule_id(
             id=id,
             headers=headers,
             **query_parameters

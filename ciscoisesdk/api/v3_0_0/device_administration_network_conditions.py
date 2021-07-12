@@ -143,21 +143,21 @@ class DeviceAdministrationNetworkConditions(object):
             **query_parameters
         )
 
-    def post_device_admin_network_condition(self,
-                                            cli_dnis_list=None,
-                                            condition_type=None,
-                                            description=None,
-                                            device_group_list=None,
-                                            device_list=None,
-                                            id=None,
-                                            ip_addr_list=None,
-                                            link=None,
-                                            mac_addr_list=None,
-                                            name=None,
-                                            headers=None,
-                                            payload=None,
-                                            active_validation=True,
-                                            **query_parameters):
+    def create_device_admin_network_condition(self,
+                                              cli_dnis_list=None,
+                                              condition_type=None,
+                                              description=None,
+                                              device_group_list=None,
+                                              device_list=None,
+                                              id=None,
+                                              ip_addr_list=None,
+                                              link=None,
+                                              mac_addr_list=None,
+                                              name=None,
+                                              headers=None,
+                                              payload=None,
+                                              active_validation=True,
+                                              **query_parameters):
         """Device AdminCreates network condition.
 
         Args:
@@ -315,11 +315,11 @@ class DeviceAdministrationNetworkConditions(object):
                payload=None,
                active_validation=True,
                **query_parameters):
-        """Alias for `post_device_admin_network_condition <#ciscoisesdk.
+        """Alias for `create_device_admin_network_condition <#ciscoisesdk.
         api.v3_0_0.device_administration_network_conditions.
-        DeviceAdministrationNetworkConditions.post_device_admin_network_condition>`_
+        DeviceAdministrationNetworkConditions.create_device_admin_network_condition>`_
         """
-        return self.post_device_admin_network_condition(
+        return self.create_device_admin_network_condition(
             cli_dnis_list=cli_dnis_list,
             condition_type=condition_type,
             description=description,
@@ -412,21 +412,21 @@ class DeviceAdministrationNetworkConditions(object):
             **query_parameters
         )
 
-    def put_device_admin_network_condition_by_condition_id(self,
-                                                           id,
-                                                           cli_dnis_list=None,
-                                                           condition_type=None,
-                                                           description=None,
-                                                           device_group_list=None,
-                                                           device_list=None,
-                                                           ip_addr_list=None,
-                                                           link=None,
-                                                           mac_addr_list=None,
-                                                           name=None,
-                                                           headers=None,
-                                                           payload=None,
-                                                           active_validation=True,
-                                                           **query_parameters):
+    def update_device_admin_network_condition_by_condition_id(self,
+                                                              id,
+                                                              cli_dnis_list=None,
+                                                              condition_type=None,
+                                                              description=None,
+                                                              device_group_list=None,
+                                                              device_list=None,
+                                                              ip_addr_list=None,
+                                                              link=None,
+                                                              mac_addr_list=None,
+                                                              name=None,
+                                                              headers=None,
+                                                              payload=None,
+                                                              active_validation=True,
+                                                              **query_parameters):
         """Device Admin Update network condition.
 
         Args:
@@ -589,11 +589,11 @@ class DeviceAdministrationNetworkConditions(object):
                      payload=None,
                      active_validation=True,
                      **query_parameters):
-        """Alias for `put_device_admin_network_condition_by_condition_id <#ciscoisesdk.
+        """Alias for `update_device_admin_network_condition_by_condition_id <#ciscoisesdk.
         api.v3_0_0.device_administration_network_conditions.
-        DeviceAdministrationNetworkConditions.put_device_admin_network_condition_by_condition_id>`_
+        DeviceAdministrationNetworkConditions.update_device_admin_network_condition_by_condition_id>`_
         """
-        return self.put_device_admin_network_condition_by_condition_id(
+        return self.update_device_admin_network_condition_by_condition_id(
             id=id,
             cli_dnis_list=cli_dnis_list,
             condition_type=condition_type,

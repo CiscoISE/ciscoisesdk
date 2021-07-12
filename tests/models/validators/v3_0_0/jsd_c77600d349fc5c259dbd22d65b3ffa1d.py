@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getNetworkAccessDictionariesByDictionaryNameAttributeByAttributeName data
-model.
+"""Identity Services Engine getNetworkAccessDictionaryAttributeByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -39,8 +38,8 @@ from builtins import *
 
 
 class JSONSchemaValidatorC77600D349Fc5C259Dbd22D65B3Ffa1D(object):
-    """getNetworkAccessDictionariesByDictionaryNameAttributeByAttributeNa
-    me request schema definition."""
+    """getNetworkAccessDictionaryAttributeByName request schema
+    definition."""
     def __init__(self):
         super(JSONSchemaValidatorC77600D349Fc5C259Dbd22D65B3Ffa1D, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

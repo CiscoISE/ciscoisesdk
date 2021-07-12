@@ -241,7 +241,7 @@ def test_get_device_admin_policy_set_global_exception_by_rule_id_default(api, va
             raise original_e
 
 
-def is_valid_put_device_admin_policy_set_global_exception_by_rule_id(json_schema_validate, obj):
+def is_valid_update_device_admin_policy_set_global_exception_by_rule_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -252,8 +252,8 @@ def is_valid_put_device_admin_policy_set_global_exception_by_rule_id(json_schema
     return True
 
 
-def put_device_admin_policy_set_global_exception_by_rule_id(api):
-    endpoint_result = api.device_administration_authorization_global_exception_rules.put_device_admin_policy_set_global_exception_by_rule_id(
+def update_device_admin_policy_set_global_exception_by_rule_id(api):
+    endpoint_result = api.device_administration_authorization_global_exception_rules.update_device_admin_policy_set_global_exception_by_rule_id(
         active_validation=False,
         commands=['string'],
         id='string',
@@ -266,11 +266,11 @@ def put_device_admin_policy_set_global_exception_by_rule_id(api):
 
 
 @pytest.mark.device_administration_authorization_global_exception_rules
-def test_put_device_admin_policy_set_global_exception_by_rule_id(api, validator):
+def test_update_device_admin_policy_set_global_exception_by_rule_id(api, validator):
     try:
-        assert is_valid_put_device_admin_policy_set_global_exception_by_rule_id(
+        assert is_valid_update_device_admin_policy_set_global_exception_by_rule_id(
             validator,
-            put_device_admin_policy_set_global_exception_by_rule_id(api)
+            update_device_admin_policy_set_global_exception_by_rule_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -278,8 +278,8 @@ def test_put_device_admin_policy_set_global_exception_by_rule_id(api, validator)
             raise original_e
 
 
-def put_device_admin_policy_set_global_exception_by_rule_id_default(api):
-    endpoint_result = api.device_administration_authorization_global_exception_rules.put_device_admin_policy_set_global_exception_by_rule_id(
+def update_device_admin_policy_set_global_exception_by_rule_id_default(api):
+    endpoint_result = api.device_administration_authorization_global_exception_rules.update_device_admin_policy_set_global_exception_by_rule_id(
         active_validation=False,
         id='string',
         commands=None,
@@ -292,18 +292,18 @@ def put_device_admin_policy_set_global_exception_by_rule_id_default(api):
 
 
 @pytest.mark.device_administration_authorization_global_exception_rules
-def test_put_device_admin_policy_set_global_exception_by_rule_id_default(api, validator):
+def test_update_device_admin_policy_set_global_exception_by_rule_id_default(api, validator):
     try:
-        assert is_valid_put_device_admin_policy_set_global_exception_by_rule_id(
+        assert is_valid_update_device_admin_policy_set_global_exception_by_rule_id(
             validator,
-            put_device_admin_policy_set_global_exception_by_rule_id_default(api)
+            update_device_admin_policy_set_global_exception_by_rule_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_device_admin_policyset_global_exception_by_rule_id(json_schema_validate, obj):
+def is_valid_delete_device_admin_policy_set_global_exception_by_rule_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -314,19 +314,19 @@ def is_valid_delete_device_admin_policyset_global_exception_by_rule_id(json_sche
     return True
 
 
-def delete_device_admin_policyset_global_exception_by_rule_id(api):
-    endpoint_result = api.device_administration_authorization_global_exception_rules.delete_device_admin_policyset_global_exception_by_rule_id(
+def delete_device_admin_policy_set_global_exception_by_rule_id(api):
+    endpoint_result = api.device_administration_authorization_global_exception_rules.delete_device_admin_policy_set_global_exception_by_rule_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authorization_global_exception_rules
-def test_delete_device_admin_policyset_global_exception_by_rule_id(api, validator):
+def test_delete_device_admin_policy_set_global_exception_by_rule_id(api, validator):
     try:
-        assert is_valid_delete_device_admin_policyset_global_exception_by_rule_id(
+        assert is_valid_delete_device_admin_policy_set_global_exception_by_rule_id(
             validator,
-            delete_device_admin_policyset_global_exception_by_rule_id(api)
+            delete_device_admin_policy_set_global_exception_by_rule_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -334,19 +334,19 @@ def test_delete_device_admin_policyset_global_exception_by_rule_id(api, validato
             raise original_e
 
 
-def delete_device_admin_policyset_global_exception_by_rule_id_default(api):
-    endpoint_result = api.device_administration_authorization_global_exception_rules.delete_device_admin_policyset_global_exception_by_rule_id(
+def delete_device_admin_policy_set_global_exception_by_rule_id_default(api):
+    endpoint_result = api.device_administration_authorization_global_exception_rules.delete_device_admin_policy_set_global_exception_by_rule_id(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authorization_global_exception_rules
-def test_delete_device_admin_policyset_global_exception_by_rule_id_default(api, validator):
+def test_delete_device_admin_policy_set_global_exception_by_rule_id_default(api, validator):
     try:
-        assert is_valid_delete_device_admin_policyset_global_exception_by_rule_id(
+        assert is_valid_delete_device_admin_policy_set_global_exception_by_rule_id(
             validator,
-            delete_device_admin_policyset_global_exception_by_rule_id_default(api)
+            delete_device_admin_policy_set_global_exception_by_rule_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

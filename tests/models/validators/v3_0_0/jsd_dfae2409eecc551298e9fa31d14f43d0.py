@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteNetworkAccessDictionariesByName data model.
+"""Identity Services Engine deleteNetworkAccessDictionaryByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorDfae2409Eecc551298E9Fa31D14F43D0(object):
-    """deleteNetworkAccessDictionariesByName request schema definition."""
+    """deleteNetworkAccessDictionaryByName request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDfae2409Eecc551298E9Fa31D14F43D0, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

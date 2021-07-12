@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine putDeviceAdminTimeConditionByConditionId data model.
+"""Identity Services Engine updateDeviceAdminTimeConditionByConditionId data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorEe1780A38A85D1BA57C9A38E1093721(object):
-    """putDeviceAdminTimeConditionByConditionId request schema
+    """updateDeviceAdminTimeConditionByConditionId request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorEe1780A38A85D1BA57C9A38E1093721, self).__init__()
