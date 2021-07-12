@@ -125,7 +125,7 @@ class NetworkAccessServiceNames(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/network-access/service-names')
+        e_url = ('/api/v1/policy/network-access/service-names')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -133,7 +133,7 @@ class NetworkAccessServiceNames(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ca8f50a31b325fd281ae7f7b69f31d3f_v3_0_0', _api_response)
+        return self._object_factory('bpm_c137cad852579f4b810ff8adf661_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,

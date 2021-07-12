@@ -36,7 +36,7 @@ def is_valid_get_network_access_network_conditions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_da2d8b2763ed53d9bec7f9427c4ce344_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d43fec9e7dc556cbb9bf0ebd1dcd6aad_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_post_network_access_network_condition(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_858ad86a47e15d45ab1cc0cadc5b248f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f4dbfb874b3b56d7a651d6732f1bd55e_v3_0_0').validate(obj.response)
     return True
 
 
@@ -158,7 +158,7 @@ def is_valid_get_network_access_network_condition_by_condition_id(json_schema_va
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c3b840797ab85dbe85b8a322be86278e_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0ab015a9eb6d5f2b91002af068cb4ce2_v3_0_0').validate(obj.response)
     return True
 
 
@@ -208,7 +208,7 @@ def is_valid_put_network_access_network_condition_by_condition_id(json_schema_va
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_74ad357457f45e07a13674d462c4270d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_49780cf65cd559628b26f6eb5ea20f14_v3_0_0').validate(obj.response)
     return True
 
 
@@ -280,7 +280,7 @@ def is_valid_delete_network_access_network_condition_by_condition_id(json_schema
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0e7e4151251d56a6a72f3e147ddde891_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_95e92c6e47625711b9ce06f92bd4d219_v3_0_0').validate(obj.response)
     return True
 
 

@@ -178,6 +178,28 @@ class SupportBundleDownload(object):
 
         return self._object_factory('bpm_6d125b968b9d362a3458621d_v3_0_0', _api_response)
 
+    def download(self,
+                 file_name=None,
+                 dirpath=None,
+                 save_file=None,
+                 headers=None,
+                 payload=None,
+                 active_validation=True,
+                 **query_parameters):
+        """Alias for `download_support_bundle <#ciscoisesdk.
+        api.v3_0_0.support_bundle_download.
+        SupportBundleDownload.download_support_bundle>`_
+        """
+        return self.download_support_bundle(
+            file_name=file_name,
+            dirpath=dirpath,
+            save_file=save_file,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_version(self,
                     headers=None,
                     **query_parameters):

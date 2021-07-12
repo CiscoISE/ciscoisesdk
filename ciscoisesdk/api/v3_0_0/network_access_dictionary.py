@@ -121,7 +121,7 @@ class NetworkAccessDictionary(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/network-access/dictionaries')
+        e_url = ('/api/v1/policy/network-access/dictionaries')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -129,7 +129,7 @@ class NetworkAccessDictionary(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_eb2cef3895d5bc68b7a28eca42ef630_v3_0_0', _api_response)
+        return self._object_factory('bpm_e5a8315e699f55c09102e7c653333d4e_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -239,10 +239,10 @@ class NetworkAccessDictionary(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_be755dae5251bd2d8348eeebfdde_v3_0_0')\
+            self._request_validator('jsd_a57687cef65891a6f48dd17f456c4e_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/network-access/dictionaries')
+        e_url = ('/api/v1/policy/network-access/dictionaries')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -254,7 +254,7 @@ class NetworkAccessDictionary(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_be755dae5251bd2d8348eeebfdde_v3_0_0', _api_response)
+        return self._object_factory('bpm_a57687cef65891a6f48dd17f456c4e_v3_0_0', _api_response)
 
     def create(self,
                description=None,
@@ -343,7 +343,7 @@ class NetworkAccessDictionary(object):
             'name': name,
         }
 
-        e_url = ('/v1/policy/network-access/dictionaries/{name}')
+        e_url = ('/api/v1/policy/network-access/dictionaries/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -351,7 +351,7 @@ class NetworkAccessDictionary(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e60234354578568697b6740d08170678_v3_0_0', _api_response)
+        return self._object_factory('bpm_f1fd8e2bd1581aabf7cd87bff65137_v3_0_0', _api_response)
 
     def get_by_name(self,
                     name,
@@ -474,10 +474,10 @@ class NetworkAccessDictionary(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e4f1e31aca1558f782a2cdb43853aaf2_v3_0_0')\
+            self._request_validator('jsd_a4cccea3c9567498f6f688e0cf86e7_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/network-access/dictionaries/{name}')
+        e_url = ('/api/v1/policy/network-access/dictionaries/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -490,7 +490,7 @@ class NetworkAccessDictionary(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_e4f1e31aca1558f782a2cdb43853aaf2_v3_0_0', _api_response)
+        return self._object_factory('bpm_a4cccea3c9567498f6f688e0cf86e7_v3_0_0', _api_response)
 
     def update_by_name(self,
                        name,
@@ -579,7 +579,7 @@ class NetworkAccessDictionary(object):
             'name': name,
         }
 
-        e_url = ('/v1/policy/network-access/dictionaries/{name}')
+        e_url = ('/api/v1/policy/network-access/dictionaries/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -587,7 +587,7 @@ class NetworkAccessDictionary(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b80087f14af51d186a7bfa89f5a494b_v3_0_0', _api_response)
+        return self._object_factory('bpm_dfae2409eecc551298e9fa31d14f43d0_v3_0_0', _api_response)
 
     def delete_by_name(self,
                        name,

@@ -36,7 +36,7 @@ def is_valid_get_device_admin_time_conditions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_816bf923264c53f98d5c347fa50b9c15_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f79ab23563d857e58e01a74e37333572_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_post_device_admin_time_condition(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_98b30f809e275589bd7154b5b4093d3f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_26a4d5b5da6a50bfaaecc180543fd952_v3_0_0').validate(obj.response)
     return True
 
 
@@ -172,7 +172,7 @@ def is_valid_get_device_admin_time_condition_by_condition_id(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_225098756ffe5da1b4ee14a72427f2a1_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_4709e603092f597ab6c25381e59c4a70_v3_0_0').validate(obj.response)
     return True
 
 
@@ -222,7 +222,7 @@ def is_valid_put_device_admin_time_condition_by_condition_id(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9f47dca835fa58fcb08bcdd672dfbaa7_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_6ee1780a38a85d1ba57c9a38e1093721_v3_0_0').validate(obj.response)
     return True
 
 
@@ -308,7 +308,7 @@ def is_valid_delete_device_admin_time_condition_by_condition_id(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2407e1579b485baa9317791997bec3d0_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c1052ac49dd35088a9874a4350182015_v3_0_0').validate(obj.response)
     return True
 
 

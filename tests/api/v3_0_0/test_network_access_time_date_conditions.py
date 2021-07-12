@@ -36,7 +36,7 @@ def is_valid_get_network_access_time_conditions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1533f65d301c5ee3a66ac5220cac3348_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ab916b19789c59b79dddbc2d0a3c57fc_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_post_network_access_time_condition(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_fc5800b01699562cb563664affdd7757_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_784b314d32b258a1b53c5c84cf84d396_v3_0_0').validate(obj.response)
     return True
 
 
@@ -172,7 +172,7 @@ def is_valid_get_network_access_time_condition_by_condition_id(json_schema_valid
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_7495473c838652eab2df320764235146_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c941303330bc5615b3eb8d4d2702b874_v3_0_0').validate(obj.response)
     return True
 
 
@@ -222,7 +222,7 @@ def is_valid_put_network_access_time_condition_by_condition_id(json_schema_valid
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e5f90d642cfa5ee6a1645dd99fb3065e_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_11232a518d5655f69e8687c9c98740c6_v3_0_0').validate(obj.response)
     return True
 
 
@@ -308,7 +308,7 @@ def is_valid_delete_network_access_time_condition_by_condition_id(json_schema_va
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a946651bf00654e1a27da97fb7203f52_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e2a697abfe2058d3adc7ad9922f5a5d6_v3_0_0').validate(obj.response)
     return True
 
 

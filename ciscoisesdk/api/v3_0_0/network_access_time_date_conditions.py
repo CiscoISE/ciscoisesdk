@@ -121,7 +121,7 @@ class NetworkAccessTimeDateConditions(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/network-access/time-condition')
+        e_url = ('/api/v1/policy/network-access/time-condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -129,7 +129,7 @@ class NetworkAccessTimeDateConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f65d301c5ee3a66ac5220cac3348_v3_0_0', _api_response)
+        return self._object_factory('bpm_ab916b19789c59b79dddbc2d0a3c57fc_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -360,10 +360,10 @@ class NetworkAccessTimeDateConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_fc5800b01699562cb563664affdd7757_v3_0_0')\
+            self._request_validator('jsd_b314d32b258a1b53c5c84cf84d396_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/network-access/time-condition')
+        e_url = ('/api/v1/policy/network-access/time-condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -375,7 +375,7 @@ class NetworkAccessTimeDateConditions(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_fc5800b01699562cb563664affdd7757_v3_0_0', _api_response)
+        return self._object_factory('bpm_b314d32b258a1b53c5c84cf84d396_v3_0_0', _api_response)
 
     def create(self,
                attribute_value=None,
@@ -479,7 +479,7 @@ class NetworkAccessTimeDateConditions(object):
             'id': id,
         }
 
-        e_url = ('/v1/policy/network-access/time-condition/{id}')
+        e_url = ('/api/v1/policy/network-access/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -487,7 +487,7 @@ class NetworkAccessTimeDateConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c838652eab2df320764235146_v3_0_0', _api_response)
+        return self._object_factory('bpm_c941303330bc5615b3eb8d4d2702b874_v3_0_0', _api_response)
 
     def get_by_id(self,
                   id,
@@ -724,10 +724,10 @@ class NetworkAccessTimeDateConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e5f90d642cfa5ee6a1645dd99fb3065e_v3_0_0')\
+            self._request_validator('jsd_a518d5655f69e8687c9c98740c6_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/network-access/time-condition/{id}')
+        e_url = ('/api/v1/policy/network-access/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -740,7 +740,7 @@ class NetworkAccessTimeDateConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_e5f90d642cfa5ee6a1645dd99fb3065e_v3_0_0', _api_response)
+        return self._object_factory('bpm_a518d5655f69e8687c9c98740c6_v3_0_0', _api_response)
 
     def update_by_id(self,
                      id,
@@ -844,7 +844,7 @@ class NetworkAccessTimeDateConditions(object):
             'id': id,
         }
 
-        e_url = ('/v1/policy/network-access/time-condition/{id}')
+        e_url = ('/api/v1/policy/network-access/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -852,7 +852,7 @@ class NetworkAccessTimeDateConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a946651bf00654e1a27da97fb7203f52_v3_0_0', _api_response)
+        return self._object_factory('bpm_e2a697abfe2058d3adc7ad9922f5a5d6_v3_0_0', _api_response)
 
     def delete_by_id(self,
                      id,

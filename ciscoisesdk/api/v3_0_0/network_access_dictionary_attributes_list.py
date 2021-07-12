@@ -122,7 +122,8 @@ class NetworkAccessDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/network-access/dictionaries/authentication')
+        e_url = ('/api/v1/policy/network-'
+                 + 'access/dictionaries/authentication')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -130,7 +131,7 @@ class NetworkAccessDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c8455c5c6fac438317f314f407_v3_0_0', _api_response)
+        return self._object_factory('bpm_ab96d3d76de5d05bbac1f27feacb7b0_v3_0_0', _api_response)
 
     def get_all_authentication(self,
                                headers=None,
@@ -192,7 +193,7 @@ class NetworkAccessDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/network-access/dictionaries/authorization')
+        e_url = ('/api/v1/policy/network-access/dictionaries/authorization')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -200,7 +201,7 @@ class NetworkAccessDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e86076c61aa9548dacaf5eb77e98a20c_v3_0_0', _api_response)
+        return self._object_factory('bpm_f68aee0cdb425390b3ca90b0b46e6e2c_v3_0_0', _api_response)
 
     def get_all_authorization(self,
                               headers=None,
@@ -262,7 +263,7 @@ class NetworkAccessDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/network-access/dictionaries/policyset')
+        e_url = ('/api/v1/policy/network-access/dictionaries/policyset')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -270,7 +271,7 @@ class NetworkAccessDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_bce945bea7456fd930ee327ece18828_v3_0_0', _api_response)
+        return self._object_factory('bpm_c53b22885f5e5d82fb8cadd0332136_v3_0_0', _api_response)
 
     def get_all_policyset(self,
                           headers=None,

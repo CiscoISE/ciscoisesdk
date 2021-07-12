@@ -179,7 +179,7 @@ class Certificates(object):
         path_params = {
         }
 
-        e_url = ('/v1/certs/certificate-signing-request')
+        e_url = ('/api/v1/certs/certificate-signing-request')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -187,7 +187,7 @@ class Certificates(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_efa004c89a5b85ad30e0dde622bfaf_v3_0_0', _api_response)
+        return self._object_factory('bpm_eeef18d70b159f788b717e301dd3643_v3_0_0', _api_response)
 
     def get_csrs_generator(self,
                            filter=None,
@@ -458,10 +458,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_dd7a13ef2dea5b9fa6c4d67839133bbf_v3_0_0')\
+            self._request_validator('jsd_e39868ea7aec5efcaaf55009699eda5d_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/certificate-signing-request')
+        e_url = ('/api/v1/certs/certificate-signing-request')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -473,7 +473,7 @@ class Certificates(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_dd7a13ef2dea5b9fa6c4d67839133bbf_v3_0_0', _api_response)
+        return self._object_factory('bpm_e39868ea7aec5efcaaf55009699eda5d_v3_0_0', _api_response)
 
     def export_csr(self,
                    hostname,
@@ -535,7 +535,7 @@ class Certificates(object):
             'id': id,
         }
 
-        e_url = ('/v1/certs/certificate-signing-'
+        e_url = ('/api/v1/certs/certificate-signing-'
                  + 'request/export/{hostname}/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
@@ -546,7 +546,7 @@ class Certificates(object):
             _api_response = self._session.get(endpoint_full_url, params=_params,
                                               stream=True, dirpath=dirpath, save_file=save_file)
 
-        return self._object_factory('bpm_f99dc34755cf954945d5575e3072_v3_0_0', _api_response)
+        return self._object_factory('bpm_ec26ec11d92356a594a6efa55ccb9be7_v3_0_0', _api_response)
 
     def generate_intermediate_ca_csr(self,
                                      headers=None,
@@ -593,7 +593,8 @@ class Certificates(object):
         path_params = {
         }
 
-        e_url = ('/v1/certs/certificate-signing-request/intermediate-ca')
+        e_url = ('/api/v1/certs/certificate-signing-request/intermediate-'
+                 + 'ca')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         if with_custom_headers:
@@ -602,7 +603,7 @@ class Certificates(object):
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_db47e53374a85830af220e5f982d10da_v3_0_0', _api_response)
+        return self._object_factory('bpm_bf95f099207a5b6599e04c47c22789c0_v3_0_0', _api_response)
 
     def get_csr_by_id(self,
                       host_name,
@@ -663,7 +664,8 @@ class Certificates(object):
             'id': id,
         }
 
-        e_url = ('/v1/certs/certificate-signing-request/{hostName}/{id}')
+        e_url = ('/api/v1/certs/certificate-signing-'
+                 + 'request/{hostName}/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -671,7 +673,7 @@ class Certificates(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d080d7635e27aef80f42d20b01c8_v3_0_0', _api_response)
+        return self._object_factory('bpm_b8104a50fc565ae9a756d6d0152e0e5b_v3_0_0', _api_response)
 
     def delete_csr(self,
                    host_name,
@@ -733,7 +735,8 @@ class Certificates(object):
             'id': id,
         }
 
-        e_url = ('/v1/certs/certificate-signing-request/{hostName}/{id}')
+        e_url = ('/api/v1/certs/certificate-signing-'
+                 + 'request/{hostName}/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -741,7 +744,7 @@ class Certificates(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dde06bf20b6b5f71b8f0782f3750c242_v3_0_0', _api_response)
+        return self._object_factory('bpm_bf792ec664fa5202beb776556908b0c1_v3_0_0', _api_response)
 
     def regenerate_ise_root_ca(self,
                                remove_existing_ise_intermediate_csr=None,
@@ -817,10 +820,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_70e85c38bcad4249948c550b_v3_0_0')\
+            self._request_validator('jsd_e6d1b224e058288a8c4d70be72c9a6_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/ise-root-ca/regenerate')
+        e_url = ('/api/v1/certs/ise-root-ca/regenerate')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -832,7 +835,7 @@ class Certificates(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_70e85c38bcad4249948c550b_v3_0_0', _api_response)
+        return self._object_factory('bpm_e6d1b224e058288a8c4d70be72c9a6_v3_0_0', _api_response)
 
     def renew_certs(self,
                     cert_type=None,
@@ -904,10 +907,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ce788c3408de5056a2e71955f86d6f05_v3_0_0')\
+            self._request_validator('jsd_c288192f954309b4b35aa612ff226_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/renew-certificate')
+        e_url = ('/api/v1/certs/renew-certificate')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -919,7 +922,7 @@ class Certificates(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_ce788c3408de5056a2e71955f86d6f05_v3_0_0', _api_response)
+        return self._object_factory('bpm_c288192f954309b4b35aa612ff226_v3_0_0', _api_response)
 
     def bind_csr(self,
                  admin=None,
@@ -1126,10 +1129,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_c39f0f97cb53e19a03f2ea53f5b831_v3_0_0')\
+            self._request_validator('jsd_b94d7d3f0ed5d0b938151ae2cae9fa4_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/signed-certificate/bind')
+        e_url = ('/api/v1/certs/signed-certificate/bind')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1141,7 +1144,7 @@ class Certificates(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_c39f0f97cb53e19a03f2ea53f5b831_v3_0_0', _api_response)
+        return self._object_factory('bpm_b94d7d3f0ed5d0b938151ae2cae9fa4_v3_0_0', _api_response)
 
     def export_system_cert(self,
                            export=None,
@@ -1243,10 +1246,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_da5ac537bf475538b7bc42c8cce2e530_v3_0_0')\
+            self._request_validator('jsd_dbe47028859573988880de76fec0936_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/system-certificate/export')
+        e_url = ('/api/v1/certs/system-certificate/export')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1260,7 +1263,7 @@ class Certificates(object):
                                                stream=True, dirpath=dirpath, save_file=save_file,
                                                **request_params)
 
-        return self._object_factory('bpm_da5ac537bf475538b7bc42c8cce2e530_v3_0_0', _api_response)
+        return self._object_factory('bpm_dbe47028859573988880de76fec0936_v3_0_0', _api_response)
 
     def import_system_cert(self,
                            admin=None,
@@ -1483,10 +1486,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_adde5bf7c9185218b955ff0c365fcc4c_v3_0_0')\
+            self._request_validator('jsd_e6c7251a8508597f1b7ae61cbf953_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/system-certificate/import')
+        e_url = ('/api/v1/certs/system-certificate/import')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1498,7 +1501,7 @@ class Certificates(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_adde5bf7c9185218b955ff0c365fcc4c_v3_0_0', _api_response)
+        return self._object_factory('bpm_e6c7251a8508597f1b7ae61cbf953_v3_0_0', _api_response)
 
     def get_system_certificates(self,
                                 host_name,
@@ -1615,7 +1618,7 @@ class Certificates(object):
             'hostName': host_name,
         }
 
-        e_url = ('/v1/certs/system-certificate/{hostName}')
+        e_url = ('/api/v1/certs/system-certificate/{hostName}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -1623,7 +1626,7 @@ class Certificates(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c2e43687a3205903a3f60728b87f1865_v3_0_0', _api_response)
+        return self._object_factory('bpm_a56f5c5f739a83e8806da16be5_v3_0_0', _api_response)
 
     def get_system_certificates_generator(self,
                                           host_name,
@@ -1773,7 +1776,7 @@ class Certificates(object):
             'id': id,
         }
 
-        e_url = ('/v1/certs/system-certificate/{hostName}/{id}')
+        e_url = ('/api/v1/certs/system-certificate/{hostName}/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -1781,7 +1784,7 @@ class Certificates(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c4e07bc79feb5e19bf6cc60220f47bdf_v3_0_0', _api_response)
+        return self._object_factory('bpm_f36e90115b05416a71506061fed7e5c_v3_0_0', _api_response)
 
     def update_system_cert(self,
                            host_name,
@@ -1985,10 +1988,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e9594a91bd735eaabe2eb50038e9d05a_v3_0_0')\
+            self._request_validator('jsd_fb9c22ad9a5eddb590c85abdab460b_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/system-certificate/{hostName}/{id}')
+        e_url = ('/api/v1/certs/system-certificate/{hostName}/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -2001,7 +2004,7 @@ class Certificates(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_e9594a91bd735eaabe2eb50038e9d05a_v3_0_0', _api_response)
+        return self._object_factory('bpm_fb9c22ad9a5eddb590c85abdab460b_v3_0_0', _api_response)
 
     def delete_system_certificate_by_id(self,
                                         host_name,
@@ -2062,7 +2065,7 @@ class Certificates(object):
             'id': id,
         }
 
-        e_url = ('/v1/certs/system-certificate/{hostName}/{id}')
+        e_url = ('/api/v1/certs/system-certificate/{hostName}/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -2070,7 +2073,7 @@ class Certificates(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c55df3640a55c48bece27159ce199f8_v3_0_0', _api_response)
+        return self._object_factory('bpm_dc2eec65ad680a3c5de47cd87c8_v3_0_0', _api_response)
 
     def get_trusted_certificates(self,
                                  filter=None,
@@ -2181,7 +2184,7 @@ class Certificates(object):
         path_params = {
         }
 
-        e_url = ('/v1/certs/trusted-certificate')
+        e_url = ('/api/v1/certs/trusted-certificate')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -2189,7 +2192,7 @@ class Certificates(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_df7d8ed3e15a5d1587cdd7652efe0104_v3_0_0', _api_response)
+        return self._object_factory('bpm_c654a18faf1b5571ac5ba61145d298c4_v3_0_0', _api_response)
 
     def get_trusted_certificates_generator(self,
                                            filter=None,
@@ -2333,7 +2336,7 @@ class Certificates(object):
             'id': id,
         }
 
-        e_url = ('/v1/certs/trusted-certificate/export/{id}')
+        e_url = ('/api/v1/certs/trusted-certificate/export/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -2341,7 +2344,7 @@ class Certificates(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_45b45792ab0b40c8a2d3392c_v3_0_0', _api_response)
+        return self._object_factory('bpm_b62a711ce705542b5d1d92b7d3ca431_v3_0_0', _api_response)
 
     def import_trust_cert(self,
                           allow_basic_constraint_cafalse=None,
@@ -2522,10 +2525,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_f385b6330ef6500cb599f55407695a3e_v3_0_0')\
+            self._request_validator('jsd_c8cd2f618b655d988ce626e579486596_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/trusted-certificate/import')
+        e_url = ('/api/v1/certs/trusted-certificate/import')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -2537,7 +2540,7 @@ class Certificates(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_f385b6330ef6500cb599f55407695a3e_v3_0_0', _api_response)
+        return self._object_factory('bpm_c8cd2f618b655d988ce626e579486596_v3_0_0', _api_response)
 
     def get_trusted_certificate_by_id(self,
                                       id,
@@ -2596,7 +2599,7 @@ class Certificates(object):
             'id': id,
         }
 
-        e_url = ('/v1/certs/trusted-certificate/{id}')
+        e_url = ('/api/v1/certs/trusted-certificate/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -2604,7 +2607,7 @@ class Certificates(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_bee89e08a5145417989aaf187a6d7b2b_v3_0_0', _api_response)
+        return self._object_factory('bpm_f8f4956d29b821fa9bbf23266_v3_0_0', _api_response)
 
     def update_trusted_certificate(self,
                                    id,
@@ -2939,10 +2942,10 @@ class Certificates(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ed4e0ba952525984acfe4a151689c2eb_v3_0_0')\
+            self._request_validator('jsd_cb625d5ad0ad76b93282f5818a_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/certs/trusted-certificate/{id}')
+        e_url = ('/api/v1/certs/trusted-certificate/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -2955,7 +2958,7 @@ class Certificates(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_ed4e0ba952525984acfe4a151689c2eb_v3_0_0', _api_response)
+        return self._object_factory('bpm_cb625d5ad0ad76b93282f5818a_v3_0_0', _api_response)
 
     def delete_trusted_certificate_by_id(self,
                                          id,
@@ -3014,7 +3017,7 @@ class Certificates(object):
             'id': id,
         }
 
-        e_url = ('/v1/certs/trusted-certificate/{id}')
+        e_url = ('/api/v1/certs/trusted-certificate/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -3022,4 +3025,4 @@ class Certificates(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_de9ebc73cfce5059a702076cf6a0aec2_v3_0_0', _api_response)
+        return self._object_factory('bpm_c578ef80918b5d038024d126cd6e3b8d_v3_0_0', _api_response)

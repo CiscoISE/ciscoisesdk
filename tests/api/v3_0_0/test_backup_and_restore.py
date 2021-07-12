@@ -36,7 +36,7 @@ def is_valid_config_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b9638a67f60d5a6aa476af13632d96bd_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0740db1d9dda53369e35d33138b29c16_v3_0_0').validate(obj.response)
     return True
 
 
@@ -94,7 +94,7 @@ def is_valid_cancel_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_39527e9813ff50a9bcbbd5d539ed19d8_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_3e155669bc74586e9ef2580ec5752902_v3_0_0').validate(obj.response)
     return True
 
 
@@ -146,7 +146,7 @@ def is_valid_get_last_config_backup_status(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b0b71a5f25825202b6cb339ce1a5a8d4_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d388e26255a15233ac682c0406880cfb_v3_0_0').validate(obj.response)
     return True
 
 
@@ -196,7 +196,7 @@ def is_valid_restore_config_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_db3505847b4e5f37a5c74bc41df54be3_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b8319a8b5d195348a8763acd95ca2967_v3_0_0').validate(obj.response)
     return True
 
 
@@ -256,7 +256,7 @@ def is_valid_update_scheduled_config_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_5329d31fa60f5575a2ed23cee473c0fc_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_3585fc7103b05336a7960d9f34033eca_v3_0_0').validate(obj.response)
     return True
 
 
@@ -330,7 +330,7 @@ def is_valid_create_scheduled_config_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_dd4581dd32f65e8c83cca2f0a97af3e2_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2b994e6c8b8d53f29230686824c9fafa_v3_0_0').validate(obj.response)
     return True
 
 

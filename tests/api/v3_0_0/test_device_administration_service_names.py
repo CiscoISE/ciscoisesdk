@@ -36,7 +36,7 @@ def is_valid_get_device_admin_service_names(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_36e8018e15b053f39046b5bec0243d3f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_8ea7e01261355dcfae6412e0615ba1f5_v3_0_0').validate(obj.response)
     return True
 
 

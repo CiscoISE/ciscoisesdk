@@ -121,7 +121,7 @@ class DeviceAdministrationConditions(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/device-admin/condition')
+        e_url = ('/api/v1/policy/device-admin/condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -129,7 +129,7 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fdfa9b301f925a34a848f29f223e5b8d_v3_0_0', _api_response)
+        return self._object_factory('bpm_feb825519f98bd1541ef3c367d_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -360,10 +360,10 @@ class DeviceAdministrationConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b84dbd77c49f5056b9bf3c1e496ebe5f_v3_0_0')\
+            self._request_validator('jsd_abc25887a5daab1216195e08cbd49_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/condition')
+        e_url = ('/api/v1/policy/device-admin/condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -375,7 +375,7 @@ class DeviceAdministrationConditions(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_b84dbd77c49f5056b9bf3c1e496ebe5f_v3_0_0', _api_response)
+        return self._object_factory('bpm_abc25887a5daab1216195e08cbd49_v3_0_0', _api_response)
 
     def create(self,
                attribute_value=None,
@@ -475,7 +475,7 @@ class DeviceAdministrationConditions(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/device-admin/condition/authentication')
+        e_url = ('/api/v1/policy/device-admin/condition/authentication')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -483,7 +483,7 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dcb2ca563999b2d3691e1def79_v3_0_0', _api_response)
+        return self._object_factory('bpm_f1b8eaf23e795f1a8525eb5905187aa9_v3_0_0', _api_response)
 
     def get_device_admin_conditions_for_authorization_rule(self,
                                                            headers=None,
@@ -533,7 +533,7 @@ class DeviceAdministrationConditions(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/device-admin/condition/authorization')
+        e_url = ('/api/v1/policy/device-admin/condition/authorization')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -541,7 +541,7 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e67076b912ef5362949be22842642596_v3_0_0', _api_response)
+        return self._object_factory('bpm_ecff2eb67fe5591f8d9026f928a0d8aa_v3_0_0', _api_response)
 
     def get_device_admin_condition_by_condition_name(self,
                                                      name,
@@ -595,7 +595,7 @@ class DeviceAdministrationConditions(object):
             'name': name,
         }
 
-        e_url = ('/v1/policy/device-admin/condition/condition-by-'
+        e_url = ('/api/v1/policy/device-admin/condition/condition-by-'
                  + 'name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
@@ -604,7 +604,7 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dca887341a85881abd996fb46d39272_v3_0_0', _api_response)
+        return self._object_factory('bpm_a47bbc05a3e056fcad73f2cb5b894dae_v3_0_0', _api_response)
 
     def get_by_name(self,
                     name,
@@ -841,10 +841,10 @@ class DeviceAdministrationConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e3e7b0bc717508a979ccac3b986792d_v3_0_0')\
+            self._request_validator('jsd_d17bf558051575aba9f7435c7fcbe05_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/condition/condition-by-'
+        e_url = ('/api/v1/policy/device-admin/condition/condition-by-'
                  + 'name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
@@ -858,7 +858,7 @@ class DeviceAdministrationConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_e3e7b0bc717508a979ccac3b986792d_v3_0_0', _api_response)
+        return self._object_factory('bpm_d17bf558051575aba9f7435c7fcbe05_v3_0_0', _api_response)
 
     def update_by_name(self,
                        name,
@@ -962,7 +962,7 @@ class DeviceAdministrationConditions(object):
             'name': name,
         }
 
-        e_url = ('/v1/policy/device-admin/condition/condition-by-'
+        e_url = ('/api/v1/policy/device-admin/condition/condition-by-'
                  + 'name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
@@ -971,7 +971,7 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a2afb4b40b450e7ad69d78fc92ad00f_v3_0_0', _api_response)
+        return self._object_factory('bpm_ea7a58e36047592d8f37a4ec4e15701d_v3_0_0', _api_response)
 
     def delete_by_name(self,
                        name,
@@ -1034,7 +1034,7 @@ class DeviceAdministrationConditions(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/device-admin/condition/policyset')
+        e_url = ('/api/v1/policy/device-admin/condition/policyset')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -1042,7 +1042,7 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b404b307a35c2d9438da695bb49c54_v3_0_0', _api_response)
+        return self._object_factory('bpm_a40f9e169a95d6dbf3ebbb020291007_v3_0_0', _api_response)
 
     def get_device_admin_condition_by_condition_id(self,
                                                    id,
@@ -1096,7 +1096,7 @@ class DeviceAdministrationConditions(object):
             'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -1104,7 +1104,7 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a451c9de4d5f86add6829e064d1cdf_v3_0_0', _api_response)
+        return self._object_factory('bpm_dec8e9d819b5bc088e351b69efd0369_v3_0_0', _api_response)
 
     def get_by_id(self,
                   id,
@@ -1341,10 +1341,10 @@ class DeviceAdministrationConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_a9f304a4ec54afa6e3484978aacbbb_v3_0_0')\
+            self._request_validator('jsd_ed5bf99062d5dee87fe5cd96e360ec2_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1357,7 +1357,7 @@ class DeviceAdministrationConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_a9f304a4ec54afa6e3484978aacbbb_v3_0_0', _api_response)
+        return self._object_factory('bpm_ed5bf99062d5dee87fe5cd96e360ec2_v3_0_0', _api_response)
 
     def update_by_id(self,
                      id,
@@ -1461,7 +1461,7 @@ class DeviceAdministrationConditions(object):
             'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -1469,7 +1469,7 @@ class DeviceAdministrationConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f327ba525e5d76b6166d80a58ddd34_v3_0_0', _api_response)
+        return self._object_factory('bpm_ea5b356b4bc053068a0052b6c807d286_v3_0_0', _api_response)
 
     def delete_by_id(self,
                      id,

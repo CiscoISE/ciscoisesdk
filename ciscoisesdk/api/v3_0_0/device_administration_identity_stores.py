@@ -122,7 +122,7 @@ class DeviceAdministrationIdentityStores(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/device-admin/identity-stores')
+        e_url = ('/api/v1/policy/device-admin/identity-stores')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -130,7 +130,7 @@ class DeviceAdministrationIdentityStores(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ae7d98a7b185837af8d15ae864616e0_v3_0_0', _api_response)
+        return self._object_factory('bpm_ce65f2bd375be1ba41a7d6f02ad7b6_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,

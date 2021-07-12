@@ -120,7 +120,7 @@ class Repository(object):
         path_params = {
         }
 
-        e_url = ('/v1/repository')
+        e_url = ('/api/v1/repository')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -128,7 +128,7 @@ class Repository(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a83213678e6b58528986f1219d9f12ce_v3_0_0', _api_response)
+        return self._object_factory('bpm_f9081a48e3c5f4fae5aa00f889216dd_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -251,10 +251,10 @@ class Repository(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_edcb0e8c6b54709d4d61ea23b45f84_v3_0_0')\
+            self._request_validator('jsd_a207a157244508c99bf3e9abb26aab8_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/repository')
+        e_url = ('/api/v1/repository')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -266,7 +266,7 @@ class Repository(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_edcb0e8c6b54709d4d61ea23b45f84_v3_0_0', _api_response)
+        return self._object_factory('bpm_a207a157244508c99bf3e9abb26aab8_v3_0_0', _api_response)
 
     def create(self,
                enable_pki=None,
@@ -350,7 +350,7 @@ class Repository(object):
             'name': name,
         }
 
-        e_url = ('/v1/repository/{name}')
+        e_url = ('/api/v1/repository/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -358,7 +358,7 @@ class Repository(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a79dc5595ac51d1970b8d53498d3c32_v3_0_0', _api_response)
+        return self._object_factory('bpm_c785067a5a5e3283f96dd5006c7865_v3_0_0', _api_response)
 
     def get_by_name(self,
                     name,
@@ -488,10 +488,10 @@ class Repository(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ad8eb56595e86c4300607ec4dd3_v3_0_0')\
+            self._request_validator('jsd_e380a5c1d585ab9012874ca959982_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/repository/{name}')
+        e_url = ('/api/v1/repository/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -504,7 +504,7 @@ class Repository(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_ad8eb56595e86c4300607ec4dd3_v3_0_0', _api_response)
+        return self._object_factory('bpm_e380a5c1d585ab9012874ca959982_v3_0_0', _api_response)
 
     def update_by_name(self,
                        name,
@@ -587,7 +587,7 @@ class Repository(object):
             'name': name,
         }
 
-        e_url = ('/v1/repository/{name}')
+        e_url = ('/api/v1/repository/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -595,7 +595,7 @@ class Repository(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d3b49f09d7f954bdb6f413e1785a05d7_v3_0_0', _api_response)
+        return self._object_factory('bpm_c3a2e8960455547da94117ef465db97f_v3_0_0', _api_response)
 
     def delete_by_name(self,
                        name,
@@ -663,7 +663,7 @@ class Repository(object):
             'name': name,
         }
 
-        e_url = ('/v1/repository/{name}/files')
+        e_url = ('/api/v1/repository/{name}/files')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -671,7 +671,7 @@ class Repository(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fc645a4297f55557af8d398f07f6d0a0_v3_0_0', _api_response)
+        return self._object_factory('bpm_c9dea644f40453fead2b003b06c4c52b_v3_0_0', _api_response)
 
     def get_files(self,
                   name,

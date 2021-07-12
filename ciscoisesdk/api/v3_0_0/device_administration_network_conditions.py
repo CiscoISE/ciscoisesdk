@@ -121,7 +121,7 @@ class DeviceAdministrationNetworkConditions(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/device-admin/network-condition')
+        e_url = ('/api/v1/policy/device-admin/network-condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -129,7 +129,7 @@ class DeviceAdministrationNetworkConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_bda58fc63575503b80c024dbe02cf547_v3_0_0', _api_response)
+        return self._object_factory('bpm_b4ceac9ee830523ca5ddbfdf3e1b44be_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -283,10 +283,10 @@ class DeviceAdministrationNetworkConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ea4e38c44e5b1c90b19af25b88546e_v3_0_0')\
+            self._request_validator('jsd_b95cf8c9aed95518b38be1fa4b514b67_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/network-condition')
+        e_url = ('/api/v1/policy/device-admin/network-condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -298,7 +298,7 @@ class DeviceAdministrationNetworkConditions(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_ea4e38c44e5b1c90b19af25b88546e_v3_0_0', _api_response)
+        return self._object_factory('bpm_b95cf8c9aed95518b38be1fa4b514b67_v3_0_0', _api_response)
 
     def create(self,
                cli_dnis_list=None,
@@ -388,7 +388,7 @@ class DeviceAdministrationNetworkConditions(object):
             'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/network-condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -396,7 +396,7 @@ class DeviceAdministrationNetworkConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e81a05d1f5cb5ba7bcc2351c0bfd6_v3_0_0', _api_response)
+        return self._object_factory('bpm_e9cc593c395c48b31b30149467c846_v3_0_0', _api_response)
 
     def get_by_id(self,
                   id,
@@ -556,10 +556,10 @@ class DeviceAdministrationNetworkConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_cd32d094f1815c388d1392bb90f3744d_v3_0_0')\
+            self._request_validator('jsd_f78898b7d655b2b81085dc7c0a964e_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/network-condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -572,7 +572,7 @@ class DeviceAdministrationNetworkConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_cd32d094f1815c388d1392bb90f3744d_v3_0_0', _api_response)
+        return self._object_factory('bpm_f78898b7d655b2b81085dc7c0a964e_v3_0_0', _api_response)
 
     def update_by_id(self,
                      id,
@@ -662,7 +662,7 @@ class DeviceAdministrationNetworkConditions(object):
             'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/network-condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/network-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -670,7 +670,7 @@ class DeviceAdministrationNetworkConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ac9ced821bc2503fa0d22badea9834ad_v3_0_0', _api_response)
+        return self._object_factory('bpm_c0b4d1bbda75355912f208521362a41_v3_0_0', _api_response)
 
     def delete_by_id(self,
                      id,

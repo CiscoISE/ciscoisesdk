@@ -36,7 +36,7 @@ def is_valid_get_network_access_policy_set_list(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_229b904117c35daf8833398c262c403d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ed1ef503c091506aa8e446182e625365_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_create_network_access_policy_set(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_42e1af4e392c5790a01685b9687208c0_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9dfe1db8729d541fb3a17d31d47d1881_v3_0_0').validate(obj.response)
     return True
 
 
@@ -160,7 +160,7 @@ def is_valid_reset_hit_counts_network_access_policy_sets(json_schema_validate, o
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_678aef73e11e56edb468869d663b5e85_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_71fb6c1b3f335dbf8176a29e30eb6333_v3_0_0').validate(obj.response)
     return True
 
 
@@ -212,7 +212,7 @@ def is_valid_get_network_access_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1fb3b6363bad54678ae56dc699e8c7e8_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_91b58a72c9ff567896a15555ecc9564f_v3_0_0').validate(obj.response)
     return True
 
 
@@ -262,7 +262,7 @@ def is_valid_update_network_access_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_4068064fa27e5a779143ed557b417535_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d5e00a8e6aa0577ea81e11e796912053_v3_0_0').validate(obj.response)
     return True
 
 
@@ -338,7 +338,7 @@ def is_valid_delete_network_access_policy_set_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c1d0c2c01a5856fa8be5af8e2b07e420_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f5175ff711535ff2b1b85a3a4525e886_v3_0_0').validate(obj.response)
     return True
 
 

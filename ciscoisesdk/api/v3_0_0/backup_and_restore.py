@@ -166,10 +166,10 @@ class BackupAndRestore(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_b9638a67f60d5a6aa476af13632d96bd_v3_0_0')\
+            self._request_validator('jsd_db1d9dda53369e35d33138b29c16_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/backup-restore/config/backup')
+        e_url = ('/api/v1/backup-restore/config/backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -181,7 +181,7 @@ class BackupAndRestore(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_b9638a67f60d5a6aa476af13632d96bd_v3_0_0', _api_response)
+        return self._object_factory('bpm_db1d9dda53369e35d33138b29c16_v3_0_0', _api_response)
 
     def config(self,
                backup_encryption_key=None,
@@ -250,7 +250,7 @@ class BackupAndRestore(object):
         path_params = {
         }
 
-        e_url = ('/v1/backup-restore/config/cancel-backup')
+        e_url = ('/api/v1/backup-restore/config/cancel-backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         if with_custom_headers:
@@ -259,7 +259,7 @@ class BackupAndRestore(object):
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e9813ff50a9bcbbd5d539ed19d8_v3_0_0', _api_response)
+        return self._object_factory('bpm_e155669bc74586e9ef2580ec5752902_v3_0_0', _api_response)
 
     def cancel(self,
                headers=None,
@@ -318,7 +318,7 @@ class BackupAndRestore(object):
         path_params = {
         }
 
-        e_url = ('/v1/backup-restore/config/last-backup-status')
+        e_url = ('/api/v1/backup-restore/config/last-backup-status')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -326,7 +326,7 @@ class BackupAndRestore(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b0b71a5f25825202b6cb339ce1a5a8d4_v3_0_0', _api_response)
+        return self._object_factory('bpm_d388e26255a15233ac682c0406880cfb_v3_0_0', _api_response)
 
     def get_last_status(self,
                         headers=None,
@@ -430,10 +430,10 @@ class BackupAndRestore(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_db3505847b4e5f37a5c74bc41df54be3_v3_0_0')\
+            self._request_validator('jsd_b8319a8b5d195348a8763acd95ca2967_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/backup-restore/config/restore')
+        e_url = ('/api/v1/backup-restore/config/restore')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -445,7 +445,7 @@ class BackupAndRestore(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_db3505847b4e5f37a5c74bc41df54be3_v3_0_0', _api_response)
+        return self._object_factory('bpm_b8319a8b5d195348a8763acd95ca2967_v3_0_0', _api_response)
 
     def restore(self,
                 backup_encryption_key=None,
@@ -620,10 +620,10 @@ class BackupAndRestore(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_d31fa60f5575a2ed23cee473c0fc_v3_0_0')\
+            self._request_validator('jsd_fc7103b05336a7960d9f34033eca_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/backup-restore/config/schedule-config-backup')
+        e_url = ('/api/v1/backup-restore/config/schedule-config-backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -636,7 +636,7 @@ class BackupAndRestore(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_d31fa60f5575a2ed23cee473c0fc_v3_0_0', _api_response)
+        return self._object_factory('bpm_fc7103b05336a7960d9f34033eca_v3_0_0', _api_response)
 
     def update(self,
                backup_description=None,
@@ -825,10 +825,10 @@ class BackupAndRestore(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_dd4581dd32f65e8c83cca2f0a97af3e2_v3_0_0')\
+            self._request_validator('jsd_b994e6c8b8d53f29230686824c9fafa_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/backup-restore/config/schedule-config-backup')
+        e_url = ('/api/v1/backup-restore/config/schedule-config-backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -840,7 +840,7 @@ class BackupAndRestore(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_dd4581dd32f65e8c83cca2f0a97af3e2_v3_0_0', _api_response)
+        return self._object_factory('bpm_b994e6c8b8d53f29230686824c9fafa_v3_0_0', _api_response)
 
     def create(self,
                backup_description=None,

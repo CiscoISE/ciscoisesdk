@@ -36,7 +36,7 @@ def is_valid_get_device_admin_network_conditions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bda58fc63575503b80c024dbe02cf547_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b4ceac9ee830523ca5ddbfdf3e1b44be_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_post_device_admin_network_condition(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_83ea4e38c44e5b1c90b19af25b88546e_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b95cf8c9aed95518b38be1fa4b514b67_v3_0_0').validate(obj.response)
     return True
 
 
@@ -158,7 +158,7 @@ def is_valid_get_device_admin_network_condition_by_condition_id(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_240e81a05d1f5cb5ba7bcc2351c0bfd6_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_33e9cc593c395c48b31b30149467c846_v3_0_0').validate(obj.response)
     return True
 
 
@@ -208,7 +208,7 @@ def is_valid_put_device_admin_network_condition_by_condition_id(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_cd32d094f1815c388d1392bb90f3744d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_23f78898b7d655b2b81085dc7c0a964e_v3_0_0').validate(obj.response)
     return True
 
 
@@ -280,7 +280,7 @@ def is_valid_delete_device_admin_network_condition_by_condition_id(json_schema_v
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ac9ced821bc2503fa0d22badea9834ad_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_7c0b4d1bbda75355912f208521362a41_v3_0_0').validate(obj.response)
     return True
 
 

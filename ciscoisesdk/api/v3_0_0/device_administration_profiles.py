@@ -122,7 +122,7 @@ class DeviceAdministrationProfiles(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/device-admin/profiles')
+        e_url = ('/api/v1/policy/device-admin/profiles')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -130,7 +130,7 @@ class DeviceAdministrationProfiles(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ca669963ed0563e96bb009bf14a417b_v3_0_0', _api_response)
+        return self._object_factory('bpm_fde0cbd2de50f680d0b0f681771829_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,

@@ -127,7 +127,7 @@ class DeviceAdministrationAuthenticationRules(object):
             'policyId': policy_id,
         }
 
-        e_url = ('/v1/policy/device-admin/policy-'
+        e_url = ('/api/v1/policy/device-admin/policy-'
                  + 'set/{policyId}/authentication')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
@@ -136,7 +136,7 @@ class DeviceAdministrationAuthenticationRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e8bd869250105a2ba30dd2cb65b0b3f2_v3_0_0', _api_response)
+        return self._object_factory('bpm_b9e8541f25c4ea29944f659f68994_v3_0_0', _api_response)
 
     def get_all(self,
                 policy_id,
@@ -258,10 +258,10 @@ class DeviceAdministrationAuthenticationRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e92c5af5344b4d9fdc45a282ce5_v3_0_0')\
+            self._request_validator('jsd_f1ff2b82953f5131884f0779db37190c_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/policy-'
+        e_url = ('/api/v1/policy/device-admin/policy-'
                  + 'set/{policyId}/authentication')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
@@ -274,7 +274,7 @@ class DeviceAdministrationAuthenticationRules(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_e92c5af5344b4d9fdc45a282ce5_v3_0_0', _api_response)
+        return self._object_factory('bpm_f1ff2b82953f5131884f0779db37190c_v3_0_0', _api_response)
 
     def create(self,
                policy_id,
@@ -359,7 +359,7 @@ class DeviceAdministrationAuthenticationRules(object):
             'policyId': policy_id,
         }
 
-        e_url = ('/v1/policy/device-admin/policy-'
+        e_url = ('/api/v1/policy/device-admin/policy-'
                  + 'set/{policyId}/authentication/reset-hitcount')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
@@ -369,7 +369,7 @@ class DeviceAdministrationAuthenticationRules(object):
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a1a3596305814bab0a6d05cf86280_v3_0_0', _api_response)
+        return self._object_factory('bpm_dd2d3e1f258252579386f21705613d26_v3_0_0', _api_response)
 
     def reset_hit_counts_by_id(self,
                                policy_id,
@@ -443,7 +443,7 @@ class DeviceAdministrationAuthenticationRules(object):
             'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/policy-'
+        e_url = ('/api/v1/policy/device-admin/policy-'
                  + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
@@ -452,7 +452,7 @@ class DeviceAdministrationAuthenticationRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_cdab0d4e5bf56b68624029a9cdad13e_v3_0_0', _api_response)
+        return self._object_factory('bpm_a160f293375ae9924d8240c4efdc6a_v3_0_0', _api_response)
 
     def get_by_id(self,
                   id,
@@ -581,10 +581,10 @@ class DeviceAdministrationAuthenticationRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_fe40d457cbdb5794a5ed2808469ed2e2_v3_0_0')\
+            self._request_validator('jsd_ca61ff725fedb94fba602d7afe46_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/v1/policy/device-admin/policy-'
+        e_url = ('/api/v1/policy/device-admin/policy-'
                  + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
@@ -598,7 +598,7 @@ class DeviceAdministrationAuthenticationRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_fe40d457cbdb5794a5ed2808469ed2e2_v3_0_0', _api_response)
+        return self._object_factory('bpm_ca61ff725fedb94fba602d7afe46_v3_0_0', _api_response)
 
     def update_by_id(self,
                      id,
@@ -690,7 +690,7 @@ class DeviceAdministrationAuthenticationRules(object):
             'id': id,
         }
 
-        e_url = ('/v1/policy/device-admin/policy-'
+        e_url = ('/api/v1/policy/device-admin/policy-'
                  + 'set/{policyId}/authentication/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
@@ -699,7 +699,7 @@ class DeviceAdministrationAuthenticationRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f3569aca419588999d58eac5fe2a120_v3_0_0', _api_response)
+        return self._object_factory('bpm_a9f1f24542dbd244e31691a2e09_v3_0_0', _api_response)
 
     def delete_by_id(self,
                      id,

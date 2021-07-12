@@ -36,7 +36,7 @@ def is_valid_get_network_access_service_names(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ca8f50a31b325fd281ae7f7b69f31d3f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_8304c137cad852579f4b810ff8adf661_v3_0_0').validate(obj.response)
     return True
 
 

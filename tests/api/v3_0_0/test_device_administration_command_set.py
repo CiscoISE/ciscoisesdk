@@ -36,7 +36,7 @@ def is_valid_get_device_admin_command_sets(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_273e0977618453b1b00e1c2b4cfa1999_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_717e68f07767522ba1e49dc474e936d2_v3_0_0').validate(obj.response)
     return True
 
 

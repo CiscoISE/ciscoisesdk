@@ -123,7 +123,7 @@ class NetworkAccessIdentityStores(object):
         path_params = {
         }
 
-        e_url = ('/v1/policy/network-access/identity-stores')
+        e_url = ('/api/v1/policy/network-access/identity-stores')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -131,7 +131,7 @@ class NetworkAccessIdentityStores(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ef75d8c1654508aae4fc2ee9b34fabc_v3_0_0', _api_response)
+        return self._object_factory('bpm_c7aa2a6cac155a6cb7ace3fd76a81e0f_v3_0_0', _api_response)
 
     def get_all(self,
                 headers=None,

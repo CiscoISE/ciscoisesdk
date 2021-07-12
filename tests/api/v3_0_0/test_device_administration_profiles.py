@@ -36,7 +36,7 @@ def is_valid_get_device_admin_profiles(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8ca669963ed0563e96bb009bf14a417b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_02fde0cbd2de50f680d0b0f681771829_v3_0_0').validate(obj.response)
     return True
 
 

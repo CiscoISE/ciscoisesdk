@@ -36,7 +36,7 @@ def is_valid_get_device_admin_dictionaries_authentication(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_7f1ff6e8bb2d5c7fbcf39fbadf5da2d5_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b09ea91f72885e05b6aa73e89546f969_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_get_device_admin_dictionaries_authorization(json_schema_validate, o
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6e2f955f29ce511993a189f2d234048d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_fc9ecf1e469154ae845236dbed070904_v3_0_0').validate(obj.response)
     return True
 
 
@@ -136,7 +136,7 @@ def is_valid_get_device_admin_dictionaries_policyset(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_892e064032895c8098927d3a39ef6af2_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_149c8aec23a55399a175acf105dbe1c2_v3_0_0').validate(obj.response)
     return True
 
 

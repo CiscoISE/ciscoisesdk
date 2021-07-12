@@ -36,7 +36,7 @@ def is_valid_get_device_admin_policy_by_id_local_exception_rule_list(json_schema
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0eb446266e3d54f4a657050d4f9b0bf9_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_bba3187f0be4563aa8b6ff5931a123e7_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_create_device_admin_policy_by_id_local_exception_rule(json_schema_v
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c730e85640aa5a59bc0e0fd95dacf889_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_12905ebcdc835e9b8d6844c1da6cf252_v3_0_0').validate(obj.response)
     return True
 
 
@@ -148,7 +148,7 @@ def is_valid_reset_hit_counts_device_admin_policy_by_id_local_exceptions(json_sc
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2dde23cf27e65a60a949d8f1f599b3d2_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f9452f1ecd64528ba7a4a99295bb715c_v3_0_0').validate(obj.response)
     return True
 
 
@@ -202,7 +202,7 @@ def is_valid_get_device_admin_policy_by_id_local_exception_rule_by_id(json_schem
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e608505e4a1250808bb68dc86d8a51ea_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d8e470a4ef6a58b3b21f9adbbdcc7a46_v3_0_0').validate(obj.response)
     return True
 
 
@@ -254,7 +254,7 @@ def is_valid_update_device_admin_policy_by_id_local_exception_rule_by_id(json_sc
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1b84eb28aeb55ab7af7469c854ca1814_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_a87d60d590485830aed781bfb15b5c95_v3_0_0').validate(obj.response)
     return True
 
 
@@ -318,7 +318,7 @@ def is_valid_delete_device_admin_policy_by_id_local_exception_rule_by_id(json_sc
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_4f318129029b5bec8761e56304824c77_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_20c7d6bb4abf53f6aa2f40b6986f58a9_v3_0_0').validate(obj.response)
     return True
 
 

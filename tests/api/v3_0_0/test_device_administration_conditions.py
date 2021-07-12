@@ -36,7 +36,7 @@ def is_valid_get_device_admin_conditions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_fdfa9b301f925a34a848f29f223e5b8d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_564635feb825519f98bd1541ef3c367d_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_post_device_admin_condition(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b84dbd77c49f5056b9bf3c1e496ebe5f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_599abc25887a5daab1216195e08cbd49_v3_0_0').validate(obj.response)
     return True
 
 
@@ -172,7 +172,7 @@ def is_valid_get_device_admin_conditions_for_authentication_rule(json_schema_val
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_316863dcb2ca563999b2d3691e1def79_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f1b8eaf23e795f1a8525eb5905187aa9_v3_0_0').validate(obj.response)
     return True
 
 
@@ -222,7 +222,7 @@ def is_valid_get_device_admin_conditions_for_authorization_rule(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e67076b912ef5362949be22842642596_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ecff2eb67fe5591f8d9026f928a0d8aa_v3_0_0').validate(obj.response)
     return True
 
 
@@ -272,7 +272,7 @@ def is_valid_get_device_admin_condition_by_condition_name(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_4dca887341a85881abd996fb46d39272_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_a47bbc05a3e056fcad73f2cb5b894dae_v3_0_0').validate(obj.response)
     return True
 
 
@@ -322,7 +322,7 @@ def is_valid_put_device_admin_condition_by_condition_name(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0e3e7b0bc717508a979ccac3b986792d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1d17bf558051575aba9f7435c7fcbe05_v3_0_0').validate(obj.response)
     return True
 
 
@@ -408,7 +408,7 @@ def is_valid_delete_device_admin_condition_by_condition_name(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_5a2afb4b40b450e7ad69d78fc92ad00f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ea7a58e36047592d8f37a4ec4e15701d_v3_0_0').validate(obj.response)
     return True
 
 
@@ -458,7 +458,7 @@ def is_valid_get_device_admin_conditions_for_policy_set(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_68b404b307a35c2d9438da695bb49c54_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2a40f9e169a95d6dbf3ebbb020291007_v3_0_0').validate(obj.response)
     return True
 
 
@@ -508,7 +508,7 @@ def is_valid_get_device_admin_condition_by_condition_id(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_55a451c9de4d5f86add6829e064d1cdf_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_5dec8e9d819b5bc088e351b69efd0369_v3_0_0').validate(obj.response)
     return True
 
 
@@ -558,7 +558,7 @@ def is_valid_put_device_admin_condition_by_condition_id(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_46a9f304a4ec54afa6e3484978aacbbb_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9ed5bf99062d5dee87fe5cd96e360ec2_v3_0_0').validate(obj.response)
     return True
 
 
@@ -644,7 +644,7 @@ def is_valid_delete_device_admin_condition_by_condition_id(json_schema_validate,
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_55f327ba525e5d76b6166d80a58ddd34_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ea5b356b4bc053068a0052b6c807d286_v3_0_0').validate(obj.response)
     return True
 
 
