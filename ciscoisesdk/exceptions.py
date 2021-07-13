@@ -34,6 +34,7 @@ import logging
 from builtins import *
 
 import requests
+import xmltodict
 
 from .response_codes import RESPONSE_CODES
 
@@ -127,7 +128,6 @@ class ApiError(ciscoisesdkException):
 
         self.details_str = ""
         """The text from the API response."""
-
         self.details = None
         """The parsed JSON details from the API response."""
         if "application/json" in \
@@ -140,20 +140,17 @@ class ApiError(ciscoisesdkException):
         if "application/xml" in \
                 self.response.headers.get("Content-Type", "").lower():
             try:
-                # TODO: Convert later
-                self.details = self.response.text
-                self.details_str = self.response.text
+                self.details = xmltodict.parse(self.response.text)
+                self.details_str = xmltodict.parse(self.response.text)['mnt-rest-result']['internal-error-info']
             except ValueError:
                 logger.warning("Error parsing JSON response body")
-
         self.message = self.details.get("message") or\
-            self.details.get("response", {}).get("message")\
+            self.details.get("response", {}).get("message") or self.details['mnt-rest-result']['description']\
             if self.details else None
         """The error message from the parsed API response."""
 
         self.description = RESPONSE_CODES.get(self.status_code)
         """A description of the HTTP Response Code from the API docs."""
-
         super(ApiError, self).__init__(
             "[{status_code}]{status} - {message}{details}".format(
                 status_code=self.status_code,
