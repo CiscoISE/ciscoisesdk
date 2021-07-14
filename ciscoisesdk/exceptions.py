@@ -152,6 +152,7 @@ class ApiError(ciscoisesdkException):
 
         self.description = RESPONSE_CODES.get(self.status_code)
         """A description of the HTTP Response Code from the API docs."""
+
         super(ApiError, self).__init__(
             "[{status_code}]{status} - {message}{details}".format(
                 status_code=self.status_code,
