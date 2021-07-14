@@ -145,7 +145,8 @@ class ApiError(ciscoisesdkException):
             except ValueError:
                 logger.warning("Error parsing JSON response body")
         self.message = self.details.get("message") or\
-            self.details.get("response", {}).get("message") or self.details['mnt-rest-result']['description']\
+            self.details.get("response", {}).get("message") or\
+            self.details.get("mnt-rest-result", {}).get("description")\
             if self.details else None
         """The error message from the parsed API response."""
 
