@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getRestIdStoreByName data model.
+"""Identity Services Engine updateRestIdStoreByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,67 +37,38 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorA5F22FC961547F93976A53949Cac73(object):
-    """getRestIdStoreByName request schema definition."""
+class JSONSchemaValidatorD0E432F52E2A5863858C7Dc0C3Eda277(object):
+    """updateRestIdStoreByName request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorA5F22FC961547F93976A53949Cac73, self).__init__()
+        super(JSONSchemaValidatorD0E432F52E2A5863858C7Dc0C3Eda277, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "ERSRestIDStore": {
+                "UpdatedFieldsList": {
                 "properties": {
-                "description":
-                 {
+                "field": {
                 "type": "string"
                 },
-                "ersRestIDStoreAttributes": {
-                "properties": {
-                "headers": {
-                "items": {
-                "properties": {
-                "key": {
+                "newValue": {
                 "type": "string"
                 },
-                "value": {
+                "oldValue": {
+                "type": "string"
+                },
+                "updatedField": {
+                "properties": {
+                "field": {
+                "type": "string"
+                },
+                "newValue": {
+                "type": "string"
+                },
+                "oldValue": {
                 "type": "string"
                 }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "predefined": {
-                "type": "string"
-                },
-                "rootUrl": {
-                "type": "string"
-                },
-                "usernameSuffix": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "id": {
-                "type": "string"
-                },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "name": {
-                "type": "string"
                 }
                 },
                 "type": "object"

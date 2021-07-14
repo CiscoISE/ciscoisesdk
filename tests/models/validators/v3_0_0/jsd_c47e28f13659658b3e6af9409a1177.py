@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateRestIdStoreByName data model.
+"""Identity Services Engine getRestIdStoreByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,10 +37,10 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorC85464A04F0E5Ddc99F8E6B8Ed0F7Eac(object):
-    """updateRestIdStoreByName request schema definition."""
+class JSONSchemaValidatorC47E28F13659658B3E6Af9409A1177(object):
+    """getRestIdStoreByName request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorC85464A04F0E5Ddc99F8E6B8Ed0F7Eac, self).__init__()
+        super(JSONSchemaValidatorC47E28F13659658B3E6Af9409A1177, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -81,6 +81,20 @@ class JSONSchemaValidatorC85464A04F0E5Ddc99F8E6B8Ed0F7Eac(object):
                 },
                 "id": {
                 "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "name": {
                 "type": "string"

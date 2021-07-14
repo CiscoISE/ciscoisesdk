@@ -136,7 +136,7 @@ class PxGridNode(object):
             'name': name,
         }
 
-        e_url = ('/ers/config/ers/config/pxgridnode/name/{name}/approve')
+        e_url = ('/ers/config/pxgridnode/name/{name}/approve')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         if with_custom_headers:
@@ -145,7 +145,7 @@ class PxGridNode(object):
         else:
             _api_response = self._session.put(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a2a7f23f85105113954c87a917b7455f_v3_0_0', _api_response)
+        return self._object_factory('bpm_f47d656ed0805859a85e5cc082c78dcf_v3_0_0', _api_response)
 
     def approve(self,
                 name,

@@ -135,7 +135,7 @@ class RestidStore(object):
             'name': name,
         }
 
-        e_url = ('/ers/config/ers/config/restidstore/name/{name}')
+        e_url = ('/ers/config/restidstore/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -143,7 +143,7 @@ class RestidStore(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a5f22fc961547f93976a53949cac73_v3_0_0', _api_response)
+        return self._object_factory('bpm_c47e28f13659658b3e6af9409a1177_v3_0_0', _api_response)
 
     def get_by_name(self,
                     name,
@@ -259,10 +259,10 @@ class RestidStore(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_c85464a04f0e5ddc99f8e6b8ed0f7eac_v3_0_0')\
+            self._request_validator('jsd_d0e432f52e2a5863858c7dc0c3eda277_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/ers/config/restidstore/name/{name}')
+        e_url = ('/ers/config/restidstore/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -275,7 +275,7 @@ class RestidStore(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_c85464a04f0e5ddc99f8e6b8ed0f7eac_v3_0_0', _api_response)
+        return self._object_factory('bpm_d0e432f52e2a5863858c7dc0c3eda277_v3_0_0', _api_response)
 
     def update_by_name(self,
                        name,
@@ -362,7 +362,7 @@ class RestidStore(object):
             'name': name,
         }
 
-        e_url = ('/ers/config/ers/config/restidstore/name/{name}')
+        e_url = ('/ers/config/restidstore/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -370,7 +370,7 @@ class RestidStore(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e068a8dc1ed65f8d9cdfa70a49f543e0_v3_0_0', _api_response)
+        return self._object_factory('bpm_fe53fb8359725e40ac431d41e1487626_v3_0_0', _api_response)
 
     def delete_by_name(self,
                        name,

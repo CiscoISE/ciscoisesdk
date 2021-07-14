@@ -36,7 +36,7 @@ def is_valid_update_guest_type_email(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_01c7aed7320e54bfac29f13c8717a6b5_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_cf310e621a395bb7bac7b90d7d4c8603_v3_0_0').validate(obj.response)
     return True
 
 
@@ -92,7 +92,7 @@ def is_valid_update_guest_type_sms(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f9661f7c85c2570897cffc3d02668263_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0493eb42e79d5cc38bd1a6eef20613d6_v3_0_0').validate(obj.response)
     return True
 
 

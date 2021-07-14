@@ -36,7 +36,7 @@ def is_valid_get_rest_id_store_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_17a5f22fc961547f93976a53949cac73_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_48c47e28f13659658b3e6af9409a1177_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_update_rest_id_store_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c85464a04f0e5ddc99f8e6b8ed0f7eac_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d0e432f52e2a5863858c7dc0c3eda277_v3_0_0').validate(obj.response)
     return True
 
 
@@ -146,7 +146,7 @@ def is_valid_delete_rest_id_store_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e068a8dc1ed65f8d9cdfa70a49f543e0_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_fe53fb8359725e40ac431d41e1487626_v3_0_0').validate(obj.response)
     return True
 
 

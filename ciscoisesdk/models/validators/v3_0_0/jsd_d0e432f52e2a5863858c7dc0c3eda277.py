@@ -37,38 +37,53 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorC85464A04F0E5Ddc99F8E6B8Ed0F7Eac(object):
+class JSONSchemaValidatorD0E432F52E2A5863858C7Dc0C3Eda277(object):
     """updateRestIdStoreByName request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorC85464A04F0E5Ddc99F8E6B8Ed0F7Eac, self).__init__()
+        super(JSONSchemaValidatorD0E432F52E2A5863858C7Dc0C3Eda277, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "UpdatedFieldsList": {
+                "ERSRestIDStore": {
                 "properties": {
-                "field": {
+                "description":
+                 {
                 "type": "string"
                 },
-                "newValue": {
-                "type": "string"
-                },
-                "oldValue": {
-                "type": "string"
-                },
-                "updatedField": {
+                "ersRestIDStoreAttributes": {
                 "properties": {
-                "field": {
+                "headers": {
+                "items": {
+                "properties": {
+                "key": {
                 "type": "string"
                 },
-                "newValue": {
-                "type": "string"
-                },
-                "oldValue": {
+                "value": {
                 "type": "string"
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
+                },
+                "predefined": {
+                "type": "string"
+                },
+                "rootUrl": {
+                "type": "string"
+                },
+                "usernameSuffix": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "id": {
+                "type": "string"
+                },
+                "name": {
+                "type": "string"
                 }
                 },
                 "type": "object"

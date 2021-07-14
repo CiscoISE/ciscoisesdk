@@ -36,7 +36,7 @@ def is_valid_approve_px_grid_node(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a2a7f23f85105113954c87a917b7455f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f47d656ed0805859a85e5cc082c78dcf_v3_0_0').validate(obj.response)
     return True
 
 

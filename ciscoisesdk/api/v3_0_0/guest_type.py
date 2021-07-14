@@ -161,10 +161,10 @@ class GuestType(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_c7aed7320e54bfac29f13c8717a6b5_v3_0_0')\
+            self._request_validator('jsd_cf310e621a395bb7bac7b90d7d4c8603_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/ers/config/guesttype/email/{id}')
+        e_url = ('/ers/config/guesttype/email/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -177,7 +177,7 @@ class GuestType(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_c7aed7320e54bfac29f13c8717a6b5_v3_0_0', _api_response)
+        return self._object_factory('bpm_cf310e621a395bb7bac7b90d7d4c8603_v3_0_0', _api_response)
 
     def update_email(self,
                      id,
@@ -286,10 +286,10 @@ class GuestType(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_f9661f7c85c2570897cffc3d02668263_v3_0_0')\
+            self._request_validator('jsd_eb42e79d5cc38bd1a6eef20613d6_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/ers/config/ers/config/guesttype/sms/{id}')
+        e_url = ('/ers/config/guesttype/sms/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -302,7 +302,7 @@ class GuestType(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_f9661f7c85c2570897cffc3d02668263_v3_0_0', _api_response)
+        return self._object_factory('bpm_eb42e79d5cc38bd1a6eef20613d6_v3_0_0', _api_response)
 
     def update_sms(self,
                    id,

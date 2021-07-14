@@ -63,7 +63,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_05c0bfee23f95034842993a83d77c4e4_PATTERN = re.compile(r"/ers/config/sessionservicenode/versioninfo")
     PULL_DEPLOYMENT_INFO_f9159c9f9a1951568daee7080e1dda47_PATTERN = re.compile(r"/ers/config/deploymentinfo/getAllInfo")
     PULL_DEPLOYMENT_INFO_8698cc09209259dcbde7c851b5a6eda6_PATTERN = re.compile(r"/ers/config/deploymentinfo/versioninfo")
-    PX_GRID_NODE_a2a7f23f85105113954c87a917b7455f_PATTERN = re.compile(r"/ers/config/ers/config/pxgridnode/name/string/approve")
+    PX_GRID_NODE_f47d656ed0805859a85e5cc082c78dcf_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string/approve")
     PX_GRID_NODE_111a9d109aac585a89bdd3fae400064b_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string")
     PX_GRID_NODE_849e718d5054593b94a2fef39461c24a_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string")
     PX_GRID_NODE_d24ade0b53405fbc898cb0cc1ea57fb8_PATTERN = re.compile(r"/ers/config/pxgridnode/string")
@@ -343,8 +343,8 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     GUEST_SSID_c37778a2faa5552894cc60cec13c56c7_PATTERN = re.compile(r"/ers/config/guestssid")
     GUEST_SSID_2a31eb33e3535754b3f754a9199e0d25_PATTERN = re.compile(r"/ers/config/guestssid")
     GUEST_SSID_b400ebaa2d1f51398d3b32e7a6e4ba35_PATTERN = re.compile(r"/ers/config/guestssid/versioninfo")
-    GUEST_TYPE_01c7aed7320e54bfac29f13c8717a6b5_PATTERN = re.compile(r"/ers/config/ers/config/guesttype/email/string")
-    GUEST_TYPE_f9661f7c85c2570897cffc3d02668263_PATTERN = re.compile(r"/ers/config/ers/config/guesttype/sms/string")
+    GUEST_TYPE_cf310e621a395bb7bac7b90d7d4c8603_PATTERN = re.compile(r"/ers/config/guesttype/email/string")
+    GUEST_TYPE_0493eb42e79d5cc38bd1a6eef20613d6_PATTERN = re.compile(r"/ers/config/guesttype/sms/string")
     GUEST_TYPE_4acb5a41fe395b158a3fe1cda996b0cf_PATTERN = re.compile(r"/ers/config/guesttype/string")
     GUEST_TYPE_bac6d4d95ac45a0a8933b8712dcbe70d_PATTERN = re.compile(r"/ers/config/guesttype/string")
     GUEST_TYPE_6faa7211d68e5b329034e17c82b78694_PATTERN = re.compile(r"/ers/config/guesttype/string")
@@ -475,9 +475,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     RADIUS_SERVER_SEQUENCE_c6c330dace185a548f70f4e5d67776ea_PATTERN = re.compile(r"/ers/config/radiusserversequence")
     RADIUS_SERVER_SEQUENCE_83ad6ca0642c5750af6ca9905721a9d7_PATTERN = re.compile(r"/ers/config/radiusserversequence")
     RADIUS_SERVER_SEQUENCE_8fb1a72ded19590fa0aa85fc59ea8cfc_PATTERN = re.compile(r"/ers/config/radiusserversequence/versioninfo")
-    RESTID_STORE_17a5f22fc961547f93976a53949cac73_PATTERN = re.compile(r"/ers/config/ers/config/restidstore/name/string")
-    RESTID_STORE_c85464a04f0e5ddc99f8e6b8ed0f7eac_PATTERN = re.compile(r"/ers/config/ers/config/restidstore/name/string")
-    RESTID_STORE_e068a8dc1ed65f8d9cdfa70a49f543e0_PATTERN = re.compile(r"/ers/config/ers/config/restidstore/name/string")
+    RESTID_STORE_48c47e28f13659658b3e6af9409a1177_PATTERN = re.compile(r"/ers/config/restidstore/name/string")
+    RESTID_STORE_d0e432f52e2a5863858c7dc0c3eda277_PATTERN = re.compile(r"/ers/config/restidstore/name/string")
+    RESTID_STORE_fe53fb8359725e40ac431d41e1487626_PATTERN = re.compile(r"/ers/config/restidstore/name/string")
     RESTID_STORE_788cba3f7ace597da668acfbe00364be_PATTERN = re.compile(r"/ers/config/restidstore/string")
     RESTID_STORE_ded7f8573c255c318bb1f04bfdbf01e1_PATTERN = re.compile(r"/ers/config/restidstore/string")
     RESTID_STORE_2e77a1dd4aa75dcebbc3ee4e94a162b4_PATTERN = re.compile(r"/ers/config/restidstore/string")
@@ -1682,9 +1682,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_PX_GRID_NODE_a2a7f23f85105113954c87a917b7455f(self):
+    def matches_PX_GRID_NODE_f47d656ed0805859a85e5cc082c78dcf(self):
         return re.search(
-            self.PX_GRID_NODE_a2a7f23f85105113954c87a917b7455f_PATTERN,
+            self.PX_GRID_NODE_f47d656ed0805859a85e5cc082c78dcf_PATTERN,
             self.path
         )
 
@@ -6722,9 +6722,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_GUEST_TYPE_01c7aed7320e54bfac29f13c8717a6b5(self):
+    def matches_GUEST_TYPE_cf310e621a395bb7bac7b90d7d4c8603(self):
         return re.search(
-            self.GUEST_TYPE_01c7aed7320e54bfac29f13c8717a6b5_PATTERN,
+            self.GUEST_TYPE_cf310e621a395bb7bac7b90d7d4c8603_PATTERN,
             self.path
         )
 
@@ -6740,9 +6740,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_GUEST_TYPE_f9661f7c85c2570897cffc3d02668263(self):
+    def matches_GUEST_TYPE_0493eb42e79d5cc38bd1a6eef20613d6(self):
         return re.search(
-            self.GUEST_TYPE_f9661f7c85c2570897cffc3d02668263_PATTERN,
+            self.GUEST_TYPE_0493eb42e79d5cc38bd1a6eef20613d6_PATTERN,
             self.path
         )
 
@@ -9098,9 +9098,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_RESTID_STORE_17a5f22fc961547f93976a53949cac73(self):
+    def matches_RESTID_STORE_48c47e28f13659658b3e6af9409a1177(self):
         return re.search(
-            self.RESTID_STORE_17a5f22fc961547f93976a53949cac73_PATTERN,
+            self.RESTID_STORE_48c47e28f13659658b3e6af9409a1177_PATTERN,
             self.path
         )
 
@@ -9116,9 +9116,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_RESTID_STORE_c85464a04f0e5ddc99f8e6b8ed0f7eac(self):
+    def matches_RESTID_STORE_d0e432f52e2a5863858c7dc0c3eda277(self):
         return re.search(
-            self.RESTID_STORE_c85464a04f0e5ddc99f8e6b8ed0f7eac_PATTERN,
+            self.RESTID_STORE_d0e432f52e2a5863858c7dc0c3eda277_PATTERN,
             self.path
         )
 
@@ -9134,9 +9134,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_RESTID_STORE_e068a8dc1ed65f8d9cdfa70a49f543e0(self):
+    def matches_RESTID_STORE_fe53fb8359725e40ac431d41e1487626(self):
         return re.search(
-            self.RESTID_STORE_e068a8dc1ed65f8d9cdfa70a49f543e0_PATTERN,
+            self.RESTID_STORE_fe53fb8359725e40ac431d41e1487626_PATTERN,
             self.path
         )
 
@@ -12948,7 +12948,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.radius_server_sequence_get_version_response()
             return
 
-        if self.matches_RESTID_STORE_17a5f22fc961547f93976a53949cac73():
+        if self.matches_RESTID_STORE_48c47e28f13659658b3e6af9409a1177():
             self.restid_store_get_rest_id_store_by_name_response()
             return
 
@@ -13784,7 +13784,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.clear_threats_and_vulnerabilities_clear_threats_and_vulnerabilities_response()
             return
 
-        if self.matches_PX_GRID_NODE_a2a7f23f85105113954c87a917b7455f():
+        if self.matches_PX_GRID_NODE_f47d656ed0805859a85e5cc082c78dcf():
             self.px_grid_node_approve_px_grid_node_response()
             return
 
@@ -14008,11 +14008,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.guest_ssid_update_guest_ssid_by_id_response()
             return
 
-        if self.matches_GUEST_TYPE_01c7aed7320e54bfac29f13c8717a6b5():
+        if self.matches_GUEST_TYPE_cf310e621a395bb7bac7b90d7d4c8603():
             self.guest_type_update_guest_type_email_response()
             return
 
-        if self.matches_GUEST_TYPE_f9661f7c85c2570897cffc3d02668263():
+        if self.matches_GUEST_TYPE_0493eb42e79d5cc38bd1a6eef20613d6():
             self.guest_type_update_guest_type_sms_response()
             return
 
@@ -14172,7 +14172,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.radius_server_sequence_update_radius_server_sequence_by_id_response()
             return
 
-        if self.matches_RESTID_STORE_c85464a04f0e5ddc99f8e6b8ed0f7eac():
+        if self.matches_RESTID_STORE_d0e432f52e2a5863858c7dc0c3eda277():
             self.restid_store_update_rest_id_store_by_name_response()
             return
 
@@ -14482,7 +14482,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.radius_server_sequence_delete_radius_server_sequence_by_id_response()
             return
 
-        if self.matches_RESTID_STORE_e068a8dc1ed65f8d9cdfa70a49f543e0():
+        if self.matches_RESTID_STORE_fe53fb8359725e40ac431d41e1487626():
             self.restid_store_delete_rest_id_store_by_name_response()
             return
 
