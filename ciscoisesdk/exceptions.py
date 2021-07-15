@@ -32,7 +32,10 @@ from __future__ import (
 
 import logging
 from builtins import *
-
+from .utils import (
+    extract_and_parse,
+    get_err_message,
+)
 import requests
 
 from .response_codes import RESPONSE_CODES
@@ -128,26 +131,27 @@ class ApiError(ciscoisesdkException):
         self.details_str = ""
         """The text from the API response."""
 
-        self.details = None
-        """The parsed JSON details from the API response."""
+        body_type = ''
         if "application/json" in \
                 self.response.headers.get("Content-Type", "").lower():
-            try:
-                self.details = self.response.json()
-                self.details_str = self.response.text
-            except ValueError:
-                logger.warning("Error parsing JSON response body")
-        if "application/xml" in \
+            body_type = ' JSON '
+        elif "application/xml" in \
                 self.response.headers.get("Content-Type", "").lower():
-            try:
-                # TODO: Convert later
-                self.details = self.response.text
-                self.details_str = self.response.text
-            except ValueError:
-                logger.warning("Error parsing JSON response body")
+            body_type = ' XML '
 
-        self.message = self.details.get("message") or\
-            self.details.get("response", {}).get("message")\
+        self.details = None
+        """The parsed JSON details from the API response."""
+        self.details_str = self.response.text
+        try:
+            self.details = extract_and_parse(self.response)
+        except ValueError:
+            logger.warning("Error parsing{body_type}response body".format(body_type=body_type))
+
+        self.message = get_err_message(self.details, ["message"]) or\
+            get_err_message(self.details, ["internal-error-info"]) or\
+            get_err_message(self.details, ["description"]) or\
+            get_err_message(self.details, ["response", "message"]) or\
+            get_err_message(self.details, ["messages", "[0]", "title"])\
             if self.details else None
         """The error message from the parsed API response."""
 

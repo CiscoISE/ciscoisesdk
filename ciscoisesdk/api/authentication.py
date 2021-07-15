@@ -41,11 +41,13 @@ import requests
 
 from ..response_codes import EXPECTED_RESPONSE_CODE
 from ..utils import (
-    check_response_code,
     check_type,
     dict_from_items_with_values,
     extract_and_parse_json,
     validate_base_url,
+)
+from ..misc import (
+    check_response_code,
 )
 from base64 import b64encode
 

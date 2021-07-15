@@ -52,8 +52,11 @@ from .exceptions import (
 )
 from .response_codes import EXPECTED_RESPONSE_CODE
 from .utils import (
-    check_response_code, check_type, validate_base_url,
+    check_type, validate_base_url,
     pprint_request_info, pprint_response_info,
+)
+from .misc import (
+    check_response_code
 )
 from .restresponse import RestResponse
 from requests_toolbelt.multipart import encoder

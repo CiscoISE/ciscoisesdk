@@ -46,12 +46,6 @@ from datetime import datetime, timedelta, tzinfo
 
 from past.builtins import basestring
 
-from .exceptions import (
-    ApiError, RateLimitError,
-)
-from .response_codes import RATE_LIMIT_RESPONSE_CODE
-
-
 EncodableFile = namedtuple('EncodableFile',
                            ['file_name', 'file_object', 'content_type'])
 
@@ -190,31 +184,6 @@ def raise_if_extra_kwargs(kwargs):
     """Raise a TypeError if kwargs is not empty."""
     if kwargs:
         raise TypeError("Unexpected **kwargs: {!r}".format(kwargs))
-
-
-def check_response_code(response, expected_response_code):
-    """Check response code against the expected code; raise ApiError.
-
-    Checks the requests.response.status_code against the provided expected
-    response code (erc), and raises a ApiError if they do not match.
-
-    Args:
-        response(requests.response): The response object returned by a request
-            using the requests package.
-        expected_response_code(int): The expected response code (HTTP response
-            code).
-
-    Raises:
-        ApiError: If the requests.response.status_code does not match the
-            provided expected response code (erc).
-
-     """
-    if response.status_code in expected_response_code:
-        pass
-    elif response.status_code == RATE_LIMIT_RESPONSE_CODE:
-        raise RateLimitError(response)
-    else:
-        raise ApiError(response)
 
 
 def extract_and_parse(response):
@@ -392,6 +361,47 @@ def dict_of_str(json_dict):
     return result
 
 
+def walk_through_dict(resp, access_next_list, omit_first_single_key=False):
+    """ Walks through a dict `resp`
+    in the order of the `access_next_list` (list of str)
+    by accessing the items in order.
+    If `omit_first_single_key` is set to True if resp is a dict
+    with a single key it will access (omitting the first access_next_list)
+    """
+    value = resp
+    found = True
+    if isinstance(value, str):
+        return (found, value)
+
+    if len(access_next_list) == 0:
+        return (False, None)
+
+    if isinstance(value, dict) and omit_first_single_key and len(value) == 1:
+        access_key = access_next_list[0]
+        key = list(value.keys())[0]
+        if key == access_key:
+            access_next_list = access_next_list[1:]
+        value = value.get(key)
+
+    for access_next in access_next_list:
+        if isinstance(value, dict):
+            if value.get(access_next):
+                value = value.get(access_next)
+            else:
+                value = None
+                break
+        elif isinstance(value, list) and len(value) > 0 and access_next == "[0]":
+            value = value[0]
+    if not isinstance(value, str):
+        found = False
+    return (found, value)
+
+
+def get_err_message(err_response, access_next_list):
+    (found, value) = walk_through_dict(err_response, access_next_list, omit_first_single_key=True)
+    return value if found else None
+
+
 def get_next_page(function, params, access_next_list=["SearchResult", "nextPage", "href"]):
     """
     Args:
@@ -408,7 +418,7 @@ def get_next_page(function, params, access_next_list=["SearchResult", "nextPage"
         value = response.response
         found = True
         for access_next in access_next_list:
-            if value.get(access_next):
+            if isinstance(value, dict) and value.get(access_next):
                 value = value.get(access_next)
             else:
                 found = False
