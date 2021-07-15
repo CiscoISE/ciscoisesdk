@@ -414,12 +414,11 @@ message.
     <ipython-input-71-afadb5c98c43> in <module>
     ----> 1 network_device_response = api.network_device.create_network_device(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
           2
-    ciscoisesdk/utils.py in check_response_code(response, expected_response_code)
-        215         raise RateLimitError(response)
-        216     else:
-    --> 217         raise ApiError(response)
-        218
-        219
+    ciscoisesdk/misc.py in check_response_code(response, expected_response_code)
+        63         raise RateLimitError(response)
+        64     else:
+    --> 65         raise ApiError(response)
+        66
     ApiError: [400] - The request was invalid or cannot be otherwise served.
     {
       "ERSResponse" : {
