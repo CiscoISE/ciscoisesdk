@@ -37,38 +37,58 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorE94F5Eba9D9615A3Ecc18Ebc(object):
+class JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2(object):
     """updateExternalRadiusServerById request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorE94F5Eba9D9615A3Ecc18Ebc, self).__init__()
+        super(JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "UpdatedFieldsList": {
+                "ExternalRadiusServer": {
                 "properties": {
-                "field": {
+                "accountingPort": {
+                "type": "integer"
+                },
+                "authenticationPort": {
+                "type": "integer"
+                },
+                "authenticatorKey": {
                 "type": "string"
                 },
-                "newValue": {
+                "description":
+                 {
                 "type": "string"
                 },
-                "oldValue": {
+                "enableKeyWrap": {
+                "type": "boolean"
+                },
+                "encryptionKey": {
                 "type": "string"
                 },
-                "updatedField": {
-                "properties": {
-                "field": {
+                "hostIP": {
                 "type": "string"
                 },
-                "newValue": {
+                "id": {
                 "type": "string"
                 },
-                "oldValue": {
+                "keyInputFormat": {
                 "type": "string"
-                }
                 },
-                "type": "object"
+                "name": {
+                "type": "string"
+                },
+                "proxyTimeout": {
+                "type": "integer"
+                },
+                "retries": {
+                "type": "integer"
+                },
+                "sharedSecret": {
+                "type": "string"
+                },
+                "timeout": {
+                "type": "integer"
                 }
                 },
                 "type": "object"

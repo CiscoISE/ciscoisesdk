@@ -152,9 +152,6 @@ from .validators.v3_0_0.jsd_c288192f954309b4b35aa612ff226 \
 from .validators.v3_0_0.jsd_a4d5b5da6a50bfaaecc180543fd952 \
     import JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952 \
     as JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952_v3_0_0
-from .validators.v3_0_0.jsd_e94f5eba9d9615a3ecc18ebc \
-    import JSONSchemaValidatorE94F5Eba9D9615A3Ecc18Ebc \
-    as JSONSchemaValidatorE94F5Eba9D9615A3Ecc18Ebc_v3_0_0
 from .validators.v3_0_0.jsd_a99695fd5ee0b00efce79a5761ff \
     import JSONSchemaValidatorA99695Fd5Ee0B00EFce79A5761Ff \
     as JSONSchemaValidatorA99695Fd5Ee0B00EFce79A5761Ff_v3_0_0
@@ -266,6 +263,9 @@ from .validators.v3_0_0.jsd_bf19f653f9a5c48d1fb1890409 \
 from .validators.v3_0_0.jsd_abc25887a5daab1216195e08cbd49 \
     import JSONSchemaValidatorAbc25887A5DaaB1216195E08Cbd49 \
     as JSONSchemaValidatorAbc25887A5DaaB1216195E08Cbd49_v3_0_0
+from .validators.v3_0_0.jsd_c6536d17325c84a54189f46d4bbad2 \
+    import JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2 \
+    as JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2_v3_0_0
 from .validators.v3_0_0.jsd_c475afd2a5e57e4bd0952f2c5349c6c \
     import JSONSchemaValidatorC475Afd2A5E57E4Bd0952F2C5349C6C \
     as JSONSchemaValidatorC475Afd2A5E57E4Bd0952F2C5349C6C_v3_0_0
@@ -710,8 +710,6 @@ class SchemaValidator:
                 JSONSchemaValidatorC288192F954309B4B35Aa612Ff226_v3_0_0()
             self.json_schema_validators['jsd_a4d5b5da6a50bfaaecc180543fd952_v3_0_0'] =\
                 JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952_v3_0_0()
-            self.json_schema_validators['jsd_e94f5eba9d9615a3ecc18ebc_v3_0_0'] =\
-                JSONSchemaValidatorE94F5Eba9D9615A3Ecc18Ebc_v3_0_0()
             self.json_schema_validators['jsd_a99695fd5ee0b00efce79a5761ff_v3_0_0'] =\
                 JSONSchemaValidatorA99695Fd5Ee0B00EFce79A5761Ff_v3_0_0()
             self.json_schema_validators['jsd_da0a59db7654cfa89df49ca3ac3414_v3_0_0'] =\
@@ -786,6 +784,8 @@ class SchemaValidator:
                 JSONSchemaValidatorBf19F653F9A5C48D1Fb1890409_v3_0_0()
             self.json_schema_validators['jsd_abc25887a5daab1216195e08cbd49_v3_0_0'] =\
                 JSONSchemaValidatorAbc25887A5DaaB1216195E08Cbd49_v3_0_0()
+            self.json_schema_validators['jsd_c6536d17325c84a54189f46d4bbad2_v3_0_0'] =\
+                JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2_v3_0_0()
             self.json_schema_validators['jsd_c475afd2a5e57e4bd0952f2c5349c6c_v3_0_0'] =\
                 JSONSchemaValidatorC475Afd2A5E57E4Bd0952F2C5349C6C_v3_0_0()
             self.json_schema_validators['jsd_e6167fc5cb6593b8b48429187a26a67_v3_0_0'] =\

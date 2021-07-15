@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getExternalRadiusServerByName data model.
+"""Identity Services Engine updateExternalRadiusServerById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,72 +37,38 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorE6019B6B2B605132B57DB142F581E710(object):
-    """getExternalRadiusServerByName request schema definition."""
+class JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2(object):
+    """updateExternalRadiusServerById request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorE6019B6B2B605132B57DB142F581E710, self).__init__()
+        super(JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "ExternalRadiusServer": {
+                "UpdatedFieldsList": {
                 "properties": {
-                "accountingPort": {
-                "type": "integer"
-                },
-                "authenticationPort": {
-                "type": "integer"
-                },
-                "authenticatorKey": {
+                "field": {
                 "type": "string"
                 },
-                "description":
-                 {
+                "newValue": {
                 "type": "string"
                 },
-                "enableKeyWrap": {
-                "type": "boolean"
-                },
-                "encryptionKey": {
+                "oldValue": {
                 "type": "string"
                 },
-                "hostIP": {
-                "type": "string"
-                },
-                "id": {
-                "type": "string"
-                },
-                "keyInputFormat": {
-                "type": "string"
-                },
-                "link": {
+                "updatedField": {
                 "properties": {
-                "href": {
+                "field": {
                 "type": "string"
                 },
-                "rel": {
+                "newValue": {
                 "type": "string"
                 },
-                "type": {
+                "oldValue": {
                 "type": "string"
                 }
                 },
                 "type": "object"
-                },
-                "name": {
-                "type": "string"
-                },
-                "proxyTimeout": {
-                "type": "integer"
-                },
-                "retries": {
-                "type": "integer"
-                },
-                "sharedSecret": {
-                "type": "string"
-                },
-                "timeout": {
-                "type": "integer"
                 }
                 },
                 "type": "object"

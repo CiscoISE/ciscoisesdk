@@ -36,7 +36,7 @@ def is_valid_get_external_radius_server_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e6019b6b2b605132b57db142f581e710_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9afa6d7527045ebc928ee7e30ad3092a_v3_0_0').validate(obj.response)
     return True
 
 
@@ -86,7 +86,7 @@ def is_valid_get_external_radius_server_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_81735151a93c51c59037ec968625ee45_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_af14464cc6a05f6f87bbe7c174b6d5f6_v3_0_0').validate(obj.response)
     return True
 
 
@@ -136,7 +136,7 @@ def is_valid_update_external_radius_server_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_28036825e94f5eba9d9615a3ecc18ebc_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_59c6536d17325c84a54189f46d4bbad2_v3_0_0').validate(obj.response)
     return True
 
 
@@ -216,7 +216,7 @@ def is_valid_delete_external_radius_server_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_373fcbde1c215f95bebbfa95780ed9a8_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d86e3201f9b0561db13a9eb1b1d59bd5_v3_0_0').validate(obj.response)
     return True
 
 

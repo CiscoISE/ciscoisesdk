@@ -316,10 +316,10 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     ENDPOINT_85adcb1d998d54838add3b4d644242af_PATTERN = re.compile(r"/ers/config/endpoint/versioninfo")
     ENDPOINT_c03505504e8e5af8a715e27c40f16eab_PATTERN = re.compile(r"/ers/config/endpoint/bulk/submit")
     ENDPOINT_5b054a43ba875f0da3da5a7d863f3ef7_PATTERN = re.compile(r"/ers/config/endpoint/bulk/string")
-    EXTERNAL_RADIUS_SERVER_e6019b6b2b605132b57db142f581e710_PATTERN = re.compile(r"/externalradiusserver/name/string")
-    EXTERNAL_RADIUS_SERVER_81735151a93c51c59037ec968625ee45_PATTERN = re.compile(r"/externalradiusserver/string")
-    EXTERNAL_RADIUS_SERVER_28036825e94f5eba9d9615a3ecc18ebc_PATTERN = re.compile(r"/externalradiusserver/string")
-    EXTERNAL_RADIUS_SERVER_373fcbde1c215f95bebbfa95780ed9a8_PATTERN = re.compile(r"/externalradiusserver/string")
+    EXTERNAL_RADIUS_SERVER_9afa6d7527045ebc928ee7e30ad3092a_PATTERN = re.compile(r"/ers/config/externalradiusserver/name/string")
+    EXTERNAL_RADIUS_SERVER_af14464cc6a05f6f87bbe7c174b6d5f6_PATTERN = re.compile(r"/ers/config/externalradiusserver/string")
+    EXTERNAL_RADIUS_SERVER_59c6536d17325c84a54189f46d4bbad2_PATTERN = re.compile(r"/ers/config/externalradiusserver/string")
+    EXTERNAL_RADIUS_SERVER_d86e3201f9b0561db13a9eb1b1d59bd5_PATTERN = re.compile(r"/ers/config/externalradiusserver/string")
     EXTERNAL_RADIUS_SERVER_9b641825a9555ecba105cabbdf50fc78_PATTERN = re.compile(r"/ers/config/externalradiusserver")
     EXTERNAL_RADIUS_SERVER_1fc1c74b35ae5050b4f7fd702570ad5b_PATTERN = re.compile(r"/ers/config/externalradiusserver")
     EXTERNAL_RADIUS_SERVER_a6c3ffe72746500b88be3a5418ead4ba_PATTERN = re.compile(r"/ers/config/externalradiusserver/versioninfo")
@@ -6236,9 +6236,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_EXTERNAL_RADIUS_SERVER_e6019b6b2b605132b57db142f581e710(self):
+    def matches_EXTERNAL_RADIUS_SERVER_9afa6d7527045ebc928ee7e30ad3092a(self):
         return re.search(
-            self.EXTERNAL_RADIUS_SERVER_e6019b6b2b605132b57db142f581e710_PATTERN,
+            self.EXTERNAL_RADIUS_SERVER_9afa6d7527045ebc928ee7e30ad3092a_PATTERN,
             self.path
         )
 
@@ -6254,9 +6254,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_EXTERNAL_RADIUS_SERVER_81735151a93c51c59037ec968625ee45(self):
+    def matches_EXTERNAL_RADIUS_SERVER_af14464cc6a05f6f87bbe7c174b6d5f6(self):
         return re.search(
-            self.EXTERNAL_RADIUS_SERVER_81735151a93c51c59037ec968625ee45_PATTERN,
+            self.EXTERNAL_RADIUS_SERVER_af14464cc6a05f6f87bbe7c174b6d5f6_PATTERN,
             self.path
         )
 
@@ -6272,9 +6272,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_EXTERNAL_RADIUS_SERVER_28036825e94f5eba9d9615a3ecc18ebc(self):
+    def matches_EXTERNAL_RADIUS_SERVER_59c6536d17325c84a54189f46d4bbad2(self):
         return re.search(
-            self.EXTERNAL_RADIUS_SERVER_28036825e94f5eba9d9615a3ecc18ebc_PATTERN,
+            self.EXTERNAL_RADIUS_SERVER_59c6536d17325c84a54189f46d4bbad2_PATTERN,
             self.path
         )
 
@@ -6290,9 +6290,9 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_EXTERNAL_RADIUS_SERVER_373fcbde1c215f95bebbfa95780ed9a8(self):
+    def matches_EXTERNAL_RADIUS_SERVER_d86e3201f9b0561db13a9eb1b1d59bd5(self):
         return re.search(
-            self.EXTERNAL_RADIUS_SERVER_373fcbde1c215f95bebbfa95780ed9a8_PATTERN,
+            self.EXTERNAL_RADIUS_SERVER_d86e3201f9b0561db13a9eb1b1d59bd5_PATTERN,
             self.path
         )
 
@@ -12636,11 +12636,11 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.endpoint_monitor_bulk_status_endpoint_response()
             return
 
-        if self.matches_EXTERNAL_RADIUS_SERVER_e6019b6b2b605132b57db142f581e710():
+        if self.matches_EXTERNAL_RADIUS_SERVER_9afa6d7527045ebc928ee7e30ad3092a():
             self.external_radius_server_get_external_radius_server_by_name_response()
             return
 
-        if self.matches_EXTERNAL_RADIUS_SERVER_81735151a93c51c59037ec968625ee45():
+        if self.matches_EXTERNAL_RADIUS_SERVER_af14464cc6a05f6f87bbe7c174b6d5f6():
             self.external_radius_server_get_external_radius_server_by_id_response()
             return
 
@@ -13992,7 +13992,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.endpoint_bulk_request_for_endpoint_response()
             return
 
-        if self.matches_EXTERNAL_RADIUS_SERVER_28036825e94f5eba9d9615a3ecc18ebc():
+        if self.matches_EXTERNAL_RADIUS_SERVER_59c6536d17325c84a54189f46d4bbad2():
             self.external_radius_server_update_external_radius_server_by_id_response()
             return
 
@@ -14406,7 +14406,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.endpoint_delete_endpoint_by_id_response()
             return
 
-        if self.matches_EXTERNAL_RADIUS_SERVER_373fcbde1c215f95bebbfa95780ed9a8():
+        if self.matches_EXTERNAL_RADIUS_SERVER_d86e3201f9b0561db13a9eb1b1d59bd5():
             self.external_radius_server_delete_external_radius_server_by_id_response()
             return
 

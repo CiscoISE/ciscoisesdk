@@ -136,7 +136,7 @@ class ExternalRadiusServer(object):
             'name': name,
         }
 
-        e_url = ('/externalradiusserver/name/{name}')
+        e_url = ('/ers/config/externalradiusserver/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -144,7 +144,7 @@ class ExternalRadiusServer(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e6019b6b2b605132b57db142f581e710_v3_0_0', _api_response)
+        return self._object_factory('bpm_afa6d7527045ebc928ee7e30ad3092a_v3_0_0', _api_response)
 
     def get_by_name(self,
                     name,
@@ -222,7 +222,7 @@ class ExternalRadiusServer(object):
             'id': id,
         }
 
-        e_url = ('/externalradiusserver/{id}')
+        e_url = ('/ers/config/externalradiusserver/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -230,7 +230,7 @@ class ExternalRadiusServer(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a93c51c59037ec968625ee45_v3_0_0', _api_response)
+        return self._object_factory('bpm_af14464cc6a05f6f87bbe7c174b6d5f6_v3_0_0', _api_response)
 
     def get_by_id(self,
                   id,
@@ -415,10 +415,10 @@ class ExternalRadiusServer(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_e94f5eba9d9615a3ecc18ebc_v3_0_0')\
+            self._request_validator('jsd_c6536d17325c84a54189f46d4bbad2_v3_0_0')\
                 .validate(_payload)
 
-        e_url = ('/externalradiusserver/{id}')
+        e_url = ('/ers/config/externalradiusserver/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -431,7 +431,7 @@ class ExternalRadiusServer(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_e94f5eba9d9615a3ecc18ebc_v3_0_0', _api_response)
+        return self._object_factory('bpm_c6536d17325c84a54189f46d4bbad2_v3_0_0', _api_response)
 
     def update_by_id(self,
                      id,
@@ -538,7 +538,7 @@ class ExternalRadiusServer(object):
             'id': id,
         }
 
-        e_url = ('/externalradiusserver/{id}')
+        e_url = ('/ers/config/externalradiusserver/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -546,7 +546,7 @@ class ExternalRadiusServer(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fcbde1c215f95bebbfa95780ed9a8_v3_0_0', _api_response)
+        return self._object_factory('bpm_d86e3201f9b0561db13a9eb1b1d59bd5_v3_0_0', _api_response)
 
     def delete_by_id(self,
                      id,

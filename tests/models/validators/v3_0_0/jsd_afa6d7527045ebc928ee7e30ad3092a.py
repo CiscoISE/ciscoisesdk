@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateExternalRadiusServerById data model.
+"""Identity Services Engine getExternalRadiusServerByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,10 +37,10 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorE94F5Eba9D9615A3Ecc18Ebc(object):
-    """updateExternalRadiusServerById request schema definition."""
+class JSONSchemaValidatorAfa6D7527045Ebc928EE7E30Ad3092A(object):
+    """getExternalRadiusServerByName request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorE94F5Eba9D9615A3Ecc18Ebc, self).__init__()
+        super(JSONSchemaValidatorAfa6D7527045Ebc928EE7E30Ad3092A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -74,6 +74,20 @@ class JSONSchemaValidatorE94F5Eba9D9615A3Ecc18Ebc(object):
                 },
                 "keyInputFormat": {
                 "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "name": {
                 "type": "string"
