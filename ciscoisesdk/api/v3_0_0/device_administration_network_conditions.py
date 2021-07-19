@@ -144,15 +144,11 @@ class DeviceAdministrationNetworkConditions(object):
         )
 
     def create_device_admin_network_condition(self,
-                                              cli_dnis_list=None,
                                               condition_type=None,
+                                              conditions=None,
                                               description=None,
-                                              device_group_list=None,
-                                              device_list=None,
                                               id=None,
-                                              ip_addr_list=None,
                                               link=None,
-                                              mac_addr_list=None,
                                               name=None,
                                               headers=None,
                                               payload=None,
@@ -161,49 +157,18 @@ class DeviceAdministrationNetworkConditions(object):
         """Device AdminCreates network condition.
 
         Args:
-            cliDnisList(list): This field should contain a Caller ID
-                (CLI), comma, and Called ID (DNIS).
-                Line format  Caller ID (CLI), Called ID
-                (DNIS), property of the request body
-                (list of strings).
             condition_type(string): This field determines the
                 content of the conditions field,
                 property of the request body. Available
                 values are 'EndstationCondition',
                 'DeviceCondition' and
                 'DevicePortCondition'.
+            conditions(list): conditions, property of the request
+                body (list of objects).
             description(string): description, property of the
                 request body.
-            deviceGroupList(list): This field should contain a tuple
-                with NDG Root, comma, and an NDG (that
-                it under the root).  Line format NDG
-                Root Name, NDG, Port, property of the
-                request body (list of strings).
-            deviceList(list): This field should contain Device-
-                Name,port-number. The device name must
-                be the same as the name field in a
-                Network Device object.  Line format
-                Device Name,Port, property of the
-                request body (list of strings).
             id(string): id, property of the request body.
-            ipAddrList(list): This field should contain IP-address-
-                or-subnet,port number  IP address can be
-                IPV4 format (n.n.n.n) or IPV6 format
-                (n:n:n:n:n:n:n:n).  IP subnet can be
-                IPV4 format (n.n.n.n/m) or IPV6 format
-                (n:n:n:n:n:n:n:n/m).  Line format IP
-                Address or subnet,Port, property of the
-                request body (list of strings).
             link(object): link, property of the request body.
-            macAddrList(list): This field should contain Endstation
-                MAC address, comma, and Destination MAC
-                addresses.  Each Max address must
-                include twelve hexadecimal digits using
-                formats nn:nn:nn:nn:nn:nn or nn-nn-nn-
-                nn-nn-nn or nnnn.nnnn.nnnn or
-                nnnnnnnnnnnn.  Line format Endstation
-                MAC,Destination MAC , property of the
-                request body (list of strings).
             name(string): Network Condition name, property of the
                 request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -269,16 +234,8 @@ class DeviceAdministrationNetworkConditions(object):
                     link,
                 'name':
                     name,
-                'cliDnisList':
-                    cli_dnis_list,
-                'ipAddrList':
-                    ip_addr_list,
-                'macAddrList':
-                    mac_addr_list,
-                'deviceGroupList':
-                    device_group_list,
-                'deviceList':
-                    device_list,
+                'conditions':
+                    conditions,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -301,15 +258,11 @@ class DeviceAdministrationNetworkConditions(object):
         return self._object_factory('bpm_b95cf8c9aed95518b38be1fa4b514b67_v3_0_0', _api_response)
 
     def create(self,
-               cli_dnis_list=None,
                condition_type=None,
+               conditions=None,
                description=None,
-               device_group_list=None,
-               device_list=None,
                id=None,
-               ip_addr_list=None,
                link=None,
-               mac_addr_list=None,
                name=None,
                headers=None,
                payload=None,
@@ -320,15 +273,11 @@ class DeviceAdministrationNetworkConditions(object):
         DeviceAdministrationNetworkConditions.create_device_admin_network_condition>`_
         """
         return self.create_device_admin_network_condition(
-            cli_dnis_list=cli_dnis_list,
             condition_type=condition_type,
+            conditions=conditions,
             description=description,
-            device_group_list=device_group_list,
-            device_list=device_list,
             id=id,
-            ip_addr_list=ip_addr_list,
             link=link,
-            mac_addr_list=mac_addr_list,
             name=name,
             payload=payload,
             active_validation=active_validation,
@@ -414,14 +363,10 @@ class DeviceAdministrationNetworkConditions(object):
 
     def update_device_admin_network_condition_by_id(self,
                                                     id,
-                                                    cli_dnis_list=None,
                                                     condition_type=None,
+                                                    conditions=None,
                                                     description=None,
-                                                    device_group_list=None,
-                                                    device_list=None,
-                                                    ip_addr_list=None,
                                                     link=None,
-                                                    mac_addr_list=None,
                                                     name=None,
                                                     headers=None,
                                                     payload=None,
@@ -430,49 +375,18 @@ class DeviceAdministrationNetworkConditions(object):
         """Device Admin Update network condition.
 
         Args:
-            cliDnisList(list): This field should contain a Caller ID
-                (CLI), comma, and Called ID (DNIS).
-                Line format  Caller ID (CLI), Called ID
-                (DNIS), property of the request body
-                (list of strings).
             condition_type(string): This field determines the
                 content of the conditions field,
                 property of the request body. Available
                 values are 'EndstationCondition',
                 'DeviceCondition' and
                 'DevicePortCondition'.
+            conditions(list): conditions, property of the request
+                body (list of objects).
             description(string): description, property of the
                 request body.
-            deviceGroupList(list): This field should contain a tuple
-                with NDG Root, comma, and an NDG (that
-                it under the root).  Line format NDG
-                Root Name, NDG, Port, property of the
-                request body (list of strings).
-            deviceList(list): This field should contain Device-
-                Name,port-number. The device name must
-                be the same as the name field in a
-                Network Device object.  Line format
-                Device Name,Port, property of the
-                request body (list of strings).
             id(string): id, property of the request body.
-            ipAddrList(list): This field should contain IP-address-
-                or-subnet,port number  IP address can be
-                IPV4 format (n.n.n.n) or IPV6 format
-                (n:n:n:n:n:n:n:n).  IP subnet can be
-                IPV4 format (n.n.n.n/m) or IPV6 format
-                (n:n:n:n:n:n:n:n/m).  Line format IP
-                Address or subnet,Port, property of the
-                request body (list of strings).
             link(object): link, property of the request body.
-            macAddrList(list): This field should contain Endstation
-                MAC address, comma, and Destination MAC
-                addresses.  Each Max address must
-                include twelve hexadecimal digits using
-                formats nn:nn:nn:nn:nn:nn or nn-nn-nn-
-                nn-nn-nn or nnnn.nnnn.nnnn or
-                nnnnnnnnnnnn.  Line format Endstation
-                MAC,Destination MAC , property of the
-                request body (list of strings).
             name(string): Network Condition name, property of the
                 request body.
             id(basestring): id path parameter. Condition id.
@@ -542,16 +456,8 @@ class DeviceAdministrationNetworkConditions(object):
                     link,
                 'name':
                     name,
-                'cliDnisList':
-                    cli_dnis_list,
-                'ipAddrList':
-                    ip_addr_list,
-                'macAddrList':
-                    mac_addr_list,
-                'deviceGroupList':
-                    device_group_list,
-                'deviceList':
-                    device_list,
+                'conditions':
+                    conditions,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -576,14 +482,10 @@ class DeviceAdministrationNetworkConditions(object):
 
     def update_by_id(self,
                      id,
-                     cli_dnis_list=None,
                      condition_type=None,
+                     conditions=None,
                      description=None,
-                     device_group_list=None,
-                     device_list=None,
-                     ip_addr_list=None,
                      link=None,
-                     mac_addr_list=None,
                      name=None,
                      headers=None,
                      payload=None,
@@ -595,14 +497,10 @@ class DeviceAdministrationNetworkConditions(object):
         """
         return self.update_device_admin_network_condition_by_id(
             id=id,
-            cli_dnis_list=cli_dnis_list,
             condition_type=condition_type,
+            conditions=conditions,
             description=description,
-            device_group_list=device_group_list,
-            device_list=device_list,
-            ip_addr_list=ip_addr_list,
             link=link,
-            mac_addr_list=mac_addr_list,
             name=name,
             payload=payload,
             active_validation=active_validation,

@@ -84,7 +84,7 @@ class GuestType(object):
         """This API allows the client to update a guest type email by ID.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -209,7 +209,7 @@ class GuestType(object):
         """This API allows the client to update a guest type sms by ID.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -437,7 +437,7 @@ class GuestType(object):
             login_options(object): loginOptions, property of the
                 request body.
             name(string): name, property of the request body.
-            sponsorGroups(list): sponsorGroups, property of the
+            sponsor_groups(list): sponsorGroups, property of the
                 request body (list of strings).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -958,7 +958,7 @@ class GuestType(object):
             login_options(object): loginOptions, property of the
                 request body.
             name(string): name, property of the request body.
-            sponsorGroups(list): sponsorGroups, property of the
+            sponsor_groups(list): sponsorGroups, property of the
                 request body (list of strings).
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

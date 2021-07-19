@@ -53,7 +53,19 @@ class JSONSchemaValidatorCea2E785Ee57908A9EE3B118E49Cfa(object):
                 "aci51": {
                 "type": "boolean"
                 },
+                "aciipaddress": {
+                "type": "string"
+                },
+                "acipassword": {
+                "type": "string"
+                },
+                "aciuserName": {
+                "type": "string"
+                },
                 "adminName": {
+                "type": "string"
+                },
+                "adminPassword": {
                 "type": "string"
                 },
                 "allSxpDomain": {

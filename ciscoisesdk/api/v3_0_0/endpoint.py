@@ -502,6 +502,7 @@ class Endpoint(object):
                               identity_store=None,
                               identity_store_id=None,
                               mac=None,
+                              mdm_attributes=None,
                               name=None,
                               portal_user=None,
                               profile_id=None,
@@ -525,6 +526,8 @@ class Endpoint(object):
             identity_store_id(string): identityStoreId, property of
                 the request body.
             mac(string): mac, property of the request body.
+            mdm_attributes(object): mdmAttributes, property of the
+                request body.
             name(string): name, property of the request body.
             portal_user(string): portalUser, property of the request
                 body.
@@ -623,6 +626,8 @@ class Endpoint(object):
                     identity_store,
                 'identityStoreId':
                     identity_store_id,
+                'mdmAttributes':
+                    mdm_attributes,
                 'customAttributes':
                     custom_attributes,
             }
@@ -658,6 +663,7 @@ class Endpoint(object):
                      identity_store=None,
                      identity_store_id=None,
                      mac=None,
+                     mdm_attributes=None,
                      name=None,
                      portal_user=None,
                      profile_id=None,
@@ -679,6 +685,7 @@ class Endpoint(object):
             identity_store=identity_store,
             identity_store_id=identity_store_id,
             mac=mac,
+            mdm_attributes=mdm_attributes,
             name=name,
             portal_user=portal_user,
             profile_id=profile_id,
@@ -783,6 +790,7 @@ class Endpoint(object):
                           identity_store=None,
                           identity_store_id=None,
                           mac=None,
+                          mdm_attributes=None,
                           name=None,
                           portal_user=None,
                           profile_id=None,
@@ -806,6 +814,8 @@ class Endpoint(object):
             identity_store_id(string): identityStoreId, property of
                 the request body.
             mac(string): mac, property of the request body.
+            mdm_attributes(object): mdmAttributes, property of the
+                request body.
             name(string): name, property of the request body.
             portal_user(string): portalUser, property of the request
                 body.
@@ -900,6 +910,8 @@ class Endpoint(object):
                     identity_store,
                 'identityStoreId':
                     identity_store_id,
+                'mdmAttributes':
+                    mdm_attributes,
                 'customAttributes':
                     custom_attributes,
             }
@@ -935,6 +947,7 @@ class Endpoint(object):
                  identity_store=None,
                  identity_store_id=None,
                  mac=None,
+                 mdm_attributes=None,
                  name=None,
                  portal_user=None,
                  profile_id=None,
@@ -956,6 +969,7 @@ class Endpoint(object):
             identity_store=identity_store,
             identity_store_id=identity_store_id,
             mac=mac,
+            mdm_attributes=mdm_attributes,
             name=name,
             portal_user=portal_user,
             profile_id=profile_id,
@@ -1267,6 +1281,7 @@ class Endpoint(object):
                         identity_store=None,
                         identity_store_id=None,
                         mac=None,
+                        mdm_attributes=None,
                         name=None,
                         portal_user=None,
                         profile_id=None,
@@ -1289,6 +1304,8 @@ class Endpoint(object):
             identity_store_id(string): identityStoreId, property of
                 the request body.
             mac(string): mac, property of the request body.
+            mdm_attributes(object): mdmAttributes, property of the
+                request body.
             name(string): name, property of the request body.
             portal_user(string): portalUser, property of the request
                 body.
@@ -1381,6 +1398,8 @@ class Endpoint(object):
                     identity_store,
                 'identityStoreId':
                     identity_store_id,
+                'mdmAttributes':
+                    mdm_attributes,
                 'customAttributes':
                     custom_attributes,
             }
@@ -1414,6 +1433,7 @@ class Endpoint(object):
                identity_store=None,
                identity_store_id=None,
                mac=None,
+               mdm_attributes=None,
                name=None,
                portal_user=None,
                profile_id=None,
@@ -1434,6 +1454,7 @@ class Endpoint(object):
             identity_store=identity_store,
             identity_store_id=identity_store_id,
             mac=mac,
+            mdm_attributes=mdm_attributes,
             name=name,
             portal_user=portal_user,
             profile_id=profile_id,

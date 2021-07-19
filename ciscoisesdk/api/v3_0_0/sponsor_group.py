@@ -185,7 +185,7 @@ class SponsorGroup(object):
                 of the request body.
             description(string): description, property of the
                 request body.
-            guestTypes(list): guestTypes, property of the request
+            guest_types(list): guestTypes, property of the request
                 body (list of strings).
             id(string): id, property of the request body.
             is_default_group(boolean): isDefaultGroup, property of
@@ -196,7 +196,7 @@ class SponsorGroup(object):
                 (list of strings).
             manage_permission(string): managePermission, property of
                 the request body.
-            memberGroups(list): memberGroups, property of the
+            member_groups(list): memberGroups, property of the
                 request body (list of strings).
             name(string): name, property of the request body.
             other_permissions(object): otherPermissions, property of
@@ -735,7 +735,7 @@ class SponsorGroup(object):
                 of the request body.
             description(string): description, property of the
                 request body.
-            guestTypes(list): guestTypes, property of the request
+            guest_types(list): guestTypes, property of the request
                 body (list of strings).
             is_default_group(boolean): isDefaultGroup, property of
                 the request body.
@@ -745,7 +745,7 @@ class SponsorGroup(object):
                 (list of strings).
             manage_permission(string): managePermission, property of
                 the request body.
-            memberGroups(list): memberGroups, property of the
+            member_groups(list): memberGroups, property of the
                 request body (list of strings).
             name(string): name, property of the request body.
             other_permissions(object): otherPermissions, property of

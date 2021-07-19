@@ -251,6 +251,7 @@ class IdentitySequence(object):
                                        description=None,
                                        id_seq_item=None,
                                        name=None,
+                                       parent=None,
                                        headers=None,
                                        payload=None,
                                        active_validation=True,
@@ -267,9 +268,10 @@ class IdentitySequence(object):
             description(string): description, property of the
                 request body.
             id(string): id, property of the request body.
-            idSeqItem(list): idSeqItem, property of the request body
-                (list of objects).
+            id_seq_item(list): idSeqItem, property of the request
+                body (list of objects).
             name(string): name, property of the request body.
+            parent(string): parent, property of the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -342,6 +344,8 @@ class IdentitySequence(object):
                     name,
                 'description':
                     description,
+                'parent':
+                    parent,
                 'idSeqItem':
                     id_seq_item,
                 'certificateAuthenticationProfile':
@@ -380,6 +384,7 @@ class IdentitySequence(object):
                      description=None,
                      id_seq_item=None,
                      name=None,
+                     parent=None,
                      headers=None,
                      payload=None,
                      active_validation=True,
@@ -395,6 +400,7 @@ class IdentitySequence(object):
             description=description,
             id_seq_item=id_seq_item,
             name=name,
+            parent=parent,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
@@ -641,6 +647,7 @@ class IdentitySequence(object):
                                  description=None,
                                  id_seq_item=None,
                                  name=None,
+                                 parent=None,
                                  headers=None,
                                  payload=None,
                                  active_validation=True,
@@ -655,9 +662,10 @@ class IdentitySequence(object):
                 property of the request body.
             description(string): description, property of the
                 request body.
-            idSeqItem(list): idSeqItem, property of the request body
-                (list of objects).
+            id_seq_item(list): idSeqItem, property of the request
+                body (list of objects).
             name(string): name, property of the request body.
+            parent(string): parent, property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -724,6 +732,8 @@ class IdentitySequence(object):
                     name,
                 'description':
                     description,
+                'parent':
+                    parent,
                 'idSeqItem':
                     id_seq_item,
                 'certificateAuthenticationProfile':
@@ -760,6 +770,7 @@ class IdentitySequence(object):
                description=None,
                id_seq_item=None,
                name=None,
+               parent=None,
                headers=None,
                payload=None,
                active_validation=True,
@@ -774,6 +785,7 @@ class IdentitySequence(object):
             description=description,
             id_seq_item=id_seq_item,
             name=name,
+            parent=parent,
             payload=payload,
             active_validation=active_validation,
             headers=headers,

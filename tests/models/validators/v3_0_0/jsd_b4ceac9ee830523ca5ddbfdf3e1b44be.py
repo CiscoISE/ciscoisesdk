@@ -48,12 +48,6 @@ class JSONSchemaValidatorB4Ceac9EE830523CA5DdBfdf3E1B44Be(object):
                 "response": {
                 "items": {
                 "properties": {
-                "cliDnisList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
                 "conditionType": {
                 "enum": [
                 "EndstationCondition",
@@ -62,31 +56,16 @@ class JSONSchemaValidatorB4Ceac9EE830523CA5DdBfdf3E1B44Be(object):
                 ],
                 "type": "string"
                 },
+                "conditions": {
+                "items": {},
+                "type": "array"
+                },
                 "description":
                  {
                 "type": "string"
                 },
-                "deviceGroupList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "deviceList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
                 "id": {
-                "readOnly": true,
                 "type": "string"
-                },
-                "ipAddrList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
                 },
                 "link": {
                 "properties": {
@@ -106,18 +85,19 @@ class JSONSchemaValidatorB4Ceac9EE830523CA5DdBfdf3E1B44Be(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "href"
+                ],
                 "type": "object"
-                },
-                "macAddrList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
                 },
                 "name": {
                 "type": "string"
                 }
                 },
+                "required": [
+                "conditionType",
+                "name"
+                ],
                 "type": "object"
                 },
                 "type": "array"

@@ -224,7 +224,11 @@ class AciSettings(object):
                                   id,
                                   aci50=None,
                                   aci51=None,
+                                  aciipaddress=None,
+                                  acipassword=None,
+                                  aciuser_name=None,
                                   admin_name=None,
+                                  admin_password=None,
                                   all_sxp_domain=None,
                                   default_sgt_name=None,
                                   enable_aci=None,
@@ -251,8 +255,16 @@ class AciSettings(object):
                 request body.
             aci51(boolean): Enable 5.1 ACI Version, property of the
                 request body.
-            admin_name(string): adminName, property of the request
-                body.
+            aciipaddress(string): ACI Domain manager Ip Address.,
+                property of the request body.
+            acipassword(string): ACI Domain manager Password.,
+                property of the request body.
+            aciuser_name(string): ACI Domain manager Username.,
+                property of the request body.
+            admin_name(string): ACI Cluster Admin name, property of
+                the request body.
+            admin_password(string): ACI Cluster Admin password,
+                property of the request body.
             all_sxp_domain(boolean): allSxpDomain, property of the
                 request body.
             default_sgt_name(string): defaultSgtName, property of
@@ -275,7 +287,7 @@ class AciSettings(object):
                 the request body.
             specific_sxp_domain(boolean): specificSxpDomain,
                 property of the request body.
-            specifixSxpDomainList(list): specifixSxpDomainList,
+            specifix_sxp_domain_list(list): specifixSxpDomainList,
                 property of the request body (list of
                 strings).
             suffix_to_epg(string): suffixToEpg, property of the
@@ -361,6 +373,14 @@ class AciSettings(object):
                     ip_address_host_name,
                 'adminName':
                     admin_name,
+                'adminPassword':
+                    admin_password,
+                'aciipaddress':
+                    aciipaddress,
+                'aciuserName':
+                    aciuser_name,
+                'acipassword':
+                    acipassword,
                 'tenantName':
                     tenant_name,
                 'l3RouteNetwork':
@@ -420,7 +440,11 @@ class AciSettings(object):
                      id,
                      aci50=None,
                      aci51=None,
+                     aciipaddress=None,
+                     acipassword=None,
+                     aciuser_name=None,
                      admin_name=None,
+                     admin_password=None,
                      all_sxp_domain=None,
                      default_sgt_name=None,
                      enable_aci=None,
@@ -448,7 +472,11 @@ class AciSettings(object):
             id=id,
             aci50=aci50,
             aci51=aci51,
+            aciipaddress=aciipaddress,
+            acipassword=acipassword,
+            aciuser_name=aciuser_name,
             admin_name=admin_name,
+            admin_password=admin_password,
             all_sxp_domain=all_sxp_domain,
             default_sgt_name=default_sgt_name,
             enable_aci=enable_aci,

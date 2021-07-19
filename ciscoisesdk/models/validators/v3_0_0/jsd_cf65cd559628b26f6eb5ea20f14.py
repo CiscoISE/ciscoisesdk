@@ -43,13 +43,8 @@ class JSONSchemaValidatorCf65Cd559628B26F6Eb5Ea20F14(object):
         super(JSONSchemaValidatorCf65Cd559628B26F6Eb5Ea20F14, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
+                "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "cliDnisList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
                 "conditionType": {
                 "enum": [
                 "EndstationCondition",
@@ -58,9 +53,14 @@ class JSONSchemaValidatorCf65Cd559628B26F6Eb5Ea20F14(object):
                 ],
                 "type": "string"
                 },
-                "description":
-                 {
+                "conditions": {
+                "items": {
+                "properties": {
+                "cliDnisList": {
+                "items": {
                 "type": "string"
+                },
+                "type": "array"
                 },
                 "deviceGroupList": {
                 "items": {
@@ -74,15 +74,29 @@ class JSONSchemaValidatorCf65Cd559628B26F6Eb5Ea20F14(object):
                 },
                 "type": "array"
                 },
-                "id": {
-                "readOnly": true,
-                "type": "string"
-                },
                 "ipAddrList": {
                 "items": {
                 "type": "string"
                 },
                 "type": "array"
+                },
+                "macAddrList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "description":
+                 {
+                "type": "string"
+                },
+                "id": {
+                "type": "string"
                 },
                 "link": {
                 "properties": {
@@ -102,18 +116,19 @@ class JSONSchemaValidatorCf65Cd559628B26F6Eb5Ea20F14(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "href"
+                ],
                 "type": "object"
-                },
-                "macAddrList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
                 },
                 "name": {
                 "type": "string"
                 }
                 },
+                "required": [
+                "conditionType",
+                "name"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

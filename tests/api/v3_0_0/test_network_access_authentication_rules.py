@@ -93,6 +93,7 @@ def is_valid_create_network_access_authentication_rule(json_schema_validate, obj
 def create_network_access_authentication_rule(api):
     endpoint_result = api.network_access_authentication_rules.create_network_access_authentication_rule(
         active_validation=False,
+        identity_source_id='string',
         identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
@@ -122,6 +123,7 @@ def create_network_access_authentication_rule_default(api):
     endpoint_result = api.network_access_authentication_rules.create_network_access_authentication_rule(
         active_validation=False,
         policy_id='string',
+        identity_source_id=None,
         identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,
@@ -266,6 +268,7 @@ def update_network_access_authentication_rule_by_id(api):
     endpoint_result = api.network_access_authentication_rules.update_network_access_authentication_rule_by_id(
         active_validation=False,
         id='string',
+        identity_source_id='string',
         identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
@@ -296,6 +299,7 @@ def update_network_access_authentication_rule_by_id_default(api):
         active_validation=False,
         id='string',
         policy_id='string',
+        identity_source_id=None,
         identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,

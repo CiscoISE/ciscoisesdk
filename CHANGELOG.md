@@ -47,13 +47,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   + `version_` to `version_and_patch`
 - Rename function names
   + (BackupAndRestore) `schedule_config_backup` to `create_scheduled_config_backup`
-  + (Certificates) `export_trusted_certificate` to `export_trusted_cert`
   + (Certificates) `get_csr` to `get_csrs`
   + (Certificates) `get_csr_generator` to `get_csrs_generator`
-  + (Certificates) `import_system_certificate` to `import_system_cert`
-  + (Certificates) `import_trusted_certificate` to `import_trust_cert`
-  + (Certificates) `renew_certificate` to `renew_certs`
-  + (Certificates) `update_system_certificate` to `update_system_cert`
+  + (Certificates) `renew_certificate` to `renew_certificates`
+  + (Certificates) `export_system_cert` to `export_system_certificate`
+  + (Certificates) `export_trusted_cert` to `export_trusted_certificate`
   + (DeviceAdministrationAuthenticationRules) `create_device_admin_authentication_rules` to `create_device_admin_authentication_rule`
   + (DeviceAdministrationAuthorizationExceptionRules) `delete_device_admin_policyset_global_exception_by_id` to `delete_device_admin_policy_set_global_exception_by_rule_id`
   + (DeviceAdministrationAuthorizationExceptionRules) `get_device_admin_policy_set_global_exception` to `get_device_admin_policy_set_global_exception_rules`
@@ -86,10 +84,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   + (Node) `get_node_by_id` to `get_node_detail_by_id`
   + (Node) `get_node_by_name` to `get_node_detail_by_name`
   + (Node) `get_nodes` to `get_node_details`
-  + (PxGridSettings) `autoapprove_px_grid_node` => `autoapprove_px_grid_settings`
-  + (Repository) `delete_repository_by_name` => `delete_repository`
-  + (Repository) `get_repository_by_name` => `get_repository`
-  + (Repository) `update_repository_by_name` => `update_repository`
+  + (PxGridSettings) `autoapprove_px_grid_node` to `autoapprove_px_grid_settings`
+  + (Repository) `delete_repository_by_name` to `delete_repository`
+  + (Repository) `get_repository_by_name` to `get_repository`
+  + (Repository) `update_repository_by_name` to `update_repository`
 
 ### Removed
 - Removed module

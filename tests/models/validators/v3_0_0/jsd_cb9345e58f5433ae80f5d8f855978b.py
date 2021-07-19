@@ -90,6 +90,9 @@ class JSONSchemaValidatorCb9345E58F5433Ae80F5D8F855978B(object):
                 },
                 "name": {
                 "type": "string"
+                },
+                "parent": {
+                "type": "string"
                 }
                 },
                 "type": "object"

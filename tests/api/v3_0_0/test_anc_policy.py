@@ -142,7 +142,7 @@ def is_valid_update_anc_policy_by_id(json_schema_validate, obj):
 
 def update_anc_policy_by_id(api):
     endpoint_result = api.anc_policy.update_anc_policy_by_id(
-        action=['string'],
+        actions=['string'],
         active_validation=False,
         id='string',
         name='string',
@@ -168,7 +168,7 @@ def update_anc_policy_by_id_default(api):
     endpoint_result = api.anc_policy.update_anc_policy_by_id(
         active_validation=False,
         id='string',
-        action=None,
+        actions=None,
         name=None,
         payload=None
     )
@@ -310,7 +310,7 @@ def is_valid_create_anc_policy(json_schema_validate, obj):
 
 def create_anc_policy(api):
     endpoint_result = api.anc_policy.create_anc_policy(
-        action=['string'],
+        actions=['string'],
         active_validation=False,
         name='string',
         payload=None
@@ -334,7 +334,7 @@ def test_create_anc_policy(api, validator):
 def create_anc_policy_default(api):
     endpoint_result = api.anc_policy.create_anc_policy(
         active_validation=False,
-        action=None,
+        actions=None,
         name=None,
         payload=None
     )

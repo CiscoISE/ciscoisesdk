@@ -253,7 +253,7 @@ class AuthorizationProfile(object):
                                            advanced_attributes=None,
                                            agentless_posture=None,
                                            airespace_acl=None,
-                                           airespace_i_pv6_acl=None,
+                                           airespace_ipv6_acl=None,
                                            asa_vpn=None,
                                            authz_profile_type=None,
                                            auto_smart_port=None,
@@ -286,13 +286,13 @@ class AuthorizationProfile(object):
                 ACCESS_REJECT, property of the request
                 body.
             acl(string): acl, property of the request body.
-            advancedAttributes(list): advancedAttributes, property
+            advanced_attributes(list): advancedAttributes, property
                 of the request body (list of objects).
             agentless_posture(boolean): agentlessPosture, property
                 of the request body.
             airespace_acl(string): airespaceACL, property of the
                 request body.
-            airespace_i_pv6_acl(string): airespaceIPv6ACL, property
+            airespace_ipv6_acl(string): airespaceIPv6ACL, property
                 of the request body.
             asa_vpn(string): asaVpn, property of the request body.
             authz_profile_type(string): Allowed Values: SWITCH,
@@ -423,7 +423,7 @@ class AuthorizationProfile(object):
                 'airespaceACL':
                     airespace_acl,
                 'airespaceIPv6ACL':
-                    airespace_i_pv6_acl,
+                    airespace_ipv6_acl,
                 'webRedirection':
                     web_redirection,
                 'acl':
@@ -492,7 +492,7 @@ class AuthorizationProfile(object):
                      advanced_attributes=None,
                      agentless_posture=None,
                      airespace_acl=None,
-                     airespace_i_pv6_acl=None,
+                     airespace_ipv6_acl=None,
                      asa_vpn=None,
                      authz_profile_type=None,
                      auto_smart_port=None,
@@ -529,7 +529,7 @@ class AuthorizationProfile(object):
             advanced_attributes=advanced_attributes,
             agentless_posture=agentless_posture,
             airespace_acl=airespace_acl,
-            airespace_i_pv6_acl=airespace_i_pv6_acl,
+            airespace_ipv6_acl=airespace_ipv6_acl,
             asa_vpn=asa_vpn,
             authz_profile_type=authz_profile_type,
             auto_smart_port=auto_smart_port,
@@ -797,7 +797,7 @@ class AuthorizationProfile(object):
                                      advanced_attributes=None,
                                      agentless_posture=None,
                                      airespace_acl=None,
-                                     airespace_i_pv6_acl=None,
+                                     airespace_ipv6_acl=None,
                                      asa_vpn=None,
                                      authz_profile_type=None,
                                      auto_smart_port=None,
@@ -831,13 +831,13 @@ class AuthorizationProfile(object):
                 ACCESS_REJECT, property of the request
                 body.
             acl(string): acl, property of the request body.
-            advancedAttributes(list): advancedAttributes, property
+            advanced_attributes(list): advancedAttributes, property
                 of the request body (list of objects).
             agentless_posture(boolean): agentlessPosture, property
                 of the request body.
             airespace_acl(string): airespaceACL, property of the
                 request body.
-            airespace_i_pv6_acl(string): airespaceIPv6ACL, property
+            airespace_ipv6_acl(string): airespaceIPv6ACL, property
                 of the request body.
             asa_vpn(string): asaVpn, property of the request body.
             authz_profile_type(string): Allowed Values: SWITCH,
@@ -964,7 +964,7 @@ class AuthorizationProfile(object):
                 'airespaceACL':
                     airespace_acl,
                 'airespaceIPv6ACL':
-                    airespace_i_pv6_acl,
+                    airespace_ipv6_acl,
                 'webRedirection':
                     web_redirection,
                 'acl':
@@ -1031,7 +1031,7 @@ class AuthorizationProfile(object):
                advanced_attributes=None,
                agentless_posture=None,
                airespace_acl=None,
-               airespace_i_pv6_acl=None,
+               airespace_ipv6_acl=None,
                asa_vpn=None,
                authz_profile_type=None,
                auto_smart_port=None,
@@ -1068,7 +1068,7 @@ class AuthorizationProfile(object):
             advanced_attributes=advanced_attributes,
             agentless_posture=agentless_posture,
             airespace_acl=airespace_acl,
-            airespace_i_pv6_acl=airespace_i_pv6_acl,
+            airespace_ipv6_acl=airespace_ipv6_acl,
             asa_vpn=asa_vpn,
             authz_profile_type=authz_profile_type,
             auto_smart_port=auto_smart_port,

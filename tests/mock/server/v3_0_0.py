@@ -1318,7 +1318,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'ErsAncPolicy': {'id': 'string', 'name': 'string', 'action': ['string'], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'ErsAncPolicy': {'id': 'string', 'name': 'string', 'actions': ['string'], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1336,7 +1336,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'ErsAncPolicy': {'id': 'string', 'name': 'string', 'action': ['string'], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'ErsAncPolicy': {'id': 'string', 'name': 'string', 'actions': ['string'], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2084,7 +2084,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_export_system_cert_response(self):
+    def certificates_export_system_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2102,7 +2102,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_import_system_cert_response(self):
+    def certificates_import_system_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2156,7 +2156,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_update_system_cert_response(self):
+    def certificates_update_system_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2210,7 +2210,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_export_trusted_cert_response(self):
+    def certificates_export_trusted_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2228,7 +2228,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_import_trust_cert_response(self):
+    def certificates_import_trust_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -2308,7 +2308,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2326,7 +2326,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2362,7 +2362,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2380,7 +2380,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3028,7 +3028,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{}]}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3046,7 +3046,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3064,7 +3064,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3082,7 +3082,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3352,7 +3352,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3370,7 +3370,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3406,7 +3406,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3424,7 +3424,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        response_content = json.dumps({'response': {'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4234,7 +4234,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{}]}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4252,7 +4252,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4270,7 +4270,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4288,7 +4288,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}, 'version': 'string'})
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4612,7 +4612,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'AciSettings': {'id': 'string', 'enableAci': True, 'ipAddressHostName': 'string', 'adminName': 'string', 'tenantName': 'string', 'l3RouteNetwork': 'string', 'suffixToEpg': 'string', 'suffixToSgt': 'string', 'allSxpDomain': True, 'specificSxpDomain': True, 'specifixSxpDomainList': ['string'], 'enableDataPlane': True, 'untaggedPacketIepgName': 'string', 'defaultSgtName': 'string', 'enableElementsLimit': True, 'maxNumIepgFromAci': 0, 'maxNumSgtToAci': 0, 'aci50': True, 'aci51': True}})
+        response_content = json.dumps({'AciSettings': {'id': 'string', 'enableAci': True, 'ipAddressHostName': 'string', 'adminName': 'string', 'adminPassword': 'string', 'aciipaddress': 'string', 'aciuserName': 'string', 'acipassword': 'string', 'tenantName': 'string', 'l3RouteNetwork': 'string', 'suffixToEpg': 'string', 'suffixToSgt': 'string', 'allSxpDomain': True, 'specificSxpDomain': True, 'specifixSxpDomainList': ['string'], 'enableDataPlane': True, 'untaggedPacketIepgName': 'string', 'defaultSgtName': 'string', 'enableElementsLimit': True, 'maxNumIepgFromAci': 0, 'maxNumSgtToAci': 0, 'aci50': True, 'aci51': True}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4702,7 +4702,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'ERSActiveDirectory': {'groups': [{'groupName': 'string', 'sid': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'ERSActiveDirectoryGroups': {'groups': [{'groupName': 'string', 'sid': 'string', 'type': 'string'}]}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4756,7 +4756,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'ERSActiveDirectory': {'groups': [{'groupName': 'string', 'sid': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'ERSActiveDirectoryGroups': {'groups': [{'groupName': 'string', 'sid': 'string', 'type': 'string'}]}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4828,7 +4828,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'groups': [{'groupName': 'string', 'sid': 'string', 'type': 'string'}]})
+        response_content = json.dumps({'ERSActiveDirectoryGroups': {'groups': [{'groupName': 'string', 'sid': 'string', 'type': 'string'}]}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5008,7 +5008,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'AllowedProtocols': {'id': 'string', 'name': 'string', 'description': 'string', 'eapTls': {'allowEapTlsAuthOfExpiredCerts': True, 'eapTlsEnableStatelessSessionResume': True, 'eapTlsSessionTicketTtl': 0, 'eapTlsSessionTicketTtlUnits': 'string', 'eapTlsSessionTicketPrecentage': 0}, 'peap': {'allowPeapEapMsChapV2': True, 'allowPeapEapMsChapV2PwdChange': True, 'allowPeapEapMsChapV2PwdChangeRetries': 0, 'allowPeapEapGtc': True, 'allowPeapEapGtcPwdChange': True, 'allowPeapEapGtcPwdChangeRetries': 0, 'allowPeapEapTls': True, 'allowPeapEapTlsAuthOfExpiredCerts': True, 'requireCryptobinding': True, 'allowPeapV0': True}, 'eapFast': {'allowEapFastEapMsChapV2': True, 'allowEapFastEapMsChapV2PwdChange': True, 'allowEapFastEapMsChapV2PwdChangeRetries': 0, 'allowEapFastEapGtc': True, 'allowEapFastEapGtcPwdChange': True, 'allowEapFastEapGtcPwdChangeRetries': 0, 'allowEapFastEapTls': True, 'allowEapFastEapTlsAuthOfExpiredCerts': True, 'eapFastUsePacs': True, 'eapFastUsePacsTunnelPacTtl': 0, 'eapFastUsePacsTunnelPacTtlUnits': 'string', 'eapFastUsePacsUseProactivePacUpdatePrecentage': 0, 'eapFastUsePacsAllowAnonymProvisioning': True, 'eapFastUsePacsAllowAuthenProvisioning': True, 'eapFastUsePacsReturnAccessAcceptAfterAuthenticatedProvisioning': True, 'eapFastUsePacsAcceptClientCert': True, 'eapFastUsePacsMachinePacTtl': 0, 'eapFastUsePacsMachinePacTtlUnits': 'string', 'eapFastUsePacsAllowMachineAuthentication': True, 'eapFastUsePacsStatelessSessionResume': True, 'eapFastUsePacsAuthorizationPacTtl': 0, 'eapFastUsePacsAuthorizationPacTtlUnits': 'string', 'eapFastDontUsePacsAcceptClientCert': True, 'eapFastDontUsePacsAllowMachineAuthentication': True, 'eapFastEnableEAPChaining': True}, 'eapTtls': {'eapTtlsPapAscii': True, 'eapTtlsChap': True, 'eapTtlsMsChapV1': True, 'eapTtlsMsChapV2': True, 'eapTtlsEapMd5': True, 'eapTtlsEapMsChapV2': True, 'eapTtlsEapMsChapV2PwdChange': True, 'eapTtlsEapMsChapV2PwdChangeRetries': 0}, 'teap': {'allowTeapEapMsChapV2': True, 'allowTeapEapMsChapV2PwdChange': True, 'allowTeapEapMsChapV2PwdChangeRetries': 0, 'allowTeapEapTls': True, 'allowTeapEapTlsAuthOfExpiredCerts': True, 'acceptClientCertDuringTunnelEst': True, 'enableEapChaining': True, 'allowDowngradeMsk': True}, 'processHostLookup': True, 'allowPapAscii': True, 'allowChap': True, 'allowMsChapV1': True, 'allowMsChapV2': True, 'allowEapMd5': True, 'allowLeap': True, 'allowEapTls': True, 'allowEapTtls': True, 'allowEapFast': True, 'allowPeap': True, 'allowTeap': True, 'allowPreferredEapProtocol': True, 'preferredEapProtocol': 'string', 'eapTlsLBit': True, 'allowWeakCiphersForEap': True, 'requireMessageAuth': True, 'link1': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'AllowedProtocols': {'id': 'string', 'name': 'string', 'description': 'string', 'eapTls': {'allowEapTlsAuthOfExpiredCerts': True, 'eapTlsEnableStatelessSessionResume': True, 'eapTlsSessionTicketTtl': 0, 'eapTlsSessionTicketTtlUnits': 'string', 'eapTlsSessionTicketPrecentage': 0}, 'peap': {'allowPeapEapMsChapV2': True, 'allowPeapEapMsChapV2PwdChange': True, 'allowPeapEapMsChapV2PwdChangeRetries': 0, 'allowPeapEapGtc': True, 'allowPeapEapGtcPwdChange': True, 'allowPeapEapGtcPwdChangeRetries': 0, 'allowPeapEapTls': True, 'allowPeapEapTlsAuthOfExpiredCerts': True, 'requireCryptobinding': True, 'allowPeapV0': True}, 'eapFast': {'allowEapFastEapMsChapV2': True, 'allowEapFastEapMsChapV2PwdChange': True, 'allowEapFastEapMsChapV2PwdChangeRetries': 0, 'allowEapFastEapGtc': True, 'allowEapFastEapGtcPwdChange': True, 'allowEapFastEapGtcPwdChangeRetries': 0, 'allowEapFastEapTls': True, 'allowEapFastEapTlsAuthOfExpiredCerts': True, 'eapFastUsePacs': True, 'eapFastUsePacsTunnelPacTtl': 0, 'eapFastUsePacsTunnelPacTtlUnits': 'string', 'eapFastUsePacsUseProactivePacUpdatePrecentage': 0, 'eapFastUsePacsAllowAnonymProvisioning': True, 'eapFastUsePacsAllowAuthenProvisioning': True, 'eapFastUsePacsReturnAccessAcceptAfterAuthenticatedProvisioning': True, 'eapFastUsePacsAcceptClientCert': True, 'eapFastUsePacsMachinePacTtl': 0, 'eapFastUsePacsMachinePacTtlUnits': 'string', 'eapFastUsePacsAllowMachineAuthentication': True, 'eapFastUsePacsStatelessSessionResume': True, 'eapFastUsePacsAuthorizationPacTtl': 0, 'eapFastUsePacsAuthorizationPacTtlUnits': 'string', 'eapFastDontUsePacsAcceptClientCert': True, 'eapFastDontUsePacsAllowMachineAuthentication': True, 'eapFastEnableEAPChaining': True}, 'eapTtls': {'eapTtlsPapAscii': True, 'eapTtlsChap': True, 'eapTtlsMsChapV1': True, 'eapTtlsMsChapV2': True, 'eapTtlsEapMd5': True, 'eapTtlsEapMsChapV2': True, 'eapTtlsEapMsChapV2PwdChange': True, 'eapTtlsEapMsChapV2PwdChangeRetries': 0}, 'teap': {'allowTeapEapMsChapV2': True, 'allowTeapEapMsChapV2PwdChange': True, 'allowTeapEapMsChapV2PwdChangeRetries': 0, 'allowTeapEapTls': True, 'allowTeapEapTlsAuthOfExpiredCerts': True, 'acceptClientCertDuringTunnelEst': True, 'enableEapChaining': True, 'allowDowngradeMsk': True}, 'processHostLookup': True, 'allowPapAscii': True, 'allowChap': True, 'allowMsChapV1': True, 'allowMsChapV2': True, 'allowEapMd5': True, 'allowLeap': True, 'allowEapTls': True, 'allowEapTtls': True, 'allowEapFast': True, 'allowPeap': True, 'allowTeap': True, 'allowPreferredEapProtocol': True, 'preferredEapProtocol': 'string', 'eapTlsLBit': True, 'allowWeakCiphersForEap': True, 'requireMessageAuth': True, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5026,7 +5026,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'AllowedProtocols': {'id': 'string', 'name': 'string', 'description': 'string', 'eapTls': {'allowEapTlsAuthOfExpiredCerts': True, 'eapTlsEnableStatelessSessionResume': True, 'eapTlsSessionTicketTtl': 0, 'eapTlsSessionTicketTtlUnits': 'string', 'eapTlsSessionTicketPrecentage': 0}, 'peap': {'allowPeapEapMsChapV2': True, 'allowPeapEapMsChapV2PwdChange': True, 'allowPeapEapMsChapV2PwdChangeRetries': 0, 'allowPeapEapGtc': True, 'allowPeapEapGtcPwdChange': True, 'allowPeapEapGtcPwdChangeRetries': 0, 'allowPeapEapTls': True, 'allowPeapEapTlsAuthOfExpiredCerts': True, 'requireCryptobinding': True, 'allowPeapV0': True}, 'eapFast': {'allowEapFastEapMsChapV2': True, 'allowEapFastEapMsChapV2PwdChange': True, 'allowEapFastEapMsChapV2PwdChangeRetries': 0, 'allowEapFastEapGtc': True, 'allowEapFastEapGtcPwdChange': True, 'allowEapFastEapGtcPwdChangeRetries': 0, 'allowEapFastEapTls': True, 'allowEapFastEapTlsAuthOfExpiredCerts': True, 'eapFastUsePacs': True, 'eapFastUsePacsTunnelPacTtl': 0, 'eapFastUsePacsTunnelPacTtlUnits': 'string', 'eapFastUsePacsUseProactivePacUpdatePrecentage': 0, 'eapFastUsePacsAllowAnonymProvisioning': True, 'eapFastUsePacsAllowAuthenProvisioning': True, 'eapFastUsePacsReturnAccessAcceptAfterAuthenticatedProvisioning': True, 'eapFastUsePacsAcceptClientCert': True, 'eapFastUsePacsMachinePacTtl': 0, 'eapFastUsePacsMachinePacTtlUnits': 'string', 'eapFastUsePacsAllowMachineAuthentication': True, 'eapFastUsePacsStatelessSessionResume': True, 'eapFastUsePacsAuthorizationPacTtl': 0, 'eapFastUsePacsAuthorizationPacTtlUnits': 'string', 'eapFastDontUsePacsAcceptClientCert': True, 'eapFastDontUsePacsAllowMachineAuthentication': True, 'eapFastEnableEAPChaining': True}, 'eapTtls': {'eapTtlsPapAscii': True, 'eapTtlsChap': True, 'eapTtlsMsChapV1': True, 'eapTtlsMsChapV2': True, 'eapTtlsEapMd5': True, 'eapTtlsEapMsChapV2': True, 'eapTtlsEapMsChapV2PwdChange': True, 'eapTtlsEapMsChapV2PwdChangeRetries': 0}, 'teap': {'allowTeapEapMsChapV2': True, 'allowTeapEapMsChapV2PwdChange': True, 'allowTeapEapMsChapV2PwdChangeRetries': 0, 'allowTeapEapTls': True, 'allowTeapEapTlsAuthOfExpiredCerts': True, 'acceptClientCertDuringTunnelEst': True, 'enableEapChaining': True, 'allowDowngradeMsk': True}, 'processHostLookup': True, 'allowPapAscii': True, 'allowChap': True, 'allowMsChapV1': True, 'allowMsChapV2': True, 'allowEapMd5': True, 'allowLeap': True, 'allowEapTls': True, 'allowEapTtls': True, 'allowEapFast': True, 'allowPeap': True, 'allowTeap': True, 'allowPreferredEapProtocol': True, 'preferredEapProtocol': 'string', 'eapTlsLBit': True, 'allowWeakCiphersForEap': True, 'requireMessageAuth': True, 'link1': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'AllowedProtocols': {'id': 'string', 'name': 'string', 'description': 'string', 'eapTls': {'allowEapTlsAuthOfExpiredCerts': True, 'eapTlsEnableStatelessSessionResume': True, 'eapTlsSessionTicketTtl': 0, 'eapTlsSessionTicketTtlUnits': 'string', 'eapTlsSessionTicketPrecentage': 0}, 'peap': {'allowPeapEapMsChapV2': True, 'allowPeapEapMsChapV2PwdChange': True, 'allowPeapEapMsChapV2PwdChangeRetries': 0, 'allowPeapEapGtc': True, 'allowPeapEapGtcPwdChange': True, 'allowPeapEapGtcPwdChangeRetries': 0, 'allowPeapEapTls': True, 'allowPeapEapTlsAuthOfExpiredCerts': True, 'requireCryptobinding': True, 'allowPeapV0': True}, 'eapFast': {'allowEapFastEapMsChapV2': True, 'allowEapFastEapMsChapV2PwdChange': True, 'allowEapFastEapMsChapV2PwdChangeRetries': 0, 'allowEapFastEapGtc': True, 'allowEapFastEapGtcPwdChange': True, 'allowEapFastEapGtcPwdChangeRetries': 0, 'allowEapFastEapTls': True, 'allowEapFastEapTlsAuthOfExpiredCerts': True, 'eapFastUsePacs': True, 'eapFastUsePacsTunnelPacTtl': 0, 'eapFastUsePacsTunnelPacTtlUnits': 'string', 'eapFastUsePacsUseProactivePacUpdatePrecentage': 0, 'eapFastUsePacsAllowAnonymProvisioning': True, 'eapFastUsePacsAllowAuthenProvisioning': True, 'eapFastUsePacsReturnAccessAcceptAfterAuthenticatedProvisioning': True, 'eapFastUsePacsAcceptClientCert': True, 'eapFastUsePacsMachinePacTtl': 0, 'eapFastUsePacsMachinePacTtlUnits': 'string', 'eapFastUsePacsAllowMachineAuthentication': True, 'eapFastUsePacsStatelessSessionResume': True, 'eapFastUsePacsAuthorizationPacTtl': 0, 'eapFastUsePacsAuthorizationPacTtlUnits': 'string', 'eapFastDontUsePacsAcceptClientCert': True, 'eapFastDontUsePacsAllowMachineAuthentication': True, 'eapFastEnableEAPChaining': True}, 'eapTtls': {'eapTtlsPapAscii': True, 'eapTtlsChap': True, 'eapTtlsMsChapV1': True, 'eapTtlsMsChapV2': True, 'eapTtlsEapMd5': True, 'eapTtlsEapMsChapV2': True, 'eapTtlsEapMsChapV2PwdChange': True, 'eapTtlsEapMsChapV2PwdChangeRetries': 0}, 'teap': {'allowTeapEapMsChapV2': True, 'allowTeapEapMsChapV2PwdChange': True, 'allowTeapEapMsChapV2PwdChangeRetries': 0, 'allowTeapEapTls': True, 'allowTeapEapTlsAuthOfExpiredCerts': True, 'acceptClientCertDuringTunnelEst': True, 'enableEapChaining': True, 'allowDowngradeMsk': True}, 'processHostLookup': True, 'allowPapAscii': True, 'allowChap': True, 'allowMsChapV1': True, 'allowMsChapV2': True, 'allowEapMd5': True, 'allowLeap': True, 'allowEapTls': True, 'allowEapTtls': True, 'allowEapFast': True, 'allowPeap': True, 'allowTeap': True, 'allowPreferredEapProtocol': True, 'preferredEapProtocol': 'string', 'eapTlsLBit': True, 'allowWeakCiphersForEap': True, 'requireMessageAuth': True, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6070,7 +6070,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'ERSEndPoint': {'id': 'string', 'name': 'string', 'description': 'string', 'mac': 'string', 'profileId': 'string', 'staticProfileAssignment': True, 'groupId': 'string', 'staticGroupAssignment': True, 'portalUser': 'string', 'identityStore': 'string', 'identityStoreId': 'string', 'customAttributes': {'customAttributes': {}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'ERSEndPoint': {'id': 'string', 'name': 'string', 'description': 'string', 'mac': 'string', 'profileId': 'string', 'staticProfileAssignment': True, 'groupId': 'string', 'staticGroupAssignment': True, 'portalUser': 'string', 'identityStore': 'string', 'identityStoreId': 'string', 'mdmAttributes': {'mdmServerName': 'string', 'mdmReachable': True, 'mdmEnrolled': True, 'mdmComplianceStatus': True, 'mdmOS': 'string', 'mdmManufacturer': 'string', 'mdmModel': 'string', 'mdmSerial': 'string', 'mdmEncrypted': True, 'mdmPinlock': True, 'mdmJailBroken': True, 'mdmIMEI': 'string', 'mdmPhoneNumber': 'string'}, 'customAttributes': {'customAttributes': {}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6088,7 +6088,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'ERSEndPoint': {'id': 'string', 'name': 'string', 'description': 'string', 'mac': 'string', 'profileId': 'string', 'staticProfileAssignment': True, 'groupId': 'string', 'staticGroupAssignment': True, 'portalUser': 'string', 'identityStore': 'string', 'identityStoreId': 'string', 'customAttributes': {'customAttributes': {}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'ERSEndPoint': {'id': 'string', 'name': 'string', 'description': 'string', 'mac': 'string', 'profileId': 'string', 'staticProfileAssignment': True, 'groupId': 'string', 'staticGroupAssignment': True, 'portalUser': 'string', 'identityStore': 'string', 'identityStoreId': 'string', 'mdmAttributes': {'mdmServerName': 'string', 'mdmReachable': True, 'mdmEnrolled': True, 'mdmComplianceStatus': True, 'mdmOS': 'string', 'mdmManufacturer': 'string', 'mdmModel': 'string', 'mdmSerial': 'string', 'mdmEncrypted': True, 'mdmPinlock': True, 'mdmJailBroken': True, 'mdmIMEI': 'string', 'mdmPhoneNumber': 'string'}, 'customAttributes': {'customAttributes': {}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7474,7 +7474,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'IdStoreSequence': {'id': 'string', 'name': 'string', 'description': 'string', 'idSeqItem': [{'idstore': 'string', 'order': 0}], 'certificateAuthenticationProfile': 'string', 'breakOnStoreFail': True, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'IdStoreSequence': {'id': 'string', 'name': 'string', 'description': 'string', 'parent': 'string', 'idSeqItem': [{'idstore': 'string', 'order': 0}], 'certificateAuthenticationProfile': 'string', 'breakOnStoreFail': True, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7492,7 +7492,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'IdStoreSequence': {'id': 'string', 'name': 'string', 'description': 'string', 'idSeqItem': [{'idstore': 'string', 'order': 0}], 'certificateAuthenticationProfile': 'string', 'breakOnStoreFail': True, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'IdStoreSequence': {'id': 'string', 'name': 'string', 'description': 'string', 'parent': 'string', 'idSeqItem': [{'idstore': 'string', 'order': 0}], 'certificateAuthenticationProfile': 'string', 'breakOnStoreFail': True, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -12205,7 +12205,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_1b62a711ce705542b5d1d92b7d3ca431():
-            self.certificates_export_trusted_cert_response()
+            self.certificates_export_trusted_certificate_response()
             return
 
         if self.matches_CERTIFICATES_1091757f8f4956d29b821fa9bbf23266():
@@ -13343,15 +13343,15 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_1dbe47028859573988880de76fec0936():
-            self.certificates_export_system_cert_response()
+            self.certificates_export_system_certificate_response()
             return
 
         if self.matches_CERTIFICATES_517e6c7251a8508597f1b7ae61cbf953():
-            self.certificates_import_system_cert_response()
+            self.certificates_import_system_certificate_response()
             return
 
         if self.matches_CERTIFICATES_c8cd2f618b655d988ce626e579486596():
-            self.certificates_import_trust_cert_response()
+            self.certificates_import_trust_certificate_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c():
@@ -13793,7 +13793,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_48fb9c22ad9a5eddb590c85abdab460b():
-            self.certificates_update_system_cert_response()
+            self.certificates_update_system_certificate_response()
             return
 
         if self.matches_CERTIFICATES_239661cb625d5ad0ad76b93282f5818a():

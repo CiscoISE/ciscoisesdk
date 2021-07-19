@@ -88,6 +88,50 @@ class JSONSchemaValidatorEb8E0Ce63376573995A49178435F7747(object):
                 "mac": {
                 "type": "string"
                 },
+                "mdmAttributes": {
+                "properties": {
+                "mdmComplianceStatus": {
+                "type": "boolean"
+                },
+                "mdmEncrypted": {
+                "type": "boolean"
+                },
+                "mdmEnrolled": {
+                "type": "boolean"
+                },
+                "mdmIMEI": {
+                "type": "string"
+                },
+                "mdmJailBroken": {
+                "type": "boolean"
+                },
+                "mdmManufacturer": {
+                "type": "string"
+                },
+                "mdmModel": {
+                "type": "string"
+                },
+                "mdmOS": {
+                "type": "string"
+                },
+                "mdmPhoneNumber": {
+                "type": "string"
+                },
+                "mdmPinlock": {
+                "type": "boolean"
+                },
+                "mdmReachable": {
+                "type": "boolean"
+                },
+                "mdmSerial": {
+                "type": "string"
+                },
+                "mdmServerName": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },

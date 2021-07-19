@@ -149,6 +149,7 @@ def update_identity_sequence_by_id(api):
         id='string',
         id_seq_item=[{'idstore': 'string', 'order': 0}],
         name='string',
+        parent='string',
         payload=None
     )
     return endpoint_result
@@ -176,6 +177,7 @@ def update_identity_sequence_by_id_default(api):
         description=None,
         id_seq_item=None,
         name=None,
+        parent=None,
         payload=None
     )
     return endpoint_result
@@ -314,6 +316,7 @@ def create_identity_sequence(api):
         description='string',
         id_seq_item=[{'idstore': 'string', 'order': 0}],
         name='string',
+        parent='string',
         payload=None
     )
     return endpoint_result
@@ -340,6 +343,7 @@ def create_identity_sequence_default(api):
         description=None,
         id_seq_item=None,
         name=None,
+        parent=None,
         payload=None
     )
     return endpoint_result

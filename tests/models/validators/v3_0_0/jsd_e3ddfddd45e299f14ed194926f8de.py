@@ -225,7 +225,7 @@ class JSONSchemaValidatorE3DdfDdd45E299F14Ed194926F8De(object):
                 "id": {
                 "type": "string"
                 },
-                "link1": {
+                "link": {
                 "properties": {
                 "href": {
                 "type": "string"

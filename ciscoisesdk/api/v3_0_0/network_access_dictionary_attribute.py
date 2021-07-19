@@ -170,7 +170,7 @@ class NetworkAccessDictionaryAttribute(object):
         """Create a new Dictionary Attribute for an existing Dictionary.
 
         Args:
-            allowedValues(list): all of the allowed values for the
+            allowed_values(list): all of the allowed values for the
                 dictionary attribute, property of the
                 request body (list of objects).
             data_type(string): the data type for the dictionary
@@ -428,7 +428,7 @@ class NetworkAccessDictionaryAttribute(object):
         """Update a Dictionary Attribute.
 
         Args:
-            allowedValues(list): all of the allowed values for the
+            allowed_values(list): all of the allowed values for the
                 dictionary attribute, property of the
                 request body (list of objects).
             data_type(string): the data type for the dictionary

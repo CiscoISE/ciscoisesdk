@@ -45,6 +45,8 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "ERSActiveDirectoryGroups": {
+                "properties": {
                 "groups": {
                 "items": {
                 "properties": {
@@ -61,6 +63,9 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
                 "type": "object"
                 },
                 "type": "array"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"

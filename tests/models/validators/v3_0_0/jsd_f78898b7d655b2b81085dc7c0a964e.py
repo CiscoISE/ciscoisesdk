@@ -47,12 +47,6 @@ class JSONSchemaValidatorF78898B7D655B2B81085Dc7C0A964E(object):
                 "properties": {
                 "response": {
                 "properties": {
-                "cliDnisList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
                 "conditionType": {
                 "enum": [
                 "EndstationCondition",
@@ -61,9 +55,14 @@ class JSONSchemaValidatorF78898B7D655B2B81085Dc7C0A964E(object):
                 ],
                 "type": "string"
                 },
-                "description":
-                 {
+                "conditions": {
+                "items": {
+                "properties": {
+                "cliDnisList": {
+                "items": {
                 "type": "string"
+                },
+                "type": "array"
                 },
                 "deviceGroupList": {
                 "items": {
@@ -77,15 +76,29 @@ class JSONSchemaValidatorF78898B7D655B2B81085Dc7C0A964E(object):
                 },
                 "type": "array"
                 },
-                "id": {
-                "readOnly": true,
-                "type": "string"
-                },
                 "ipAddrList": {
                 "items": {
                 "type": "string"
                 },
                 "type": "array"
+                },
+                "macAddrList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "description":
+                 {
+                "type": "string"
+                },
+                "id": {
+                "type": "string"
                 },
                 "link": {
                 "properties": {
@@ -105,18 +118,19 @@ class JSONSchemaValidatorF78898B7D655B2B81085Dc7C0A964E(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "href"
+                ],
                 "type": "object"
-                },
-                "macAddrList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
                 },
                 "name": {
                 "type": "string"
                 }
                 },
+                "required": [
+                "conditionType",
+                "name"
+                ],
                 "type": "object"
                 },
                 "version": {

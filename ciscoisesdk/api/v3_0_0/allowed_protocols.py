@@ -264,7 +264,6 @@ class AllowedProtocols(object):
                                       eap_tls=None,
                                       eap_tls_l_bit=None,
                                       eap_ttls=None,
-                                      link1=None,
                                       name=None,
                                       peap=None,
                                       preferred_eap_protocol=None,
@@ -327,7 +326,6 @@ class AllowedProtocols(object):
                 property of the request body.
             id(string): Resource UUID, Mandatory for update,
                 property of the request body.
-            link1(object): link1, property of the request body.
             name(string): Resource Name, property of the request
                 body.
             peap(object): peap, property of the request body.
@@ -463,8 +461,6 @@ class AllowedProtocols(object):
                     allow_weak_ciphers_for_eap,
                 'requireMessageAuth':
                     require_message_auth,
-                'link1':
-                    link1,
             }
             _payload = {
                 'AllowedProtocols': dict_from_items_with_values(_tmp_payload)
@@ -510,7 +506,6 @@ class AllowedProtocols(object):
                      eap_tls=None,
                      eap_tls_l_bit=None,
                      eap_ttls=None,
-                     link1=None,
                      name=None,
                      peap=None,
                      preferred_eap_protocol=None,
@@ -545,7 +540,6 @@ class AllowedProtocols(object):
             eap_tls=eap_tls,
             eap_tls_l_bit=eap_tls_l_bit,
             eap_ttls=eap_ttls,
-            link1=link1,
             name=name,
             peap=peap,
             preferred_eap_protocol=preferred_eap_protocol,
@@ -811,8 +805,6 @@ class AllowedProtocols(object):
                                 eap_tls=None,
                                 eap_tls_l_bit=None,
                                 eap_ttls=None,
-                                id=None,
-                                link1=None,
                                 name=None,
                                 peap=None,
                                 preferred_eap_protocol=None,
@@ -873,9 +865,6 @@ class AllowedProtocols(object):
                 be ignored. The object eapTtls contains
                 the settings for EAP TTLS protocol,
                 property of the request body.
-            id(string): Resource UUID, Mandatory for update,
-                property of the request body.
-            link1(object): link1, property of the request body.
             name(string): Resource Name, property of the request
                 body.
             peap(object): peap, property of the request body.
@@ -957,8 +946,6 @@ class AllowedProtocols(object):
             _payload = payload
         else:
             _tmp_payload = {
-                'id':
-                    id,
                 'name':
                     name,
                 'description':
@@ -1007,8 +994,6 @@ class AllowedProtocols(object):
                     allow_weak_ciphers_for_eap,
                 'requireMessageAuth':
                     require_message_auth,
-                'link1':
-                    link1,
             }
             _payload = {
                 'AllowedProtocols': dict_from_items_with_values(_tmp_payload)
@@ -1052,8 +1037,6 @@ class AllowedProtocols(object):
                eap_tls=None,
                eap_tls_l_bit=None,
                eap_ttls=None,
-               id=None,
-               link1=None,
                name=None,
                peap=None,
                preferred_eap_protocol=None,
@@ -1087,8 +1070,6 @@ class AllowedProtocols(object):
             eap_tls=eap_tls,
             eap_tls_l_bit=eap_tls_l_bit,
             eap_ttls=eap_ttls,
-            id=id,
-            link1=link1,
             name=name,
             peap=peap,
             preferred_eap_protocol=preferred_eap_protocol,

@@ -93,7 +93,7 @@ def is_valid_update_security_group_by_id(json_schema_validate, obj):
 def update_security_group_by_id(api):
     endpoint_result = api.security_groups.update_security_group_by_id(
         active_validation=False,
-        default_sga_c_ls=[{}],
+        default_sgacls=[{}],
         description='string',
         generation_id=0,
         id='string',
@@ -123,7 +123,7 @@ def update_security_group_by_id_default(api):
     endpoint_result = api.security_groups.update_security_group_by_id(
         active_validation=False,
         id='string',
-        default_sga_c_ls=None,
+        default_sgacls=None,
         description=None,
         generation_id=None,
         is_read_only=None,
@@ -271,7 +271,7 @@ def is_valid_create_security_group(json_schema_validate, obj):
 def create_security_group(api):
     endpoint_result = api.security_groups.create_security_group(
         active_validation=False,
-        default_sga_c_ls=[{}],
+        default_sgacls=[{}],
         description='string',
         generation_id=0,
         is_read_only=True,
@@ -299,7 +299,7 @@ def test_create_security_group(api, validator):
 def create_security_group_default(api):
     endpoint_result = api.security_groups.create_security_group(
         active_validation=False,
-        default_sga_c_ls=None,
+        default_sgacls=None,
         description=None,
         generation_id=None,
         is_read_only=None,

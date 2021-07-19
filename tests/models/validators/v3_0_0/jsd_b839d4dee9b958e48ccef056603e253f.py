@@ -45,7 +45,7 @@ class JSONSchemaValidatorB839D4DeE9B958E48CceF056603E253F(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "ERSActiveDirectory": {
+                "ERSActiveDirectoryGroups": {
                 "properties": {
                 "groups": {
                 "items": {

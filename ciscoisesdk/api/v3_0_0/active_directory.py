@@ -170,7 +170,7 @@ class ActiveDirectory(object):
         is a member.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -429,7 +429,7 @@ class ActiveDirectory(object):
         domain.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -534,7 +534,7 @@ class ActiveDirectory(object):
         """This API verifies if the user is a member of the given groups.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -713,7 +713,7 @@ class ActiveDirectory(object):
         domain.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -819,7 +819,7 @@ class ActiveDirectory(object):
         Directory domain.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -924,7 +924,7 @@ class ActiveDirectory(object):
         """This API lists the groups of the given domain.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1200,7 +1200,7 @@ class ActiveDirectory(object):
         """This API joins a Cisco ISE node to an Active Directory domain.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request

@@ -177,7 +177,7 @@ class NativeSupplicantProfile(object):
                 request body.
             id(string): id, property of the request body.
             name(string): name, property of the request body.
-            wirelessProfiles(list): wirelessProfiles, property of
+            wireless_profiles(list): wirelessProfiles, property of
                 the request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request

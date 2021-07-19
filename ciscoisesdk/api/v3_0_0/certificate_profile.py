@@ -248,6 +248,7 @@ class CertificateProfile(object):
                                          id,
                                          allowed_as_user_name=None,
                                          certificate_attribute_name=None,
+                                         description=None,
                                          external_identity_store_name=None,
                                          match_mode=None,
                                          name=None,
@@ -274,6 +275,8 @@ class CertificateProfile(object):
                 ALL_SUBJECT_AND_ALTERNATIVE_NAMES is
                 used automatically when
                 usernameFrom=UPN, property of the
+                request body.
+            description(string): description, property of the
                 request body.
             external_identity_store_name(string): Referred IDStore
                 name for the Certificate Profile or [not
@@ -365,6 +368,8 @@ class CertificateProfile(object):
                     id,
                 'name':
                     name,
+                'description':
+                    description,
                 'externalIdentityStoreName':
                     external_identity_store_name,
                 'certificateAttributeName':
@@ -404,6 +409,7 @@ class CertificateProfile(object):
                      id,
                      allowed_as_user_name=None,
                      certificate_attribute_name=None,
+                     description=None,
                      external_identity_store_name=None,
                      match_mode=None,
                      name=None,
@@ -420,6 +426,7 @@ class CertificateProfile(object):
             id=id,
             allowed_as_user_name=allowed_as_user_name,
             certificate_attribute_name=certificate_attribute_name,
+            description=description,
             external_identity_store_name=external_identity_store_name,
             match_mode=match_mode,
             name=name,
@@ -582,6 +589,7 @@ class CertificateProfile(object):
     def create_certificate_profile(self,
                                    allowed_as_user_name=None,
                                    certificate_attribute_name=None,
+                                   description=None,
                                    external_identity_store_name=None,
                                    id=None,
                                    match_mode=None,
@@ -609,6 +617,8 @@ class CertificateProfile(object):
                 ALL_SUBJECT_AND_ALTERNATIVE_NAMES is
                 used automatically when
                 usernameFrom=UPN, property of the
+                request body.
+            description(string): description, property of the
                 request body.
             external_identity_store_name(string): Referred IDStore
                 name for the Certificate Profile or [not
@@ -696,6 +706,8 @@ class CertificateProfile(object):
                     id,
                 'name':
                     name,
+                'description':
+                    description,
                 'externalIdentityStoreName':
                     external_identity_store_name,
                 'certificateAttributeName':
@@ -733,6 +745,7 @@ class CertificateProfile(object):
     def create(self,
                allowed_as_user_name=None,
                certificate_attribute_name=None,
+               description=None,
                external_identity_store_name=None,
                id=None,
                match_mode=None,
@@ -749,6 +762,7 @@ class CertificateProfile(object):
         return self.create_certificate_profile(
             allowed_as_user_name=allowed_as_user_name,
             certificate_attribute_name=certificate_attribute_name,
+            description=description,
             external_identity_store_name=external_identity_store_name,
             id=id,
             match_mode=match_mode,

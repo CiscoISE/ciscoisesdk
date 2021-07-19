@@ -183,17 +183,17 @@ class RadiusServerSequence(object):
         """This API allows the client to update a RADIUS server sequence.
 
         Args:
-            BeforeAcceptAttrManipulatorsList(list): The
+            before_accept_attr_manipulators_list(list): The
                 beforeAcceptAttrManipulators is required
                 only if useAttrSetBeforeAcc is true,
                 property of the request body (list of
                 objects).
-            OnRequestAttrManipulatorList(list): The
+            on_request_attr_manipulator_list(list): The
                 onRequestAttrManipulators is required
                 only if useAttrSetOnRequest is true,
                 property of the request body (list of
                 objects).
-            RadiusServerList(list): RadiusServerList, property of
+            radius_server_list(list): RadiusServerList, property of
                 the request body (list of strings).
             continue_authorz_policy(boolean): continueAuthorzPolicy,
                 property of the request body.
@@ -646,17 +646,17 @@ class RadiusServerSequence(object):
         """This API creates a RADIUS server sequence.
 
         Args:
-            BeforeAcceptAttrManipulatorsList(list): The
+            before_accept_attr_manipulators_list(list): The
                 beforeAcceptAttrManipulators is required
                 only if useAttrSetBeforeAcc is true,
                 property of the request body (list of
                 objects).
-            OnRequestAttrManipulatorList(list): The
+            on_request_attr_manipulator_list(list): The
                 onRequestAttrManipulators is required
                 only if useAttrSetOnRequest is true,
                 property of the request body (list of
                 objects).
-            RadiusServerList(list): RadiusServerList, property of
+            radius_server_list(list): RadiusServerList, property of
                 the request body (list of strings).
             continue_authorz_policy(boolean): continueAuthorzPolicy,
                 property of the request body.

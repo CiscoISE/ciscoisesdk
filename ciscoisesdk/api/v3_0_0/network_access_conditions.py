@@ -280,7 +280,7 @@ class NetworkAccessConditions(object):
                 'greaterOrEquals', 'lessOrEquals',
                 'ipGreaterThan', 'ipLessThan',
                 'ipEquals' and 'ipNotEquals'.
-            weekDays(list): Defines for which days this condition
+            week_days(list): Defines for which days this condition
                 will be matched  Days format Arrays of
                 WeekDay enums   Default List of All week
                 days, property of the request body (list
@@ -288,7 +288,7 @@ class NetworkAccessConditions(object):
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
-            weekDaysException(list): Defines for which days this
+            week_days_exception(list): Defines for which days this
                 condition will NOT be matched  Days
                 format Arrays of WeekDay enums   Default
                 Not enabled, property of the request
@@ -757,7 +757,7 @@ class NetworkAccessConditions(object):
                 'greaterOrEquals', 'lessOrEquals',
                 'ipGreaterThan', 'ipLessThan',
                 'ipEquals' and 'ipNotEquals'.
-            weekDays(list): Defines for which days this condition
+            week_days(list): Defines for which days this condition
                 will be matched  Days format Arrays of
                 WeekDay enums   Default List of All week
                 days, property of the request body (list
@@ -765,7 +765,7 @@ class NetworkAccessConditions(object):
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
-            weekDaysException(list): Defines for which days this
+            week_days_exception(list): Defines for which days this
                 condition will NOT be matched  Days
                 format Arrays of WeekDay enums   Default
                 Not enabled, property of the request
@@ -1270,7 +1270,7 @@ class NetworkAccessConditions(object):
                 'greaterOrEquals', 'lessOrEquals',
                 'ipGreaterThan', 'ipLessThan',
                 'ipEquals' and 'ipNotEquals'.
-            weekDays(list): Defines for which days this condition
+            week_days(list): Defines for which days this condition
                 will be matched  Days format Arrays of
                 WeekDay enums   Default List of All week
                 days, property of the request body (list
@@ -1278,7 +1278,7 @@ class NetworkAccessConditions(object):
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
-            weekDaysException(list): Defines for which days this
+            week_days_exception(list): Defines for which days this
                 condition will NOT be matched  Days
                 format Arrays of WeekDay enums   Default
                 Not enabled, property of the request

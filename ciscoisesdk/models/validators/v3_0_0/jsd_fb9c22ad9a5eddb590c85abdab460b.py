@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateSystemCert data model.
+"""Identity Services Engine updateSystemCertificate data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorFb9C22Ad9A5EddB590C85Abdab460B(object):
-    """updateSystemCert request schema definition."""
+    """updateSystemCertificate request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorFb9C22Ad9A5EddB590C85Abdab460B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -47,7 +47,7 @@ class JSONSchemaValidatorA095B061F564EBba331F66505B0E3(object):
                 "properties": {
                 "ErsAncPolicy": {
                 "properties": {
-                "action": {
+                "actions": {
                 "items": {
                 "enum": [
                 "QUARANTINE",

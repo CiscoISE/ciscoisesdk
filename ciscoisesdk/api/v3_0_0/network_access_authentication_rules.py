@@ -154,6 +154,7 @@ class NetworkAccessAuthenticationRules(object):
 
     def create_network_access_authentication_rule(self,
                                                   policy_id,
+                                                  identity_source_id=None,
                                                   identity_source_name=None,
                                                   if_auth_fail=None,
                                                   if_process_fail=None,
@@ -175,6 +176,9 @@ class NetworkAccessAuthenticationRules(object):
         ConditionAndBlock, ConditionOrBlock .    .
 
         Args:
+            identity_source_id(string): Identity source id from the
+                identity stores, property of the request
+                body.
             identity_source_name(string): Identity source name from
                 the identity stores, property of the
                 request body.
@@ -250,6 +254,8 @@ class NetworkAccessAuthenticationRules(object):
             _payload = payload
         else:
             _payload = {
+                'identitySourceId':
+                    identity_source_id,
                 'identitySourceName':
                     identity_source_name,
                 'ifAuthFail':
@@ -286,6 +292,7 @@ class NetworkAccessAuthenticationRules(object):
 
     def create(self,
                policy_id,
+               identity_source_id=None,
                identity_source_name=None,
                if_auth_fail=None,
                if_process_fail=None,
@@ -302,6 +309,7 @@ class NetworkAccessAuthenticationRules(object):
         """
         return self.create_network_access_authentication_rule(
             policy_id=policy_id,
+            identity_source_id=identity_source_id,
             identity_source_name=identity_source_name,
             if_auth_fail=if_auth_fail,
             if_process_fail=if_process_fail,
@@ -481,6 +489,7 @@ class NetworkAccessAuthenticationRules(object):
     def update_network_access_authentication_rule_by_id(self,
                                                         id,
                                                         policy_id,
+                                                        identity_source_id=None,
                                                         identity_source_name=None,
                                                         if_auth_fail=None,
                                                         if_process_fail=None,
@@ -494,6 +503,9 @@ class NetworkAccessAuthenticationRules(object):
         """Network Access Update rule.
 
         Args:
+            identity_source_id(string): Identity source id from the
+                identity stores, property of the request
+                body.
             identity_source_name(string): Identity source name from
                 the identity stores, property of the
                 request body.
@@ -573,6 +585,8 @@ class NetworkAccessAuthenticationRules(object):
             _payload = payload
         else:
             _payload = {
+                'identitySourceId':
+                    identity_source_id,
                 'identitySourceName':
                     identity_source_name,
                 'ifAuthFail':
@@ -611,6 +625,7 @@ class NetworkAccessAuthenticationRules(object):
     def update_by_id(self,
                      id,
                      policy_id,
+                     identity_source_id=None,
                      identity_source_name=None,
                      if_auth_fail=None,
                      if_process_fail=None,
@@ -628,6 +643,7 @@ class NetworkAccessAuthenticationRules(object):
         return self.update_network_access_authentication_rule_by_id(
             id=id,
             policy_id=policy_id,
+            identity_source_id=identity_source_id,
             identity_source_name=identity_source_name,
             if_auth_fail=if_auth_fail,
             if_process_fail=if_process_fail,

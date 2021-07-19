@@ -246,7 +246,7 @@ class AncPolicy(object):
 
     def update_anc_policy_by_id(self,
                                 id,
-                                action=None,
+                                actions=None,
                                 name=None,
                                 headers=None,
                                 payload=None,
@@ -255,7 +255,7 @@ class AncPolicy(object):
         """This API allows the client to update an ANC policy.
 
         Args:
-            action(list): QUARANTINE: Allows you to use Exception
+            actions(list): QUARANTINE: Allows you to use Exception
                 policies (authorization policies) to
                 limit or deny an endpoint access to the
                 network. PORTBOUNCE: Resets the port on
@@ -340,8 +340,8 @@ class AncPolicy(object):
                     id,
                 'name':
                     name,
-                'action':
-                    action,
+                'actions':
+                    actions,
             }
             _payload = {
                 'ErsAncPolicy': dict_from_items_with_values(_tmp_payload)
@@ -369,7 +369,7 @@ class AncPolicy(object):
 
     def update_by_id(self,
                      id,
-                     action=None,
+                     actions=None,
                      name=None,
                      headers=None,
                      payload=None,
@@ -381,7 +381,7 @@ class AncPolicy(object):
         """
         return self.update_anc_policy_by_id(
             id=id,
-            action=action,
+            actions=actions,
             name=name,
             payload=payload,
             active_validation=active_validation,
@@ -744,7 +744,7 @@ class AncPolicy(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_anc_policy(self,
-                          action=None,
+                          actions=None,
                           name=None,
                           headers=None,
                           payload=None,
@@ -753,7 +753,7 @@ class AncPolicy(object):
         """This API allows the client to create an ANC policy.
 
         Args:
-            action(list): QUARANTINE: Allows you to use Exception
+            actions(list): QUARANTINE: Allows you to use Exception
                 policies (authorization policies) to
                 limit or deny an endpoint access to the
                 network. PORTBOUNCE: Resets the port on
@@ -831,8 +831,8 @@ class AncPolicy(object):
             _tmp_payload = {
                 'name':
                     name,
-                'action':
-                    action,
+                'actions':
+                    actions,
             }
             _payload = {
                 'ErsAncPolicy': dict_from_items_with_values(_tmp_payload)
@@ -858,7 +858,7 @@ class AncPolicy(object):
         return self._object_factory('bpm_acfdb4060de5a1895b383238c205986_v3_0_0', _api_response)
 
     def create(self,
-               action=None,
+               actions=None,
                name=None,
                headers=None,
                payload=None,
@@ -869,7 +869,7 @@ class AncPolicy(object):
         AncPolicy.create_anc_policy>`_
         """
         return self.create_anc_policy(
-            action=action,
+            actions=actions,
             name=name,
             payload=payload,
             active_validation=active_validation,

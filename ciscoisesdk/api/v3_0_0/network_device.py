@@ -181,10 +181,10 @@ class NetworkDevice(object):
         """This API allows the client to update a network device by name.
 
         Args:
-            NetworkDeviceGroupList(list): List of Network Device
+            network_device_group_list(list): List of Network Device
                 Group names for this node, property of
                 the request body (list of strings).
-            NetworkDeviceIPList(list): List of IP Subnets for this
+            network_device_iplist(list): List of IP Subnets for this
                 node, property of the request body (list
                 of objects).
             authentication_settings(object): authenticationSettings,
@@ -566,10 +566,10 @@ class NetworkDevice(object):
         """This API allows the client to update a network device by ID.
 
         Args:
-            NetworkDeviceGroupList(list): List of Network Device
+            network_device_group_list(list): List of Network Device
                 Group names for this node, property of
                 the request body (list of strings).
-            NetworkDeviceIPList(list): List of IP Subnets for this
+            network_device_iplist(list): List of IP Subnets for this
                 node, property of the request body (list
                 of objects).
             authentication_settings(object): authenticationSettings,
@@ -1136,10 +1136,10 @@ class NetworkDevice(object):
         """This API creates a network device.
 
         Args:
-            NetworkDeviceGroupList(list): List of Network Device
+            network_device_group_list(list): List of Network Device
                 Group names for this node, property of
                 the request body (list of strings).
-            NetworkDeviceIPList(list): List of IP Subnets for this
+            network_device_iplist(list): List of IP Subnets for this
                 node, property of the request body (list
                 of objects).
             authentication_settings(object): authenticationSettings,

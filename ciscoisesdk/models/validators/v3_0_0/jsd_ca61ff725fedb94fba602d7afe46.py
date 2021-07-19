@@ -45,6 +45,10 @@ class JSONSchemaValidatorCa61Ff725FedB94FBa602D7Afe46(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "identitySourceId": {
+                "default": "Internal Users",
+                "type": "string"
+                },
                 "identitySourceName": {
                 "default": "Internal Users",
                 "type": "string"

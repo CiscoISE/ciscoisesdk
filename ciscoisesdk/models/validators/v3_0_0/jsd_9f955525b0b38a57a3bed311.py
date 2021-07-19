@@ -53,6 +53,10 @@ class JSONSchemaValidator9F955525B0B38A57A3Bed311(object):
                 "certificateAttributeName": {
                 "type": "string"
                 },
+                "description":
+                 {
+                "type": "string"
+                },
                 "externalIdentityStoreName": {
                 "type": "string"
                 },

@@ -47,6 +47,10 @@ class JSONSchemaValidatorF1Ff2B82953F5131884F0779Db37190C(object):
                 "properties": {
                 "response": {
                 "properties": {
+                "identitySourceId": {
+                "default": "Internal Users",
+                "type": "string"
+                },
                 "identitySourceName": {
                 "default": "Internal Users",
                 "type": "string"

@@ -161,7 +161,7 @@ class SecurityGroups(object):
 
     def update_security_group_by_id(self,
                                     id,
-                                    default_sga_c_ls=None,
+                                    default_sgacls=None,
                                     description=None,
                                     generation_id=None,
                                     is_read_only=None,
@@ -175,7 +175,7 @@ class SecurityGroups(object):
         """This API allows the client to update a security group.
 
         Args:
-            defaultSGACLs(list): defaultSGACLs, property of the
+            default_sgacls(list): defaultSGACLs, property of the
                 request body (list of objects).
             description(string): description, property of the
                 request body.
@@ -270,7 +270,7 @@ class SecurityGroups(object):
                 'propogateToApic':
                     propogate_to_apic,
                 'defaultSGACLs':
-                    default_sga_c_ls,
+                    default_sgacls,
             }
             _payload = {
                 'Sgt': dict_from_items_with_values(_tmp_payload)
@@ -298,7 +298,7 @@ class SecurityGroups(object):
 
     def update_by_id(self,
                      id,
-                     default_sga_c_ls=None,
+                     default_sgacls=None,
                      description=None,
                      generation_id=None,
                      is_read_only=None,
@@ -315,7 +315,7 @@ class SecurityGroups(object):
         """
         return self.update_security_group_by_id(
             id=id,
-            default_sga_c_ls=default_sga_c_ls,
+            default_sgacls=default_sgacls,
             description=description,
             generation_id=generation_id,
             is_read_only=is_read_only,
@@ -685,7 +685,7 @@ class SecurityGroups(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_security_group(self,
-                              default_sga_c_ls=None,
+                              default_sgacls=None,
                               description=None,
                               generation_id=None,
                               is_read_only=None,
@@ -699,7 +699,7 @@ class SecurityGroups(object):
         """This API creates a security group.
 
         Args:
-            defaultSGACLs(list): defaultSGACLs, property of the
+            default_sgacls(list): defaultSGACLs, property of the
                 request body (list of objects).
             description(string): description, property of the
                 request body.
@@ -787,7 +787,7 @@ class SecurityGroups(object):
                 'propogateToApic':
                     propogate_to_apic,
                 'defaultSGACLs':
-                    default_sga_c_ls,
+                    default_sgacls,
             }
             _payload = {
                 'Sgt': dict_from_items_with_values(_tmp_payload)
@@ -813,7 +813,7 @@ class SecurityGroups(object):
         return self._object_factory('bpm_d0290eb241f5bd79221afc8d6cb32da_v3_0_0', _api_response)
 
     def create(self,
-               default_sga_c_ls=None,
+               default_sgacls=None,
                description=None,
                generation_id=None,
                is_read_only=None,
@@ -829,7 +829,7 @@ class SecurityGroups(object):
         SecurityGroups.create_security_group>`_
         """
         return self.create_security_group(
-            default_sga_c_ls=default_sga_c_ls,
+            default_sgacls=default_sgacls,
             description=description,
             generation_id=generation_id,
             is_read_only=is_read_only,

@@ -225,20 +225,6 @@ class JSONSchemaValidatorA0B312F70257B1Bfa90D0260F0C971(object):
                 "id": {
                 "type": "string"
                 },
-                "link1": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
                 "name": {
                 "type": "string"
                 },

@@ -168,7 +168,7 @@ class AncEndpoint(object):
         """This API allows the client to clear the required configuration.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -555,7 +555,7 @@ class AncEndpoint(object):
         """This API allows the client to apply the required configuration.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

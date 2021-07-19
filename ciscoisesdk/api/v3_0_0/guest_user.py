@@ -170,7 +170,7 @@ class GuestUser(object):
         """This API allows the client to change the sponsor password.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             portal_id(basestring): portalId path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -987,7 +987,7 @@ class GuestUser(object):
         """This API allows the client to update a guest user email by ID.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             portal_id(basestring): portalId path parameter.
@@ -2137,7 +2137,7 @@ class GuestUser(object):
         """This API allows the client to suspend a guest user by ID.
 
         Args:
-            additionalData(list): additionalData, property of the
+            additional_data(list): additionalData, property of the
                 request body (list of objects).
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
