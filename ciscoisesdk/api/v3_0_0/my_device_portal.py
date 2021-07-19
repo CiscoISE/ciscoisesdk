@@ -163,7 +163,6 @@ class MyDevicePortal(object):
                                       id,
                                       customizations=None,
                                       description=None,
-                                      link=None,
                                       name=None,
                                       portal_test_url=None,
                                       portal_type=None,
@@ -181,7 +180,6 @@ class MyDevicePortal(object):
             description(string): description, property of the
                 request body.
             id(string): id, property of the request body.
-            link(object): link, property of the request body.
             name(string): name, property of the request body.
             portal_test_url(string): URL to bring up a test page for
                 this portal, property of the request
@@ -273,8 +271,6 @@ class MyDevicePortal(object):
                     settings,
                 'customizations':
                     customizations,
-                'link':
-                    link,
             }
             _payload = {
                 'MyDevicePortal': dict_from_items_with_values(_tmp_payload)
@@ -304,7 +300,6 @@ class MyDevicePortal(object):
                      id,
                      customizations=None,
                      description=None,
-                     link=None,
                      name=None,
                      portal_test_url=None,
                      portal_type=None,
@@ -321,7 +316,6 @@ class MyDevicePortal(object):
             id=id,
             customizations=customizations,
             description=description,
-            link=link,
             name=name,
             portal_test_url=portal_test_url,
             portal_type=portal_type,
@@ -689,8 +683,6 @@ class MyDevicePortal(object):
     def create_my_device_portal(self,
                                 customizations=None,
                                 description=None,
-                                id=None,
-                                link=None,
                                 name=None,
                                 portal_test_url=None,
                                 portal_type=None,
@@ -707,8 +699,6 @@ class MyDevicePortal(object):
                 the request body.
             description(string): description, property of the
                 request body.
-            id(string): id, property of the request body.
-            link(object): link, property of the request body.
             name(string): name, property of the request body.
             portal_test_url(string): URL to bring up a test page for
                 this portal, property of the request
@@ -782,8 +772,6 @@ class MyDevicePortal(object):
             _payload = payload
         else:
             _tmp_payload = {
-                'id':
-                    id,
                 'name':
                     name,
                 'description':
@@ -796,8 +784,6 @@ class MyDevicePortal(object):
                     settings,
                 'customizations':
                     customizations,
-                'link':
-                    link,
             }
             _payload = {
                 'MyDevicePortal': dict_from_items_with_values(_tmp_payload)
@@ -825,8 +811,6 @@ class MyDevicePortal(object):
     def create(self,
                customizations=None,
                description=None,
-               id=None,
-               link=None,
                name=None,
                portal_test_url=None,
                portal_type=None,
@@ -842,8 +826,6 @@ class MyDevicePortal(object):
         return self.create_my_device_portal(
             customizations=customizations,
             description=description,
-            id=id,
-            link=link,
             name=name,
             portal_test_url=portal_test_url,
             portal_type=portal_type,

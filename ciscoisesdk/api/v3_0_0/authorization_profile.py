@@ -264,7 +264,6 @@ class AuthorizationProfile(object):
                                            interface_template=None,
                                            ipv6_acl_filter=None,
                                            ipv6_dacl_name=None,
-                                           link=None,
                                            mac_sec_policy=None,
                                            name=None,
                                            neat=None,
@@ -319,7 +318,6 @@ class AuthorizationProfile(object):
                 request body.
             ipv6_dacl_name(string): ipv6DaclName, property of the
                 request body.
-            link(object): link, property of the request body.
             mac_sec_policy(string): Allowed Values: MUST_SECURE,
                 MUST_NOT_SECURE, SHOULD_SECURE, property
                 of the request body.
@@ -462,8 +460,6 @@ class AuthorizationProfile(object):
                     profile_name,
                 'ipv6DaclName':
                     ipv6_dacl_name,
-                'link':
-                    link,
             }
             _payload = {
                 'AuthorizationProfile': dict_from_items_with_values(_tmp_payload)
@@ -507,7 +503,6 @@ class AuthorizationProfile(object):
                      interface_template=None,
                      ipv6_acl_filter=None,
                      ipv6_dacl_name=None,
-                     link=None,
                      mac_sec_policy=None,
                      name=None,
                      neat=None,
@@ -545,7 +540,6 @@ class AuthorizationProfile(object):
             interface_template=interface_template,
             ipv6_acl_filter=ipv6_acl_filter,
             ipv6_dacl_name=ipv6_dacl_name,
-            link=link,
             mac_sec_policy=mac_sec_policy,
             name=name,
             neat=neat,
@@ -815,7 +809,6 @@ class AuthorizationProfile(object):
                                      interface_template=None,
                                      ipv6_acl_filter=None,
                                      ipv6_dacl_name=None,
-                                     link=None,
                                      mac_sec_policy=None,
                                      name=None,
                                      neat=None,
@@ -870,7 +863,6 @@ class AuthorizationProfile(object):
                 request body.
             ipv6_dacl_name(string): ipv6DaclName, property of the
                 request body.
-            link(object): link, property of the request body.
             mac_sec_policy(string): Allowed Values: MUST_SECURE,
                 MUST_NOT_SECURE, SHOULD_SECURE, property
                 of the request body.
@@ -1009,8 +1001,6 @@ class AuthorizationProfile(object):
                     profile_name,
                 'ipv6DaclName':
                     ipv6_dacl_name,
-                'link':
-                    link,
             }
             _payload = {
                 'AuthorizationProfile': dict_from_items_with_values(_tmp_payload)
@@ -1053,7 +1043,6 @@ class AuthorizationProfile(object):
                interface_template=None,
                ipv6_acl_filter=None,
                ipv6_dacl_name=None,
-               link=None,
                mac_sec_policy=None,
                name=None,
                neat=None,
@@ -1091,7 +1080,6 @@ class AuthorizationProfile(object):
             interface_template=interface_template,
             ipv6_acl_filter=ipv6_acl_filter,
             ipv6_dacl_name=ipv6_dacl_name,
-            link=link,
             mac_sec_policy=mac_sec_policy,
             name=name,
             neat=neat,

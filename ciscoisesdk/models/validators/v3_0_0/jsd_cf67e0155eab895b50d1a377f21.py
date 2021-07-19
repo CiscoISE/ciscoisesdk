@@ -53,20 +53,6 @@ class JSONSchemaValidatorCf67E0155EaB895B50D1A377F21(object):
                 "ipAddressOrHost": {
                 "type": "string"
                 },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
                 "sgt": {
                 "type": "string"
                 },

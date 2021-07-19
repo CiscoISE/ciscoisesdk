@@ -166,7 +166,6 @@ class NetworkDevice(object):
                                       description=None,
                                       dtls_dns_name=None,
                                       id=None,
-                                      link=None,
                                       model_name=None,
                                       network_device_group_list=None,
                                       network_device_iplist=None,
@@ -199,7 +198,6 @@ class NetworkDevice(object):
                 RADIUS/DTLS client certificate, property
                 of the request body.
             id(string): id, property of the request body.
-            link(object): link, property of the request body.
             model_name(string): modelName, property of the request
                 body.
             name(string): name, property of the request body.
@@ -295,20 +293,18 @@ class NetworkDevice(object):
                     tacacs_settings,
                 'profileName':
                     profile_name,
-                'modelName':
-                    model_name,
-                'softwareVersion':
-                    software_version,
                 'coaPort':
                     coa_port,
                 'dtlsDnsName':
                     dtls_dns_name,
+                'modelName':
+                    model_name,
+                'softwareVersion':
+                    software_version,
                 'NetworkDeviceIPList':
                     network_device_iplist,
                 'NetworkDeviceGroupList':
                     network_device_group_list,
-                'link':
-                    link,
             }
             _payload = {
                 'NetworkDevice': dict_from_items_with_values(_tmp_payload)
@@ -341,7 +337,6 @@ class NetworkDevice(object):
                        description=None,
                        dtls_dns_name=None,
                        id=None,
-                       link=None,
                        model_name=None,
                        network_device_group_list=None,
                        network_device_iplist=None,
@@ -365,7 +360,6 @@ class NetworkDevice(object):
             description=description,
             dtls_dns_name=dtls_dns_name,
             id=id,
-            link=link,
             model_name=model_name,
             network_device_group_list=network_device_group_list,
             network_device_iplist=network_device_iplist,

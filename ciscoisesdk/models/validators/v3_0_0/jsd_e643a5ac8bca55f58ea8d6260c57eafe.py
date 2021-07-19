@@ -160,23 +160,6 @@ class JSONSchemaValidatorE643A5Ac8Bca55F58Ea8D6260C57Eafe(object):
                  {
                 "type": "string"
                 },
-                "id": {
-                "type": "string"
-                },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
                 "name": {
                 "type": "string"
                 },

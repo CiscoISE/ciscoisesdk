@@ -79,6 +79,23 @@ class JSONSchemaValidatorCba3F7Ace597DA668Acfbe00364Be(object):
                 },
                 "type": "object"
                 },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 }

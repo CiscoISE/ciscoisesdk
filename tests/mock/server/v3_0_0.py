@@ -9166,7 +9166,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'ERSRestIDStore': {'name': 'string', 'description': 'string', 'ersRestIDStoreAttributes': {'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]}}})
+        response_content = json.dumps({'ERSRestIDStore': {'id': 'string', 'name': 'string', 'description': 'string', 'ersRestIDStoreAttributes': {'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 

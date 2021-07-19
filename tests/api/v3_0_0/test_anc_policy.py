@@ -145,7 +145,6 @@ def update_anc_policy_by_id(api):
         action=['string'],
         active_validation=False,
         id='string',
-        link={'rel': 'string', 'href': 'string', 'type': 'string'},
         name='string',
         payload=None
     )
@@ -170,7 +169,6 @@ def update_anc_policy_by_id_default(api):
         active_validation=False,
         id='string',
         action=None,
-        link=None,
         name=None,
         payload=None
     )
@@ -314,8 +312,6 @@ def create_anc_policy(api):
     endpoint_result = api.anc_policy.create_anc_policy(
         action=['string'],
         active_validation=False,
-        id='string',
-        link={'rel': 'string', 'href': 'string', 'type': 'string'},
         name='string',
         payload=None
     )
@@ -339,8 +335,6 @@ def create_anc_policy_default(api):
     endpoint_result = api.anc_policy.create_anc_policy(
         active_validation=False,
         action=None,
-        id=None,
-        link=None,
         name=None,
         payload=None
     )

@@ -247,7 +247,6 @@ class AncPolicy(object):
     def update_anc_policy_by_id(self,
                                 id,
                                 action=None,
-                                link=None,
                                 name=None,
                                 headers=None,
                                 payload=None,
@@ -270,7 +269,6 @@ class AncPolicy(object):
                 'QUARANTINE', 'PORTBOUNCE', 'SHUTDOWN'
                 and 'RE_AUTHENTICATE').
             id(string): id, property of the request body.
-            link(object): link, property of the request body.
             name(string): name, property of the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -344,8 +342,6 @@ class AncPolicy(object):
                     name,
                 'action':
                     action,
-                'link':
-                    link,
             }
             _payload = {
                 'ErsAncPolicy': dict_from_items_with_values(_tmp_payload)
@@ -374,7 +370,6 @@ class AncPolicy(object):
     def update_by_id(self,
                      id,
                      action=None,
-                     link=None,
                      name=None,
                      headers=None,
                      payload=None,
@@ -387,7 +382,6 @@ class AncPolicy(object):
         return self.update_anc_policy_by_id(
             id=id,
             action=action,
-            link=link,
             name=name,
             payload=payload,
             active_validation=active_validation,
@@ -751,8 +745,6 @@ class AncPolicy(object):
 
     def create_anc_policy(self,
                           action=None,
-                          id=None,
-                          link=None,
                           name=None,
                           headers=None,
                           payload=None,
@@ -774,8 +766,6 @@ class AncPolicy(object):
                 (list of strings. Available values are
                 'QUARANTINE', 'PORTBOUNCE', 'SHUTDOWN'
                 and 'RE_AUTHENTICATE').
-            id(string): id, property of the request body.
-            link(object): link, property of the request body.
             name(string): name, property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -839,14 +829,10 @@ class AncPolicy(object):
             _payload = payload
         else:
             _tmp_payload = {
-                'id':
-                    id,
                 'name':
                     name,
                 'action':
                     action,
-                'link':
-                    link,
             }
             _payload = {
                 'ErsAncPolicy': dict_from_items_with_values(_tmp_payload)
@@ -873,8 +859,6 @@ class AncPolicy(object):
 
     def create(self,
                action=None,
-               id=None,
-               link=None,
                name=None,
                headers=None,
                payload=None,
@@ -886,8 +870,6 @@ class AncPolicy(object):
         """
         return self.create_anc_policy(
             action=action,
-            id=id,
-            link=link,
             name=name,
             payload=payload,
             active_validation=active_validation,

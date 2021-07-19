@@ -146,20 +146,6 @@ class JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F(object):
                 "ipv6DaclName": {
                 "type": "string"
                 },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
                 "macSecPolicy": {
                 "type": "string"
                 },

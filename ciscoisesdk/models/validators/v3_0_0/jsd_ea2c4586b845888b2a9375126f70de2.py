@@ -118,20 +118,6 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "id": {
                 "type": "string"
                 },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
                 "modelName": {
                 "type": "string"
                 },

@@ -79,23 +79,6 @@ class JSONSchemaValidatorC23243C950F29B51F502C03D7058(object):
                 },
                 "type": "object"
                 },
-                "id": {
-                "type": "string"
-                },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
                 "name": {
                 "type": "string"
                 }

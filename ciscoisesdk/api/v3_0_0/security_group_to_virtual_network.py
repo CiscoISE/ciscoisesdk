@@ -163,7 +163,6 @@ class SecurityGroupToVirtualNetwork(object):
     def update_security_groups_to_vn_to_vlan_by_id(self,
                                                    id,
                                                    description=None,
-                                                   link=None,
                                                    name=None,
                                                    sgt_id=None,
                                                    virtualnetworklist=None,
@@ -178,7 +177,6 @@ class SecurityGroupToVirtualNetwork(object):
             description(string): description, property of the
                 request body.
             id(string): id, property of the request body.
-            link(object): link, property of the request body.
             name(string): name, property of the request body.
             sgt_id(string): sgtId, property of the request body.
             virtualnetworklist(list): virtualnetworklist, property
@@ -259,8 +257,6 @@ class SecurityGroupToVirtualNetwork(object):
                     sgt_id,
                 'virtualnetworklist':
                     virtualnetworklist,
-                'link':
-                    link,
             }
             _payload = {
                 'SgtVNVlanContainer': dict_from_items_with_values(_tmp_payload)
@@ -289,7 +285,6 @@ class SecurityGroupToVirtualNetwork(object):
     def update_by_id(self,
                      id,
                      description=None,
-                     link=None,
                      name=None,
                      sgt_id=None,
                      virtualnetworklist=None,
@@ -304,7 +299,6 @@ class SecurityGroupToVirtualNetwork(object):
         return self.update_security_groups_to_vn_to_vlan_by_id(
             id=id,
             description=description,
-            link=link,
             name=name,
             sgt_id=sgt_id,
             virtualnetworklist=virtualnetworklist,
@@ -647,7 +641,6 @@ class SecurityGroupToVirtualNetwork(object):
     def create_security_groups_to_vn_to_vlan(self,
                                              description=None,
                                              id=None,
-                                             link=None,
                                              name=None,
                                              sgt_id=None,
                                              virtualnetworklist=None,
@@ -661,7 +654,6 @@ class SecurityGroupToVirtualNetwork(object):
             description(string): description, property of the
                 request body.
             id(string): id, property of the request body.
-            link(object): link, property of the request body.
             name(string): name, property of the request body.
             sgt_id(string): sgtId, property of the request body.
             virtualnetworklist(list): virtualnetworklist, property
@@ -738,8 +730,6 @@ class SecurityGroupToVirtualNetwork(object):
                     sgt_id,
                 'virtualnetworklist':
                     virtualnetworklist,
-                'link':
-                    link,
             }
             _payload = {
                 'SgtVNVlanContainer': dict_from_items_with_values(_tmp_payload)
@@ -767,7 +757,6 @@ class SecurityGroupToVirtualNetwork(object):
     def create(self,
                description=None,
                id=None,
-               link=None,
                name=None,
                sgt_id=None,
                virtualnetworklist=None,
@@ -782,7 +771,6 @@ class SecurityGroupToVirtualNetwork(object):
         return self.create_security_groups_to_vn_to_vlan(
             description=description,
             id=id,
-            link=link,
             name=name,
             sgt_id=sgt_id,
             virtualnetworklist=virtualnetworklist,

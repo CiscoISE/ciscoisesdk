@@ -162,7 +162,6 @@ class SxpLocalBindings(object):
     def update_sxp_local_bindings_by_id(self,
                                         id,
                                         ip_address_or_host=None,
-                                        link=None,
                                         sgt=None,
                                         sxp_vpn=None,
                                         vns=None,
@@ -177,7 +176,6 @@ class SxpLocalBindings(object):
             ip_address_or_host(string): IP address for static
                 mapping (hostname is not supported),
                 property of the request body.
-            link(object): link, property of the request body.
             sgt(string): SGT name or ID, property of the request
                 body.
             sxp_vpn(string): List of SXP Domains, separated with
@@ -264,8 +262,6 @@ class SxpLocalBindings(object):
                     sgt,
                 'vns':
                     vns,
-                'link':
-                    link,
             }
             _payload = {
                 'ERSSxpLocalBindings': dict_from_items_with_values(_tmp_payload)
@@ -294,7 +290,6 @@ class SxpLocalBindings(object):
     def update_by_id(self,
                      id,
                      ip_address_or_host=None,
-                     link=None,
                      sgt=None,
                      sxp_vpn=None,
                      vns=None,
@@ -309,7 +304,6 @@ class SxpLocalBindings(object):
         return self.update_sxp_local_bindings_by_id(
             id=id,
             ip_address_or_host=ip_address_or_host,
-            link=link,
             sgt=sgt,
             sxp_vpn=sxp_vpn,
             vns=vns,
@@ -676,7 +670,6 @@ class SxpLocalBindings(object):
     def create_sxp_local_bindings(self,
                                   id=None,
                                   ip_address_or_host=None,
-                                  link=None,
                                   sgt=None,
                                   sxp_vpn=None,
                                   vns=None,
@@ -691,7 +684,6 @@ class SxpLocalBindings(object):
             ip_address_or_host(string): IP address for static
                 mapping (hostname is not supported),
                 property of the request body.
-            link(object): link, property of the request body.
             sgt(string): SGT name or ID, property of the request
                 body.
             sxp_vpn(string): List of SXP Domains, separated with
@@ -774,8 +766,6 @@ class SxpLocalBindings(object):
                     sgt,
                 'vns':
                     vns,
-                'link':
-                    link,
             }
             _payload = {
                 'ERSSxpLocalBindings': dict_from_items_with_values(_tmp_payload)
@@ -803,7 +793,6 @@ class SxpLocalBindings(object):
     def create(self,
                id=None,
                ip_address_or_host=None,
-               link=None,
                sgt=None,
                sxp_vpn=None,
                vns=None,
@@ -818,7 +807,6 @@ class SxpLocalBindings(object):
         return self.create_sxp_local_bindings(
             id=id,
             ip_address_or_host=ip_address_or_host,
-            link=link,
             sgt=sgt,
             sxp_vpn=sxp_vpn,
             vns=vns,

@@ -256,7 +256,6 @@ def update_rest_id_store_by_id(api):
         description='string',
         ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]},
         id='string',
-        link={'rel': 'string', 'href': 'string', 'type': 'string'},
         name='string',
         payload=None
     )
@@ -282,7 +281,6 @@ def update_rest_id_store_by_id_default(api):
         id='string',
         description=None,
         ers_rest_idstore_attributes=None,
-        link=None,
         name=None,
         payload=None
     )
@@ -427,8 +425,6 @@ def create_rest_id_store(api):
         active_validation=False,
         description='string',
         ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': 'string', 'headers': [{'key': 'string', 'value': 'string'}]},
-        id='string',
-        link={'rel': 'string', 'href': 'string', 'type': 'string'},
         name='string',
         payload=None
     )
@@ -453,8 +449,6 @@ def create_rest_id_store_default(api):
         active_validation=False,
         description=None,
         ers_rest_idstore_attributes=None,
-        id=None,
-        link=None,
         name=None,
         payload=None
     )

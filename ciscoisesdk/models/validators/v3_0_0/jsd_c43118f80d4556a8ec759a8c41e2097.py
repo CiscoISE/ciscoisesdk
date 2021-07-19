@@ -146,20 +146,6 @@ class JSONSchemaValidatorC43118F80D4556A8Ec759A8C41E2097(object):
                 "ipv6DaclName": {
                 "type": "string"
                 },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
                 "macSecPolicy": {
                 "type": "string"
                 },
