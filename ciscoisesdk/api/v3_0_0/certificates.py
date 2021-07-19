@@ -837,12 +837,12 @@ class Certificates(object):
 
         return self._object_factory('bpm_e6d1b224e058288a8c4d70be72c9a6_v3_0_0', _api_response)
 
-    def renew_certs(self,
-                    cert_type=None,
-                    headers=None,
-                    payload=None,
-                    active_validation=True,
-                    **query_parameters):
+    def renew_certificates(self,
+                           cert_type=None,
+                           headers=None,
+                           payload=None,
+                           active_validation=True,
+                           **query_parameters):
         """This API will initiate regeneration of certificates. Response
         contains id which can be used to track the status.
 

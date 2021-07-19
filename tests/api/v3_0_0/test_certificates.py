@@ -443,7 +443,7 @@ def test_regenerate_ise_root_ca_default(api, validator):
             raise original_e
 
 
-def is_valid_renew_certs(json_schema_validate, obj):
+def is_valid_renew_certificates(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -454,8 +454,8 @@ def is_valid_renew_certs(json_schema_validate, obj):
     return True
 
 
-def renew_certs(api):
-    endpoint_result = api.certificates.renew_certs(
+def renew_certificates(api):
+    endpoint_result = api.certificates.renew_certificates(
         active_validation=False,
         cert_type='string',
         payload=None
@@ -464,11 +464,11 @@ def renew_certs(api):
 
 
 @pytest.mark.certificates
-def test_renew_certs(api, validator):
+def test_renew_certificates(api, validator):
     try:
-        assert is_valid_renew_certs(
+        assert is_valid_renew_certificates(
             validator,
-            renew_certs(api)
+            renew_certificates(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -476,8 +476,8 @@ def test_renew_certs(api, validator):
             raise original_e
 
 
-def renew_certs_default(api):
-    endpoint_result = api.certificates.renew_certs(
+def renew_certificates_default(api):
+    endpoint_result = api.certificates.renew_certificates(
         active_validation=False,
         cert_type=None,
         payload=None
@@ -486,11 +486,11 @@ def renew_certs_default(api):
 
 
 @pytest.mark.certificates
-def test_renew_certs_default(api, validator):
+def test_renew_certificates_default(api, validator):
     try:
-        assert is_valid_renew_certs(
+        assert is_valid_renew_certificates(
             validator,
-            renew_certs_default(api)
+            renew_certificates_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

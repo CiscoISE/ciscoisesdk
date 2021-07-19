@@ -2048,7 +2048,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_renew_certs_response(self):
+    def certificates_renew_certificates_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -13335,7 +13335,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_254c288192f954309b4b35aa612ff226():
-            self.certificates_renew_certs_response()
+            self.certificates_renew_certificates_response()
             return
 
         if self.matches_CERTIFICATES_2b94d7d3f0ed5d0b938151ae2cae9fa4():
