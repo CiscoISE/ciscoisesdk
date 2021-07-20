@@ -265,7 +265,11 @@ class RestSession(object):
             if save_file and resp.headers and resp.headers.get('Content-Disposition'):
                 try:
                     content = resp.headers.get('Content-Disposition')
-                    (content_file_name,) = re.search('filename="(.*)"', content).groups()
+                    content_file_list = re.findall('filename=(.*)', content)
+                    if len(content_file_list) > 0:
+                        content_file_name = content_file_list[0].replace('"', '')
+                    else:
+                        content_file_name = 'result_file'
                     file_name = os.path.join(dirpath,
                                              content_file_name)
                     with open(file_name, 'wb') as f:
