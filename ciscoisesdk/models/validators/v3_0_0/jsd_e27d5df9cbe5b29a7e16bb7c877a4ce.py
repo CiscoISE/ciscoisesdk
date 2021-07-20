@@ -45,7 +45,7 @@ class JSONSchemaValidatorE27D5Df9Cbe5B29A7E16Bb7C877A4Ce(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "ERSEndPoint": {
+                "ERSEndPointCert": {
                 "properties": {
                 "certTemplateName": {
                 "type": "string"

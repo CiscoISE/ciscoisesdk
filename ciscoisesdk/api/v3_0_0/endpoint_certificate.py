@@ -175,7 +175,7 @@ class EndpointCertificate(object):
                     certificate_request,
             }
             _payload = {
-                'ERSEndPoint': dict_from_items_with_values(_tmp_payload)
+                'ERSEndPointCert': dict_from_items_with_values(_tmp_payload)
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
