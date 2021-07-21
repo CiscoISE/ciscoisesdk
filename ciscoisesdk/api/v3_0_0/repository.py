@@ -87,10 +87,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -128,6 +130,18 @@ class Repository(object):
 
         return self._object_factory('bpm_f9081a48e3c5f4fae5aa00f889216dd_v3_0_0', _api_response)
 
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_repositories <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.get_repositories>`_
+        """
+        return self.get_repositories(
+            headers=headers,
+            **query_parameters
+        )
+
     def create_repository(self,
                           enable_pki=None,
                           name=None,
@@ -146,19 +160,27 @@ class Repository(object):
         Args:
             enable_pki(boolean): enablePki, property of the request
                 body.
-            name(string): name, property of the request body.
+            name(string): Repository name should be less than 80
+                characters and can contain alphanumeric,
+                underscore, hyphen and dot characters.,
+                property of the request body.
                 Constraints: maxLength set to 80 and
                 minLength set to 1.
-            password(string): password, property of the request
-                body.
-            path(string): path, property of the request body.
+            password(string): Password can contain alphanumeric
+                and/or special characters., property of
+                the request body.
+            path(string): Path should always start with "/" and can
+                contain alphanumeric, underscore, hyphen
+                and dot characters., property of the
+                request body.
             protocol(string): protocol, property of the request
                 body. Available values are 'DISK',
                 'FTP', 'SFTP', 'TFTP', 'NFS', 'CDROM',
                 'HTTP' and 'HTTPS'.
             server_name(string): serverName, property of the request
                 body.
-            user_name(string): userName, property of the request
+            user_name(string): Username can contain alphanumeric
+                characters., property of the request
                 body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -170,10 +192,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -215,12 +239,12 @@ class Repository(object):
                     protocol,
                 'path':
                     path,
+                'password':
+                    password,
                 'serverName':
                     server_name,
                 'userName':
                     user_name,
-                'password':
-                    password,
                 'enablePki':
                     enable_pki,
             }
@@ -244,10 +268,40 @@ class Repository(object):
 
         return self._object_factory('bpm_a207a157244508c99bf3e9abb26aab8_v3_0_0', _api_response)
 
-    def get_repository_by_name(self,
-                               name,
-                               headers=None,
-                               **query_parameters):
+    def create(self,
+               enable_pki=None,
+               name=None,
+               password=None,
+               path=None,
+               protocol=None,
+               server_name=None,
+               user_name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_repository <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.create_repository>`_
+        """
+        return self.create_repository(
+            enable_pki=enable_pki,
+            name=name,
+            password=password,
+            path=path,
+            protocol=protocol,
+            server_name=server_name,
+            user_name=user_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
+    def get_repository(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
         """Get a specific repository identified by the name passed in the
         URL. .
 
@@ -260,10 +314,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -304,37 +360,59 @@ class Repository(object):
 
         return self._object_factory('bpm_c785067a5a5e3283f96dd5006c7865_v3_0_0', _api_response)
 
-    def update_repository_by_name(self,
-                                  name,
-                                  enable_pki=None,
-                                  password=None,
-                                  path=None,
-                                  protocol=None,
-                                  server_name=None,
-                                  user_name=None,
-                                  headers=None,
-                                  payload=None,
-                                  active_validation=True,
-                                  **query_parameters):
+    def get_by_name(self,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_repository <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.get_repository>`_
+        """
+        return self.get_repository(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
+    def update_repository(self,
+                          name,
+                          enable_pki=None,
+                          password=None,
+                          path=None,
+                          protocol=None,
+                          server_name=None,
+                          user_name=None,
+                          headers=None,
+                          payload=None,
+                          active_validation=True,
+                          **query_parameters):
         """Update the definition of a specific repository, providing ALL
         parameters for the repository. .
 
         Args:
             enable_pki(boolean): enablePki, property of the request
                 body.
-            name(string): name, property of the request body.
+            name(string): Repository name should be less than 80
+                characters and can contain alphanumeric,
+                underscore, hyphen and dot characters.,
+                property of the request body.
                 Constraints: maxLength set to 80 and
                 minLength set to 1.
-            password(string): password, property of the request
-                body.
-            path(string): path, property of the request body.
+            password(string): Password can contain alphanumeric
+                and/or special characters., property of
+                the request body.
+            path(string): Path should always start with "/" and can
+                contain alphanumeric, underscore, hyphen
+                and dot characters., property of the
+                request body.
             protocol(string): protocol, property of the request
                 body. Available values are 'DISK',
                 'FTP', 'SFTP', 'TFTP', 'NFS', 'CDROM',
                 'HTTP' and 'HTTPS'.
             server_name(string): serverName, property of the request
                 body.
-            user_name(string): userName, property of the request
+            user_name(string): Username can contain alphanumeric
+                characters., property of the request
                 body.
             name(basestring): name path parameter. Unique name for a
                 repository.
@@ -348,10 +426,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -396,12 +476,12 @@ class Repository(object):
                     protocol,
                 'path':
                     path,
+                'password':
+                    password,
                 'serverName':
                     server_name,
                 'userName':
                     user_name,
-                'password':
-                    password,
                 'enablePki':
                     enable_pki,
             }
@@ -426,10 +506,40 @@ class Repository(object):
 
         return self._object_factory('bpm_e380a5c1d585ab9012874ca959982_v3_0_0', _api_response)
 
-    def delete_repository_by_name(self,
-                                  name,
-                                  headers=None,
-                                  **query_parameters):
+    def update_by_name(self,
+                       name,
+                       enable_pki=None,
+                       password=None,
+                       path=None,
+                       protocol=None,
+                       server_name=None,
+                       user_name=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
+        """Alias for `update_repository <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.update_repository>`_
+        """
+        return self.update_repository(
+            name=name,
+            enable_pki=enable_pki,
+            password=password,
+            path=path,
+            protocol=protocol,
+            server_name=server_name,
+            user_name=user_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
+    def delete_repository(self,
+                          name,
+                          headers=None,
+                          **query_parameters):
         """Long description TBD .
 
         Args:
@@ -441,10 +551,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -485,6 +597,20 @@ class Repository(object):
 
         return self._object_factory('bpm_c3a2e8960455547da94117ef465db97f_v3_0_0', _api_response)
 
+    def delete_by_name(self,
+                       name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_repository <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.delete_repository>`_
+        """
+        return self.delete_repository(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_repository_files(self,
                              name,
                              headers=None,
@@ -501,10 +627,12 @@ class Repository(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -544,3 +672,17 @@ class Repository(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c9dea644f40453fead2b003b06c4c52b_v3_0_0', _api_response)
+
+    def get_files(self,
+                  name,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_repository_files <#ciscoisesdk.
+        api.v3_0_0.repository.
+        Repository.get_repository_files>`_
+        """
+        return self.get_repository_files(
+            name=name,
+            headers=headers,
+            **query_parameters
+        )

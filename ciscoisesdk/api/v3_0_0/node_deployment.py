@@ -74,9 +74,9 @@ class NodeDeployment(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_nodes(self,
-                      headers=None,
-                      **query_parameters):
+    def get_nodes(self,
+                  headers=None,
+                  **query_parameters):
         """Discovers all deployment nodes in the cluster. It provides basic
         information about each of deployed nodes in the cluster
         like Hostname, personas, status, roles and services. .
@@ -88,10 +88,12 @@ class NodeDeployment(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -166,10 +168,12 @@ class NodeDeployment(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -265,10 +269,12 @@ class NodeDeployment(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -344,10 +350,12 @@ class NodeDeployment(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -388,6 +396,20 @@ class NodeDeployment(object):
 
         return self._object_factory('bpm_ae8d7c8f33bb52ceb04880845f2f45ba_v3_0_0', _api_response)
 
+    def get_all(self,
+                hostname,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_node_details <#ciscoisesdk.
+        api.v3_0_0.node_deployment.
+        NodeDeployment.get_node_details>`_
+        """
+        return self.get_node_details(
+            hostname=hostname,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_node(self,
                     hostname,
                     general_settings=None,
@@ -415,10 +437,12 @@ class NodeDeployment(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -505,10 +529,12 @@ class NodeDeployment(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

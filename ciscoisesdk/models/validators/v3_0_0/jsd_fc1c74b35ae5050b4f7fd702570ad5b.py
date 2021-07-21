@@ -69,9 +69,6 @@ class JSONSchemaValidatorFc1C74B35Ae5050B4F7Fd702570Ad5B(object):
                 "hostIP": {
                 "type": "string"
                 },
-                "id": {
-                "type": "string"
-                },
                 "keyInputFormat": {
                 "type": "string"
                 },

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllByodPortal data model.
+"""Identity Services Engine getByodPortal data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA23B580495514394B125800E073C9A(object):
-    """getAllByodPortal request schema definition."""
+    """getByodPortal request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA23B580495514394B125800E073C9A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -47,6 +47,40 @@ class JSONSchemaValidatorA23B580495514394B125800E073C9A(object):
                 "properties": {
                 "SearchResult": {
                 "properties": {
+                "nextPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "resources": {
                 "items": {
                 "properties": {
@@ -69,11 +103,6 @@ class JSONSchemaValidatorA23B580495514394B125800E073C9A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -88,16 +117,9 @@ class JSONSchemaValidatorA23B580495514394B125800E073C9A(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

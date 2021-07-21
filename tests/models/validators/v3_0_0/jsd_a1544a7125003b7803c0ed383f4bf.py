@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllIPToSGTMappingGroup data model.
+"""Identity Services Engine getIPToSGTMappingGroup data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA1544A7125003B7803C0Ed383F4Bf(object):
-    """getAllIPToSGTMappingGroup request schema definition."""
+    """getIPToSGTMappingGroup request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA1544A7125003B7803C0Ed383F4Bf, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -48,6 +48,7 @@ class JSONSchemaValidatorA1544A7125003B7803C0Ed383F4Bf(object):
                 "SearchResult": {
                 "properties": {
                 "nextPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -60,8 +61,11 @@ class JSONSchemaValidatorA1544A7125003B7803C0Ed383F4Bf(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "previousPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -74,14 +78,12 @@ class JSONSchemaValidatorA1544A7125003B7803C0Ed383F4Bf(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "resources": {
                 "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
                 "id": {
                 "type": "string"
                 },
@@ -114,9 +116,6 @@ class JSONSchemaValidatorA1544A7125003B7803C0Ed383F4Bf(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

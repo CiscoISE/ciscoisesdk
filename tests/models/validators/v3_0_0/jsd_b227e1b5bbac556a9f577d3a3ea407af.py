@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllNetworkAccessProfiles data model.
+"""Identity Services Engine getNetworkAccessProfiles data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,14 +38,25 @@ from builtins import *
 
 
 class JSONSchemaValidatorB227E1B5Bbac556A9F577D3A3Ea407Af(object):
-    """getAllNetworkAccessProfiles request schema definition."""
+    """getNetworkAccessProfiles request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB227E1B5Bbac556A9F577D3A3Ea407Af, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
+                "properties": {
+                "id": {
                 "type": "string"
+                },
+                "name": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "name"
+                ],
+                "type": "object"
                 },
                 "type": "array"
                 }'''.replace("\n" + ' ' * 16, '')

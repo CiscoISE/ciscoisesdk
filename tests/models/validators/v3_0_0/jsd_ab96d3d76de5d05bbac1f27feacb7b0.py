@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllNetworkAccessDictionariesAuthentication data model.
+"""Identity Services Engine getNetworkAccessDictionariesAuthentication data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,13 +38,15 @@ from builtins import *
 
 
 class JSONSchemaValidatorAb96D3D76De5D05Bbac1F27Feacb7B0(object):
-    """getAllNetworkAccessDictionariesAuthentication request schema
+    """getNetworkAccessDictionariesAuthentication request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorAb96D3D76De5D05Bbac1F27Feacb7B0, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
                 "properties": {
                 "allowedValues": {
@@ -61,6 +63,10 @@ class JSONSchemaValidatorAb96D3D76De5D05Bbac1F27Feacb7B0(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "key",
+                "value"
+                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -110,9 +116,24 @@ class JSONSchemaValidatorAb96D3D76De5D05Bbac1F27Feacb7B0(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "dataType",
+                "internalName",
+                "name"
+                ],
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

@@ -76,27 +76,14 @@ class JSONSchemaValidatorC54A2Ad63F46527DBec140A05F1213B7(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "ssid",
-                "allowedProtocol",
-                "actionType",
-                "previousSsid"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "name",
-                "wirelessProfiles"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSNSPProfile"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

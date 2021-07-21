@@ -45,13 +45,16 @@ class JSONSchemaValidatorA207A157244508C99Bf3E9Abb26Aab8(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "response": {
+                "success": {
                 "properties": {
-                "error": {
+                "message": {
                 "type": "string"
                 }
                 },
                 "type": "object"
+                },
+                "version": {
+                "type": "string"
                 }
                 },
                 "type": "object"

@@ -60,6 +60,29 @@ class JSONSchemaValidatorA57687Cef65891A6F48Dd17F456C4E(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -67,6 +90,11 @@ class JSONSchemaValidatorA57687Cef65891A6F48Dd17F456C4E(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "dictionaryAttrType",
+                "name",
+                "version"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

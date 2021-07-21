@@ -50,7 +50,7 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
                 "groups": {
                 "items": {
                 "properties": {
-                "name": {
+                "groupName": {
                 "type": "string"
                 },
                 "sid": {
@@ -65,15 +65,9 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
                 "type": "array"
                 }
                 },
-                "required": [
-                "groups"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSActiveDirectoryGroups"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -72,6 +72,26 @@ class JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"
@@ -106,8 +126,8 @@ class JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952(object):
                 }
                 },
                 "required": [
-                "startDate",
-                "endDate"
+                "endDate",
+                "startDate"
                 ],
                 "type": "object"
                 },
@@ -125,8 +145,8 @@ class JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952(object):
                 }
                 },
                 "required": [
-                "startDate",
-                "endDate"
+                "endDate",
+                "startDate"
                 ],
                 "type": "object"
                 },
@@ -151,8 +171,8 @@ class JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952(object):
                 }
                 },
                 "required": [
-                "startTime",
-                "endTime"
+                "endTime",
+                "startTime"
                 ],
                 "type": "object"
                 },
@@ -166,8 +186,8 @@ class JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952(object):
                 }
                 },
                 "required": [
-                "startTime",
-                "endTime"
+                "endTime",
+                "startTime"
                 ],
                 "type": "object"
                 },
@@ -177,6 +197,26 @@ class JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "name": {
                 "type": "string"
@@ -198,40 +238,14 @@ class JSONSchemaValidatorA4D5B5Da6A50BfAaecC180543Fd952(object):
                 "lessThan",
                 "greaterOrEquals",
                 "lessOrEquals",
-                "macEquals",
-                "macNotEquals",
-                "macNotIn",
-                "macIn",
-                "macStartsWith",
-                "macNotStartsWith",
-                "macEndsWith",
-                "macNotEndsWith",
-                "macContains",
-                "macNotContains",
                 "ipGreaterThan",
                 "ipLessThan",
                 "ipEquals",
-                "ipNotEquals",
-                "dateTimeMatches",
-                "dateLessThan",
-                "dateLessThanOrEquals",
-                "dateGreaterThan",
-                "dateGreaterThanOrEquals",
-                "dateEquals",
-                "dateNotEquals"
+                "ipNotEquals"
                 ],
                 "type": "string"
                 },
                 "weekDays": {
-                "default": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-                ],
                 "items": {
                 "enum": [
                 "Sunday",

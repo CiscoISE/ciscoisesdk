@@ -53,7 +53,13 @@ class JSONSchemaValidatorDd838B268F5Dd298A123Ac58448Ea9(object):
                 "deployType": {
                 "type": "string"
                 },
+                "hostIp": {
+                "type": "string"
+                },
                 "hostName": {
+                "type": "string"
+                },
+                "mappingGroup": {
                 "type": "string"
                 },
                 "name": {

@@ -46,6 +46,8 @@ class JSONSchemaValidatorDd6C2553Ae0053C1BbbdBd46C1Df0Ef9(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "response": {
+                "properties": {
                 "allowedValues": {
                 "items": {
                 "properties": {
@@ -60,6 +62,10 @@ class JSONSchemaValidatorDd6C2553Ae0053C1BbbdBd46C1Df0Ef9(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "key",
+                "value"
+                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -109,6 +115,21 @@ class JSONSchemaValidatorDd6C2553Ae0053C1BbbdBd46C1Df0Ef9(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "dataType",
+                "internalName",
+                "name"
+                ],
+                "type": "object"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -95,10 +95,12 @@ class Consumer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -157,6 +159,24 @@ class Consumer(object):
 
         return self._object_factory('bpm_b93b991556cae0fdd562c5e3f63_v3_0_0', _api_response)
 
+    def create(self,
+               node_name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_account <#ciscoisesdk.
+        api.v3_0_0.consumer.
+        Consumer.create_account>`_
+        """
+        return self.create_account(
+            node_name=node_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def activate_account(self,
                          description=None,
                          headers=None,
@@ -178,10 +198,12 @@ class Consumer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -260,10 +282,12 @@ class Consumer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -343,10 +367,12 @@ class Consumer(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

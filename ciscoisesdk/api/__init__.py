@@ -53,14 +53,14 @@ from .v3_0_0.aci_settings import \
     AciSettings as AciSettings_v3_0_0
 from .v3_0_0.anc_endpoint import \
     AncEndpoint as AncEndpoint_v3_0_0
-from .v3_0_0.anc_policy import \
-    AncPolicy as AncPolicy_v3_0_0
 from .v3_0_0.active_directory import \
     ActiveDirectory as ActiveDirectory_v3_0_0
 from .v3_0_0.admin_user import \
     AdminUser as AdminUser_v3_0_0
 from .v3_0_0.allowed_protocols import \
     AllowedProtocols as AllowedProtocols_v3_0_0
+from .v3_0_0.anc_policy import \
+    AncPolicy as AncPolicy_v3_0_0
 from .v3_0_0.authorization_profile import \
     AuthorizationProfile as AuthorizationProfile_v3_0_0
 from .v3_0_0.byod_portal import \
@@ -73,10 +73,10 @@ from .v3_0_0.certificate_template import \
     CertificateTemplate as CertificateTemplate_v3_0_0
 from .v3_0_0.certificates import \
     Certificates as Certificates_v3_0_0
+from .v3_0_0.clear_threats_and_vulnerabilities import \
+    ClearThreatsAndVulnerabilities as ClearThreatsAndVulnerabilities_v3_0_0
 from .v3_0_0.consumer import \
     Consumer as Consumer_v3_0_0
-from .v3_0_0.deployment import \
-    Deployment as Deployment_v3_0_0
 from .v3_0_0.device_administration_authentication_rules import \
     DeviceAdministrationAuthenticationRules as DeviceAdministrationAuthenticationRules_v3_0_0
 from .v3_0_0.device_administration_authorization_exception_rules import \
@@ -107,20 +107,18 @@ from .v3_0_0.downloadable_acl import \
     DownloadableAcl as DownloadableAcl_v3_0_0
 from .v3_0_0.egress_matrix_cell import \
     EgressMatrixCell as EgressMatrixCell_v3_0_0
-from .v3_0_0.endpoint import \
-    Endpoint as Endpoint_v3_0_0
-from .v3_0_0.endpoint_cert import \
-    EndpointCert as EndpointCert_v3_0_0
-from .v3_0_0.endpoint_group import \
-    EndpointGroup as EndpointGroup_v3_0_0
+from .v3_0_0.endpoint_certificate import \
+    EndpointCertificate as EndpointCertificate_v3_0_0
+from .v3_0_0.endpoint_identity_group import \
+    EndpointIdentityGroup as EndpointIdentityGroup_v3_0_0
 from .v3_0_0.external_radius_server import \
     ExternalRadiusServer as ExternalRadiusServer_v3_0_0
 from .v3_0_0.filter_policy import \
     FilterPolicy as FilterPolicy_v3_0_0
 from .v3_0_0.guest_location import \
     GuestLocation as GuestLocation_v3_0_0
-from .v3_0_0.guest_smtp_notifications import \
-    GuestSmtpNotifications as GuestSmtpNotifications_v3_0_0
+from .v3_0_0.guest_smtp_notification_configuration import \
+    GuestSmtpNotificationConfiguration as GuestSmtpNotificationConfiguration_v3_0_0
 from .v3_0_0.guest_ssid import \
     GuestSsid as GuestSsid_v3_0_0
 from .v3_0_0.guest_type import \
@@ -129,10 +127,14 @@ from .v3_0_0.guest_user import \
     GuestUser as GuestUser_v3_0_0
 from .v3_0_0.hotspot_portal import \
     HotspotPortal as HotspotPortal_v3_0_0
-from .v3_0_0.identity_group import \
-    IdentityGroup as IdentityGroup_v3_0_0
-from .v3_0_0.identity_store_sequence import \
-    IdentityStoreSequence as IdentityStoreSequence_v3_0_0
+from .v3_0_0.ip_to_sgt_mapping import \
+    IpToSgtMapping as IpToSgtMapping_v3_0_0
+from .v3_0_0.ip_to_sgt_mapping_group import \
+    IpToSgtMappingGroup as IpToSgtMappingGroup_v3_0_0
+from .v3_0_0.identity_groups import \
+    IdentityGroups as IdentityGroups_v3_0_0
+from .v3_0_0.identity_sequence import \
+    IdentitySequence as IdentitySequence_v3_0_0
 from .v3_0_0.internal_user import \
     InternalUser as InternalUser_v3_0_0
 from .v3_0_0.mdm import \
@@ -177,16 +179,14 @@ from .v3_0_0.network_device import \
     NetworkDevice as NetworkDevice_v3_0_0
 from .v3_0_0.network_device_group import \
     NetworkDeviceGroup as NetworkDeviceGroup_v3_0_0
-from .v3_0_0.node import \
-    Node as Node_v3_0_0
 from .v3_0_0.node_deployment import \
     NodeDeployment as NodeDeployment_v3_0_0
 from .v3_0_0.node_group import \
     NodeGroup as NodeGroup_v3_0_0
+from .v3_0_0.node_details import \
+    NodeDetails as NodeDetails_v3_0_0
 from .v3_0_0.pan_ha import \
     PanHa as PanHa_v3_0_0
-from .v3_0_0.portal import \
-    Portal as Portal_v3_0_0
 from .v3_0_0.portal_global_setting import \
     PortalGlobalSetting as PortalGlobalSetting_v3_0_0
 from .v3_0_0.portal_theme import \
@@ -197,6 +197,12 @@ from .v3_0_0.profiler_profile import \
     ProfilerProfile as ProfilerProfile_v3_0_0
 from .v3_0_0.provider import \
     Provider as Provider_v3_0_0
+from .v3_0_0.psn_node_details_with_radius_service import \
+    PsnNodeDetailsWithRadiusService as PsnNodeDetailsWithRadiusService_v3_0_0
+from .v3_0_0.pull_deployment_info import \
+    PullDeploymentInfo as PullDeploymentInfo_v3_0_0
+from .v3_0_0.px_grid_settings import \
+    PxGridSettings as PxGridSettings_v3_0_0
 from .v3_0_0.radius_failure import \
     RadiusFailure as RadiusFailure_v3_0_0
 from .v3_0_0.radius_server_sequence import \
@@ -207,16 +213,6 @@ from .v3_0_0.replication_status import \
     ReplicationStatus as ReplicationStatus_v3_0_0
 from .v3_0_0.repository import \
     Repository as Repository_v3_0_0
-from .v3_0_0.sg_acl import \
-    SgAcl as SgAcl_v3_0_0
-from .v3_0_0.sg_mapping import \
-    SgMapping as SgMapping_v3_0_0
-from .v3_0_0.sg_mapping_group import \
-    SgMappingGroup as SgMappingGroup_v3_0_0
-from .v3_0_0.sgt import \
-    Sgt as Sgt_v3_0_0
-from .v3_0_0.sgt_vn_vlan import \
-    SgtVnVlan as SgtVnVlan_v3_0_0
 from .v3_0_0.sms_provider import \
     SmsProvider as SmsProvider_v3_0_0
 from .v3_0_0.sxp_connections import \
@@ -225,14 +221,16 @@ from .v3_0_0.sxp_local_bindings import \
     SxpLocalBindings as SxpLocalBindings_v3_0_0
 from .v3_0_0.sxp_vpns import \
     SxpVpns as SxpVpns_v3_0_0
+from .v3_0_0.security_group_to_virtual_network import \
+    SecurityGroupToVirtualNetwork as SecurityGroupToVirtualNetwork_v3_0_0
+from .v3_0_0.security_groups import \
+    SecurityGroups as SecurityGroups_v3_0_0
+from .v3_0_0.security_groups_acls import \
+    SecurityGroupsAcls as SecurityGroupsAcls_v3_0_0
 from .v3_0_0.self_registered_portal import \
     SelfRegisteredPortal as SelfRegisteredPortal_v3_0_0
-from .v3_0_0.service import \
-    Service as Service_v3_0_0
 from .v3_0_0.session_directory import \
     SessionDirectory as SessionDirectory_v3_0_0
-from .v3_0_0.session_service_node import \
-    SessionServiceNode as SessionServiceNode_v3_0_0
 from .v3_0_0.sponsor_group import \
     SponsorGroup as SponsorGroup_v3_0_0
 from .v3_0_0.sponsor_group_member import \
@@ -241,8 +239,12 @@ from .v3_0_0.sponsor_portal import \
     SponsorPortal as SponsorPortal_v3_0_0
 from .v3_0_0.sponsored_guest_portal import \
     SponsoredGuestPortal as SponsoredGuestPortal_v3_0_0
-from .v3_0_0.support_bundle import \
-    SupportBundle as SupportBundle_v3_0_0
+from .v3_0_0.support_bundle_download import \
+    SupportBundleDownload as SupportBundleDownload_v3_0_0
+from .v3_0_0.support_bundle_status import \
+    SupportBundleStatus as SupportBundleStatus_v3_0_0
+from .v3_0_0.support_bundle_trigger_configuration import \
+    SupportBundleTriggerConfiguration as SupportBundleTriggerConfiguration_v3_0_0
 from .v3_0_0.sync_ise_node import \
     SyncIseNode as SyncIseNode_v3_0_0
 from .v3_0_0.system_health import \
@@ -259,20 +261,20 @@ from .v3_0_0.tacacs_server_sequence import \
     TacacsServerSequence as TacacsServerSequence_v3_0_0
 from .v3_0_0.telemetry_information import \
     TelemetryInformation as TelemetryInformation_v3_0_0
-from .v3_0_0.threat import \
-    Threat as Threat_v3_0_0
 from .v3_0_0.trust_sec_configuration import \
     TrustSecConfiguration as TrustSecConfiguration_v3_0_0
 from .v3_0_0.trust_sec_sxp import \
     TrustSecSxp as TrustSecSxp_v3_0_0
-from .v3_0_0.version_ import \
-    Version as Version_v3_0_0
+from .v3_0_0.version_and_patch import \
+    VersionAndPatch as VersionAndPatch_v3_0_0
 from .v3_0_0.version_info import \
     VersionInfo as VersionInfo_v3_0_0
+from .v3_0_0.endpoint import \
+    Endpoint as Endpoint_v3_0_0
+from .v3_0_0.portal import \
+    Portal as Portal_v3_0_0
 from .v3_0_0.px_grid_node import \
     PxGridNode as PxGridNode_v3_0_0
-from .v3_0_0.px_grid_settings import \
-    PxGridSettings as PxGridSettings_v3_0_0
 from .v3_0_0.tasks import \
     Tasks as Tasks_v3_0_0
 from .custom_caller import CustomCaller
@@ -572,10 +574,6 @@ class IdentityServicesEngineAPI(object):
                 AncEndpoint_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.anc_policy = \
-                AncPolicy_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
             self.active_directory = \
                 ActiveDirectory_v3_0_0(
                     self._session_ers, object_factory, _validator
@@ -586,6 +584,10 @@ class IdentityServicesEngineAPI(object):
                 )
             self.allowed_protocols = \
                 AllowedProtocols_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.anc_policy = \
+                AncPolicy_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.authorization_profile = \
@@ -612,13 +614,13 @@ class IdentityServicesEngineAPI(object):
                 Certificates_v3_0_0(
                     self._session_ui, object_factory, _validator
                 )
+            self.clear_threats_and_vulnerabilities = \
+                ClearThreatsAndVulnerabilities_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
             self.consumer = \
                 Consumer_v3_0_0(
                     self._session_px_grid, object_factory, _validator
-                )
-            self.deployment = \
-                Deployment_v3_0_0(
-                    self._session_ers, object_factory, _validator
                 )
             self.device_administration_authentication_rules = \
                 DeviceAdministrationAuthenticationRules_v3_0_0(
@@ -680,16 +682,12 @@ class IdentityServicesEngineAPI(object):
                 EgressMatrixCell_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.endpoint = \
-                Endpoint_v3_0_0(
+            self.endpoint_certificate = \
+                EndpointCertificate_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.endpoint_cert = \
-                EndpointCert_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
-            self.endpoint_group = \
-                EndpointGroup_v3_0_0(
+            self.endpoint_identity_group = \
+                EndpointIdentityGroup_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.external_radius_server = \
@@ -704,8 +702,8 @@ class IdentityServicesEngineAPI(object):
                 GuestLocation_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.guest_smtp_notifications = \
-                GuestSmtpNotifications_v3_0_0(
+            self.guest_smtp_notification_configuration = \
+                GuestSmtpNotificationConfiguration_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.guest_ssid = \
@@ -724,12 +722,20 @@ class IdentityServicesEngineAPI(object):
                 HotspotPortal_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.identity_group = \
-                IdentityGroup_v3_0_0(
+            self.ip_to_sgt_mapping = \
+                IpToSgtMapping_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.identity_store_sequence = \
-                IdentityStoreSequence_v3_0_0(
+            self.ip_to_sgt_mapping_group = \
+                IpToSgtMappingGroup_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.identity_groups = \
+                IdentityGroups_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.identity_sequence = \
+                IdentitySequence_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.internal_user = \
@@ -820,10 +826,6 @@ class IdentityServicesEngineAPI(object):
                 NetworkDeviceGroup_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.node = \
-                Node_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
             self.node_deployment = \
                 NodeDeployment_v3_0_0(
                     self._session_ui, object_factory, _validator
@@ -832,13 +834,13 @@ class IdentityServicesEngineAPI(object):
                 NodeGroup_v3_0_0(
                     self._session_ui, object_factory, _validator
                 )
+            self.node_details = \
+                NodeDetails_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
             self.pan_ha = \
                 PanHa_v3_0_0(
                     self._session_ui, object_factory, _validator
-                )
-            self.portal = \
-                Portal_v3_0_0(
-                    self._session_ers, object_factory, _validator
                 )
             self.portal_global_setting = \
                 PortalGlobalSetting_v3_0_0(
@@ -860,6 +862,18 @@ class IdentityServicesEngineAPI(object):
                 Provider_v3_0_0(
                     self._session_px_grid, object_factory, _validator
                 )
+            self.psn_node_details_with_radius_service = \
+                PsnNodeDetailsWithRadiusService_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.pull_deployment_info = \
+                PullDeploymentInfo_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.px_grid_settings = \
+                PxGridSettings_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
             self.radius_failure = \
                 RadiusFailure_v3_0_0(
                     self._session_px_grid, object_factory, _validator
@@ -880,26 +894,6 @@ class IdentityServicesEngineAPI(object):
                 Repository_v3_0_0(
                     self._session_ui, object_factory, _validator
                 )
-            self.sg_acl = \
-                SgAcl_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
-            self.sg_mapping = \
-                SgMapping_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
-            self.sg_mapping_group = \
-                SgMappingGroup_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
-            self.sgt = \
-                Sgt_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
-            self.sgt_vn_vlan = \
-                SgtVnVlan_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
             self.sms_provider = \
                 SmsProvider_v3_0_0(
                     self._session_ers, object_factory, _validator
@@ -916,21 +910,25 @@ class IdentityServicesEngineAPI(object):
                 SxpVpns_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.self_registered_portal = \
-                SelfRegisteredPortal_v3_0_0(
+            self.security_group_to_virtual_network = \
+                SecurityGroupToVirtualNetwork_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.service = \
-                Service_v3_0_0(
+            self.security_groups = \
+                SecurityGroups_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.security_groups_acls = \
+                SecurityGroupsAcls_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.self_registered_portal = \
+                SelfRegisteredPortal_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.session_directory = \
                 SessionDirectory_v3_0_0(
                     self._session_px_grid, object_factory, _validator
-                )
-            self.session_service_node = \
-                SessionServiceNode_v3_0_0(
-                    self._session_ers, object_factory, _validator
                 )
             self.sponsor_group = \
                 SponsorGroup_v3_0_0(
@@ -948,8 +946,16 @@ class IdentityServicesEngineAPI(object):
                 SponsoredGuestPortal_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.support_bundle = \
-                SupportBundle_v3_0_0(
+            self.support_bundle_download = \
+                SupportBundleDownload_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.support_bundle_status = \
+                SupportBundleStatus_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.support_bundle_trigger_configuration = \
+                SupportBundleTriggerConfiguration_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.sync_ise_node = \
@@ -984,10 +990,6 @@ class IdentityServicesEngineAPI(object):
                 TelemetryInformation_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.threat = \
-                Threat_v3_0_0(
-                    self._session_ers, object_factory, _validator
-                )
             self.trust_sec_configuration = \
                 TrustSecConfiguration_v3_0_0(
                     self._session_px_grid, object_factory, _validator
@@ -996,20 +998,24 @@ class IdentityServicesEngineAPI(object):
                 TrustSecSxp_v3_0_0(
                     self._session_px_grid, object_factory, _validator
                 )
-            self.version_ = \
-                Version_v3_0_0(
+            self.version_and_patch = \
+                VersionAndPatch_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.version_info = \
                 VersionInfo_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.px_grid_node = \
-                PxGridNode_v3_0_0(
+            self.endpoint = \
+                Endpoint_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
-            self.px_grid_settings = \
-                PxGridSettings_v3_0_0(
+            self.portal = \
+                Portal_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.px_grid_node = \
+                PxGridNode_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.tasks = \

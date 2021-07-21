@@ -98,10 +98,37 @@ class JSONSchemaValidatorF4Dbfb874B3B56D7A651D6732F1Bd55E(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 }
                 },
+                "required": [
+                "conditionType",
+                "name"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

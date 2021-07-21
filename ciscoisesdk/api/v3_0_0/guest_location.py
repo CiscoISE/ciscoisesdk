@@ -74,16 +74,110 @@ class GuestLocation(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_guest_location(self,
-                               filter=None,
-                               filter_type=None,
-                               page=None,
-                               size=None,
-                               sortasc=None,
-                               sortdsc=None,
-                               headers=None,
-                               **query_parameters):
-        """Get all Guest Location.
+    def get_guest_location_by_id(self,
+                                 id,
+                                 headers=None,
+                                 **query_parameters):
+        """This API allows the client to get a guest location by ID.
+
+        Args:
+            id(basestring): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+
+        e_url = ('/ers/config/guestlocation/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_ca2e75fbf5b45ba3b399e5616458b855_v3_0_0', _api_response)
+
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_guest_location_by_id <#ciscoisesdk.
+        api.v3_0_0.guest_location.
+        GuestLocation.get_guest_location_by_id>`_
+        """
+        return self.get_guest_location_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
+    def get_guest_location(self,
+                           filter=None,
+                           filter_type=None,
+                           page=None,
+                           size=None,
+                           sortasc=None,
+                           sortdsc=None,
+                           headers=None,
+                           **query_parameters):
+        """This API allows the client to get all the guest locations.
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -126,10 +220,12 @@ class GuestLocation(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -147,6 +243,12 @@ class GuestLocation(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -190,16 +292,49 @@ class GuestLocation(object):
 
         return self._object_factory('bpm_ea10f18c3655db84657ad855bf6972_v3_0_0', _api_response)
 
-    def get_all_guest_location_generator(self,
-                                         filter=None,
-                                         filter_type=None,
-                                         page=None,
-                                         size=None,
-                                         sortasc=None,
-                                         sortdsc=None,
-                                         headers=None,
-                                         **query_parameters):
-        """Get all Guest Location.
+    def get_all(self,
+                filter=None,
+                filter_type=None,
+                page=None,
+                size=None,
+                sortasc=None,
+                sortdsc=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_guest_location <#ciscoisesdk.
+        api.v3_0_0.guest_location.
+        GuestLocation.get_guest_location>`_
+        """
+        return self.get_guest_location(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        )
+
+    def get_guest_location_generator(self,
+                                     filter=None,
+                                     filter_type=None,
+                                     page=None,
+                                     size=None,
+                                     sortasc=None,
+                                     sortdsc=None,
+                                     headers=None,
+                                     **query_parameters):
+        """This API allows the client to get all the guest locations.
+        Filter:   [name]   To search resources by using  toDate
+        column,follow the format:   DD-MON-YY
+        (Example:13-SEP-18)     Day or Year:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13
+        Month:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.SEP
+        Date:GET
+        /ers/config/guestuser/?filter=toDate.CONTAINS.13-SEP-18
+        Sorting:   [name, description].
 
         Args:
             page(int): page query parameter. Page number.
@@ -243,10 +378,12 @@ class GuestLocation(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -256,34 +393,60 @@ class GuestLocation(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_guest_location, dict(
+        yield from get_next_page(self.get_guest_location, dict(
             filter=filter,
             filter_type=filter_type,
             page=page,
             size=size,
             sortasc=sortasc,
             sortdsc=sortdsc,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
-    def get_guest_location_by_id(self,
-                                 id,
-                                 headers=None,
-                                 **query_parameters):
-        """Get Guest Location by Id.
+    def get_all_generator(self,
+                          filter=None,
+                          filter_type=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_guest_location_generator <#ciscoisesdk.
+        api.v3_0_0.guest_location.
+        GuestLocation.get_guest_location_generator>`_
+        """
+        yield from get_next_page(self.get_guest_location, dict(
+            filter=filter,
+            filter_type=filter_type,
+            page=page,
+            size=size,
+            sortasc=sortasc,
+            sortdsc=sortdsc,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the guest location.
 
         Args:
-            id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -307,8 +470,6 @@ class GuestLocation(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
-                   may_be_none=False)
 
         _params = {
         }
@@ -316,10 +477,9 @@ class GuestLocation(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
         }
 
-        e_url = ('/ers/config/guestlocation/{id}')
+        e_url = ('/ers/config/guestlocation/versioninfo')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -327,4 +487,4 @@ class GuestLocation(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ca2e75fbf5b45ba3b399e5616458b855_v3_0_0', _api_response)
+        return self._object_factory('bpm_fdfe562af248561f981549b96f8ed397_v3_0_0', _api_response)

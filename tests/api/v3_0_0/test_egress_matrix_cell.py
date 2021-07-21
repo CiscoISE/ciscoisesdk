@@ -29,35 +29,31 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_egress_matrix_cell(json_schema_validate, obj):
+def is_valid_clear_all_matrix_cells(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c5e52706e7095a81b8d32f3024e01cf6_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_247716f503ab54e2921d713ed88f51c9_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_egress_matrix_cell(api):
-    endpoint_result = api.egress_matrix_cell.get_all_egress_matrix_cell(
-        filter='value1,value2',
-        filter_type='string',
-        page=0,
-        size=0,
-        sortasc='string',
-        sortdsc='string'
+def clear_all_matrix_cells(api):
+    endpoint_result = api.egress_matrix_cell.clear_all_matrix_cells(
+        active_validation=False,
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_get_all_egress_matrix_cell(api, validator):
+def test_clear_all_matrix_cells(api, validator):
     try:
-        assert is_valid_get_all_egress_matrix_cell(
+        assert is_valid_clear_all_matrix_cells(
             validator,
-            get_all_egress_matrix_cell(api)
+            clear_all_matrix_cells(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -65,62 +61,52 @@ def test_get_all_egress_matrix_cell(api, validator):
             raise original_e
 
 
-def get_all_egress_matrix_cell_default(api):
-    endpoint_result = api.egress_matrix_cell.get_all_egress_matrix_cell(
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sortasc=None,
-        sortdsc=None
+def clear_all_matrix_cells_default(api):
+    endpoint_result = api.egress_matrix_cell.clear_all_matrix_cells(
+        active_validation=False,
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_get_all_egress_matrix_cell_default(api, validator):
+def test_clear_all_matrix_cells_default(api, validator):
     try:
-        assert is_valid_get_all_egress_matrix_cell(
+        assert is_valid_clear_all_matrix_cells(
             validator,
-            get_all_egress_matrix_cell_default(api)
+            clear_all_matrix_cells_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_create_egress_matrix_cell(json_schema_validate, obj):
+def is_valid_set_all_cells_status(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_64c560004d8b5f64a10f2cc070368c12_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_90540642f47f525dbd71ef49710ef578_v3_0_0').validate(obj.response)
     return True
 
 
-def create_egress_matrix_cell(api):
-    endpoint_result = api.egress_matrix_cell.create_egress_matrix_cell(
+def set_all_cells_status(api):
+    endpoint_result = api.egress_matrix_cell.set_all_cells_status(
         active_validation=False,
-        default_rule='string',
-        description='string',
-        destination_sgt_id='string',
-        matrix_cell_status='string',
-        name='string',
         payload=None,
-        sgacls=['string'],
-        source_sgt_id='string'
+        status='string'
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_create_egress_matrix_cell(api, validator):
+def test_set_all_cells_status(api, validator):
     try:
-        assert is_valid_create_egress_matrix_cell(
+        assert is_valid_set_all_cells_status(
             validator,
-            create_egress_matrix_cell(api)
+            set_all_cells_status(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -128,27 +114,79 @@ def test_create_egress_matrix_cell(api, validator):
             raise original_e
 
 
-def create_egress_matrix_cell_default(api):
-    endpoint_result = api.egress_matrix_cell.create_egress_matrix_cell(
+def set_all_cells_status_default(api):
+    endpoint_result = api.egress_matrix_cell.set_all_cells_status(
         active_validation=False,
-        default_rule=None,
-        description=None,
-        destination_sgt_id=None,
-        matrix_cell_status=None,
-        name=None,
-        payload=None,
-        sgacls=None,
-        source_sgt_id=None
+        status='string',
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_create_egress_matrix_cell_default(api, validator):
+def test_set_all_cells_status_default(api, validator):
     try:
-        assert is_valid_create_egress_matrix_cell(
+        assert is_valid_set_all_cells_status(
             validator,
-            create_egress_matrix_cell_default(api)
+            set_all_cells_status_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_clone_matrix_cell(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_892a1e6c05d05e67906b3b59bbe6d274_v3_0_0').validate(obj.response)
+    return True
+
+
+def clone_matrix_cell(api):
+    endpoint_result = api.egress_matrix_cell.clone_matrix_cell(
+        active_validation=False,
+        dst_sgt_id='string',
+        id='string',
+        payload=None,
+        src_sgt_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.egress_matrix_cell
+def test_clone_matrix_cell(api, validator):
+    try:
+        assert is_valid_clone_matrix_cell(
+            validator,
+            clone_matrix_cell(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def clone_matrix_cell_default(api):
+    endpoint_result = api.egress_matrix_cell.clone_matrix_cell(
+        active_validation=False,
+        dst_sgt_id='string',
+        id='string',
+        src_sgt_id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.egress_matrix_cell
+def test_clone_matrix_cell_default(api, validator):
+    try:
+        assert is_valid_clone_matrix_cell(
+            validator,
+            clone_matrix_cell_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -323,31 +361,35 @@ def test_delete_egress_matrix_cell_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_clear_all_matrix_cells(json_schema_validate, obj):
+def is_valid_get_egress_matrix_cell(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_247716f503ab54e2921d713ed88f51c9_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c5e52706e7095a81b8d32f3024e01cf6_v3_0_0').validate(obj.response)
     return True
 
 
-def clear_all_matrix_cells(api):
-    endpoint_result = api.egress_matrix_cell.clear_all_matrix_cells(
-        active_validation=False,
-        payload=None
+def get_egress_matrix_cell(api):
+    endpoint_result = api.egress_matrix_cell.get_egress_matrix_cell(
+        filter='value1,value2',
+        filter_type='string',
+        page=0,
+        size=0,
+        sortasc='string',
+        sortdsc='string'
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_clear_all_matrix_cells(api, validator):
+def test_get_egress_matrix_cell(api, validator):
     try:
-        assert is_valid_clear_all_matrix_cells(
+        assert is_valid_get_egress_matrix_cell(
             validator,
-            clear_all_matrix_cells(api)
+            get_egress_matrix_cell(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -355,52 +397,62 @@ def test_clear_all_matrix_cells(api, validator):
             raise original_e
 
 
-def clear_all_matrix_cells_default(api):
-    endpoint_result = api.egress_matrix_cell.clear_all_matrix_cells(
-        active_validation=False,
-        payload=None
+def get_egress_matrix_cell_default(api):
+    endpoint_result = api.egress_matrix_cell.get_egress_matrix_cell(
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sortasc=None,
+        sortdsc=None
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_clear_all_matrix_cells_default(api, validator):
+def test_get_egress_matrix_cell_default(api, validator):
     try:
-        assert is_valid_clear_all_matrix_cells(
+        assert is_valid_get_egress_matrix_cell(
             validator,
-            clear_all_matrix_cells_default(api)
+            get_egress_matrix_cell_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_set_all_cells_status(json_schema_validate, obj):
+def is_valid_create_egress_matrix_cell(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_90540642f47f525dbd71ef49710ef578_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_64c560004d8b5f64a10f2cc070368c12_v3_0_0').validate(obj.response)
     return True
 
 
-def set_all_cells_status(api):
-    endpoint_result = api.egress_matrix_cell.set_all_cells_status(
+def create_egress_matrix_cell(api):
+    endpoint_result = api.egress_matrix_cell.create_egress_matrix_cell(
         active_validation=False,
+        default_rule='string',
+        description='string',
+        destination_sgt_id='string',
+        matrix_cell_status='string',
+        name='string',
         payload=None,
-        status='string'
+        sgacls=['string'],
+        source_sgt_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_set_all_cells_status(api, validator):
+def test_create_egress_matrix_cell(api, validator):
     try:
-        assert is_valid_set_all_cells_status(
+        assert is_valid_create_egress_matrix_cell(
             validator,
-            set_all_cells_status(api)
+            create_egress_matrix_cell(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -408,55 +460,57 @@ def test_set_all_cells_status(api, validator):
             raise original_e
 
 
-def set_all_cells_status_default(api):
-    endpoint_result = api.egress_matrix_cell.set_all_cells_status(
+def create_egress_matrix_cell_default(api):
+    endpoint_result = api.egress_matrix_cell.create_egress_matrix_cell(
         active_validation=False,
-        status='string',
-        payload=None
+        default_rule=None,
+        description=None,
+        destination_sgt_id=None,
+        matrix_cell_status=None,
+        name=None,
+        payload=None,
+        sgacls=None,
+        source_sgt_id=None
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_set_all_cells_status_default(api, validator):
+def test_create_egress_matrix_cell_default(api, validator):
     try:
-        assert is_valid_set_all_cells_status(
+        assert is_valid_create_egress_matrix_cell(
             validator,
-            set_all_cells_status_default(api)
+            create_egress_matrix_cell_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_clone_matrix_cell(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_892a1e6c05d05e67906b3b59bbe6d274_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_703c9da5c04b59358ac8bb1034340df4_v3_0_0').validate(obj.response)
     return True
 
 
-def clone_matrix_cell(api):
-    endpoint_result = api.egress_matrix_cell.clone_matrix_cell(
-        active_validation=False,
-        dst_sgt_id='string',
-        id='string',
-        payload=None,
-        src_sgt_id='string'
+def get_version(api):
+    endpoint_result = api.egress_matrix_cell.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_clone_matrix_cell(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_clone_matrix_cell(
+        assert is_valid_get_version(
             validator,
-            clone_matrix_cell(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -464,23 +518,19 @@ def test_clone_matrix_cell(api, validator):
             raise original_e
 
 
-def clone_matrix_cell_default(api):
-    endpoint_result = api.egress_matrix_cell.clone_matrix_cell(
-        active_validation=False,
-        dst_sgt_id='string',
-        id='string',
-        src_sgt_id='string',
-        payload=None
+def get_version_default(api):
+    endpoint_result = api.egress_matrix_cell.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.egress_matrix_cell
-def test_clone_matrix_cell_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_clone_matrix_cell(
+        assert is_valid_get_version(
             validator,
-            clone_matrix_cell_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -116,10 +116,19 @@ class JSONSchemaValidatorB40Ad23Ab0A5A7B8AdaDe320C8912E7(object):
                 "allowEapFastEapTlsAuthOfExpiredCerts": {
                 "type": "boolean"
                 },
+                "eapFastDontUsePacsAcceptClientCert": {
+                "type": "boolean"
+                },
+                "eapFastDontUsePacsAllowMachineAuthentication": {
+                "type": "boolean"
+                },
                 "eapFastEnableEAPChaining": {
                 "type": "boolean"
                 },
                 "eapFastUsePacs": {
+                "type": "boolean"
+                },
+                "eapFastUsePacsAcceptClientCert": {
                 "type": "boolean"
                 },
                 "eapFastUsePacsAllowAnonymProvisioning": {
@@ -129,6 +138,21 @@ class JSONSchemaValidatorB40Ad23Ab0A5A7B8AdaDe320C8912E7(object):
                 "type": "boolean"
                 },
                 "eapFastUsePacsAllowMachineAuthentication": {
+                "type": "boolean"
+                },
+                "eapFastUsePacsAuthorizationPacTtl": {
+                "type": "integer"
+                },
+                "eapFastUsePacsAuthorizationPacTtlUnits": {
+                "type": "string"
+                },
+                "eapFastUsePacsMachinePacTtl": {
+                "type": "integer"
+                },
+                "eapFastUsePacsMachinePacTtlUnits": {
+                "type": "string"
+                },
+                "eapFastUsePacsReturnAccessAcceptAfterAuthenticatedProvisioning": {
                 "type": "boolean"
                 },
                 "eapFastUsePacsStatelessSessionResume": {
@@ -153,6 +177,15 @@ class JSONSchemaValidatorB40Ad23Ab0A5A7B8AdaDe320C8912E7(object):
                 },
                 "eapTlsEnableStatelessSessionResume": {
                 "type": "boolean"
+                },
+                "eapTlsSessionTicketPrecentage": {
+                "type": "integer"
+                },
+                "eapTlsSessionTicketTtl": {
+                "type": "integer"
+                },
+                "eapTlsSessionTicketTtlUnits": {
+                "type": "string"
                 }
                 },
                 "type": "object"
@@ -197,6 +230,12 @@ class JSONSchemaValidatorB40Ad23Ab0A5A7B8AdaDe320C8912E7(object):
                 "allowPeapEapGtc": {
                 "type": "boolean"
                 },
+                "allowPeapEapGtcPwdChange": {
+                "type": "boolean"
+                },
+                "allowPeapEapGtcPwdChangeRetries": {
+                "type": "integer"
+                },
                 "allowPeapEapMsChapV2": {
                 "type": "boolean"
                 },
@@ -235,6 +274,9 @@ class JSONSchemaValidatorB40Ad23Ab0A5A7B8AdaDe320C8912E7(object):
                 "acceptClientCertDuringTunnelEst": {
                 "type": "boolean"
                 },
+                "allowDowngradeMsk": {
+                "type": "boolean"
+                },
                 "allowTeapEapMsChapV2": {
                 "type": "boolean"
                 },
@@ -251,9 +293,6 @@ class JSONSchemaValidatorB40Ad23Ab0A5A7B8AdaDe320C8912E7(object):
                 "type": "boolean"
                 },
                 "enableEapChaining": {
-                "type": "boolean"
-                },
-                "requestBasicPwdAuth": {
                 "type": "boolean"
                 }
                 },

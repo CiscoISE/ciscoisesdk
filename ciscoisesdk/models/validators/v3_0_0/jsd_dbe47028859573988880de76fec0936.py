@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine exportSystemCert data model.
+"""Identity Services Engine exportSystemCertificate data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,16 +38,13 @@ from builtins import *
 
 
 class JSONSchemaValidatorDbe47028859573988880De76Fec0936(object):
-    """exportSystemCert request schema definition."""
+    """exportSystemCertificate request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDbe47028859573988880De76Fec0936, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "certificateID": {
-                "type": "string"
-                },
                 "export": {
                 "enum": [
                 "CERTIFICATE",
@@ -62,6 +59,10 @@ class JSONSchemaValidatorDbe47028859573988880De76Fec0936(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "export",
+                "id"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

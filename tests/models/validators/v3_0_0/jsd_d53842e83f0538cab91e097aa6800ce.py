@@ -50,14 +50,6 @@ class JSONSchemaValidatorD53842E83F0538CAb91E097Aa6800Ce(object):
                 "customAttributes": {
                 "properties": {
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 }
                 },
@@ -78,6 +70,20 @@ class JSONSchemaValidatorD53842E83F0538CAb91E097Aa6800Ce(object):
                 },
                 "identityStoreId": {
                 "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "mac": {
                 "type": "string"

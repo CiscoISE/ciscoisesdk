@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeviceAdminAuthenticationRules data model.
+"""Identity Services Engine getDeviceAdminAuthenticationRules data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,15 +38,21 @@ from builtins import *
 
 
 class JSONSchemaValidatorB9E8541F25C4EA29944F659F68994(object):
-    """getAllDeviceAdminAuthenticationRules request schema definition."""
+    """getDeviceAdminAuthenticationRules request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB9E8541F25C4EA29944F659F68994, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
                 "properties": {
                 "identitySourceId": {
+                "default": "Internal Users",
+                "type": "string"
+                },
+                "identitySourceName": {
                 "default": "Internal Users",
                 "type": "string"
                 },
@@ -61,6 +67,29 @@ class JSONSchemaValidatorB9E8541F25C4EA29944F659F68994(object):
                 "ifUserNotFound": {
                 "default": "reject",
                 "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
                 },
                 "rule": {
                 "properties": {
@@ -82,6 +111,29 @@ class JSONSchemaValidatorB9E8541F25C4EA29944F659F68994(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
                 }
                 },
                 "required": [
@@ -93,13 +145,7 @@ class JSONSchemaValidatorB9E8541F25C4EA29944F659F68994(object):
                 "default": false,
                 "type": "boolean"
                 },
-                "description":
-                 {
-                "default": "Empty string",
-                "type": "string"
-                },
                 "hitCounts": {
-                "default": 0,
                 "type": "integer"
                 },
                 "id": {
@@ -109,7 +155,6 @@ class JSONSchemaValidatorB9E8541F25C4EA29944F659F68994(object):
                 "type": "string"
                 },
                 "rank": {
-                "default": 0,
                 "type": "integer"
                 },
                 "state": {
@@ -131,6 +176,16 @@ class JSONSchemaValidatorB9E8541F25C4EA29944F659F68994(object):
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

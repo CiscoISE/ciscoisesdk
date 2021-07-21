@@ -60,9 +60,6 @@ class JSONSchemaValidatorCf67E0155EaB895B50D1A377F21(object):
                 "ipAddressOrHost": {
                 "type": "string"
                 },
-                "name": {
-                "type": "string"
-                },
                 "sgt": {
                 "type": "string"
                 },
@@ -73,19 +70,9 @@ class JSONSchemaValidatorCf67E0155EaB895B50D1A377F21(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "ipAddressOrHost",
-                "sxpVpn",
-                "sgt",
-                "vns"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSSxpLocalBindings"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

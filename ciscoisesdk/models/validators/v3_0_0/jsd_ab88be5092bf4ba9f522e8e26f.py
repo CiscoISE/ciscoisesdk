@@ -50,14 +50,6 @@ class JSONSchemaValidatorAb88Be5092Bf4BA9F522E8E26F(object):
                 "customAttributes": {
                 "properties": {
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 }
                 },
@@ -68,9 +60,6 @@ class JSONSchemaValidatorAb88Be5092Bf4BA9F522E8E26F(object):
                 "type": "string"
                 },
                 "groupId": {
-                "type": "string"
-                },
-                "id": {
                 "type": "string"
                 },
                 "identityStore": {

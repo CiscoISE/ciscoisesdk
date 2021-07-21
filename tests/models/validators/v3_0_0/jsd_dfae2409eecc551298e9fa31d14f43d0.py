@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteNetworkAccessDictionariesByName data model.
+"""Identity Services Engine deleteNetworkAccessDictionaryByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,12 +38,14 @@ from builtins import *
 
 
 class JSONSchemaValidatorDfae2409Eecc551298E9Fa31D14F43D0(object):
-    """deleteNetworkAccessDictionariesByName request schema definition."""
+    """deleteNetworkAccessDictionaryByName request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDfae2409Eecc551298E9Fa31D14F43D0, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "properties": {
                 "description":
                  {
@@ -60,6 +62,29 @@ class JSONSchemaValidatorDfae2409Eecc551298E9Fa31D14F43D0(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -67,6 +92,21 @@ class JSONSchemaValidatorDfae2409Eecc551298E9Fa31D14F43D0(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "dictionaryAttrType",
+                "name",
+                "version"
+                ],
+                "type": "object"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

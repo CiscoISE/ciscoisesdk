@@ -76,14 +76,6 @@ class JSONSchemaValidatorCe83Fba942C25938Bae0C7012Df68317(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "sourceSgtId",
-                "destinationSgtId",
-                "matrixCellStatus",
-                "defaultRule",
-                "name",
-                "id"
-                ],
                 "type": "object"
                 }
                 },

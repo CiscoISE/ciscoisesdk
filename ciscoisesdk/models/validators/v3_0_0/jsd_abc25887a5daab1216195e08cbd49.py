@@ -72,6 +72,26 @@ class JSONSchemaValidatorAbc25887A5DaaB1216195E08Cbd49(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"
@@ -162,6 +182,26 @@ class JSONSchemaValidatorAbc25887A5DaaB1216195E08Cbd49(object):
                 "default": false,
                 "type": "boolean"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -182,40 +222,14 @@ class JSONSchemaValidatorAbc25887A5DaaB1216195E08Cbd49(object):
                 "lessThan",
                 "greaterOrEquals",
                 "lessOrEquals",
-                "macEquals",
-                "macNotEquals",
-                "macNotIn",
-                "macIn",
-                "macStartsWith",
-                "macNotStartsWith",
-                "macEndsWith",
-                "macNotEndsWith",
-                "macContains",
-                "macNotContains",
                 "ipGreaterThan",
                 "ipLessThan",
                 "ipEquals",
-                "ipNotEquals",
-                "dateTimeMatches",
-                "dateLessThan",
-                "dateLessThanOrEquals",
-                "dateGreaterThan",
-                "dateGreaterThanOrEquals",
-                "dateEquals",
-                "dateNotEquals"
+                "ipNotEquals"
                 ],
                 "type": "string"
                 },
                 "weekDays": {
-                "default": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-                ],
                 "items": {
                 "enum": [
                 "Sunday",

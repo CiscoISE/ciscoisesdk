@@ -86,10 +86,12 @@ class Mdm(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -128,6 +130,18 @@ class Mdm(object):
 
         return self._object_factory('bpm_f66874f1141550da6104eff5428d37a_v3_0_0', _api_response)
 
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_endpoints <#ciscoisesdk.
+        api.v3_0_0.mdm.
+        Mdm.get_endpoints>`_
+        """
+        return self.get_endpoints(
+            headers=headers,
+            **query_parameters
+        )
+
     def get_endpoint_by_mac_address(self,
                                     headers=None,
                                     **query_parameters):
@@ -140,10 +154,12 @@ class Mdm(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -194,10 +210,12 @@ class Mdm(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -248,10 +266,12 @@ class Mdm(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 

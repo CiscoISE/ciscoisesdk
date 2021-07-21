@@ -74,10 +74,11 @@ class NetworkAccessProfiles(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_network_access_profiles(self,
-                                        headers=None,
-                                        **query_parameters):
-        """Network Access - Returns list of profiles.
+    def get_network_access_profiles(self,
+                                    headers=None,
+                                    **query_parameters):
+        """Network Access Returns list of profiles.  (Other CRUD APIs
+        available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -86,10 +87,12 @@ class NetworkAccessProfiles(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -128,3 +131,15 @@ class NetworkAccessProfiles(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_b227e1b5bbac556a9f577d3a3ea407af_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_profiles <#ciscoisesdk.
+        api.v3_0_0.network_access_profiles.
+        NetworkAccessProfiles.get_network_access_profiles>`_
+        """
+        return self.get_network_access_profiles(
+            headers=headers,
+            **query_parameters
+        )

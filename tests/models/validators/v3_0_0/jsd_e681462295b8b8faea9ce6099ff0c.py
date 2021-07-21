@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllAncEndpoint data model.
+"""Identity Services Engine getAncEndpoint data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorE681462295B8B8FaeA9Ce6099Ff0C(object):
-    """getAllAncEndpoint request schema definition."""
+    """getAncEndpoint request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE681462295B8B8FaeA9Ce6099Ff0C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -48,6 +48,7 @@ class JSONSchemaValidatorE681462295B8B8FaeA9Ce6099Ff0C(object):
                 "SearchResult": {
                 "properties": {
                 "nextPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -60,8 +61,11 @@ class JSONSchemaValidatorE681462295B8B8FaeA9Ce6099Ff0C(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "previousPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -74,14 +78,12 @@ class JSONSchemaValidatorE681462295B8B8FaeA9Ce6099Ff0C(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "resources": {
                 "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
                 "id": {
                 "type": "string"
                 },
@@ -98,9 +100,6 @@ class JSONSchemaValidatorE681462295B8B8FaeA9Ce6099Ff0C(object):
                 }
                 },
                 "type": "object"
-                },
-                "name": {
-                "type": "string"
                 }
                 },
                 "type": "object"
@@ -114,9 +113,6 @@ class JSONSchemaValidatorE681462295B8B8FaeA9Ce6099Ff0C(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

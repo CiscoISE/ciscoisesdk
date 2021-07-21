@@ -62,11 +62,6 @@ class JSONSchemaValidatorD9Cc879878Ee5A34Ac1C32F2F0Cb8C6D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "grant",
-                "command",
-                "arguments"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -85,15 +80,9 @@ class JSONSchemaValidatorD9Cc879878Ee5A34Ac1C32F2F0Cb8C6D(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "name"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsCommandSets"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

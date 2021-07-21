@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_access_policy_sets(json_schema_validate, obj):
+def is_valid_get_network_access_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_network_access_policy_sets(json_schema_validate, obj):
     return True
 
 
-def get_all_network_access_policy_sets(api):
-    endpoint_result = api.network_access_policy_set.get_all_network_access_policy_sets(
+def get_network_access_policy_sets(api):
+    endpoint_result = api.network_access_policy_set.get_network_access_policy_sets(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_policy_set
-def test_get_all_network_access_policy_sets(api, validator):
+def test_get_network_access_policy_sets(api, validator):
     try:
-        assert is_valid_get_all_network_access_policy_sets(
+        assert is_valid_get_network_access_policy_sets(
             validator,
-            get_all_network_access_policy_sets(api)
+            get_network_access_policy_sets(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_network_access_policy_sets(api, validator):
             raise original_e
 
 
-def get_all_network_access_policy_sets_default(api):
-    endpoint_result = api.network_access_policy_set.get_all_network_access_policy_sets(
+def get_network_access_policy_sets_default(api):
+    endpoint_result = api.network_access_policy_set.get_network_access_policy_sets(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_policy_set
-def test_get_all_network_access_policy_sets_default(api, validator):
+def test_get_network_access_policy_sets_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_policy_sets(
+        assert is_valid_get_network_access_policy_sets(
             validator,
-            get_all_network_access_policy_sets_default(api)
+            get_network_access_policy_sets_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -93,12 +93,13 @@ def is_valid_create_network_access_policy_set(json_schema_validate, obj):
 def create_network_access_policy_set(api):
     endpoint_result = api.network_access_policy_set.create_network_access_policy_set(
         active_validation=False,
-        condition={'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}},
+        condition={'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']},
         default=True,
         description='string',
         hit_counts=0,
         id='string',
         is_proxy=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         payload=None,
         rank=0,
@@ -130,6 +131,7 @@ def create_network_access_policy_set_default(api):
         hit_counts=None,
         id=None,
         is_proxy=None,
+        link=None,
         name=None,
         payload=None,
         rank=None,
@@ -145,6 +147,58 @@ def test_create_network_access_policy_set_default(api, validator):
         assert is_valid_create_network_access_policy_set(
             validator,
             create_network_access_policy_set_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_reset_hit_counts_network_access_policy_sets(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_71fb6c1b3f335dbf8176a29e30eb6333_v3_0_0').validate(obj.response)
+    return True
+
+
+def reset_hit_counts_network_access_policy_sets(api):
+    endpoint_result = api.network_access_policy_set.reset_hit_counts_network_access_policy_sets(
+        active_validation=False,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_policy_set
+def test_reset_hit_counts_network_access_policy_sets(api, validator):
+    try:
+        assert is_valid_reset_hit_counts_network_access_policy_sets(
+            validator,
+            reset_hit_counts_network_access_policy_sets(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def reset_hit_counts_network_access_policy_sets_default(api):
+    endpoint_result = api.network_access_policy_set.reset_hit_counts_network_access_policy_sets(
+        active_validation=False,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_policy_set
+def test_reset_hit_counts_network_access_policy_sets_default(api, validator):
+    try:
+        assert is_valid_reset_hit_counts_network_access_policy_sets(
+            validator,
+            reset_hit_counts_network_access_policy_sets_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -215,12 +269,13 @@ def is_valid_update_network_access_policy_set_by_id(json_schema_validate, obj):
 def update_network_access_policy_set_by_id(api):
     endpoint_result = api.network_access_policy_set.update_network_access_policy_set_by_id(
         active_validation=False,
-        condition={'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}},
+        condition={'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']},
         default=True,
         description='string',
         hit_counts=0,
         id='string',
         is_proxy=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         payload=None,
         rank=0,
@@ -252,6 +307,7 @@ def update_network_access_policy_set_by_id_default(api):
         description=None,
         hit_counts=None,
         is_proxy=None,
+        link=None,
         name=None,
         payload=None,
         rank=None,

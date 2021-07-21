@@ -120,6 +120,23 @@ class JSONSchemaValidatorAcb5A41Fe395B158A3FE1Cda996B0Cf(object):
                 "id": {
                 "type": "string"
                 },
+                "isDefaultType": {
+                "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "loginOptions": {
                 "properties": {
                 "allowGuestPortalBypass": {

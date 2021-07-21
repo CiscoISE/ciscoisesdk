@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeviceAdminDictionariesPolicyset data model.
+"""Identity Services Engine getDeviceAdminDictionariesPolicySet data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,12 +38,14 @@ from builtins import *
 
 
 class JSONSchemaValidatorC8Aec23A55399A175Acf105Dbe1C2(object):
-    """getAllDeviceAdminDictionariesPolicyset request schema definition."""
+    """getDeviceAdminDictionariesPolicySet request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC8Aec23A55399A175Acf105Dbe1C2, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
                 "properties": {
                 "allowedValues": {
@@ -60,6 +62,10 @@ class JSONSchemaValidatorC8Aec23A55399A175Acf105Dbe1C2(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "key",
+                "value"
+                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -109,9 +115,24 @@ class JSONSchemaValidatorC8Aec23A55399A175Acf105Dbe1C2(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "dataType",
+                "internalName",
+                "name"
+                ],
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

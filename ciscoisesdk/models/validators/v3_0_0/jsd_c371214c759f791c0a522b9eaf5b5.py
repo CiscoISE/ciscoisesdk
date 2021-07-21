@@ -73,21 +73,9 @@ class JSONSchemaValidatorC371214C759F791C0A522B9Eaf5B5(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "sxpPeer",
-                "sxpVpn",
-                "sxpNode",
-                "ipAddress",
-                "sxpMode",
-                "sxpVersion",
-                "enabled"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSSxpConnection"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

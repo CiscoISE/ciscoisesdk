@@ -47,6 +47,27 @@ class JSONSchemaValidatorF3B45B8E4089574C9912407F88B1A5D2(object):
                 "properties": {
                 "TacacsServerSequence": {
                 "properties": {
+                "description":
+                 {
+                "type": "string"
+                },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "localAccounting": {
                 "type": "boolean"
                 },
@@ -72,16 +93,9 @@ class JSONSchemaValidatorF3B45B8E4089574C9912407F88B1A5D2(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "name",
-                "serverList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsServerSequence"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

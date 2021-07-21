@@ -50,6 +50,9 @@ class JSONSchemaValidatorC9Dea644F40453FeAd2B003B06C4C52B(object):
                 "type": "string"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
                 }
                 },
                 "type": "object"

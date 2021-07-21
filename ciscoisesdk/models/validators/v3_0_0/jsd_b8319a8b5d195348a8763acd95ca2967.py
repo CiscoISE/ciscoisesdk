@@ -58,6 +58,12 @@ class JSONSchemaValidatorB8319A8B5D195348A8763Acd95Ca2967(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "backupEncryptionKey",
+                "repositoryName",
+                "restoreFile",
+                "restoreIncludeAdeos"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

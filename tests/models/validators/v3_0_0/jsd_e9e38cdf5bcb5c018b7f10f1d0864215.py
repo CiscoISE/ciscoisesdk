@@ -57,25 +57,6 @@ class JSONSchemaValidatorE9E38Cdf5Bcb5C018B7F10F1D0864215(object):
                 "keySize": {
                 "type": "integer"
                 },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
-                "type": "object"
-                },
                 "name": {
                 "type": "string"
                 },
@@ -89,9 +70,6 @@ class JSONSchemaValidatorE9E38Cdf5Bcb5C018B7F10F1D0864215(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSCertificateTemplate"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

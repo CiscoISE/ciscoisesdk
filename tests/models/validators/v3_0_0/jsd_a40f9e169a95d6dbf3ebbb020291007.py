@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeviceAdminConditionsForPolicySet data model.
+"""Identity Services Engine getDeviceAdminConditionsForPolicySets data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,12 +38,14 @@ from builtins import *
 
 
 class JSONSchemaValidatorA40F9E169A95D6DBf3EBbb020291007(object):
-    """getAllDeviceAdminConditionsForPolicySet request schema definition."""
+    """getDeviceAdminConditionsForPolicySets request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA40F9E169A95D6DBf3EBbb020291007, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
                 "properties": {
                 "attributeId": {
@@ -74,6 +76,26 @@ class JSONSchemaValidatorA40F9E169A95D6DBf3EBbb020291007(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"
@@ -164,6 +186,26 @@ class JSONSchemaValidatorA40F9E169A95D6DBf3EBbb020291007(object):
                 "default": false,
                 "type": "boolean"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -184,40 +226,14 @@ class JSONSchemaValidatorA40F9E169A95D6DBf3EBbb020291007(object):
                 "lessThan",
                 "greaterOrEquals",
                 "lessOrEquals",
-                "macEquals",
-                "macNotEquals",
-                "macNotIn",
-                "macIn",
-                "macStartsWith",
-                "macNotStartsWith",
-                "macEndsWith",
-                "macNotEndsWith",
-                "macContains",
-                "macNotContains",
                 "ipGreaterThan",
                 "ipLessThan",
                 "ipEquals",
-                "ipNotEquals",
-                "dateTimeMatches",
-                "dateLessThan",
-                "dateLessThanOrEquals",
-                "dateGreaterThan",
-                "dateGreaterThanOrEquals",
-                "dateEquals",
-                "dateNotEquals"
+                "ipNotEquals"
                 ],
                 "type": "string"
                 },
                 "weekDays": {
-                "default": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-                ],
                 "items": {
                 "enum": [
                 "Sunday",
@@ -252,6 +268,16 @@ class JSONSchemaValidatorA40F9E169A95D6DBf3EBbb020291007(object):
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

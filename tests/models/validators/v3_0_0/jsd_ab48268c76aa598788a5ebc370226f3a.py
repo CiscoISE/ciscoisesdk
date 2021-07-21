@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getNodeByName data model.
+"""Identity Services Engine getNodeDetailByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A(object):
-    """getNodeByName request schema definition."""
+    """getNodeDetailByName request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -83,11 +83,6 @@ class JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -102,6 +97,9 @@ class JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A(object):
                 "papNode": {
                 "type": "boolean"
                 },
+                "passWord": {
+                "type": "string"
+                },
                 "primaryPapNode": {
                 "type": "boolean"
                 },
@@ -110,14 +108,14 @@ class JSONSchemaValidatorAb48268C76Aa598788A5Ebc370226F3A(object):
                 },
                 "sxpIpAddress": {
                 "type": "string"
+                },
+                "userName": {
+                "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "Node"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

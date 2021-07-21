@@ -60,8 +60,19 @@ class JSONSchemaValidatorE56Bea5248A25F799B02Fcb6098A7B10(object):
                 "ipAddressOrHost": {
                 "type": "string"
                 },
-                "name": {
+                "link": {
+                "properties": {
+                "href": {
                 "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "sgt": {
                 "type": "string"
@@ -73,19 +84,9 @@ class JSONSchemaValidatorE56Bea5248A25F799B02Fcb6098A7B10(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "ipAddressOrHost",
-                "sxpVpn",
-                "sgt",
-                "vns"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSSxpLocalBindings"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_sponsor_group_member(json_schema_validate, obj):
+def is_valid_get_sponsor_group_member(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,8 +40,8 @@ def is_valid_get_all_sponsor_group_member(json_schema_validate, obj):
     return True
 
 
-def get_all_sponsor_group_member(api):
-    endpoint_result = api.sponsor_group_member.get_all_sponsor_group_member(
+def get_sponsor_group_member(api):
+    endpoint_result = api.sponsor_group_member.get_sponsor_group_member(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -53,11 +53,11 @@ def get_all_sponsor_group_member(api):
 
 
 @pytest.mark.sponsor_group_member
-def test_get_all_sponsor_group_member(api, validator):
+def test_get_sponsor_group_member(api, validator):
     try:
-        assert is_valid_get_all_sponsor_group_member(
+        assert is_valid_get_sponsor_group_member(
             validator,
-            get_all_sponsor_group_member(api)
+            get_sponsor_group_member(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -65,8 +65,8 @@ def test_get_all_sponsor_group_member(api, validator):
             raise original_e
 
 
-def get_all_sponsor_group_member_default(api):
-    endpoint_result = api.sponsor_group_member.get_all_sponsor_group_member(
+def get_sponsor_group_member_default(api):
+    endpoint_result = api.sponsor_group_member.get_sponsor_group_member(
         filter=None,
         filter_type=None,
         page=None,
@@ -78,41 +78,41 @@ def get_all_sponsor_group_member_default(api):
 
 
 @pytest.mark.sponsor_group_member
-def test_get_all_sponsor_group_member_default(api, validator):
+def test_get_sponsor_group_member_default(api, validator):
     try:
-        assert is_valid_get_all_sponsor_group_member(
+        assert is_valid_get_sponsor_group_member(
             validator,
-            get_all_sponsor_group_member_default(api)
+            get_sponsor_group_member_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_sponsor_group_member_by_id(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_11ed1fe4ba7d5facbce4ad1eadab3e08_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0f7c916a2e265c11b8b8535e8f88c7d1_v3_0_0').validate(obj.response)
     return True
 
 
-def get_sponsor_group_member_by_id(api):
-    endpoint_result = api.sponsor_group_member.get_sponsor_group_member_by_id(
-        id='string'
+def get_version(api):
+    endpoint_result = api.sponsor_group_member.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.sponsor_group_member
-def test_get_sponsor_group_member_by_id(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_get_sponsor_group_member_by_id(
+        assert is_valid_get_version(
             validator,
-            get_sponsor_group_member_by_id(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -120,19 +120,19 @@ def test_get_sponsor_group_member_by_id(api, validator):
             raise original_e
 
 
-def get_sponsor_group_member_by_id_default(api):
-    endpoint_result = api.sponsor_group_member.get_sponsor_group_member_by_id(
-        id='string'
+def get_version_default(api):
+    endpoint_result = api.sponsor_group_member.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.sponsor_group_member
-def test_get_sponsor_group_member_by_id_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_get_sponsor_group_member_by_id(
+        assert is_valid_get_version(
             validator,
-            get_sponsor_group_member_by_id_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

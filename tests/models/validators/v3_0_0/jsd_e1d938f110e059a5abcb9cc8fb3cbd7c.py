@@ -51,6 +51,23 @@ class JSONSchemaValidatorE1D938F110E059A5Abcb9Cc8Fb3Cbd7C(object):
                  {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -58,16 +75,9 @@ class JSONSchemaValidatorE1D938F110E059A5Abcb9Cc8Fb3Cbd7C(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "description"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "NetworkDeviceGroup"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

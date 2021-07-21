@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine createNetworkAccessGlobalExceptionRule data model.
+"""Identity Services Engine createNetworkAccessPolicySetGlobalExceptionRule data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,13 +38,37 @@ from builtins import *
 
 
 class JSONSchemaValidatorC5C9B7AB72B5442Ae7026A5Dcc0Fec3(object):
-    """createNetworkAccessGlobalExceptionRule request schema definition."""
+    """createNetworkAccessPolicySetGlobalExceptionRule request schema
+    definition."""
     def __init__(self):
         super(JSONSchemaValidatorC5C9B7AB72B5442Ae7026A5Dcc0Fec3, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                },
                 "profile": {
                 "items": {
                 "type": "string"
@@ -83,6 +107,26 @@ class JSONSchemaValidatorC5C9B7AB72B5442Ae7026A5Dcc0Fec3(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"
@@ -173,6 +217,26 @@ class JSONSchemaValidatorC5C9B7AB72B5442Ae7026A5Dcc0Fec3(object):
                 "default": false,
                 "type": "boolean"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -193,40 +257,14 @@ class JSONSchemaValidatorC5C9B7AB72B5442Ae7026A5Dcc0Fec3(object):
                 "lessThan",
                 "greaterOrEquals",
                 "lessOrEquals",
-                "macEquals",
-                "macNotEquals",
-                "macNotIn",
-                "macIn",
-                "macStartsWith",
-                "macNotStartsWith",
-                "macEndsWith",
-                "macNotEndsWith",
-                "macContains",
-                "macNotContains",
                 "ipGreaterThan",
                 "ipLessThan",
                 "ipEquals",
-                "ipNotEquals",
-                "dateTimeMatches",
-                "dateLessThan",
-                "dateLessThanOrEquals",
-                "dateGreaterThan",
-                "dateGreaterThanOrEquals",
-                "dateEquals",
-                "dateNotEquals"
+                "ipNotEquals"
                 ],
                 "type": "string"
                 },
                 "weekDays": {
-                "default": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-                ],
                 "items": {
                 "enum": [
                 "Sunday",
@@ -264,13 +302,7 @@ class JSONSchemaValidatorC5C9B7AB72B5442Ae7026A5Dcc0Fec3(object):
                 "default": false,
                 "type": "boolean"
                 },
-                "description":
-                 {
-                "default": "Empty string",
-                "type": "string"
-                },
                 "hitCounts": {
-                "default": 0,
                 "type": "integer"
                 },
                 "id": {
@@ -280,7 +312,6 @@ class JSONSchemaValidatorC5C9B7AB72B5442Ae7026A5Dcc0Fec3(object):
                 "type": "string"
                 },
                 "rank": {
-                "default": 0,
                 "type": "integer"
                 },
                 "state": {
@@ -302,6 +333,9 @@ class JSONSchemaValidatorC5C9B7AB72B5442Ae7026A5Dcc0Fec3(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "rule"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

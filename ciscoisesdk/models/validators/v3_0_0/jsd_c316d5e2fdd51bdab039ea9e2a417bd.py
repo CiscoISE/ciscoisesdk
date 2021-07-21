@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateIdentityStoreSequenceById data model.
+"""Identity Services Engine updateIdentitySequenceById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,21 +38,41 @@ from builtins import *
 
 
 class JSONSchemaValidatorC316D5E2Fdd51BdAb039Ea9E2A417Bd(object):
-    """updateIdentityStoreSequenceById request schema definition."""
+    """updateIdentitySequenceById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC316D5E2Fdd51BdAb039Ea9E2A417Bd, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "IdentityGroup": {
+                "IdStoreSequence": {
                 "properties": {
+                "breakOnStoreFail": {
+                "type": "boolean"
+                },
+                "certificateAuthenticationProfile": {
+                "type": "string"
+                },
                 "description":
                  {
                 "type": "string"
                 },
                 "id": {
                 "type": "string"
+                },
+                "idSeqItem": {
+                "items": {
+                "properties": {
+                "idstore": {
+                "type": "string"
+                },
+                "order": {
+                "type": "integer"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
                 },
                 "name": {
                 "type": "string"

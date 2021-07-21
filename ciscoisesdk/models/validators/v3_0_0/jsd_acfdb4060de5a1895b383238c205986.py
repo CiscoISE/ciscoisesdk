@@ -49,6 +49,12 @@ class JSONSchemaValidatorAcfdb4060De5A1895B383238C205986(object):
                 "properties": {
                 "actions": {
                 "items": {
+                "enum": [
+                "QUARANTINE",
+                "PORTBOUNCE",
+                "SHUTDOWN",
+                "RE_AUTHENTICATE"
+                ],
                 "type": "string"
                 },
                 "type": "array"

@@ -57,22 +57,30 @@ class JSONSchemaValidatorDfa8F48210E85715BeebB44E62Fac408(object):
                  {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
+                "link1": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "description",
-                "dacl",
-                "daclType"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "DownloadableAcl"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

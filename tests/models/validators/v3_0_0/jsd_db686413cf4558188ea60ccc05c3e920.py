@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getIdentityStoreSequenceByName data model.
+"""Identity Services Engine getIdentitySequenceByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,21 +38,55 @@ from builtins import *
 
 
 class JSONSchemaValidatorDb686413Cf4558188Ea60Ccc05C3E920(object):
-    """getIdentityStoreSequenceByName request schema definition."""
+    """getIdentitySequenceByName request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDb686413Cf4558188Ea60Ccc05C3E920, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "IdentityGroup": {
+                "IdStoreSequence": {
                 "properties": {
+                "breakOnStoreFail": {
+                "type": "boolean"
+                },
+                "certificateAuthenticationProfile": {
+                "type": "string"
+                },
                 "description":
                  {
                 "type": "string"
                 },
                 "id": {
                 "type": "string"
+                },
+                "idSeqItem": {
+                "items": {
+                "properties": {
+                "idstore": {
+                "type": "string"
+                },
+                "order": {
+                "type": "integer"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "name": {
                 "type": "string"

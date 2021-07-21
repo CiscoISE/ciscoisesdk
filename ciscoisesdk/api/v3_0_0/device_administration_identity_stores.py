@@ -74,11 +74,11 @@ class DeviceAdministrationIdentityStores(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_identity_stores(self,
-                                             headers=None,
-                                             **query_parameters):
-        """Device Admin - Return list of identity stores for
-        authentication.
+    def get_device_admin_identity_stores(self,
+                                         headers=None,
+                                         **query_parameters):
+        """Device Admin Return list of identity stores for authentication.
+        (Other CRUD APIs available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -87,10 +87,12 @@ class DeviceAdministrationIdentityStores(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -129,3 +131,15 @@ class DeviceAdministrationIdentityStores(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ce65f2bd375be1ba41a7d6f02ad7b6_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_identity_stores <#ciscoisesdk.
+        api.v3_0_0.device_administration_identity_stores.
+        DeviceAdministrationIdentityStores.get_device_admin_identity_stores>`_
+        """
+        return self.get_device_admin_identity_stores(
+            headers=headers,
+            **query_parameters
+        )

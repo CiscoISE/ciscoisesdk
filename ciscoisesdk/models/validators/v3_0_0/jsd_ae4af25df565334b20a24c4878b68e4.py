@@ -47,6 +47,115 @@ class JSONSchemaValidatorAe4Af25Df565334B20A24C4878B68E4(object):
                 "properties": {
                 "HotspotPortal": {
                 "properties": {
+                "customizations": {
+                "properties": {
+                "globalCustomizations": {
+                "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "bannerImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "bannerTitle": {
+                "type": "string"
+                },
+                "contactText": {
+                "type": "string"
+                },
+                "desktopLogoImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "footerElement": {
+                "type": "string"
+                },
+                "mobileLogoImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                }
+                },
+                "type": "object"
+                },
+                "language": {
+                "properties": {
+                "viewLanguage": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "pageCustomizations": {
+                "properties": {
+                "data": {
+                "items": {
+                "properties": {
+                "key": {
+                "type": "string"
+                },
+                "value": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                }
+                },
+                "type": "object"
+                },
+                "portalTheme": {
+                "properties": {
+                "id": {
+                "type": "string"
+                },
+                "name": {
+                "type": "string"
+                },
+                "themeData": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "portalTweakSettings": {
+                "properties": {
+                "bannerColor": {
+                "type": "string"
+                },
+                "bannerTextColor": {
+                "type": "string"
+                },
+                "pageBackgroundColor": {
+                "type": "string"
+                },
+                "pageLabelAndTextColor": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                }
+                },
+                "type": "object"
+                },
                 "description":
                  {
                 "type": "string"
@@ -57,39 +166,123 @@ class JSONSchemaValidatorAe4Af25Df565334B20A24C4878B68E4(object):
                 "name": {
                 "type": "string"
                 },
+                "portalTestUrl": {
+                "type": "string"
+                },
+                "portalType": {
+                "type": "string"
+                },
                 "settings": {
                 "properties": {
+                "aupSettings": {
+                "properties": {
+                "accessCode": {
+                "type": "string"
+                },
+                "includeAup": {
+                "type": "boolean"
+                },
+                "requireAccessCode": {
+                "type": "boolean"
+                },
+                "requireScrolling": {
+                "type": "boolean"
+                }
+                },
+                "type": "object"
+                },
+                "authSuccessSettings": {
+                "properties": {
+                "redirectUrl": {
+                "type": "string"
+                },
+                "successRedirect": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "portalSettings": {
                 "properties": {
                 "allowedInterfaces": {
-                "items": {
                 "type": "string"
                 },
-                "type": "array"
+                "alwaysUsedLanguage": {
+                "type": "string"
+                },
+                "certificateGroupTag": {
+                "type": "string"
+                },
+                "coaType": {
+                "type": "string"
+                },
+                "displayLang": {
+                "type": "string"
+                },
+                "endpointIdentityGroup": {
+                "type": "string"
+                },
+                "fallbackLanguage": {
+                "type": "string"
                 },
                 "httpsPort": {
                 "type": "integer"
                 }
                 },
-                "required": [
-                "httpsPort",
-                "allowedInterfaces"
-                ],
                 "type": "object"
-                }
                 },
-                "required": [
-                "portalSettings"
-                ],
-                "type": "object"
+                "postAccessBannerSettings": {
+                "properties": {
+                "includePostAccessBanner": {
+                "type": "boolean"
                 }
                 },
                 "type": "object"
+                },
+                "postLoginBannerSettings": {
+                "properties": {
+                "includePostAccessBanner": {
+                "type": "boolean"
                 }
                 },
-                "required": [
-                "HotspotPortal"
-                ],
+                "type": "object"
+                },
+                "supportInfoSettings": {
+                "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
+                "emptyFieldDisplay": {
+                "type": "string"
+                },
+                "includeBrowserUserAgent": {
+                "type": "boolean"
+                },
+                "includeFailureCode": {
+                "type": "boolean"
+                },
+                "includeIpAddress": {
+                "type": "boolean"
+                },
+                "includeMacAddr": {
+                "type": "boolean"
+                },
+                "includePolicyServer": {
+                "type": "boolean"
+                },
+                "includeSupportInfoPage": {
+                "type": "boolean"
+                }
+                },
+                "type": "object"
+                }
+                },
+                "type": "object"
+                }
+                },
+                "type": "object"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

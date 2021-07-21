@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_access_network_conditions(json_schema_validate, obj):
+def is_valid_get_network_access_network_conditions(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_network_access_network_conditions(json_schema_validate, obj
     return True
 
 
-def get_all_network_access_network_conditions(api):
-    endpoint_result = api.network_access_network_conditions.get_all_network_access_network_conditions(
+def get_network_access_network_conditions(api):
+    endpoint_result = api.network_access_network_conditions.get_network_access_network_conditions(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_network_conditions
-def test_get_all_network_access_network_conditions(api, validator):
+def test_get_network_access_network_conditions(api, validator):
     try:
-        assert is_valid_get_all_network_access_network_conditions(
+        assert is_valid_get_network_access_network_conditions(
             validator,
-            get_all_network_access_network_conditions(api)
+            get_network_access_network_conditions(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_network_access_network_conditions(api, validator):
             raise original_e
 
 
-def get_all_network_access_network_conditions_default(api):
-    endpoint_result = api.network_access_network_conditions.get_all_network_access_network_conditions(
+def get_network_access_network_conditions_default(api):
+    endpoint_result = api.network_access_network_conditions.get_network_access_network_conditions(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_network_conditions
-def test_get_all_network_access_network_conditions_default(api, validator):
+def test_get_network_access_network_conditions_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_network_conditions(
+        assert is_valid_get_network_access_network_conditions(
             validator,
-            get_all_network_access_network_conditions_default(api)
+            get_network_access_network_conditions_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -94,9 +94,10 @@ def create_network_access_network_condition(api):
     endpoint_result = api.network_access_network_conditions.create_network_access_network_condition(
         active_validation=False,
         condition_type='string',
-        conditions=[{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}],
+        conditions=[{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}],
         description='string',
         id='string',
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         payload=None
     )
@@ -123,6 +124,7 @@ def create_network_access_network_condition_default(api):
         conditions=None,
         description=None,
         id=None,
+        link=None,
         name=None,
         payload=None
     )
@@ -206,9 +208,10 @@ def update_network_access_network_condition_by_id(api):
     endpoint_result = api.network_access_network_conditions.update_network_access_network_condition_by_id(
         active_validation=False,
         condition_type='string',
-        conditions=[{'ipAddrList': ['string'], 'macAddrList': ['string'], 'cliDnisList': ['string'], 'deviceList': ['string'], 'deviceGroupList': ['string']}],
+        conditions=[{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}],
         description='string',
         id='string',
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         payload=None
     )
@@ -235,6 +238,7 @@ def update_network_access_network_condition_by_id_default(api):
         condition_type=None,
         conditions=None,
         description=None,
+        link=None,
         name=None,
         payload=None
     )

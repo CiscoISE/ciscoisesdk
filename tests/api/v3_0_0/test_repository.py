@@ -145,7 +145,7 @@ def test_create_repository_default(api, validator):
             raise original_e
 
 
-def is_valid_get_repository_by_name(json_schema_validate, obj):
+def is_valid_get_repository(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -156,19 +156,19 @@ def is_valid_get_repository_by_name(json_schema_validate, obj):
     return True
 
 
-def get_repository_by_name(api):
-    endpoint_result = api.repository.get_repository_by_name(
+def get_repository(api):
+    endpoint_result = api.repository.get_repository(
         name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.repository
-def test_get_repository_by_name(api, validator):
+def test_get_repository(api, validator):
     try:
-        assert is_valid_get_repository_by_name(
+        assert is_valid_get_repository(
             validator,
-            get_repository_by_name(api)
+            get_repository(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -176,26 +176,26 @@ def test_get_repository_by_name(api, validator):
             raise original_e
 
 
-def get_repository_by_name_default(api):
-    endpoint_result = api.repository.get_repository_by_name(
+def get_repository_default(api):
+    endpoint_result = api.repository.get_repository(
         name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.repository
-def test_get_repository_by_name_default(api, validator):
+def test_get_repository_default(api, validator):
     try:
-        assert is_valid_get_repository_by_name(
+        assert is_valid_get_repository(
             validator,
-            get_repository_by_name_default(api)
+            get_repository_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_repository_by_name(json_schema_validate, obj):
+def is_valid_update_repository(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -206,8 +206,8 @@ def is_valid_update_repository_by_name(json_schema_validate, obj):
     return True
 
 
-def update_repository_by_name(api):
-    endpoint_result = api.repository.update_repository_by_name(
+def update_repository(api):
+    endpoint_result = api.repository.update_repository(
         active_validation=False,
         enable_pki=True,
         name='string',
@@ -222,11 +222,11 @@ def update_repository_by_name(api):
 
 
 @pytest.mark.repository
-def test_update_repository_by_name(api, validator):
+def test_update_repository(api, validator):
     try:
-        assert is_valid_update_repository_by_name(
+        assert is_valid_update_repository(
             validator,
-            update_repository_by_name(api)
+            update_repository(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -234,8 +234,8 @@ def test_update_repository_by_name(api, validator):
             raise original_e
 
 
-def update_repository_by_name_default(api):
-    endpoint_result = api.repository.update_repository_by_name(
+def update_repository_default(api):
+    endpoint_result = api.repository.update_repository(
         active_validation=False,
         name='string',
         enable_pki=None,
@@ -250,18 +250,18 @@ def update_repository_by_name_default(api):
 
 
 @pytest.mark.repository
-def test_update_repository_by_name_default(api, validator):
+def test_update_repository_default(api, validator):
     try:
-        assert is_valid_update_repository_by_name(
+        assert is_valid_update_repository(
             validator,
-            update_repository_by_name_default(api)
+            update_repository_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_repository_by_name(json_schema_validate, obj):
+def is_valid_delete_repository(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -272,19 +272,19 @@ def is_valid_delete_repository_by_name(json_schema_validate, obj):
     return True
 
 
-def delete_repository_by_name(api):
-    endpoint_result = api.repository.delete_repository_by_name(
+def delete_repository(api):
+    endpoint_result = api.repository.delete_repository(
         name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.repository
-def test_delete_repository_by_name(api, validator):
+def test_delete_repository(api, validator):
     try:
-        assert is_valid_delete_repository_by_name(
+        assert is_valid_delete_repository(
             validator,
-            delete_repository_by_name(api)
+            delete_repository(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -292,19 +292,19 @@ def test_delete_repository_by_name(api, validator):
             raise original_e
 
 
-def delete_repository_by_name_default(api):
-    endpoint_result = api.repository.delete_repository_by_name(
+def delete_repository_default(api):
+    endpoint_result = api.repository.delete_repository(
         name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.repository
-def test_delete_repository_by_name_default(api, validator):
+def test_delete_repository_default(api, validator):
     try:
-        assert is_valid_delete_repository_by_name(
+        assert is_valid_delete_repository(
             validator,
-            delete_repository_by_name_default(api)
+            delete_repository_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

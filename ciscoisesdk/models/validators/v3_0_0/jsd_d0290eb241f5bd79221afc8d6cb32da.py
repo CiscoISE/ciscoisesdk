@@ -47,12 +47,21 @@ class JSONSchemaValidatorD0290Eb241F5Bd79221Afc8D6Cb32Da(object):
                 "properties": {
                 "Sgt": {
                 "properties": {
+                "defaultSGACLs": {
+                "items": {
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "description":
                  {
                 "type": "string"
                 },
                 "generationId": {
-                "type": "string"
+                "type": "integer"
+                },
+                "isReadOnly": {
+                "type": "boolean"
                 },
                 "name": {
                 "type": "string"
@@ -64,16 +73,9 @@ class JSONSchemaValidatorD0290Eb241F5Bd79221Afc8D6Cb32Da(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "name",
-                "value"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "Sgt"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

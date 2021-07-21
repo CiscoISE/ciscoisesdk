@@ -112,9 +112,6 @@ class JSONSchemaValidatorA0710Ba581DA4D3Fd00E84D59E3(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SgtVNVlanContainer"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

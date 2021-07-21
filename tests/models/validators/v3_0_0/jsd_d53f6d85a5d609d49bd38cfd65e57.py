@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllProfilerProfiles data model.
+"""Identity Services Engine getProfilerProfiles data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD53F6D85A5D609D49Bd38Cfd65E57(object):
-    """getAllProfilerProfiles request schema definition."""
+    """getProfilerProfiles request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD53F6D85A5D609D49Bd38Cfd65E57, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -48,6 +48,7 @@ class JSONSchemaValidatorD53F6D85A5D609D49Bd38Cfd65E57(object):
                 "SearchResult": {
                 "properties": {
                 "nextPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -59,12 +60,26 @@ class JSONSchemaValidatorD53F6D85A5D609D49Bd38Cfd65E57(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
                 },
                 "resources": {
                 "items": {
@@ -88,11 +103,6 @@ class JSONSchemaValidatorD53F6D85A5D609D49Bd38Cfd65E57(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -107,17 +117,9 @@ class JSONSchemaValidatorD53F6D85A5D609D49Bd38Cfd65E57(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources",
-                "nextPage"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllNetworkAccessSecurityGroups data model.
+"""Identity Services Engine getNetworkAccessSecurityGroups data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF564C3Eda5C20Bb807B8C062C8E7B(object):
-    """getAllNetworkAccessSecurityGroups request schema definition."""
+    """getNetworkAccessSecurityGroups request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF564C3Eda5C20Bb807B8C062C8E7B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -46,6 +46,9 @@ class JSONSchemaValidatorF564C3Eda5C20Bb807B8C062C8E7B(object):
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
                 "properties": {
+                "id": {
+                "type": "string"
+                },
                 "name": {
                 "type": "string"
                 }

@@ -51,6 +51,14 @@ class JSONSchemaValidatorBd8691C5D9435E48A3C7A08658Bda585(object):
                 "properties": {
                 "globalCustomizations": {
                 "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "bannerImage": {
                 "properties": {
                 "data": {
@@ -171,19 +179,13 @@ class JSONSchemaValidatorBd8691C5D9435E48A3C7A08658Bda585(object):
                 "displayFrequency": {
                 "type": "string"
                 },
+                "displayFrequencyIntervalDays": {
+                "type": "integer"
+                },
                 "includeAup": {
                 "type": "boolean"
                 },
-                "requireAccessCode": {
-                "type": "boolean"
-                },
                 "requireScrolling": {
-                "type": "boolean"
-                },
-                "skipAupForEmployees": {
-                "type": "boolean"
-                },
-                "useDiffAupForEmployees": {
                 "type": "boolean"
                 }
                 },
@@ -191,21 +193,6 @@ class JSONSchemaValidatorBd8691C5D9435E48A3C7A08658Bda585(object):
                 },
                 "loginPageSettings": {
                 "properties": {
-                "allowAlternateGuestPortal": {
-                "type": "boolean"
-                },
-                "allowGuestToChangePassword": {
-                "type": "boolean"
-                },
-                "allowGuestToCreateAccounts": {
-                "type": "boolean"
-                },
-                "allowGuestToUseSocialAccounts": {
-                "type": "boolean"
-                },
-                "allowShowGuestForm": {
-                "type": "boolean"
-                },
                 "aupDisplay": {
                 "type": "string"
                 },
@@ -214,9 +201,6 @@ class JSONSchemaValidatorBd8691C5D9435E48A3C7A08658Bda585(object):
                 },
                 "maxFailedAttemptsBeforeRateLimit": {
                 "type": "integer"
-                },
-                "requireAccessCode": {
-                "type": "boolean"
                 },
                 "requireAupAcceptance": {
                 "type": "boolean"
@@ -237,22 +221,13 @@ class JSONSchemaValidatorBd8691C5D9435E48A3C7A08658Bda585(object):
                 "portalSettings": {
                 "properties": {
                 "allowedInterfaces": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "alwaysUsedLanguage": {
                 "type": "string"
                 },
                 "authenticationMethod": {
                 "type": "string"
                 },
                 "availableSsids": {
-                "items": {
                 "type": "string"
-                },
-                "type": "array"
                 },
                 "certificateGroupTag": {
                 "type": "string"
@@ -275,6 +250,14 @@ class JSONSchemaValidatorBd8691C5D9435E48A3C7A08658Bda585(object):
                 },
                 "type": "object"
                 },
+                "postAccessBannerSettings": {
+                "properties": {
+                "includePostAccessBanner": {
+                "type": "boolean"
+                }
+                },
+                "type": "object"
+                },
                 "postLoginBannerSettings": {
                 "properties": {
                 "includePostAccessBanner": {
@@ -293,6 +276,9 @@ class JSONSchemaValidatorBd8691C5D9435E48A3C7A08658Bda585(object):
                 },
                 "supportInfoSettings": {
                 "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
                 "emptyFieldDisplay": {
                 "type": "string"
                 },

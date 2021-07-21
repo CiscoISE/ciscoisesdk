@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getRepositoryByName data model.
+"""Identity Services Engine getRepository data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC785067A5A5E3283F96Dd5006C7865(object):
-    """getRepositoryByName request schema definition."""
+    """getRepository request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC785067A5A5E3283F96Dd5006C7865, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -48,6 +48,7 @@ class JSONSchemaValidatorC785067A5A5E3283F96Dd5006C7865(object):
                 "response": {
                 "properties": {
                 "enablePki": {
+                "default": false,
                 "type": "boolean"
                 },
                 "name": {
@@ -82,6 +83,9 @@ class JSONSchemaValidatorC785067A5A5E3283F96Dd5006C7865(object):
                 }
                 },
                 "type": "object"
+                },
+                "version": {
+                "type": "string"
                 }
                 },
                 "type": "object"

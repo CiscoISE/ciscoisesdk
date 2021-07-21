@@ -54,6 +54,9 @@ class JSONSchemaValidatorCab8440E21553C3A807D23D05E5E1Aa(object):
                 "enabled": {
                 "type": "boolean"
                 },
+                "id": {
+                "type": "string"
+                },
                 "ipAddress": {
                 "type": "string"
                 },
@@ -73,21 +76,9 @@ class JSONSchemaValidatorCab8440E21553C3A807D23D05E5E1Aa(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "sxpPeer",
-                "sxpVpn",
-                "sxpNode",
-                "ipAddress",
-                "sxpMode",
-                "sxpVersion",
-                "enabled"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSSxpConnection"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

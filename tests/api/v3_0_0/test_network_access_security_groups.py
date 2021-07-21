@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_access_security_groups(json_schema_validate, obj):
+def is_valid_get_network_access_security_groups(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_network_access_security_groups(json_schema_validate, obj):
     return True
 
 
-def get_all_network_access_security_groups(api):
-    endpoint_result = api.network_access_security_groups.get_all_network_access_security_groups(
+def get_network_access_security_groups(api):
+    endpoint_result = api.network_access_security_groups.get_network_access_security_groups(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_security_groups
-def test_get_all_network_access_security_groups(api, validator):
+def test_get_network_access_security_groups(api, validator):
     try:
-        assert is_valid_get_all_network_access_security_groups(
+        assert is_valid_get_network_access_security_groups(
             validator,
-            get_all_network_access_security_groups(api)
+            get_network_access_security_groups(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_network_access_security_groups(api, validator):
             raise original_e
 
 
-def get_all_network_access_security_groups_default(api):
-    endpoint_result = api.network_access_security_groups.get_all_network_access_security_groups(
+def get_network_access_security_groups_default(api):
+    endpoint_result = api.network_access_security_groups.get_network_access_security_groups(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_security_groups
-def test_get_all_network_access_security_groups_default(api, validator):
+def test_get_network_access_security_groups_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_security_groups(
+        assert is_valid_get_network_access_security_groups(
             validator,
-            get_all_network_access_security_groups_default(api)
+            get_network_access_security_groups_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

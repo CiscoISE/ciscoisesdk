@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllGuestUsers data model.
+"""Identity Services Engine getGuestUsers data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorA5Abd33Eeaa52E39E926472751Ef79E(object):
-    """getAllGuestUsers request schema definition."""
+    """getGuestUsers request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA5Abd33Eeaa52E39E926472751Ef79E, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -47,9 +47,47 @@ class JSONSchemaValidatorA5Abd33Eeaa52E39E926472751Ef79E(object):
                 "properties": {
                 "SearchResult": {
                 "properties": {
+                "nextPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "resources": {
                 "items": {
                 "properties": {
+                "description":
+                 {
+                "type": "string"
+                },
                 "id": {
                 "type": "string"
                 },
@@ -65,11 +103,6 @@ class JSONSchemaValidatorA5Abd33Eeaa52E39E926472751Ef79E(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -84,16 +117,9 @@ class JSONSchemaValidatorA5Abd33Eeaa52E39E926472751Ef79E(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

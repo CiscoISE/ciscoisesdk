@@ -58,16 +58,9 @@ class JSONSchemaValidatorC38Fb2E2Dd45F4DAb6EC3A19Effd15A(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "description"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "NetworkDeviceGroup"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

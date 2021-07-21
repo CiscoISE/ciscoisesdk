@@ -74,10 +74,10 @@ class NetworkAccessNetworkConditions(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_network_access_network_conditions(self,
-                                                  headers=None,
-                                                  **query_parameters):
-        """Network Access - Returns a list of network conditions.
+    def get_network_access_network_conditions(self,
+                                              headers=None,
+                                              **query_parameters):
+        """Network Access Returns a list of network conditions.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -86,10 +86,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -129,17 +131,30 @@ class NetworkAccessNetworkConditions(object):
 
         return self._object_factory('bpm_d43fec9e7dc556cbb9bf0ebd1dcd6aad_v3_0_0', _api_response)
 
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_network_conditions <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.get_network_access_network_conditions>`_
+        """
+        return self.get_network_access_network_conditions(
+            headers=headers,
+            **query_parameters
+        )
+
     def create_network_access_network_condition(self,
                                                 condition_type=None,
                                                 conditions=None,
                                                 description=None,
                                                 id=None,
+                                                link=None,
                                                 name=None,
                                                 headers=None,
                                                 payload=None,
                                                 active_validation=True,
                                                 **query_parameters):
-        """Network Access - Creates network condition.
+        """Network Access Creates network condition.
 
         Args:
             condition_type(string): This field determines the
@@ -153,9 +168,9 @@ class NetworkAccessNetworkConditions(object):
             description(string): description, property of the
                 request body.
             id(string): id, property of the request body.
-            name(string): NetworkCondition name, [Valid characters
-                are alphanumerics, underscore, space],
-                property of the request body.
+            link(object): link, property of the request body.
+            name(string): Network Condition name, property of the
+                request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -166,10 +181,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -207,14 +224,16 @@ class NetworkAccessNetworkConditions(object):
             _payload = payload
         else:
             _payload = {
-                'name':
-                    name,
-                'id':
-                    id,
-                'description':
-                    description,
                 'conditionType':
                     condition_type,
+                'description':
+                    description,
+                'id':
+                    id,
+                'link':
+                    link,
+                'name':
+                    name,
                 'conditions':
                     conditions,
             }
@@ -238,11 +257,39 @@ class NetworkAccessNetworkConditions(object):
 
         return self._object_factory('bpm_f4dbfb874b3b56d7a651d6732f1bd55e_v3_0_0', _api_response)
 
+    def create(self,
+               condition_type=None,
+               conditions=None,
+               description=None,
+               id=None,
+               link=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_network_access_network_condition <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.create_network_access_network_condition>`_
+        """
+        return self.create_network_access_network_condition(
+            condition_type=condition_type,
+            conditions=conditions,
+            description=description,
+            id=id,
+            link=link,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_network_access_network_condition_by_id(self,
                                                    id,
                                                    headers=None,
                                                    **query_parameters):
-        """Network Access - Returns a network condition.
+        """Network Access Returns a network condition.
 
         Args:
             id(basestring): id path parameter. Condition id.
@@ -252,10 +299,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -298,17 +347,32 @@ class NetworkAccessNetworkConditions(object):
 
         return self._object_factory('bpm_ab015a9eb6d5f2b91002af068cb4ce2_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_network_access_network_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.get_network_access_network_condition_by_id>`_
+        """
+        return self.get_network_access_network_condition_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_network_access_network_condition_by_id(self,
                                                       id,
                                                       condition_type=None,
                                                       conditions=None,
                                                       description=None,
+                                                      link=None,
                                                       name=None,
                                                       headers=None,
                                                       payload=None,
                                                       active_validation=True,
                                                       **query_parameters):
-        """Network Access - Update network condition.
+        """Network Access Update network condition.
 
         Args:
             condition_type(string): This field determines the
@@ -322,9 +386,9 @@ class NetworkAccessNetworkConditions(object):
             description(string): description, property of the
                 request body.
             id(string): id, property of the request body.
-            name(string): NetworkCondition name, [Valid characters
-                are alphanumerics, underscore, space],
-                property of the request body.
+            link(object): link, property of the request body.
+            name(string): Network Condition name, property of the
+                request body.
             id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -336,10 +400,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -380,14 +446,16 @@ class NetworkAccessNetworkConditions(object):
             _payload = payload
         else:
             _payload = {
-                'name':
-                    name,
-                'id':
-                    id,
-                'description':
-                    description,
                 'conditionType':
                     condition_type,
+                'description':
+                    description,
+                'id':
+                    id,
+                'link':
+                    link,
+                'name':
+                    name,
                 'conditions':
                     conditions,
             }
@@ -412,11 +480,39 @@ class NetworkAccessNetworkConditions(object):
 
         return self._object_factory('bpm_cf65cd559628b26f6eb5ea20f14_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     condition_type=None,
+                     conditions=None,
+                     description=None,
+                     link=None,
+                     name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_network_access_network_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.update_network_access_network_condition_by_id>`_
+        """
+        return self.update_network_access_network_condition_by_id(
+            id=id,
+            condition_type=condition_type,
+            conditions=conditions,
+            description=description,
+            link=link,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_network_access_network_condition_by_id(self,
                                                       id,
                                                       headers=None,
                                                       **query_parameters):
-        """Network Access - Delete network condition.
+        """Network Access Delete network condition.
 
         Args:
             id(basestring): id path parameter. Condition id.
@@ -426,10 +522,12 @@ class NetworkAccessNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -471,3 +569,17 @@ class NetworkAccessNetworkConditions(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e92c6e47625711b9ce06f92bd4d219_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_network_access_network_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.network_access_network_conditions.
+        NetworkAccessNetworkConditions.delete_network_access_network_condition_by_id>`_
+        """
+        return self.delete_network_access_network_condition_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )

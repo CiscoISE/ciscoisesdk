@@ -47,6 +47,10 @@ class JSONSchemaValidatorA1E26E595667Bd98F84Dd29232E2(object):
                 "properties": {
                 "TacacsServerSequence": {
                 "properties": {
+                "description":
+                 {
+                "type": "string"
+                },
                 "localAccounting": {
                 "type": "boolean"
                 },
@@ -72,16 +76,9 @@ class JSONSchemaValidatorA1E26E595667Bd98F84Dd29232E2(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "name",
-                "serverList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsServerSequence"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

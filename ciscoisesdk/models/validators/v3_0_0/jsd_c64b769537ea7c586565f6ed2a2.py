@@ -51,6 +51,14 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "properties": {
                 "globalCustomizations": {
                 "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "bannerImage": {
                 "properties": {
                 "data": {
@@ -107,10 +115,6 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "key",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -130,9 +134,6 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name"
-                ],
                 "type": "object"
                 },
                 "portalTweakSettings": {
@@ -165,6 +166,9 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "name": {
                 "type": "string"
                 },
+                "portalTestUrl": {
+                "type": "string"
+                },
                 "portalType": {
                 "type": "string"
                 },
@@ -175,19 +179,13 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "displayFrequency": {
                 "type": "string"
                 },
+                "displayFrequencyIntervalDays": {
+                "type": "integer"
+                },
                 "includeAup": {
                 "type": "boolean"
                 },
-                "requireAccessCode": {
-                "type": "boolean"
-                },
                 "requireScrolling": {
-                "type": "boolean"
-                },
-                "skipAupForEmployees": {
-                "type": "boolean"
-                },
-                "useDiffAupForEmployees": {
                 "type": "boolean"
                 }
                 },
@@ -203,21 +201,6 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 },
                 "loginPageSettings": {
                 "properties": {
-                "allowAlternateGuestPortal": {
-                "type": "boolean"
-                },
-                "allowGuestToChangePassword": {
-                "type": "boolean"
-                },
-                "allowGuestToCreateAccounts": {
-                "type": "boolean"
-                },
-                "allowGuestToUseSocialAccounts": {
-                "type": "boolean"
-                },
-                "allowShowGuestForm": {
-                "type": "boolean"
-                },
                 "aupDisplay": {
                 "type": "string"
                 },
@@ -227,17 +210,16 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "maxFailedAttemptsBeforeRateLimit": {
                 "type": "integer"
                 },
-                "requireAccessCode": {
-                "type": "boolean"
-                },
                 "requireAupAcceptance": {
                 "type": "boolean"
                 },
-                "requireAupScrolling": {
+                "requireScrolling": {
                 "type": "boolean"
                 },
                 "socialConfigs": {
-                "items": {},
+                "items": {
+                "type": "object"
+                },
                 "type": "array"
                 },
                 "timeBetweenLoginsDuringRateLimit": {
@@ -249,20 +231,10 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "portalSettings": {
                 "properties": {
                 "allowedInterfaces": {
-                "items": {
                 "type": "string"
-                },
-                "type": "array"
                 },
                 "alwaysUsedLanguage": {
                 "type": "string"
-                },
-                "authenticationMethod": {
-                "type": "string"
-                },
-                "availableSsids": {
-                "items": {},
-                "type": "array"
                 },
                 "certificateGroupTag": {
                 "type": "string"
@@ -276,22 +248,18 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "fallbackLanguage": {
                 "type": "string"
                 },
-                "fqdn": {
-                "type": "string"
-                },
                 "httpsPort": {
-                "type": "integer"
-                },
-                "idleTimeout": {
                 "type": "integer"
                 }
                 },
-                "required": [
-                "httpsPort",
-                "allowedInterfaces",
-                "certificateGroupTag",
-                "endpointIdentityGroup"
-                ],
+                "type": "object"
+                },
+                "postAccessBannerSettings": {
+                "properties": {
+                "includePostAccessBanner": {
+                "type": "boolean"
+                }
+                },
                 "type": "object"
                 },
                 "postLoginBannerSettings": {
@@ -304,6 +272,9 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 },
                 "supportInfoSettings": {
                 "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
                 "emptyFieldDisplay": {
                 "type": "string"
                 },
@@ -332,10 +303,6 @@ class JSONSchemaValidatorC64B769537EA7C586565F6Ed2A2(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "name",
-                "portalType"
-                ],
                 "type": "object"
                 }
                 },

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getCSR data model.
+"""Identity Services Engine getCSRs data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorEeef18D70B159F788B717E301Dd3643(object):
-    """getCSR request schema definition."""
+    """getCSRs request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEeef18D70B159F788B717E301Dd3643, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -70,16 +70,9 @@ class JSONSchemaValidatorB5097E4DB7505Ba390914B50B1C2046B(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "name",
-                "hostIP"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsExternalServer"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

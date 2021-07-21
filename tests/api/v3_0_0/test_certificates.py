@@ -29,827 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_import_trusted_certificate(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c8cd2f618b655d988ce626e579486596_v3_0_0').validate(obj.response)
-    return True
-
-
-def import_trusted_certificate(api):
-    endpoint_result = api.certificates.import_trusted_certificate(
-        active_validation=False,
-        allow_basic_constraint_cafalse=True,
-        allow_out_of_date_cert=True,
-        allow_sha1_certificates=True,
-        data='string',
-        description='string',
-        name='string',
-        payload=None,
-        trust_for_certificate_based_admin_auth=True,
-        trust_for_cisco_services_auth=True,
-        trust_for_client_auth=True,
-        trust_for_ise_auth=True,
-        validate_certificate_extensions=True
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_import_trusted_certificate(api, validator):
-    try:
-        assert is_valid_import_trusted_certificate(
-            validator,
-            import_trusted_certificate(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def import_trusted_certificate_default(api):
-    endpoint_result = api.certificates.import_trusted_certificate(
-        active_validation=False,
-        allow_basic_constraint_cafalse=None,
-        allow_out_of_date_cert=None,
-        allow_sha1_certificates=None,
-        data=None,
-        description=None,
-        name=None,
-        payload=None,
-        trust_for_certificate_based_admin_auth=None,
-        trust_for_cisco_services_auth=None,
-        trust_for_client_auth=None,
-        trust_for_ise_auth=None,
-        validate_certificate_extensions=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_import_trusted_certificate_default(api, validator):
-    try:
-        assert is_valid_import_trusted_certificate(
-            validator,
-            import_trusted_certificate_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_import_system_certificate(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_517e6c7251a8508597f1b7ae61cbf953_v3_0_0').validate(obj.response)
-    return True
-
-
-def import_system_certificate(api):
-    endpoint_result = api.certificates.import_system_certificate(
-        active_validation=False,
-        admin=True,
-        allow_extended_validity=True,
-        allow_out_of_date_cert=True,
-        allow_replacement_of_certificates=True,
-        allow_replacement_of_portal_group_tag=True,
-        allow_sha1_certificates=True,
-        allow_wild_card_certificates=True,
-        data='string',
-        eap=True,
-        ims=True,
-        name='string',
-        password='string',
-        payload=None,
-        portal=True,
-        portal_group_tag='string',
-        private_key_data='string',
-        pxgrid=True,
-        radius=True,
-        saml=True,
-        validate_certificate_extensions=True
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_import_system_certificate(api, validator):
-    try:
-        assert is_valid_import_system_certificate(
-            validator,
-            import_system_certificate(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def import_system_certificate_default(api):
-    endpoint_result = api.certificates.import_system_certificate(
-        active_validation=False,
-        admin=None,
-        allow_extended_validity=None,
-        allow_out_of_date_cert=None,
-        allow_replacement_of_certificates=None,
-        allow_replacement_of_portal_group_tag=None,
-        allow_sha1_certificates=None,
-        allow_wild_card_certificates=None,
-        data=None,
-        eap=None,
-        ims=None,
-        name=None,
-        password=None,
-        payload=None,
-        portal=None,
-        portal_group_tag=None,
-        private_key_data=None,
-        pxgrid=None,
-        radius=None,
-        saml=None,
-        validate_certificate_extensions=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_import_system_certificate_default(api, validator):
-    try:
-        assert is_valid_import_system_certificate(
-            validator,
-            import_system_certificate_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_bind_csr(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2b94d7d3f0ed5d0b938151ae2cae9fa4_v3_0_0').validate(obj.response)
-    return True
-
-
-def bind_csr(api):
-    endpoint_result = api.certificates.bind_csr(
-        active_validation=False,
-        admin=True,
-        allow_extended_validity=True,
-        allow_out_of_date_cert=True,
-        allow_replacement_of_certificates=True,
-        allow_replacement_of_portal_group_tag=True,
-        data='string',
-        eap=True,
-        host_name='string',
-        id='string',
-        ims=True,
-        name='string',
-        payload=None,
-        portal=True,
-        portal_group_tag='string',
-        pxgrid=True,
-        radius=True,
-        saml=True,
-        validate_certificate_extensions=True
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_bind_csr(api, validator):
-    try:
-        assert is_valid_bind_csr(
-            validator,
-            bind_csr(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def bind_csr_default(api):
-    endpoint_result = api.certificates.bind_csr(
-        active_validation=False,
-        admin=None,
-        allow_extended_validity=None,
-        allow_out_of_date_cert=None,
-        allow_replacement_of_certificates=None,
-        allow_replacement_of_portal_group_tag=None,
-        data=None,
-        eap=None,
-        host_name=None,
-        id=None,
-        ims=None,
-        name=None,
-        payload=None,
-        portal=None,
-        portal_group_tag=None,
-        pxgrid=None,
-        radius=None,
-        saml=None,
-        validate_certificate_extensions=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_bind_csr_default(api, validator):
-    try:
-        assert is_valid_bind_csr(
-            validator,
-            bind_csr_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_export_system_cert(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1dbe47028859573988880de76fec0936_v3_0_0').validate(obj.response)
-    return True
-
-
-def export_system_cert(api):
-    endpoint_result = api.certificates.export_system_cert(
-        active_validation=False,
-        certificate_id='string',
-        export='string',
-        id='string',
-        password='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_export_system_cert(api, validator):
-    try:
-        assert is_valid_export_system_cert(
-            validator,
-            export_system_cert(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def export_system_cert_default(api):
-    endpoint_result = api.certificates.export_system_cert(
-        active_validation=False,
-        certificate_id=None,
-        export=None,
-        id=None,
-        password=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_export_system_cert_default(api, validator):
-    try:
-        assert is_valid_export_system_cert(
-            validator,
-            export_system_cert_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_all_trusted_certificates(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c654a18faf1b5571ac5ba61145d298c4_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_trusted_certificates(api):
-    endpoint_result = api.certificates.get_all_trusted_certificates(
-        filter='value1,value2',
-        filter_type='string',
-        page=0,
-        size=0,
-        sort='string',
-        sort_by='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_get_all_trusted_certificates(api, validator):
-    try:
-        assert is_valid_get_all_trusted_certificates(
-            validator,
-            get_all_trusted_certificates(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_trusted_certificates_default(api):
-    endpoint_result = api.certificates.get_all_trusted_certificates(
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sort=None,
-        sort_by=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_get_all_trusted_certificates_default(api, validator):
-    try:
-        assert is_valid_get_all_trusted_certificates(
-            validator,
-            get_all_trusted_certificates_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_trusted_certificate_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1091757f8f4956d29b821fa9bbf23266_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_trusted_certificate_by_id(api):
-    endpoint_result = api.certificates.get_trusted_certificate_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_get_trusted_certificate_by_id(api, validator):
-    try:
-        assert is_valid_get_trusted_certificate_by_id(
-            validator,
-            get_trusted_certificate_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_trusted_certificate_by_id_default(api):
-    endpoint_result = api.certificates.get_trusted_certificate_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_get_trusted_certificate_by_id_default(api, validator):
-    try:
-        assert is_valid_get_trusted_certificate_by_id(
-            validator,
-            get_trusted_certificate_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_trusted_certificate(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_239661cb625d5ad0ad76b93282f5818a_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_trusted_certificate(api):
-    endpoint_result = api.certificates.update_trusted_certificate(
-        active_validation=False,
-        authenticate_before_crl_received=True,
-        automatic_crl_update=True,
-        automatic_crl_update_period=0,
-        automatic_crl_update_units='string',
-        crl_distribution_url='string',
-        crl_download_failure_retries=0,
-        crl_download_failure_retries_units='string',
-        description='string',
-        download_crl=True,
-        enable_ocs_p_validation=True,
-        enable_server_identity_check=True,
-        id='string',
-        ignore_crl_expiration=True,
-        name='string',
-        non_automatic_crl_update_period=0,
-        non_automatic_crl_update_units='string',
-        payload=None,
-        reject_if_no_status_from_ocs_p=True,
-        reject_if_unreachable_from_ocs_p=True,
-        selected_ocs_p_service='string',
-        status='string',
-        trust_for_certificate_based_admin_auth=True,
-        trust_for_cisco_services_auth=True,
-        trust_for_client_auth=True,
-        trust_for_ise_auth=True
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_update_trusted_certificate(api, validator):
-    try:
-        assert is_valid_update_trusted_certificate(
-            validator,
-            update_trusted_certificate(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_trusted_certificate_default(api):
-    endpoint_result = api.certificates.update_trusted_certificate(
-        active_validation=False,
-        id='string',
-        authenticate_before_crl_received=None,
-        automatic_crl_update=None,
-        automatic_crl_update_period=None,
-        automatic_crl_update_units=None,
-        crl_distribution_url=None,
-        crl_download_failure_retries=None,
-        crl_download_failure_retries_units=None,
-        description=None,
-        download_crl=None,
-        enable_ocs_p_validation=None,
-        enable_server_identity_check=None,
-        ignore_crl_expiration=None,
-        name=None,
-        non_automatic_crl_update_period=None,
-        non_automatic_crl_update_units=None,
-        payload=None,
-        reject_if_no_status_from_ocs_p=None,
-        reject_if_unreachable_from_ocs_p=None,
-        selected_ocs_p_service=None,
-        status=None,
-        trust_for_certificate_based_admin_auth=None,
-        trust_for_cisco_services_auth=None,
-        trust_for_client_auth=None,
-        trust_for_ise_auth=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_update_trusted_certificate_default(api, validator):
-    try:
-        assert is_valid_update_trusted_certificate(
-            validator,
-            update_trusted_certificate_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_trusted_certificate_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c578ef80918b5d038024d126cd6e3b8d_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_trusted_certificate_by_id(api):
-    endpoint_result = api.certificates.delete_trusted_certificate_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_delete_trusted_certificate_by_id(api, validator):
-    try:
-        assert is_valid_delete_trusted_certificate_by_id(
-            validator,
-            delete_trusted_certificate_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_trusted_certificate_by_id_default(api):
-    endpoint_result = api.certificates.delete_trusted_certificate_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_delete_trusted_certificate_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_trusted_certificate_by_id(
-            validator,
-            delete_trusted_certificate_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_all_system_certificates(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_662594a56f5c5f739a83e8806da16be5_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_system_certificates(api):
-    endpoint_result = api.certificates.get_all_system_certificates(
-        filter='value1,value2',
-        filter_type='string',
-        host_name='string',
-        page=0,
-        size=0,
-        sort='string',
-        sort_by='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_get_all_system_certificates(api, validator):
-    try:
-        assert is_valid_get_all_system_certificates(
-            validator,
-            get_all_system_certificates(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_system_certificates_default(api):
-    endpoint_result = api.certificates.get_all_system_certificates(
-        host_name='string',
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sort=None,
-        sort_by=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_get_all_system_certificates_default(api, validator):
-    try:
-        assert is_valid_get_all_system_certificates(
-            validator,
-            get_all_system_certificates_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_system_certificate_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3f36e90115b05416a71506061fed7e5c_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_system_certificate_by_id(api):
-    endpoint_result = api.certificates.get_system_certificate_by_id(
-        host_name='string',
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_get_system_certificate_by_id(api, validator):
-    try:
-        assert is_valid_get_system_certificate_by_id(
-            validator,
-            get_system_certificate_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_system_certificate_by_id_default(api):
-    endpoint_result = api.certificates.get_system_certificate_by_id(
-        host_name='string',
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_get_system_certificate_by_id_default(api, validator):
-    try:
-        assert is_valid_get_system_certificate_by_id(
-            validator,
-            get_system_certificate_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_system_certificate_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_35241dc2eec65ad680a3c5de47cd87c8_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_system_certificate_by_id(api):
-    endpoint_result = api.certificates.delete_system_certificate_by_id(
-        host_name='string',
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_delete_system_certificate_by_id(api, validator):
-    try:
-        assert is_valid_delete_system_certificate_by_id(
-            validator,
-            delete_system_certificate_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_system_certificate_by_id_default(api):
-    endpoint_result = api.certificates.delete_system_certificate_by_id(
-        host_name='string',
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_delete_system_certificate_by_id_default(api, validator):
-    try:
-        assert is_valid_delete_system_certificate_by_id(
-            validator,
-            delete_system_certificate_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_system_certificate(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_48fb9c22ad9a5eddb590c85abdab460b_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_system_certificate(api):
-    endpoint_result = api.certificates.update_system_certificate(
-        active_validation=False,
-        admin=True,
-        allow_replacement_of_portal_group_tag=True,
-        description='string',
-        eap=True,
-        expiration_ttl_period=0,
-        expiration_ttl_units='string',
-        host_name='string',
-        id='string',
-        ims=True,
-        name='string',
-        payload=None,
-        portal=True,
-        portal_group_tag='string',
-        pxgrid=True,
-        radius=True,
-        renew_self_signed_certificate=True,
-        saml=True
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_update_system_certificate(api, validator):
-    try:
-        assert is_valid_update_system_certificate(
-            validator,
-            update_system_certificate(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_system_certificate_default(api):
-    endpoint_result = api.certificates.update_system_certificate(
-        active_validation=False,
-        host_name='string',
-        id='string',
-        admin=None,
-        allow_replacement_of_portal_group_tag=None,
-        description=None,
-        eap=None,
-        expiration_ttl_period=None,
-        expiration_ttl_units=None,
-        ims=None,
-        name=None,
-        payload=None,
-        portal=None,
-        portal_group_tag=None,
-        pxgrid=None,
-        radius=None,
-        renew_self_signed_certificate=None,
-        saml=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_update_system_certificate_default(api, validator):
-    try:
-        assert is_valid_update_system_certificate(
-            validator,
-            update_system_certificate_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_csr(json_schema_validate, obj):
+def is_valid_get_csrs(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -860,8 +40,8 @@ def is_valid_get_csr(json_schema_validate, obj):
     return True
 
 
-def get_csr(api):
-    endpoint_result = api.certificates.get_csr(
+def get_csrs(api):
+    endpoint_result = api.certificates.get_csrs(
         filter='value1,value2',
         filter_type='string',
         page=0,
@@ -873,11 +53,11 @@ def get_csr(api):
 
 
 @pytest.mark.certificates
-def test_get_csr(api, validator):
+def test_get_csrs(api, validator):
     try:
-        assert is_valid_get_csr(
+        assert is_valid_get_csrs(
             validator,
-            get_csr(api)
+            get_csrs(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -885,8 +65,8 @@ def test_get_csr(api, validator):
             raise original_e
 
 
-def get_csr_default(api):
-    endpoint_result = api.certificates.get_csr(
+def get_csrs_default(api):
+    endpoint_result = api.certificates.get_csrs(
         filter=None,
         filter_type=None,
         page=None,
@@ -898,11 +78,11 @@ def get_csr_default(api):
 
 
 @pytest.mark.certificates
-def test_get_csr_default(api, validator):
+def test_get_csrs_default(api, validator):
     try:
-        assert is_valid_get_csr(
+        assert is_valid_get_csrs(
             validator,
-            get_csr_default(api)
+            get_csrs_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -991,6 +171,114 @@ def test_generate_csr_default(api, validator):
         assert is_valid_generate_csr(
             validator,
             generate_csr_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_export_csr(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_ec26ec11d92356a594a6efa55ccb9be7_v3_0_0').validate(obj.response)
+    return True
+
+
+def export_csr(api):
+    endpoint_result = api.certificates.export_csr(
+        dirpath=None,
+        save_file=None,
+        hostname='string',
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_export_csr(api, validator):
+    try:
+        assert is_valid_export_csr(
+            validator,
+            export_csr(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def export_csr_default(api):
+    endpoint_result = api.certificates.export_csr(
+        dirpath=None,
+        save_file=None,
+        hostname='string',
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_export_csr_default(api, validator):
+    try:
+        assert is_valid_export_csr(
+            validator,
+            export_csr_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_generate_intermediate_ca_csr(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_bf95f099207a5b6599e04c47c22789c0_v3_0_0').validate(obj.response)
+    return True
+
+
+def generate_intermediate_ca_csr(api):
+    endpoint_result = api.certificates.generate_intermediate_ca_csr(
+        active_validation=False,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_generate_intermediate_ca_csr(api, validator):
+    try:
+        assert is_valid_generate_intermediate_ca_csr(
+            validator,
+            generate_intermediate_ca_csr(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def generate_intermediate_ca_csr_default(api):
+    endpoint_result = api.certificates.generate_intermediate_ca_csr(
+        active_validation=False,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_generate_intermediate_ca_csr_default(api, validator):
+    try:
+        assert is_valid_generate_intermediate_ca_csr(
+            validator,
+            generate_intermediate_ca_csr_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1101,110 +389,6 @@ def test_delete_csr_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_generate_intermediate_ca_csr(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bf95f099207a5b6599e04c47c22789c0_v3_0_0').validate(obj.response)
-    return True
-
-
-def generate_intermediate_ca_csr(api):
-    endpoint_result = api.certificates.generate_intermediate_ca_csr(
-        active_validation=False,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_generate_intermediate_ca_csr(api, validator):
-    try:
-        assert is_valid_generate_intermediate_ca_csr(
-            validator,
-            generate_intermediate_ca_csr(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def generate_intermediate_ca_csr_default(api):
-    endpoint_result = api.certificates.generate_intermediate_ca_csr(
-        active_validation=False,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_generate_intermediate_ca_csr_default(api, validator):
-    try:
-        assert is_valid_generate_intermediate_ca_csr(
-            validator,
-            generate_intermediate_ca_csr_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_export_csr(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ec26ec11d92356a594a6efa55ccb9be7_v3_0_0').validate(obj.response)
-    return True
-
-
-def export_csr(api):
-    endpoint_result = api.certificates.export_csr(
-        hostname='string',
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_export_csr(api, validator):
-    try:
-        assert is_valid_export_csr(
-            validator,
-            export_csr(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def export_csr_default(api):
-    endpoint_result = api.certificates.export_csr(
-        hostname='string',
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.certificates
-def test_export_csr_default(api, validator):
-    try:
-        assert is_valid_export_csr(
-            validator,
-            export_csr_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_regenerate_ise_root_ca(json_schema_validate, obj):
     if not obj:
         return False
@@ -1259,7 +443,7 @@ def test_regenerate_ise_root_ca_default(api, validator):
             raise original_e
 
 
-def is_valid_renew_certificate(json_schema_validate, obj):
+def is_valid_renew_certificates(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -1270,8 +454,8 @@ def is_valid_renew_certificate(json_schema_validate, obj):
     return True
 
 
-def renew_certificate(api):
-    endpoint_result = api.certificates.renew_certificate(
+def renew_certificates(api):
+    endpoint_result = api.certificates.renew_certificates(
         active_validation=False,
         cert_type='string',
         payload=None
@@ -1280,11 +464,11 @@ def renew_certificate(api):
 
 
 @pytest.mark.certificates
-def test_renew_certificate(api, validator):
+def test_renew_certificates(api, validator):
     try:
-        assert is_valid_renew_certificate(
+        assert is_valid_renew_certificates(
             validator,
-            renew_certificate(api)
+            renew_certificates(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1292,8 +476,8 @@ def test_renew_certificate(api, validator):
             raise original_e
 
 
-def renew_certificate_default(api):
-    endpoint_result = api.certificates.renew_certificate(
+def renew_certificates_default(api):
+    endpoint_result = api.certificates.renew_certificates(
         active_validation=False,
         cert_type=None,
         payload=None
@@ -1302,11 +486,559 @@ def renew_certificate_default(api):
 
 
 @pytest.mark.certificates
-def test_renew_certificate_default(api, validator):
+def test_renew_certificates_default(api, validator):
     try:
-        assert is_valid_renew_certificate(
+        assert is_valid_renew_certificates(
             validator,
-            renew_certificate_default(api)
+            renew_certificates_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_bind_csr(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_2b94d7d3f0ed5d0b938151ae2cae9fa4_v3_0_0').validate(obj.response)
+    return True
+
+
+def bind_csr(api):
+    endpoint_result = api.certificates.bind_csr(
+        active_validation=False,
+        admin=True,
+        allow_extended_validity=True,
+        allow_out_of_date_cert=True,
+        allow_replacement_of_certificates=True,
+        allow_replacement_of_portal_group_tag=True,
+        data='string',
+        eap=True,
+        host_name='string',
+        id='string',
+        ims=True,
+        name='string',
+        payload=None,
+        portal=True,
+        portal_group_tag='string',
+        pxgrid=True,
+        radius=True,
+        saml=True,
+        validate_certificate_extensions=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_bind_csr(api, validator):
+    try:
+        assert is_valid_bind_csr(
+            validator,
+            bind_csr(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def bind_csr_default(api):
+    endpoint_result = api.certificates.bind_csr(
+        active_validation=False,
+        admin=None,
+        allow_extended_validity=None,
+        allow_out_of_date_cert=None,
+        allow_replacement_of_certificates=None,
+        allow_replacement_of_portal_group_tag=None,
+        data=None,
+        eap=None,
+        host_name=None,
+        id=None,
+        ims=None,
+        name=None,
+        payload=None,
+        portal=None,
+        portal_group_tag=None,
+        pxgrid=None,
+        radius=None,
+        saml=None,
+        validate_certificate_extensions=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_bind_csr_default(api, validator):
+    try:
+        assert is_valid_bind_csr(
+            validator,
+            bind_csr_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_export_system_certificate(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_1dbe47028859573988880de76fec0936_v3_0_0').validate(obj.response)
+    return True
+
+
+def export_system_certificate(api):
+    endpoint_result = api.certificates.export_system_certificate(
+        dirpath=None,
+        save_file=None,
+        active_validation=False,
+        export='string',
+        id='string',
+        password='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_export_system_certificate(api, validator):
+    try:
+        assert is_valid_export_system_certificate(
+            validator,
+            export_system_certificate(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def export_system_certificate_default(api):
+    endpoint_result = api.certificates.export_system_certificate(
+        dirpath=None,
+        save_file=None,
+        active_validation=False,
+        export=None,
+        id=None,
+        password=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_export_system_certificate_default(api, validator):
+    try:
+        assert is_valid_export_system_certificate(
+            validator,
+            export_system_certificate_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_import_system_certificate(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_517e6c7251a8508597f1b7ae61cbf953_v3_0_0').validate(obj.response)
+    return True
+
+
+def import_system_certificate(api):
+    endpoint_result = api.certificates.import_system_certificate(
+        active_validation=False,
+        admin=True,
+        allow_extended_validity=True,
+        allow_out_of_date_cert=True,
+        allow_replacement_of_certificates=True,
+        allow_replacement_of_portal_group_tag=True,
+        allow_sha1_certificates=True,
+        allow_wild_card_certificates=True,
+        data='string',
+        eap=True,
+        ims=True,
+        name='string',
+        password='string',
+        payload=None,
+        portal=True,
+        portal_group_tag='string',
+        private_key_data='string',
+        pxgrid=True,
+        radius=True,
+        saml=True,
+        validate_certificate_extensions=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_import_system_certificate(api, validator):
+    try:
+        assert is_valid_import_system_certificate(
+            validator,
+            import_system_certificate(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def import_system_certificate_default(api):
+    endpoint_result = api.certificates.import_system_certificate(
+        active_validation=False,
+        admin=None,
+        allow_extended_validity=None,
+        allow_out_of_date_cert=None,
+        allow_replacement_of_certificates=None,
+        allow_replacement_of_portal_group_tag=None,
+        allow_sha1_certificates=None,
+        allow_wild_card_certificates=None,
+        data=None,
+        eap=None,
+        ims=None,
+        name=None,
+        password=None,
+        payload=None,
+        portal=None,
+        portal_group_tag=None,
+        private_key_data=None,
+        pxgrid=None,
+        radius=None,
+        saml=None,
+        validate_certificate_extensions=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_import_system_certificate_default(api, validator):
+    try:
+        assert is_valid_import_system_certificate(
+            validator,
+            import_system_certificate_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_system_certificates(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_662594a56f5c5f739a83e8806da16be5_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_system_certificates(api):
+    endpoint_result = api.certificates.get_system_certificates(
+        filter='value1,value2',
+        filter_type='string',
+        host_name='string',
+        page=0,
+        size=0,
+        sort='string',
+        sort_by='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_get_system_certificates(api, validator):
+    try:
+        assert is_valid_get_system_certificates(
+            validator,
+            get_system_certificates(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_system_certificates_default(api):
+    endpoint_result = api.certificates.get_system_certificates(
+        host_name='string',
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sort=None,
+        sort_by=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_get_system_certificates_default(api, validator):
+    try:
+        assert is_valid_get_system_certificates(
+            validator,
+            get_system_certificates_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_system_certificate_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_3f36e90115b05416a71506061fed7e5c_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_system_certificate_by_id(api):
+    endpoint_result = api.certificates.get_system_certificate_by_id(
+        host_name='string',
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_get_system_certificate_by_id(api, validator):
+    try:
+        assert is_valid_get_system_certificate_by_id(
+            validator,
+            get_system_certificate_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_system_certificate_by_id_default(api):
+    endpoint_result = api.certificates.get_system_certificate_by_id(
+        host_name='string',
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_get_system_certificate_by_id_default(api, validator):
+    try:
+        assert is_valid_get_system_certificate_by_id(
+            validator,
+            get_system_certificate_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_system_certificate(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_48fb9c22ad9a5eddb590c85abdab460b_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_system_certificate(api):
+    endpoint_result = api.certificates.update_system_certificate(
+        active_validation=False,
+        admin=True,
+        allow_replacement_of_portal_group_tag=True,
+        description='string',
+        eap=True,
+        expiration_ttl_period=0,
+        expiration_ttl_units='string',
+        host_name='string',
+        id='string',
+        ims=True,
+        name='string',
+        payload=None,
+        portal=True,
+        portal_group_tag='string',
+        pxgrid=True,
+        radius=True,
+        renew_self_signed_certificate=True,
+        saml=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_update_system_certificate(api, validator):
+    try:
+        assert is_valid_update_system_certificate(
+            validator,
+            update_system_certificate(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_system_certificate_default(api):
+    endpoint_result = api.certificates.update_system_certificate(
+        active_validation=False,
+        host_name='string',
+        id='string',
+        admin=None,
+        allow_replacement_of_portal_group_tag=None,
+        description=None,
+        eap=None,
+        expiration_ttl_period=None,
+        expiration_ttl_units=None,
+        ims=None,
+        name=None,
+        payload=None,
+        portal=None,
+        portal_group_tag=None,
+        pxgrid=None,
+        radius=None,
+        renew_self_signed_certificate=None,
+        saml=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_update_system_certificate_default(api, validator):
+    try:
+        assert is_valid_update_system_certificate(
+            validator,
+            update_system_certificate_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_system_certificate_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_35241dc2eec65ad680a3c5de47cd87c8_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_system_certificate_by_id(api):
+    endpoint_result = api.certificates.delete_system_certificate_by_id(
+        host_name='string',
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_delete_system_certificate_by_id(api, validator):
+    try:
+        assert is_valid_delete_system_certificate_by_id(
+            validator,
+            delete_system_certificate_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_system_certificate_by_id_default(api):
+    endpoint_result = api.certificates.delete_system_certificate_by_id(
+        host_name='string',
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_delete_system_certificate_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_system_certificate_by_id(
+            validator,
+            delete_system_certificate_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_trusted_certificates(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c654a18faf1b5571ac5ba61145d298c4_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_trusted_certificates(api):
+    endpoint_result = api.certificates.get_trusted_certificates(
+        filter='value1,value2',
+        filter_type='string',
+        page=0,
+        size=0,
+        sort='string',
+        sort_by='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_get_trusted_certificates(api, validator):
+    try:
+        assert is_valid_get_trusted_certificates(
+            validator,
+            get_trusted_certificates(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_trusted_certificates_default(api):
+    endpoint_result = api.certificates.get_trusted_certificates(
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sort=None,
+        sort_by=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_get_trusted_certificates_default(api, validator):
+    try:
+        assert is_valid_get_trusted_certificates(
+            validator,
+            get_trusted_certificates_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1326,6 +1058,8 @@ def is_valid_export_trusted_certificate(json_schema_validate, obj):
 
 def export_trusted_certificate(api):
     endpoint_result = api.certificates.export_trusted_certificate(
+        dirpath=None,
+        save_file=None,
         id='string'
     )
     return endpoint_result
@@ -1346,6 +1080,8 @@ def test_export_trusted_certificate(api, validator):
 
 def export_trusted_certificate_default(api):
     endpoint_result = api.certificates.export_trusted_certificate(
+        dirpath=None,
+        save_file=None,
         id='string'
     )
     return endpoint_result
@@ -1357,6 +1093,280 @@ def test_export_trusted_certificate_default(api, validator):
         assert is_valid_export_trusted_certificate(
             validator,
             export_trusted_certificate_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_import_trust_certificate(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c8cd2f618b655d988ce626e579486596_v3_0_0').validate(obj.response)
+    return True
+
+
+def import_trust_certificate(api):
+    endpoint_result = api.certificates.import_trust_certificate(
+        active_validation=False,
+        allow_basic_constraint_cafalse=True,
+        allow_out_of_date_cert=True,
+        allow_sha1_certificates=True,
+        data='string',
+        description='string',
+        name='string',
+        payload=None,
+        trust_for_certificate_based_admin_auth=True,
+        trust_for_cisco_services_auth=True,
+        trust_for_client_auth=True,
+        trust_for_ise_auth=True,
+        validate_certificate_extensions=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_import_trust_certificate(api, validator):
+    try:
+        assert is_valid_import_trust_certificate(
+            validator,
+            import_trust_certificate(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def import_trust_certificate_default(api):
+    endpoint_result = api.certificates.import_trust_certificate(
+        active_validation=False,
+        allow_basic_constraint_cafalse=None,
+        allow_out_of_date_cert=None,
+        allow_sha1_certificates=None,
+        data=None,
+        description=None,
+        name=None,
+        payload=None,
+        trust_for_certificate_based_admin_auth=None,
+        trust_for_cisco_services_auth=None,
+        trust_for_client_auth=None,
+        trust_for_ise_auth=None,
+        validate_certificate_extensions=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_import_trust_certificate_default(api, validator):
+    try:
+        assert is_valid_import_trust_certificate(
+            validator,
+            import_trust_certificate_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_trusted_certificate_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_1091757f8f4956d29b821fa9bbf23266_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_trusted_certificate_by_id(api):
+    endpoint_result = api.certificates.get_trusted_certificate_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_get_trusted_certificate_by_id(api, validator):
+    try:
+        assert is_valid_get_trusted_certificate_by_id(
+            validator,
+            get_trusted_certificate_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_trusted_certificate_by_id_default(api):
+    endpoint_result = api.certificates.get_trusted_certificate_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_get_trusted_certificate_by_id_default(api, validator):
+    try:
+        assert is_valid_get_trusted_certificate_by_id(
+            validator,
+            get_trusted_certificate_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_trusted_certificate(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_239661cb625d5ad0ad76b93282f5818a_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_trusted_certificate(api):
+    endpoint_result = api.certificates.update_trusted_certificate(
+        active_validation=False,
+        authenticate_before_crl_received=True,
+        automatic_crl_update=True,
+        automatic_crl_update_period=0,
+        automatic_crl_update_units='string',
+        crl_distribution_url='string',
+        crl_download_failure_retries=0,
+        crl_download_failure_retries_units='string',
+        description='string',
+        download_crl=True,
+        enable_ocsp_validation=True,
+        enable_server_identity_check=True,
+        id='string',
+        ignore_crl_expiration=True,
+        name='string',
+        non_automatic_crl_update_period=0,
+        non_automatic_crl_update_units='string',
+        payload=None,
+        reject_if_no_status_from_ocs_p=True,
+        reject_if_unreachable_from_ocs_p=True,
+        selected_ocsp_service='string',
+        status='string',
+        trust_for_certificate_based_admin_auth=True,
+        trust_for_cisco_services_auth=True,
+        trust_for_client_auth=True,
+        trust_for_ise_auth=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_update_trusted_certificate(api, validator):
+    try:
+        assert is_valid_update_trusted_certificate(
+            validator,
+            update_trusted_certificate(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_trusted_certificate_default(api):
+    endpoint_result = api.certificates.update_trusted_certificate(
+        active_validation=False,
+        id='string',
+        authenticate_before_crl_received=None,
+        automatic_crl_update=None,
+        automatic_crl_update_period=None,
+        automatic_crl_update_units=None,
+        crl_distribution_url=None,
+        crl_download_failure_retries=None,
+        crl_download_failure_retries_units=None,
+        description=None,
+        download_crl=None,
+        enable_ocsp_validation=None,
+        enable_server_identity_check=None,
+        ignore_crl_expiration=None,
+        name=None,
+        non_automatic_crl_update_period=None,
+        non_automatic_crl_update_units=None,
+        payload=None,
+        reject_if_no_status_from_ocs_p=None,
+        reject_if_unreachable_from_ocs_p=None,
+        selected_ocsp_service=None,
+        status=None,
+        trust_for_certificate_based_admin_auth=None,
+        trust_for_cisco_services_auth=None,
+        trust_for_client_auth=None,
+        trust_for_ise_auth=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_update_trusted_certificate_default(api, validator):
+    try:
+        assert is_valid_update_trusted_certificate(
+            validator,
+            update_trusted_certificate_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_trusted_certificate_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c578ef80918b5d038024d126cd6e3b8d_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_trusted_certificate_by_id(api):
+    endpoint_result = api.certificates.delete_trusted_certificate_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_delete_trusted_certificate_by_id(api, validator):
+    try:
+        assert is_valid_delete_trusted_certificate_by_id(
+            validator,
+            delete_trusted_certificate_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_trusted_certificate_by_id_default(api):
+    endpoint_result = api.certificates.delete_trusted_certificate_by_id(
+        id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificates
+def test_delete_trusted_certificate_by_id_default(api, validator):
+    try:
+        assert is_valid_delete_trusted_certificate_by_id(
+            validator,
+            delete_trusted_certificate_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -49,9 +49,18 @@ class JSONSchemaValidatorD79B507Bda155C180D42F0A67Ef64D5(object):
                 "properties": {
                 "actions": {
                 "items": {
+                "enum": [
+                "QUARANTINE",
+                "PORTBOUNCE",
+                "SHUTDOWN",
+                "RE_AUTHENTICATE"
+                ],
                 "type": "string"
                 },
                 "type": "array"
+                },
+                "id": {
+                "type": "string"
                 },
                 "name": {
                 "type": "string"

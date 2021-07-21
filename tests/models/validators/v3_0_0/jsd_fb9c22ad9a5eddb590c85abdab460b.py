@@ -47,13 +47,7 @@ class JSONSchemaValidatorFb9C22Ad9A5EddB590C85Abdab460B(object):
                 "properties": {
                 "response": {
                 "properties": {
-                "Id": {
-                "type": "string"
-                },
-                "Message": {
-                "type": "string"
-                },
-                "Status": {
+                "id": {
                 "type": "string"
                 },
                 "link": {
@@ -75,6 +69,12 @@ class JSONSchemaValidatorFb9C22Ad9A5EddB590C85Abdab460B(object):
                 }
                 },
                 "type": "object"
+                },
+                "message": {
+                "type": "string"
+                },
+                "status": {
+                "type": "string"
                 }
                 },
                 "type": "object"

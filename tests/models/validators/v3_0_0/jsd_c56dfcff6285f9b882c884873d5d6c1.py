@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllSXPConnections data model.
+"""Identity Services Engine getSXPConnections data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1(object):
-    """getAllSXPConnections request schema definition."""
+    """getSXPConnections request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -48,6 +48,7 @@ class JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1(object):
                 "SearchResult": {
                 "properties": {
                 "nextPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -60,8 +61,11 @@ class JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "previousPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -74,14 +78,12 @@ class JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "resources": {
                 "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
                 "id": {
                 "type": "string"
                 },
@@ -98,9 +100,6 @@ class JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1(object):
                 }
                 },
                 "type": "object"
-                },
-                "name": {
-                "type": "string"
                 }
                 },
                 "type": "object"
@@ -114,9 +113,6 @@ class JSONSchemaValidatorC56DfcfF6285F9B882C884873D5D6C1(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

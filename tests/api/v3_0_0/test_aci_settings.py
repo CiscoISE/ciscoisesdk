@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_aci_settings(json_schema_validate, obj):
+def is_valid_get_aci_settings(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_aci_settings(json_schema_validate, obj):
     return True
 
 
-def get_all_aci_settings(api):
-    endpoint_result = api.aci_settings.get_all_aci_settings(
+def get_aci_settings(api):
+    endpoint_result = api.aci_settings.get_aci_settings(
 
     )
     return endpoint_result
 
 
 @pytest.mark.aci_settings
-def test_get_all_aci_settings(api, validator):
+def test_get_aci_settings(api, validator):
     try:
-        assert is_valid_get_all_aci_settings(
+        assert is_valid_get_aci_settings(
             validator,
-            get_all_aci_settings(api)
+            get_aci_settings(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,71 @@ def test_get_all_aci_settings(api, validator):
             raise original_e
 
 
-def get_all_aci_settings_default(api):
-    endpoint_result = api.aci_settings.get_all_aci_settings(
+def get_aci_settings_default(api):
+    endpoint_result = api.aci_settings.get_aci_settings(
 
     )
     return endpoint_result
 
 
 @pytest.mark.aci_settings
-def test_get_all_aci_settings_default(api, validator):
+def test_get_aci_settings_default(api, validator):
     try:
-        assert is_valid_get_all_aci_settings(
+        assert is_valid_get_aci_settings(
             validator,
-            get_all_aci_settings_default(api)
+            get_aci_settings_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_test_aci_connectivity(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_1b155c91eec153338302d492db1afb80_v3_0_0').validate(obj.response)
+    return True
+
+
+def test_aci_connectivity(api):
+    endpoint_result = api.aci_settings.test_aci_connectivity(
+        active_validation=False,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.aci_settings
+def test_test_aci_connectivity(api, validator):
+    try:
+        assert is_valid_test_aci_connectivity(
+            validator,
+            test_aci_connectivity(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def test_aci_connectivity_default(api):
+    endpoint_result = api.aci_settings.test_aci_connectivity(
+        active_validation=False,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.aci_settings
+def test_test_aci_connectivity_default(api, validator):
+    try:
+        assert is_valid_test_aci_connectivity(
+            validator,
+            test_aci_connectivity_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -177,31 +229,30 @@ def test_update_aci_settings_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_test_aci_connectivity(json_schema_validate, obj):
+def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1b155c91eec153338302d492db1afb80_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_462410ea47f65521bcf0ab949b5d72b5_v3_0_0').validate(obj.response)
     return True
 
 
-def test_aci_connectivity(api):
-    endpoint_result = api.aci_settings.test_aci_connectivity(
-        active_validation=False,
-        payload=None
+def get_version(api):
+    endpoint_result = api.aci_settings.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.aci_settings
-def test_test_aci_connectivity(api, validator):
+def test_get_version(api, validator):
     try:
-        assert is_valid_test_aci_connectivity(
+        assert is_valid_get_version(
             validator,
-            test_aci_connectivity(api)
+            get_version(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -209,20 +260,19 @@ def test_test_aci_connectivity(api, validator):
             raise original_e
 
 
-def test_aci_connectivity_default(api):
-    endpoint_result = api.aci_settings.test_aci_connectivity(
-        active_validation=False,
-        payload=None
+def get_version_default(api):
+    endpoint_result = api.aci_settings.get_version(
+
     )
     return endpoint_result
 
 
 @pytest.mark.aci_settings
-def test_test_aci_connectivity_default(api, validator):
+def test_get_version_default(api, validator):
     try:
-        assert is_valid_test_aci_connectivity(
+        assert is_valid_get_version(
             validator,
-            test_aci_connectivity_default(api)
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

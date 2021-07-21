@@ -53,7 +53,6 @@ class JSONSchemaValidatorCb625D5Ad0Ad76B93282F5818A(object):
                 "type": "boolean"
                 },
                 "automaticCRLUpdatePeriod": {
-                "default": 5,
                 "minimum": 1,
                 "type": "integer"
                 },
@@ -72,7 +71,6 @@ class JSONSchemaValidatorCb625D5Ad0Ad76B93282F5818A(object):
                 "type": "string"
                 },
                 "crlDownloadFailureRetries": {
-                "default": 10,
                 "minimum": 1,
                 "type": "integer"
                 },
@@ -111,7 +109,6 @@ class JSONSchemaValidatorCb625D5Ad0Ad76B93282F5818A(object):
                 "type": "string"
                 },
                 "nonAutomaticCRLUpdatePeriod": {
-                "default": 1,
                 "minimum": 1,
                 "type": "integer"
                 },

@@ -51,6 +51,9 @@ class JSONSchemaValidatorE6734850FaBb2097Fa969948Cb(object):
                  {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -58,16 +61,9 @@ class JSONSchemaValidatorE6734850FaBb2097Fa969948Cb(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "description"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "NetworkDeviceGroup"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

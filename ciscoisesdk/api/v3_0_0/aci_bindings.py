@@ -74,23 +74,29 @@ class AciBindings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_aci_bindings(self,
-                             filter_by=None,
-                             filter_value=None,
-                             page=None,
-                             size=None,
-                             sort=None,
-                             sort_by=None,
-                             headers=None,
-                             **query_parameters):
-        """Get all ACIBindings.
+    def get_aci_bindings(self,
+                         filter_by=None,
+                         filter_value=None,
+                         page=None,
+                         size=None,
+                         sort=None,
+                         sort_by=None,
+                         headers=None,
+                         **query_parameters):
+        """This API allows clients to retrieve all the bindings that were
+        sent to Cisco ISE by ACI or received on ACI from Cisco
+        ISE.The binding information will be identical to the
+        information on ACI bindings page in the Cisco ISE UI.
+        Filtering will be based on one attribute only, such as
+        ip/sgt/vn/psn/learnedFrom/learnedBy with CONTAINS mode
+        of search.
 
         Args:
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter_by(basestring, list, set, tuple): filterBy query
@@ -103,10 +109,12 @@ class AciBindings(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -124,6 +132,12 @@ class AciBindings(object):
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
                            basestring, may_be_none=False)
+            if 'ERS-Media-Type' in headers:
+                check_type(headers.get('ERS-Media-Type'),
+                           basestring)
+            if 'X-CSRF-TOKEN' in headers:
+                check_type(headers.get('X-CSRF-TOKEN'),
+                           basestring)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -167,23 +181,53 @@ class AciBindings(object):
 
         return self._object_factory('bpm_d1448851f0154d0b6e9c856ec6cc6f0_v3_0_0', _api_response)
 
-    def get_all_aci_bindings_generator(self,
-                                       filter_by=None,
-                                       filter_value=None,
-                                       page=None,
-                                       size=None,
-                                       sort=None,
-                                       sort_by=None,
-                                       headers=None,
-                                       **query_parameters):
-        """Get all ACIBindings.
+    def get_all(self,
+                filter_by=None,
+                filter_value=None,
+                page=None,
+                size=None,
+                sort=None,
+                sort_by=None,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_aci_bindings <#ciscoisesdk.
+        api.v3_0_0.aci_bindings.
+        AciBindings.get_aci_bindings>`_
+        """
+        return self.get_aci_bindings(
+            filter_by=filter_by,
+            filter_value=filter_value,
+            page=page,
+            size=size,
+            sort=sort,
+            sort_by=sort_by,
+            headers=headers,
+            **query_parameters
+        )
+
+    def get_aci_bindings_generator(self,
+                                   filter_by=None,
+                                   filter_value=None,
+                                   page=None,
+                                   size=None,
+                                   sort=None,
+                                   sort_by=None,
+                                   headers=None,
+                                   **query_parameters):
+        """This API allows clients to retrieve all the bindings that were
+        sent to Cisco ISE by ACI or received on ACI from Cisco
+        ISE.The binding information will be identical to the
+        information on ACI bindings page in the Cisco ISE UI.
+        Filtering will be based on one attribute only, such as
+        ip/sgt/vn/psn/learnedFrom/learnedBy with CONTAINS mode
+        of search.
 
         Args:
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type - asc
-                or desc.
+            sort(basestring): sort query parameter. sort type asc or
+                desc.
             sort_by(basestring): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             filter_by(basestring, list, set, tuple): filterBy query
@@ -197,10 +241,12 @@ class AciBindings(object):
 
         Returns:
             Generator: A generator object containing the following object.
+
               + RestResponse: REST response with following properties:
+
                   - headers(MyDict): response headers.
                   - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                        or the bracket notation.
+                    or the bracket notation.
                   - content(bytes): representation of the request's response
                   - text(str): representation of the request's response
 
@@ -210,12 +256,98 @@ class AciBindings(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_all_aci_bindings, dict(
+        yield from get_next_page(self.get_aci_bindings, dict(
             filter_by=filter_by,
             filter_value=filter_value,
             page=page,
             size=size,
             sort=sort,
             sort_by=sort_by,
+            headers=headers,
             **query_parameters
         ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_all_generator(self,
+                          filter_by=None,
+                          filter_value=None,
+                          page=None,
+                          size=None,
+                          sort=None,
+                          sort_by=None,
+                          headers=None,
+                          **query_parameters):
+        """Alias for `get_aci_bindings_generator <#ciscoisesdk.
+        api.v3_0_0.aci_bindings.
+        AciBindings.get_aci_bindings_generator>`_
+        """
+        yield from get_next_page(self.get_aci_bindings, dict(
+            filter_by=filter_by,
+            filter_value=filter_value,
+            page=page,
+            size=size,
+            sort=sort,
+            sort_by=sort_by,
+            headers=headers,
+            **query_parameters
+        ), access_next_list=["SearchResult", "nextPage", "href"])
+
+    def get_version(self,
+                    headers=None,
+                    **query_parameters):
+        """This API helps to retrieve the version information related to
+        the Cisco ACI bindings.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           basestring, may_be_none=False)
+            if 'Accept' in headers:
+                check_type(headers.get('Accept'),
+                           basestring, may_be_none=False)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+        }
+
+        e_url = ('/ers/config/acibindings/versioninfo')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_d74b5214bad656c98f21e4968661c3c0_v3_0_0', _api_response)

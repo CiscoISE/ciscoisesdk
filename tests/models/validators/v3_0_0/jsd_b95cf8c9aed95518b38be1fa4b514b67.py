@@ -45,6 +45,8 @@ class JSONSchemaValidatorB95Cf8C9Aed95518B38BE1Fa4B514B67(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "response": {
+                "properties": {
                 "conditionType": {
                 "enum": [
                 "EndstationCondition",
@@ -98,10 +100,47 @@ class JSONSchemaValidatorB95Cf8C9Aed95518B38BE1Fa4B514B67(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 }
                 },
+                "required": [
+                "conditionType",
+                "name"
+                ],
+                "type": "object"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

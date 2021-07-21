@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteDeviceAdminLocalExceptionById data model.
+"""Identity Services Engine deleteDeviceAdminLocalExceptionRuleById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC7D6Bb4Abf53F6Aa2F40B6986F58A9(object):
-    """deleteDeviceAdminLocalExceptionById request schema definition."""
+    """deleteDeviceAdminLocalExceptionRuleById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC7D6Bb4Abf53F6Aa2F40B6986F58A9, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -49,6 +49,9 @@ class JSONSchemaValidatorC7D6Bb4Abf53F6Aa2F40B6986F58A9(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "id"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

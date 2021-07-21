@@ -47,6 +47,13 @@ class JSONSchemaValidatorC82Dcf6F2C3D5D399045050B02208Db2(object):
                 "properties": {
                 "PortalTheme": {
                 "properties": {
+                "description":
+                 {
+                "type": "string"
+                },
+                "id": {
+                "type": "string"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -54,16 +61,9 @@ class JSONSchemaValidatorC82Dcf6F2C3D5D399045050B02208Db2(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "themeData"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "PortalTheme"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeploymentInfo data model.
+"""Identity Services Engine getDeploymentInfo data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
-    """getAllDeploymentInfo request schema definition."""
+    """getDeploymentInfo request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -79,190 +79,34 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 "type": "boolean"
                 },
                 "value": {
-                "properties": {
-                "content": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                }
+                },
+                "type": "object"
+                },
+                "versionHistoryInfo": {
                 "items": {
                 "properties": {
-                "declaredType": {
-                "type": "string"
-                },
-                "globalScope": {
-                "type": "boolean"
-                },
-                "name": {
-                "type": "string"
-                },
-                "nil": {
-                "type": "boolean"
-                },
-                "scope": {
-                "type": "string"
-                },
-                "typeSubstituted": {
-                "type": "boolean"
-                },
-                "value": {
-                "properties": {
-                "content": {
-                "items": {
-                "properties": {
-                "declaredType": {
-                "type": "string"
-                },
-                "globalScope": {
-                "type": "boolean"
-                },
-                "name": {
-                "type": "string"
-                },
-                "nil": {
-                "type": "boolean"
-                },
-                "scope": {
-                "type": "string"
-                },
-                "typeSubstituted": {
-                "type": "boolean"
-                },
-                "value": {
-                "type": "boolean"
-                }
-                },
-                "required": [
-                "name",
-                "declaredType",
-                "scope",
-                "value",
-                "nil",
-                "globalScope",
-                "typeSubstituted"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "fileSystem": {
-                "items": {
-                "properties": {
-                "available": {
-                "type": "string"
-                },
-                "mountPoint": {
-                "type": "string"
-                },
-                "name": {
-                "type": "string"
-                },
-                "percent": {
-                "type": "string"
-                },
-                "total": {
-                "type": "string"
-                },
-                "used": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "name",
-                "total",
-                "used",
-                "available",
-                "percent",
-                "mountPoint"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "free": {
-                "type": "string"
-                },
-                "fromDate": {
-                "type": "string"
-                },
-                "loadAvgFifteen": {
-                "type": "string"
-                },
-                "loadAvgFive": {
-                "type": "string"
-                },
-                "loadAvgOne": {
-                "type": "string"
-                },
-                "percent": {
-                "type": "string"
-                },
-                "toDate": {
-                "type": "string"
-                },
-                "total": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                }
-                },
-                "required": [
-                "name",
-                "declaredType",
-                "scope",
-                "value",
-                "nil",
-                "globalScope",
-                "typeSubstituted"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "currentGuestUserCount": {
+                "epochTime": {
                 "type": "integer"
                 },
-                "currentMDMEndPtCount": {
-                "type": "integer"
-                },
-                "currentPostureEndptCount": {
-                "type": "integer"
-                },
-                "currentPxGridClientCount": {
-                "type": "integer"
-                },
-                "fromDate": {
+                "mainVersion": {
                 "type": "string"
                 },
-                "toDate": {
+                "opType": {
                 "type": "string"
                 }
                 },
-                "type": "object"
-                }
-                },
-                "required": [
-                "name",
-                "declaredType",
-                "scope",
-                "value",
-                "nil",
-                "globalScope",
-                "typeSubstituted"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "nodeAndNodeCountAndCountInfo"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "deploymentID",
-                "nodeList",
-                "fipsstatus"
-                ],
                 "type": "object"
                 },
                 "kongInfo": {
@@ -274,21 +118,50 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 "properties": {
                 "node": {
                 "items": {
+                "properties": {
+                "service": {
+                "items": {
+                "properties": {
+                "route": {
+                "items": {
+                "properties": {
+                "httpCount": {
+                "type": "object"
+                },
+                "latencyCount": {
+                "type": "object"
+                },
+                "latencySum": {
+                "type": "object"
+                },
+                "routeName": {
                 "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "serviceName": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "sn": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "node"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "deploymentID",
-                "nodeList"
-                ],
                 "type": "object"
                 },
                 "licensesInfo": {
@@ -298,107 +171,28 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 },
                 "nodeList": {
                 "properties": {
-                "nodeAndScope": {
+                "node": {
                 "items": {
-                "properties": {
-                "content": {
-                "items": {
-                "properties": {
-                "declaredType": {
-                "type": "string"
-                },
-                "globalScope": {
-                "type": "boolean"
-                },
-                "name": {
-                "type": "string"
-                },
-                "nil": {
-                "type": "boolean"
-                },
-                "scope": {
-                "type": "string"
-                },
-                "typeSubstituted": {
-                "type": "boolean"
-                },
-                "value": {
-                "properties": {
-                "count": {
-                "type": "integer"
-                },
-                "fileName": {
-                "type": "string"
-                },
-                "isEvaluation": {
-                "type": "boolean"
-                },
-                "isExpired": {
-                "type": "boolean"
-                },
-                "isWiredEnabled": {
-                "type": "boolean"
-                },
-                "primaryUDI": {
-                "type": "string"
-                },
-                "remainingDays": {
-                "type": "integer"
-                },
-                "secondaryUDI": {
-                "type": "string"
-                },
-                "serviceTypes": {
-                "type": "string"
-                },
-                "term": {
-                "type": "integer"
-                }
-                },
-                "type": "object"
-                }
-                },
-                "required": [
-                "name",
-                "declaredType",
-                "scope",
-                "value",
-                "nil",
-                "globalScope",
-                "typeSubstituted"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
                 "type": "object"
-                },
-                "type": "array"
                 }
                 },
-                "required": [
-                "nodeAndScope"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "deploymentID",
-                "nodeList"
-                ],
                 "type": "object"
                 },
                 "mdmInfo": {
                 "properties": {
                 "activeDesktopMdmServersCount": {
-                "type": "string"
+                "type": "integer"
                 },
                 "activeMdmServersCount": {
-                "type": "string"
+                "type": "integer"
                 },
                 "activeMobileMdmServersCount": {
-                "type": "string"
+                "type": "integer"
                 },
                 "deploymentID": {
                 "type": "string"
@@ -407,146 +201,38 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 "properties": {
                 "nodeAndScope": {
                 "items": {
-                "properties": {
-                "content": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "nodeAndScope"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "activeMdmServersCount",
-                "activeDesktopMdmServersCount",
-                "activeMobileMdmServersCount",
-                "deploymentID",
-                "nodeList"
-                ],
                 "type": "object"
                 },
                 "nadInfo": {
                 "properties": {
-                "deploymentID": {
-                "type": "string"
-                },
                 "nadcountInfo": {
                 "properties": {
                 "totalActiveNADCount": {
                 "type": "integer"
                 }
                 },
-                "required": [
-                "totalActiveNADCount"
-                ],
                 "type": "object"
                 },
                 "nodeList": {
                 "properties": {
                 "nodeAndScope": {
                 "items": {
-                "properties": {
-                "content": {
-                "items": {
-                "properties": {
-                "declaredType": {
-                "type": "string"
-                },
-                "globalScope": {
-                "type": "boolean"
-                },
-                "name": {
-                "type": "string"
-                },
-                "nil": {
-                "type": "boolean"
-                },
-                "scope": {
-                "type": "string"
-                },
-                "typeSubstituted": {
-                "type": "boolean"
-                },
-                "value": {
-                "properties": {
-                "activeNADCount": {
-                "type": "integer"
-                },
-                "isCiscoProvided": {
-                "type": "boolean"
-                },
-                "isDefProfile": {
-                "type": "boolean"
-                },
-                "isRadiusSupported": {
-                "type": "boolean"
-                },
-                "isTacacsSupported": {
-                "type": "boolean"
-                },
-                "isTrustSecSupported": {
-                "type": "boolean"
-                },
-                "name": {
-                "type": "string"
-                },
-                "totalNADCount": {
-                "type": "integer"
-                }
-                },
-                "required": [
-                "name",
-                "isCiscoProvided",
-                "isDefProfile",
-                "isTacacsSupported",
-                "isRadiusSupported",
-                "isTrustSecSupported",
-                "activeNADCount",
-                "totalNADCount"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "name",
-                "declaredType",
-                "scope",
-                "value",
-                "nil",
-                "globalScope",
-                "typeSubstituted"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
                 "type": "object"
-                },
-                "type": "array"
                 }
                 },
-                "required": [
-                "nodeAndScope"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "deploymentID",
-                "nodeList",
-                "nadcountInfo"
-                ],
                 "type": "object"
                 },
                 "networkAccessInfo": {
@@ -554,157 +240,32 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 "deploymentID": {
                 "type": "string"
                 },
+                "isCsnEnabled": {
+                "type": "boolean"
+                },
                 "nodeList": {
                 "properties": {
                 "nodeAndScope": {
                 "items": {
-                "properties": {
-                "content": {
-                "items": {
-                "properties": {
-                "declaredType": {
-                "type": "string"
-                },
-                "globalScope": {
-                "type": "boolean"
-                },
-                "name": {
-                "type": "string"
-                },
-                "nil": {
-                "type": "boolean"
-                },
-                "scope": {
-                "type": "string"
-                },
-                "typeSubstituted": {
-                "type": "boolean"
-                },
-                "value": {
-                "properties": {
-                "activeVLANCount": {
-                "type": "integer"
-                },
-                "activedACLCount": {
-                "type": "integer"
-                },
-                "adauthStoreCount": {
-                "type": "integer"
-                },
-                "ldapidstoreCount": {
-                "type": "integer"
-                },
-                "localIdentityNonAdminUserCount": {
-                "type": "integer"
-                },
-                "ndgheierarchyNADMap": {
-                "type": "string"
-                },
-                "ndghierarchyMap": {
-                "type": "string"
-                },
-                "odbcInfo": {
-                "items": {
-                "properties": {
-                "odbccount": {
-                "type": "integer"
-                },
-                "odbctype": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "odbctype",
-                "odbccount"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "policyLineCount": {
-                "type": "integer"
-                },
-                "radiusidstoreCount": {
-                "type": "integer"
-                },
-                "restIDInfo": {
-                "items": {
-                "properties": {
-                "restIDType": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "restidcount": {
-                "type": "integer"
-                }
-                },
-                "required": [
-                "restIDType",
-                "restidcount"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "rsaidstoreCount": {
-                "type": "integer"
-                }
-                },
-                "type": "object"
-                }
-                },
-                "required": [
-                "name",
-                "declaredType",
-                "scope",
-                "value",
-                "nil",
-                "globalScope",
-                "typeSubstituted"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "nodeAndScope"
-                ],
                 "type": "object"
                 },
                 "radius3RdParty": {
-                "items": {
-                "type": "string"
-                },
+                "items": {},
                 "type": "array"
                 },
                 "sdaVNs": {
-                "items": {
-                "type": "string"
-                },
+                "items": {},
                 "type": "array"
                 },
                 "trustSecControl": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "deploymentID",
-                "nodeList",
-                "sdaVNs",
-                "trustSecControl",
-                "radius3RdParty"
-                ],
                 "type": "object"
                 },
                 "postureInfo": {
@@ -731,26 +292,14 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 "type": "boolean"
                 },
                 "value": {
-                "type": "integer"
+                "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "declaredType",
-                "scope",
-                "value",
-                "nil",
-                "globalScope",
-                "typeSubstituted"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "content"
-                ],
                 "type": "object"
                 },
                 "profilerInfo": {
@@ -770,6 +319,7 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 "type": "boolean"
                 },
                 "profiles": {
+                "items": {
                 "properties": {
                 "customProfilesCount": {
                 "type": "integer"
@@ -778,9 +328,7 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 "type": "string"
                 },
                 "profile": {
-                "items": {
-                "type": "string"
-                },
+                "items": {},
                 "type": "array"
                 },
                 "totalEndpointsCount": {
@@ -799,62 +347,28 @@ class JSONSchemaValidatorF9159C9F9A1951568DaeE7080E1Dda47(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "profile",
-                "customProfilesCount",
-                "endpointTypes",
-                "totalProfilesCount",
-                "uniqueEndpointsCount",
-                "unknownEndpointsCount",
-                "totalEndpointsCount",
-                "unknownEndpointsPercentage"
-                ],
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "scope": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "profiles",
-                "onlineSubscriptionEnabled",
-                "lastAppliedFeedDateTime",
-                "scope"
-                ],
                 "type": "object"
                 },
                 "type": "array"
                 }
                 },
-                "required": [
-                "node"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "deploymentID",
-                "nodeList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "networkAccessInfo",
-                "profilerInfo",
-                "deploymentInfo",
-                "nadInfo",
-                "mdmInfo",
-                "licensesInfo",
-                "postureInfo",
-                "kongInfo"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSDeploymentInfo"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

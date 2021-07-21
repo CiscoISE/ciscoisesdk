@@ -74,10 +74,10 @@ class DeviceAdministrationDictionaryAttributesList(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_dictionaries_authentication(self,
-                                                         headers=None,
-                                                         **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+    def get_device_admin_dictionaries_authentication(self,
+                                                     headers=None,
+                                                     **query_parameters):
+        """Network Access Returns list of dictionary attributes for
         authentication.
 
         Args:
@@ -87,10 +87,12 @@ class DeviceAdministrationDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -130,10 +132,22 @@ class DeviceAdministrationDictionaryAttributesList(object):
 
         return self._object_factory('bpm_b09ea91f72885e05b6aa73e89546f969_v3_0_0', _api_response)
 
-    def get_all_device_admin_dictionaries_authorization(self,
-                                                        headers=None,
-                                                        **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+    def get_all_authentication(self,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `get_device_admin_dictionaries_authentication <#ciscoisesdk.
+        api.v3_0_0.device_administration_dictionary_attributes_list.
+        DeviceAdministrationDictionaryAttributesList.get_device_admin_dictionaries_authentication>`_
+        """
+        return self.get_device_admin_dictionaries_authentication(
+            headers=headers,
+            **query_parameters
+        )
+
+    def get_device_admin_dictionaries_authorization(self,
+                                                    headers=None,
+                                                    **query_parameters):
+        """Network Access Returns list of dictionary attributes for
         authorization.
 
         Args:
@@ -143,10 +157,12 @@ class DeviceAdministrationDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -186,10 +202,22 @@ class DeviceAdministrationDictionaryAttributesList(object):
 
         return self._object_factory('bpm_fc9ecf1e469154ae845236dbed070904_v3_0_0', _api_response)
 
-    def get_all_device_admin_dictionaries_policyset(self,
-                                                    headers=None,
-                                                    **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+    def get_all_authorization(self,
+                              headers=None,
+                              **query_parameters):
+        """Alias for `get_device_admin_dictionaries_authorization <#ciscoisesdk.
+        api.v3_0_0.device_administration_dictionary_attributes_list.
+        DeviceAdministrationDictionaryAttributesList.get_device_admin_dictionaries_authorization>`_
+        """
+        return self.get_device_admin_dictionaries_authorization(
+            headers=headers,
+            **query_parameters
+        )
+
+    def get_device_admin_dictionaries_policy_set(self,
+                                                 headers=None,
+                                                 **query_parameters):
+        """Network Access Returns list of dictionary attributes for
         policyset.
 
         Args:
@@ -199,10 +227,12 @@ class DeviceAdministrationDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -241,3 +271,15 @@ class DeviceAdministrationDictionaryAttributesList(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c8aec23a55399a175acf105dbe1c2_v3_0_0', _api_response)
+
+    def get_all_policy_set(self,
+                           headers=None,
+                           **query_parameters):
+        """Alias for `get_device_admin_dictionaries_policy_set <#ciscoisesdk.
+        api.v3_0_0.device_administration_dictionary_attributes_list.
+        DeviceAdministrationDictionaryAttributesList.get_device_admin_dictionaries_policy_set>`_
+        """
+        return self.get_device_admin_dictionaries_policy_set(
+            headers=headers,
+            **query_parameters
+        )

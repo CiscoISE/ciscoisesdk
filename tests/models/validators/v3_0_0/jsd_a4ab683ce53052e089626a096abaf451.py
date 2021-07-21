@@ -56,6 +56,9 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "NetworkDeviceIPList": {
                 "items": {
                 "properties": {
+                "getIpaddressExclude": {
+                "type": "string"
+                },
                 "ipaddress": {
                 "type": "string"
                 },
@@ -63,10 +66,6 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "ipaddress",
-                "mask"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -80,7 +79,10 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "type": "boolean"
                 },
                 "enableMultiSecret": {
-                "type": "string"
+                "type": "boolean"
+                },
+                "enabled": {
+                "type": "boolean"
                 },
                 "keyEncryptionKey": {
                 "type": "string"
@@ -96,6 +98,9 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 },
                 "radiusSharedSecret": {
                 "type": "string"
+                },
+                "secondRadiusSharedSecret": {
+                "type": "string"
                 }
                 },
                 "type": "object"
@@ -110,6 +115,26 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "dtlsDnsName": {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "modelName": {
+                "type": "string"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -118,9 +143,6 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 },
                 "snmpsettings": {
                 "properties": {
-                "authPassowrd": {
-                "type": "string"
-                },
                 "linkTrapQuery": {
                 "type": "boolean"
                 },
@@ -133,9 +155,6 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "pollingInterval": {
                 "type": "integer"
                 },
-                "privacyPassowrd": {
-                "type": "string"
-                },
                 "roCommunity": {
                 "type": "string"
                 },
@@ -144,6 +163,9 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 }
                 },
                 "type": "object"
+                },
+                "softwareVersion": {
+                "type": "string"
                 },
                 "tacacsSettings": {
                 "properties": {
@@ -154,10 +176,6 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "sharedSecret",
-                "connectModeOptions"
-                ],
                 "type": "object"
                 },
                 "trustsecsettings": {
@@ -181,6 +199,9 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "execModePassword": {
                 "type": "string"
                 },
+                "execModeUsername": {
+                "type": "string"
+                },
                 "includeWhenDeployingSGTUpdates": {
                 "type": "boolean"
                 }
@@ -188,7 +209,7 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "type": "object"
                 },
                 "pushIdSupport": {
-                "type": "string"
+                "type": "boolean"
                 },
                 "sgaNotificationAndUpdates": {
                 "properties": {
@@ -223,16 +244,9 @@ class JSONSchemaValidatorA4Ab683CE53052E089626A096Abaf451(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "name",
-                "NetworkDeviceIPList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "NetworkDevice"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

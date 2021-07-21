@@ -29,122 +29,6 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_guest_ssid(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c37778a2faa5552894cc60cec13c56c7_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_guest_ssid(api):
-    endpoint_result = api.guest_ssid.get_all_guest_ssid(
-        filter='value1,value2',
-        filter_type='string',
-        page=0,
-        size=0,
-        sortasc='string',
-        sortdsc='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_ssid
-def test_get_all_guest_ssid(api, validator):
-    try:
-        assert is_valid_get_all_guest_ssid(
-            validator,
-            get_all_guest_ssid(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_guest_ssid_default(api):
-    endpoint_result = api.guest_ssid.get_all_guest_ssid(
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sortasc=None,
-        sortdsc=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_ssid
-def test_get_all_guest_ssid_default(api, validator):
-    try:
-        assert is_valid_get_all_guest_ssid(
-            validator,
-            get_all_guest_ssid_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_guest_ssid(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2a31eb33e3535754b3f754a9199e0d25_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_guest_ssid(api):
-    endpoint_result = api.guest_ssid.create_guest_ssid(
-        active_validation=False,
-        id='string',
-        name='string',
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_ssid
-def test_create_guest_ssid(api, validator):
-    try:
-        assert is_valid_create_guest_ssid(
-            validator,
-            create_guest_ssid(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_guest_ssid_default(api):
-    endpoint_result = api.guest_ssid.create_guest_ssid(
-        active_validation=False,
-        id=None,
-        name=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.guest_ssid
-def test_create_guest_ssid_default(api, validator):
-    try:
-        assert is_valid_create_guest_ssid(
-            validator,
-            create_guest_ssid_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_get_guest_ssid_by_id(json_schema_validate, obj):
     if not obj:
         return False
@@ -295,6 +179,170 @@ def test_delete_guest_ssid_by_id_default(api, validator):
         assert is_valid_delete_guest_ssid_by_id(
             validator,
             delete_guest_ssid_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_guest_ssid(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c37778a2faa5552894cc60cec13c56c7_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_guest_ssid(api):
+    endpoint_result = api.guest_ssid.get_guest_ssid(
+        filter='value1,value2',
+        filter_type='string',
+        page=0,
+        size=0,
+        sortasc='string',
+        sortdsc='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_ssid
+def test_get_guest_ssid(api, validator):
+    try:
+        assert is_valid_get_guest_ssid(
+            validator,
+            get_guest_ssid(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_guest_ssid_default(api):
+    endpoint_result = api.guest_ssid.get_guest_ssid(
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sortasc=None,
+        sortdsc=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_ssid
+def test_get_guest_ssid_default(api, validator):
+    try:
+        assert is_valid_get_guest_ssid(
+            validator,
+            get_guest_ssid_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_guest_ssid(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_2a31eb33e3535754b3f754a9199e0d25_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_guest_ssid(api):
+    endpoint_result = api.guest_ssid.create_guest_ssid(
+        active_validation=False,
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_ssid
+def test_create_guest_ssid(api, validator):
+    try:
+        assert is_valid_create_guest_ssid(
+            validator,
+            create_guest_ssid(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_guest_ssid_default(api):
+    endpoint_result = api.guest_ssid.create_guest_ssid(
+        active_validation=False,
+        name=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_ssid
+def test_create_guest_ssid_default(api, validator):
+    try:
+        assert is_valid_create_guest_ssid(
+            validator,
+            create_guest_ssid_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_b400ebaa2d1f51398d3b32e7a6e4ba35_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.guest_ssid.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_ssid
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.guest_ssid.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_ssid
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

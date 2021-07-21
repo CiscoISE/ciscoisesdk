@@ -45,6 +45,8 @@ class JSONSchemaValidatorF1Fd8E2Bd1581AAbf7Cd87Bff65137(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "response": {
+                "properties": {
                 "description":
                  {
                 "type": "string"
@@ -60,6 +62,29 @@ class JSONSchemaValidatorF1Fd8E2Bd1581AAbf7Cd87Bff65137(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -67,6 +92,21 @@ class JSONSchemaValidatorF1Fd8E2Bd1581AAbf7Cd87Bff65137(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "dictionaryAttrType",
+                "name",
+                "version"
+                ],
+                "type": "object"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

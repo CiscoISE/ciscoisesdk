@@ -36,14 +36,14 @@ from ciscoisesdk.api.v3_0_0.aci_settings import \
     AciSettings as AciSettings_v3_0_0
 from ciscoisesdk.api.v3_0_0.anc_endpoint import \
     AncEndpoint as AncEndpoint_v3_0_0
-from ciscoisesdk.api.v3_0_0.anc_policy import \
-    AncPolicy as AncPolicy_v3_0_0
 from ciscoisesdk.api.v3_0_0.active_directory import \
     ActiveDirectory as ActiveDirectory_v3_0_0
 from ciscoisesdk.api.v3_0_0.admin_user import \
     AdminUser as AdminUser_v3_0_0
 from ciscoisesdk.api.v3_0_0.allowed_protocols import \
     AllowedProtocols as AllowedProtocols_v3_0_0
+from ciscoisesdk.api.v3_0_0.anc_policy import \
+    AncPolicy as AncPolicy_v3_0_0
 from ciscoisesdk.api.v3_0_0.authorization_profile import \
     AuthorizationProfile as AuthorizationProfile_v3_0_0
 from ciscoisesdk.api.v3_0_0.byod_portal import \
@@ -56,10 +56,10 @@ from ciscoisesdk.api.v3_0_0.certificate_template import \
     CertificateTemplate as CertificateTemplate_v3_0_0
 from ciscoisesdk.api.v3_0_0.certificates import \
     Certificates as Certificates_v3_0_0
+from ciscoisesdk.api.v3_0_0.clear_threats_and_vulnerabilities import \
+    ClearThreatsAndVulnerabilities as ClearThreatsAndVulnerabilities_v3_0_0
 from ciscoisesdk.api.v3_0_0.consumer import \
     Consumer as Consumer_v3_0_0
-from ciscoisesdk.api.v3_0_0.deployment import \
-    Deployment as Deployment_v3_0_0
 from ciscoisesdk.api.v3_0_0.device_administration_authentication_rules import \
     DeviceAdministrationAuthenticationRules as DeviceAdministrationAuthenticationRules_v3_0_0
 from ciscoisesdk.api.v3_0_0.device_administration_authorization_exception_rules import \
@@ -90,20 +90,18 @@ from ciscoisesdk.api.v3_0_0.downloadable_acl import \
     DownloadableAcl as DownloadableAcl_v3_0_0
 from ciscoisesdk.api.v3_0_0.egress_matrix_cell import \
     EgressMatrixCell as EgressMatrixCell_v3_0_0
-from ciscoisesdk.api.v3_0_0.endpoint import \
-    Endpoint as Endpoint_v3_0_0
-from ciscoisesdk.api.v3_0_0.endpoint_cert import \
-    EndpointCert as EndpointCert_v3_0_0
-from ciscoisesdk.api.v3_0_0.endpoint_group import \
-    EndpointGroup as EndpointGroup_v3_0_0
+from ciscoisesdk.api.v3_0_0.endpoint_certificate import \
+    EndpointCertificate as EndpointCertificate_v3_0_0
+from ciscoisesdk.api.v3_0_0.endpoint_identity_group import \
+    EndpointIdentityGroup as EndpointIdentityGroup_v3_0_0
 from ciscoisesdk.api.v3_0_0.external_radius_server import \
     ExternalRadiusServer as ExternalRadiusServer_v3_0_0
 from ciscoisesdk.api.v3_0_0.filter_policy import \
     FilterPolicy as FilterPolicy_v3_0_0
 from ciscoisesdk.api.v3_0_0.guest_location import \
     GuestLocation as GuestLocation_v3_0_0
-from ciscoisesdk.api.v3_0_0.guest_smtp_notifications import \
-    GuestSmtpNotifications as GuestSmtpNotifications_v3_0_0
+from ciscoisesdk.api.v3_0_0.guest_smtp_notification_configuration import \
+    GuestSmtpNotificationConfiguration as GuestSmtpNotificationConfiguration_v3_0_0
 from ciscoisesdk.api.v3_0_0.guest_ssid import \
     GuestSsid as GuestSsid_v3_0_0
 from ciscoisesdk.api.v3_0_0.guest_type import \
@@ -112,10 +110,14 @@ from ciscoisesdk.api.v3_0_0.guest_user import \
     GuestUser as GuestUser_v3_0_0
 from ciscoisesdk.api.v3_0_0.hotspot_portal import \
     HotspotPortal as HotspotPortal_v3_0_0
-from ciscoisesdk.api.v3_0_0.identity_group import \
-    IdentityGroup as IdentityGroup_v3_0_0
-from ciscoisesdk.api.v3_0_0.identity_store_sequence import \
-    IdentityStoreSequence as IdentityStoreSequence_v3_0_0
+from ciscoisesdk.api.v3_0_0.ip_to_sgt_mapping import \
+    IpToSgtMapping as IpToSgtMapping_v3_0_0
+from ciscoisesdk.api.v3_0_0.ip_to_sgt_mapping_group import \
+    IpToSgtMappingGroup as IpToSgtMappingGroup_v3_0_0
+from ciscoisesdk.api.v3_0_0.identity_groups import \
+    IdentityGroups as IdentityGroups_v3_0_0
+from ciscoisesdk.api.v3_0_0.identity_sequence import \
+    IdentitySequence as IdentitySequence_v3_0_0
 from ciscoisesdk.api.v3_0_0.internal_user import \
     InternalUser as InternalUser_v3_0_0
 from ciscoisesdk.api.v3_0_0.mdm import \
@@ -160,16 +162,14 @@ from ciscoisesdk.api.v3_0_0.network_device import \
     NetworkDevice as NetworkDevice_v3_0_0
 from ciscoisesdk.api.v3_0_0.network_device_group import \
     NetworkDeviceGroup as NetworkDeviceGroup_v3_0_0
-from ciscoisesdk.api.v3_0_0.node import \
-    Node as Node_v3_0_0
 from ciscoisesdk.api.v3_0_0.node_deployment import \
     NodeDeployment as NodeDeployment_v3_0_0
 from ciscoisesdk.api.v3_0_0.node_group import \
     NodeGroup as NodeGroup_v3_0_0
+from ciscoisesdk.api.v3_0_0.node_details import \
+    NodeDetails as NodeDetails_v3_0_0
 from ciscoisesdk.api.v3_0_0.pan_ha import \
     PanHa as PanHa_v3_0_0
-from ciscoisesdk.api.v3_0_0.portal import \
-    Portal as Portal_v3_0_0
 from ciscoisesdk.api.v3_0_0.portal_global_setting import \
     PortalGlobalSetting as PortalGlobalSetting_v3_0_0
 from ciscoisesdk.api.v3_0_0.portal_theme import \
@@ -180,6 +180,12 @@ from ciscoisesdk.api.v3_0_0.profiler_profile import \
     ProfilerProfile as ProfilerProfile_v3_0_0
 from ciscoisesdk.api.v3_0_0.provider import \
     Provider as Provider_v3_0_0
+from ciscoisesdk.api.v3_0_0.psn_node_details_with_radius_service import \
+    PsnNodeDetailsWithRadiusService as PsnNodeDetailsWithRadiusService_v3_0_0
+from ciscoisesdk.api.v3_0_0.pull_deployment_info import \
+    PullDeploymentInfo as PullDeploymentInfo_v3_0_0
+from ciscoisesdk.api.v3_0_0.px_grid_settings import \
+    PxGridSettings as PxGridSettings_v3_0_0
 from ciscoisesdk.api.v3_0_0.radius_failure import \
     RadiusFailure as RadiusFailure_v3_0_0
 from ciscoisesdk.api.v3_0_0.radius_server_sequence import \
@@ -190,16 +196,6 @@ from ciscoisesdk.api.v3_0_0.replication_status import \
     ReplicationStatus as ReplicationStatus_v3_0_0
 from ciscoisesdk.api.v3_0_0.repository import \
     Repository as Repository_v3_0_0
-from ciscoisesdk.api.v3_0_0.sg_acl import \
-    SgAcl as SgAcl_v3_0_0
-from ciscoisesdk.api.v3_0_0.sg_mapping import \
-    SgMapping as SgMapping_v3_0_0
-from ciscoisesdk.api.v3_0_0.sg_mapping_group import \
-    SgMappingGroup as SgMappingGroup_v3_0_0
-from ciscoisesdk.api.v3_0_0.sgt import \
-    Sgt as Sgt_v3_0_0
-from ciscoisesdk.api.v3_0_0.sgt_vn_vlan import \
-    SgtVnVlan as SgtVnVlan_v3_0_0
 from ciscoisesdk.api.v3_0_0.sms_provider import \
     SmsProvider as SmsProvider_v3_0_0
 from ciscoisesdk.api.v3_0_0.sxp_connections import \
@@ -208,14 +204,16 @@ from ciscoisesdk.api.v3_0_0.sxp_local_bindings import \
     SxpLocalBindings as SxpLocalBindings_v3_0_0
 from ciscoisesdk.api.v3_0_0.sxp_vpns import \
     SxpVpns as SxpVpns_v3_0_0
+from ciscoisesdk.api.v3_0_0.security_group_to_virtual_network import \
+    SecurityGroupToVirtualNetwork as SecurityGroupToVirtualNetwork_v3_0_0
+from ciscoisesdk.api.v3_0_0.security_groups import \
+    SecurityGroups as SecurityGroups_v3_0_0
+from ciscoisesdk.api.v3_0_0.security_groups_acls import \
+    SecurityGroupsAcls as SecurityGroupsAcls_v3_0_0
 from ciscoisesdk.api.v3_0_0.self_registered_portal import \
     SelfRegisteredPortal as SelfRegisteredPortal_v3_0_0
-from ciscoisesdk.api.v3_0_0.service import \
-    Service as Service_v3_0_0
 from ciscoisesdk.api.v3_0_0.session_directory import \
     SessionDirectory as SessionDirectory_v3_0_0
-from ciscoisesdk.api.v3_0_0.session_service_node import \
-    SessionServiceNode as SessionServiceNode_v3_0_0
 from ciscoisesdk.api.v3_0_0.sponsor_group import \
     SponsorGroup as SponsorGroup_v3_0_0
 from ciscoisesdk.api.v3_0_0.sponsor_group_member import \
@@ -224,8 +222,12 @@ from ciscoisesdk.api.v3_0_0.sponsor_portal import \
     SponsorPortal as SponsorPortal_v3_0_0
 from ciscoisesdk.api.v3_0_0.sponsored_guest_portal import \
     SponsoredGuestPortal as SponsoredGuestPortal_v3_0_0
-from ciscoisesdk.api.v3_0_0.support_bundle import \
-    SupportBundle as SupportBundle_v3_0_0
+from ciscoisesdk.api.v3_0_0.support_bundle_download import \
+    SupportBundleDownload as SupportBundleDownload_v3_0_0
+from ciscoisesdk.api.v3_0_0.support_bundle_status import \
+    SupportBundleStatus as SupportBundleStatus_v3_0_0
+from ciscoisesdk.api.v3_0_0.support_bundle_trigger_configuration import \
+    SupportBundleTriggerConfiguration as SupportBundleTriggerConfiguration_v3_0_0
 from ciscoisesdk.api.v3_0_0.sync_ise_node import \
     SyncIseNode as SyncIseNode_v3_0_0
 from ciscoisesdk.api.v3_0_0.system_health import \
@@ -242,20 +244,20 @@ from ciscoisesdk.api.v3_0_0.tacacs_server_sequence import \
     TacacsServerSequence as TacacsServerSequence_v3_0_0
 from ciscoisesdk.api.v3_0_0.telemetry_information import \
     TelemetryInformation as TelemetryInformation_v3_0_0
-from ciscoisesdk.api.v3_0_0.threat import \
-    Threat as Threat_v3_0_0
 from ciscoisesdk.api.v3_0_0.trust_sec_configuration import \
     TrustSecConfiguration as TrustSecConfiguration_v3_0_0
 from ciscoisesdk.api.v3_0_0.trust_sec_sxp import \
     TrustSecSxp as TrustSecSxp_v3_0_0
-from ciscoisesdk.api.v3_0_0.version_ import \
-    Version as Version_v3_0_0
+from ciscoisesdk.api.v3_0_0.version_and_patch import \
+    VersionAndPatch as VersionAndPatch_v3_0_0
 from ciscoisesdk.api.v3_0_0.version_info import \
     VersionInfo as VersionInfo_v3_0_0
+from ciscoisesdk.api.v3_0_0.endpoint import \
+    Endpoint as Endpoint_v3_0_0
+from ciscoisesdk.api.v3_0_0.portal import \
+    Portal as Portal_v3_0_0
 from ciscoisesdk.api.v3_0_0.px_grid_node import \
     PxGridNode as PxGridNode_v3_0_0
-from ciscoisesdk.api.v3_0_0.px_grid_settings import \
-    PxGridSettings as PxGridSettings_v3_0_0
 from ciscoisesdk.api.v3_0_0.tasks import \
     Tasks as Tasks_v3_0_0
 from ciscoisesdk.api.custom_caller import CustomCaller
@@ -350,18 +352,18 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.aci_bindings, AciBindings_v3_0_0)
             assert isinstance(api.aci_settings, AciSettings_v3_0_0)
             assert isinstance(api.anc_endpoint, AncEndpoint_v3_0_0)
-            assert isinstance(api.anc_policy, AncPolicy_v3_0_0)
             assert isinstance(api.active_directory, ActiveDirectory_v3_0_0)
             assert isinstance(api.admin_user, AdminUser_v3_0_0)
             assert isinstance(api.allowed_protocols, AllowedProtocols_v3_0_0)
+            assert isinstance(api.anc_policy, AncPolicy_v3_0_0)
             assert isinstance(api.authorization_profile, AuthorizationProfile_v3_0_0)
             assert isinstance(api.byod_portal, ByodPortal_v3_0_0)
             assert isinstance(api.backup_and_restore, BackupAndRestore_v3_0_0)
             assert isinstance(api.certificate_profile, CertificateProfile_v3_0_0)
             assert isinstance(api.certificate_template, CertificateTemplate_v3_0_0)
             assert isinstance(api.certificates, Certificates_v3_0_0)
+            assert isinstance(api.clear_threats_and_vulnerabilities, ClearThreatsAndVulnerabilities_v3_0_0)
             assert isinstance(api.consumer, Consumer_v3_0_0)
-            assert isinstance(api.deployment, Deployment_v3_0_0)
             assert isinstance(api.device_administration_authentication_rules, DeviceAdministrationAuthenticationRules_v3_0_0)
             assert isinstance(api.device_administration_authorization_exception_rules, DeviceAdministrationAuthorizationExceptionRules_v3_0_0)
             assert isinstance(api.device_administration_authorization_global_exception_rules, DeviceAdministrationAuthorizationGlobalExceptionRules_v3_0_0)
@@ -377,19 +379,20 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.device_administration_time_date_conditions, DeviceAdministrationTimeDateConditions_v3_0_0)
             assert isinstance(api.downloadable_acl, DownloadableAcl_v3_0_0)
             assert isinstance(api.egress_matrix_cell, EgressMatrixCell_v3_0_0)
-            assert isinstance(api.endpoint, Endpoint_v3_0_0)
-            assert isinstance(api.endpoint_cert, EndpointCert_v3_0_0)
-            assert isinstance(api.endpoint_group, EndpointGroup_v3_0_0)
+            assert isinstance(api.endpoint_certificate, EndpointCertificate_v3_0_0)
+            assert isinstance(api.endpoint_identity_group, EndpointIdentityGroup_v3_0_0)
             assert isinstance(api.external_radius_server, ExternalRadiusServer_v3_0_0)
             assert isinstance(api.filter_policy, FilterPolicy_v3_0_0)
             assert isinstance(api.guest_location, GuestLocation_v3_0_0)
-            assert isinstance(api.guest_smtp_notifications, GuestSmtpNotifications_v3_0_0)
+            assert isinstance(api.guest_smtp_notification_configuration, GuestSmtpNotificationConfiguration_v3_0_0)
             assert isinstance(api.guest_ssid, GuestSsid_v3_0_0)
             assert isinstance(api.guest_type, GuestType_v3_0_0)
             assert isinstance(api.guest_user, GuestUser_v3_0_0)
             assert isinstance(api.hotspot_portal, HotspotPortal_v3_0_0)
-            assert isinstance(api.identity_group, IdentityGroup_v3_0_0)
-            assert isinstance(api.identity_store_sequence, IdentityStoreSequence_v3_0_0)
+            assert isinstance(api.ip_to_sgt_mapping, IpToSgtMapping_v3_0_0)
+            assert isinstance(api.ip_to_sgt_mapping_group, IpToSgtMappingGroup_v3_0_0)
+            assert isinstance(api.identity_groups, IdentityGroups_v3_0_0)
+            assert isinstance(api.identity_sequence, IdentitySequence_v3_0_0)
             assert isinstance(api.internal_user, InternalUser_v3_0_0)
             assert isinstance(api.mdm, Mdm_v3_0_0)
             assert isinstance(api.misc, Misc_v3_0_0)
@@ -412,39 +415,39 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.network_access_time_date_conditions, NetworkAccessTimeDateConditions_v3_0_0)
             assert isinstance(api.network_device, NetworkDevice_v3_0_0)
             assert isinstance(api.network_device_group, NetworkDeviceGroup_v3_0_0)
-            assert isinstance(api.node, Node_v3_0_0)
             assert isinstance(api.node_deployment, NodeDeployment_v3_0_0)
             assert isinstance(api.node_group, NodeGroup_v3_0_0)
+            assert isinstance(api.node_details, NodeDetails_v3_0_0)
             assert isinstance(api.pan_ha, PanHa_v3_0_0)
-            assert isinstance(api.portal, Portal_v3_0_0)
             assert isinstance(api.portal_global_setting, PortalGlobalSetting_v3_0_0)
             assert isinstance(api.portal_theme, PortalTheme_v3_0_0)
             assert isinstance(api.profiler, Profiler_v3_0_0)
             assert isinstance(api.profiler_profile, ProfilerProfile_v3_0_0)
             assert isinstance(api.provider, Provider_v3_0_0)
+            assert isinstance(api.psn_node_details_with_radius_service, PsnNodeDetailsWithRadiusService_v3_0_0)
+            assert isinstance(api.pull_deployment_info, PullDeploymentInfo_v3_0_0)
+            assert isinstance(api.px_grid_settings, PxGridSettings_v3_0_0)
             assert isinstance(api.radius_failure, RadiusFailure_v3_0_0)
             assert isinstance(api.radius_server_sequence, RadiusServerSequence_v3_0_0)
             assert isinstance(api.restid_store, RestidStore_v3_0_0)
             assert isinstance(api.replication_status, ReplicationStatus_v3_0_0)
             assert isinstance(api.repository, Repository_v3_0_0)
-            assert isinstance(api.sg_acl, SgAcl_v3_0_0)
-            assert isinstance(api.sg_mapping, SgMapping_v3_0_0)
-            assert isinstance(api.sg_mapping_group, SgMappingGroup_v3_0_0)
-            assert isinstance(api.sgt, Sgt_v3_0_0)
-            assert isinstance(api.sgt_vn_vlan, SgtVnVlan_v3_0_0)
             assert isinstance(api.sms_provider, SmsProvider_v3_0_0)
             assert isinstance(api.sxp_connections, SxpConnections_v3_0_0)
             assert isinstance(api.sxp_local_bindings, SxpLocalBindings_v3_0_0)
             assert isinstance(api.sxp_vpns, SxpVpns_v3_0_0)
+            assert isinstance(api.security_group_to_virtual_network, SecurityGroupToVirtualNetwork_v3_0_0)
+            assert isinstance(api.security_groups, SecurityGroups_v3_0_0)
+            assert isinstance(api.security_groups_acls, SecurityGroupsAcls_v3_0_0)
             assert isinstance(api.self_registered_portal, SelfRegisteredPortal_v3_0_0)
-            assert isinstance(api.service, Service_v3_0_0)
             assert isinstance(api.session_directory, SessionDirectory_v3_0_0)
-            assert isinstance(api.session_service_node, SessionServiceNode_v3_0_0)
             assert isinstance(api.sponsor_group, SponsorGroup_v3_0_0)
             assert isinstance(api.sponsor_group_member, SponsorGroupMember_v3_0_0)
             assert isinstance(api.sponsor_portal, SponsorPortal_v3_0_0)
             assert isinstance(api.sponsored_guest_portal, SponsoredGuestPortal_v3_0_0)
-            assert isinstance(api.support_bundle, SupportBundle_v3_0_0)
+            assert isinstance(api.support_bundle_download, SupportBundleDownload_v3_0_0)
+            assert isinstance(api.support_bundle_status, SupportBundleStatus_v3_0_0)
+            assert isinstance(api.support_bundle_trigger_configuration, SupportBundleTriggerConfiguration_v3_0_0)
             assert isinstance(api.sync_ise_node, SyncIseNode_v3_0_0)
             assert isinstance(api.system_health, SystemHealth_v3_0_0)
             assert isinstance(api.system_certificate, SystemCertificate_v3_0_0)
@@ -453,11 +456,11 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.tacacs_profile, TacacsProfile_v3_0_0)
             assert isinstance(api.tacacs_server_sequence, TacacsServerSequence_v3_0_0)
             assert isinstance(api.telemetry_information, TelemetryInformation_v3_0_0)
-            assert isinstance(api.threat, Threat_v3_0_0)
             assert isinstance(api.trust_sec_configuration, TrustSecConfiguration_v3_0_0)
             assert isinstance(api.trust_sec_sxp, TrustSecSxp_v3_0_0)
-            assert isinstance(api.version_, Version_v3_0_0)
+            assert isinstance(api.version_and_patch, VersionAndPatch_v3_0_0)
             assert isinstance(api.version_info, VersionInfo_v3_0_0)
+            assert isinstance(api.endpoint, Endpoint_v3_0_0)
+            assert isinstance(api.portal, Portal_v3_0_0)
             assert isinstance(api.px_grid_node, PxGridNode_v3_0_0)
-            assert isinstance(api.px_grid_settings, PxGridSettings_v3_0_0)
             assert isinstance(api.tasks, Tasks_v3_0_0)

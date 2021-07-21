@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeviceAdminConditionsForAuthorizationRule data model.
+"""Identity Services Engine getDeviceAdminConditionsForAuthorizationRules data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,13 +38,15 @@ from builtins import *
 
 
 class JSONSchemaValidatorEcff2Eb67Fe5591F8D9026F928A0D8Aa(object):
-    """getAllDeviceAdminConditionsForAuthorizationRule request schema
+    """getDeviceAdminConditionsForAuthorizationRules request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorEcff2Eb67Fe5591F8D9026F928A0D8Aa, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
                 "properties": {
                 "attributeId": {
@@ -75,6 +77,26 @@ class JSONSchemaValidatorEcff2Eb67Fe5591F8D9026F928A0D8Aa(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"
@@ -165,6 +187,26 @@ class JSONSchemaValidatorEcff2Eb67Fe5591F8D9026F928A0D8Aa(object):
                 "default": false,
                 "type": "boolean"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -185,40 +227,14 @@ class JSONSchemaValidatorEcff2Eb67Fe5591F8D9026F928A0D8Aa(object):
                 "lessThan",
                 "greaterOrEquals",
                 "lessOrEquals",
-                "macEquals",
-                "macNotEquals",
-                "macNotIn",
-                "macIn",
-                "macStartsWith",
-                "macNotStartsWith",
-                "macEndsWith",
-                "macNotEndsWith",
-                "macContains",
-                "macNotContains",
                 "ipGreaterThan",
                 "ipLessThan",
                 "ipEquals",
-                "ipNotEquals",
-                "dateTimeMatches",
-                "dateLessThan",
-                "dateLessThanOrEquals",
-                "dateGreaterThan",
-                "dateGreaterThanOrEquals",
-                "dateEquals",
-                "dateNotEquals"
+                "ipNotEquals"
                 ],
                 "type": "string"
                 },
                 "weekDays": {
-                "default": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-                ],
                 "items": {
                 "enum": [
                 "Sunday",
@@ -253,6 +269,16 @@ class JSONSchemaValidatorEcff2Eb67Fe5591F8D9026F928A0D8Aa(object):
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

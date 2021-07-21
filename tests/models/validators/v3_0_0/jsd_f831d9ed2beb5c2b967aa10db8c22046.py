@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeviceAdminAuthorizationRules data model.
+"""Identity Services Engine getDeviceAdminAuthorizationRules data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,20 +38,44 @@ from builtins import *
 
 
 class JSONSchemaValidatorF831D9Ed2Beb5C2B967AA10Db8C22046(object):
-    """getAllDeviceAdminAuthorizationRules request schema definition."""
+    """getDeviceAdminAuthorizationRules request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF831D9Ed2Beb5C2B967AA10Db8C22046, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
-                "minProperties": 2,
                 "properties": {
                 "commands": {
                 "items": {
                 "type": "string"
                 },
                 "type": "array"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
                 },
                 "profile": {
                 "type": "string"
@@ -76,6 +100,29 @@ class JSONSchemaValidatorF831D9Ed2Beb5C2B967AA10Db8C22046(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
                 }
                 },
                 "required": [
@@ -87,13 +134,7 @@ class JSONSchemaValidatorF831D9Ed2Beb5C2B967AA10Db8C22046(object):
                 "default": false,
                 "type": "boolean"
                 },
-                "description":
-                 {
-                "default": "Empty string",
-                "type": "string"
-                },
                 "hitCounts": {
-                "default": 0,
                 "type": "integer"
                 },
                 "id": {
@@ -103,7 +144,6 @@ class JSONSchemaValidatorF831D9Ed2Beb5C2B967AA10Db8C22046(object):
                 "type": "string"
                 },
                 "rank": {
-                "default": 0,
                 "type": "integer"
                 },
                 "state": {
@@ -128,6 +168,16 @@ class JSONSchemaValidatorF831D9Ed2Beb5C2B967AA10Db8C22046(object):
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

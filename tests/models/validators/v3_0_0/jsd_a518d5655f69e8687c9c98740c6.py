@@ -43,18 +43,11 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
         super(JSONSchemaValidatorA518D5655F69E8687C9C98740C6, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
+                "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "attributeId": {
-                "type": "string"
-                },
-                "attributeName": {
-                "type": "string"
-                },
-                "attributeValue": {
-                "type": "string"
-                },
-                "children": {
-                "items": {
+                "response": {
+                "allOf": [
+                {
                 "properties": {
                 "conditionType": {
                 "enum": [
@@ -72,26 +65,38 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
-                }
                 },
-                "type": "object"
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
                 },
-                "minItems": 2,
-                "type": "array"
-                },
-                "conditionType": {
+                "rel": {
                 "enum": [
-                "ConditionReference",
-                "ConditionAttributes",
-                "LibraryConditionAttributes",
-                "ConditionAndBlock",
-                "LibraryConditionAndBlock",
-                "ConditionOrBlock",
-                "LibraryConditionOrBlock",
-                "TimeAndDateCondition"
+                "next",
+                "previous",
+                "self",
+                "status"
                 ],
                 "type": "string"
                 },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                }
+                },
+                "required": [
+                "conditionType"
+                ],
+                "type": "object"
+                },
+                {
+                "properties": {
                 "datesRange": {
                 "properties": {
                 "endDate": {
@@ -106,8 +111,8 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
                 }
                 },
                 "required": [
-                "startDate",
-                "endDate"
+                "endDate",
+                "startDate"
                 ],
                 "type": "object"
                 },
@@ -125,20 +130,14 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
                 }
                 },
                 "required": [
-                "startDate",
-                "endDate"
+                "endDate",
+                "startDate"
                 ],
                 "type": "object"
                 },
                 "description":
                  {
                 "default": "",
-                "type": "string"
-                },
-                "dictionaryName": {
-                "type": "string"
-                },
-                "dictionaryValue": {
                 "type": "string"
                 },
                 "hoursRange": {
@@ -151,8 +150,8 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
                 }
                 },
                 "required": [
-                "startTime",
-                "endTime"
+                "endTime",
+                "startTime"
                 ],
                 "type": "object"
                 },
@@ -166,72 +165,18 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
                 }
                 },
                 "required": [
-                "startTime",
-                "endTime"
+                "endTime",
+                "startTime"
                 ],
                 "type": "object"
                 },
                 "id": {
                 "type": "string"
                 },
-                "isNegate": {
-                "default": false,
-                "type": "boolean"
-                },
                 "name": {
                 "type": "string"
                 },
-                "operator": {
-                "enum": [
-                "equals",
-                "notEquals",
-                "contains",
-                "notContains",
-                "matches",
-                "in",
-                "notIn",
-                "startsWith",
-                "notStartsWith",
-                "endsWith",
-                "notEndsWith",
-                "greaterThan",
-                "lessThan",
-                "greaterOrEquals",
-                "lessOrEquals",
-                "macEquals",
-                "macNotEquals",
-                "macNotIn",
-                "macIn",
-                "macStartsWith",
-                "macNotStartsWith",
-                "macEndsWith",
-                "macNotEndsWith",
-                "macContains",
-                "macNotContains",
-                "ipGreaterThan",
-                "ipLessThan",
-                "ipEquals",
-                "ipNotEquals",
-                "dateTimeMatches",
-                "dateLessThan",
-                "dateLessThanOrEquals",
-                "dateGreaterThan",
-                "dateGreaterThanOrEquals",
-                "dateEquals",
-                "dateNotEquals"
-                ],
-                "type": "string"
-                },
                 "weekDays": {
-                "default": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-                ],
                 "items": {
                 "enum": [
                 "Sunday",
@@ -263,6 +208,23 @@ class JSONSchemaValidatorA518D5655F69E8687C9C98740C6(object):
                 "type": "array"
                 }
                 },
+                "required": [
+                "name"
+                ],
+                "type": "object"
+                }
+                ],
+                "x-discriminator-value": "TimeAndDateCondition",
+                "x-ms-discriminator-value": "TimeAndDateCondition"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

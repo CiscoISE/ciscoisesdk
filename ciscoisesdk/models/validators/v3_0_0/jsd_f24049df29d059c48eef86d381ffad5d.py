@@ -47,15 +47,72 @@ class JSONSchemaValidatorF24049Df29D059C48Eef86D381Ffad5D(object):
                 "properties": {
                 "GuestUser": {
                 "properties": {
-                "guestInfo": {
+                "customFields": {
+                "type": "object"
+                },
+                "description":
+                 {
+                "type": "string"
+                },
+                "guestAccessInfo": {
                 "properties": {
-                "enabled": {
-                "type": "boolean"
+                "fromDate": {
+                "type": "string"
+                },
+                "groupTag": {
+                "type": "string"
+                },
+                "location": {
+                "type": "string"
+                },
+                "ssid": {
+                "type": "string"
+                },
+                "toDate": {
+                "type": "string"
+                },
+                "validDays": {
+                "type": "integer"
                 }
                 },
-                "required": [
-                "enabled"
-                ],
+                "type": "object"
+                },
+                "guestInfo": {
+                "properties": {
+                "company": {
+                "type": "string"
+                },
+                "creationTime": {
+                "type": "string"
+                },
+                "emailAddress": {
+                "type": "string"
+                },
+                "enabled": {
+                "type": "boolean"
+                },
+                "firstName": {
+                "type": "string"
+                },
+                "lastName": {
+                "type": "string"
+                },
+                "notificationLanguage": {
+                "type": "string"
+                },
+                "password": {
+                "type": "string"
+                },
+                "phoneNumber": {
+                "type": "string"
+                },
+                "smsServiceProvider": {
+                "type": "string"
+                },
+                "userName": {
+                "type": "string"
+                }
+                },
                 "type": "object"
                 },
                 "guestType": {
@@ -64,16 +121,31 @@ class JSONSchemaValidatorF24049Df29D059C48Eef86D381Ffad5D(object):
                 "id": {
                 "type": "string"
                 },
+                "name": {
+                "type": "string"
+                },
                 "portalId": {
+                "type": "string"
+                },
+                "reasonForVisit": {
+                "type": "string"
+                },
+                "sponsorUserId": {
+                "type": "string"
+                },
+                "sponsorUserName": {
+                "type": "string"
+                },
+                "status": {
+                "type": "string"
+                },
+                "statusReason": {
                 "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "GuestUser"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

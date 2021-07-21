@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_nodes(json_schema_validate, obj):
+def is_valid_get_nodes(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_nodes(json_schema_validate, obj):
     return True
 
 
-def get_all_nodes(api):
-    endpoint_result = api.node_deployment.get_all_nodes(
+def get_nodes(api):
+    endpoint_result = api.node_deployment.get_nodes(
 
     )
     return endpoint_result
 
 
 @pytest.mark.node_deployment
-def test_get_all_nodes(api, validator):
+def test_get_nodes(api, validator):
     try:
-        assert is_valid_get_all_nodes(
+        assert is_valid_get_nodes(
             validator,
-            get_all_nodes(api)
+            get_nodes(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_nodes(api, validator):
             raise original_e
 
 
-def get_all_nodes_default(api):
-    endpoint_result = api.node_deployment.get_all_nodes(
+def get_nodes_default(api):
+    endpoint_result = api.node_deployment.get_nodes(
 
     )
     return endpoint_result
 
 
 @pytest.mark.node_deployment
-def test_get_all_nodes_default(api, validator):
+def test_get_nodes_default(api, validator):
     try:
-        assert is_valid_get_all_nodes(
+        assert is_valid_get_nodes(
             validator,
-            get_all_nodes_default(api)
+            get_nodes_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

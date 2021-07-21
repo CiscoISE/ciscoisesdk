@@ -59,6 +59,10 @@ class JSONSchemaValidatorE27D5Df9Cbe5B29A7E16Bb7C877A4Ce(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "cn",
+                "san"
+                ],
                 "type": "object"
                 },
                 "format": {
@@ -68,6 +72,12 @@ class JSONSchemaValidatorE27D5Df9Cbe5B29A7E16Bb7C877A4Ce(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "certTemplateName",
+                "certificateRequest",
+                "format",
+                "password"
+                ],
                 "type": "object"
                 }
                 },

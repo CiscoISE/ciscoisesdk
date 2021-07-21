@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllNetworkDevice data model.
+"""Identity Services Engine getNetworkDevice data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorB986Fa0F0D54Ef98Eb135Eeb88808A(object):
-    """getAllNetworkDevice request schema definition."""
+    """getNetworkDevice request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB986Fa0F0D54Ef98Eb135Eeb88808A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -48,6 +48,7 @@ class JSONSchemaValidatorB986Fa0F0D54Ef98Eb135Eeb88808A(object):
                 "SearchResult": {
                 "properties": {
                 "nextPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -60,8 +61,11 @@ class JSONSchemaValidatorB986Fa0F0D54Ef98Eb135Eeb88808A(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "previousPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -74,6 +78,8 @@ class JSONSchemaValidatorB986Fa0F0D54Ef98Eb135Eeb88808A(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "resources": {
                 "items": {
@@ -114,9 +120,6 @@ class JSONSchemaValidatorB986Fa0F0D54Ef98Eb135Eeb88808A(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

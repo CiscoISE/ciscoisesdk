@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_network_access_conditions(json_schema_validate, obj):
+def is_valid_get_network_access_conditions(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_network_access_conditions(json_schema_validate, obj):
     return True
 
 
-def get_all_network_access_conditions(api):
-    endpoint_result = api.network_access_conditions.get_all_network_access_conditions(
+def get_network_access_conditions(api):
+    endpoint_result = api.network_access_conditions.get_network_access_conditions(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_conditions
-def test_get_all_network_access_conditions(api, validator):
+def test_get_network_access_conditions(api, validator):
     try:
-        assert is_valid_get_all_network_access_conditions(
+        assert is_valid_get_network_access_conditions(
             validator,
-            get_all_network_access_conditions(api)
+            get_network_access_conditions(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_network_access_conditions(api, validator):
             raise original_e
 
 
-def get_all_network_access_conditions_default(api):
-    endpoint_result = api.network_access_conditions.get_all_network_access_conditions(
+def get_network_access_conditions_default(api):
+    endpoint_result = api.network_access_conditions.get_network_access_conditions(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_conditions
-def test_get_all_network_access_conditions_default(api, validator):
+def test_get_network_access_conditions_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_conditions(
+        assert is_valid_get_network_access_conditions(
             validator,
-            get_all_network_access_conditions_default(api)
+            get_network_access_conditions_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -96,17 +96,18 @@ def create_network_access_condition(api):
         attribute_id='string',
         attribute_name='string',
         attribute_value='string',
-        children=[{'conditionType': 'string', 'isNegate': True}],
+        children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
-        dates_range={'startDate': 'string', 'endDate': 'string'},
-        dates_range_exception={'startDate': 'string', 'endDate': 'string'},
+        dates_range={'endDate': 'string', 'startDate': 'string'},
+        dates_range_exception={'endDate': 'string', 'startDate': 'string'},
         description='string',
         dictionary_name='string',
         dictionary_value='string',
-        hours_range={'startTime': 'string', 'endTime': 'string'},
-        hours_range_exception={'startTime': 'string', 'endTime': 'string'},
+        hours_range={'endTime': 'string', 'startTime': 'string'},
+        hours_range_exception={'endTime': 'string', 'startTime': 'string'},
         id='string',
         is_negate=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         operator='string',
         payload=None,
@@ -146,6 +147,7 @@ def create_network_access_condition_default(api):
         hours_range_exception=None,
         id=None,
         is_negate=None,
+        link=None,
         name=None,
         operator=None,
         payload=None,
@@ -167,57 +169,7 @@ def test_create_network_access_condition_default(api, validator):
             raise original_e
 
 
-def is_valid_get_all_network_access_conditions_for_policy_set(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c0984cde5e925c209ab87472ab905476_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_network_access_conditions_for_policy_set(api):
-    endpoint_result = api.network_access_conditions.get_all_network_access_conditions_for_policy_set(
-
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_access_conditions
-def test_get_all_network_access_conditions_for_policy_set(api, validator):
-    try:
-        assert is_valid_get_all_network_access_conditions_for_policy_set(
-            validator,
-            get_all_network_access_conditions_for_policy_set(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_network_access_conditions_for_policy_set_default(api):
-    endpoint_result = api.network_access_conditions.get_all_network_access_conditions_for_policy_set(
-
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_access_conditions
-def test_get_all_network_access_conditions_for_policy_set_default(api, validator):
-    try:
-        assert is_valid_get_all_network_access_conditions_for_policy_set(
-            validator,
-            get_all_network_access_conditions_for_policy_set_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_all_network_access_conditions_for_authentication_rules(json_schema_validate, obj):
+def is_valid_get_network_access_conditions_for_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -228,19 +180,19 @@ def is_valid_get_all_network_access_conditions_for_authentication_rules(json_sch
     return True
 
 
-def get_all_network_access_conditions_for_authentication_rules(api):
-    endpoint_result = api.network_access_conditions.get_all_network_access_conditions_for_authentication_rules(
+def get_network_access_conditions_for_authentication_rules(api):
+    endpoint_result = api.network_access_conditions.get_network_access_conditions_for_authentication_rules(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_conditions
-def test_get_all_network_access_conditions_for_authentication_rules(api, validator):
+def test_get_network_access_conditions_for_authentication_rules(api, validator):
     try:
-        assert is_valid_get_all_network_access_conditions_for_authentication_rules(
+        assert is_valid_get_network_access_conditions_for_authentication_rules(
             validator,
-            get_all_network_access_conditions_for_authentication_rules(api)
+            get_network_access_conditions_for_authentication_rules(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -248,26 +200,26 @@ def test_get_all_network_access_conditions_for_authentication_rules(api, validat
             raise original_e
 
 
-def get_all_network_access_conditions_for_authentication_rules_default(api):
-    endpoint_result = api.network_access_conditions.get_all_network_access_conditions_for_authentication_rules(
+def get_network_access_conditions_for_authentication_rules_default(api):
+    endpoint_result = api.network_access_conditions.get_network_access_conditions_for_authentication_rules(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_conditions
-def test_get_all_network_access_conditions_for_authentication_rules_default(api, validator):
+def test_get_network_access_conditions_for_authentication_rules_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_conditions_for_authentication_rules(
+        assert is_valid_get_network_access_conditions_for_authentication_rules(
             validator,
-            get_all_network_access_conditions_for_authentication_rules_default(api)
+            get_network_access_conditions_for_authentication_rules_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_all_network_access_conditions_for_authorization_rule(json_schema_validate, obj):
+def is_valid_get_network_access_conditions_for_authorization_rules(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -278,19 +230,19 @@ def is_valid_get_all_network_access_conditions_for_authorization_rule(json_schem
     return True
 
 
-def get_all_network_access_conditions_for_authorization_rule(api):
-    endpoint_result = api.network_access_conditions.get_all_network_access_conditions_for_authorization_rule(
+def get_network_access_conditions_for_authorization_rules(api):
+    endpoint_result = api.network_access_conditions.get_network_access_conditions_for_authorization_rules(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_conditions
-def test_get_all_network_access_conditions_for_authorization_rule(api, validator):
+def test_get_network_access_conditions_for_authorization_rules(api, validator):
     try:
-        assert is_valid_get_all_network_access_conditions_for_authorization_rule(
+        assert is_valid_get_network_access_conditions_for_authorization_rules(
             validator,
-            get_all_network_access_conditions_for_authorization_rule(api)
+            get_network_access_conditions_for_authorization_rules(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -298,19 +250,259 @@ def test_get_all_network_access_conditions_for_authorization_rule(api, validator
             raise original_e
 
 
-def get_all_network_access_conditions_for_authorization_rule_default(api):
-    endpoint_result = api.network_access_conditions.get_all_network_access_conditions_for_authorization_rule(
+def get_network_access_conditions_for_authorization_rules_default(api):
+    endpoint_result = api.network_access_conditions.get_network_access_conditions_for_authorization_rules(
 
     )
     return endpoint_result
 
 
 @pytest.mark.network_access_conditions
-def test_get_all_network_access_conditions_for_authorization_rule_default(api, validator):
+def test_get_network_access_conditions_for_authorization_rules_default(api, validator):
     try:
-        assert is_valid_get_all_network_access_conditions_for_authorization_rule(
+        assert is_valid_get_network_access_conditions_for_authorization_rules(
             validator,
-            get_all_network_access_conditions_for_authorization_rule_default(api)
+            get_network_access_conditions_for_authorization_rules_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_network_access_condition_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_f3b949de4363575398dc1c9e681630bb_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_network_access_condition_by_name(api):
+    endpoint_result = api.network_access_conditions.get_network_access_condition_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_conditions
+def test_get_network_access_condition_by_name(api, validator):
+    try:
+        assert is_valid_get_network_access_condition_by_name(
+            validator,
+            get_network_access_condition_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_network_access_condition_by_name_default(api):
+    endpoint_result = api.network_access_conditions.get_network_access_condition_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_conditions
+def test_get_network_access_condition_by_name_default(api, validator):
+    try:
+        assert is_valid_get_network_access_condition_by_name(
+            validator,
+            get_network_access_condition_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_network_access_condition_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_bea2910401185295a9715d65cb1c07c9_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_network_access_condition_by_name(api):
+    endpoint_result = api.network_access_conditions.update_network_access_condition_by_name(
+        active_validation=False,
+        attribute_id='string',
+        attribute_name='string',
+        attribute_value='string',
+        children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
+        condition_type='string',
+        dates_range={'endDate': 'string', 'startDate': 'string'},
+        dates_range_exception={'endDate': 'string', 'startDate': 'string'},
+        description='string',
+        dictionary_name='string',
+        dictionary_value='string',
+        hours_range={'endTime': 'string', 'startTime': 'string'},
+        hours_range_exception={'endTime': 'string', 'startTime': 'string'},
+        id='string',
+        is_negate=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
+        name='string',
+        operator='string',
+        payload=None,
+        week_days=['string'],
+        week_days_exception=['string']
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_conditions
+def test_update_network_access_condition_by_name(api, validator):
+    try:
+        assert is_valid_update_network_access_condition_by_name(
+            validator,
+            update_network_access_condition_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_network_access_condition_by_name_default(api):
+    endpoint_result = api.network_access_conditions.update_network_access_condition_by_name(
+        active_validation=False,
+        name='string',
+        attribute_id=None,
+        attribute_name=None,
+        attribute_value=None,
+        children=None,
+        condition_type=None,
+        dates_range=None,
+        dates_range_exception=None,
+        description=None,
+        dictionary_name=None,
+        dictionary_value=None,
+        hours_range=None,
+        hours_range_exception=None,
+        id=None,
+        is_negate=None,
+        link=None,
+        operator=None,
+        payload=None,
+        week_days=None,
+        week_days_exception=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_conditions
+def test_update_network_access_condition_by_name_default(api, validator):
+    try:
+        assert is_valid_update_network_access_condition_by_name(
+            validator,
+            update_network_access_condition_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_delete_network_access_condition_by_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_0ea1c05d19955fd4801e6c996705f3fc_v3_0_0').validate(obj.response)
+    return True
+
+
+def delete_network_access_condition_by_name(api):
+    endpoint_result = api.network_access_conditions.delete_network_access_condition_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_conditions
+def test_delete_network_access_condition_by_name(api, validator):
+    try:
+        assert is_valid_delete_network_access_condition_by_name(
+            validator,
+            delete_network_access_condition_by_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def delete_network_access_condition_by_name_default(api):
+    endpoint_result = api.network_access_conditions.delete_network_access_condition_by_name(
+        name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_conditions
+def test_delete_network_access_condition_by_name_default(api, validator):
+    try:
+        assert is_valid_delete_network_access_condition_by_name(
+            validator,
+            delete_network_access_condition_by_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_network_access_conditions_for_policy_sets(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c0984cde5e925c209ab87472ab905476_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_network_access_conditions_for_policy_sets(api):
+    endpoint_result = api.network_access_conditions.get_network_access_conditions_for_policy_sets(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_conditions
+def test_get_network_access_conditions_for_policy_sets(api, validator):
+    try:
+        assert is_valid_get_network_access_conditions_for_policy_sets(
+            validator,
+            get_network_access_conditions_for_policy_sets(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_network_access_conditions_for_policy_sets_default(api):
+    endpoint_result = api.network_access_conditions.get_network_access_conditions_for_policy_sets(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_access_conditions
+def test_get_network_access_conditions_for_policy_sets_default(api, validator):
+    try:
+        assert is_valid_get_network_access_conditions_for_policy_sets(
+            validator,
+            get_network_access_conditions_for_policy_sets_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -384,17 +576,18 @@ def update_network_access_condition_by_id(api):
         attribute_id='string',
         attribute_name='string',
         attribute_value='string',
-        children=[{'conditionType': 'string', 'isNegate': True}],
+        children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
-        dates_range={'startDate': 'string', 'endDate': 'string'},
-        dates_range_exception={'startDate': 'string', 'endDate': 'string'},
+        dates_range={'endDate': 'string', 'startDate': 'string'},
+        dates_range_exception={'endDate': 'string', 'startDate': 'string'},
         description='string',
         dictionary_name='string',
         dictionary_value='string',
-        hours_range={'startTime': 'string', 'endTime': 'string'},
-        hours_range_exception={'startTime': 'string', 'endTime': 'string'},
+        hours_range={'endTime': 'string', 'startTime': 'string'},
+        hours_range_exception={'endTime': 'string', 'startTime': 'string'},
         id='string',
         is_negate=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         operator='string',
         payload=None,
@@ -434,6 +627,7 @@ def update_network_access_condition_by_id_default(api):
         hours_range=None,
         hours_range_exception=None,
         is_negate=None,
+        link=None,
         name=None,
         operator=None,
         payload=None,
@@ -499,194 +693,6 @@ def test_delete_network_access_condition_by_id_default(api, validator):
         assert is_valid_delete_network_access_condition_by_id(
             validator,
             delete_network_access_condition_by_id_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_network_access_condition_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ea5e5a095d05598db7b99ddfd1d7f7fa_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_network_access_condition_by_name(api):
-    endpoint_result = api.network_access_conditions.get_network_access_condition_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_access_conditions
-def test_get_network_access_condition_by_name(api, validator):
-    try:
-        assert is_valid_get_network_access_condition_by_name(
-            validator,
-            get_network_access_condition_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_network_access_condition_by_name_default(api):
-    endpoint_result = api.network_access_conditions.get_network_access_condition_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_access_conditions
-def test_get_network_access_condition_by_name_default(api, validator):
-    try:
-        assert is_valid_get_network_access_condition_by_name(
-            validator,
-            get_network_access_condition_by_name_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_delete_network_access_condition_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_beebf3641335579e99c08f038303601e_v3_0_0').validate(obj.response)
-    return True
-
-
-def delete_network_access_condition_by_name(api):
-    endpoint_result = api.network_access_conditions.delete_network_access_condition_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_access_conditions
-def test_delete_network_access_condition_by_name(api, validator):
-    try:
-        assert is_valid_delete_network_access_condition_by_name(
-            validator,
-            delete_network_access_condition_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def delete_network_access_condition_by_name_default(api):
-    endpoint_result = api.network_access_conditions.delete_network_access_condition_by_name(
-        name='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_access_conditions
-def test_delete_network_access_condition_by_name_default(api, validator):
-    try:
-        assert is_valid_delete_network_access_condition_by_name(
-            validator,
-            delete_network_access_condition_by_name_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_update_network_access_condition_by_name(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_12076c45ba035019803dacdbf15cf193_v3_0_0').validate(obj.response)
-    return True
-
-
-def update_network_access_condition_by_name(api):
-    endpoint_result = api.network_access_conditions.update_network_access_condition_by_name(
-        active_validation=False,
-        attribute_id='string',
-        attribute_name='string',
-        attribute_value='string',
-        children=[{'conditionType': 'string', 'isNegate': True}],
-        condition_type='string',
-        dates_range={'startDate': 'string', 'endDate': 'string'},
-        dates_range_exception={'startDate': 'string', 'endDate': 'string'},
-        description='string',
-        dictionary_name='string',
-        dictionary_value='string',
-        hours_range={'startTime': 'string', 'endTime': 'string'},
-        hours_range_exception={'startTime': 'string', 'endTime': 'string'},
-        id='string',
-        is_negate=True,
-        name='string',
-        operator='string',
-        payload=None,
-        week_days=['string'],
-        week_days_exception=['string']
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_access_conditions
-def test_update_network_access_condition_by_name(api, validator):
-    try:
-        assert is_valid_update_network_access_condition_by_name(
-            validator,
-            update_network_access_condition_by_name(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def update_network_access_condition_by_name_default(api):
-    endpoint_result = api.network_access_conditions.update_network_access_condition_by_name(
-        active_validation=False,
-        name='string',
-        attribute_id=None,
-        attribute_name=None,
-        attribute_value=None,
-        children=None,
-        condition_type=None,
-        dates_range=None,
-        dates_range_exception=None,
-        description=None,
-        dictionary_name=None,
-        dictionary_value=None,
-        hours_range=None,
-        hours_range_exception=None,
-        id=None,
-        is_negate=None,
-        operator=None,
-        payload=None,
-        week_days=None,
-        week_days_exception=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.network_access_conditions
-def test_update_network_access_condition_by_name_default(api, validator):
-    try:
-        assert is_valid_update_network_access_condition_by_name(
-            validator,
-            update_network_access_condition_by_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

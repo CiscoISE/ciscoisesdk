@@ -78,18 +78,9 @@ class JSONSchemaValidatorDe7C6F75F68B0D7Df00Dc72808D(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "defaultFromAddress",
-                "notificationEnabled",
-                "smtpServer",
-                "useDefaultFromAddress"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSGuestSmtpNotificationSettings"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

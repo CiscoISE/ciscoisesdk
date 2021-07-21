@@ -51,14 +51,6 @@ class JSONSchemaValidatorBf175C04Fcb051B9A6Fd70A2252903Fa(object):
                 "type": "boolean"
                 },
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 },
                 "description":
@@ -83,9 +75,6 @@ class JSONSchemaValidatorBf175C04Fcb051B9A6Fd70A2252903Fa(object):
                 "firstName": {
                 "type": "string"
                 },
-                "id": {
-                "type": "string"
-                },
                 "identityGroups": {
                 "type": "string"
                 },
@@ -102,17 +91,9 @@ class JSONSchemaValidatorBf175C04Fcb051B9A6Fd70A2252903Fa(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "enabled",
-                "password"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "InternalUser"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

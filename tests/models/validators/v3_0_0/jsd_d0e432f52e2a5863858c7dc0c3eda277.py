@@ -45,59 +45,35 @@ class JSONSchemaValidatorD0E432F52E2A5863858C7Dc0C3Eda277(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "ERSResponse": {
+                "UpdatedFieldsList": {
                 "properties": {
-                "link": {
+                "field": {
+                "type": "string"
+                },
+                "newValue": {
+                "type": "string"
+                },
+                "oldValue": {
+                "type": "string"
+                },
+                "updatedField": {
                 "properties": {
-                "href": {
+                "field": {
                 "type": "string"
                 },
-                "rel": {
+                "newValue": {
                 "type": "string"
                 },
-                "type": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
-                "type": "object"
-                },
-                "messages": {
-                "items": {
-                "properties": {
-                "code": {
-                "type": "string"
-                },
-                "title": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "title",
-                "type",
-                "code"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "operation": {
+                "oldValue": {
                 "type": "string"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSResponse"
-                ],
+                "type": "object"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

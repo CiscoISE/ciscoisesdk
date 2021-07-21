@@ -69,10 +69,10 @@ class JSONSchemaValidatorE39868Ea7Aec5EfcAaf55009699Eda5D(object):
                 },
                 "keyLength": {
                 "enum": [
-                512,
-                1024,
-                2048,
-                4096
+                "512",
+                "1024",
+                "2048",
+                "4096"
                 ],
                 "type": "string"
                 },
@@ -149,6 +149,12 @@ class JSONSchemaValidatorE39868Ea7Aec5EfcAaf55009699Eda5D(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "digestType",
+                "keyLength",
+                "keyType",
+                "usedFor"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

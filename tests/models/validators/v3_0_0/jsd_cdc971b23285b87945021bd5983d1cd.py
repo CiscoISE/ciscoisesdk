@@ -60,6 +60,20 @@ class JSONSchemaValidatorCdc971B23285B87945021Bd5983D1Cd(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "matrixCellStatus": {
                 "type": "string"
                 },
@@ -76,14 +90,6 @@ class JSONSchemaValidatorCdc971B23285B87945021Bd5983D1Cd(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "sourceSgtId",
-                "destinationSgtId",
-                "matrixCellStatus",
-                "defaultRule",
-                "name",
-                "id"
-                ],
                 "type": "object"
                 }
                 },

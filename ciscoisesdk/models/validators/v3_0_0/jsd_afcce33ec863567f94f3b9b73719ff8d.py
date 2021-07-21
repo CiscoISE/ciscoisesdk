@@ -51,6 +51,14 @@ class JSONSchemaValidatorAfcce33EC863567F94F3B9B73719Ff8D(object):
                 "properties": {
                 "globalCustomizations": {
                 "properties": {
+                "backgroundImage": {
+                "properties": {
+                "data": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "bannerImage": {
                 "properties": {
                 "data": {
@@ -158,6 +166,9 @@ class JSONSchemaValidatorAfcce33EC863567F94F3B9B73719Ff8D(object):
                 "name": {
                 "type": "string"
                 },
+                "portalTestUrl": {
+                "type": "string"
+                },
                 "portalType": {
                 "type": "string"
                 },
@@ -227,14 +238,13 @@ class JSONSchemaValidatorAfcce33EC863567F94F3B9B73719Ff8D(object):
                 "alwaysUsedLanguage": {
                 "type": "string"
                 },
-                "availableSsids": {
-                "items": {},
-                "type": "array"
-                },
                 "certificateGroupTag": {
                 "type": "string"
                 },
                 "displayLang": {
+                "type": "string"
+                },
+                "endpointIdentityGroup": {
                 "type": "string"
                 },
                 "fallbackLanguage": {
@@ -248,6 +258,9 @@ class JSONSchemaValidatorAfcce33EC863567F94F3B9B73719Ff8D(object):
                 },
                 "supportInfoSettings": {
                 "properties": {
+                "defaultEmptyFieldValue": {
+                "type": "string"
+                },
                 "emptyFieldDisplay": {
                 "type": "string"
                 },

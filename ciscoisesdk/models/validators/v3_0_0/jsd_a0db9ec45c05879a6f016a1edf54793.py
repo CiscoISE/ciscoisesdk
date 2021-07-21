@@ -72,11 +72,6 @@ class JSONSchemaValidatorA0Db9Ec45C05879A6F016A1Edf54793(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "type",
-                "name",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -85,15 +80,9 @@ class JSONSchemaValidatorA0Db9Ec45C05879A6F016A1Edf54793(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "name"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsProfile"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

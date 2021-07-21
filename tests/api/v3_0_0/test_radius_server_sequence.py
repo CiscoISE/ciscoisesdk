@@ -29,140 +29,6 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_radius_server_sequence(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c6c330dace185a548f70f4e5d67776ea_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_radius_server_sequence(api):
-    endpoint_result = api.radius_server_sequence.get_all_radius_server_sequence(
-        page=0,
-        size=0
-    )
-    return endpoint_result
-
-
-@pytest.mark.radius_server_sequence
-def test_get_all_radius_server_sequence(api, validator):
-    try:
-        assert is_valid_get_all_radius_server_sequence(
-            validator,
-            get_all_radius_server_sequence(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_radius_server_sequence_default(api):
-    endpoint_result = api.radius_server_sequence.get_all_radius_server_sequence(
-        page=None,
-        size=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.radius_server_sequence
-def test_get_all_radius_server_sequence_default(api, validator):
-    try:
-        assert is_valid_get_all_radius_server_sequence(
-            validator,
-            get_all_radius_server_sequence_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_radius_server_sequence(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_83ad6ca0642c5750af6ca9905721a9d7_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_radius_server_sequence(api):
-    endpoint_result = api.radius_server_sequence.create_radius_server_sequence(
-        active_validation=False,
-        before_accept_attr_manipulators_list=[{'action': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'value': 'string', 'changedVal': 'string'}],
-        continue_authorz_policy=True,
-        description='string',
-        id='string',
-        local_accounting=True,
-        name='string',
-        on_request_attr_manipulator_list=[{'action': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'value': 'string', 'changedVal': 'string'}],
-        payload=None,
-        prefix_separator='string',
-        radius_server_list=['string'],
-        remote_accounting=True,
-        strip_prefix=True,
-        strip_suffix=True,
-        suffix_separator='string',
-        use_attr_set_before_acc=True,
-        use_attr_set_on_request=True
-    )
-    return endpoint_result
-
-
-@pytest.mark.radius_server_sequence
-def test_create_radius_server_sequence(api, validator):
-    try:
-        assert is_valid_create_radius_server_sequence(
-            validator,
-            create_radius_server_sequence(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_radius_server_sequence_default(api):
-    endpoint_result = api.radius_server_sequence.create_radius_server_sequence(
-        active_validation=False,
-        before_accept_attr_manipulators_list=None,
-        continue_authorz_policy=None,
-        description=None,
-        id=None,
-        local_accounting=None,
-        name=None,
-        on_request_attr_manipulator_list=None,
-        payload=None,
-        prefix_separator=None,
-        radius_server_list=None,
-        remote_accounting=None,
-        strip_prefix=None,
-        strip_suffix=None,
-        suffix_separator=None,
-        use_attr_set_before_acc=None,
-        use_attr_set_on_request=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.radius_server_sequence
-def test_create_radius_server_sequence_default(api, validator):
-    try:
-        assert is_valid_create_radius_server_sequence(
-            validator,
-            create_radius_server_sequence_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_get_radius_server_sequence_by_id(json_schema_validate, obj):
     if not obj:
         return False
@@ -339,6 +205,188 @@ def test_delete_radius_server_sequence_by_id_default(api, validator):
         assert is_valid_delete_radius_server_sequence_by_id(
             validator,
             delete_radius_server_sequence_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_radius_server_sequence(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_c6c330dace185a548f70f4e5d67776ea_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_radius_server_sequence(api):
+    endpoint_result = api.radius_server_sequence.get_radius_server_sequence(
+        page=0,
+        size=0
+    )
+    return endpoint_result
+
+
+@pytest.mark.radius_server_sequence
+def test_get_radius_server_sequence(api, validator):
+    try:
+        assert is_valid_get_radius_server_sequence(
+            validator,
+            get_radius_server_sequence(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_radius_server_sequence_default(api):
+    endpoint_result = api.radius_server_sequence.get_radius_server_sequence(
+        page=None,
+        size=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.radius_server_sequence
+def test_get_radius_server_sequence_default(api, validator):
+    try:
+        assert is_valid_get_radius_server_sequence(
+            validator,
+            get_radius_server_sequence_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_radius_server_sequence(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_83ad6ca0642c5750af6ca9905721a9d7_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_radius_server_sequence(api):
+    endpoint_result = api.radius_server_sequence.create_radius_server_sequence(
+        active_validation=False,
+        before_accept_attr_manipulators_list=[{'action': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'value': 'string', 'changedVal': 'string'}],
+        continue_authorz_policy=True,
+        description='string',
+        local_accounting=True,
+        name='string',
+        on_request_attr_manipulator_list=[{'action': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'value': 'string', 'changedVal': 'string'}],
+        payload=None,
+        prefix_separator='string',
+        radius_server_list=['string'],
+        remote_accounting=True,
+        strip_prefix=True,
+        strip_suffix=True,
+        suffix_separator='string',
+        use_attr_set_before_acc=True,
+        use_attr_set_on_request=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.radius_server_sequence
+def test_create_radius_server_sequence(api, validator):
+    try:
+        assert is_valid_create_radius_server_sequence(
+            validator,
+            create_radius_server_sequence(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_radius_server_sequence_default(api):
+    endpoint_result = api.radius_server_sequence.create_radius_server_sequence(
+        active_validation=False,
+        before_accept_attr_manipulators_list=None,
+        continue_authorz_policy=None,
+        description=None,
+        local_accounting=None,
+        name=None,
+        on_request_attr_manipulator_list=None,
+        payload=None,
+        prefix_separator=None,
+        radius_server_list=None,
+        remote_accounting=None,
+        strip_prefix=None,
+        strip_suffix=None,
+        suffix_separator=None,
+        use_attr_set_before_acc=None,
+        use_attr_set_on_request=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.radius_server_sequence
+def test_create_radius_server_sequence_default(api, validator):
+    try:
+        assert is_valid_create_radius_server_sequence(
+            validator,
+            create_radius_server_sequence_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_8fb1a72ded19590fa0aa85fc59ea8cfc_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.radius_server_sequence.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.radius_server_sequence
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.radius_server_sequence.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.radius_server_sequence
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

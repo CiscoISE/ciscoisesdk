@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateGuesttypeById data model.
+"""Identity Services Engine updateGuestTypeById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorBac6D4D95Ac45A0A8933B8712Dcbe70D(object):
-    """updateGuesttypeById request schema definition."""
+    """updateGuestTypeById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorBac6D4D95Ac45A0A8933B8712Dcbe70D, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -119,6 +119,9 @@ class JSONSchemaValidatorBac6D4D95Ac45A0A8933B8712Dcbe70D(object):
                 },
                 "id": {
                 "type": "string"
+                },
+                "isDefaultType": {
+                "type": "boolean"
                 },
                 "loginOptions": {
                 "properties": {

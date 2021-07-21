@@ -87,66 +87,6 @@ def test_config_backup_default(api, validator):
             raise original_e
 
 
-def is_valid_restore_config_backup(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b8319a8b5d195348a8763acd95ca2967_v3_0_0').validate(obj.response)
-    return True
-
-
-def restore_config_backup(api):
-    endpoint_result = api.backup_and_restore.restore_config_backup(
-        active_validation=False,
-        backup_encryption_key='string',
-        payload=None,
-        repository_name='string',
-        restore_file='string',
-        restore_include_adeos='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.backup_and_restore
-def test_restore_config_backup(api, validator):
-    try:
-        assert is_valid_restore_config_backup(
-            validator,
-            restore_config_backup(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def restore_config_backup_default(api):
-    endpoint_result = api.backup_and_restore.restore_config_backup(
-        active_validation=False,
-        backup_encryption_key=None,
-        payload=None,
-        repository_name=None,
-        restore_file=None,
-        restore_include_adeos=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.backup_and_restore
-def test_restore_config_backup_default(api, validator):
-    try:
-        assert is_valid_restore_config_backup(
-            validator,
-            restore_config_backup_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_cancel_backup(json_schema_validate, obj):
     if not obj:
         return False
@@ -249,7 +189,141 @@ def test_get_last_config_backup_status_default(api, validator):
             raise original_e
 
 
-def is_valid_schedule_config_backup(json_schema_validate, obj):
+def is_valid_restore_config_backup(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_b8319a8b5d195348a8763acd95ca2967_v3_0_0').validate(obj.response)
+    return True
+
+
+def restore_config_backup(api):
+    endpoint_result = api.backup_and_restore.restore_config_backup(
+        active_validation=False,
+        backup_encryption_key='string',
+        payload=None,
+        repository_name='string',
+        restore_file='string',
+        restore_include_adeos='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.backup_and_restore
+def test_restore_config_backup(api, validator):
+    try:
+        assert is_valid_restore_config_backup(
+            validator,
+            restore_config_backup(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def restore_config_backup_default(api):
+    endpoint_result = api.backup_and_restore.restore_config_backup(
+        active_validation=False,
+        backup_encryption_key=None,
+        payload=None,
+        repository_name=None,
+        restore_file=None,
+        restore_include_adeos=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.backup_and_restore
+def test_restore_config_backup_default(api, validator):
+    try:
+        assert is_valid_restore_config_backup(
+            validator,
+            restore_config_backup_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_update_scheduled_config_backup(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_3585fc7103b05336a7960d9f34033eca_v3_0_0').validate(obj.response)
+    return True
+
+
+def update_scheduled_config_backup(api):
+    endpoint_result = api.backup_and_restore.update_scheduled_config_backup(
+        active_validation=False,
+        backup_description='string',
+        backup_encryption_key='string',
+        backup_name='string',
+        end_date='string',
+        frequency='string',
+        month_day='string',
+        payload=None,
+        repository_name='string',
+        start_date='string',
+        status='string',
+        time='string',
+        week_day='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.backup_and_restore
+def test_update_scheduled_config_backup(api, validator):
+    try:
+        assert is_valid_update_scheduled_config_backup(
+            validator,
+            update_scheduled_config_backup(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def update_scheduled_config_backup_default(api):
+    endpoint_result = api.backup_and_restore.update_scheduled_config_backup(
+        active_validation=False,
+        backup_description=None,
+        backup_encryption_key=None,
+        backup_name=None,
+        end_date=None,
+        frequency=None,
+        month_day=None,
+        payload=None,
+        repository_name=None,
+        start_date=None,
+        status=None,
+        time=None,
+        week_day=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.backup_and_restore
+def test_update_scheduled_config_backup_default(api, validator):
+    try:
+        assert is_valid_update_scheduled_config_backup(
+            validator,
+            update_scheduled_config_backup_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_scheduled_config_backup(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -260,28 +334,31 @@ def is_valid_schedule_config_backup(json_schema_validate, obj):
     return True
 
 
-def schedule_config_backup(api):
-    endpoint_result = api.backup_and_restore.schedule_config_backup(
+def create_scheduled_config_backup(api):
+    endpoint_result = api.backup_and_restore.create_scheduled_config_backup(
         active_validation=False,
         backup_description='string',
         backup_encryption_key='string',
         backup_name='string',
         end_date='string',
         frequency='string',
+        month_day='string',
         payload=None,
         repository_name='string',
         start_date='string',
-        time='string'
+        status='string',
+        time='string',
+        week_day='string'
     )
     return endpoint_result
 
 
 @pytest.mark.backup_and_restore
-def test_schedule_config_backup(api, validator):
+def test_create_scheduled_config_backup(api, validator):
     try:
-        assert is_valid_schedule_config_backup(
+        assert is_valid_create_scheduled_config_backup(
             validator,
-            schedule_config_backup(api)
+            create_scheduled_config_backup(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -289,28 +366,31 @@ def test_schedule_config_backup(api, validator):
             raise original_e
 
 
-def schedule_config_backup_default(api):
-    endpoint_result = api.backup_and_restore.schedule_config_backup(
+def create_scheduled_config_backup_default(api):
+    endpoint_result = api.backup_and_restore.create_scheduled_config_backup(
         active_validation=False,
         backup_description=None,
         backup_encryption_key=None,
         backup_name=None,
         end_date=None,
         frequency=None,
+        month_day=None,
         payload=None,
         repository_name=None,
         start_date=None,
-        time=None
+        status=None,
+        time=None,
+        week_day=None
     )
     return endpoint_result
 
 
 @pytest.mark.backup_and_restore
-def test_schedule_config_backup_default(api, validator):
+def test_create_scheduled_config_backup_default(api, validator):
     try:
-        assert is_valid_schedule_config_backup(
+        assert is_valid_create_scheduled_config_backup(
             validator,
-            schedule_config_backup_default(api)
+            create_scheduled_config_backup_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

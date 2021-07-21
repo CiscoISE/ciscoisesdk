@@ -74,11 +74,14 @@ class NetworkAccessServiceNames(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_network_access_service_names(self,
-                                             headers=None,
-                                             **query_parameters):
-        """Network Access - Returns list of allowed protocols and server
-        sequences for Policy Set.
+    def get_network_access_service_names(self,
+                                         headers=None,
+                                         **query_parameters):
+        """Returns list of Allowed Protocols and Server Sequences for
+        Network Access Policy Set results.
+        'isLocalAuthorization' property is available only for
+        Network Access Policy Set results of type Server
+        Sequence.   (Other CRUD APIs available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -87,10 +90,12 @@ class NetworkAccessServiceNames(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -129,3 +134,15 @@ class NetworkAccessServiceNames(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c137cad852579f4b810ff8adf661_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_service_names <#ciscoisesdk.
+        api.v3_0_0.network_access_service_names.
+        NetworkAccessServiceNames.get_network_access_service_names>`_
+        """
+        return self.get_network_access_service_names(
+            headers=headers,
+            **query_parameters
+        )

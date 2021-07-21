@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine createNetworkAccessDictionaryAttributeForDictionary data model.
+"""Identity Services Engine createNetworkAccessDictionaryAttribute data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,8 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF4508Bb3352Ff920DBdc229E0Fc50(object):
-    """createNetworkAccessDictionaryAttributeForDictionary request schema
-    definition."""
+    """createNetworkAccessDictionaryAttribute request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF4508Bb3352Ff920DBdc229E0Fc50, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -60,6 +59,10 @@ class JSONSchemaValidatorF4508Bb3352Ff920DBdc229E0Fc50(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "key",
+                "value"
+                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -109,6 +112,11 @@ class JSONSchemaValidatorF4508Bb3352Ff920DBdc229E0Fc50(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "dataType",
+                "internalName",
+                "name"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

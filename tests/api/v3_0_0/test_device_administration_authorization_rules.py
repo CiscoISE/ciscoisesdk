@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_device_admin_authorization_rules(json_schema_validate, obj):
+def is_valid_get_device_admin_authorization_rules(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_device_admin_authorization_rules(json_schema_validate, obj)
     return True
 
 
-def get_all_device_admin_authorization_rules(api):
-    endpoint_result = api.device_administration_authorization_rules.get_all_device_admin_authorization_rules(
+def get_device_admin_authorization_rules(api):
+    endpoint_result = api.device_administration_authorization_rules.get_device_admin_authorization_rules(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authorization_rules
-def test_get_all_device_admin_authorization_rules(api, validator):
+def test_get_device_admin_authorization_rules(api, validator):
     try:
-        assert is_valid_get_all_device_admin_authorization_rules(
+        assert is_valid_get_device_admin_authorization_rules(
             validator,
-            get_all_device_admin_authorization_rules(api)
+            get_device_admin_authorization_rules(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_device_admin_authorization_rules(api, validator):
             raise original_e
 
 
-def get_all_device_admin_authorization_rules_default(api):
-    endpoint_result = api.device_administration_authorization_rules.get_all_device_admin_authorization_rules(
+def get_device_admin_authorization_rules_default(api):
+    endpoint_result = api.device_administration_authorization_rules.get_device_admin_authorization_rules(
         policy_id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_authorization_rules
-def test_get_all_device_admin_authorization_rules_default(api, validator):
+def test_get_device_admin_authorization_rules_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_authorization_rules(
+        assert is_valid_get_device_admin_authorization_rules(
             validator,
-            get_all_device_admin_authorization_rules_default(api)
+            get_device_admin_authorization_rules_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -94,10 +94,11 @@ def create_device_admin_authorization_rule(api):
     endpoint_result = api.device_administration_authorization_rules.create_device_admin_authorization_rule(
         active_validation=False,
         commands=['string'],
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
         profile='string',
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -120,6 +121,7 @@ def create_device_admin_authorization_rule_default(api):
         active_validation=False,
         policy_id='string',
         commands=None,
+        link=None,
         payload=None,
         profile=None,
         rule=None
@@ -133,6 +135,60 @@ def test_create_device_admin_authorization_rule_default(api, validator):
         assert is_valid_create_device_admin_authorization_rule(
             validator,
             create_device_admin_authorization_rule_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_reset_hit_counts_device_admin_authorization_rules(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_4f0698a9c9075b46a46193b1fb4b9563_v3_0_0').validate(obj.response)
+    return True
+
+
+def reset_hit_counts_device_admin_authorization_rules(api):
+    endpoint_result = api.device_administration_authorization_rules.reset_hit_counts_device_admin_authorization_rules(
+        active_validation=False,
+        payload=None,
+        policy_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.device_administration_authorization_rules
+def test_reset_hit_counts_device_admin_authorization_rules(api, validator):
+    try:
+        assert is_valid_reset_hit_counts_device_admin_authorization_rules(
+            validator,
+            reset_hit_counts_device_admin_authorization_rules(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def reset_hit_counts_device_admin_authorization_rules_default(api):
+    endpoint_result = api.device_administration_authorization_rules.reset_hit_counts_device_admin_authorization_rules(
+        active_validation=False,
+        policy_id='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.device_administration_authorization_rules
+def test_reset_hit_counts_device_admin_authorization_rules_default(api, validator):
+    try:
+        assert is_valid_reset_hit_counts_device_admin_authorization_rules(
+            validator,
+            reset_hit_counts_device_admin_authorization_rules_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -207,10 +263,11 @@ def update_device_admin_authorization_rule_by_id(api):
         active_validation=False,
         commands=['string'],
         id='string',
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
         profile='string',
-        rule={'id': 'string', 'name': 'string', 'description': 'string', 'hitCounts': 0, 'rank': 0, 'state': 'string', 'default': True, 'condition': {'conditionType': 'string', 'isNegate': True, 'name': 'string', 'id': 'string', 'description': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'attributeId': 'string', 'operator': 'string', 'dictionaryValue': 'string', 'attributeValue': 'string', 'children': [{'conditionType': 'string', 'isNegate': True}], 'hoursRange': {'startTime': 'string', 'endTime': 'string'}, 'hoursRangeException': {'startTime': 'string', 'endTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string'], 'datesRange': {'startDate': 'string', 'endDate': 'string'}, 'datesRangeException': {'startDate': 'string', 'endDate': 'string'}}}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -234,6 +291,7 @@ def update_device_admin_authorization_rule_by_id_default(api):
         id='string',
         policy_id='string',
         commands=None,
+        link=None,
         payload=None,
         profile=None,
         rule=None

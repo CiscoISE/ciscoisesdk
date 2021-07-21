@@ -52,8 +52,11 @@ from .exceptions import (
 )
 from .response_codes import EXPECTED_RESPONSE_CODE
 from .utils import (
-    check_response_code, check_type, validate_base_url,
+    check_type, validate_base_url,
     pprint_request_info, pprint_response_info,
+)
+from .misc import (
+    check_response_code
 )
 from .restresponse import RestResponse
 from requests_toolbelt.multipart import encoder
@@ -262,7 +265,11 @@ class RestSession(object):
             if save_file and resp.headers and resp.headers.get('Content-Disposition'):
                 try:
                     content = resp.headers.get('Content-Disposition')
-                    (content_file_name,) = re.search('filename="(.*)"', content).groups()
+                    content_file_list = re.findall('filename=(.*)', content)
+                    if len(content_file_list) > 0:
+                        content_file_name = content_file_list[0].replace('"', '')
+                    else:
+                        content_file_name = 'result_file'
                     file_name = os.path.join(dirpath,
                                              content_file_name)
                     with open(file_name, 'wb') as f:

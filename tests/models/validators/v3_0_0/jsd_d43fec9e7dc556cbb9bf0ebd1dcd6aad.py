@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllNetworkAccessNetworkConditions data model.
+"""Identity Services Engine getNetworkAccessNetworkConditions data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,12 +38,14 @@ from builtins import *
 
 
 class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
-    """getAllNetworkAccessNetworkConditions request schema definition."""
+    """getNetworkAccessNetworkConditions request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
                 "properties": {
                 "conditionType": {
@@ -65,13 +67,50 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 }
                 },
+                "required": [
+                "conditionType",
+                "name"
+                ],
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

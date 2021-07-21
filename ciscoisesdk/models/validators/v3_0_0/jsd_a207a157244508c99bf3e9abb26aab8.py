@@ -45,6 +45,7 @@ class JSONSchemaValidatorA207A157244508C99Bf3E9Abb26Aab8(object):
             '''{
                 "properties": {
                 "enablePki": {
+                "default": false,
                 "type": "boolean"
                 },
                 "name": {

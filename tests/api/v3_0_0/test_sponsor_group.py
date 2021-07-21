@@ -29,142 +29,6 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_sponsor_group(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f1196f1f6fde5978b0522f096926d443_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_sponsor_group(api):
-    endpoint_result = api.sponsor_group.get_all_sponsor_group(
-        filter='value1,value2',
-        filter_type='string',
-        page=0,
-        size=0,
-        sortasc='string',
-        sortdsc='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.sponsor_group
-def test_get_all_sponsor_group(api, validator):
-    try:
-        assert is_valid_get_all_sponsor_group(
-            validator,
-            get_all_sponsor_group(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_sponsor_group_default(api):
-    endpoint_result = api.sponsor_group.get_all_sponsor_group(
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sortasc=None,
-        sortdsc=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.sponsor_group
-def test_get_all_sponsor_group_default(api, validator):
-    try:
-        assert is_valid_get_all_sponsor_group(
-            validator,
-            get_all_sponsor_group_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_sponsor_group(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_56311acd30d35ee2ae16ff23757de7d8_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_sponsor_group(api):
-    endpoint_result = api.sponsor_group.create_sponsor_group(
-        active_validation=False,
-        auto_notification=True,
-        create_permissions={'canImportMultipleAccounts': True, 'importBatchSizeLimit': 0, 'canCreateRandomAccounts': True, 'randomBatchSizeLimit': 0, 'defaultUsernamePrefix': 'string', 'canSpecifyUsernamePrefix': True, 'canSetFutureStartDate': True, 'startDateFutureLimitDays': 0},
-        description='string',
-        guest_types=['string'],
-        id='string',
-        is_default_group=True,
-        is_enabled=True,
-        locations=['string'],
-        manage_permission='string',
-        member_groups=['string'],
-        name='string',
-        other_permissions={'canUpdateGuestContactInfo': True, 'canViewGuestPasswords': True, 'canSendSmsNotifications': True, 'canResetGuestPasswords': True, 'canExtendGuestAccounts': True, 'canDeleteGuestAccounts': True, 'canSuspendGuestAccounts': True, 'requireSuspensionReason': True, 'canReinstateSuspendedAccounts': True, 'canApproveSelfregGuests': True, 'limitApprovalToSponsorsGuests': True, 'canAccessViaRest': True},
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.sponsor_group
-def test_create_sponsor_group(api, validator):
-    try:
-        assert is_valid_create_sponsor_group(
-            validator,
-            create_sponsor_group(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_sponsor_group_default(api):
-    endpoint_result = api.sponsor_group.create_sponsor_group(
-        active_validation=False,
-        auto_notification=None,
-        create_permissions=None,
-        description=None,
-        guest_types=None,
-        id=None,
-        is_default_group=None,
-        is_enabled=None,
-        locations=None,
-        manage_permission=None,
-        member_groups=None,
-        name=None,
-        other_permissions=None,
-        payload=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.sponsor_group
-def test_create_sponsor_group_default(api, validator):
-    try:
-        assert is_valid_create_sponsor_group(
-            validator,
-            create_sponsor_group_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_get_sponsor_group_by_id(json_schema_validate, obj):
     if not obj:
         return False
@@ -335,6 +199,190 @@ def test_delete_sponsor_group_by_id_default(api, validator):
         assert is_valid_delete_sponsor_group_by_id(
             validator,
             delete_sponsor_group_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_sponsor_group(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_f1196f1f6fde5978b0522f096926d443_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_sponsor_group(api):
+    endpoint_result = api.sponsor_group.get_sponsor_group(
+        filter='value1,value2',
+        filter_type='string',
+        page=0,
+        size=0,
+        sortasc='string',
+        sortdsc='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsor_group
+def test_get_sponsor_group(api, validator):
+    try:
+        assert is_valid_get_sponsor_group(
+            validator,
+            get_sponsor_group(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_sponsor_group_default(api):
+    endpoint_result = api.sponsor_group.get_sponsor_group(
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sortasc=None,
+        sortdsc=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsor_group
+def test_get_sponsor_group_default(api, validator):
+    try:
+        assert is_valid_get_sponsor_group(
+            validator,
+            get_sponsor_group_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_sponsor_group(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_56311acd30d35ee2ae16ff23757de7d8_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_sponsor_group(api):
+    endpoint_result = api.sponsor_group.create_sponsor_group(
+        active_validation=False,
+        auto_notification=True,
+        create_permissions={'canImportMultipleAccounts': True, 'importBatchSizeLimit': 0, 'canCreateRandomAccounts': True, 'randomBatchSizeLimit': 0, 'defaultUsernamePrefix': 'string', 'canSpecifyUsernamePrefix': True, 'canSetFutureStartDate': True, 'startDateFutureLimitDays': 0},
+        description='string',
+        guest_types=['string'],
+        is_default_group=True,
+        is_enabled=True,
+        locations=['string'],
+        manage_permission='string',
+        member_groups=['string'],
+        name='string',
+        other_permissions={'canUpdateGuestContactInfo': True, 'canViewGuestPasswords': True, 'canSendSmsNotifications': True, 'canResetGuestPasswords': True, 'canExtendGuestAccounts': True, 'canDeleteGuestAccounts': True, 'canSuspendGuestAccounts': True, 'requireSuspensionReason': True, 'canReinstateSuspendedAccounts': True, 'canApproveSelfregGuests': True, 'limitApprovalToSponsorsGuests': True, 'canAccessViaRest': True},
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsor_group
+def test_create_sponsor_group(api, validator):
+    try:
+        assert is_valid_create_sponsor_group(
+            validator,
+            create_sponsor_group(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_sponsor_group_default(api):
+    endpoint_result = api.sponsor_group.create_sponsor_group(
+        active_validation=False,
+        auto_notification=None,
+        create_permissions=None,
+        description=None,
+        guest_types=None,
+        is_default_group=None,
+        is_enabled=None,
+        locations=None,
+        manage_permission=None,
+        member_groups=None,
+        name=None,
+        other_permissions=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsor_group
+def test_create_sponsor_group_default(api, validator):
+    try:
+        assert is_valid_create_sponsor_group(
+            validator,
+            create_sponsor_group_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_e8d4001b740751e08cfc19e1fdc5fddf_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.sponsor_group.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsor_group
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.sponsor_group.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.sponsor_group
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

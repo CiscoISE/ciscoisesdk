@@ -45,6 +45,8 @@ class JSONSchemaValidatorE7884Eb9C548698CdC54E033F35F4(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
+                "CertificateProfile": {
+                "properties": {
                 "allowedAsUserName": {
                 "type": "boolean"
                 },
@@ -61,6 +63,20 @@ class JSONSchemaValidatorE7884Eb9C548698CdC54E033F35F4(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "matchMode": {
                 "type": "string"
                 },
@@ -69,6 +85,9 @@ class JSONSchemaValidatorE7884Eb9C548698CdC54E033F35F4(object):
                 },
                 "usernameFrom": {
                 "type": "string"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"

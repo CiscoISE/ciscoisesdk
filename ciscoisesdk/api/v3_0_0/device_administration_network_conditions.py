@@ -74,10 +74,10 @@ class DeviceAdministrationNetworkConditions(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_network_conditions(self,
-                                                headers=None,
-                                                **query_parameters):
-        """Device Admin - Returns a list of network conditions.
+    def get_device_admin_network_conditions(self,
+                                            headers=None,
+                                            **query_parameters):
+        """Device Admin Returns a list of network conditions.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -86,10 +86,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -129,17 +131,30 @@ class DeviceAdministrationNetworkConditions(object):
 
         return self._object_factory('bpm_b4ceac9ee830523ca5ddbfdf3e1b44be_v3_0_0', _api_response)
 
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_network_conditions <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.get_device_admin_network_conditions>`_
+        """
+        return self.get_device_admin_network_conditions(
+            headers=headers,
+            **query_parameters
+        )
+
     def create_device_admin_network_condition(self,
                                               condition_type=None,
                                               conditions=None,
                                               description=None,
                                               id=None,
+                                              link=None,
                                               name=None,
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
                                               **query_parameters):
-        """Device Admin- Creates network condition.
+        """Device AdminCreates network condition.
 
         Args:
             condition_type(string): This field determines the
@@ -153,9 +168,9 @@ class DeviceAdministrationNetworkConditions(object):
             description(string): description, property of the
                 request body.
             id(string): id, property of the request body.
-            name(string): NetworkCondition name, [Valid characters
-                are alphanumerics, underscore, space],
-                property of the request body.
+            link(object): link, property of the request body.
+            name(string): Network Condition name, property of the
+                request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -166,10 +181,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -207,14 +224,16 @@ class DeviceAdministrationNetworkConditions(object):
             _payload = payload
         else:
             _payload = {
-                'name':
-                    name,
-                'id':
-                    id,
-                'description':
-                    description,
                 'conditionType':
                     condition_type,
+                'description':
+                    description,
+                'id':
+                    id,
+                'link':
+                    link,
+                'name':
+                    name,
                 'conditions':
                     conditions,
             }
@@ -238,11 +257,39 @@ class DeviceAdministrationNetworkConditions(object):
 
         return self._object_factory('bpm_b95cf8c9aed95518b38be1fa4b514b67_v3_0_0', _api_response)
 
+    def create(self,
+               condition_type=None,
+               conditions=None,
+               description=None,
+               id=None,
+               link=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_device_admin_network_condition <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.create_device_admin_network_condition>`_
+        """
+        return self.create_device_admin_network_condition(
+            condition_type=condition_type,
+            conditions=conditions,
+            description=description,
+            id=id,
+            link=link,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_network_condition_by_id(self,
                                                  id,
                                                  headers=None,
                                                  **query_parameters):
-        """Device Admin - Returns a network condition.
+        """Device Admin Returns a network condition.
 
         Args:
             id(basestring): id path parameter. Condition id.
@@ -252,10 +299,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -298,17 +347,32 @@ class DeviceAdministrationNetworkConditions(object):
 
         return self._object_factory('bpm_e9cc593c395c48b31b30149467c846_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_network_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.get_device_admin_network_condition_by_id>`_
+        """
+        return self.get_device_admin_network_condition_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_device_admin_network_condition_by_id(self,
                                                     id,
                                                     condition_type=None,
                                                     conditions=None,
                                                     description=None,
+                                                    link=None,
                                                     name=None,
                                                     headers=None,
                                                     payload=None,
                                                     active_validation=True,
                                                     **query_parameters):
-        """Device Admin - Update network condition.
+        """Device Admin Update network condition.
 
         Args:
             condition_type(string): This field determines the
@@ -322,9 +386,9 @@ class DeviceAdministrationNetworkConditions(object):
             description(string): description, property of the
                 request body.
             id(string): id, property of the request body.
-            name(string): NetworkCondition name, [Valid characters
-                are alphanumerics, underscore, space],
-                property of the request body.
+            link(object): link, property of the request body.
+            name(string): Network Condition name, property of the
+                request body.
             id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -336,10 +400,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -380,14 +446,16 @@ class DeviceAdministrationNetworkConditions(object):
             _payload = payload
         else:
             _payload = {
-                'name':
-                    name,
-                'id':
-                    id,
-                'description':
-                    description,
                 'conditionType':
                     condition_type,
+                'description':
+                    description,
+                'id':
+                    id,
+                'link':
+                    link,
+                'name':
+                    name,
                 'conditions':
                     conditions,
             }
@@ -412,11 +480,39 @@ class DeviceAdministrationNetworkConditions(object):
 
         return self._object_factory('bpm_f78898b7d655b2b81085dc7c0a964e_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     condition_type=None,
+                     conditions=None,
+                     description=None,
+                     link=None,
+                     name=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_device_admin_network_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.update_device_admin_network_condition_by_id>`_
+        """
+        return self.update_device_admin_network_condition_by_id(
+            id=id,
+            condition_type=condition_type,
+            conditions=conditions,
+            description=description,
+            link=link,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_network_condition_by_id(self,
                                                     id,
                                                     headers=None,
                                                     **query_parameters):
-        """Device Admin - Delete network condition.
+        """Device Admin Delete network condition.
 
         Args:
             id(basestring): id path parameter. Condition id.
@@ -426,10 +522,12 @@ class DeviceAdministrationNetworkConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -471,3 +569,17 @@ class DeviceAdministrationNetworkConditions(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c0b4d1bbda75355912f208521362a41_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_network_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_network_conditions.
+        DeviceAdministrationNetworkConditions.delete_device_admin_network_condition_by_id>`_
+        """
+        return self.delete_device_admin_network_condition_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )

@@ -29,31 +29,30 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_external_radius_server(json_schema_validate, obj):
+def is_valid_get_external_radius_server_by_name(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9b641825a9555ecba105cabbdf50fc78_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9afa6d7527045ebc928ee7e30ad3092a_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_external_radius_server(api):
-    endpoint_result = api.external_radius_server.get_all_external_radius_server(
-        page=0,
-        size=0
+def get_external_radius_server_by_name(api):
+    endpoint_result = api.external_radius_server.get_external_radius_server_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.external_radius_server
-def test_get_all_external_radius_server(api, validator):
+def test_get_external_radius_server_by_name(api, validator):
     try:
-        assert is_valid_get_all_external_radius_server(
+        assert is_valid_get_external_radius_server_by_name(
             validator,
-            get_all_external_radius_server(api)
+            get_external_radius_server_by_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -61,100 +60,19 @@ def test_get_all_external_radius_server(api, validator):
             raise original_e
 
 
-def get_all_external_radius_server_default(api):
-    endpoint_result = api.external_radius_server.get_all_external_radius_server(
-        page=None,
-        size=None
+def get_external_radius_server_by_name_default(api):
+    endpoint_result = api.external_radius_server.get_external_radius_server_by_name(
+        name='string'
     )
     return endpoint_result
 
 
 @pytest.mark.external_radius_server
-def test_get_all_external_radius_server_default(api, validator):
+def test_get_external_radius_server_by_name_default(api, validator):
     try:
-        assert is_valid_get_all_external_radius_server(
+        assert is_valid_get_external_radius_server_by_name(
             validator,
-            get_all_external_radius_server_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_external_radius_server(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1fc1c74b35ae5050b4f7fd702570ad5b_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_external_radius_server(api):
-    endpoint_result = api.external_radius_server.create_external_radius_server(
-        accounting_port=0,
-        active_validation=False,
-        authentication_port=0,
-        authenticator_key='string',
-        description='string',
-        enable_key_wrap=True,
-        encryption_key='string',
-        host_ip='string',
-        id='string',
-        key_input_format='string',
-        name='string',
-        payload=None,
-        proxy_timeout=0,
-        retries=0,
-        shared_secret='string',
-        timeout=0
-    )
-    return endpoint_result
-
-
-@pytest.mark.external_radius_server
-def test_create_external_radius_server(api, validator):
-    try:
-        assert is_valid_create_external_radius_server(
-            validator,
-            create_external_radius_server(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_external_radius_server_default(api):
-    endpoint_result = api.external_radius_server.create_external_radius_server(
-        active_validation=False,
-        accounting_port=None,
-        authentication_port=None,
-        authenticator_key=None,
-        description=None,
-        enable_key_wrap=None,
-        encryption_key=None,
-        host_ip=None,
-        id=None,
-        key_input_format=None,
-        name=None,
-        payload=None,
-        proxy_timeout=None,
-        retries=None,
-        shared_secret=None,
-        timeout=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.external_radius_server
-def test_create_external_radius_server_default(api, validator):
-    try:
-        assert is_valid_create_external_radius_server(
-            validator,
-            create_external_radius_server_default(api)
+            get_external_radius_server_by_name_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -341,30 +259,31 @@ def test_delete_external_radius_server_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_get_external_radius_server_by_name(json_schema_validate, obj):
+def is_valid_get_external_radius_server(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9afa6d7527045ebc928ee7e30ad3092a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9b641825a9555ecba105cabbdf50fc78_v3_0_0').validate(obj.response)
     return True
 
 
-def get_external_radius_server_by_name(api):
-    endpoint_result = api.external_radius_server.get_external_radius_server_by_name(
-        name='string'
+def get_external_radius_server(api):
+    endpoint_result = api.external_radius_server.get_external_radius_server(
+        page=0,
+        size=0
     )
     return endpoint_result
 
 
 @pytest.mark.external_radius_server
-def test_get_external_radius_server_by_name(api, validator):
+def test_get_external_radius_server(api, validator):
     try:
-        assert is_valid_get_external_radius_server_by_name(
+        assert is_valid_get_external_radius_server(
             validator,
-            get_external_radius_server_by_name(api)
+            get_external_radius_server(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -372,19 +291,148 @@ def test_get_external_radius_server_by_name(api, validator):
             raise original_e
 
 
-def get_external_radius_server_by_name_default(api):
-    endpoint_result = api.external_radius_server.get_external_radius_server_by_name(
-        name='string'
+def get_external_radius_server_default(api):
+    endpoint_result = api.external_radius_server.get_external_radius_server(
+        page=None,
+        size=None
     )
     return endpoint_result
 
 
 @pytest.mark.external_radius_server
-def test_get_external_radius_server_by_name_default(api, validator):
+def test_get_external_radius_server_default(api, validator):
     try:
-        assert is_valid_get_external_radius_server_by_name(
+        assert is_valid_get_external_radius_server(
             validator,
-            get_external_radius_server_by_name_default(api)
+            get_external_radius_server_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_external_radius_server(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_1fc1c74b35ae5050b4f7fd702570ad5b_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_external_radius_server(api):
+    endpoint_result = api.external_radius_server.create_external_radius_server(
+        accounting_port=0,
+        active_validation=False,
+        authentication_port=0,
+        authenticator_key='string',
+        description='string',
+        enable_key_wrap=True,
+        encryption_key='string',
+        host_ip='string',
+        key_input_format='string',
+        name='string',
+        payload=None,
+        proxy_timeout=0,
+        retries=0,
+        shared_secret='string',
+        timeout=0
+    )
+    return endpoint_result
+
+
+@pytest.mark.external_radius_server
+def test_create_external_radius_server(api, validator):
+    try:
+        assert is_valid_create_external_radius_server(
+            validator,
+            create_external_radius_server(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_external_radius_server_default(api):
+    endpoint_result = api.external_radius_server.create_external_radius_server(
+        active_validation=False,
+        accounting_port=None,
+        authentication_port=None,
+        authenticator_key=None,
+        description=None,
+        enable_key_wrap=None,
+        encryption_key=None,
+        host_ip=None,
+        key_input_format=None,
+        name=None,
+        payload=None,
+        proxy_timeout=None,
+        retries=None,
+        shared_secret=None,
+        timeout=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.external_radius_server
+def test_create_external_radius_server_default(api, validator):
+    try:
+        assert is_valid_create_external_radius_server(
+            validator,
+            create_external_radius_server_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_a6c3ffe72746500b88be3a5418ead4ba_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.external_radius_server.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.external_radius_server
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.external_radius_server.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.external_radius_server
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

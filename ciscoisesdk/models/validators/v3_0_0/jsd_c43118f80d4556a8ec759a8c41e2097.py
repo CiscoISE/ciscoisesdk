@@ -59,12 +59,19 @@ class JSONSchemaValidatorC43118F80D4556A8Ec759A8C41E2097(object):
                 "leftHandSideDictionaryAttribue": {
                 "properties": {
                 "AdvancedAttributeValueType": {
+                "enum": [
+                "AttributeValue",
+                "AdvancedDictionaryAttribute"
+                ],
                 "type": "string"
                 },
                 "attributeName": {
                 "type": "string"
                 },
                 "dictionaryName": {
+                "type": "string"
+                },
+                "value": {
                 "type": "string"
                 }
                 },
@@ -73,6 +80,16 @@ class JSONSchemaValidatorC43118F80D4556A8Ec759A8C41E2097(object):
                 "rightHandSideAttribueValue": {
                 "properties": {
                 "AdvancedAttributeValueType": {
+                "enum": [
+                "AttributeValue",
+                "AdvancedDictionaryAttribute"
+                ],
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
+                "dictionaryName": {
                 "type": "string"
                 },
                 "value": {
@@ -85,6 +102,9 @@ class JSONSchemaValidatorC43118F80D4556A8Ec759A8C41E2097(object):
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "agentlessPosture": {
+                "type": "boolean"
                 },
                 "airespaceACL": {
                 "type": "string"

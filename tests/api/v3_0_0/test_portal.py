@@ -29,66 +29,6 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_portals(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2a72ae8af1075d0c94912b008003b13e_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_all_portals(api):
-    endpoint_result = api.portal.get_all_portals(
-        filter='value1,value2',
-        filter_type='string',
-        page=0,
-        size=0,
-        sortasc='string',
-        sortdsc='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.portal
-def test_get_all_portals(api, validator):
-    try:
-        assert is_valid_get_all_portals(
-            validator,
-            get_all_portals(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_all_portals_default(api):
-    endpoint_result = api.portal.get_all_portals(
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sortasc=None,
-        sortdsc=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.portal
-def test_get_all_portals_default(api, validator):
-    try:
-        assert is_valid_get_all_portals(
-            validator,
-            get_all_portals_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_get_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
@@ -133,6 +73,116 @@ def test_get_portal_by_id_default(api, validator):
         assert is_valid_get_portal_by_id(
             validator,
             get_portal_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_portals(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_2a72ae8af1075d0c94912b008003b13e_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_portals(api):
+    endpoint_result = api.portal.get_portals(
+        filter='value1,value2',
+        filter_type='string',
+        page=0,
+        size=0,
+        sortasc='string',
+        sortdsc='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal
+def test_get_portals(api, validator):
+    try:
+        assert is_valid_get_portals(
+            validator,
+            get_portals(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_portals_default(api):
+    endpoint_result = api.portal.get_portals(
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sortasc=None,
+        sortdsc=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal
+def test_get_portals_default(api, validator):
+    try:
+        assert is_valid_get_portals(
+            validator,
+            get_portals_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_1d754ad0697d54c98c2690c5043e0be6_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.portal.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.portal.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.portal
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

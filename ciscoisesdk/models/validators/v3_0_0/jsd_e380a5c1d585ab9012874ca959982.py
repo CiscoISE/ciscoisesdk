@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine updateRepositoryByName data model.
+"""Identity Services Engine updateRepository data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,13 +38,14 @@ from builtins import *
 
 
 class JSONSchemaValidatorE380A5C1D585AB9012874Ca959982(object):
-    """updateRepositoryByName request schema definition."""
+    """updateRepository request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE380A5C1D585AB9012874Ca959982, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "properties": {
                 "enablePki": {
+                "default": false,
                 "type": "boolean"
                 },
                 "name": {

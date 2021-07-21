@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine internaluserById data model.
+"""Identity Services Engine getInternalUserById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorBacf1AbfC35E509183C9A7F055Cbbfec(object):
-    """internaluserById request schema definition."""
+    """getInternalUserById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorBacf1AbfC35E509183C9A7F055Cbbfec, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -51,14 +51,6 @@ class JSONSchemaValidatorBacf1AbfC35E509183C9A7F055Cbbfec(object):
                 "type": "boolean"
                 },
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 },
                 "description":
@@ -92,6 +84,20 @@ class JSONSchemaValidatorBacf1AbfC35E509183C9A7F055Cbbfec(object):
                 "lastName": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -102,17 +108,9 @@ class JSONSchemaValidatorBacf1AbfC35E509183C9A7F055Cbbfec(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "enabled",
-                "password"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "InternalUser"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

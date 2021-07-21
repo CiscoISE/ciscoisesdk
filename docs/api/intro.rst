@@ -60,7 +60,7 @@ With ciscoisesdk, the above Python code can be consolidated to the following:
                                          verify=True)
     # Or even just api_ = api.IdentityServicesEngineAPI(username='admin', password='C1sco12345') as others have those values by default.
     try:
-        device_response = api_.network_device.get_all_network_device(filter='name.EQ.Test').response
+        device_response = api_.network_device.get_network_device(filter='name.EQ.Test').response
         if device_response.SearchResult and device_response.SearchResult.resources:
             for device in device_response.SearchResult.resources:
                 print('{:20s}{}'.format(device.hostname, device.upTime))
@@ -108,26 +108,26 @@ All of this, combined, lets you do powerful things simply:
     from ciscoisesdk.exceptions import ApiError
 
     # Get allowed protocols
-    search_result = api_.allowed_protocols.get_all_allowed_protocols().response.SearchResult
+    search_result = api_.allowed_protocols.get_all().response.SearchResult
     if search_result and search_result.resources:
       for resource in search_result.resources:
-        resource_detail = api_.allowed_protocols.get_allowed_protocol_by_id(resource.id).response.AllowedProtocols
+        resource_detail = api_.allowed_protocols.get_by_id(resource.id).response.AllowedProtocols
         print("Id {}\nName {}\nallowChap {}\n".format(resource_detail.id, resource_detail.name, resource_detail.allowChap))
 
     # Filter network device
-    device_list_response = api_.network_device.get_all_network_device(filter='name.EQ.ISE_EST_Local_Host_19')
+    device_list_response = api_.network_device.get_all(filter='name.EQ.ISE_EST_Local_Host_19')
     device_responses = device_list_response.response.SearchResult.resources
     device_response = device_responses[0]
 
     # Get network device detail
-    device_response_detail = api_.network_device.get_network_device_by_id(device_response.id).response.NetworkDevice
+    device_response_detail = api_.network_device.get_by_id(device_response.id).response.NetworkDevice
 
     # Delete network device
-    delete_device = api_.network_device.delete_network_device_by_id(device_response.id)
+    delete_device = api_.network_device.delete_by_id(device_response.id)
 
     # Create network device
     try:
-        network_device_response = api_.network_device.create_network_device(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
+        network_device_response = api_.network_device.create(name='ISE_EST_Local_Host_19', network_device_iplist=[{"ipaddress": "127.35.0.1", "mask": 32}])
         print("Created, new Location {}".format(network_device_response.headers.Location))
     except api_Error as e:
         print(e)

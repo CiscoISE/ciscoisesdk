@@ -57,22 +57,16 @@ class JSONSchemaValidatorD8C7Ba0Cb8F56D99135E16D2D973D11(object):
                  {
                 "type": "string"
                 },
+                "id": {
+                "type": "string"
+                },
                 "name": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "description",
-                "dacl",
-                "daclType"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "DownloadableAcl"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

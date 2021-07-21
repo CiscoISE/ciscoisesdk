@@ -74,11 +74,11 @@ class DeviceAdministrationAuthenticationRules(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_authentication_rules(self,
-                                                  policy_id,
-                                                  headers=None,
-                                                  **query_parameters):
-        """Device Admin - Get authentication rules.
+    def get_device_admin_authentication_rules(self,
+                                              policy_id,
+                                              headers=None,
+                                              **query_parameters):
+        """Device Admin Get authentication rules.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -89,10 +89,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -136,23 +138,42 @@ class DeviceAdministrationAuthenticationRules(object):
 
         return self._object_factory('bpm_b9e8541f25c4ea29944f659f68994_v3_0_0', _api_response)
 
-    def create_device_admin_authentication_rules(self,
-                                                 policy_id,
-                                                 identity_source_id=None,
-                                                 if_auth_fail=None,
-                                                 if_process_fail=None,
-                                                 if_user_not_found=None,
-                                                 rule=None,
-                                                 headers=None,
-                                                 payload=None,
-                                                 active_validation=True,
-                                                 **query_parameters):
-        """Device Admin - Create authentication rule.
+    def get_all(self,
+                policy_id,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_authentication_rules <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.get_device_admin_authentication_rules>`_
+        """
+        return self.get_device_admin_authentication_rules(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
+
+    def create_device_admin_authentication_rule(self,
+                                                policy_id,
+                                                identity_source_id=None,
+                                                identity_source_name=None,
+                                                if_auth_fail=None,
+                                                if_process_fail=None,
+                                                if_user_not_found=None,
+                                                link=None,
+                                                rule=None,
+                                                headers=None,
+                                                payload=None,
+                                                active_validation=True,
+                                                **query_parameters):
+        """Device Admin Create authentication rule.
 
         Args:
             identity_source_id(string): Identity source id from the
                 identity stores, property of the request
                 body.
+            identity_source_name(string): Identity source name from
+                the identity stores, property of the
+                request body.
             if_auth_fail(string): Action to perform when
                 authentication fails such as Bad
                 credentials, disabled user and so on,
@@ -163,6 +184,7 @@ class DeviceAdministrationAuthenticationRules(object):
             if_user_not_found(string): Action to perform when user
                 is not found in any of identity stores,
                 property of the request body.
+            link(object): link, property of the request body.
             rule(object): Common attributes in rule
                 authentication/authorization, property
                 of the request body.
@@ -178,10 +200,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -222,16 +246,20 @@ class DeviceAdministrationAuthenticationRules(object):
             _payload = payload
         else:
             _payload = {
-                'rule':
-                    rule,
                 'identitySourceId':
                     identity_source_id,
+                'identitySourceName':
+                    identity_source_name,
                 'ifAuthFail':
                     if_auth_fail,
-                'ifUserNotFound':
-                    if_user_not_found,
                 'ifProcessFail':
                     if_process_fail,
+                'ifUserNotFound':
+                    if_user_not_found,
+                'link':
+                    link,
+                'rule':
+                    rule,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -254,12 +282,123 @@ class DeviceAdministrationAuthenticationRules(object):
 
         return self._object_factory('bpm_f1ff2b82953f5131884f0779db37190c_v3_0_0', _api_response)
 
+    def create(self,
+               policy_id,
+               identity_source_id=None,
+               identity_source_name=None,
+               if_auth_fail=None,
+               if_process_fail=None,
+               if_user_not_found=None,
+               link=None,
+               rule=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_device_admin_authentication_rule <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.create_device_admin_authentication_rule>`_
+        """
+        return self.create_device_admin_authentication_rule(
+            policy_id=policy_id,
+            identity_source_id=identity_source_id,
+            identity_source_name=identity_source_name,
+            if_auth_fail=if_auth_fail,
+            if_process_fail=if_process_fail,
+            if_user_not_found=if_user_not_found,
+            link=link,
+            rule=rule,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
+    def reset_hit_counts_device_admin_authentication_rules(self,
+                                                           policy_id,
+                                                           headers=None,
+                                                           **query_parameters):
+        """Device Admin Reset HitCount for Authentication Rules.
+
+        Args:
+            policy_id(basestring): policyId path parameter. Policy
+                id.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(policy_id, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'policyId': policy_id,
+        }
+
+        e_url = ('/api/v1/policy/device-admin/policy-'
+                 + 'set/{policyId}/authentication/reset-hitcount')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        if with_custom_headers:
+            _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               headers=_headers)
+        else:
+            _api_response = self._session.post(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_dd2d3e1f258252579386f21705613d26_v3_0_0', _api_response)
+
+    def reset_hit_counts_by_id(self,
+                               policy_id,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `reset_hit_counts_device_admin_authentication_rules <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.reset_hit_counts_device_admin_authentication_rules>`_
+        """
+        return self.reset_hit_counts_device_admin_authentication_rules(
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_authentication_rule_by_id(self,
                                                    id,
                                                    policy_id,
                                                    headers=None,
                                                    **query_parameters):
-        """Device Admin - Get rule attributes.
+        """Device Admin Get rule attributes.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -271,10 +410,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -321,24 +462,45 @@ class DeviceAdministrationAuthenticationRules(object):
 
         return self._object_factory('bpm_a160f293375ae9924d8240c4efdc6a_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  policy_id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_authentication_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.get_device_admin_authentication_rule_by_id>`_
+        """
+        return self.get_device_admin_authentication_rule_by_id(
+            id=id,
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_device_admin_authentication_rule_by_id(self,
                                                       id,
                                                       policy_id,
                                                       identity_source_id=None,
+                                                      identity_source_name=None,
                                                       if_auth_fail=None,
                                                       if_process_fail=None,
                                                       if_user_not_found=None,
+                                                      link=None,
                                                       rule=None,
                                                       headers=None,
                                                       payload=None,
                                                       active_validation=True,
                                                       **query_parameters):
-        """Device Admin - - Update rule.
+        """Device Admin Update rule.
 
         Args:
             identity_source_id(string): Identity source id from the
                 identity stores, property of the request
                 body.
+            identity_source_name(string): Identity source name from
+                the identity stores, property of the
+                request body.
             if_auth_fail(string): Action to perform when
                 authentication fails such as Bad
                 credentials, disabled user and so on,
@@ -349,6 +511,7 @@ class DeviceAdministrationAuthenticationRules(object):
             if_user_not_found(string): Action to perform when user
                 is not found in any of identity stores,
                 property of the request body.
+            link(object): link, property of the request body.
             rule(object): Common attributes in rule
                 authentication/authorization, property
                 of the request body.
@@ -365,10 +528,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -412,16 +577,20 @@ class DeviceAdministrationAuthenticationRules(object):
             _payload = payload
         else:
             _payload = {
-                'rule':
-                    rule,
                 'identitySourceId':
                     identity_source_id,
+                'identitySourceName':
+                    identity_source_name,
                 'ifAuthFail':
                     if_auth_fail,
-                'ifUserNotFound':
-                    if_user_not_found,
                 'ifProcessFail':
                     if_process_fail,
+                'ifUserNotFound':
+                    if_user_not_found,
+                'link':
+                    link,
+                'rule':
+                    rule,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -445,12 +614,46 @@ class DeviceAdministrationAuthenticationRules(object):
 
         return self._object_factory('bpm_ca61ff725fedb94fba602d7afe46_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     policy_id,
+                     identity_source_id=None,
+                     identity_source_name=None,
+                     if_auth_fail=None,
+                     if_process_fail=None,
+                     if_user_not_found=None,
+                     link=None,
+                     rule=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_device_admin_authentication_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.update_device_admin_authentication_rule_by_id>`_
+        """
+        return self.update_device_admin_authentication_rule_by_id(
+            id=id,
+            policy_id=policy_id,
+            identity_source_id=identity_source_id,
+            identity_source_name=identity_source_name,
+            if_auth_fail=if_auth_fail,
+            if_process_fail=if_process_fail,
+            if_user_not_found=if_user_not_found,
+            link=link,
+            rule=rule,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_authentication_rule_by_id(self,
                                                       id,
                                                       policy_id,
                                                       headers=None,
                                                       **query_parameters):
-        """Device Admin - Delete rule.
+        """Device Admin Delete rule.
 
         Args:
             policy_id(basestring): policyId path parameter. Policy
@@ -462,10 +665,12 @@ class DeviceAdministrationAuthenticationRules(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -511,3 +716,19 @@ class DeviceAdministrationAuthenticationRules(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a9f1f24542dbd244e31691a2e09_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     id,
+                     policy_id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_authentication_rule_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_authentication_rules.
+        DeviceAdministrationAuthenticationRules.delete_device_admin_authentication_rule_by_id>`_
+        """
+        return self.delete_device_admin_authentication_rule_by_id(
+            id=id,
+            policy_id=policy_id,
+            headers=headers,
+            **query_parameters
+        )

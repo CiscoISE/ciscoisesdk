@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllUserGroups data model.
+"""Identity Services Engine getUserGroups data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorB839D4DeE9B958E48CceF056603E253F(object):
-    """getAllUserGroups request schema definition."""
+    """getUserGroups request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB839D4DeE9B958E48CceF056603E253F, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -50,7 +50,7 @@ class JSONSchemaValidatorB839D4DeE9B958E48CceF056603E253F(object):
                 "groups": {
                 "items": {
                 "properties": {
-                "name": {
+                "groupName": {
                 "type": "string"
                 },
                 "sid": {
@@ -65,15 +65,9 @@ class JSONSchemaValidatorB839D4DeE9B958E48CceF056603E253F(object):
                 "type": "array"
                 }
                 },
-                "required": [
-                "groups"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSActiveDirectoryGroups"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

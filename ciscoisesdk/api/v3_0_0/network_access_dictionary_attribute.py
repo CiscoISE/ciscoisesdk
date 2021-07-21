@@ -74,23 +74,103 @@ class NetworkAccessDictionaryAttribute(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def create_network_access_dictionary_attribute_for_dictionary(self,
-                                                                  dictionary_name,
-                                                                  allowed_values=None,
-                                                                  data_type=None,
-                                                                  description=None,
-                                                                  direction_type=None,
-                                                                  id=None,
-                                                                  internal_name=None,
-                                                                  name=None,
-                                                                  headers=None,
-                                                                  payload=None,
-                                                                  active_validation=True,
-                                                                  **query_parameters):
+    def get_network_access_dictionary_attributes_by_dictionary_name(self,
+                                                                    dictionary_name,
+                                                                    headers=None,
+                                                                    **query_parameters):
+        """Returns a list of Dictionary Attributes for an existing
+        Dictionary.
+
+        Args:
+            dictionary_name(basestring): dictionaryName path
+                parameter. the name of the dictionary
+                the dictionary attribute belongs to.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            if 'X-Request-ID' in headers:
+                check_type(headers.get('X-Request-ID'),
+                           basestring)
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        check_type(dictionary_name, basestring,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'dictionaryName': dictionary_name,
+        }
+
+        e_url = ('/api/v1/policy/network-'
+                 + 'access/dictionaries/{dictionaryName}/attribute')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+        if with_custom_headers:
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              headers=_headers)
+        else:
+            _api_response = self._session.get(endpoint_full_url, params=_params)
+
+        return self._object_factory('bpm_d83302be1f7c528e8211524aeaacd66d_v3_0_0', _api_response)
+
+    def get_all(self,
+                dictionary_name,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_dictionary_attributes_by_dictionary_name <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.get_network_access_dictionary_attributes_by_dictionary_name>`_
+        """
+        return self.get_network_access_dictionary_attributes_by_dictionary_name(
+            dictionary_name=dictionary_name,
+            headers=headers,
+            **query_parameters
+        )
+
+    def create_network_access_dictionary_attribute(self,
+                                                   dictionary_name,
+                                                   allowed_values=None,
+                                                   data_type=None,
+                                                   description=None,
+                                                   direction_type=None,
+                                                   id=None,
+                                                   internal_name=None,
+                                                   name=None,
+                                                   headers=None,
+                                                   payload=None,
+                                                   active_validation=True,
+                                                   **query_parameters):
         """Create a new Dictionary Attribute for an existing Dictionary.
 
         Args:
-            allowedValues(list): all of the allowed values for the
+            allowed_values(list): all of the allowed values for the
                 dictionary attribute, property of the
                 request body (list of objects).
             data_type(string): the data type for the dictionary
@@ -129,10 +209,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -173,22 +255,22 @@ class NetworkAccessDictionaryAttribute(object):
             _payload = payload
         else:
             _payload = {
-                'id':
-                    id,
-                'directionType':
-                    direction_type,
-                'name':
-                    name,
-                'description':
-                    description,
-                'internalName':
-                    internal_name,
-                'dataType':
-                    data_type,
-                'dictionaryName':
-                    dictionary_name,
                 'allowedValues':
                     allowed_values,
+                'dataType':
+                    data_type,
+                'description':
+                    description,
+                'dictionaryName':
+                    dictionary_name,
+                'directionType':
+                    direction_type,
+                'id':
+                    id,
+                'internalName':
+                    internal_name,
+                'name':
+                    name,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -211,6 +293,38 @@ class NetworkAccessDictionaryAttribute(object):
 
         return self._object_factory('bpm_f4508bb3352ff920dbdc229e0fc50_v3_0_0', _api_response)
 
+    def create(self,
+               dictionary_name,
+               allowed_values=None,
+               data_type=None,
+               description=None,
+               direction_type=None,
+               id=None,
+               internal_name=None,
+               name=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_network_access_dictionary_attribute <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.create_network_access_dictionary_attribute>`_
+        """
+        return self.create_network_access_dictionary_attribute(
+            dictionary_name=dictionary_name,
+            allowed_values=allowed_values,
+            data_type=data_type,
+            description=description,
+            direction_type=direction_type,
+            id=id,
+            internal_name=internal_name,
+            name=name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_network_access_dictionary_attribute_by_name(self,
                                                         dictionary_name,
                                                         name,
@@ -230,10 +344,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -280,6 +396,22 @@ class NetworkAccessDictionaryAttribute(object):
 
         return self._object_factory('bpm_c77600d349fc5c259dbd22d65b3ffa1d_v3_0_0', _api_response)
 
+    def get_by_name(self,
+                    dictionary_name,
+                    name,
+                    headers=None,
+                    **query_parameters):
+        """Alias for `get_network_access_dictionary_attribute_by_name <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.get_network_access_dictionary_attribute_by_name>`_
+        """
+        return self.get_network_access_dictionary_attribute_by_name(
+            dictionary_name=dictionary_name,
+            name=name,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_network_access_dictionary_attribute_by_name(self,
                                                            dictionary_name,
                                                            name,
@@ -296,7 +428,7 @@ class NetworkAccessDictionaryAttribute(object):
         """Update a Dictionary Attribute.
 
         Args:
-            allowedValues(list): all of the allowed values for the
+            allowed_values(list): all of the allowed values for the
                 dictionary attribute, property of the
                 request body (list of objects).
             data_type(string): the data type for the dictionary
@@ -337,10 +469,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -384,22 +518,22 @@ class NetworkAccessDictionaryAttribute(object):
             _payload = payload
         else:
             _payload = {
-                'id':
-                    id,
-                'directionType':
-                    direction_type,
-                'name':
-                    name,
-                'description':
-                    description,
-                'internalName':
-                    internal_name,
-                'dataType':
-                    data_type,
-                'dictionaryName':
-                    dictionary_name,
                 'allowedValues':
                     allowed_values,
+                'dataType':
+                    data_type,
+                'description':
+                    description,
+                'dictionaryName':
+                    dictionary_name,
+                'directionType':
+                    direction_type,
+                'id':
+                    id,
+                'internalName':
+                    internal_name,
+                'name':
+                    name,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -423,6 +557,38 @@ class NetworkAccessDictionaryAttribute(object):
 
         return self._object_factory('bpm_a60b29bfe2b055299e4360d84380ddd4_v3_0_0', _api_response)
 
+    def update_by_name(self,
+                       dictionary_name,
+                       name,
+                       allowed_values=None,
+                       data_type=None,
+                       description=None,
+                       direction_type=None,
+                       id=None,
+                       internal_name=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
+        """Alias for `update_network_access_dictionary_attribute_by_name <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.update_network_access_dictionary_attribute_by_name>`_
+        """
+        return self.update_network_access_dictionary_attribute_by_name(
+            dictionary_name=dictionary_name,
+            name=name,
+            allowed_values=allowed_values,
+            data_type=data_type,
+            description=description,
+            direction_type=direction_type,
+            id=id,
+            internal_name=internal_name,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_network_access_dictionary_attribute_by_name(self,
                                                            dictionary_name,
                                                            name,
@@ -442,10 +608,12 @@ class NetworkAccessDictionaryAttribute(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -491,3 +659,19 @@ class NetworkAccessDictionaryAttribute(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_dd6c2553ae0053c1bbbdbd46c1df0ef9_v3_0_0', _api_response)
+
+    def delete_by_name(self,
+                       dictionary_name,
+                       name,
+                       headers=None,
+                       **query_parameters):
+        """Alias for `delete_network_access_dictionary_attribute_by_name <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attribute.
+        NetworkAccessDictionaryAttribute.delete_network_access_dictionary_attribute_by_name>`_
+        """
+        return self.delete_network_access_dictionary_attribute_by_name(
+            dictionary_name=dictionary_name,
+            name=name,
+            headers=headers,
+            **query_parameters
+        )

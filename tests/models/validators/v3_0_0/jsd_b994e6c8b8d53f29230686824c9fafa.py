@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine scheduleConfigBackup data model.
+"""Identity Services Engine createScheduledConfigBackup data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa(object):
-    """scheduleConfigBackup request schema definition."""
+    """createScheduledConfigBackup request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

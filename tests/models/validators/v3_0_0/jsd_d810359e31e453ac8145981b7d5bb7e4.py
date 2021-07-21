@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllRestIdStore data model.
+"""Identity Services Engine getRestIdStore data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD810359E31E453Ac8145981B7D5Bb7E4(object):
-    """getAllRestIdStore request schema definition."""
+    """getRestIdStore request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD810359E31E453Ac8145981B7D5Bb7E4, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -47,9 +47,69 @@ class JSONSchemaValidatorD810359E31E453Ac8145981B7D5Bb7E4(object):
                 "properties": {
                 "SearchResult": {
                 "properties": {
+                "nextPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
+                "previousPage": {
+                "items": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "type": "array"
+                },
                 "resources": {
                 "items": {
+                "properties": {
+                "description":
+                 {
                 "type": "string"
+                },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "name": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "type": "array"
                 },
@@ -57,16 +117,9 @@ class JSONSchemaValidatorD810359E31E453Ac8145981B7D5Bb7E4(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "total",
-                "resources"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

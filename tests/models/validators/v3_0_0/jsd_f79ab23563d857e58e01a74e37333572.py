@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeviceAdminTimeConditions data model.
+"""Identity Services Engine getDeviceAdminTimeConditions data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,12 +38,14 @@ from builtins import *
 
 
 class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
-    """getAllDeviceAdminTimeConditions request schema definition."""
+    """getDeviceAdminTimeConditions request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
                 "allOf": [
                 {
@@ -64,6 +66,29 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
                 }
                 },
                 "required": [
@@ -87,8 +112,8 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 }
                 },
                 "required": [
-                "startDate",
-                "endDate"
+                "endDate",
+                "startDate"
                 ],
                 "type": "object"
                 },
@@ -106,8 +131,8 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 }
                 },
                 "required": [
-                "startDate",
-                "endDate"
+                "endDate",
+                "startDate"
                 ],
                 "type": "object"
                 },
@@ -126,8 +151,8 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 }
                 },
                 "required": [
-                "startTime",
-                "endTime"
+                "endTime",
+                "startTime"
                 ],
                 "type": "object"
                 },
@@ -141,8 +166,8 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 }
                 },
                 "required": [
-                "startTime",
-                "endTime"
+                "endTime",
+                "startTime"
                 ],
                 "type": "object"
                 },
@@ -153,15 +178,6 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 "type": "string"
                 },
                 "weekDays": {
-                "default": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-                ],
                 "items": {
                 "enum": [
                 "Sunday",
@@ -195,11 +211,24 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 }
-                ]
+                ],
+                "x-discriminator-value": "TimeAndDateCondition",
+                "x-ms-discriminator-value": "TimeAndDateCondition"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

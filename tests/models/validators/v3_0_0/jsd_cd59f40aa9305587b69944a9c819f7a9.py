@@ -50,19 +50,27 @@ class JSONSchemaValidatorCd59F40AA9305587B69944A9C819F7A9(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "sxpVpnName": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "sxpVpnName"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSSxpVpn"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

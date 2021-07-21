@@ -54,11 +54,34 @@ class JSONSchemaValidatorA50D1Bd34D5F593AAdf8Eb02083C67B0(object):
                  {
                 "type": "string"
                 },
+                "generationId": {
+                "type": "string"
+                },
                 "id": {
                 "type": "string"
                 },
                 "ipVersion": {
                 "type": "string"
+                },
+                "isReadOnly": {
+                "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "modelledContent": {
+                "type": "object"
                 },
                 "name": {
                 "type": "string"

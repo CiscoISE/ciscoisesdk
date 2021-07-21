@@ -59,12 +59,19 @@ class JSONSchemaValidatorAcf0372068885036Baee3C4524638F31(object):
                 "leftHandSideDictionaryAttribue": {
                 "properties": {
                 "AdvancedAttributeValueType": {
+                "enum": [
+                "AttributeValue",
+                "AdvancedDictionaryAttribute"
+                ],
                 "type": "string"
                 },
                 "attributeName": {
                 "type": "string"
                 },
                 "dictionaryName": {
+                "type": "string"
+                },
+                "value": {
                 "type": "string"
                 }
                 },
@@ -73,6 +80,16 @@ class JSONSchemaValidatorAcf0372068885036Baee3C4524638F31(object):
                 "rightHandSideAttribueValue": {
                 "properties": {
                 "AdvancedAttributeValueType": {
+                "enum": [
+                "AttributeValue",
+                "AdvancedDictionaryAttribute"
+                ],
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
+                "dictionaryName": {
                 "type": "string"
                 },
                 "value": {
@@ -85,6 +102,9 @@ class JSONSchemaValidatorAcf0372068885036Baee3C4524638F31(object):
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "agentlessPosture": {
+                "type": "boolean"
                 },
                 "airespaceACL": {
                 "type": "string"
@@ -125,6 +145,20 @@ class JSONSchemaValidatorAcf0372068885036Baee3C4524638F31(object):
                 },
                 "ipv6DaclName": {
                 "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "macSecPolicy": {
                 "type": "string"

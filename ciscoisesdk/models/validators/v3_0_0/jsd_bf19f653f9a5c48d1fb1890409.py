@@ -51,9 +51,6 @@ class JSONSchemaValidatorBf19F653F9A5C48D1Fb1890409(object):
                  {
                 "type": "string"
                 },
-                "id": {
-                "type": "string"
-                },
                 "name": {
                 "type": "string"
                 },

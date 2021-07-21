@@ -123,9 +123,6 @@ class JSONSchemaValidatorCea2E785Ee57908A9EE3B118E49Cfa(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "AciSettings"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

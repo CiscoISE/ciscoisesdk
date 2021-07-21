@@ -50,7 +50,8 @@ class JSONSchemaValidatorE155669Bc74586E9Ef2580Ec5752902(object):
                 "action": {
                 "enum": [
                 "BACKUP",
-                "RESTORE"
+                "RESTORE",
+                "CANCEL"
                 ],
                 "type": "string"
                 },
@@ -65,9 +66,9 @@ class JSONSchemaValidatorE155669Bc74586E9Ef2580Ec5752902(object):
                 },
                 "initiatedFrom": {
                 "enum": [
-                "IN_PROGRESS",
-                "COMPLETED",
-                "ERROR"
+                "CLI",
+                "ADMIN_GUI",
+                "OPEN_API"
                 ],
                 "type": "string"
                 },

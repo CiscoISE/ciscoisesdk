@@ -53,6 +53,20 @@ class JSONSchemaValidatorE56B94DaFa5652228Fd71Abd2B4D6Df3(object):
                 "deployType": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -60,16 +74,9 @@ class JSONSchemaValidatorE56B94DaFa5652228Fd71Abd2B4D6Df3(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "deployType"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "SGMappingGroup"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

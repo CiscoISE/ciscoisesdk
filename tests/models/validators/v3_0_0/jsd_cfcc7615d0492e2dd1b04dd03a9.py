@@ -73,6 +73,7 @@ class JSONSchemaValidatorCfcC7615D0492E2Dd1B04Dd03A9(object):
                 "type": "object"
                 },
                 "adScopesNames": {
+                "default": "Default_Scope",
                 "type": "string"
                 },
                 "adgroups": {
@@ -102,6 +103,9 @@ class JSONSchemaValidatorCfcC7615D0492E2Dd1B04Dd03A9(object):
                 "agingTime": {
                 "type": "integer"
                 },
+                "authProtectionType": {
+                "type": "string"
+                },
                 "country": {
                 "type": "string"
                 },
@@ -117,6 +121,9 @@ class JSONSchemaValidatorCfcC7615D0492E2Dd1B04Dd03A9(object):
                 "enableDialinPermissionCheck": {
                 "type": "boolean"
                 },
+                "enableFailedAuthProtection": {
+                "type": "boolean"
+                },
                 "enableMachineAccess": {
                 "type": "boolean"
                 },
@@ -128,6 +135,9 @@ class JSONSchemaValidatorCfcC7615D0492E2Dd1B04Dd03A9(object):
                 },
                 "enableRewrites": {
                 "type": "boolean"
+                },
+                "failedAuthThreshold": {
+                "type": "integer"
                 },
                 "firstName": {
                 "type": "string"
@@ -192,20 +202,36 @@ class JSONSchemaValidatorCfcC7615D0492E2Dd1B04Dd03A9(object):
                 "domain": {
                 "type": "string"
                 },
+                "enableDomainAllowedList": {
+                "type": "boolean"
+                },
+                "enableDomainWhiteList": {
+                "type": "boolean"
+                },
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "name",
-                "domain"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "ERSActiveDirectory"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

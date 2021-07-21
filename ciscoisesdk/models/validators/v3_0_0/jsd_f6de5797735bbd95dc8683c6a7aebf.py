@@ -47,6 +47,13 @@ class JSONSchemaValidatorF6De5797735Bbd95Dc8683C6A7Aebf(object):
                 "properties": {
                 "TacacsServerSequence": {
                 "properties": {
+                "description":
+                 {
+                "type": "string"
+                },
+                "id": {
+                "type": "string"
+                },
                 "localAccounting": {
                 "type": "boolean"
                 },
@@ -72,16 +79,9 @@ class JSONSchemaValidatorF6De5797735Bbd95Dc8683C6A7Aebf(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "name",
-                "serverList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsServerSequence"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

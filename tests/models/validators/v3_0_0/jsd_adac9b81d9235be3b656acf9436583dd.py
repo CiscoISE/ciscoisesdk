@@ -87,11 +87,6 @@ class JSONSchemaValidatorAdac9B81D9235Be3B656Acf9436583Dd(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "name": {
@@ -104,9 +99,6 @@ class JSONSchemaValidatorAdac9B81D9235Be3B656Acf9436583Dd(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "AdminUser"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

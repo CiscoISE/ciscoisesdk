@@ -55,6 +55,11 @@ class JSONSchemaValidatorDb1D9Dda53369E35D33138B29C16(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "backupEncryptionKey",
+                "backupName",
+                "repositoryName"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

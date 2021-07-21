@@ -103,6 +103,15 @@ class JSONSchemaValidatorE6C7251A8508597F1B7Ae61Cbf953(object):
                 "type": "boolean"
                 }
                 },
+                "required": [
+                "allowExtendedValidity",
+                "allowOutOfDateCert",
+                "allowReplacementOfCertificates",
+                "allowReplacementOfPortalGroupTag",
+                "allowSHA1Certificates",
+                "data",
+                "privateKeyData"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

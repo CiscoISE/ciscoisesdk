@@ -54,6 +54,20 @@ class JSONSchemaValidatorBdea52558473565C9963Ec14C65727B8(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -72,11 +86,6 @@ class JSONSchemaValidatorBdea52558473565C9963Ec14C65727B8(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "type",
-                "name",
-                "value"
-                ],
                 "type": "object"
                 },
                 "type": "array"
@@ -85,15 +94,9 @@ class JSONSchemaValidatorBdea52558473565C9963Ec14C65727B8(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "name"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "TacacsProfile"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

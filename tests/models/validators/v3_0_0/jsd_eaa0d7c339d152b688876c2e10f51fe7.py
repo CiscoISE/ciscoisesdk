@@ -64,6 +64,9 @@ class JSONSchemaValidatorEaa0D7C339D152B688876C2E10F51Fe7(object):
                 "canSpecifyUsernamePrefix": {
                 "type": "boolean"
                 },
+                "defaultUsernamePrefix": {
+                "type": "string"
+                },
                 "importBatchSizeLimit": {
                 "type": "integer"
                 },
@@ -74,15 +77,6 @@ class JSONSchemaValidatorEaa0D7C339D152B688876C2E10F51Fe7(object):
                 "type": "integer"
                 }
                 },
-                "required": [
-                "canImportMultipleAccounts",
-                "importBatchSizeLimit",
-                "canCreateRandomAccounts",
-                "randomBatchSizeLimit",
-                "canSpecifyUsernamePrefix",
-                "canSetFutureStartDate",
-                "startDateFutureLimitDays"
-                ],
                 "type": "object"
                 },
                 "description":
@@ -116,11 +110,6 @@ class JSONSchemaValidatorEaa0D7C339D152B688876C2E10F51Fe7(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "rel",
-                "href",
-                "type"
-                ],
                 "type": "object"
                 },
                 "locations": {
@@ -180,29 +169,12 @@ class JSONSchemaValidatorEaa0D7C339D152B688876C2E10F51Fe7(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "canUpdateGuestContactInfo",
-                "canViewGuestPasswords",
-                "canSendSmsNotifications",
-                "canResetGuestPasswords",
-                "canExtendGuestAccounts",
-                "canDeleteGuestAccounts",
-                "canSuspendGuestAccounts",
-                "requireSuspensionReason",
-                "canReinstateSuspendedAccounts",
-                "canApproveSelfregGuests",
-                "limitApprovalToSponsorsGuests",
-                "canAccessViaRest"
-                ],
                 "type": "object"
                 }
                 },
                 "type": "object"
                 }
                 },
-                "required": [
-                "SponsorGroup"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

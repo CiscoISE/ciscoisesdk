@@ -106,9 +106,6 @@ class JSONSchemaValidatorAd6Ca0642C5750Af6CA9905721A9D7(object):
                  {
                 "type": "string"
                 },
-                "id": {
-                "type": "string"
-                },
                 "localAccounting": {
                 "type": "boolean"
                 },
@@ -137,16 +134,9 @@ class JSONSchemaValidatorAd6Ca0642C5750Af6CA9905721A9D7(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "name",
-                "RadiusServerList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "RadiusServerSequence"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

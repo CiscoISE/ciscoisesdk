@@ -74,10 +74,10 @@ class NetworkAccessDictionaryAttributesList(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_network_access_dictionaries_authentication(self,
-                                                           headers=None,
-                                                           **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+    def get_network_access_dictionaries_authentication(self,
+                                                       headers=None,
+                                                       **query_parameters):
+        """Network Access Returns list of dictionary attributes for
         authentication.
 
         Args:
@@ -87,10 +87,12 @@ class NetworkAccessDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -131,10 +133,22 @@ class NetworkAccessDictionaryAttributesList(object):
 
         return self._object_factory('bpm_ab96d3d76de5d05bbac1f27feacb7b0_v3_0_0', _api_response)
 
-    def get_all_network_access_dictionaries_authorization(self,
-                                                          headers=None,
-                                                          **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+    def get_all_authentication(self,
+                               headers=None,
+                               **query_parameters):
+        """Alias for `get_network_access_dictionaries_authentication <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attributes_list.
+        NetworkAccessDictionaryAttributesList.get_network_access_dictionaries_authentication>`_
+        """
+        return self.get_network_access_dictionaries_authentication(
+            headers=headers,
+            **query_parameters
+        )
+
+    def get_network_access_dictionaries_authorization(self,
+                                                      headers=None,
+                                                      **query_parameters):
+        """Network Access Returns list of dictionary attributes for
         authorization.
 
         Args:
@@ -144,10 +158,12 @@ class NetworkAccessDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -187,10 +203,22 @@ class NetworkAccessDictionaryAttributesList(object):
 
         return self._object_factory('bpm_f68aee0cdb425390b3ca90b0b46e6e2c_v3_0_0', _api_response)
 
-    def get_all_network_access_dictionaries_policyset(self,
-                                                      headers=None,
-                                                      **query_parameters):
-        """Network Access - Returns list of dictionary attributes for
+    def get_all_authorization(self,
+                              headers=None,
+                              **query_parameters):
+        """Alias for `get_network_access_dictionaries_authorization <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attributes_list.
+        NetworkAccessDictionaryAttributesList.get_network_access_dictionaries_authorization>`_
+        """
+        return self.get_network_access_dictionaries_authorization(
+            headers=headers,
+            **query_parameters
+        )
+
+    def get_network_access_dictionaries_policy_set(self,
+                                                   headers=None,
+                                                   **query_parameters):
+        """Network Access Returns list of dictionary attributes for
         policyset.
 
         Args:
@@ -200,10 +228,12 @@ class NetworkAccessDictionaryAttributesList(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -242,3 +272,15 @@ class NetworkAccessDictionaryAttributesList(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c53b22885f5e5d82fb8cadd0332136_v3_0_0', _api_response)
+
+    def get_all_policy_set(self,
+                           headers=None,
+                           **query_parameters):
+        """Alias for `get_network_access_dictionaries_policy_set <#ciscoisesdk.
+        api.v3_0_0.network_access_dictionary_attributes_list.
+        NetworkAccessDictionaryAttributesList.get_network_access_dictionaries_policy_set>`_
+        """
+        return self.get_network_access_dictionaries_policy_set(
+            headers=headers,
+            **query_parameters
+        )

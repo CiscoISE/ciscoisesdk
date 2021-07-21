@@ -74,11 +74,12 @@ class NetworkAccessSecurityGroups(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_network_access_security_groups(self,
-                                               headers=None,
-                                               **query_parameters):
-        """Network Access - Return list of available security groups for
-        authorization policy definition.
+    def get_network_access_security_groups(self,
+                                           headers=None,
+                                           **query_parameters):
+        """Network Access Return list of available security groups for
+        authorization policy definition.  (Other CRUD APIs
+        available throught ERS).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -87,10 +88,12 @@ class NetworkAccessSecurityGroups(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -129,3 +132,15 @@ class NetworkAccessSecurityGroups(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f564c3eda5c20bb807b8c062c8e7b_v3_0_0', _api_response)
+
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_network_access_security_groups <#ciscoisesdk.
+        api.v3_0_0.network_access_security_groups.
+        NetworkAccessSecurityGroups.get_network_access_security_groups>`_
+        """
+        return self.get_network_access_security_groups(
+            headers=headers,
+            **query_parameters
+        )

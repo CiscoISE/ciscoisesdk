@@ -29,118 +29,6 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_filter_policy(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_250a599ae00f5e47b9ece23cd3183d1c_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_filter_policy(api):
-    endpoint_result = api.filter_policy.get_filter_policy(
-        page=0,
-        size=0
-    )
-    return endpoint_result
-
-
-@pytest.mark.filter_policy
-def test_get_filter_policy(api, validator):
-    try:
-        assert is_valid_get_filter_policy(
-            validator,
-            get_filter_policy(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_filter_policy_default(api):
-    endpoint_result = api.filter_policy.get_filter_policy(
-        page=None,
-        size=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.filter_policy
-def test_get_filter_policy_default(api, validator):
-    try:
-        assert is_valid_get_filter_policy(
-            validator,
-            get_filter_policy_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_create_filter_policy(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_22f8082b07ce528f82545e210b84d7de_v3_0_0').validate(obj.response)
-    return True
-
-
-def create_filter_policy(api):
-    endpoint_result = api.filter_policy.create_filter_policy(
-        active_validation=False,
-        domains='string',
-        payload=None,
-        sgt='string',
-        subnet='string',
-        vn='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.filter_policy
-def test_create_filter_policy(api, validator):
-    try:
-        assert is_valid_create_filter_policy(
-            validator,
-            create_filter_policy(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def create_filter_policy_default(api):
-    endpoint_result = api.filter_policy.create_filter_policy(
-        active_validation=False,
-        domains=None,
-        payload=None,
-        sgt=None,
-        subnet=None,
-        vn=None
-    )
-    return endpoint_result
-
-
-@pytest.mark.filter_policy
-def test_create_filter_policy_default(api, validator):
-    try:
-        assert is_valid_create_filter_policy(
-            validator,
-            create_filter_policy_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_get_filter_policy_by_id(json_schema_validate, obj):
     if not obj:
         return False
@@ -297,6 +185,168 @@ def test_delete_filter_policy_by_id_default(api, validator):
         assert is_valid_delete_filter_policy_by_id(
             validator,
             delete_filter_policy_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_filter_policy(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_250a599ae00f5e47b9ece23cd3183d1c_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_filter_policy(api):
+    endpoint_result = api.filter_policy.get_filter_policy(
+        page=0,
+        size=0
+    )
+    return endpoint_result
+
+
+@pytest.mark.filter_policy
+def test_get_filter_policy(api, validator):
+    try:
+        assert is_valid_get_filter_policy(
+            validator,
+            get_filter_policy(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_filter_policy_default(api):
+    endpoint_result = api.filter_policy.get_filter_policy(
+        page=None,
+        size=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.filter_policy
+def test_get_filter_policy_default(api, validator):
+    try:
+        assert is_valid_get_filter_policy(
+            validator,
+            get_filter_policy_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_create_filter_policy(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_22f8082b07ce528f82545e210b84d7de_v3_0_0').validate(obj.response)
+    return True
+
+
+def create_filter_policy(api):
+    endpoint_result = api.filter_policy.create_filter_policy(
+        active_validation=False,
+        domains='string',
+        payload=None,
+        sgt='string',
+        subnet='string',
+        vn='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.filter_policy
+def test_create_filter_policy(api, validator):
+    try:
+        assert is_valid_create_filter_policy(
+            validator,
+            create_filter_policy(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def create_filter_policy_default(api):
+    endpoint_result = api.filter_policy.create_filter_policy(
+        active_validation=False,
+        domains=None,
+        payload=None,
+        sgt=None,
+        subnet=None,
+        vn=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.filter_policy
+def test_create_filter_policy_default(api, validator):
+    try:
+        assert is_valid_create_filter_policy(
+            validator,
+            create_filter_policy_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_209810ed6cad570d90243b1e0dbbe27b_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.filter_policy.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.filter_policy
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.filter_policy.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.filter_policy
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

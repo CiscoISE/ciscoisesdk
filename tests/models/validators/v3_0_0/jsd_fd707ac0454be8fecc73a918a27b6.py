@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteNetworkAccessGlobalExceptionRuleById data model.
+"""Identity Services Engine deleteNetworkAccessPolicySetGlobalExceptionRuleById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorFd707Ac0454Be8FecC73A918A27B6(object):
-    """deleteNetworkAccessGlobalExceptionRuleById request schema
+    """deleteNetworkAccessPolicySetGlobalExceptionRuleById request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorFd707Ac0454Be8FecC73A918A27B6, self).__init__()
@@ -50,6 +50,9 @@ class JSONSchemaValidatorFd707Ac0454Be8FecC73A918A27B6(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "id"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllAciSettings data model.
+"""Identity Services Engine getAciSettings data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorEa5C865993B56F48F7F43475294A20C(object):
-    """getAllAciSettings request schema definition."""
+    """getAciSettings request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEa5C865993B56F48F7F43475294A20C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -123,9 +123,6 @@ class JSONSchemaValidatorEa5C865993B56F48F7F43475294A20C(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "AciSettings"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

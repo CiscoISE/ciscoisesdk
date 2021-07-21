@@ -29,35 +29,33 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_guest_type(json_schema_validate, obj):
+def is_valid_update_guest_type_email(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0f41a1e47105581fabf212f259626903_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_cf310e621a395bb7bac7b90d7d4c8603_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_guest_type(api):
-    endpoint_result = api.guest_type.get_all_guest_type(
-        filter='value1,value2',
-        filter_type='string',
-        page=0,
-        size=0,
-        sortasc='string',
-        sortdsc='string'
+def update_guest_type_email(api):
+    endpoint_result = api.guest_type.update_guest_type_email(
+        active_validation=False,
+        additional_data=[{'value': 'string', 'name': 'string'}],
+        id='string',
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.guest_type
-def test_get_all_guest_type(api, validator):
+def test_update_guest_type_email(api, validator):
     try:
-        assert is_valid_get_all_guest_type(
+        assert is_valid_update_guest_type_email(
             validator,
-            get_all_guest_type(api)
+            update_guest_type_email(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -65,62 +63,55 @@ def test_get_all_guest_type(api, validator):
             raise original_e
 
 
-def get_all_guest_type_default(api):
-    endpoint_result = api.guest_type.get_all_guest_type(
-        filter=None,
-        filter_type=None,
-        page=None,
-        size=None,
-        sortasc=None,
-        sortdsc=None
+def update_guest_type_email_default(api):
+    endpoint_result = api.guest_type.update_guest_type_email(
+        active_validation=False,
+        id='string',
+        additional_data=None,
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.guest_type
-def test_get_all_guest_type_default(api, validator):
+def test_update_guest_type_email_default(api, validator):
     try:
-        assert is_valid_get_all_guest_type(
+        assert is_valid_update_guest_type_email(
             validator,
-            get_all_guest_type_default(api)
+            update_guest_type_email_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_create_guest_type(json_schema_validate, obj):
+def is_valid_update_guest_type_sms(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f46c01449d585b088490c4db530c56d5_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0493eb42e79d5cc38bd1a6eef20613d6_v3_0_0').validate(obj.response)
     return True
 
 
-def create_guest_type(api):
-    endpoint_result = api.guest_type.create_guest_type(
-        access_time={'fromFirstLogin': True, 'maxAccountDuration': 0, 'durationTimeUnit': 'string', 'defaultDuration': 0, 'allowAccessOnSpecificDaysTimes': True, 'dayTimeLimits': [{'startTime': 'string', 'endTime': 'string', 'days': ['string']}]},
+def update_guest_type_sms(api):
+    endpoint_result = api.guest_type.update_guest_type_sms(
         active_validation=False,
-        description='string',
-        expiration_notification={'enableNotification': True, 'advanceNotificationDuration': 0, 'advanceNotificationUnits': 'string', 'sendEmailNotification': True, 'emailText': 'string', 'sendSmsNotification': True, 'smsText': 'string'},
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
-        login_options={'limitSimultaneousLogins': True, 'maxSimultaneousLogins': 0, 'failureAction': 'string', 'maxRegisteredDevices': 0, 'identityGroupId': 'string', 'allowGuestPortalBypass': True},
-        name='string',
-        payload=None,
-        sponsor_groups=['string']
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.guest_type
-def test_create_guest_type(api, validator):
+def test_update_guest_type_sms(api, validator):
     try:
-        assert is_valid_create_guest_type(
+        assert is_valid_update_guest_type_sms(
             validator,
-            create_guest_type(api)
+            update_guest_type_sms(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -128,27 +119,22 @@ def test_create_guest_type(api, validator):
             raise original_e
 
 
-def create_guest_type_default(api):
-    endpoint_result = api.guest_type.create_guest_type(
+def update_guest_type_sms_default(api):
+    endpoint_result = api.guest_type.update_guest_type_sms(
         active_validation=False,
-        access_time=None,
-        description=None,
-        expiration_notification=None,
-        id=None,
-        login_options=None,
-        name=None,
-        payload=None,
-        sponsor_groups=None
+        id='string',
+        additional_data=None,
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.guest_type
-def test_create_guest_type_default(api, validator):
+def test_update_guest_type_sms_default(api, validator):
     try:
-        assert is_valid_create_guest_type(
+        assert is_valid_update_guest_type_sms(
             validator,
-            create_guest_type_default(api)
+            update_guest_type_sms_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -205,7 +191,7 @@ def test_get_guest_type_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_update_guesttype_by_id(json_schema_validate, obj):
+def is_valid_update_guest_type_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -216,13 +202,14 @@ def is_valid_update_guesttype_by_id(json_schema_validate, obj):
     return True
 
 
-def update_guesttype_by_id(api):
-    endpoint_result = api.guest_type.update_guesttype_by_id(
+def update_guest_type_by_id(api):
+    endpoint_result = api.guest_type.update_guest_type_by_id(
         access_time={'fromFirstLogin': True, 'maxAccountDuration': 0, 'durationTimeUnit': 'string', 'defaultDuration': 0, 'allowAccessOnSpecificDaysTimes': True, 'dayTimeLimits': [{'startTime': 'string', 'endTime': 'string', 'days': ['string']}]},
         active_validation=False,
         description='string',
         expiration_notification={'enableNotification': True, 'advanceNotificationDuration': 0, 'advanceNotificationUnits': 'string', 'sendEmailNotification': True, 'emailText': 'string', 'sendSmsNotification': True, 'smsText': 'string'},
         id='string',
+        is_default_type=True,
         login_options={'limitSimultaneousLogins': True, 'maxSimultaneousLogins': 0, 'failureAction': 'string', 'maxRegisteredDevices': 0, 'identityGroupId': 'string', 'allowGuestPortalBypass': True},
         name='string',
         payload=None,
@@ -232,11 +219,11 @@ def update_guesttype_by_id(api):
 
 
 @pytest.mark.guest_type
-def test_update_guesttype_by_id(api, validator):
+def test_update_guest_type_by_id(api, validator):
     try:
-        assert is_valid_update_guesttype_by_id(
+        assert is_valid_update_guest_type_by_id(
             validator,
-            update_guesttype_by_id(api)
+            update_guest_type_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -244,13 +231,14 @@ def test_update_guesttype_by_id(api, validator):
             raise original_e
 
 
-def update_guesttype_by_id_default(api):
-    endpoint_result = api.guest_type.update_guesttype_by_id(
+def update_guest_type_by_id_default(api):
+    endpoint_result = api.guest_type.update_guest_type_by_id(
         active_validation=False,
         id='string',
         access_time=None,
         description=None,
         expiration_notification=None,
+        is_default_type=None,
         login_options=None,
         name=None,
         payload=None,
@@ -260,11 +248,11 @@ def update_guesttype_by_id_default(api):
 
 
 @pytest.mark.guest_type
-def test_update_guesttype_by_id_default(api, validator):
+def test_update_guest_type_by_id_default(api, validator):
     try:
-        assert is_valid_update_guesttype_by_id(
+        assert is_valid_update_guest_type_by_id(
             validator,
-            update_guesttype_by_id_default(api)
+            update_guest_type_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -321,33 +309,35 @@ def test_delete_guest_type_by_id_default(api, validator):
             raise original_e
 
 
-def is_valid_update_guest_type_sms(json_schema_validate, obj):
+def is_valid_get_guest_type(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0493eb42e79d5cc38bd1a6eef20613d6_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0f41a1e47105581fabf212f259626903_v3_0_0').validate(obj.response)
     return True
 
 
-def update_guest_type_sms(api):
-    endpoint_result = api.guest_type.update_guest_type_sms(
-        active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
-        id='string',
-        payload=None
+def get_guest_type(api):
+    endpoint_result = api.guest_type.get_guest_type(
+        filter='value1,value2',
+        filter_type='string',
+        page=0,
+        size=0,
+        sortasc='string',
+        sortdsc='string'
     )
     return endpoint_result
 
 
 @pytest.mark.guest_type
-def test_update_guest_type_sms(api, validator):
+def test_get_guest_type(api, validator):
     try:
-        assert is_valid_update_guest_type_sms(
+        assert is_valid_get_guest_type(
             validator,
-            update_guest_type_sms(api)
+            get_guest_type(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -355,55 +345,62 @@ def test_update_guest_type_sms(api, validator):
             raise original_e
 
 
-def update_guest_type_sms_default(api):
-    endpoint_result = api.guest_type.update_guest_type_sms(
-        active_validation=False,
-        id='string',
-        additional_data=None,
-        payload=None
+def get_guest_type_default(api):
+    endpoint_result = api.guest_type.get_guest_type(
+        filter=None,
+        filter_type=None,
+        page=None,
+        size=None,
+        sortasc=None,
+        sortdsc=None
     )
     return endpoint_result
 
 
 @pytest.mark.guest_type
-def test_update_guest_type_sms_default(api, validator):
+def test_get_guest_type_default(api, validator):
     try:
-        assert is_valid_update_guest_type_sms(
+        assert is_valid_get_guest_type(
             validator,
-            update_guest_type_sms_default(api)
+            get_guest_type_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_guest_type_email(json_schema_validate, obj):
+def is_valid_create_guest_type(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_cf310e621a395bb7bac7b90d7d4c8603_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f46c01449d585b088490c4db530c56d5_v3_0_0').validate(obj.response)
     return True
 
 
-def update_guest_type_email(api):
-    endpoint_result = api.guest_type.update_guest_type_email(
+def create_guest_type(api):
+    endpoint_result = api.guest_type.create_guest_type(
+        access_time={'fromFirstLogin': True, 'maxAccountDuration': 0, 'durationTimeUnit': 'string', 'defaultDuration': 0, 'allowAccessOnSpecificDaysTimes': True, 'dayTimeLimits': [{'startTime': 'string', 'endTime': 'string', 'days': ['string']}]},
         active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
-        id='string',
-        payload=None
+        description='string',
+        expiration_notification={'enableNotification': True, 'advanceNotificationDuration': 0, 'advanceNotificationUnits': 'string', 'sendEmailNotification': True, 'emailText': 'string', 'sendSmsNotification': True, 'smsText': 'string'},
+        is_default_type=True,
+        login_options={'limitSimultaneousLogins': True, 'maxSimultaneousLogins': 0, 'failureAction': 'string', 'maxRegisteredDevices': 0, 'identityGroupId': 'string', 'allowGuestPortalBypass': True},
+        name='string',
+        payload=None,
+        sponsor_groups=['string']
     )
     return endpoint_result
 
 
 @pytest.mark.guest_type
-def test_update_guest_type_email(api, validator):
+def test_create_guest_type(api, validator):
     try:
-        assert is_valid_update_guest_type_email(
+        assert is_valid_create_guest_type(
             validator,
-            update_guest_type_email(api)
+            create_guest_type(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -411,22 +408,77 @@ def test_update_guest_type_email(api, validator):
             raise original_e
 
 
-def update_guest_type_email_default(api):
-    endpoint_result = api.guest_type.update_guest_type_email(
+def create_guest_type_default(api):
+    endpoint_result = api.guest_type.create_guest_type(
         active_validation=False,
-        id='string',
-        additional_data=None,
-        payload=None
+        access_time=None,
+        description=None,
+        expiration_notification=None,
+        is_default_type=None,
+        login_options=None,
+        name=None,
+        payload=None,
+        sponsor_groups=None
     )
     return endpoint_result
 
 
 @pytest.mark.guest_type
-def test_update_guest_type_email_default(api, validator):
+def test_create_guest_type_default(api, validator):
     try:
-        assert is_valid_update_guest_type_email(
+        assert is_valid_create_guest_type(
             validator,
-            update_guest_type_email_default(api)
+            create_guest_type_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_a6bfaedfca185fb7b6a86621e866a5f6_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.guest_type.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_type
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.guest_type.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_type
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -49,6 +49,7 @@ class JSONSchemaValidatorF9081A48E3C5F4FAe5AA00F889216Dd(object):
                 "items": {
                 "properties": {
                 "enablePki": {
+                "default": false,
                 "type": "boolean"
                 },
                 "name": {
@@ -85,6 +86,9 @@ class JSONSchemaValidatorF9081A48E3C5F4FAe5AA00F889216Dd(object):
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
                 }
                 },
                 "type": "object"

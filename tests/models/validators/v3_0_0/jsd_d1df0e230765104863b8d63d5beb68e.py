@@ -109,6 +109,20 @@ class JSONSchemaValidatorD1Df0E230765104863B8D63D5Beb68E(object):
                 "id": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "localAccounting": {
                 "type": "boolean"
                 },
@@ -137,16 +151,9 @@ class JSONSchemaValidatorD1Df0E230765104863B8D63D5Beb68E(object):
                 "type": "boolean"
                 }
                 },
-                "required": [
-                "name",
-                "RadiusServerList"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "RadiusServerSequence"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

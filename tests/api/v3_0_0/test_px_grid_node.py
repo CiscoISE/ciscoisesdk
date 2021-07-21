@@ -29,31 +29,32 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_px_grid_node(json_schema_validate, obj):
+def is_valid_approve_px_grid_node(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_52661028d97156379640002f79b2007c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f47d656ed0805859a85e5cc082c78dcf_v3_0_0').validate(obj.response)
     return True
 
 
-def get_all_px_grid_node(api):
-    endpoint_result = api.px_grid_node.get_all_px_grid_node(
-        page=0,
-        size=0
+def approve_px_grid_node(api):
+    endpoint_result = api.px_grid_node.approve_px_grid_node(
+        active_validation=False,
+        name='string',
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.px_grid_node
-def test_get_all_px_grid_node(api, validator):
+def test_approve_px_grid_node(api, validator):
     try:
-        assert is_valid_get_all_px_grid_node(
+        assert is_valid_approve_px_grid_node(
             validator,
-            get_all_px_grid_node(api)
+            approve_px_grid_node(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -61,70 +62,21 @@ def test_get_all_px_grid_node(api, validator):
             raise original_e
 
 
-def get_all_px_grid_node_default(api):
-    endpoint_result = api.px_grid_node.get_all_px_grid_node(
-        page=None,
-        size=None
+def approve_px_grid_node_default(api):
+    endpoint_result = api.px_grid_node.approve_px_grid_node(
+        active_validation=False,
+        name='string',
+        payload=None
     )
     return endpoint_result
 
 
 @pytest.mark.px_grid_node
-def test_get_all_px_grid_node_default(api, validator):
+def test_approve_px_grid_node_default(api, validator):
     try:
-        assert is_valid_get_all_px_grid_node(
+        assert is_valid_approve_px_grid_node(
             validator,
-            get_all_px_grid_node_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_px_grid_node_by_id(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d24ade0b53405fbc898cb0cc1ea57fb8_v3_0_0').validate(obj.response)
-    return True
-
-
-def get_px_grid_node_by_id(api):
-    endpoint_result = api.px_grid_node.get_px_grid_node_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.px_grid_node
-def test_get_px_grid_node_by_id(api, validator):
-    try:
-        assert is_valid_get_px_grid_node_by_id(
-            validator,
-            get_px_grid_node_by_id(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_px_grid_node_by_id_default(api):
-    endpoint_result = api.px_grid_node.get_px_grid_node_by_id(
-        id='string'
-    )
-    return endpoint_result
-
-
-@pytest.mark.px_grid_node
-def test_get_px_grid_node_by_id_default(api, validator):
-    try:
-        assert is_valid_get_px_grid_node_by_id(
-            validator,
-            get_px_grid_node_by_id_default(api)
+            approve_px_grid_node_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -231,32 +183,30 @@ def test_delete_px_grid_node_by_name_default(api, validator):
             raise original_e
 
 
-def is_valid_approve_px_grid_node(json_schema_validate, obj):
+def is_valid_get_px_grid_node_by_id(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f47d656ed0805859a85e5cc082c78dcf_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d24ade0b53405fbc898cb0cc1ea57fb8_v3_0_0').validate(obj.response)
     return True
 
 
-def approve_px_grid_node(api):
-    endpoint_result = api.px_grid_node.approve_px_grid_node(
-        active_validation=False,
-        name='string',
-        payload=None
+def get_px_grid_node_by_id(api):
+    endpoint_result = api.px_grid_node.get_px_grid_node_by_id(
+        id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.px_grid_node
-def test_approve_px_grid_node(api, validator):
+def test_get_px_grid_node_by_id(api, validator):
     try:
-        assert is_valid_approve_px_grid_node(
+        assert is_valid_get_px_grid_node_by_id(
             validator,
-            approve_px_grid_node(api)
+            get_px_grid_node_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -264,21 +214,121 @@ def test_approve_px_grid_node(api, validator):
             raise original_e
 
 
-def approve_px_grid_node_default(api):
-    endpoint_result = api.px_grid_node.approve_px_grid_node(
-        active_validation=False,
-        name='string',
-        payload=None
+def get_px_grid_node_by_id_default(api):
+    endpoint_result = api.px_grid_node.get_px_grid_node_by_id(
+        id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.px_grid_node
-def test_approve_px_grid_node_default(api, validator):
+def test_get_px_grid_node_by_id_default(api, validator):
     try:
-        assert is_valid_approve_px_grid_node(
+        assert is_valid_get_px_grid_node_by_id(
             validator,
-            approve_px_grid_node_default(api)
+            get_px_grid_node_by_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_px_grid_node(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_52661028d97156379640002f79b2007c_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_px_grid_node(api):
+    endpoint_result = api.px_grid_node.get_px_grid_node(
+        page=0,
+        size=0
+    )
+    return endpoint_result
+
+
+@pytest.mark.px_grid_node
+def test_get_px_grid_node(api, validator):
+    try:
+        assert is_valid_get_px_grid_node(
+            validator,
+            get_px_grid_node(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_px_grid_node_default(api):
+    endpoint_result = api.px_grid_node.get_px_grid_node(
+        page=None,
+        size=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.px_grid_node
+def test_get_px_grid_node_default(api, validator):
+    try:
+        assert is_valid_get_px_grid_node(
+            validator,
+            get_px_grid_node_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_73c2962d70ef5964be55cfeae68e5ba6_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.px_grid_node.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.px_grid_node
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.px_grid_node.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.px_grid_node
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

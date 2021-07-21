@@ -50,6 +50,10 @@ class JSONSchemaValidatorAa4DaefaA3B95EccA521188A43Eacbd9(object):
                 "default": "Internal Users",
                 "type": "string"
                 },
+                "identitySourceName": {
+                "default": "Internal Users",
+                "type": "string"
+                },
                 "ifAuthFail": {
                 "default": "reject",
                 "type": "string"
@@ -61,6 +65,29 @@ class JSONSchemaValidatorAa4DaefaA3B95EccA521188A43Eacbd9(object):
                 "ifUserNotFound": {
                 "default": "reject",
                 "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
                 },
                 "rule": {
                 "properties": {
@@ -94,6 +121,26 @@ class JSONSchemaValidatorAa4DaefaA3B95EccA521188A43Eacbd9(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 }
                 },
                 "type": "object"
@@ -184,6 +231,26 @@ class JSONSchemaValidatorAa4DaefaA3B95EccA521188A43Eacbd9(object):
                 "default": false,
                 "type": "boolean"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
@@ -204,40 +271,14 @@ class JSONSchemaValidatorAa4DaefaA3B95EccA521188A43Eacbd9(object):
                 "lessThan",
                 "greaterOrEquals",
                 "lessOrEquals",
-                "macEquals",
-                "macNotEquals",
-                "macNotIn",
-                "macIn",
-                "macStartsWith",
-                "macNotStartsWith",
-                "macEndsWith",
-                "macNotEndsWith",
-                "macContains",
-                "macNotContains",
                 "ipGreaterThan",
                 "ipLessThan",
                 "ipEquals",
-                "ipNotEquals",
-                "dateTimeMatches",
-                "dateLessThan",
-                "dateLessThanOrEquals",
-                "dateGreaterThan",
-                "dateGreaterThanOrEquals",
-                "dateEquals",
-                "dateNotEquals"
+                "ipNotEquals"
                 ],
                 "type": "string"
                 },
                 "weekDays": {
-                "default": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-                ],
                 "items": {
                 "enum": [
                 "Sunday",
@@ -275,13 +316,7 @@ class JSONSchemaValidatorAa4DaefaA3B95EccA521188A43Eacbd9(object):
                 "default": false,
                 "type": "boolean"
                 },
-                "description":
-                 {
-                "default": "Empty string",
-                "type": "string"
-                },
                 "hitCounts": {
-                "default": 0,
                 "type": "integer"
                 },
                 "id": {
@@ -291,7 +326,6 @@ class JSONSchemaValidatorAa4DaefaA3B95EccA521188A43Eacbd9(object):
                 "type": "string"
                 },
                 "rank": {
-                "default": 0,
                 "type": "integer"
                 },
                 "state": {

@@ -50,14 +50,6 @@ class JSONSchemaValidatorC8B30Af4B84B5A90Be2FC152Cf26Ad42(object):
                 "customAttributes": {
                 "properties": {
                 "customAttributes": {
-                "properties": {
-                "key1": {
-                "type": "string"
-                },
-                "key2": {
-                "type": "string"
-                }
-                },
                 "type": "object"
                 }
                 },

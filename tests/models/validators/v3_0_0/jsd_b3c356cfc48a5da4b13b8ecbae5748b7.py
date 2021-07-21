@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllSecurityGroups data model.
+"""Identity Services Engine getSecurityGroups data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorB3C356CfC48A5Da4B13B8Ecbae5748B7(object):
-    """getAllSecurityGroups request schema definition."""
+    """getSecurityGroups request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB3C356CfC48A5Da4B13B8Ecbae5748B7, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -48,6 +48,7 @@ class JSONSchemaValidatorB3C356CfC48A5Da4B13B8Ecbae5748B7(object):
                 "SearchResult": {
                 "properties": {
                 "nextPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -60,8 +61,11 @@ class JSONSchemaValidatorB3C356CfC48A5Da4B13B8Ecbae5748B7(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "previousPage": {
+                "items": {
                 "properties": {
                 "href": {
                 "type": "string"
@@ -74,6 +78,8 @@ class JSONSchemaValidatorB3C356CfC48A5Da4B13B8Ecbae5748B7(object):
                 }
                 },
                 "type": "object"
+                },
+                "type": "array"
                 },
                 "resources": {
                 "items": {
@@ -114,9 +120,6 @@ class JSONSchemaValidatorB3C356CfC48A5Da4B13B8Ecbae5748B7(object):
                 "type": "object"
                 }
                 },
-                "required": [
-                "SearchResult"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

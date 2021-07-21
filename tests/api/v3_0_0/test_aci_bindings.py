@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_aci_bindings(json_schema_validate, obj):
+def is_valid_get_aci_bindings(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,8 +40,8 @@ def is_valid_get_all_aci_bindings(json_schema_validate, obj):
     return True
 
 
-def get_all_aci_bindings(api):
-    endpoint_result = api.aci_bindings.get_all_aci_bindings(
+def get_aci_bindings(api):
+    endpoint_result = api.aci_bindings.get_aci_bindings(
         filter_by='value1,value2',
         filter_value='value1,value2',
         page=0,
@@ -53,11 +53,11 @@ def get_all_aci_bindings(api):
 
 
 @pytest.mark.aci_bindings
-def test_get_all_aci_bindings(api, validator):
+def test_get_aci_bindings(api, validator):
     try:
-        assert is_valid_get_all_aci_bindings(
+        assert is_valid_get_aci_bindings(
             validator,
-            get_all_aci_bindings(api)
+            get_aci_bindings(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -65,8 +65,8 @@ def test_get_all_aci_bindings(api, validator):
             raise original_e
 
 
-def get_all_aci_bindings_default(api):
-    endpoint_result = api.aci_bindings.get_all_aci_bindings(
+def get_aci_bindings_default(api):
+    endpoint_result = api.aci_bindings.get_aci_bindings(
         filter_by=None,
         filter_value=None,
         page=None,
@@ -78,11 +78,61 @@ def get_all_aci_bindings_default(api):
 
 
 @pytest.mark.aci_bindings
-def test_get_all_aci_bindings_default(api, validator):
+def test_get_aci_bindings_default(api, validator):
     try:
-        assert is_valid_get_all_aci_bindings(
+        assert is_valid_get_aci_bindings(
             validator,
-            get_all_aci_bindings_default(api)
+            get_aci_bindings_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_version(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_d74b5214bad656c98f21e4968661c3c0_v3_0_0').validate(obj.response)
+    return True
+
+
+def get_version(api):
+    endpoint_result = api.aci_bindings.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.aci_bindings
+def test_get_version(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print(original_e)
+            raise original_e
+
+
+def get_version_default(api):
+    endpoint_result = api.aci_bindings.get_version(
+
+    )
+    return endpoint_result
+
+
+@pytest.mark.aci_bindings
+def test_get_version_default(api, validator):
+    try:
+        assert is_valid_get_version(
+            validator,
+            get_version_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

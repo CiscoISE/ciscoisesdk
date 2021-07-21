@@ -75,6 +75,20 @@ class JSONSchemaValidatorAfa6D7527045Ebc928EE7E30Ad3092A(object):
                 "keyInputFormat": {
                 "type": "string"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },

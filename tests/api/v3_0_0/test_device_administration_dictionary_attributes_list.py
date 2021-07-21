@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_device_admin_dictionaries_authentication(json_schema_validate, obj):
+def is_valid_get_device_admin_dictionaries_authentication(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_device_admin_dictionaries_authentication(json_schema_valida
     return True
 
 
-def get_all_device_admin_dictionaries_authentication(api):
-    endpoint_result = api.device_administration_dictionary_attributes_list.get_all_device_admin_dictionaries_authentication(
+def get_device_admin_dictionaries_authentication(api):
+    endpoint_result = api.device_administration_dictionary_attributes_list.get_device_admin_dictionaries_authentication(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_dictionary_attributes_list
-def test_get_all_device_admin_dictionaries_authentication(api, validator):
+def test_get_device_admin_dictionaries_authentication(api, validator):
     try:
-        assert is_valid_get_all_device_admin_dictionaries_authentication(
+        assert is_valid_get_device_admin_dictionaries_authentication(
             validator,
-            get_all_device_admin_dictionaries_authentication(api)
+            get_device_admin_dictionaries_authentication(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,26 +60,26 @@ def test_get_all_device_admin_dictionaries_authentication(api, validator):
             raise original_e
 
 
-def get_all_device_admin_dictionaries_authentication_default(api):
-    endpoint_result = api.device_administration_dictionary_attributes_list.get_all_device_admin_dictionaries_authentication(
+def get_device_admin_dictionaries_authentication_default(api):
+    endpoint_result = api.device_administration_dictionary_attributes_list.get_device_admin_dictionaries_authentication(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_dictionary_attributes_list
-def test_get_all_device_admin_dictionaries_authentication_default(api, validator):
+def test_get_device_admin_dictionaries_authentication_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_dictionaries_authentication(
+        assert is_valid_get_device_admin_dictionaries_authentication(
             validator,
-            get_all_device_admin_dictionaries_authentication_default(api)
+            get_device_admin_dictionaries_authentication_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_all_device_admin_dictionaries_authorization(json_schema_validate, obj):
+def is_valid_get_device_admin_dictionaries_authorization(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -90,19 +90,19 @@ def is_valid_get_all_device_admin_dictionaries_authorization(json_schema_validat
     return True
 
 
-def get_all_device_admin_dictionaries_authorization(api):
-    endpoint_result = api.device_administration_dictionary_attributes_list.get_all_device_admin_dictionaries_authorization(
+def get_device_admin_dictionaries_authorization(api):
+    endpoint_result = api.device_administration_dictionary_attributes_list.get_device_admin_dictionaries_authorization(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_dictionary_attributes_list
-def test_get_all_device_admin_dictionaries_authorization(api, validator):
+def test_get_device_admin_dictionaries_authorization(api, validator):
     try:
-        assert is_valid_get_all_device_admin_dictionaries_authorization(
+        assert is_valid_get_device_admin_dictionaries_authorization(
             validator,
-            get_all_device_admin_dictionaries_authorization(api)
+            get_device_admin_dictionaries_authorization(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -110,26 +110,26 @@ def test_get_all_device_admin_dictionaries_authorization(api, validator):
             raise original_e
 
 
-def get_all_device_admin_dictionaries_authorization_default(api):
-    endpoint_result = api.device_administration_dictionary_attributes_list.get_all_device_admin_dictionaries_authorization(
+def get_device_admin_dictionaries_authorization_default(api):
+    endpoint_result = api.device_administration_dictionary_attributes_list.get_device_admin_dictionaries_authorization(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_dictionary_attributes_list
-def test_get_all_device_admin_dictionaries_authorization_default(api, validator):
+def test_get_device_admin_dictionaries_authorization_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_dictionaries_authorization(
+        assert is_valid_get_device_admin_dictionaries_authorization(
             validator,
-            get_all_device_admin_dictionaries_authorization_default(api)
+            get_device_admin_dictionaries_authorization_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_all_device_admin_dictionaries_policyset(json_schema_validate, obj):
+def is_valid_get_device_admin_dictionaries_policy_set(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -140,19 +140,19 @@ def is_valid_get_all_device_admin_dictionaries_policyset(json_schema_validate, o
     return True
 
 
-def get_all_device_admin_dictionaries_policyset(api):
-    endpoint_result = api.device_administration_dictionary_attributes_list.get_all_device_admin_dictionaries_policyset(
+def get_device_admin_dictionaries_policy_set(api):
+    endpoint_result = api.device_administration_dictionary_attributes_list.get_device_admin_dictionaries_policy_set(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_dictionary_attributes_list
-def test_get_all_device_admin_dictionaries_policyset(api, validator):
+def test_get_device_admin_dictionaries_policy_set(api, validator):
     try:
-        assert is_valid_get_all_device_admin_dictionaries_policyset(
+        assert is_valid_get_device_admin_dictionaries_policy_set(
             validator,
-            get_all_device_admin_dictionaries_policyset(api)
+            get_device_admin_dictionaries_policy_set(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -160,19 +160,19 @@ def test_get_all_device_admin_dictionaries_policyset(api, validator):
             raise original_e
 
 
-def get_all_device_admin_dictionaries_policyset_default(api):
-    endpoint_result = api.device_administration_dictionary_attributes_list.get_all_device_admin_dictionaries_policyset(
+def get_device_admin_dictionaries_policy_set_default(api):
+    endpoint_result = api.device_administration_dictionary_attributes_list.get_device_admin_dictionaries_policy_set(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_dictionary_attributes_list
-def test_get_all_device_admin_dictionaries_policyset_default(api, validator):
+def test_get_device_admin_dictionaries_policy_set_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_dictionaries_policyset(
+        assert is_valid_get_device_admin_dictionaries_policy_set(
             validator,
-            get_all_device_admin_dictionaries_policyset_default(api)
+            get_device_admin_dictionaries_policy_set_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

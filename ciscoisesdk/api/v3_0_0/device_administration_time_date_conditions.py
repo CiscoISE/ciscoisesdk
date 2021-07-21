@@ -74,10 +74,10 @@ class DeviceAdministrationTimeDateConditions(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_device_admin_time_conditions(self,
-                                             headers=None,
-                                             **query_parameters):
-        """Device Admin - Returns a list of time and date conditions.
+    def get_device_admin_time_conditions(self,
+                                         headers=None,
+                                         **query_parameters):
+        """Device Admin Returns a list of time and date conditions.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -86,10 +86,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                    or the bracket notation.
+              - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -129,6 +131,18 @@ class DeviceAdministrationTimeDateConditions(object):
 
         return self._object_factory('bpm_f79ab23563d857e58e01a74e37333572_v3_0_0', _api_response)
 
+    def get_all(self,
+                headers=None,
+                **query_parameters):
+        """Alias for `get_device_admin_time_conditions <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.get_device_admin_time_conditions>`_
+        """
+        return self.get_device_admin_time_conditions(
+            headers=headers,
+            **query_parameters
+        )
+
     def create_device_admin_time_condition(self,
                                            attribute_id=None,
                                            attribute_name=None,
@@ -144,6 +158,7 @@ class DeviceAdministrationTimeDateConditions(object):
                                            hours_range_exception=None,
                                            id=None,
                                            is_negate=None,
+                                           link=None,
                                            name=None,
                                            operator=None,
                                            week_days=None,
@@ -152,7 +167,7 @@ class DeviceAdministrationTimeDateConditions(object):
                                            payload=None,
                                            active_validation=True,
                                            **query_parameters):
-        """Device Admin - Creates time/date condition.
+        """Device Admin Creates time/date condition.
 
         Args:
             attribute_id(string): Dictionary attribute id
@@ -192,25 +207,25 @@ class DeviceAdministrationTimeDateConditions(object):
             dates_range(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             dates_range_exception(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             description(string): Condition description, property of
                 the request body.
             dictionary_name(string): Dictionary name, property of
@@ -220,19 +235,20 @@ class DeviceAdministrationTimeDateConditions(object):
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             hours_range_exception(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             id(string): id, property of the request body.
             is_negate(boolean): Indicates whereas this condition is
                 in negate mode, property of the request
                 body.
+            link(object): link, property of the request body.
             name(string): Condition name, property of the request
                 body.
             operator(string): Equality operator, property of the
@@ -243,33 +259,24 @@ class DeviceAdministrationTimeDateConditions(object):
                 'endsWith', 'notEndsWith',
                 'greaterThan', 'lessThan',
                 'greaterOrEquals', 'lessOrEquals',
-                'macEquals', 'macNotEquals', 'macNotIn',
-                'macIn', 'macStartsWith',
-                'macNotStartsWith', 'macEndsWith',
-                'macNotEndsWith', 'macContains',
-                'macNotContains', 'ipGreaterThan',
-                'ipLessThan', 'ipEquals', 'ipNotEquals',
-                'dateTimeMatches', 'dateLessThan',
-                'dateLessThanOrEquals',
-                'dateGreaterThan',
-                'dateGreaterThanOrEquals', 'dateEquals'
-                and 'dateNotEquals'.
-            weekDays(list): Defines for which days this condition
-                will be matched  Days format - Arrays of
-                WeekDay enums   Default - List of All
-                week days, property of the request body
-                (list of strings. Available values are
+                'ipGreaterThan', 'ipLessThan',
+                'ipEquals' and 'ipNotEquals'.
+            week_days(list): Defines for which days this condition
+                will be matched  Days format Arrays of
+                WeekDay enums   Default List of All week
+                days, property of the request body (list
+                of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
-            weekDaysException(list): Defines for which days this
+            week_days_exception(list): Defines for which days this
                 condition will NOT be matched  Days
-                format - Arrays of WeekDay enums
-                Default - Not enabled, property of the
-                request body (list of strings. Available
-                values are 'Sunday', 'Monday',
-                'Tuesday', 'Wednesday', 'Thursday',
-                'Friday' and 'Saturday').
+                format Arrays of WeekDay enums   Default
+                Not enabled, property of the request
+                body (list of strings. Available values
+                are 'Sunday', 'Monday', 'Tuesday',
+                'Wednesday', 'Thursday', 'Friday' and
+                'Saturday').
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -280,10 +287,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -325,26 +334,32 @@ class DeviceAdministrationTimeDateConditions(object):
                     condition_type,
                 'isNegate':
                     is_negate,
-                'name':
-                    name,
-                'id':
-                    id,
+                'link':
+                    link,
                 'description':
                     description,
-                'dictionaryName':
-                    dictionary_name,
+                'id':
+                    id,
+                'name':
+                    name,
                 'attributeName':
                     attribute_name,
                 'attributeId':
                     attribute_id,
-                'operator':
-                    operator,
-                'dictionaryValue':
-                    dictionary_value,
                 'attributeValue':
                     attribute_value,
+                'dictionaryName':
+                    dictionary_name,
+                'dictionaryValue':
+                    dictionary_value,
+                'operator':
+                    operator,
                 'children':
                     children,
+                'datesRange':
+                    dates_range,
+                'datesRangeException':
+                    dates_range_exception,
                 'hoursRange':
                     hours_range,
                 'hoursRangeException':
@@ -353,10 +368,6 @@ class DeviceAdministrationTimeDateConditions(object):
                     week_days,
                 'weekDaysException':
                     week_days_exception,
-                'datesRange':
-                    dates_range,
-                'datesRangeException':
-                    dates_range_exception,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -378,11 +389,65 @@ class DeviceAdministrationTimeDateConditions(object):
 
         return self._object_factory('bpm_a4d5b5da6a50bfaaecc180543fd952_v3_0_0', _api_response)
 
+    def create(self,
+               attribute_id=None,
+               attribute_name=None,
+               attribute_value=None,
+               children=None,
+               condition_type=None,
+               dates_range=None,
+               dates_range_exception=None,
+               description=None,
+               dictionary_name=None,
+               dictionary_value=None,
+               hours_range=None,
+               hours_range_exception=None,
+               id=None,
+               is_negate=None,
+               link=None,
+               name=None,
+               operator=None,
+               week_days=None,
+               week_days_exception=None,
+               headers=None,
+               payload=None,
+               active_validation=True,
+               **query_parameters):
+        """Alias for `create_device_admin_time_condition <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.create_device_admin_time_condition>`_
+        """
+        return self.create_device_admin_time_condition(
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
+            attribute_value=attribute_value,
+            children=children,
+            condition_type=condition_type,
+            dates_range=dates_range,
+            dates_range_exception=dates_range_exception,
+            description=description,
+            dictionary_name=dictionary_name,
+            dictionary_value=dictionary_value,
+            hours_range=hours_range,
+            hours_range_exception=hours_range_exception,
+            id=id,
+            is_negate=is_negate,
+            link=link,
+            name=name,
+            operator=operator,
+            week_days=week_days,
+            week_days_exception=week_days_exception,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def get_device_admin_time_condition_by_id(self,
                                               id,
                                               headers=None,
                                               **query_parameters):
-        """Device Admin - Returns a network condition.
+        """Device Admin Returns a network condition.
 
         Args:
             id(basestring): id path parameter. Condition id.
@@ -392,10 +457,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -438,6 +505,20 @@ class DeviceAdministrationTimeDateConditions(object):
 
         return self._object_factory('bpm_e603092f597ab6c25381e59c4a70_v3_0_0', _api_response)
 
+    def get_by_id(self,
+                  id,
+                  headers=None,
+                  **query_parameters):
+        """Alias for `get_device_admin_time_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.get_device_admin_time_condition_by_id>`_
+        """
+        return self.get_device_admin_time_condition_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )
+
     def update_device_admin_time_condition_by_id(self,
                                                  id,
                                                  attribute_id=None,
@@ -453,6 +534,7 @@ class DeviceAdministrationTimeDateConditions(object):
                                                  hours_range=None,
                                                  hours_range_exception=None,
                                                  is_negate=None,
+                                                 link=None,
                                                  name=None,
                                                  operator=None,
                                                  week_days=None,
@@ -461,7 +543,7 @@ class DeviceAdministrationTimeDateConditions(object):
                                                  payload=None,
                                                  active_validation=True,
                                                  **query_parameters):
-        """Device Admin - Update network condition.
+        """Device Admin Update network condition.
 
         Args:
             attribute_id(string): Dictionary attribute id
@@ -501,25 +583,25 @@ class DeviceAdministrationTimeDateConditions(object):
             dates_range(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             dates_range_exception(object): Defines for which date/s
                 TimeAndDate condition will be matched or
                 NOT matched if used in exceptionDates
-                prooperty  Options are - Date range, for
+                prooperty  Options are Date range, for
                 specific date, the same date should be
-                used for start/end date   Default - no
+                used for start/end date   Default no
                 specific dates  In order to reset the
                 dates to have no specific dates Date
-                format - yyyy-mm-dd (MM = month, dd =
-                day, yyyy = year), property of the
-                request body.
+                format yyyy-mm-dd (MM = month, dd = day,
+                yyyy = year), property of the request
+                body.
             description(string): Condition description, property of
                 the request body.
             dictionary_name(string): Dictionary name, property of
@@ -529,19 +611,20 @@ class DeviceAdministrationTimeDateConditions(object):
             hours_range(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             hours_range_exception(object): Defines for which hours a
                 TimeAndDate condition will be matched or
                 not matched if used in exceptionHours
-                property  Time foramt - hh:mm  ( h =
-                hour , mm = minutes )   Default - All
-                Day , property of the request body.
+                property  Time foramt hh:mm  ( h = hour
+                , mm = minutes )   Default All Day ,
+                property of the request body.
             id(string): id, property of the request body.
             is_negate(boolean): Indicates whereas this condition is
                 in negate mode, property of the request
                 body.
+            link(object): link, property of the request body.
             name(string): Condition name, property of the request
                 body.
             operator(string): Equality operator, property of the
@@ -552,33 +635,24 @@ class DeviceAdministrationTimeDateConditions(object):
                 'endsWith', 'notEndsWith',
                 'greaterThan', 'lessThan',
                 'greaterOrEquals', 'lessOrEquals',
-                'macEquals', 'macNotEquals', 'macNotIn',
-                'macIn', 'macStartsWith',
-                'macNotStartsWith', 'macEndsWith',
-                'macNotEndsWith', 'macContains',
-                'macNotContains', 'ipGreaterThan',
-                'ipLessThan', 'ipEquals', 'ipNotEquals',
-                'dateTimeMatches', 'dateLessThan',
-                'dateLessThanOrEquals',
-                'dateGreaterThan',
-                'dateGreaterThanOrEquals', 'dateEquals'
-                and 'dateNotEquals'.
-            weekDays(list): Defines for which days this condition
-                will be matched  Days format - Arrays of
-                WeekDay enums   Default - List of All
-                week days, property of the request body
-                (list of strings. Available values are
+                'ipGreaterThan', 'ipLessThan',
+                'ipEquals' and 'ipNotEquals'.
+            week_days(list): Defines for which days this condition
+                will be matched  Days format Arrays of
+                WeekDay enums   Default List of All week
+                days, property of the request body (list
+                of strings. Available values are
                 'Sunday', 'Monday', 'Tuesday',
                 'Wednesday', 'Thursday', 'Friday' and
                 'Saturday').
-            weekDaysException(list): Defines for which days this
+            week_days_exception(list): Defines for which days this
                 condition will NOT be matched  Days
-                format - Arrays of WeekDay enums
-                Default - Not enabled, property of the
-                request body (list of strings. Available
-                values are 'Sunday', 'Monday',
-                'Tuesday', 'Wednesday', 'Thursday',
-                'Friday' and 'Saturday').
+                format Arrays of WeekDay enums   Default
+                Not enabled, property of the request
+                body (list of strings. Available values
+                are 'Sunday', 'Monday', 'Tuesday',
+                'Wednesday', 'Thursday', 'Friday' and
+                'Saturday').
             id(basestring): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -590,10 +664,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -638,26 +714,32 @@ class DeviceAdministrationTimeDateConditions(object):
                     condition_type,
                 'isNegate':
                     is_negate,
-                'name':
-                    name,
-                'id':
-                    id,
+                'link':
+                    link,
                 'description':
                     description,
-                'dictionaryName':
-                    dictionary_name,
+                'id':
+                    id,
+                'name':
+                    name,
                 'attributeName':
                     attribute_name,
                 'attributeId':
                     attribute_id,
-                'operator':
-                    operator,
-                'dictionaryValue':
-                    dictionary_value,
                 'attributeValue':
                     attribute_value,
+                'dictionaryName':
+                    dictionary_name,
+                'dictionaryValue':
+                    dictionary_value,
+                'operator':
+                    operator,
                 'children':
                     children,
+                'datesRange':
+                    dates_range,
+                'datesRangeException':
+                    dates_range_exception,
                 'hoursRange':
                     hours_range,
                 'hoursRangeException':
@@ -666,10 +748,6 @@ class DeviceAdministrationTimeDateConditions(object):
                     week_days,
                 'weekDaysException':
                     week_days_exception,
-                'datesRange':
-                    dates_range,
-                'datesRangeException':
-                    dates_range_exception,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -692,11 +770,65 @@ class DeviceAdministrationTimeDateConditions(object):
 
         return self._object_factory('bpm_ee1780a38a85d1ba57c9a38e1093721_v3_0_0', _api_response)
 
+    def update_by_id(self,
+                     id,
+                     attribute_id=None,
+                     attribute_name=None,
+                     attribute_value=None,
+                     children=None,
+                     condition_type=None,
+                     dates_range=None,
+                     dates_range_exception=None,
+                     description=None,
+                     dictionary_name=None,
+                     dictionary_value=None,
+                     hours_range=None,
+                     hours_range_exception=None,
+                     is_negate=None,
+                     link=None,
+                     name=None,
+                     operator=None,
+                     week_days=None,
+                     week_days_exception=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
+        """Alias for `update_device_admin_time_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.update_device_admin_time_condition_by_id>`_
+        """
+        return self.update_device_admin_time_condition_by_id(
+            id=id,
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
+            attribute_value=attribute_value,
+            children=children,
+            condition_type=condition_type,
+            dates_range=dates_range,
+            dates_range_exception=dates_range_exception,
+            description=description,
+            dictionary_name=dictionary_name,
+            dictionary_value=dictionary_value,
+            hours_range=hours_range,
+            hours_range_exception=hours_range_exception,
+            is_negate=is_negate,
+            link=link,
+            name=name,
+            operator=operator,
+            week_days=week_days,
+            week_days_exception=week_days_exception,
+            payload=payload,
+            active_validation=active_validation,
+            headers=headers,
+            **query_parameters
+        )
+
     def delete_device_admin_time_condition_by_id(self,
                                                  id,
                                                  headers=None,
                                                  **query_parameters):
-        """Device Admin - Delete Time/Date condition.
+        """Device Admin Delete Time/Date condition.
 
         Args:
             id(basestring): id path parameter. Condition id.
@@ -706,10 +838,12 @@ class DeviceAdministrationTimeDateConditions(object):
                 support for parameters that may be added in the future).
 
         Returns:
+
             RestResponse: REST response with following properties:
+
               - headers(MyDict): response headers.
               - response(MyDict): response body as a MyDict object. Access the object's properties by using the dot notation
-                    or the bracket notation.
+                or the bracket notation.
               - content(bytes): representation of the request's response
               - text(str): representation of the request's response
 
@@ -751,3 +885,17 @@ class DeviceAdministrationTimeDateConditions(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_c1052ac49dd35088a9874a4350182015_v3_0_0', _api_response)
+
+    def delete_by_id(self,
+                     id,
+                     headers=None,
+                     **query_parameters):
+        """Alias for `delete_device_admin_time_condition_by_id <#ciscoisesdk.
+        api.v3_0_0.device_administration_time_date_conditions.
+        DeviceAdministrationTimeDateConditions.delete_device_admin_time_condition_by_id>`_
+        """
+        return self.delete_device_admin_time_condition_by_id(
+            id=id,
+            headers=headers,
+            **query_parameters
+        )

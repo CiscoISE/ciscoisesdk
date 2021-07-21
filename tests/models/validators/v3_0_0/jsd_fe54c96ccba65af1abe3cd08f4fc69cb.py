@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllDeviceAdminPolicySets data model.
+"""Identity Services Engine getDeviceAdminPolicySets data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,12 +38,14 @@ from builtins import *
 
 
 class JSONSchemaValidatorFe54C96CCba65Af1Abe3Cd08F4Fc69Cb(object):
-    """getAllDeviceAdminPolicySets request schema definition."""
+    """getDeviceAdminPolicySets request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorFe54C96CCba65Af1Abe3Cd08F4Fc69Cb, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
                 "items": {
                 "properties": {
                 "condition": {
@@ -64,6 +66,29 @@ class JSONSchemaValidatorFe54C96CCba65Af1Abe3Cd08F4Fc69Cb(object):
                 "isNegate": {
                 "default": false,
                 "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
                 }
                 },
                 "required": [
@@ -81,7 +106,6 @@ class JSONSchemaValidatorFe54C96CCba65Af1Abe3Cd08F4Fc69Cb(object):
                 "type": "string"
                 },
                 "hitCounts": {
-                "default": 0,
                 "type": "integer"
                 },
                 "id": {
@@ -91,11 +115,33 @@ class JSONSchemaValidatorFe54C96CCba65Af1Abe3Cd08F4Fc69Cb(object):
                 "default": false,
                 "type": "boolean"
                 },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "href"
+                ],
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 },
                 "rank": {
-                "default": 0,
                 "type": "integer"
                 },
                 "serviceName": {
@@ -111,9 +157,23 @@ class JSONSchemaValidatorFe54C96CCba65Af1Abe3Cd08F4Fc69Cb(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "name",
+                "serviceName"
+                ],
                 "type": "object"
                 },
                 "type": "array"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "required": [
+                "response",
+                "version"
+                ],
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 

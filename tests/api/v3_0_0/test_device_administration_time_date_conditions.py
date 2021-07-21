@@ -29,7 +29,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
 
 
-def is_valid_get_all_device_admin_time_conditions(json_schema_validate, obj):
+def is_valid_get_device_admin_time_conditions(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -40,19 +40,19 @@ def is_valid_get_all_device_admin_time_conditions(json_schema_validate, obj):
     return True
 
 
-def get_all_device_admin_time_conditions(api):
-    endpoint_result = api.device_administration_time_date_conditions.get_all_device_admin_time_conditions(
+def get_device_admin_time_conditions(api):
+    endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_conditions(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_get_all_device_admin_time_conditions(api, validator):
+def test_get_device_admin_time_conditions(api, validator):
     try:
-        assert is_valid_get_all_device_admin_time_conditions(
+        assert is_valid_get_device_admin_time_conditions(
             validator,
-            get_all_device_admin_time_conditions(api)
+            get_device_admin_time_conditions(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -60,19 +60,19 @@ def test_get_all_device_admin_time_conditions(api, validator):
             raise original_e
 
 
-def get_all_device_admin_time_conditions_default(api):
-    endpoint_result = api.device_administration_time_date_conditions.get_all_device_admin_time_conditions(
+def get_device_admin_time_conditions_default(api):
+    endpoint_result = api.device_administration_time_date_conditions.get_device_admin_time_conditions(
 
     )
     return endpoint_result
 
 
 @pytest.mark.device_administration_time_date_conditions
-def test_get_all_device_admin_time_conditions_default(api, validator):
+def test_get_device_admin_time_conditions_default(api, validator):
     try:
-        assert is_valid_get_all_device_admin_time_conditions(
+        assert is_valid_get_device_admin_time_conditions(
             validator,
-            get_all_device_admin_time_conditions_default(api)
+            get_device_admin_time_conditions_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -96,17 +96,18 @@ def create_device_admin_time_condition(api):
         attribute_id='string',
         attribute_name='string',
         attribute_value='string',
-        children=[{'conditionType': 'string', 'isNegate': True}],
+        children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
-        dates_range={'startDate': 'string', 'endDate': 'string'},
-        dates_range_exception={'startDate': 'string', 'endDate': 'string'},
+        dates_range={'endDate': 'string', 'startDate': 'string'},
+        dates_range_exception={'endDate': 'string', 'startDate': 'string'},
         description='string',
         dictionary_name='string',
         dictionary_value='string',
-        hours_range={'startTime': 'string', 'endTime': 'string'},
-        hours_range_exception={'startTime': 'string', 'endTime': 'string'},
+        hours_range={'endTime': 'string', 'startTime': 'string'},
+        hours_range_exception={'endTime': 'string', 'startTime': 'string'},
         id='string',
         is_negate=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         operator='string',
         payload=None,
@@ -146,6 +147,7 @@ def create_device_admin_time_condition_default(api):
         hours_range_exception=None,
         id=None,
         is_negate=None,
+        link=None,
         name=None,
         operator=None,
         payload=None,
@@ -234,17 +236,18 @@ def update_device_admin_time_condition_by_id(api):
         attribute_id='string',
         attribute_name='string',
         attribute_value='string',
-        children=[{'conditionType': 'string', 'isNegate': True}],
+        children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
-        dates_range={'startDate': 'string', 'endDate': 'string'},
-        dates_range_exception={'startDate': 'string', 'endDate': 'string'},
+        dates_range={'endDate': 'string', 'startDate': 'string'},
+        dates_range_exception={'endDate': 'string', 'startDate': 'string'},
         description='string',
         dictionary_name='string',
         dictionary_value='string',
-        hours_range={'startTime': 'string', 'endTime': 'string'},
-        hours_range_exception={'startTime': 'string', 'endTime': 'string'},
+        hours_range={'endTime': 'string', 'startTime': 'string'},
+        hours_range_exception={'endTime': 'string', 'startTime': 'string'},
         id='string',
         is_negate=True,
+        link={'href': 'string', 'rel': 'string', 'type': 'string'},
         name='string',
         operator='string',
         payload=None,
@@ -284,6 +287,7 @@ def update_device_admin_time_condition_by_id_default(api):
         hours_range=None,
         hours_range_exception=None,
         is_negate=None,
+        link=None,
         name=None,
         operator=None,
         payload=None,
