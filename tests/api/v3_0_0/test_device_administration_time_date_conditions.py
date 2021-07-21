@@ -93,6 +93,8 @@ def is_valid_create_device_admin_time_condition(json_schema_validate, obj):
 def create_device_admin_time_condition(api):
     endpoint_result = api.device_administration_time_date_conditions.create_device_admin_time_condition(
         active_validation=False,
+        attribute_id='string',
+        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
@@ -131,6 +133,8 @@ def test_create_device_admin_time_condition(api, validator):
 def create_device_admin_time_condition_default(api):
     endpoint_result = api.device_administration_time_date_conditions.create_device_admin_time_condition(
         active_validation=False,
+        attribute_id=None,
+        attribute_name=None,
         attribute_value=None,
         children=None,
         condition_type=None,
@@ -229,6 +233,8 @@ def is_valid_update_device_admin_time_condition_by_id(json_schema_validate, obj)
 def update_device_admin_time_condition_by_id(api):
     endpoint_result = api.device_administration_time_date_conditions.update_device_admin_time_condition_by_id(
         active_validation=False,
+        attribute_id='string',
+        attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
         condition_type='string',
@@ -268,6 +274,8 @@ def update_device_admin_time_condition_by_id_default(api):
     endpoint_result = api.device_administration_time_date_conditions.update_device_admin_time_condition_by_id(
         active_validation=False,
         id='string',
+        attribute_id=None,
+        attribute_name=None,
         attribute_value=None,
         children=None,
         condition_type=None,

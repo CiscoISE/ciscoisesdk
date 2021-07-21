@@ -144,6 +144,8 @@ class DeviceAdministrationConditions(object):
         )
 
     def create_device_admin_condition(self,
+                                      attribute_id=None,
+                                      attribute_name=None,
                                       attribute_value=None,
                                       children=None,
                                       condition_type=None,
@@ -168,6 +170,12 @@ class DeviceAdministrationConditions(object):
         """Device Admin Creates a library condition.
 
         Args:
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
             attribute_value(string): Attribute value for condition
                 Value type is specified in dictionary
                 object   if multiple values allowed is
@@ -334,6 +342,10 @@ class DeviceAdministrationConditions(object):
                     id,
                 'name':
                     name,
+                'attributeName':
+                    attribute_name,
+                'attributeId':
+                    attribute_id,
                 'attributeValue':
                     attribute_value,
                 'dictionaryName':
@@ -378,6 +390,8 @@ class DeviceAdministrationConditions(object):
         return self._object_factory('bpm_abc25887a5daab1216195e08cbd49_v3_0_0', _api_response)
 
     def create(self,
+               attribute_id=None,
+               attribute_name=None,
                attribute_value=None,
                children=None,
                condition_type=None,
@@ -404,6 +418,8 @@ class DeviceAdministrationConditions(object):
         DeviceAdministrationConditions.create_device_admin_condition>`_
         """
         return self.create_device_admin_condition(
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,
@@ -646,6 +662,8 @@ class DeviceAdministrationConditions(object):
 
     def update_device_admin_condition_by_name(self,
                                               name,
+                                              attribute_id=None,
+                                              attribute_name=None,
                                               attribute_value=None,
                                               children=None,
                                               condition_type=None,
@@ -669,6 +687,12 @@ class DeviceAdministrationConditions(object):
         """Device Admin Update library condition using condition name.
 
         Args:
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
             attribute_value(string): Attribute value for condition
                 Value type is specified in dictionary
                 object   if multiple values allowed is
@@ -839,6 +863,10 @@ class DeviceAdministrationConditions(object):
                     id,
                 'name':
                     name,
+                'attributeName':
+                    attribute_name,
+                'attributeId':
+                    attribute_id,
                 'attributeValue':
                     attribute_value,
                 'dictionaryName':
@@ -886,6 +914,8 @@ class DeviceAdministrationConditions(object):
 
     def update_by_name(self,
                        name,
+                       attribute_id=None,
+                       attribute_name=None,
                        attribute_value=None,
                        children=None,
                        condition_type=None,
@@ -912,6 +942,8 @@ class DeviceAdministrationConditions(object):
         """
         return self.update_device_admin_condition_by_name(
             name=name,
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,
@@ -1158,6 +1190,8 @@ class DeviceAdministrationConditions(object):
 
     def update_device_admin_condition_by_id(self,
                                             id,
+                                            attribute_id=None,
+                                            attribute_name=None,
                                             attribute_value=None,
                                             children=None,
                                             condition_type=None,
@@ -1181,6 +1215,12 @@ class DeviceAdministrationConditions(object):
         """Device Admin Update library condition.
 
         Args:
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
             attribute_value(string): Attribute value for condition
                 Value type is specified in dictionary
                 object   if multiple values allowed is
@@ -1351,6 +1391,10 @@ class DeviceAdministrationConditions(object):
                     id,
                 'name':
                     name,
+                'attributeName':
+                    attribute_name,
+                'attributeId':
+                    attribute_id,
                 'attributeValue':
                     attribute_value,
                 'dictionaryName':
@@ -1397,6 +1441,8 @@ class DeviceAdministrationConditions(object):
 
     def update_by_id(self,
                      id,
+                     attribute_id=None,
+                     attribute_name=None,
                      attribute_value=None,
                      children=None,
                      condition_type=None,
@@ -1423,6 +1469,8 @@ class DeviceAdministrationConditions(object):
         """
         return self.update_device_admin_condition_by_id(
             id=id,
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,

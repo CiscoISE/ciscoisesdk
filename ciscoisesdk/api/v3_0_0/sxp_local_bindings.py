@@ -161,6 +161,8 @@ class SxpLocalBindings(object):
 
     def update_sxp_local_bindings_by_id(self,
                                         id,
+                                        binding_name=None,
+                                        description=None,
                                         ip_address_or_host=None,
                                         sgt=None,
                                         sxp_vpn=None,
@@ -172,6 +174,11 @@ class SxpLocalBindings(object):
         """This API allows the client to update a SXP local binding.
 
         Args:
+            binding_name(string): This field is depricated from
+                Cisco ISE 3.0, property of the request
+                body.
+            description(string): description, property of the
+                request body.
             id(string): id, property of the request body.
             ip_address_or_host(string): IP address for static
                 mapping (hostname is not supported),
@@ -254,6 +261,10 @@ class SxpLocalBindings(object):
             _tmp_payload = {
                 'id':
                     id,
+                'description':
+                    description,
+                'bindingName':
+                    binding_name,
                 'ipAddressOrHost':
                     ip_address_or_host,
                 'sxpVpn':
@@ -289,6 +300,8 @@ class SxpLocalBindings(object):
 
     def update_by_id(self,
                      id,
+                     binding_name=None,
+                     description=None,
                      ip_address_or_host=None,
                      sgt=None,
                      sxp_vpn=None,
@@ -303,6 +316,8 @@ class SxpLocalBindings(object):
         """
         return self.update_sxp_local_bindings_by_id(
             id=id,
+            binding_name=binding_name,
+            description=description,
             ip_address_or_host=ip_address_or_host,
             sgt=sgt,
             sxp_vpn=sxp_vpn,
@@ -668,6 +683,8 @@ class SxpLocalBindings(object):
         ), access_next_list=["SearchResult", "nextPage", "href"])
 
     def create_sxp_local_bindings(self,
+                                  binding_name=None,
+                                  description=None,
                                   id=None,
                                   ip_address_or_host=None,
                                   sgt=None,
@@ -680,6 +697,11 @@ class SxpLocalBindings(object):
         """This API creates a SXP local binding.
 
         Args:
+            binding_name(string): This field is depricated from
+                Cisco ISE 3.0, property of the request
+                body.
+            description(string): description, property of the
+                request body.
             id(string): id, property of the request body.
             ip_address_or_host(string): IP address for static
                 mapping (hostname is not supported),
@@ -758,6 +780,10 @@ class SxpLocalBindings(object):
             _tmp_payload = {
                 'id':
                     id,
+                'description':
+                    description,
+                'bindingName':
+                    binding_name,
                 'ipAddressOrHost':
                     ip_address_or_host,
                 'sxpVpn':
@@ -791,6 +817,8 @@ class SxpLocalBindings(object):
         return self._object_factory('bpm_cf67e0155eab895b50d1a377f21_v3_0_0', _api_response)
 
     def create(self,
+               binding_name=None,
+               description=None,
                id=None,
                ip_address_or_host=None,
                sgt=None,
@@ -805,6 +833,8 @@ class SxpLocalBindings(object):
         SxpLocalBindings.create_sxp_local_bindings>`_
         """
         return self.create_sxp_local_bindings(
+            binding_name=binding_name,
+            description=description,
             id=id,
             ip_address_or_host=ip_address_or_host,
             sgt=sgt,

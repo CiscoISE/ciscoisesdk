@@ -47,6 +47,12 @@ class JSONSchemaValidatorF3B949De4363575398Dc1C9E681630Bb(object):
                 "properties": {
                 "response": {
                 "properties": {
+                "attributeId": {
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
                 "attributeValue": {
                 "type": "string"
                 },

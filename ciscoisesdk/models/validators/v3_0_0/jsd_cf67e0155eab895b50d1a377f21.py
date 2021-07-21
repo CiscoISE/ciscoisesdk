@@ -47,6 +47,13 @@ class JSONSchemaValidatorCf67E0155EaB895B50D1A377F21(object):
                 "properties": {
                 "ERSSxpLocalBindings": {
                 "properties": {
+                "bindingName": {
+                "type": "string"
+                },
+                "description":
+                 {
+                "type": "string"
+                },
                 "id": {
                 "type": "string"
                 },

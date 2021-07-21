@@ -144,6 +144,8 @@ class NetworkAccessConditions(object):
         )
 
     def create_network_access_condition(self,
+                                        attribute_id=None,
+                                        attribute_name=None,
                                         attribute_value=None,
                                         children=None,
                                         condition_type=None,
@@ -195,6 +197,12 @@ class NetworkAccessConditions(object):
         TimeAndDate .    .
 
         Args:
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
             attribute_value(string): Attribute value for condition
                 Value type is specified in dictionary
                 object   if multiple values allowed is
@@ -361,6 +369,10 @@ class NetworkAccessConditions(object):
                     id,
                 'name':
                     name,
+                'attributeName':
+                    attribute_name,
+                'attributeId':
+                    attribute_id,
                 'attributeValue':
                     attribute_value,
                 'dictionaryName':
@@ -405,6 +417,8 @@ class NetworkAccessConditions(object):
         return self._object_factory('bpm_e7bd468ee94f53869e52e84454efd0e6_v3_0_0', _api_response)
 
     def create(self,
+               attribute_id=None,
+               attribute_name=None,
                attribute_value=None,
                children=None,
                condition_type=None,
@@ -431,6 +445,8 @@ class NetworkAccessConditions(object):
         NetworkAccessConditions.create_network_access_condition>`_
         """
         return self.create_network_access_condition(
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,
@@ -649,6 +665,8 @@ class NetworkAccessConditions(object):
 
     def update_network_access_condition_by_name(self,
                                                 name,
+                                                attribute_id=None,
+                                                attribute_name=None,
                                                 attribute_value=None,
                                                 children=None,
                                                 condition_type=None,
@@ -672,6 +690,12 @@ class NetworkAccessConditions(object):
         """Network Access Update library condition using condition name.
 
         Args:
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
             attribute_value(string): Attribute value for condition
                 Value type is specified in dictionary
                 object   if multiple values allowed is
@@ -842,6 +866,10 @@ class NetworkAccessConditions(object):
                     id,
                 'name':
                     name,
+                'attributeName':
+                    attribute_name,
+                'attributeId':
+                    attribute_id,
                 'attributeValue':
                     attribute_value,
                 'dictionaryName':
@@ -889,6 +917,8 @@ class NetworkAccessConditions(object):
 
     def update_by_name(self,
                        name,
+                       attribute_id=None,
+                       attribute_name=None,
                        attribute_value=None,
                        children=None,
                        condition_type=None,
@@ -915,6 +945,8 @@ class NetworkAccessConditions(object):
         """
         return self.update_network_access_condition_by_name(
             name=name,
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,
@@ -1162,6 +1194,8 @@ class NetworkAccessConditions(object):
 
     def update_network_access_condition_by_id(self,
                                               id,
+                                              attribute_id=None,
+                                              attribute_name=None,
                                               attribute_value=None,
                                               children=None,
                                               condition_type=None,
@@ -1185,6 +1219,12 @@ class NetworkAccessConditions(object):
         """Network Access Update library condition.
 
         Args:
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
             attribute_value(string): Attribute value for condition
                 Value type is specified in dictionary
                 object   if multiple values allowed is
@@ -1355,6 +1395,10 @@ class NetworkAccessConditions(object):
                     id,
                 'name':
                     name,
+                'attributeName':
+                    attribute_name,
+                'attributeId':
+                    attribute_id,
                 'attributeValue':
                     attribute_value,
                 'dictionaryName':
@@ -1401,6 +1445,8 @@ class NetworkAccessConditions(object):
 
     def update_by_id(self,
                      id,
+                     attribute_id=None,
+                     attribute_name=None,
                      attribute_value=None,
                      children=None,
                      condition_type=None,
@@ -1427,6 +1473,8 @@ class NetworkAccessConditions(object):
         """
         return self.update_network_access_condition_by_id(
             id=id,
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,

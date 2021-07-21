@@ -93,7 +93,7 @@ def is_valid_get_user_groups(json_schema_validate, obj):
 def get_user_groups(api):
     endpoint_result = api.active_directory.get_user_groups(
         active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
         payload=None
     )
@@ -219,7 +219,7 @@ def is_valid_leave_domain(json_schema_validate, obj):
 def leave_domain(api):
     endpoint_result = api.active_directory.leave_domain(
         active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
         payload=None
     )
@@ -275,7 +275,7 @@ def is_valid_is_user_member_of_groups(json_schema_validate, obj):
 def is_user_member_of_groups(api):
     endpoint_result = api.active_directory.is_user_member_of_groups(
         active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
         payload=None
     )
@@ -385,7 +385,7 @@ def is_valid_join_domain_with_all_nodes(json_schema_validate, obj):
 def join_domain_with_all_nodes(api):
     endpoint_result = api.active_directory.join_domain_with_all_nodes(
         active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
         payload=None
     )
@@ -441,7 +441,7 @@ def is_valid_leave_domain_with_all_nodes(json_schema_validate, obj):
 def leave_domain_with_all_nodes(api):
     endpoint_result = api.active_directory.leave_domain_with_all_nodes(
         active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
         payload=None
     )
@@ -497,7 +497,7 @@ def is_valid_get_groups_by_domain(json_schema_validate, obj):
 def get_groups_by_domain(api):
     endpoint_result = api.active_directory.get_groups_by_domain(
         active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
         payload=None
     )
@@ -653,7 +653,7 @@ def is_valid_join_domain(json_schema_validate, obj):
 def join_domain(api):
     endpoint_result = api.active_directory.join_domain(
         active_validation=False,
-        additional_data=[{'name': 'string', 'value': 'string'}],
+        additional_data=[{'value': 'string', 'name': 'string'}],
         id='string',
         payload=None
     )

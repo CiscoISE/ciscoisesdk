@@ -144,6 +144,8 @@ class NetworkAccessTimeDateConditions(object):
         )
 
     def create_network_access_time_condition(self,
+                                             attribute_id=None,
+                                             attribute_name=None,
                                              attribute_value=None,
                                              children=None,
                                              condition_type=None,
@@ -168,6 +170,12 @@ class NetworkAccessTimeDateConditions(object):
         """Network Access Creates time/date condition.
 
         Args:
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
             attribute_value(string): Attribute value for condition
                 Value type is specified in dictionary
                 object   if multiple values allowed is
@@ -334,6 +342,10 @@ class NetworkAccessTimeDateConditions(object):
                     id,
                 'name':
                     name,
+                'attributeName':
+                    attribute_name,
+                'attributeId':
+                    attribute_id,
                 'attributeValue':
                     attribute_value,
                 'dictionaryName':
@@ -378,6 +390,8 @@ class NetworkAccessTimeDateConditions(object):
         return self._object_factory('bpm_b314d32b258a1b53c5c84cf84d396_v3_0_0', _api_response)
 
     def create(self,
+               attribute_id=None,
+               attribute_name=None,
                attribute_value=None,
                children=None,
                condition_type=None,
@@ -404,6 +418,8 @@ class NetworkAccessTimeDateConditions(object):
         NetworkAccessTimeDateConditions.create_network_access_time_condition>`_
         """
         return self.create_network_access_time_condition(
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,
@@ -505,6 +521,8 @@ class NetworkAccessTimeDateConditions(object):
 
     def update_network_access_time_condition_by_id(self,
                                                    id,
+                                                   attribute_id=None,
+                                                   attribute_name=None,
                                                    attribute_value=None,
                                                    children=None,
                                                    condition_type=None,
@@ -528,6 +546,12 @@ class NetworkAccessTimeDateConditions(object):
         """Network Access Update network condition.
 
         Args:
+            attribute_id(string): Dictionary attribute id
+                (Optional), used for additional
+                verification, property of the request
+                body.
+            attribute_name(string): Dictionary attribute name,
+                property of the request body.
             attribute_value(string): Attribute value for condition
                 Value type is specified in dictionary
                 object   if multiple values allowed is
@@ -698,6 +722,10 @@ class NetworkAccessTimeDateConditions(object):
                     id,
                 'name':
                     name,
+                'attributeName':
+                    attribute_name,
+                'attributeId':
+                    attribute_id,
                 'attributeValue':
                     attribute_value,
                 'dictionaryName':
@@ -744,6 +772,8 @@ class NetworkAccessTimeDateConditions(object):
 
     def update_by_id(self,
                      id,
+                     attribute_id=None,
+                     attribute_name=None,
                      attribute_value=None,
                      children=None,
                      condition_type=None,
@@ -770,6 +800,8 @@ class NetworkAccessTimeDateConditions(object):
         """
         return self.update_network_access_time_condition_by_id(
             id=id,
+            attribute_id=attribute_id,
+            attribute_name=attribute_name,
             attribute_value=attribute_value,
             children=children,
             condition_type=condition_type,

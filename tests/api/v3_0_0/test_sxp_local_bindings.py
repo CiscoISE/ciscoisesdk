@@ -93,6 +93,8 @@ def is_valid_update_sxp_local_bindings_by_id(json_schema_validate, obj):
 def update_sxp_local_bindings_by_id(api):
     endpoint_result = api.sxp_local_bindings.update_sxp_local_bindings_by_id(
         active_validation=False,
+        binding_name='string',
+        description='string',
         id='string',
         ip_address_or_host='string',
         payload=None,
@@ -120,6 +122,8 @@ def update_sxp_local_bindings_by_id_default(api):
     endpoint_result = api.sxp_local_bindings.update_sxp_local_bindings_by_id(
         active_validation=False,
         id='string',
+        binding_name=None,
+        description=None,
         ip_address_or_host=None,
         payload=None,
         sgt=None,
@@ -265,6 +269,8 @@ def is_valid_create_sxp_local_bindings(json_schema_validate, obj):
 def create_sxp_local_bindings(api):
     endpoint_result = api.sxp_local_bindings.create_sxp_local_bindings(
         active_validation=False,
+        binding_name='string',
+        description='string',
         id='string',
         ip_address_or_host='string',
         payload=None,
@@ -291,6 +297,8 @@ def test_create_sxp_local_bindings(api, validator):
 def create_sxp_local_bindings_default(api):
     endpoint_result = api.sxp_local_bindings.create_sxp_local_bindings(
         active_validation=False,
+        binding_name=None,
+        description=None,
         id=None,
         ip_address_or_host=None,
         payload=None,

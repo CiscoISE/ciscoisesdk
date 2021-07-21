@@ -80,6 +80,12 @@ class JSONSchemaValidatorFcf7754D5B45523A8227D37C476A1880(object):
                 "properties": {
                 "condition": {
                 "properties": {
+                "attributeId": {
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
                 "attributeValue": {
                 "type": "string"
                 },

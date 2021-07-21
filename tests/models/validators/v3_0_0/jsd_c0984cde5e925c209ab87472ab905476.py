@@ -48,6 +48,12 @@ class JSONSchemaValidatorC0984Cde5E925C209Ab87472Ab905476(object):
                 "response": {
                 "items": {
                 "properties": {
+                "attributeId": {
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
                 "attributeValue": {
                 "type": "string"
                 },

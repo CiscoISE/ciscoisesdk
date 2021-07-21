@@ -83,6 +83,12 @@ class JSONSchemaValidatorDc966C73C65649A244D507Bd53Fd19(object):
                 "properties": {
                 "condition": {
                 "properties": {
+                "attributeId": {
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
                 "attributeValue": {
                 "type": "string"
                 },
