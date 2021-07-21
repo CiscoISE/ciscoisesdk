@@ -5,26 +5,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.0] - 2021-07-21
 ### Added
 - Missing parameters for functions
 - `get_version` functions for ERS wrapper classes.
 - Missing functions:
- + AncPolicy.get_anc_policy_generator
- + BackupAndRestore.update_scheduled_config_backup
- + CertificateTemplate.get_certificate_template_generator
- + DeviceAdministrationAuthenticationRules.reset_hit_counts_device_admin_authentication_rules
- + DeviceAdministrationAuthorizationExceptionRules.reset_hit_counts_device_admin_local_exceptions
- + DeviceAdministrationAuthorizationGlobalExceptionRules.reset_hit_counts_device_admin_global_exceptions
- + DeviceAdministrationAuthorizationRules.reset_hit_counts_device_admin_authorization_rules
- + DeviceAdministrationPolicySet.reset_hit_counts_device_admin_policy_sets
- + MyDevicePortal.delete_my_device_portal_by_id
- + NetworkAccessAuthenticationRules.reset_hit_counts_network_access_authentication_rules
- + NetworkAccessAuthorizationExceptionRules.reset_hit_counts_network_access_local_exceptions
- + NetworkAccessAuthorizationRules.reset_hit_counts_network_access_authorization_rules
- + NetworkAccessPolicySet.reset_hit_counts_network_access_policy_sets
- + SessionServiceNode.get_session_service_node_generator
- + SupportBundleStatus.get_support_bundle_status_generator
- + TacacsCommandSets.get_tacacs_command_sets_generator
+  + AncPolicy.get_anc_policy_generator
+  + BackupAndRestore.update_scheduled_config_backup
+  + CertificateTemplate.get_certificate_template_generator
+  + DeviceAdministrationAuthenticationRules.reset_hit_counts_device_admin_authentication_rules
+  + DeviceAdministrationAuthorizationExceptionRules.reset_hit_counts_device_admin_local_exceptions
+  + DeviceAdministrationAuthorizationGlobalExceptionRules.reset_hit_counts_device_admin_global_exceptions
+  + DeviceAdministrationAuthorizationRules.reset_hit_counts_device_admin_authorization_rules
+  + DeviceAdministrationPolicySet.reset_hit_counts_device_admin_policy_sets
+  + MyDevicePortal.delete_my_device_portal_by_id
+  + NetworkAccessAuthenticationRules.reset_hit_counts_network_access_authentication_rules
+  + NetworkAccessAuthorizationExceptionRules.reset_hit_counts_network_access_local_exceptions
+  + NetworkAccessAuthorizationRules.reset_hit_counts_network_access_authorization_rules
+  + NetworkAccessPolicySet.reset_hit_counts_network_access_policy_sets
+  + SessionServiceNode.get_session_service_node_generator
+  + SupportBundleStatus.get_support_bundle_status_generator
+  + TacacsCommandSets.get_tacacs_command_sets_generator
 - Aliases for functions (eg. `get_all`, `get_by_id`, `get_by_name`, `update_by_id`, `delete_by_id`, `create`, and others)
 
 ### Changed
@@ -96,7 +98,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   + `identity_group.delete_identity_group_by_id`
 
 
-## [1.0.0] - 2021-07-xx
-
-
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v0.5.1...develop_v1
+[1.0.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v0.5.1...v1.0.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...main
