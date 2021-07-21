@@ -92,7 +92,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Removed module
   + `service`
-  + `version_info`
 - Removed unknown functions for the API
   + `identity_group.delete_identity_group_by_id`
 

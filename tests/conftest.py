@@ -378,6 +378,9 @@ def pytest_configure(config):
         "markers", "version_and_patch: version_and_patch wrapper test"
     )
     config.addinivalue_line(
+        "markers", "version_info: version_info wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "endpoint: endpoint wrapper test"
     )
     config.addinivalue_line(

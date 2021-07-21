@@ -637,6 +637,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     TRUST_SEC_CONFIGURATION_3f9e6e1c33155fdd9a88f48d093f375b_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/config/trustsec/getEgressMatrices")
     TRUST_SEC_SXP_900a7bddaf5159e68b2caeb19b9979c4_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/sxp/getBindings")
     VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN = re.compile(r"/ers/config/op/systemconfig/iseversion")
+    VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN = re.compile(r"/ers/config/string/versioninfo")
 
     def matches_TASKS_38eb7df265a55d2cbedb08847549b39a(self):
         return re.search(
@@ -12014,6 +12015,24 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
+    def matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f(self):
+        return re.search(
+            self.VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN,
+            self.path
+        )
+
+    def version_info_get_version_info_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'VersionInfo': {'currentServerVersion': 'string', 'supportedVersions': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
     def do_GET(self):
 
         if self.matches_TASKS_38eb7df265a55d2cbedb08847549b39a():
@@ -13274,6 +13293,10 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
 
         if self.matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff():
             self.version_and_patch_get_ise_version_and_patch_response()
+            return
+
+        if self.matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f():
+            self.version_info_get_version_info_response()
             return
 
     def do_POST(self):

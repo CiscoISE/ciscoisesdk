@@ -1046,6 +1046,15 @@ version_and_patch
 
 
 
+.. _version_info_3_0_0:
+
+version_info
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_0_0.version_info.VersionInfo()
+
+
+
 .. _endpoint_3_0_0:
 
 endpoint

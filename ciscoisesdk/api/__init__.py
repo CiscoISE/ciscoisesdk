@@ -267,6 +267,8 @@ from .v3_0_0.trust_sec_sxp import \
     TrustSecSxp as TrustSecSxp_v3_0_0
 from .v3_0_0.version_and_patch import \
     VersionAndPatch as VersionAndPatch_v3_0_0
+from .v3_0_0.version_info import \
+    VersionInfo as VersionInfo_v3_0_0
 from .v3_0_0.endpoint import \
     Endpoint as Endpoint_v3_0_0
 from .v3_0_0.portal import \
@@ -998,6 +1000,10 @@ class IdentityServicesEngineAPI(object):
                 )
             self.version_and_patch = \
                 VersionAndPatch_v3_0_0(
+                    self._session_ers, object_factory, _validator
+                )
+            self.version_info = \
+                VersionInfo_v3_0_0(
                     self._session_ers, object_factory, _validator
                 )
             self.endpoint = \

@@ -250,6 +250,8 @@ from ciscoisesdk.api.v3_0_0.trust_sec_sxp import \
     TrustSecSxp as TrustSecSxp_v3_0_0
 from ciscoisesdk.api.v3_0_0.version_and_patch import \
     VersionAndPatch as VersionAndPatch_v3_0_0
+from ciscoisesdk.api.v3_0_0.version_info import \
+    VersionInfo as VersionInfo_v3_0_0
 from ciscoisesdk.api.v3_0_0.endpoint import \
     Endpoint as Endpoint_v3_0_0
 from ciscoisesdk.api.v3_0_0.portal import \
@@ -457,6 +459,7 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.trust_sec_configuration, TrustSecConfiguration_v3_0_0)
             assert isinstance(api.trust_sec_sxp, TrustSecSxp_v3_0_0)
             assert isinstance(api.version_and_patch, VersionAndPatch_v3_0_0)
+            assert isinstance(api.version_info, VersionInfo_v3_0_0)
             assert isinstance(api.endpoint, Endpoint_v3_0_0)
             assert isinstance(api.portal, Portal_v3_0_0)
             assert isinstance(api.px_grid_node, PxGridNode_v3_0_0)
