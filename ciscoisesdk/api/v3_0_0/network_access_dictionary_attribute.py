@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class NetworkAccessDictionaryAttribute(object):
-    """Identity Services Engine Network Access - Dictionary Attribute API (version: 3.0.0).
+    """Identity Services Engine Network Access - Dictionary Attribute API (version: 3.0.0 and 3.1.0).
 
     Wraps the Identity Services Engine Network Access - Dictionary Attribute
     API and exposes the API as native Python

@@ -398,7 +398,7 @@ class IdentityServicesEngineAPI(object):
             VersionError: If the version is not provided via the version
                 argument or an environment variable, or it is not a
                 Identity Services Engine API supported version
-                ['3.0.0'].
+                ['3.0.0', '3.1.0'].
 
         """
         check_type(single_request_timeout, int)
@@ -422,11 +422,11 @@ class IdentityServicesEngineAPI(object):
             check_type(mnt_base_url, basestring, may_be_none=False)
             check_type(px_grid_base_url, basestring, may_be_none=False)
 
-        if version not in ['3.0.0']:
+        if version not in ['3.0.0', '3.1.0']:
             raise VersionError(
                 'Unknown API version, '
                 + 'known versions are {}'.format(
-                    '3.0.0.'
+                    '3.0.0 and 3.1.0.'
                 )
             )
 
@@ -561,7 +561,7 @@ class IdentityServicesEngineAPI(object):
         _validator = validator(version).json_schema_validate
 
         # API wrappers
-        if version == '3.0.0':
+        if version == '3.0.0' or version == '3.1.0':
             self.aci_bindings = \
                 AciBindings_v3_0_0(
                     self._session_ers, object_factory, _validator

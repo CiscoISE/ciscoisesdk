@@ -27,7 +27,7 @@ By default, ciscoisesdk will look for the following environment variables to cre
 
     * ``IDENTITY_SERVICES_ENGINE_DEBUG`` - Tells the SDK whether to log request and response information. Useful for debugging and seeing what is going on under the hood. Defaults to False.
 
-    * ``IDENTITY_SERVICES_ENGINE_VERSION`` - Identity Services Engine API version to use. Defaults to '3.0.0'.
+    * ``IDENTITY_SERVICES_ENGINE_VERSION`` - Identity Services Engine API version to use. Defaults to '3.1.0'.
 
     * ``IDENTITY_SERVICES_ENGINE_ENCODED_AUTH`` - It takes priority. It is the `username:password` encoded in base 64.
       For example 'ZGV2bmV0dXNlcjpDaXNjbzEyMyEK' which decoded is 'devnetuser:Cisco123!'
@@ -146,7 +146,7 @@ If you don't provide a known version and try to create a new :class:`IdentitySer
       File "<stdin>", line 1, in <module>
       File "ciscoisesdk/api/__init__.py", line 344, in __init__
         raise VersionError(error_message)
-    VersionError: Unknown API version, known versions are 3.0.0.
+    VersionError: Unknown API version, known versions are 3.0.0 and 3.1.0.
 
 
 Use the arguments to manually provide enough information for the HTTP Basic Auth process, 
@@ -156,17 +156,17 @@ when creating a new :class:`IdentityServicesEngineAPI` connection object.
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
     >>> # Create a IdentityServicesEngineAPI connection object;
-    >>> # Using encoded_auth, with Identity Services Engine API version 3.0.0
+    >>> # Using encoded_auth, with Identity Services Engine API version 3.1.0
     >>> api = IdentityServicesEngineAPI(encoded_auth='YWRtaW46QzFzY28xMjM0NQo=',
     ...                                 base_url="https://dcloud-dna-ise-rtp.cisco.com",
-    ...                                 version='3.0.0',
+    ...                                 version='3.1.0',
     ...                                 uses_api_gateway=True)
     >>> # Create a IdentityServicesEngineAPI connection object;
-    >>> # Using username, and password, with ISE API version 3.0.0
+    >>> # Using username, and password, with ISE API version 3.1.0
     >>> api = IdentityServicesEngineAPI(username='admin', password='C1sco12345',
     ...                                 uses_api_gateway=True,
     ...                                 base_url="https://dcloud-dna-ise-rtp.cisco.com",
-    ...                                 version='3.0.0')
+    ...                                 version='3.1.0')
 
 
 Use the arguments to provide the URLs required depending on the uses_api_gateway value.
@@ -183,7 +183,7 @@ Use the arguments to provide the URLs required depending on the uses_api_gateway
     ...                                 password='C1sco12345',
     ...                                 uses_api_gateway=True,
     ...                                 base_url='https://dcloud-dna-ise-rtp.cisco.com',
-    ...                                 version='3.0.0',
+    ...                                 version='3.1.0',
     ...                                 verify=True)
     >>> # Not using API Gateway
     >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!',
@@ -192,7 +192,7 @@ Use the arguments to provide the URLs required depending on the uses_api_gateway
     ...                                 ui_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
     ...                                 mnt_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
     ...                                 px_grid_base_url="https://dcloud-dna-ise-rtp.cisco.com:8910",
-    ...                                 version='3.0.0')
+    ...                                 version='3.1.0')
 
 
 Note that this can be very useful if you are reading authentication credentials
@@ -203,9 +203,9 @@ from a file or database and/or when you want to create more than one connection 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
     >>> kingston_auth = 'ZG5hY2VudGVydXNlcjpDaXNjbzEyMyEK'
     >>> london_auth = ('london', 'rcx0cf43!')
-    >>> kingston_api = IdentityServicesEngineAPI(encoded_auth=kingston_auth, base_url="https://dcloud-dna-ise-rtp.cisco.com", version='3.0.0')
+    >>> kingston_api = IdentityServicesEngineAPI(encoded_auth=kingston_auth, base_url="https://dcloud-dna-ise-rtp.cisco.com", version='3.1.0')
     >>> london_api = IdentityServicesEngineAPI(*london_auth, base_url="https://128.107.71.199:443",
-    ...                                        version='3.0.0', uses_api_gateway=True)  # * Unpacks tuple
+    ...                                        version='3.1.0', uses_api_gateway=True)  # * Unpacks tuple
 
 
 API Gateway
@@ -228,13 +228,13 @@ If you don't provide the URLs necessary and try to create a new :class:`Identity
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
     >>> # Create a IdentityServicesEngineAPI connection object;
-    >>> # it uses Identity Services Engine username and password, with ISE API version 3.0.0
+    >>> # it uses Identity Services Engine username and password, with ISE API version 3.1.0
     >>> # The base_url used by default is `from ciscoisesdk.config import DEFAULT_BASE_URL`
     >>> api = IdentityServicesEngineAPI(username='admin',
     ...                                 password='C1sco12345',
     ...                                 uses_api_gateway=True,
     ...                                 base_url=None,
-    ...                                 version='3.0.0',
+    ...                                 version='3.1.0',
     ...                                 verify=True)
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
@@ -254,7 +254,7 @@ If you don't provide the URLs necessary and try to create a new :class:`Identity
     ...                                 ui_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
     ...                                 mnt_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
     ...                                 # px_grid_base_url="https://dcloud-dna-ise-rtp.cisco.com:8910",
-    ...                                 version='3.0.0')
+    ...                                 version='3.1.0')
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
         api = IdentityServicesEngineAPI(username='admin',
@@ -277,7 +277,7 @@ To avoid getting errors like the following:
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
     >>> own_api = IdentityServicesEngineAPI(encoded_auth='dXNlcm5hbWU6cGFzc3dvcmQK',
-    ... base_url="https://128.107.71.199:443", version='3.0.0', uses_api_gateway=True)
+    ... base_url="https://128.107.71.199:443", version='3.1.0', uses_api_gateway=True)
     requests.exceptions.SLError: HTTPSConnectionPool(host='128.107.71.199', port=443):
     Max retries exceeded with url: /dna/system/api/v1/auth/token (Caused by
     SSLError (SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate
@@ -366,6 +366,8 @@ A summary of the structure is available for each version supported
 
 
 + :ref:`v3.0.0 <v3_0_0 summary>`
+
++ :ref:`v3.1.0 <v3_1_0 summary>`
 
 
 
@@ -647,12 +649,12 @@ Custom caller functions help you:
     from ciscoisesdk import api
 
     # Create a IdentityServicesEngineAPI connection object;
-    # it uses Identity Services Engine sandbox URL, username and password, with Identity Services Engine API version 3.0.0.,
+    # it uses Identity Services Engine sandbox URL, username and password, with Identity Services Engine API version 3.1.0.,
     # and requests to verify the server's TLS certificate with verify=True.
     api_ = api.IdentityServicesEngineAPI(username="devnetuser",
         password="Cisco123!",
         base_url="https://dcloud-dna-ise-rtp.cisco.com",
-        version='3.0.0',
+        version='3.1.0',
         verify=True
     )
 

@@ -1436,7 +1436,7 @@ class SchemaValidator:
         self.load_validators(version)
 
     def load_validators(self, version):
-        if version == '3.0.0':
+        if version == '3.0.0' or version == '3.1.0':
             self.json_schema_validators['jsd_f2fcf04554db9ea4cdc3a7024322_v3_0_0'] =\
                 JSONSchemaValidatorF2FcF04554Db9Ea4Cdc3A7024322_v3_0_0()
             self.json_schema_validators['jsd_ac8c8cb9b5007a1e1a6434a20a881_v3_0_0'] =\

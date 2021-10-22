@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class Portal(object):
-    """Identity Services Engine portal API (version: 3.0.0).
+    """Identity Services Engine portal API (version: 3.0.0 and 3.1.0).
 
     Wraps the Identity Services Engine portal
     API and exposes the API as native Python

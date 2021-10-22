@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class NetworkAccessAuthorizationRules(object):
-    """Identity Services Engine Network Access - Authorization Rules API (version: 3.0.0).
+    """Identity Services Engine Network Access - Authorization Rules API (version: 3.0.0 and 3.1.0).
 
     Wraps the Identity Services Engine Network Access - Authorization Rules
     API and exposes the API as native Python

@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class FilterPolicy(object):
-    """Identity Services Engine FilterPolicy API (version: 3.0.0).
+    """Identity Services Engine FilterPolicy API (version: 3.0.0 and 3.1.0).
 
     Wraps the Identity Services Engine FilterPolicy
     API and exposes the API as native Python

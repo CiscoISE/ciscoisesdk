@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class AciBindings(object):
-    """Identity Services Engine ACIBindings API (version: 3.0.0).
+    """Identity Services Engine ACIBindings API (version: 3.0.0 and 3.1.0).
 
     Wraps the Identity Services Engine ACIBindings
     API and exposes the API as native Python

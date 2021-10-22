@@ -26,6 +26,14 @@ v3.0.0 summary
 .. include:: api_structure_table_v3_0_0.rst
 
 
+.. _v3_1_0 summary:
+
+v3.1.0 summary
+--------------
+
+.. include:: api_structure_table_v3_1_0.rst
+
+
 IdentityServicesEngineAPI Class
 ===============================
 
