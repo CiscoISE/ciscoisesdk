@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class EgressMatrixCell(object):
-    """Identity Services Engine EgressMatrixCell API (version: 3.0.0).
+    """Identity Services Engine EgressMatrixCell API (version: 3.0.0 and 3.1.0).
 
     Wraps the Identity Services Engine EgressMatrixCell
     API and exposes the API as native Python

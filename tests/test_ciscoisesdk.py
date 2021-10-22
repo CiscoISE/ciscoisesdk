@@ -348,7 +348,7 @@ class TestIdentityServicesEngineSDK:
     def test_api_object_creation(self, api):
         assert isinstance(api.authentication, Authentication)
         assert isinstance(api.custom_caller, CustomCaller)
-        if api.version == '3.0.0':
+        if api.version == '3.0.0' or api.version == '3.1.0':
             assert isinstance(api.aci_bindings, AciBindings_v3_0_0)
             assert isinstance(api.aci_settings, AciSettings_v3_0_0)
             assert isinstance(api.anc_endpoint, AncEndpoint_v3_0_0)

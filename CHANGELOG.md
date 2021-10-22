@@ -6,6 +6,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [1.1.0] - 2021-10-22
+
+### Added
+- Link of 3.1.0 modules to 3.0.0 version
+
+### Changed
+- Default ISE DEFAULT_VERSION to 3.1.0
+- Update documentation to use ISE v3.1.0
+
+### Removed
+
+
+## [1.0.1] - 2021-09-14
+
+### Added
+
+### Changed
+- Disabled warnings of urllib3 if verify is False
+
+### Removed
+
 ## [1.0.0] - 2021-07-21
 ### Added
 - Missing parameters for functions
@@ -99,4 +121,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [1.0.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v0.5.1...v1.0.0
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...main
+[1.0.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...v1.0.1
+[1.1.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.1...v1.1.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...main

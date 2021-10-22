@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class SessionDirectory(object):
-    """Identity Services Engine Session Directory API (version: 3.0.0).
+    """Identity Services Engine Session Directory API (version: 3.0.0 and 3.1.0).
 
     Wraps the Identity Services Engine Session Directory
     API and exposes the API as native Python

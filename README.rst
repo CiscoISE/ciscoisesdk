@@ -11,14 +11,14 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
     from ciscoisesdk.exceptions import ApiError
 
     # Create a IdentityServicesEngineAPI connection object;
-    # it uses ISE custom URL, username, and password, with ISE API version 3.0.0
+    # it uses ISE custom URL, username, and password, with ISE API version 3.1.0
     # and its API Gateway enabled,
     # and verify=True to verify the server's TLS certificate.
     api = IdentityServicesEngineAPI(username='admin',
                                     password='C1sco12345',
                                     uses_api_gateway=True,
                                     base_url='https://198.18.133.27',
-                                    version='3.0.0',
+                                    version='3.1.0',
                                     verify=True)
     # NOTE: This collection assumes that the ERS APIs and OpenAPIs are enabled.
 
