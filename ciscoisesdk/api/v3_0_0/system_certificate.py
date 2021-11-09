@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class SystemCertificate(object):
-    """Identity Services Engine SystemCertificate API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine SystemCertificate API (version: 3.0.0).
 
     Wraps the Identity Services Engine SystemCertificate
     API and exposes the API as native Python

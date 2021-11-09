@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class NetworkAccessServiceNames(object):
-    """Identity Services Engine Network Access - Service Names API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine Network Access - Service Names API (version: 3.0.0).
 
     Wraps the Identity Services Engine Network Access - Service Names
     API and exposes the API as native Python

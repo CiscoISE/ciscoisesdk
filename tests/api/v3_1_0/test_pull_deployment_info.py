@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_deployment_info(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f9159c9f9a1951568daee7080e1dda47_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_f9159c9f9a1951568daee7080e1dda47_v3_1_0').validate(obj.response)
     return True
 
 
@@ -84,11 +86,13 @@ def test_get_deployment_info_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8698cc09209259dcbde7c851b5a6eda6_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_8698cc09209259dcbde7c851b5a6eda6_v3_1_0').validate(obj.response)
     return True
 
 

@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_byod_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_effdf30a3e3a5781ba1f5cf833395359_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_byod_portal_by_id_default(api, validator):
 def is_valid_update_byod_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_3e38d10b1ea257d49ebce893e87b3419_v3_0_0').validate(obj.response)
     return True
 
@@ -148,10 +152,12 @@ def test_update_byod_portal_by_id_default(api, validator):
 def is_valid_delete_byod_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_df2fb34fbab65254ac87d1be50abd15f_v3_0_0').validate(obj.response)
     return True
 
@@ -198,10 +204,12 @@ def test_delete_byod_portal_by_id_default(api, validator):
 def is_valid_get_byod_portal(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_41a23b580495514394b125800e073c9a_v3_0_0').validate(obj.response)
     return True
 
@@ -258,10 +266,12 @@ def test_get_byod_portal_default(api, validator):
 def is_valid_create_byod_portal(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_afcce33ec863567f94f3b9b73719ff8d_v3_0_0').validate(obj.response)
     return True
 
@@ -324,10 +334,12 @@ def test_create_byod_portal_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_c5d2d9d8c20b58049cd3326850f2292f_v3_0_0').validate(obj.response)
     return True
 

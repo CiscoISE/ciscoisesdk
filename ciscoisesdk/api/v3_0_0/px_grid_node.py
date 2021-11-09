@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class PxGridNode(object):
-    """Identity Services Engine pxGridNode API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine pxGridNode API (version: 3.0.0).
 
     Wraps the Identity Services Engine pxGridNode
     API and exposes the API as native Python

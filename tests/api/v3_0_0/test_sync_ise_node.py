@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_sync_node(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_582ad69fa1d850f4993bbfc888749fa0_v3_0_0').validate(obj.response)
     return True
 

@@ -1229,7 +1229,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1391,7 +1391,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1553,7 +1553,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1625,7 +1625,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1661,7 +1661,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'ERSDeploymentInfo': {'networkAccessInfo': {'deploymentID': 'string', 'isCsnEnabled': True, 'nodeList': {'nodeAndScope': [{}]}, 'sdaVNs': [], 'trustSecControl': 'string', 'radius3RdParty': []}, 'profilerInfo': {'deploymentID': 'string', 'nodeList': {'node': [{'onlineSubscriptionEnabled': True, 'lastAppliedFeedDateTime': 'string', 'scope': 'string', 'profiles': [{'profile': [], 'customProfilesCount': 0, 'endpointTypes': 'string', 'totalProfilesCount': 0, 'uniqueEndpointsCount': 0, 'unknownEndpointsCount': 0, 'totalEndpointsCount': 0, 'unknownEndpointsPercentage': 0}]}]}}, 'deploymentInfo': {'deploymentID': 'string', 'versionHistoryInfo': [{'opType': 'string', 'mainVersion': 'string', 'epochTime': 0}], 'nodeList': {'nodeAndNodeCountAndCountInfo': [{'name': 'string', 'value': 'string', 'declaredType': 'string', 'scope': 'string', 'nil': True, 'globalScope': True, 'typeSubstituted': True}]}, 'fipsstatus': 'string'}, 'nadInfo': {'nodeList': {'nodeAndScope': [{}]}, 'nadcountInfo': {'totalActiveNADCount': 0}}, 'mdmInfo': {'activeMdmServersCount': 0, 'activeDesktopMdmServersCount': 0, 'activeMobileMdmServersCount': 0, 'deploymentID': 'string', 'nodeList': {'nodeAndScope': [{}]}}, 'licensesInfo': {'deploymentID': 'string', 'nodeList': {'node': [{}]}}, 'postureInfo': {'content': [{'name': 'string', 'value': 'string', 'declaredType': 'string', 'scope': 'string', 'nil': True, 'globalScope': True, 'typeSubstituted': True}]}, 'kongInfo': {'deploymentID': 'string', 'nodeList': {'node': [{'sn': 'string', 'service': [{'serviceName': 'string', 'route': [{'routeName': 'string', 'httpCount': {}, 'latencyCount': {}, 'latencySum': {}}]}]}]}}}})
+        response_content = json.dumps({'ERSDeploymentInfo': {'networkAccessInfo': {'deploymentID': 'string', 'isCsnEnabled': True, 'nodeList': {'nodeAndScope': [{}]}, 'sdaVNs': [], 'trustSecControl': 'string', 'radius3RdParty': []}, 'profilerInfo': {'deploymentID': 'string', 'nodeList': {'node': [{'onlineSubscriptionEnabled': True, 'lastAppliedFeedDateTime': 'string', 'scope': 'string', 'profiles': [{'profile': [], 'customProfilesCount': 0, 'endpointTypes': 'string', 'totalProfilesCount': 0, 'uniqueEndpointsCount': 0, 'unknownEndpointsCount': 0, 'totalEndpointsCount': 0, 'unknownEndpointsPercentage': 0}]}]}}, 'deploymentInfo': {'deploymentID': 'string', 'versionHistoryInfo': [{'opType': 'string', 'mainVersion': 'string', 'epochTime': 0}], 'nodeList': {'nodeAndNodeCountAndCountInfo': [{'name': 'string', 'value': {}, 'declaredType': 'string', 'scope': 'string', 'nil': True, 'globalScope': True, 'typeSubstituted': True}]}, 'fipsstatus': 'string'}, 'nadInfo': {'nodeList': {'nodeAndScope': [{}]}, 'nadcountInfo': {'totalActiveNADCount': 0}}, 'mdmInfo': {'activeMdmServersCount': 'string', 'activeDesktopMdmServersCount': 'string', 'activeMobileMdmServersCount': 'string', 'deploymentID': 'string', 'nodeList': {'nodeAndScope': [{}]}}, 'licensesInfo': {'deploymentID': 'string', 'nodeList': {'node': [{}]}}, 'postureInfo': {'content': [{'name': 'string', 'value': {}, 'declaredType': 'string', 'scope': 'string', 'nil': True, 'globalScope': True, 'typeSubstituted': True}]}, 'kongInfo': {'deploymentID': 'string', 'nodeList': {'node': [{'sn': 'string', 'service': [{'serviceName': 'string', 'route': [{'routeName': 'string', 'httpCount': {}, 'latencyCount': {}, 'latencySum': {}}]}]}]}}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1769,7 +1769,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1859,7 +1859,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4649,7 +4649,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4901,7 +4901,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4973,7 +4973,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5045,7 +5045,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5081,7 +5081,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5171,7 +5171,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5207,7 +5207,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5279,7 +5279,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5315,7 +5315,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5423,7 +5423,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5513,7 +5513,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5549,7 +5549,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'DownloadableAcl': {'id': 'string', 'name': 'string', 'description': 'string', 'dacl': 'string', 'daclType': 'string', 'link1': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'DownloadableAcl': {'id': 'string', 'name': 'string', 'description': 'string', 'dacl': 'string', 'daclType': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5567,7 +5567,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5603,7 +5603,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5729,7 +5729,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5765,7 +5765,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5927,7 +5927,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -5963,7 +5963,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6107,7 +6107,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6161,7 +6161,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6287,7 +6287,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6323,7 +6323,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6395,7 +6395,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6431,7 +6431,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6503,7 +6503,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6557,7 +6557,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6575,7 +6575,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6647,7 +6647,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6683,7 +6683,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6791,7 +6791,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6827,7 +6827,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6971,7 +6971,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7115,7 +7115,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7151,7 +7151,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7259,7 +7259,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'HotspotPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'coaType': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'aupSettings': {'requireAccessCode': True, 'accessCode': 'string', 'includeAup': True, 'requireScrolling': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'HotspotPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'coaType': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'aupSettings': {'requireAccessCode': True, 'accessCode': 'string', 'includeAup': True, 'requireScrolling': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7277,7 +7277,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7313,7 +7313,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7403,7 +7403,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7421,7 +7421,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7511,7 +7511,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7547,7 +7547,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7619,7 +7619,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7673,7 +7673,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7709,7 +7709,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7835,7 +7835,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -7871,7 +7871,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8033,7 +8033,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8069,7 +8069,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8159,7 +8159,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'MyDevicePortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True, 'socialConfigs': [{}]}, 'aupSettings': {'displayFrequencyIntervalDays': 0, 'displayFrequency': 'string', 'includeAup': True, 'requireScrolling': True}, 'employeeChangePasswordSettings': {'allowEmployeeToChangePwd': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'MyDevicePortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True, 'socialConfigs': [{}]}, 'aupSettings': {'displayFrequencyIntervalDays': 0, 'displayFrequency': 'string', 'includeAup': True, 'requireScrolling': True}, 'employeeChangePasswordSettings': {'allowEmployeeToChangePwd': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8177,7 +8177,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8213,7 +8213,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8285,7 +8285,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8321,7 +8321,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8393,7 +8393,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8429,7 +8429,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8483,7 +8483,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'NetworkDevice': {'id': 'string', 'name': 'string', 'description': 'string', 'authenticationSettings': {'networkProtocol': 'string', 'secondRadiusSharedSecret': 'string', 'radiusSharedSecret': 'string', 'enableKeyWrap': True, 'enabled': True, 'dtlsRequired': True, 'enableMultiSecret': True, 'keyEncryptionKey': 'string', 'messageAuthenticatorCodeKey': 'string', 'keyInputFormat': 'string'}, 'snmpsettings': {'version': 'string', 'roCommunity': 'string', 'pollingInterval': 0, 'linkTrapQuery': True, 'macTrapQuery': True, 'originatingPolicyServicesNode': 'string'}, 'trustsecsettings': {'deviceAuthenticationSettings': {'sgaDeviceId': 'string', 'sgaDevicePassword': 'string'}, 'sgaNotificationAndUpdates': {'downlaodEnvironmentDataEveryXSeconds': 0, 'downlaodPeerAuthorizationPolicyEveryXSeconds': 0, 'reAuthenticationEveryXSeconds': 0, 'downloadSGACLListsEveryXSeconds': 0, 'otherSGADevicesToTrustThisDevice': True, 'sendConfigurationToDevice': True, 'sendConfigurationToDeviceUsing': 'string', 'coaSourceHost': 'string'}, 'deviceConfigurationDeployment': {'includeWhenDeployingSGTUpdates': True, 'enableModePassword': 'string', 'execModePassword': 'string', 'execModeUsername': 'string'}, 'pushIdSupport': True}, 'tacacsSettings': {'sharedSecret': 'string', 'connectModeOptions': 'string'}, 'profileName': 'string', 'modelName': 'string', 'softwareVersion': 'string', 'coaPort': 0, 'dtlsDnsName': 'string', 'NetworkDeviceIPList': [{'ipaddress': 'string', 'mask': 0, 'getIpaddressExclude': 'string'}], 'NetworkDeviceGroupList': ['string'], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'NetworkDevice': {'id': 'string', 'name': 'string', 'description': 'string', 'authenticationSettings': {'networkProtocol': 'string', 'secondRadiusSharedSecret': 'string', 'radiusSharedSecret': 'string', 'enableKeyWrap': True, 'enabled': True, 'dtlsRequired': True, 'enableMultiSecret': 'string', 'keyEncryptionKey': 'string', 'messageAuthenticatorCodeKey': 'string', 'keyInputFormat': 'string'}, 'snmpsettings': {'version': 'string', 'roCommunity': 'string', 'pollingInterval': 0, 'linkTrapQuery': True, 'macTrapQuery': True, 'originatingPolicyServicesNode': 'string'}, 'trustsecsettings': {'deviceAuthenticationSettings': {'sgaDeviceId': 'string', 'sgaDevicePassword': 'string'}, 'sgaNotificationAndUpdates': {'downlaodEnvironmentDataEveryXSeconds': 0, 'downlaodPeerAuthorizationPolicyEveryXSeconds': 0, 'reAuthenticationEveryXSeconds': 0, 'downloadSGACLListsEveryXSeconds': 0, 'otherSGADevicesToTrustThisDevice': True, 'sendConfigurationToDevice': True, 'sendConfigurationToDeviceUsing': 'string', 'coaSourceHost': 'string'}, 'deviceConfigurationDeployment': {'includeWhenDeployingSGTUpdates': True, 'enableModePassword': 'string', 'execModePassword': 'string', 'execModeUsername': 'string'}, 'pushIdSupport': True}, 'tacacsSettings': {'sharedSecret': 'string', 'connectModeOptions': 'string'}, 'profileName': 'string', 'modelName': 'string', 'softwareVersion': 'string', 'coaPort': 0, 'dtlsDnsName': 'string', 'NetworkDeviceIPList': [{'ipaddress': 'string', 'mask': 0, 'getIpaddressExclude': 'string'}], 'NetworkDeviceGroupList': ['string'], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8501,7 +8501,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8537,7 +8537,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'NetworkDevice': {'id': 'string', 'name': 'string', 'description': 'string', 'authenticationSettings': {'networkProtocol': 'string', 'secondRadiusSharedSecret': 'string', 'radiusSharedSecret': 'string', 'enableKeyWrap': True, 'enabled': True, 'dtlsRequired': True, 'enableMultiSecret': True, 'keyEncryptionKey': 'string', 'messageAuthenticatorCodeKey': 'string', 'keyInputFormat': 'string'}, 'snmpsettings': {'version': 'string', 'roCommunity': 'string', 'pollingInterval': 0, 'linkTrapQuery': True, 'macTrapQuery': True, 'originatingPolicyServicesNode': 'string'}, 'trustsecsettings': {'deviceAuthenticationSettings': {'sgaDeviceId': 'string', 'sgaDevicePassword': 'string'}, 'sgaNotificationAndUpdates': {'downlaodEnvironmentDataEveryXSeconds': 0, 'downlaodPeerAuthorizationPolicyEveryXSeconds': 0, 'reAuthenticationEveryXSeconds': 0, 'downloadSGACLListsEveryXSeconds': 0, 'otherSGADevicesToTrustThisDevice': True, 'sendConfigurationToDevice': True, 'sendConfigurationToDeviceUsing': 'string', 'coaSourceHost': 'string'}, 'deviceConfigurationDeployment': {'includeWhenDeployingSGTUpdates': True, 'enableModePassword': 'string', 'execModePassword': 'string', 'execModeUsername': 'string'}, 'pushIdSupport': True}, 'tacacsSettings': {'sharedSecret': 'string', 'connectModeOptions': 'string'}, 'profileName': 'string', 'coaPort': 0, 'dtlsDnsName': 'string', 'modelName': 'string', 'softwareVersion': 'string', 'NetworkDeviceIPList': [{'ipaddress': 'string', 'mask': 0, 'getIpaddressExclude': 'string'}], 'NetworkDeviceGroupList': ['string'], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'NetworkDevice': {'id': 'string', 'name': 'string', 'description': 'string', 'authenticationSettings': {'networkProtocol': 'string', 'secondRadiusSharedSecret': 'string', 'radiusSharedSecret': 'string', 'enableKeyWrap': True, 'enabled': True, 'dtlsRequired': True, 'enableMultiSecret': 'string', 'keyEncryptionKey': 'string', 'messageAuthenticatorCodeKey': 'string', 'keyInputFormat': 'string'}, 'snmpsettings': {'version': 'string', 'roCommunity': 'string', 'pollingInterval': 0, 'linkTrapQuery': True, 'macTrapQuery': True, 'originatingPolicyServicesNode': 'string'}, 'trustsecsettings': {'deviceAuthenticationSettings': {'sgaDeviceId': 'string', 'sgaDevicePassword': 'string'}, 'sgaNotificationAndUpdates': {'downlaodEnvironmentDataEveryXSeconds': 0, 'downlaodPeerAuthorizationPolicyEveryXSeconds': 0, 'reAuthenticationEveryXSeconds': 0, 'downloadSGACLListsEveryXSeconds': 0, 'otherSGADevicesToTrustThisDevice': True, 'sendConfigurationToDevice': True, 'sendConfigurationToDeviceUsing': 'string', 'coaSourceHost': 'string'}, 'deviceConfigurationDeployment': {'includeWhenDeployingSGTUpdates': True, 'enableModePassword': 'string', 'execModePassword': 'string', 'execModeUsername': 'string'}, 'pushIdSupport': True}, 'tacacsSettings': {'sharedSecret': 'string', 'connectModeOptions': 'string'}, 'profileName': 'string', 'coaPort': 0, 'dtlsDnsName': 'string', 'modelName': 'string', 'softwareVersion': 'string', 'NetworkDeviceIPList': [{'ipaddress': 'string', 'mask': 0, 'getIpaddressExclude': 'string'}], 'NetworkDeviceGroupList': ['string'], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8555,7 +8555,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8591,7 +8591,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8699,7 +8699,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8717,7 +8717,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8771,7 +8771,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8807,7 +8807,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8879,7 +8879,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -8933,7 +8933,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9023,7 +9023,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9059,7 +9059,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9131,7 +9131,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9185,7 +9185,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9221,7 +9221,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9293,7 +9293,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9329,7 +9329,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9437,7 +9437,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9473,7 +9473,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9581,7 +9581,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9617,7 +9617,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9707,7 +9707,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SelfRegPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowForgotPassword': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'alternateGuestPortal': 'string', 'allowGuestToUseSocialAccounts': True, 'allowShowGuestForm': True, 'socialConfigs': [{'socialMediaType': 'string', 'socialMediaValue': 'string'}]}, 'selfRegPageSettings': {'assignGuestsToGuestType': 'string', 'accountValidityDuration': 0, 'accountValidityTimeUnits': 'string', 'requireRegistrationCode': True, 'registrationCode': 'string', 'fieldUserName': {'include': True, 'require': True}, 'fieldFirstName': {'include': True, 'require': True}, 'fieldLastName': {'include': True, 'require': True}, 'fieldEmailAddr': {'include': True, 'require': True}, 'fieldPhoneNo': {'include': True, 'require': True}, 'fieldCompany': {'include': True, 'require': True}, 'fieldLocation': {'include': True, 'require': True}, 'selectableLocations': ['string'], 'fieldSmsProvider': {'include': True, 'require': True}, 'selectableSmsProviders': ['string'], 'fieldPersonBeingVisited': {'include': True, 'require': True}, 'fieldReasonForVisit': {'include': True, 'require': True}, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'enableGuestEmailWhitelist': True, 'guestEmailWhitelistDomains': 'string', 'enableGuestEmailBlacklist': True, 'guestEmailBlacklistDomains': 'string', 'requireGuestApproval': True, 'autoLoginSelfWait': True, 'autoLoginTimePeriod': 0, 'allowGraceAccess': True, 'graceAccessExpireInterval': 0, 'graceAccessSendAccountExpiration': True, 'sendApprovalRequestTo': 'string', 'approvalEmailAddresses': 'string', 'postRegistrationRedirect': 'string', 'postRegistrationRedirectUrl': 'string', 'credentialNotificationUsingEmail': True, 'credentialNotificationUsingSms': True, 'approveDenyLinksValidFor': 0, 'approveDenyLinksTimeUnits': 'string', 'requireApproverToAuthenticate': True, 'authenticateSponsorsUsingPortalList': 'string', 'sponsorPortalList': []}, 'selfRegSuccessSettings': {'includeUserName': True, 'includePassword': True, 'includeFirstName': True, 'includeLastName': True, 'includeEmailAddr': True, 'includePhoneNo': True, 'includeCompany': True, 'includeLocation': True, 'includeSmsProvider': True, 'includePersonBeingVisited': True, 'includeReasonForVisit': True, 'allowGuestSendSelfUsingPrint': True, 'allowGuestSendSelfUsingEmail': True, 'allowGuestSendSelfUsingSms': True, 'includeAup': True, 'aupOnPage': True, 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestLoginFromSelfregSuccessPage': True}, 'aupSettings': {'includeAup': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'requireScrolling': True, 'requireAupScrolling': True, 'displayFrequency': 'string', 'displayFrequencyIntervalDays': 0}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'SelfRegPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowForgotPassword': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'alternateGuestPortal': 'string', 'allowGuestToUseSocialAccounts': True, 'allowShowGuestForm': True, 'socialConfigs': [{'socialMediaType': 'string', 'socialMediaValue': 'string'}]}, 'selfRegPageSettings': {'assignGuestsToGuestType': 'string', 'accountValidityDuration': 0, 'accountValidityTimeUnits': 'string', 'requireRegistrationCode': True, 'registrationCode': 'string', 'fieldUserName': {'include': True, 'require': True}, 'fieldFirstName': {'include': True, 'require': True}, 'fieldLastName': {'include': True, 'require': True}, 'fieldEmailAddr': {'include': True, 'require': True}, 'fieldPhoneNo': {'include': True, 'require': True}, 'fieldCompany': {'include': True, 'require': True}, 'fieldLocation': {'include': True, 'require': True}, 'selectableLocations': ['string'], 'fieldSmsProvider': {'include': True, 'require': True}, 'selectableSmsProviders': ['string'], 'fieldPersonBeingVisited': {'include': True, 'require': True}, 'fieldReasonForVisit': {'include': True, 'require': True}, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'enableGuestEmailWhitelist': True, 'guestEmailWhitelistDomains': 'string', 'enableGuestEmailBlacklist': True, 'guestEmailBlacklistDomains': 'string', 'requireGuestApproval': True, 'autoLoginSelfWait': True, 'autoLoginTimePeriod': 0, 'allowGraceAccess': True, 'graceAccessExpireInterval': 0, 'graceAccessSendAccountExpiration': True, 'sendApprovalRequestTo': 'string', 'approvalEmailAddresses': 'string', 'postRegistrationRedirect': 'string', 'postRegistrationRedirectUrl': 'string', 'credentialNotificationUsingEmail': True, 'credentialNotificationUsingSms': True, 'approveDenyLinksValidFor': 0, 'approveDenyLinksTimeUnits': 'string', 'requireApproverToAuthenticate': True, 'authenticateSponsorsUsingPortalList': 'string', 'sponsorPortalList': []}, 'selfRegSuccessSettings': {'includeUserName': True, 'includePassword': True, 'includeFirstName': True, 'includeLastName': True, 'includeEmailAddr': True, 'includePhoneNo': True, 'includeCompany': True, 'includeLocation': True, 'includeSmsProvider': True, 'includePersonBeingVisited': True, 'includeReasonForVisit': True, 'allowGuestSendSelfUsingPrint': True, 'allowGuestSendSelfUsingEmail': True, 'allowGuestSendSelfUsingSms': True, 'includeAup': True, 'aupOnPage': True, 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestLoginFromSelfregSuccessPage': True}, 'aupSettings': {'includeAup': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'requireScrolling': True, 'requireAupScrolling': True, 'displayFrequency': 'string', 'displayFrequencyIntervalDays': 0}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9725,7 +9725,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9761,7 +9761,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9815,7 +9815,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9851,7 +9851,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9905,7 +9905,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9941,7 +9941,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -9995,7 +9995,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SponsorPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'fqdn': 'string', 'authenticationMethod': 'string', 'idleTimeout': 0, 'displayLang': 'string', 'fallbackLanguage': 'string', 'availableSsids': 'string'}, 'loginPageSettings': {'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAupScrolling': True, 'socialConfigs': []}, 'aupSettings': {'includeAup': True, 'requireScrolling': True, 'displayFrequency': 'string', 'displayFrequencyIntervalDays': 0}, 'sponsorChangePasswordSettings': {'allowSponsorToChangePwd': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'SponsorPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'fqdn': 'string', 'authenticationMethod': 'string', 'idleTimeout': 0, 'displayLang': 'string', 'fallbackLanguage': 'string', 'availableSsids': 'string'}, 'loginPageSettings': {'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAupScrolling': True, 'socialConfigs': []}, 'aupSettings': {'includeAup': True, 'requireScrolling': True, 'displayFrequency': 'string', 'displayFrequencyIntervalDays': 0}, 'sponsorChangePasswordSettings': {'allowSponsorToChangePwd': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10013,7 +10013,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10049,7 +10049,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10103,7 +10103,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SponsoredGuestPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowForgotPassword': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'socialConfigs': [{'socialMediaType': 'string', 'socialMediaValue': 'string'}]}, 'aupSettings': {'includeAup': True, 'requireAupScrolling': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'displayFrequencyIntervalDays': 0, 'requireScrolling': True, 'displayFrequency': 'string'}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'SponsoredGuestPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowForgotPassword': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'socialConfigs': [{'socialMediaType': 'string', 'socialMediaValue': 'string'}]}, 'aupSettings': {'includeAup': True, 'requireAupScrolling': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'displayFrequencyIntervalDays': 0, 'requireScrolling': True, 'displayFrequency': 'string'}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10121,7 +10121,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10157,7 +10157,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10229,7 +10229,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10265,7 +10265,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10373,7 +10373,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10409,7 +10409,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10535,7 +10535,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10697,7 +10697,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10733,7 +10733,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10823,7 +10823,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10859,7 +10859,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10949,7 +10949,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10985,7 +10985,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -11075,7 +11075,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': {'field': 'string', 'oldValue': 'string', 'newValue': 'string'}, 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
+        response_content = json.dumps({'UpdatedFieldsList': {'updatedField': [{'field': 'string', 'oldValue': 'string', 'newValue': 'string'}], 'field': 'string', 'oldValue': 'string', 'newValue': 'string'}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -11111,7 +11111,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'name': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -11183,7 +11183,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}], 'previousPage': [{'rel': 'string', 'href': 'string', 'type': 'string'}]}})
+        response_content = json.dumps({'SearchResult': {'total': 0, 'resources': [{'id': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}], 'nextPage': {'rel': 'string', 'href': 'string', 'type': 'string'}, 'previousPage': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 

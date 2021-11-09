@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_external_radius_server_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9afa6d7527045ebc928ee7e30ad3092a_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_9afa6d7527045ebc928ee7e30ad3092a_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,11 +84,13 @@ def test_get_external_radius_server_by_name_default(api, validator):
 def is_valid_get_external_radius_server_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_af14464cc6a05f6f87bbe7c174b6d5f6_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_af14464cc6a05f6f87bbe7c174b6d5f6_v3_1_0').validate(obj.response)
     return True
 
 
@@ -132,11 +136,13 @@ def test_get_external_radius_server_by_id_default(api, validator):
 def is_valid_update_external_radius_server_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_59c6536d17325c84a54189f46d4bbad2_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_59c6536d17325c84a54189f46d4bbad2_v3_1_0').validate(obj.response)
     return True
 
 
@@ -212,11 +218,13 @@ def test_update_external_radius_server_by_id_default(api, validator):
 def is_valid_delete_external_radius_server_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d86e3201f9b0561db13a9eb1b1d59bd5_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_d86e3201f9b0561db13a9eb1b1d59bd5_v3_1_0').validate(obj.response)
     return True
 
 
@@ -262,11 +270,13 @@ def test_delete_external_radius_server_by_id_default(api, validator):
 def is_valid_get_external_radius_server(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9b641825a9555ecba105cabbdf50fc78_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_9b641825a9555ecba105cabbdf50fc78_v3_1_0').validate(obj.response)
     return True
 
 
@@ -314,11 +324,13 @@ def test_get_external_radius_server_default(api, validator):
 def is_valid_create_external_radius_server(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1fc1c74b35ae5050b4f7fd702570ad5b_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_1fc1c74b35ae5050b4f7fd702570ad5b_v3_1_0').validate(obj.response)
     return True
 
 
@@ -392,11 +404,13 @@ def test_create_external_radius_server_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a6c3ffe72746500b88be3a5418ead4ba_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_a6c3ffe72746500b88be3a5418ead4ba_v3_1_0').validate(obj.response)
     return True
 
 

@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_device_admin_policy_set_global_exception_rules(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e75d766151e85011870229f30e4f5ec3_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_e75d766151e85011870229f30e4f5ec3_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,11 +84,13 @@ def test_get_device_admin_policy_set_global_exception_rules_default(api, validat
 def is_valid_create_device_admin_policy_set_global_exception(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_28da0a59db7654cfa89df49ca3ac3414_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_28da0a59db7654cfa89df49ca3ac3414_v3_1_0').validate(obj.response)
     return True
 
 
@@ -97,7 +101,7 @@ def create_device_admin_policy_set_global_exception(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         profile='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -142,11 +146,13 @@ def test_create_device_admin_policy_set_global_exception_default(api, validator)
 def is_valid_reset_hit_counts_device_admin_global_exceptions(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bd8a6c63d0235f3699f2669ca4734c13_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_bd8a6c63d0235f3699f2669ca4734c13_v3_1_0').validate(obj.response)
     return True
 
 
@@ -194,11 +200,13 @@ def test_reset_hit_counts_device_admin_global_exceptions_default(api, validator)
 def is_valid_get_device_admin_policy_set_global_exception_by_rule_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b3d905ee2883501281de916733b4025c_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_b3d905ee2883501281de916733b4025c_v3_1_0').validate(obj.response)
     return True
 
 
@@ -244,11 +252,13 @@ def test_get_device_admin_policy_set_global_exception_by_rule_id_default(api, va
 def is_valid_update_device_admin_policy_set_global_exception_by_rule_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d9ddc2557a495493bca08b8b973601aa_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_d9ddc2557a495493bca08b8b973601aa_v3_1_0').validate(obj.response)
     return True
 
 
@@ -260,7 +270,7 @@ def update_device_admin_policy_set_global_exception_by_rule_id(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         profile='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -306,11 +316,13 @@ def test_update_device_admin_policy_set_global_exception_by_rule_id_default(api,
 def is_valid_delete_device_admin_policy_set_global_exception_by_rule_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f16d14057660520dba53cc0df60db4a8_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_f16d14057660520dba53cc0df60db4a8_v3_1_0').validate(obj.response)
     return True
 
 

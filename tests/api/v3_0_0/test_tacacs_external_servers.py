@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_tacacs_external_servers_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_afe1108b1a59539ebe3de3e5652c9653_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_tacacs_external_servers_by_name_default(api, validator):
 def is_valid_get_tacacs_external_servers_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_8b9eb9547216547cab8b9e686eee674b_v3_0_0').validate(obj.response)
     return True
 
@@ -132,10 +136,12 @@ def test_get_tacacs_external_servers_by_id_default(api, validator):
 def is_valid_update_tacacs_external_servers_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_7a7cffe3bfae55aa81b7b4447519e4cd_v3_0_0').validate(obj.response)
     return True
 
@@ -200,10 +206,12 @@ def test_update_tacacs_external_servers_by_id_default(api, validator):
 def is_valid_delete_tacacs_external_servers_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_896816622564523798353b885b115048_v3_0_0').validate(obj.response)
     return True
 
@@ -250,10 +258,12 @@ def test_delete_tacacs_external_servers_by_id_default(api, validator):
 def is_valid_get_tacacs_external_servers(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_8c6c2a4908ee5f48b7e9cae7572f6a94_v3_0_0').validate(obj.response)
     return True
 
@@ -302,10 +312,12 @@ def test_get_tacacs_external_servers_default(api, validator):
 def is_valid_create_tacacs_external_servers(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_b5097e4db7505ba390914b50b1c2046b_v3_0_0').validate(obj.response)
     return True
 
@@ -368,10 +380,12 @@ def test_create_tacacs_external_servers_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_d3e106d187b35547bf1f0463e4fc832f_v3_0_0').validate(obj.response)
     return True
 

@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_network_access_security_groups(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_598f564c3eda5c20bb807b8c062c8e7b_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_598f564c3eda5c20bb807b8c062c8e7b_v3_1_0').validate(obj.response)
     return True
 
 

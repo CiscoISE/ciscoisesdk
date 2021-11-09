@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_sponsor_group_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_eaa0d7c339d152b688876c2e10f51fe7_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_eaa0d7c339d152b688876c2e10f51fe7_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,11 +84,13 @@ def test_get_sponsor_group_by_id_default(api, validator):
 def is_valid_update_sponsor_group_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_dfc44f7f24d153d789efa48e904b3832_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_dfc44f7f24d153d789efa48e904b3832_v3_1_0').validate(obj.response)
     return True
 
 
@@ -158,11 +162,13 @@ def test_update_sponsor_group_by_id_default(api, validator):
 def is_valid_delete_sponsor_group_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_61c28a45acf05fec98879d8d2ac51129_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_61c28a45acf05fec98879d8d2ac51129_v3_1_0').validate(obj.response)
     return True
 
 
@@ -208,11 +214,13 @@ def test_delete_sponsor_group_by_id_default(api, validator):
 def is_valid_get_sponsor_group(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f1196f1f6fde5978b0522f096926d443_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_f1196f1f6fde5978b0522f096926d443_v3_1_0').validate(obj.response)
     return True
 
 
@@ -268,11 +276,13 @@ def test_get_sponsor_group_default(api, validator):
 def is_valid_create_sponsor_group(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_56311acd30d35ee2ae16ff23757de7d8_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_56311acd30d35ee2ae16ff23757de7d8_v3_1_0').validate(obj.response)
     return True
 
 
@@ -342,11 +352,13 @@ def test_create_sponsor_group_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e8d4001b740751e08cfc19e1fdc5fddf_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_e8d4001b740751e08cfc19e1fdc5fddf_v3_1_0').validate(obj.response)
     return True
 
 

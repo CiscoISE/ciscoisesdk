@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_healths(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_0f67f5c0641d55708b20ffc56f374854_v3_0_0').validate(obj.response)
     return True
 
@@ -84,10 +86,12 @@ def test_get_healths_default(api, validator):
 def is_valid_get_performances(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_048aadb0c21d5146a207994d493fe9a5_v3_0_0').validate(obj.response)
     return True
 

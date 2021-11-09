@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class DeviceAdministrationPolicySet(object):
-    """Identity Services Engine Device Administration - Policy Set API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine Device Administration - Policy Set API (version: 3.0.0).
 
     Wraps the Identity Services Engine Device Administration - Policy Set
     API and exposes the API as native Python

@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_device_admin_profiles(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_02fde0cbd2de50f680d0b0f681771829_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_8ce2f3cdfbfe512b85eeca7b133c81ff_v3_1_0').validate(obj.response)
     return True
 
 

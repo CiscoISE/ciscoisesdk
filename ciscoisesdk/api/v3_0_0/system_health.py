@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class SystemHealth(object):
-    """Identity Services Engine System Health API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine System Health API (version: 3.0.0).
 
     Wraps the Identity Services Engine System Health
     API and exposes the API as native Python

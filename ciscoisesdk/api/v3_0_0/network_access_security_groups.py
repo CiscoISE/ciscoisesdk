@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class NetworkAccessSecurityGroups(object):
-    """Identity Services Engine Network Access - Security Groups API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine Network Access - Security Groups API (version: 3.0.0).
 
     Wraps the Identity Services Engine Network Access - Security Groups
     API and exposes the API as native Python

@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class EndpointIdentityGroup(object):
-    """Identity Services Engine EndpointIdentityGroup API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine EndpointIdentityGroup API (version: 3.0.0).
 
     Wraps the Identity Services Engine EndpointIdentityGroup
     API and exposes the API as native Python

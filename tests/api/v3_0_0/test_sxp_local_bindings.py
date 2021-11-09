@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_sxp_local_bindings_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_e56bea5248a25f799b02fcb6098a7b10_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_sxp_local_bindings_by_id_default(api, validator):
 def is_valid_update_sxp_local_bindings_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_313e07cb8ea65820863cce345c67926b_v3_0_0').validate(obj.response)
     return True
 
@@ -148,10 +152,12 @@ def test_update_sxp_local_bindings_by_id_default(api, validator):
 def is_valid_delete_sxp_local_bindings_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_77db04edfe595fbba5b49eb71dcb65bd_v3_0_0').validate(obj.response)
     return True
 
@@ -198,10 +204,12 @@ def test_delete_sxp_local_bindings_by_id_default(api, validator):
 def is_valid_get_sxp_local_bindings(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_91f845bd746a5c00967fe66178c5edbf_v3_0_0').validate(obj.response)
     return True
 
@@ -258,10 +266,12 @@ def test_get_sxp_local_bindings_default(api, validator):
 def is_valid_create_sxp_local_bindings(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_84610cf67e0155eab895b50d1a377f21_v3_0_0').validate(obj.response)
     return True
 
@@ -324,10 +334,12 @@ def test_create_sxp_local_bindings_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_ee22235f36835dec897ed6381e3e15fc_v3_0_0').validate(obj.response)
     return True
 
@@ -374,10 +386,12 @@ def test_get_version_default(api, validator):
 def is_valid_bulk_request_for_sxp_local_bindings(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_0615c21f51995bff8d6468a1e9c0b2e9_v3_0_0').validate(obj.response)
     return True
 
@@ -430,10 +444,12 @@ def test_bulk_request_for_sxp_local_bindings_default(api, validator):
 def is_valid_monitor_bulk_status_sxp_local_bindings(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_475db866e1125ca0b7cd7cc13ac4bdd4_v3_0_0').validate(obj.response)
     return True
 

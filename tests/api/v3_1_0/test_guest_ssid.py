@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_guest_ssid_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d5572c56526151cb8ea42de44b2db52c_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_d5572c56526151cb8ea42de44b2db52c_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,11 +84,13 @@ def test_get_guest_ssid_by_id_default(api, validator):
 def is_valid_update_guest_ssid_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_72e6e4b7d022556a80f1948efb3d5c61_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_72e6e4b7d022556a80f1948efb3d5c61_v3_1_0').validate(obj.response)
     return True
 
 
@@ -138,11 +142,13 @@ def test_update_guest_ssid_by_id_default(api, validator):
 def is_valid_delete_guest_ssid_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8328407df7345f788230a512d6635c25_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_8328407df7345f788230a512d6635c25_v3_1_0').validate(obj.response)
     return True
 
 
@@ -188,11 +194,13 @@ def test_delete_guest_ssid_by_id_default(api, validator):
 def is_valid_get_guest_ssid(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c37778a2faa5552894cc60cec13c56c7_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_c37778a2faa5552894cc60cec13c56c7_v3_1_0').validate(obj.response)
     return True
 
 
@@ -248,11 +256,13 @@ def test_get_guest_ssid_default(api, validator):
 def is_valid_create_guest_ssid(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2a31eb33e3535754b3f754a9199e0d25_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_2a31eb33e3535754b3f754a9199e0d25_v3_1_0').validate(obj.response)
     return True
 
 
@@ -302,11 +312,13 @@ def test_create_guest_ssid_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b400ebaa2d1f51398d3b32e7a6e4ba35_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_b400ebaa2d1f51398d3b32e7a6e4ba35_v3_1_0').validate(obj.response)
     return True
 
 

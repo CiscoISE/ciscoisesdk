@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_filter_policy_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_16555f5d5ab6568d8bf5f9932f7ed7f4_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_filter_policy_by_id_default(api, validator):
 def is_valid_update_filter_policy_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_95d0006cc03d53c89a3593526bf8dc0f_v3_0_0').validate(obj.response)
     return True
 
@@ -144,10 +148,12 @@ def test_update_filter_policy_by_id_default(api, validator):
 def is_valid_delete_filter_policy_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_4a83e0d4f56a5c06946f685aa46fa3e3_v3_0_0').validate(obj.response)
     return True
 
@@ -194,10 +200,12 @@ def test_delete_filter_policy_by_id_default(api, validator):
 def is_valid_get_filter_policy(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_250a599ae00f5e47b9ece23cd3183d1c_v3_0_0').validate(obj.response)
     return True
 
@@ -246,10 +254,12 @@ def test_get_filter_policy_default(api, validator):
 def is_valid_create_filter_policy(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_22f8082b07ce528f82545e210b84d7de_v3_0_0').validate(obj.response)
     return True
 
@@ -306,10 +316,12 @@ def test_create_filter_policy_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_209810ed6cad570d90243b1e0dbbe27b_v3_0_0').validate(obj.response)
     return True
 

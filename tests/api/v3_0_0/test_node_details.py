@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_node_detail_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_ab48268c76aa598788a5ebc370226f3a_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_node_detail_by_name_default(api, validator):
 def is_valid_get_node_detail_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_0397bb2e9d6651c7bf18c1b60ff7eb14_v3_0_0').validate(obj.response)
     return True
 
@@ -132,10 +136,12 @@ def test_get_node_detail_by_id_default(api, validator):
 def is_valid_get_node_details(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_775d9b8599f55fc4a1bd9d6ac02619eb_v3_0_0').validate(obj.response)
     return True
 
@@ -188,10 +194,12 @@ def test_get_node_details_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_ca9a3d8217d5507aa11020bee82ef228_v3_0_0').validate(obj.response)
     return True
 

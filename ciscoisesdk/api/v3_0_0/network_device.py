@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class NetworkDevice(object):
-    """Identity Services Engine NetworkDevice API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine NetworkDevice API (version: 3.0.0).
 
     Wraps the Identity Services Engine NetworkDevice
     API and exposes the API as native Python

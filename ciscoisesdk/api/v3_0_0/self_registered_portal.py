@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class SelfRegisteredPortal(object):
-    """Identity Services Engine SelfRegisteredPortal API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine SelfRegisteredPortal API (version: 3.0.0).
 
     Wraps the Identity Services Engine SelfRegisteredPortal
     API and exposes the API as native Python

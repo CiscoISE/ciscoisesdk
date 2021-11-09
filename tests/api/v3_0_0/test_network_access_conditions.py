@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_network_access_conditions(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_6df4fb303a3e5661ba12058f18b225af_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_network_access_conditions_default(api, validator):
 def is_valid_create_network_access_condition(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_e7bd468ee94f53869e52e84454efd0e6_v3_0_0').validate(obj.response)
     return True
 
@@ -172,10 +176,12 @@ def test_create_network_access_condition_default(api, validator):
 def is_valid_get_network_access_conditions_for_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_104e34177d675622acd0a532f5b7c41b_v3_0_0').validate(obj.response)
     return True
 
@@ -222,10 +228,12 @@ def test_get_network_access_conditions_for_authentication_rules_default(api, val
 def is_valid_get_network_access_conditions_for_authorization_rules(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_83852fff985b5159a0aa52bfe9e62ba7_v3_0_0').validate(obj.response)
     return True
 
@@ -272,10 +280,12 @@ def test_get_network_access_conditions_for_authorization_rules_default(api, vali
 def is_valid_get_network_access_condition_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_f3b949de4363575398dc1c9e681630bb_v3_0_0').validate(obj.response)
     return True
 
@@ -322,10 +332,12 @@ def test_get_network_access_condition_by_name_default(api, validator):
 def is_valid_update_network_access_condition_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_bea2910401185295a9715d65cb1c07c9_v3_0_0').validate(obj.response)
     return True
 
@@ -412,10 +424,12 @@ def test_update_network_access_condition_by_name_default(api, validator):
 def is_valid_delete_network_access_condition_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_0ea1c05d19955fd4801e6c996705f3fc_v3_0_0').validate(obj.response)
     return True
 
@@ -462,10 +476,12 @@ def test_delete_network_access_condition_by_name_default(api, validator):
 def is_valid_get_network_access_conditions_for_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_c0984cde5e925c209ab87472ab905476_v3_0_0').validate(obj.response)
     return True
 
@@ -512,10 +528,12 @@ def test_get_network_access_conditions_for_policy_sets_default(api, validator):
 def is_valid_get_network_access_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_f2b0a67d389a592dba005895594b77cc_v3_0_0').validate(obj.response)
     return True
 
@@ -562,10 +580,12 @@ def test_get_network_access_condition_by_id_default(api, validator):
 def is_valid_update_network_access_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_e405a20316825460a1f37a2f161e7ac5_v3_0_0').validate(obj.response)
     return True
 
@@ -652,10 +672,12 @@ def test_update_network_access_condition_by_id_default(api, validator):
 def is_valid_delete_network_access_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_99d87a24994c514d955149d33e1a99fb_v3_0_0').validate(obj.response)
     return True
 

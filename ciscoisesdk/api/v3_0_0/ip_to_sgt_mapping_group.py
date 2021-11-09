@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class IpToSgtMappingGroup(object):
-    """Identity Services Engine IPToSGTMappingGroup API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine IPToSGTMappingGroup API (version: 3.0.0).
 
     Wraps the Identity Services Engine IPToSGTMappingGroup
     API and exposes the API as native Python

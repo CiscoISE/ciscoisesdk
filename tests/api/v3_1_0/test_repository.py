@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_repositories(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_8f9081a48e3c5f4fae5aa00f889216dd_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_8f9081a48e3c5f4fae5aa00f889216dd_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,11 +84,13 @@ def test_get_repositories_default(api, validator):
 def is_valid_create_repository(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9a207a157244508c99bf3e9abb26aab8_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_9a207a157244508c99bf3e9abb26aab8_v3_1_0').validate(obj.response)
     return True
 
 
@@ -148,11 +152,13 @@ def test_create_repository_default(api, validator):
 def is_valid_get_repository(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_89c785067a5a5e3283f96dd5006c7865_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_89c785067a5a5e3283f96dd5006c7865_v3_1_0').validate(obj.response)
     return True
 
 
@@ -198,11 +204,13 @@ def test_get_repository_default(api, validator):
 def is_valid_update_repository(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_386e380a5c1d585ab9012874ca959982_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_386e380a5c1d585ab9012874ca959982_v3_1_0').validate(obj.response)
     return True
 
 
@@ -264,11 +272,13 @@ def test_update_repository_default(api, validator):
 def is_valid_delete_repository(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c3a2e8960455547da94117ef465db97f_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_c3a2e8960455547da94117ef465db97f_v3_1_0').validate(obj.response)
     return True
 
 
@@ -314,11 +324,13 @@ def test_delete_repository_default(api, validator):
 def is_valid_get_repository_files(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c9dea644f40453fead2b003b06c4c52b_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_c9dea644f40453fead2b003b06c4c52b_v3_1_0').validate(obj.response)
     return True
 
 

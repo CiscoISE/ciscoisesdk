@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_device_admin_conditions(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_564635feb825519f98bd1541ef3c367d_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_564635feb825519f98bd1541ef3c367d_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,18 +84,19 @@ def test_get_device_admin_conditions_default(api, validator):
 def is_valid_create_device_admin_condition(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_599abc25887a5daab1216195e08cbd49_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_599abc25887a5daab1216195e08cbd49_v3_1_0').validate(obj.response)
     return True
 
 
 def create_device_admin_condition(api):
     endpoint_result = api.device_administration_conditions.create_device_admin_condition(
         active_validation=False,
-        attribute_id='string',
         attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -133,7 +136,6 @@ def test_create_device_admin_condition(api, validator):
 def create_device_admin_condition_default(api):
     endpoint_result = api.device_administration_conditions.create_device_admin_condition(
         active_validation=False,
-        attribute_id=None,
         attribute_name=None,
         attribute_value=None,
         children=None,
@@ -172,11 +174,13 @@ def test_create_device_admin_condition_default(api, validator):
 def is_valid_get_device_admin_conditions_for_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f1b8eaf23e795f1a8525eb5905187aa9_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_f1b8eaf23e795f1a8525eb5905187aa9_v3_1_0').validate(obj.response)
     return True
 
 
@@ -222,11 +226,13 @@ def test_get_device_admin_conditions_for_authentication_rules_default(api, valid
 def is_valid_get_device_admin_conditions_for_authorization_rules(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ecff2eb67fe5591f8d9026f928a0d8aa_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_ecff2eb67fe5591f8d9026f928a0d8aa_v3_1_0').validate(obj.response)
     return True
 
 
@@ -272,11 +278,13 @@ def test_get_device_admin_conditions_for_authorization_rules_default(api, valida
 def is_valid_get_device_admin_condition_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a47bbc05a3e056fcad73f2cb5b894dae_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_a47bbc05a3e056fcad73f2cb5b894dae_v3_1_0').validate(obj.response)
     return True
 
 
@@ -322,18 +330,19 @@ def test_get_device_admin_condition_by_name_default(api, validator):
 def is_valid_update_device_admin_condition_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1d17bf558051575aba9f7435c7fcbe05_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_1d17bf558051575aba9f7435c7fcbe05_v3_1_0').validate(obj.response)
     return True
 
 
 def update_device_admin_condition_by_name(api):
     endpoint_result = api.device_administration_conditions.update_device_admin_condition_by_name(
         active_validation=False,
-        attribute_id='string',
         attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -374,7 +383,6 @@ def update_device_admin_condition_by_name_default(api):
     endpoint_result = api.device_administration_conditions.update_device_admin_condition_by_name(
         active_validation=False,
         name='string',
-        attribute_id=None,
         attribute_name=None,
         attribute_value=None,
         children=None,
@@ -412,11 +420,13 @@ def test_update_device_admin_condition_by_name_default(api, validator):
 def is_valid_delete_device_admin_condition_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ea7a58e36047592d8f37a4ec4e15701d_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_ea7a58e36047592d8f37a4ec4e15701d_v3_1_0').validate(obj.response)
     return True
 
 
@@ -462,11 +472,13 @@ def test_delete_device_admin_condition_by_name_default(api, validator):
 def is_valid_get_device_admin_conditions_for_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2a40f9e169a95d6dbf3ebbb020291007_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_2a40f9e169a95d6dbf3ebbb020291007_v3_1_0').validate(obj.response)
     return True
 
 
@@ -512,11 +524,13 @@ def test_get_device_admin_conditions_for_policy_sets_default(api, validator):
 def is_valid_get_device_admin_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_5dec8e9d819b5bc088e351b69efd0369_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_5dec8e9d819b5bc088e351b69efd0369_v3_1_0').validate(obj.response)
     return True
 
 
@@ -562,18 +576,19 @@ def test_get_device_admin_condition_by_id_default(api, validator):
 def is_valid_update_device_admin_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9ed5bf99062d5dee87fe5cd96e360ec2_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_9ed5bf99062d5dee87fe5cd96e360ec2_v3_1_0').validate(obj.response)
     return True
 
 
 def update_device_admin_condition_by_id(api):
     endpoint_result = api.device_administration_conditions.update_device_admin_condition_by_id(
         active_validation=False,
-        attribute_id='string',
         attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -614,7 +629,6 @@ def update_device_admin_condition_by_id_default(api):
     endpoint_result = api.device_administration_conditions.update_device_admin_condition_by_id(
         active_validation=False,
         id='string',
-        attribute_id=None,
         attribute_name=None,
         attribute_value=None,
         children=None,
@@ -652,11 +666,13 @@ def test_update_device_admin_condition_by_id_default(api, validator):
 def is_valid_delete_device_admin_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ea5b356b4bc053068a0052b6c807d286_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_ea5b356b4bc053068a0052b6c807d286_v3_1_0').validate(obj.response)
     return True
 
 

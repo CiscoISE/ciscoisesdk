@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class NodeDeployment(object):
-    """Identity Services Engine Node Deployment API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine Node Deployment API (version: 3.0.0).
 
     Wraps the Identity Services Engine Node Deployment
     API and exposes the API as native Python

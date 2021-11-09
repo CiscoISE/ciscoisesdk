@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_device_admin_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_fe54c96ccba65af1abe3cd08f4fc69cb_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_device_admin_policy_sets_default(api, validator):
 def is_valid_create_device_admin_policy_set(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_cc909c2717cf55f1863a04a785166fe0_v3_0_0').validate(obj.response)
     return True
 
@@ -156,10 +160,12 @@ def test_create_device_admin_policy_set_default(api, validator):
 def is_valid_reset_hit_counts_device_admin_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_8e38ddb381965981b66f00a9c8634485_v3_0_0').validate(obj.response)
     return True
 
@@ -208,10 +214,12 @@ def test_reset_hit_counts_device_admin_policy_sets_default(api, validator):
 def is_valid_get_device_admin_policy_set_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_440b1da14ba95aa48b498c76d0bc1017_v3_0_0').validate(obj.response)
     return True
 
@@ -258,10 +266,12 @@ def test_get_device_admin_policy_set_by_id_default(api, validator):
 def is_valid_update_device_admin_policy_set_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_e2c930d3d75859b8b7d30e79f3eab084_v3_0_0').validate(obj.response)
     return True
 
@@ -332,10 +342,12 @@ def test_update_device_admin_policy_set_by_id_default(api, validator):
 def is_valid_delete_device_admin_policy_set_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_b5c6ed4306f059cc963895a04f219d5d_v3_0_0').validate(obj.response)
     return True
 

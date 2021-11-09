@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_nodes(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_fa838e78175e51b4bcfb0821c19b81b7_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_nodes_default(api, validator):
 def is_valid_register_node(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_e82e46732de25832a543c4640312588c_v3_0_0').validate(obj.response)
     return True
 
@@ -146,10 +150,12 @@ def test_register_node_default(api, validator):
 def is_valid_promote_node(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_42b11e2f1af656bcb5880a7b33720ec5_v3_0_0').validate(obj.response)
     return True
 
@@ -200,10 +206,12 @@ def test_promote_node_default(api, validator):
 def is_valid_get_node_details(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_ae8d7c8f33bb52ceb04880845f2f45ba_v3_0_0').validate(obj.response)
     return True
 
@@ -250,10 +258,12 @@ def test_get_node_details_default(api, validator):
 def is_valid_update_node(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_682c1fa3bf115c77be99b602aca1493b_v3_0_0').validate(obj.response)
     return True
 
@@ -308,10 +318,12 @@ def test_update_node_default(api, validator):
 def is_valid_delete_node(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_161d26670a205a78800cb50673027a6e_v3_0_0').validate(obj.response)
     return True
 

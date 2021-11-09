@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class ProfilerProfile(object):
-    """Identity Services Engine ProfilerProfile API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine ProfilerProfile API (version: 3.0.0).
 
     Wraps the Identity Services Engine ProfilerProfile
     API and exposes the API as native Python

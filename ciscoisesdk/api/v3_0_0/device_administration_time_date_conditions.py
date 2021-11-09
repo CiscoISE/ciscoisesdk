@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class DeviceAdministrationTimeDateConditions(object):
-    """Identity Services Engine Device Administration - Time/Date Conditions API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine Device Administration - Time/Date Conditions API (version: 3.0.0).
 
     Wraps the Identity Services Engine Device Administration - Time/Date Conditions
     API and exposes the API as native Python

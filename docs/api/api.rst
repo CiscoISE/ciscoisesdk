@@ -1108,7 +1108,7 @@ IdentityServicesEngineAPI v3.1.0
 aci_bindings
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.aci_bindings.AciBindings()
+.. autoclass:: ciscoisesdk.api.v3_1_0.aci_bindings.AciBindings()
 
 
 
@@ -1117,7 +1117,7 @@ aci_bindings
 aci_settings
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.aci_settings.AciSettings()
+.. autoclass:: ciscoisesdk.api.v3_1_0.aci_settings.AciSettings()
 
 
 
@@ -1126,7 +1126,7 @@ aci_settings
 anc_endpoint
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.anc_endpoint.AncEndpoint()
+.. autoclass:: ciscoisesdk.api.v3_1_0.anc_endpoint.AncEndpoint()
 
 
 
@@ -1135,7 +1135,7 @@ anc_endpoint
 active_directory
 ----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.active_directory.ActiveDirectory()
+.. autoclass:: ciscoisesdk.api.v3_1_0.active_directory.ActiveDirectory()
 
 
 
@@ -1144,7 +1144,7 @@ active_directory
 admin_user
 ----------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.admin_user.AdminUser()
+.. autoclass:: ciscoisesdk.api.v3_1_0.admin_user.AdminUser()
 
 
 
@@ -1153,7 +1153,7 @@ admin_user
 allowed_protocols
 -----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.allowed_protocols.AllowedProtocols()
+.. autoclass:: ciscoisesdk.api.v3_1_0.allowed_protocols.AllowedProtocols()
 
 
 
@@ -1162,7 +1162,7 @@ allowed_protocols
 anc_policy
 ----------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.anc_policy.AncPolicy()
+.. autoclass:: ciscoisesdk.api.v3_1_0.anc_policy.AncPolicy()
 
 
 
@@ -1171,7 +1171,7 @@ anc_policy
 authorization_profile
 ---------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.authorization_profile.AuthorizationProfile()
+.. autoclass:: ciscoisesdk.api.v3_1_0.authorization_profile.AuthorizationProfile()
 
 
 
@@ -1180,7 +1180,7 @@ authorization_profile
 byod_portal
 -----------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.byod_portal.ByodPortal()
+.. autoclass:: ciscoisesdk.api.v3_1_0.byod_portal.ByodPortal()
 
 
 
@@ -1189,7 +1189,7 @@ byod_portal
 backup_and_restore
 ------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.backup_and_restore.BackupAndRestore()
+.. autoclass:: ciscoisesdk.api.v3_1_0.backup_and_restore.BackupAndRestore()
 
 
 
@@ -1198,7 +1198,7 @@ backup_and_restore
 certificate_profile
 -------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.certificate_profile.CertificateProfile()
+.. autoclass:: ciscoisesdk.api.v3_1_0.certificate_profile.CertificateProfile()
 
 
 
@@ -1207,7 +1207,7 @@ certificate_profile
 certificate_template
 --------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.certificate_template.CertificateTemplate()
+.. autoclass:: ciscoisesdk.api.v3_1_0.certificate_template.CertificateTemplate()
 
 
 
@@ -1216,7 +1216,7 @@ certificate_template
 certificates
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.certificates.Certificates()
+.. autoclass:: ciscoisesdk.api.v3_1_0.certificates.Certificates()
 
 
 
@@ -1225,7 +1225,7 @@ certificates
 clear_threats_and_vulnerabilities
 ---------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.clear_threats_and_vulnerabilities.ClearThreatsAndVulnerabilities()
+.. autoclass:: ciscoisesdk.api.v3_1_0.clear_threats_and_vulnerabilities.ClearThreatsAndVulnerabilities()
 
 
 
@@ -1234,7 +1234,7 @@ clear_threats_and_vulnerabilities
 consumer
 --------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.consumer.Consumer()
+.. autoclass:: ciscoisesdk.api.v3_1_0.consumer.Consumer()
 
 
 
@@ -1243,7 +1243,7 @@ consumer
 device_administration_authentication_rules
 ------------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_authentication_rules.DeviceAdministrationAuthenticationRules()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_authentication_rules.DeviceAdministrationAuthenticationRules()
 
 
 
@@ -1252,7 +1252,7 @@ device_administration_authentication_rules
 device_administration_authorization_exception_rules
 ---------------------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_authorization_exception_rules.DeviceAdministrationAuthorizationExceptionRules()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_authorization_exception_rules.DeviceAdministrationAuthorizationExceptionRules()
 
 
 
@@ -1261,7 +1261,7 @@ device_administration_authorization_exception_rules
 device_administration_authorization_global_exception_rules
 ----------------------------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_authorization_global_exception_rules.DeviceAdministrationAuthorizationGlobalExceptionRules()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_authorization_global_exception_rules.DeviceAdministrationAuthorizationGlobalExceptionRules()
 
 
 
@@ -1270,7 +1270,7 @@ device_administration_authorization_global_exception_rules
 device_administration_authorization_rules
 -----------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_authorization_rules.DeviceAdministrationAuthorizationRules()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_authorization_rules.DeviceAdministrationAuthorizationRules()
 
 
 
@@ -1279,7 +1279,7 @@ device_administration_authorization_rules
 device_administration_command_set
 ---------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_command_set.DeviceAdministrationCommandSet()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_command_set.DeviceAdministrationCommandSet()
 
 
 
@@ -1288,7 +1288,7 @@ device_administration_command_set
 device_administration_conditions
 --------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_conditions.DeviceAdministrationConditions()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_conditions.DeviceAdministrationConditions()
 
 
 
@@ -1297,7 +1297,7 @@ device_administration_conditions
 device_administration_dictionary_attributes_list
 ------------------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_dictionary_attributes_list.DeviceAdministrationDictionaryAttributesList()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_dictionary_attributes_list.DeviceAdministrationDictionaryAttributesList()
 
 
 
@@ -1306,7 +1306,7 @@ device_administration_dictionary_attributes_list
 device_administration_identity_stores
 -------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_identity_stores.DeviceAdministrationIdentityStores()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_identity_stores.DeviceAdministrationIdentityStores()
 
 
 
@@ -1315,7 +1315,7 @@ device_administration_identity_stores
 device_administration_network_conditions
 ----------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_network_conditions.DeviceAdministrationNetworkConditions()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_network_conditions.DeviceAdministrationNetworkConditions()
 
 
 
@@ -1324,7 +1324,7 @@ device_administration_network_conditions
 device_administration_policy_set
 --------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_policy_set.DeviceAdministrationPolicySet()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_policy_set.DeviceAdministrationPolicySet()
 
 
 
@@ -1333,7 +1333,7 @@ device_administration_policy_set
 device_administration_profiles
 ------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_profiles.DeviceAdministrationProfiles()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_profiles.DeviceAdministrationProfiles()
 
 
 
@@ -1342,7 +1342,7 @@ device_administration_profiles
 device_administration_service_names
 -----------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_service_names.DeviceAdministrationServiceNames()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_service_names.DeviceAdministrationServiceNames()
 
 
 
@@ -1351,7 +1351,7 @@ device_administration_service_names
 device_administration_time_date_conditions
 ------------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.device_administration_time_date_conditions.DeviceAdministrationTimeDateConditions()
+.. autoclass:: ciscoisesdk.api.v3_1_0.device_administration_time_date_conditions.DeviceAdministrationTimeDateConditions()
 
 
 
@@ -1360,7 +1360,7 @@ device_administration_time_date_conditions
 downloadable_acl
 ----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.downloadable_acl.DownloadableAcl()
+.. autoclass:: ciscoisesdk.api.v3_1_0.downloadable_acl.DownloadableAcl()
 
 
 
@@ -1369,7 +1369,7 @@ downloadable_acl
 egress_matrix_cell
 ------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.egress_matrix_cell.EgressMatrixCell()
+.. autoclass:: ciscoisesdk.api.v3_1_0.egress_matrix_cell.EgressMatrixCell()
 
 
 
@@ -1378,7 +1378,7 @@ egress_matrix_cell
 endpoint_certificate
 --------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.endpoint_certificate.EndpointCertificate()
+.. autoclass:: ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate()
 
 
 
@@ -1387,7 +1387,7 @@ endpoint_certificate
 endpoint_identity_group
 -----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.endpoint_identity_group.EndpointIdentityGroup()
+.. autoclass:: ciscoisesdk.api.v3_1_0.endpoint_identity_group.EndpointIdentityGroup()
 
 
 
@@ -1396,7 +1396,7 @@ endpoint_identity_group
 external_radius_server
 ----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.external_radius_server.ExternalRadiusServer()
+.. autoclass:: ciscoisesdk.api.v3_1_0.external_radius_server.ExternalRadiusServer()
 
 
 
@@ -1405,7 +1405,7 @@ external_radius_server
 filter_policy
 -------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.filter_policy.FilterPolicy()
+.. autoclass:: ciscoisesdk.api.v3_1_0.filter_policy.FilterPolicy()
 
 
 
@@ -1414,7 +1414,7 @@ filter_policy
 guest_location
 --------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.guest_location.GuestLocation()
+.. autoclass:: ciscoisesdk.api.v3_1_0.guest_location.GuestLocation()
 
 
 
@@ -1423,7 +1423,7 @@ guest_location
 guest_smtp_notification_configuration
 -------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.guest_smtp_notification_configuration.GuestSmtpNotificationConfiguration()
+.. autoclass:: ciscoisesdk.api.v3_1_0.guest_smtp_notification_configuration.GuestSmtpNotificationConfiguration()
 
 
 
@@ -1432,7 +1432,7 @@ guest_smtp_notification_configuration
 guest_ssid
 ----------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.guest_ssid.GuestSsid()
+.. autoclass:: ciscoisesdk.api.v3_1_0.guest_ssid.GuestSsid()
 
 
 
@@ -1441,7 +1441,7 @@ guest_ssid
 guest_type
 ----------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.guest_type.GuestType()
+.. autoclass:: ciscoisesdk.api.v3_1_0.guest_type.GuestType()
 
 
 
@@ -1450,7 +1450,7 @@ guest_type
 guest_user
 ----------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.guest_user.GuestUser()
+.. autoclass:: ciscoisesdk.api.v3_1_0.guest_user.GuestUser()
 
 
 
@@ -1459,7 +1459,7 @@ guest_user
 hotspot_portal
 --------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.hotspot_portal.HotspotPortal()
+.. autoclass:: ciscoisesdk.api.v3_1_0.hotspot_portal.HotspotPortal()
 
 
 
@@ -1468,7 +1468,7 @@ hotspot_portal
 ip_to_sgt_mapping
 -----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.ip_to_sgt_mapping.IpToSgtMapping()
+.. autoclass:: ciscoisesdk.api.v3_1_0.ip_to_sgt_mapping.IpToSgtMapping()
 
 
 
@@ -1477,7 +1477,7 @@ ip_to_sgt_mapping
 ip_to_sgt_mapping_group
 -----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.ip_to_sgt_mapping_group.IpToSgtMappingGroup()
+.. autoclass:: ciscoisesdk.api.v3_1_0.ip_to_sgt_mapping_group.IpToSgtMappingGroup()
 
 
 
@@ -1486,7 +1486,7 @@ ip_to_sgt_mapping_group
 identity_groups
 ---------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.identity_groups.IdentityGroups()
+.. autoclass:: ciscoisesdk.api.v3_1_0.identity_groups.IdentityGroups()
 
 
 
@@ -1495,7 +1495,7 @@ identity_groups
 identity_sequence
 -----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.identity_sequence.IdentitySequence()
+.. autoclass:: ciscoisesdk.api.v3_1_0.identity_sequence.IdentitySequence()
 
 
 
@@ -1504,7 +1504,7 @@ identity_sequence
 internal_user
 -------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.internal_user.InternalUser()
+.. autoclass:: ciscoisesdk.api.v3_1_0.internal_user.InternalUser()
 
 
 
@@ -1513,7 +1513,7 @@ internal_user
 mdm
 ---
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.mdm.Mdm()
+.. autoclass:: ciscoisesdk.api.v3_1_0.mdm.Mdm()
 
 
 
@@ -1522,7 +1522,7 @@ mdm
 misc
 ----
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.misc.Misc()
+.. autoclass:: ciscoisesdk.api.v3_1_0.misc.Misc()
 
 
 
@@ -1531,7 +1531,7 @@ misc
 my_device_portal
 ----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.my_device_portal.MyDevicePortal()
+.. autoclass:: ciscoisesdk.api.v3_1_0.my_device_portal.MyDevicePortal()
 
 
 
@@ -1540,7 +1540,7 @@ my_device_portal
 native_supplicant_profile
 -------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.native_supplicant_profile.NativeSupplicantProfile()
+.. autoclass:: ciscoisesdk.api.v3_1_0.native_supplicant_profile.NativeSupplicantProfile()
 
 
 
@@ -1549,7 +1549,7 @@ native_supplicant_profile
 network_access_authentication_rules
 -----------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_authentication_rules.NetworkAccessAuthenticationRules()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_authentication_rules.NetworkAccessAuthenticationRules()
 
 
 
@@ -1558,7 +1558,7 @@ network_access_authentication_rules
 network_access_authorization_exception_rules
 --------------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_authorization_exception_rules.NetworkAccessAuthorizationExceptionRules()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_authorization_exception_rules.NetworkAccessAuthorizationExceptionRules()
 
 
 
@@ -1567,7 +1567,7 @@ network_access_authorization_exception_rules
 network_access_authorization_global_exception_rules
 ---------------------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_authorization_global_exception_rules.NetworkAccessAuthorizationGlobalExceptionRules()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_authorization_global_exception_rules.NetworkAccessAuthorizationGlobalExceptionRules()
 
 
 
@@ -1576,7 +1576,7 @@ network_access_authorization_global_exception_rules
 network_access_authorization_rules
 ----------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_authorization_rules.NetworkAccessAuthorizationRules()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_authorization_rules.NetworkAccessAuthorizationRules()
 
 
 
@@ -1585,7 +1585,7 @@ network_access_authorization_rules
 network_access_conditions
 -------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_conditions.NetworkAccessConditions()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_conditions.NetworkAccessConditions()
 
 
 
@@ -1594,7 +1594,7 @@ network_access_conditions
 network_access_dictionary
 -------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_dictionary.NetworkAccessDictionary()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_dictionary.NetworkAccessDictionary()
 
 
 
@@ -1603,7 +1603,7 @@ network_access_dictionary
 network_access_dictionary_attribute
 -----------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_dictionary_attribute.NetworkAccessDictionaryAttribute()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_dictionary_attribute.NetworkAccessDictionaryAttribute()
 
 
 
@@ -1612,7 +1612,7 @@ network_access_dictionary_attribute
 network_access_dictionary_attributes_list
 -----------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_dictionary_attributes_list.NetworkAccessDictionaryAttributesList()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_dictionary_attributes_list.NetworkAccessDictionaryAttributesList()
 
 
 
@@ -1621,7 +1621,7 @@ network_access_dictionary_attributes_list
 network_access_identity_stores
 ------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_identity_stores.NetworkAccessIdentityStores()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_identity_stores.NetworkAccessIdentityStores()
 
 
 
@@ -1630,7 +1630,7 @@ network_access_identity_stores
 network_access_network_conditions
 ---------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_network_conditions.NetworkAccessNetworkConditions()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_network_conditions.NetworkAccessNetworkConditions()
 
 
 
@@ -1639,7 +1639,7 @@ network_access_network_conditions
 network_access_policy_set
 -------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_policy_set.NetworkAccessPolicySet()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_policy_set.NetworkAccessPolicySet()
 
 
 
@@ -1648,7 +1648,7 @@ network_access_policy_set
 network_access_profiles
 -----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_profiles.NetworkAccessProfiles()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_profiles.NetworkAccessProfiles()
 
 
 
@@ -1657,7 +1657,7 @@ network_access_profiles
 network_access_security_groups
 ------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_security_groups.NetworkAccessSecurityGroups()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_security_groups.NetworkAccessSecurityGroups()
 
 
 
@@ -1666,7 +1666,7 @@ network_access_security_groups
 network_access_service_names
 ----------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_service_names.NetworkAccessServiceNames()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_service_names.NetworkAccessServiceNames()
 
 
 
@@ -1675,7 +1675,7 @@ network_access_service_names
 network_access_time_date_conditions
 -----------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_access_time_date_conditions.NetworkAccessTimeDateConditions()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_access_time_date_conditions.NetworkAccessTimeDateConditions()
 
 
 
@@ -1684,7 +1684,7 @@ network_access_time_date_conditions
 network_device
 --------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_device.NetworkDevice()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_device.NetworkDevice()
 
 
 
@@ -1693,7 +1693,7 @@ network_device
 network_device_group
 --------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.network_device_group.NetworkDeviceGroup()
+.. autoclass:: ciscoisesdk.api.v3_1_0.network_device_group.NetworkDeviceGroup()
 
 
 
@@ -1702,7 +1702,7 @@ network_device_group
 node_deployment
 ---------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.node_deployment.NodeDeployment()
+.. autoclass:: ciscoisesdk.api.v3_1_0.node_deployment.NodeDeployment()
 
 
 
@@ -1711,7 +1711,7 @@ node_deployment
 node_group
 ----------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.node_group.NodeGroup()
+.. autoclass:: ciscoisesdk.api.v3_1_0.node_group.NodeGroup()
 
 
 
@@ -1720,7 +1720,7 @@ node_group
 node_details
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.node_details.NodeDetails()
+.. autoclass:: ciscoisesdk.api.v3_1_0.node_details.NodeDetails()
 
 
 
@@ -1729,7 +1729,7 @@ node_details
 pan_ha
 ------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.pan_ha.PanHa()
+.. autoclass:: ciscoisesdk.api.v3_1_0.pan_ha.PanHa()
 
 
 
@@ -1738,7 +1738,7 @@ pan_ha
 portal_global_setting
 ---------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.portal_global_setting.PortalGlobalSetting()
+.. autoclass:: ciscoisesdk.api.v3_1_0.portal_global_setting.PortalGlobalSetting()
 
 
 
@@ -1747,7 +1747,7 @@ portal_global_setting
 portal_theme
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.portal_theme.PortalTheme()
+.. autoclass:: ciscoisesdk.api.v3_1_0.portal_theme.PortalTheme()
 
 
 
@@ -1756,7 +1756,7 @@ portal_theme
 profiler
 --------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.profiler.Profiler()
+.. autoclass:: ciscoisesdk.api.v3_1_0.profiler.Profiler()
 
 
 
@@ -1765,7 +1765,7 @@ profiler
 profiler_profile
 ----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.profiler_profile.ProfilerProfile()
+.. autoclass:: ciscoisesdk.api.v3_1_0.profiler_profile.ProfilerProfile()
 
 
 
@@ -1774,7 +1774,7 @@ profiler_profile
 provider
 --------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.provider.Provider()
+.. autoclass:: ciscoisesdk.api.v3_1_0.provider.Provider()
 
 
 
@@ -1783,7 +1783,7 @@ provider
 psn_node_details_with_radius_service
 ------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.psn_node_details_with_radius_service.PsnNodeDetailsWithRadiusService()
+.. autoclass:: ciscoisesdk.api.v3_1_0.psn_node_details_with_radius_service.PsnNodeDetailsWithRadiusService()
 
 
 
@@ -1792,7 +1792,7 @@ psn_node_details_with_radius_service
 pull_deployment_info
 --------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.pull_deployment_info.PullDeploymentInfo()
+.. autoclass:: ciscoisesdk.api.v3_1_0.pull_deployment_info.PullDeploymentInfo()
 
 
 
@@ -1801,7 +1801,7 @@ pull_deployment_info
 px_grid_settings
 ----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.px_grid_settings.PxGridSettings()
+.. autoclass:: ciscoisesdk.api.v3_1_0.px_grid_settings.PxGridSettings()
 
 
 
@@ -1810,7 +1810,7 @@ px_grid_settings
 radius_failure
 --------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.radius_failure.RadiusFailure()
+.. autoclass:: ciscoisesdk.api.v3_1_0.radius_failure.RadiusFailure()
 
 
 
@@ -1819,7 +1819,7 @@ radius_failure
 radius_server_sequence
 ----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.radius_server_sequence.RadiusServerSequence()
+.. autoclass:: ciscoisesdk.api.v3_1_0.radius_server_sequence.RadiusServerSequence()
 
 
 
@@ -1828,7 +1828,7 @@ radius_server_sequence
 restid_store
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.restid_store.RestidStore()
+.. autoclass:: ciscoisesdk.api.v3_1_0.restid_store.RestidStore()
 
 
 
@@ -1837,7 +1837,7 @@ restid_store
 replication_status
 ------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.replication_status.ReplicationStatus()
+.. autoclass:: ciscoisesdk.api.v3_1_0.replication_status.ReplicationStatus()
 
 
 
@@ -1846,7 +1846,7 @@ replication_status
 repository
 ----------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.repository.Repository()
+.. autoclass:: ciscoisesdk.api.v3_1_0.repository.Repository()
 
 
 
@@ -1855,7 +1855,7 @@ repository
 sms_provider
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sms_provider.SmsProvider()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sms_provider.SmsProvider()
 
 
 
@@ -1864,7 +1864,7 @@ sms_provider
 sxp_connections
 ---------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sxp_connections.SxpConnections()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sxp_connections.SxpConnections()
 
 
 
@@ -1873,7 +1873,7 @@ sxp_connections
 sxp_local_bindings
 ------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sxp_local_bindings.SxpLocalBindings()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sxp_local_bindings.SxpLocalBindings()
 
 
 
@@ -1882,7 +1882,7 @@ sxp_local_bindings
 sxp_vpns
 --------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sxp_vpns.SxpVpns()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sxp_vpns.SxpVpns()
 
 
 
@@ -1891,7 +1891,7 @@ sxp_vpns
 security_group_to_virtual_network
 ---------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.security_group_to_virtual_network.SecurityGroupToVirtualNetwork()
+.. autoclass:: ciscoisesdk.api.v3_1_0.security_group_to_virtual_network.SecurityGroupToVirtualNetwork()
 
 
 
@@ -1900,7 +1900,7 @@ security_group_to_virtual_network
 security_groups
 ---------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.security_groups.SecurityGroups()
+.. autoclass:: ciscoisesdk.api.v3_1_0.security_groups.SecurityGroups()
 
 
 
@@ -1909,7 +1909,7 @@ security_groups
 security_groups_acls
 --------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.security_groups_acls.SecurityGroupsAcls()
+.. autoclass:: ciscoisesdk.api.v3_1_0.security_groups_acls.SecurityGroupsAcls()
 
 
 
@@ -1918,7 +1918,7 @@ security_groups_acls
 self_registered_portal
 ----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.self_registered_portal.SelfRegisteredPortal()
+.. autoclass:: ciscoisesdk.api.v3_1_0.self_registered_portal.SelfRegisteredPortal()
 
 
 
@@ -1927,7 +1927,7 @@ self_registered_portal
 session_directory
 -----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.session_directory.SessionDirectory()
+.. autoclass:: ciscoisesdk.api.v3_1_0.session_directory.SessionDirectory()
 
 
 
@@ -1936,7 +1936,7 @@ session_directory
 sponsor_group
 -------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sponsor_group.SponsorGroup()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sponsor_group.SponsorGroup()
 
 
 
@@ -1945,7 +1945,7 @@ sponsor_group
 sponsor_group_member
 --------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sponsor_group_member.SponsorGroupMember()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sponsor_group_member.SponsorGroupMember()
 
 
 
@@ -1954,7 +1954,7 @@ sponsor_group_member
 sponsor_portal
 --------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sponsor_portal.SponsorPortal()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sponsor_portal.SponsorPortal()
 
 
 
@@ -1963,7 +1963,7 @@ sponsor_portal
 sponsored_guest_portal
 ----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sponsored_guest_portal.SponsoredGuestPortal()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sponsored_guest_portal.SponsoredGuestPortal()
 
 
 
@@ -1972,7 +1972,7 @@ sponsored_guest_portal
 support_bundle_download
 -----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.support_bundle_download.SupportBundleDownload()
+.. autoclass:: ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload()
 
 
 
@@ -1981,7 +1981,7 @@ support_bundle_download
 support_bundle_status
 ---------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.support_bundle_status.SupportBundleStatus()
+.. autoclass:: ciscoisesdk.api.v3_1_0.support_bundle_status.SupportBundleStatus()
 
 
 
@@ -1990,7 +1990,7 @@ support_bundle_status
 support_bundle_trigger_configuration
 ------------------------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.support_bundle_trigger_configuration.SupportBundleTriggerConfiguration()
+.. autoclass:: ciscoisesdk.api.v3_1_0.support_bundle_trigger_configuration.SupportBundleTriggerConfiguration()
 
 
 
@@ -1999,7 +1999,7 @@ support_bundle_trigger_configuration
 sync_ise_node
 -------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.sync_ise_node.SyncIseNode()
+.. autoclass:: ciscoisesdk.api.v3_1_0.sync_ise_node.SyncIseNode()
 
 
 
@@ -2008,7 +2008,7 @@ sync_ise_node
 system_health
 -------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.system_health.SystemHealth()
+.. autoclass:: ciscoisesdk.api.v3_1_0.system_health.SystemHealth()
 
 
 
@@ -2017,7 +2017,7 @@ system_health
 system_certificate
 ------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.system_certificate.SystemCertificate()
+.. autoclass:: ciscoisesdk.api.v3_1_0.system_certificate.SystemCertificate()
 
 
 
@@ -2026,7 +2026,7 @@ system_certificate
 tacacs_command_sets
 -------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.tacacs_command_sets.TacacsCommandSets()
+.. autoclass:: ciscoisesdk.api.v3_1_0.tacacs_command_sets.TacacsCommandSets()
 
 
 
@@ -2035,7 +2035,7 @@ tacacs_command_sets
 tacacs_external_servers
 -----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.tacacs_external_servers.TacacsExternalServers()
+.. autoclass:: ciscoisesdk.api.v3_1_0.tacacs_external_servers.TacacsExternalServers()
 
 
 
@@ -2044,7 +2044,7 @@ tacacs_external_servers
 tacacs_profile
 --------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.tacacs_profile.TacacsProfile()
+.. autoclass:: ciscoisesdk.api.v3_1_0.tacacs_profile.TacacsProfile()
 
 
 
@@ -2053,7 +2053,7 @@ tacacs_profile
 tacacs_server_sequence
 ----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.tacacs_server_sequence.TacacsServerSequence()
+.. autoclass:: ciscoisesdk.api.v3_1_0.tacacs_server_sequence.TacacsServerSequence()
 
 
 
@@ -2062,7 +2062,7 @@ tacacs_server_sequence
 telemetry_information
 ---------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.telemetry_information.TelemetryInformation()
+.. autoclass:: ciscoisesdk.api.v3_1_0.telemetry_information.TelemetryInformation()
 
 
 
@@ -2071,7 +2071,7 @@ telemetry_information
 trust_sec_configuration
 -----------------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.trust_sec_configuration.TrustSecConfiguration()
+.. autoclass:: ciscoisesdk.api.v3_1_0.trust_sec_configuration.TrustSecConfiguration()
 
 
 
@@ -2080,7 +2080,7 @@ trust_sec_configuration
 trust_sec_sxp
 -------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.trust_sec_sxp.TrustSecSxp()
+.. autoclass:: ciscoisesdk.api.v3_1_0.trust_sec_sxp.TrustSecSxp()
 
 
 
@@ -2089,7 +2089,7 @@ trust_sec_sxp
 version_and_patch
 -----------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.version_and_patch.VersionAndPatch()
+.. autoclass:: ciscoisesdk.api.v3_1_0.version_and_patch.VersionAndPatch()
 
 
 
@@ -2098,7 +2098,7 @@ version_and_patch
 version_info
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.version_info.VersionInfo()
+.. autoclass:: ciscoisesdk.api.v3_1_0.version_info.VersionInfo()
 
 
 
@@ -2107,7 +2107,16 @@ version_info
 endpoint
 --------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.endpoint.Endpoint()
+.. autoclass:: ciscoisesdk.api.v3_1_0.endpoint.Endpoint()
+
+
+
+.. _nbar_app_3_1_0:
+
+nbar_app
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_1_0.nbar_app.NbarApp()
 
 
 
@@ -2116,7 +2125,7 @@ endpoint
 portal
 ------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.portal.Portal()
+.. autoclass:: ciscoisesdk.api.v3_1_0.portal.Portal()
 
 
 
@@ -2125,7 +2134,16 @@ portal
 px_grid_node
 ------------
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.px_grid_node.PxGridNode()
+.. autoclass:: ciscoisesdk.api.v3_1_0.px_grid_node.PxGridNode()
+
+
+
+.. _sg_vn_mapping_3_1_0:
+
+sg_vn_mapping
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_1_0.sg_vn_mapping.SgVnMapping()
 
 
 
@@ -2134,7 +2152,25 @@ px_grid_node
 tasks
 -----
 
-.. autoclass:: ciscoisesdk.api.v3_0_0.tasks.Tasks()
+.. autoclass:: ciscoisesdk.api.v3_1_0.tasks.Tasks()
+
+
+
+.. _virtual_network_3_1_0:
+
+virtual_network
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_1_0.virtual_network.VirtualNetwork()
+
+
+
+.. _vn_vlan_mapping_3_1_0:
+
+vn_vlan_mapping
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_1_0.vn_vlan_mapping.VnVlanMapping()
 
 
 .. _Identity Services Engine Data Object:

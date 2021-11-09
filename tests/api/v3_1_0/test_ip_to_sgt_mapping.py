@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_deploy_ip_to_sgt_mapping_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b5711af534e557749661afb5b6c90cee_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_b5711af534e557749661afb5b6c90cee_v3_1_0').validate(obj.response)
     return True
 
 
@@ -86,11 +88,13 @@ def test_deploy_ip_to_sgt_mapping_by_id_default(api, validator):
 def is_valid_deploy_all_ip_to_sgt_mapping(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_83343989df7a50feb38d8729b99553e9_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_83343989df7a50feb38d8729b99553e9_v3_1_0').validate(obj.response)
     return True
 
 
@@ -138,11 +142,13 @@ def test_deploy_all_ip_to_sgt_mapping_default(api, validator):
 def is_valid_get_deploy_status_ip_to_sgt_mapping(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_dcd55e1e57d25e65b625526a1d341afd_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_dcd55e1e57d25e65b625526a1d341afd_v3_1_0').validate(obj.response)
     return True
 
 
@@ -190,11 +196,13 @@ def test_get_deploy_status_ip_to_sgt_mapping_default(api, validator):
 def is_valid_get_ip_to_sgt_mapping_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_17ddc6729af25f8b8c060b20d09f0057_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_17ddc6729af25f8b8c060b20d09f0057_v3_1_0').validate(obj.response)
     return True
 
 
@@ -240,11 +248,13 @@ def test_get_ip_to_sgt_mapping_by_id_default(api, validator):
 def is_valid_update_ip_to_sgt_mapping_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_94de3cecd62e5153881245a8613fbeea_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_94de3cecd62e5153881245a8613fbeea_v3_1_0').validate(obj.response)
     return True
 
 
@@ -308,11 +318,13 @@ def test_update_ip_to_sgt_mapping_by_id_default(api, validator):
 def is_valid_delete_ip_to_sgt_mapping_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_582650f0cb1e55c9baee89c136c8ec47_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_582650f0cb1e55c9baee89c136c8ec47_v3_1_0').validate(obj.response)
     return True
 
 
@@ -358,11 +370,13 @@ def test_delete_ip_to_sgt_mapping_by_id_default(api, validator):
 def is_valid_get_ip_to_sgt_mapping(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_10cd9e91565f5c74b9f32ff0e5be6f17_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_10cd9e91565f5c74b9f32ff0e5be6f17_v3_1_0').validate(obj.response)
     return True
 
 
@@ -418,11 +432,13 @@ def test_get_ip_to_sgt_mapping_default(api, validator):
 def is_valid_create_ip_to_sgt_mapping(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_52dd838b268f5dd298a123ac58448ea9_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_52dd838b268f5dd298a123ac58448ea9_v3_1_0').validate(obj.response)
     return True
 
 
@@ -484,11 +500,13 @@ def test_create_ip_to_sgt_mapping_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_63042762af0b5041b56b12c5c08cc53e_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_63042762af0b5041b56b12c5c08cc53e_v3_1_0').validate(obj.response)
     return True
 
 
@@ -534,11 +552,13 @@ def test_get_version_default(api, validator):
 def is_valid_bulk_request_for_ip_to_sgt_mapping(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ab203a1dd0015924bf2005a84ae85477_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_ab203a1dd0015924bf2005a84ae85477_v3_1_0').validate(obj.response)
     return True
 
 
@@ -590,11 +610,13 @@ def test_bulk_request_for_ip_to_sgt_mapping_default(api, validator):
 def is_valid_monitor_bulk_status_ip_to_sgt_mapping(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9f36d3f43a6157978ec529318ce506e0_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_9f36d3f43a6157978ec529318ce506e0_v3_1_0').validate(obj.response)
     return True
 
 

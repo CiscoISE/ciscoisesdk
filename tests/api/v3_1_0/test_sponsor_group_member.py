@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_sponsor_group_member(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_020659d6b1385f4cb9381c13a1fa4356_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_020659d6b1385f4cb9381c13a1fa4356_v3_1_0').validate(obj.response)
     return True
 
 
@@ -92,11 +94,13 @@ def test_get_sponsor_group_member_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0f7c916a2e265c11b8b8535e8f88c7d1_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_0f7c916a2e265c11b8b8535e8f88c7d1_v3_1_0').validate(obj.response)
     return True
 
 

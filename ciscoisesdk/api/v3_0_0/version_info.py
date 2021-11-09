@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class VersionInfo(object):
-    """Identity Services Engine VersionInfo API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine VersionInfo API (version: 3.0.0).
 
     Wraps the Identity Services Engine VersionInfo
     API and exposes the API as native Python

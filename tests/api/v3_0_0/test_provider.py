@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_register_service(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_61c9daa26d4b5b80a41d4b7ff9359380_v3_0_0').validate(obj.response)
     return True
 
@@ -86,10 +88,12 @@ def test_register_service_default(api, validator):
 def is_valid_unregister_service(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_b480aaa729e75e3d872d0b30a3f8b804_v3_0_0').validate(obj.response)
     return True
 
@@ -138,10 +142,12 @@ def test_unregister_service_default(api, validator):
 def is_valid_reregister_service(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_ed4d852c55cd54c480986bec7fd9a8bb_v3_0_0').validate(obj.response)
     return True
 
@@ -190,10 +196,12 @@ def test_reregister_service_default(api, validator):
 def is_valid_authorization(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_c9088df384b458c3991fed7f718971d5_v3_0_0').validate(obj.response)
     return True
 

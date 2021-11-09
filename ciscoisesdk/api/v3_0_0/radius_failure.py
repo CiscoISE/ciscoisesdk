@@ -46,7 +46,7 @@ import urllib.parse
 
 
 class RadiusFailure(object):
-    """Identity Services Engine RADIUS Failure API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine RADIUS Failure API (version: 3.0.0).
 
     Wraps the Identity Services Engine RADIUS Failure
     API and exposes the API as native Python

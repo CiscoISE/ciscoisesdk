@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_network_access_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ed1ef503c091506aa8e446182e625365_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_ed1ef503c091506aa8e446182e625365_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,18 +84,20 @@ def test_get_network_access_policy_sets_default(api, validator):
 def is_valid_create_network_access_policy_set(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9dfe1db8729d541fb3a17d31d47d1881_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_9dfe1db8729d541fb3a17d31d47d1881_v3_1_0').validate(obj.response)
     return True
 
 
 def create_network_access_policy_set(api):
     endpoint_result = api.network_access_policy_set.create_network_access_policy_set(
         active_validation=False,
-        condition={'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']},
+        condition={'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']},
         default=True,
         description='string',
         hit_counts=0,
@@ -156,11 +160,13 @@ def test_create_network_access_policy_set_default(api, validator):
 def is_valid_reset_hit_counts_network_access_policy_sets(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_71fb6c1b3f335dbf8176a29e30eb6333_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_71fb6c1b3f335dbf8176a29e30eb6333_v3_1_0').validate(obj.response)
     return True
 
 
@@ -208,11 +214,13 @@ def test_reset_hit_counts_network_access_policy_sets_default(api, validator):
 def is_valid_get_network_access_policy_set_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_768d9f17adde53e2a08a650b9fe1714c_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_768d9f17adde53e2a08a650b9fe1714c_v3_1_0').validate(obj.response)
     return True
 
 
@@ -258,18 +266,20 @@ def test_get_network_access_policy_set_by_id_default(api, validator):
 def is_valid_update_network_access_policy_set_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ff0055f9ef115a42bea6ffdd8e57d41b_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_ff0055f9ef115a42bea6ffdd8e57d41b_v3_1_0').validate(obj.response)
     return True
 
 
 def update_network_access_policy_set_by_id(api):
     endpoint_result = api.network_access_policy_set.update_network_access_policy_set_by_id(
         active_validation=False,
-        condition={'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']},
+        condition={'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']},
         default=True,
         description='string',
         hit_counts=0,
@@ -332,11 +342,13 @@ def test_update_network_access_policy_set_by_id_default(api, validator):
 def is_valid_delete_network_access_policy_set_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_fd4b5a56f8bd5f8f919e9fffc172e72f_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_fd4b5a56f8bd5f8f919e9fffc172e72f_v3_1_0').validate(obj.response)
     return True
 
 

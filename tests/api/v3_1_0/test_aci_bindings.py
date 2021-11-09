@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_aci_bindings(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3d1448851f0154d0b6e9c856ec6cc6f0_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_3d1448851f0154d0b6e9c856ec6cc6f0_v3_1_0').validate(obj.response)
     return True
 
 
@@ -92,11 +94,13 @@ def test_get_aci_bindings_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d74b5214bad656c98f21e4968661c3c0_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_d74b5214bad656c98f21e4968661c3c0_v3_1_0').validate(obj.response)
     return True
 
 

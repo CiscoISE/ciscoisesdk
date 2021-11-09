@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_clear_all_matrix_cells(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_247716f503ab54e2921d713ed88f51c9_v3_0_0').validate(obj.response)
     return True
 
@@ -84,10 +86,12 @@ def test_clear_all_matrix_cells_default(api, validator):
 def is_valid_set_all_cells_status(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_90540642f47f525dbd71ef49710ef578_v3_0_0').validate(obj.response)
     return True
 
@@ -138,10 +142,12 @@ def test_set_all_cells_status_default(api, validator):
 def is_valid_clone_matrix_cell(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_892a1e6c05d05e67906b3b59bbe6d274_v3_0_0').validate(obj.response)
     return True
 
@@ -196,10 +202,12 @@ def test_clone_matrix_cell_default(api, validator):
 def is_valid_get_egress_matrix_cell_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_0cdc971b23285b87945021bd5983d1cd_v3_0_0').validate(obj.response)
     return True
 
@@ -246,10 +254,12 @@ def test_get_egress_matrix_cell_by_id_default(api, validator):
 def is_valid_update_egress_matrix_cell_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_ce83fba942c25938bae0c7012df68317_v3_0_0').validate(obj.response)
     return True
 
@@ -314,10 +324,12 @@ def test_update_egress_matrix_cell_by_id_default(api, validator):
 def is_valid_delete_egress_matrix_cell_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_e4393915121d5bcc94dfde6c8f6f7f1c_v3_0_0').validate(obj.response)
     return True
 
@@ -364,10 +376,12 @@ def test_delete_egress_matrix_cell_by_id_default(api, validator):
 def is_valid_get_egress_matrix_cell(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_c5e52706e7095a81b8d32f3024e01cf6_v3_0_0').validate(obj.response)
     return True
 
@@ -424,10 +438,12 @@ def test_get_egress_matrix_cell_default(api, validator):
 def is_valid_create_egress_matrix_cell(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_64c560004d8b5f64a10f2cc070368c12_v3_0_0').validate(obj.response)
     return True
 
@@ -490,10 +506,12 @@ def test_create_egress_matrix_cell_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_703c9da5c04b59358ac8bb1034340df4_v3_0_0').validate(obj.response)
     return True
 
@@ -540,10 +558,12 @@ def test_get_version_default(api, validator):
 def is_valid_bulk_request_for_egress_matrix_cell(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_aa333658bf83576eb36a025283516518_v3_0_0').validate(obj.response)
     return True
 
@@ -596,10 +616,12 @@ def test_bulk_request_for_egress_matrix_cell_default(api, validator):
 def is_valid_monitor_bulk_status_egress_matrix_cell(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_72048face30e52b28c76c1b2574de858_v3_0_0').validate(obj.response)
     return True
 

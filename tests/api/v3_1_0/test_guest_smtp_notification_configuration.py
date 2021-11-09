@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_guest_smtp_notification_settings_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ca28129793d1569bb50de9f43b0d0ee8_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_ca28129793d1569bb50de9f43b0d0ee8_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,11 +84,13 @@ def test_get_guest_smtp_notification_settings_by_id_default(api, validator):
 def is_valid_update_guest_smtp_notification_settings_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a7500f6e473a50e19452683e303dd021_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_a7500f6e473a50e19452683e303dd021_v3_1_0').validate(obj.response)
     return True
 
 
@@ -156,11 +160,13 @@ def test_update_guest_smtp_notification_settings_by_id_default(api, validator):
 def is_valid_get_guest_smtp_notification_settings(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_51e4c74e9b4e559e95c73e81183a6c7a_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_51e4c74e9b4e559e95c73e81183a6c7a_v3_1_0').validate(obj.response)
     return True
 
 
@@ -216,11 +222,13 @@ def test_get_guest_smtp_notification_settings_default(api, validator):
 def is_valid_create_guest_smtp_notification_settings(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_01643de7c6f75f68b0d7df00dc72808d_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_01643de7c6f75f68b0d7df00dc72808d_v3_1_0').validate(obj.response)
     return True
 
 
@@ -288,11 +296,13 @@ def test_create_guest_smtp_notification_settings_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0a0c0e67aead55a2b4db67e9d068351a_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_0a0c0e67aead55a2b4db67e9d068351a_v3_1_0').validate(obj.response)
     return True
 
 

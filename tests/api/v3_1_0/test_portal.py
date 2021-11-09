@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_5ce70db7732c596aa82bd7d1725ac02d_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_5ce70db7732c596aa82bd7d1725ac02d_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,11 +84,13 @@ def test_get_portal_by_id_default(api, validator):
 def is_valid_get_portals(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2a72ae8af1075d0c94912b008003b13e_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_2a72ae8af1075d0c94912b008003b13e_v3_1_0').validate(obj.response)
     return True
 
 
@@ -142,11 +146,13 @@ def test_get_portals_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1d754ad0697d54c98c2690c5043e0be6_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_1d754ad0697d54c98c2690c5043e0be6_v3_1_0').validate(obj.response)
     return True
 
 

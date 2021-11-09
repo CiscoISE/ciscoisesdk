@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_clear_threats_and_vulnerabilities(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_e3110fc63ecb5428a075a8af8497fb35_v3_0_0').validate(obj.response)
     return True
 
@@ -86,10 +88,12 @@ def test_clear_threats_and_vulnerabilities_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_83379c74d24e5ae9bb90f798a190cca3_v3_0_0').validate(obj.response)
     return True
 

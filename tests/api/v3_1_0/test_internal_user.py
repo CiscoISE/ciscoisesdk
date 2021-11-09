@@ -32,11 +32,13 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_internal_user_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_7f403dda9440503191536993f569cc6f_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_7f403dda9440503191536993f569cc6f_v3_1_0').validate(obj.response)
     return True
 
 
@@ -82,11 +84,13 @@ def test_get_internal_user_by_name_default(api, validator):
 def is_valid_update_internal_user_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_4758008519d9509db339e3b27dc56b37_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_4758008519d9509db339e3b27dc56b37_v3_1_0').validate(obj.response)
     return True
 
 
@@ -164,11 +168,13 @@ def test_update_internal_user_by_name_default(api, validator):
 def is_valid_delete_internal_user_by_name(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2447b4e2fc3e595aa1be86d6589614b9_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_2447b4e2fc3e595aa1be86d6589614b9_v3_1_0').validate(obj.response)
     return True
 
 
@@ -214,11 +220,13 @@ def test_delete_internal_user_by_name_default(api, validator):
 def is_valid_get_internal_user_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bacf1abfc35e509183c9a7f055cbbfec_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_bacf1abfc35e509183c9a7f055cbbfec_v3_1_0').validate(obj.response)
     return True
 
 
@@ -264,11 +272,13 @@ def test_get_internal_user_by_id_default(api, validator):
 def is_valid_update_internal_user_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f7227b280b745b94bb801369b168a529_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_f7227b280b745b94bb801369b168a529_v3_1_0').validate(obj.response)
     return True
 
 
@@ -346,11 +356,13 @@ def test_update_internal_user_by_id_default(api, validator):
 def is_valid_delete_internal_user_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_dcf28db5184e51139b15f9ffccd10b67_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_dcf28db5184e51139b15f9ffccd10b67_v3_1_0').validate(obj.response)
     return True
 
 
@@ -396,11 +408,13 @@ def test_delete_internal_user_by_id_default(api, validator):
 def is_valid_get_internal_user(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3ccba98a61555ae495f6a05284e3b5ae_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_3ccba98a61555ae495f6a05284e3b5ae_v3_1_0').validate(obj.response)
     return True
 
 
@@ -456,11 +470,13 @@ def test_get_internal_user_default(api, validator):
 def is_valid_create_internal_user(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bf175c04fcb051b9a6fd70a2252903fa_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_bf175c04fcb051b9a6fd70a2252903fa_v3_1_0').validate(obj.response)
     return True
 
 
@@ -536,11 +552,13 @@ def test_create_internal_user_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2af99828533e58a2b84996b85bacc9ff_v3_0_0').validate(obj.response)
+
+    json_schema_validate('jsd_2af99828533e58a2b84996b85bacc9ff_v3_1_0').validate(obj.response)
     return True
 
 

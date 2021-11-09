@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_task_status(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_38eb7df265a55d2cbedb08847549b39a_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_task_status_default(api, validator):
 def is_valid_get_task_status_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_bcee1c9523a45056ab79dc64bdf827fe_v3_0_0').validate(obj.response)
     return True
 

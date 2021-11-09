@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_support_bundle_status_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_cec7dc317e875ff0a315a7c0556f9c51_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_support_bundle_status_by_id_default(api, validator):
 def is_valid_get_support_bundle_status(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_505300e162f051d58c6ae9d5e3851780_v3_0_0').validate(obj.response)
     return True
 
@@ -134,10 +138,12 @@ def test_get_support_bundle_status_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_7ae30c71acc45385a6b3e9a49a8281a9_v3_0_0').validate(obj.response)
     return True
 

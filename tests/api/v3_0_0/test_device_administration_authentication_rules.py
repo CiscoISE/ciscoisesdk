@@ -32,10 +32,12 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_device_admin_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_141b9e8541f25c4ea29944f659f68994_v3_0_0').validate(obj.response)
     return True
 
@@ -82,10 +84,12 @@ def test_get_device_admin_authentication_rules_default(api, validator):
 def is_valid_create_device_admin_authentication_rule(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_f1ff2b82953f5131884f0779db37190c_v3_0_0').validate(obj.response)
     return True
 
@@ -150,10 +154,12 @@ def test_create_device_admin_authentication_rule_default(api, validator):
 def is_valid_reset_hit_counts_device_admin_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_dd2d3e1f258252579386f21705613d26_v3_0_0').validate(obj.response)
     return True
 
@@ -204,10 +210,12 @@ def test_reset_hit_counts_device_admin_authentication_rules_default(api, validat
 def is_valid_get_device_admin_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_97a160f293375ae9924d8240c4efdc6a_v3_0_0').validate(obj.response)
     return True
 
@@ -256,10 +264,12 @@ def test_get_device_admin_authentication_rule_by_id_default(api, validator):
 def is_valid_update_device_admin_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_1269ca61ff725fedb94fba602d7afe46_v3_0_0').validate(obj.response)
     return True
 
@@ -326,10 +336,12 @@ def test_update_device_admin_authentication_rule_by_id_default(api, validator):
 def is_valid_delete_device_admin_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
+
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+
     json_schema_validate('jsd_30085a9f1f24542dbd244e31691a2e09_v3_0_0').validate(obj.response)
     return True
 

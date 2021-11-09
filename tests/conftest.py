@@ -385,11 +385,23 @@ def pytest_configure(config):
         "markers", "endpoint: endpoint wrapper test"
     )
     config.addinivalue_line(
+        "markers", "nbar_app: nbar_app wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "portal: portal wrapper test"
     )
     config.addinivalue_line(
         "markers", "px_grid_node: px_grid_node wrapper test"
     )
     config.addinivalue_line(
+        "markers", "sg_vn_mapping: sg_vn_mapping wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "tasks: tasks wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "virtual_network: virtual_network wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "vn_vlan_mapping: vn_vlan_mapping wrapper test"
     )
