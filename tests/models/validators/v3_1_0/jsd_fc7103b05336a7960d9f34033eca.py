@@ -47,6 +47,26 @@ class JSONSchemaValidatorFc7103B05336A7960D9F34033Eca(object):
                 "properties": {
                 "response": {
                 "properties": {
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "message": {
                 "type": "string"
                 }

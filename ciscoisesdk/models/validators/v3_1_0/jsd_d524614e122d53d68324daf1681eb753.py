@@ -416,7 +416,7 @@ class JSONSchemaValidatorD524614E122D53D68324Daf1681Eb753(object):
                 "type": "string"
                 },
                 "authenticateSponsorsUsingPortalList": {
-                "type": "string"
+                "type": "boolean"
                 },
                 "autoLoginSelfWait": {
                 "type": "boolean"
@@ -553,10 +553,16 @@ class JSONSchemaValidatorD524614E122D53D68324Daf1681Eb753(object):
                 "type": "boolean"
                 },
                 "guestEmailBlacklistDomains": {
+                "items": {
                 "type": "string"
                 },
+                "type": "array"
+                },
                 "guestEmailWhitelistDomains": {
+                "items": {
                 "type": "string"
+                },
+                "type": "array"
                 },
                 "includeAup": {
                 "type": "boolean"

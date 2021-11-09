@@ -230,7 +230,10 @@ class JSONSchemaValidatorBd8691C5D9435E48A3C7A08658Bda585(object):
                 "type": "string"
                 },
                 "availableSsids": {
+                "items": {
                 "type": "string"
+                },
+                "type": "array"
                 },
                 "certificateGroupTag": {
                 "type": "string"

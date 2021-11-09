@@ -244,7 +244,10 @@ class JSONSchemaValidatorCd6793A4A8E7576C8B290Bdc88001F6F(object):
                 "type": "string"
                 },
                 "availableSsids": {
+                "items": {
                 "type": "string"
+                },
+                "type": "array"
                 },
                 "certificateGroupTag": {
                 "type": "string"

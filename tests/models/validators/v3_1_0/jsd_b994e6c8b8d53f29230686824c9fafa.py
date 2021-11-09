@@ -47,6 +47,26 @@ class JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa(object):
                 "properties": {
                 "response": {
                 "properties": {
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "message": {
                 "type": "string"
                 }

@@ -433,7 +433,7 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "type": "string"
                 },
                 "authenticateSponsorsUsingPortalList": {
-                "type": "string"
+                "type": "boolean"
                 },
                 "autoLoginSelfWait": {
                 "type": "boolean"
@@ -570,10 +570,16 @@ class JSONSchemaValidatorF9C9A5E917Af53DbBb91733E82E72Ebe(object):
                 "type": "boolean"
                 },
                 "guestEmailBlacklistDomains": {
+                "items": {
                 "type": "string"
                 },
+                "type": "array"
+                },
                 "guestEmailWhitelistDomains": {
+                "items": {
                 "type": "string"
+                },
+                "type": "array"
                 },
                 "includeAup": {
                 "type": "boolean"

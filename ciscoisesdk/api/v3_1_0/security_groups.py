@@ -179,7 +179,7 @@ class SecurityGroups(object):
                 request body (list of objects).
             description(string): description, property of the
                 request body.
-            generation_id(integer): generationId, property of the
+            generation_id(string): generationId, property of the
                 request body.
             id(string): id, property of the request body.
             is_read_only(boolean): isReadOnly, property of the
@@ -703,7 +703,7 @@ class SecurityGroups(object):
                 request body (list of objects).
             description(string): description, property of the
                 request body.
-            generation_id(integer): generationId, property of the
+            generation_id(string): generationId, property of the
                 request body.
             is_read_only(boolean): isReadOnly, property of the
                 request body.

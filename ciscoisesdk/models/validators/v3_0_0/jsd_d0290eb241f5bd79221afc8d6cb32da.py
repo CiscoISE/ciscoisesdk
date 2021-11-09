@@ -58,7 +58,7 @@ class JSONSchemaValidatorD0290Eb241F5Bd79221Afc8D6Cb32Da(object):
                 "type": "string"
                 },
                 "generationId": {
-                "type": "integer"
+                "type": "string"
                 },
                 "isReadOnly": {
                 "type": "boolean"

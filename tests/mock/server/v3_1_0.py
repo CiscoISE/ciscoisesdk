@@ -302,7 +302,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
     CERTIFICATE_PROFILE_3be38700993b5f70acfdc8e44f5558d8_PATTERN = re.compile(r"/ers/config/certificateprofile")
     CERTIFICATE_PROFILE_776141419f955525b0b38a57a3bed311_PATTERN = re.compile(r"/ers/config/certificateprofile")
     CERTIFICATE_PROFILE_8e00be3b97b85829bef60c09eaa922ac_PATTERN = re.compile(r"/ers/config/certificateprofile/versioninfo")
-    CERTIFICATE_TEMPLATE_e04f248274ea584aa30857975a28297f_PATTERN = re.compile(r"/ers/config/certificatetemplate/string")
+    CERTIFICATE_TEMPLATE_40ef36cc17a55cb38bf1fe2973dcc312_PATTERN = re.compile(r"/ers/config/certificatetemplate/name/string")
     CERTIFICATE_TEMPLATE_e9e38cdf5bcb5c018b7f10f1d0864215_PATTERN = re.compile(r"/ers/config/certificatetemplate/string")
     CERTIFICATE_TEMPLATE_dc1da5c3912a5117878160e27f6b533a_PATTERN = re.compile(r"/ers/config/certificatetemplate/")
     CERTIFICATE_TEMPLATE_3f126f916efd575dbc9acae4ab2a1e4e_PATTERN = re.compile(r"/ers/config/certificatetemplate/versioninfo")
@@ -1528,7 +1528,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'code': 0, 'message': 'string'})
+        response_content = json.dumps({'response': {'id': 'string', 'message': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1582,7 +1582,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'code': 0, 'message': 'string'})
+        response_content = json.dumps({'response': {'id': 'string', 'message': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1600,7 +1600,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'message': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'message': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -1618,7 +1618,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': {'message': 'string'}, 'version': 'string'})
+        response_content = json.dumps({'response': {'message': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2392,7 +2392,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SBStatus': {'id': 'string', 'name': 'string', 'description': 'string', 'fileName': 'string', 'fileSize': 'string', 'hostName': 'string', 'message': 'string', 'startTime': 'string', 'status': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'SBStatus': {'id': 'string', 'name': 'string', 'description': 'string', 'fileName': 'string', 'fileSize': 0, 'hostName': 'string', 'message': 'string', 'startTime': 'string', 'status': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2590,7 +2590,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'message': 'string', 'status': 'string'})
+        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2608,7 +2608,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'message': 'string', 'status': 'string'})
+        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -6014,9 +6014,9 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_CERTIFICATE_TEMPLATE_e04f248274ea584aa30857975a28297f(self):
+    def matches_CERTIFICATE_TEMPLATE_40ef36cc17a55cb38bf1fe2973dcc312(self):
         return re.search(
-            self.CERTIFICATE_TEMPLATE_e04f248274ea584aa30857975a28297f_PATTERN,
+            self.CERTIFICATE_TEMPLATE_40ef36cc17a55cb38bf1fe2973dcc312_PATTERN,
             self.path
         )
 
@@ -10114,7 +10114,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'Sgt': {'id': 'string', 'name': 'string', 'description': 'string', 'value': 0, 'generationId': 0, 'isReadOnly': True, 'propogateToApic': True, 'defaultSGACLs': [{}], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'Sgt': {'id': 'string', 'name': 'string', 'description': 'string', 'value': 0, 'generationId': 'string', 'isReadOnly': True, 'propogateToApic': True, 'defaultSGACLs': [{}], 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10258,7 +10258,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SelfRegPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowForgotPassword': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'alternateGuestPortal': 'string', 'allowGuestToUseSocialAccounts': True, 'allowShowGuestForm': True, 'socialConfigs': [{'socialMediaType': 'string', 'socialMediaValue': 'string'}]}, 'selfRegPageSettings': {'assignGuestsToGuestType': 'string', 'accountValidityDuration': 0, 'accountValidityTimeUnits': 'string', 'requireRegistrationCode': True, 'registrationCode': 'string', 'fieldUserName': {'include': True, 'require': True}, 'fieldFirstName': {'include': True, 'require': True}, 'fieldLastName': {'include': True, 'require': True}, 'fieldEmailAddr': {'include': True, 'require': True}, 'fieldPhoneNo': {'include': True, 'require': True}, 'fieldCompany': {'include': True, 'require': True}, 'fieldLocation': {'include': True, 'require': True}, 'selectableLocations': ['string'], 'fieldSmsProvider': {'include': True, 'require': True}, 'selectableSmsProviders': ['string'], 'fieldPersonBeingVisited': {'include': True, 'require': True}, 'fieldReasonForVisit': {'include': True, 'require': True}, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'enableGuestEmailWhitelist': True, 'guestEmailWhitelistDomains': 'string', 'enableGuestEmailBlacklist': True, 'guestEmailBlacklistDomains': 'string', 'requireGuestApproval': True, 'autoLoginSelfWait': True, 'autoLoginTimePeriod': 0, 'allowGraceAccess': True, 'graceAccessExpireInterval': 0, 'graceAccessSendAccountExpiration': True, 'sendApprovalRequestTo': 'string', 'approvalEmailAddresses': 'string', 'postRegistrationRedirect': 'string', 'postRegistrationRedirectUrl': 'string', 'credentialNotificationUsingEmail': True, 'credentialNotificationUsingSms': True, 'approveDenyLinksValidFor': 0, 'approveDenyLinksTimeUnits': 'string', 'requireApproverToAuthenticate': True, 'authenticateSponsorsUsingPortalList': 'string', 'sponsorPortalList': []}, 'selfRegSuccessSettings': {'includeUserName': True, 'includePassword': True, 'includeFirstName': True, 'includeLastName': True, 'includeEmailAddr': True, 'includePhoneNo': True, 'includeCompany': True, 'includeLocation': True, 'includeSmsProvider': True, 'includePersonBeingVisited': True, 'includeReasonForVisit': True, 'allowGuestSendSelfUsingPrint': True, 'allowGuestSendSelfUsingEmail': True, 'allowGuestSendSelfUsingSms': True, 'includeAup': True, 'aupOnPage': True, 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestLoginFromSelfregSuccessPage': True}, 'aupSettings': {'includeAup': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'requireScrolling': True, 'requireAupScrolling': True, 'displayFrequency': 'string', 'displayFrequencyIntervalDays': 0}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'SelfRegPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'requireAccessCode': True, 'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowForgotPassword': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'alternateGuestPortal': 'string', 'allowGuestToUseSocialAccounts': True, 'allowShowGuestForm': True, 'socialConfigs': [{'socialMediaType': 'string', 'socialMediaValue': 'string'}]}, 'selfRegPageSettings': {'assignGuestsToGuestType': 'string', 'accountValidityDuration': 0, 'accountValidityTimeUnits': 'string', 'requireRegistrationCode': True, 'registrationCode': 'string', 'fieldUserName': {'include': True, 'require': True}, 'fieldFirstName': {'include': True, 'require': True}, 'fieldLastName': {'include': True, 'require': True}, 'fieldEmailAddr': {'include': True, 'require': True}, 'fieldPhoneNo': {'include': True, 'require': True}, 'fieldCompany': {'include': True, 'require': True}, 'fieldLocation': {'include': True, 'require': True}, 'selectableLocations': ['string'], 'fieldSmsProvider': {'include': True, 'require': True}, 'selectableSmsProviders': ['string'], 'fieldPersonBeingVisited': {'include': True, 'require': True}, 'fieldReasonForVisit': {'include': True, 'require': True}, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'enableGuestEmailWhitelist': True, 'guestEmailWhitelistDomains': ['string'], 'enableGuestEmailBlacklist': True, 'guestEmailBlacklistDomains': ['string'], 'requireGuestApproval': True, 'autoLoginSelfWait': True, 'autoLoginTimePeriod': 0, 'allowGraceAccess': True, 'graceAccessExpireInterval': 0, 'graceAccessSendAccountExpiration': True, 'sendApprovalRequestTo': 'string', 'approvalEmailAddresses': 'string', 'postRegistrationRedirect': 'string', 'postRegistrationRedirectUrl': 'string', 'credentialNotificationUsingEmail': True, 'credentialNotificationUsingSms': True, 'approveDenyLinksValidFor': 0, 'approveDenyLinksTimeUnits': 'string', 'requireApproverToAuthenticate': True, 'authenticateSponsorsUsingPortalList': True, 'sponsorPortalList': []}, 'selfRegSuccessSettings': {'includeUserName': True, 'includePassword': True, 'includeFirstName': True, 'includeLastName': True, 'includeEmailAddr': True, 'includePhoneNo': True, 'includeCompany': True, 'includeLocation': True, 'includeSmsProvider': True, 'includePersonBeingVisited': True, 'includeReasonForVisit': True, 'allowGuestSendSelfUsingPrint': True, 'allowGuestSendSelfUsingEmail': True, 'allowGuestSendSelfUsingSms': True, 'includeAup': True, 'aupOnPage': True, 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestLoginFromSelfregSuccessPage': True}, 'aupSettings': {'includeAup': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'requireScrolling': True, 'requireAupScrolling': True, 'displayFrequency': 'string', 'displayFrequencyIntervalDays': 0}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -10546,7 +10546,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'SponsorPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'fqdn': 'string', 'authenticationMethod': 'string', 'idleTimeout': 0, 'displayLang': 'string', 'fallbackLanguage': 'string', 'availableSsids': 'string'}, 'loginPageSettings': {'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAupScrolling': True, 'socialConfigs': []}, 'aupSettings': {'includeAup': True, 'requireScrolling': True, 'displayFrequency': 'string', 'displayFrequencyIntervalDays': 0}, 'sponsorChangePasswordSettings': {'allowSponsorToChangePwd': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        response_content = json.dumps({'SponsorPortal': {'id': 'string', 'name': 'string', 'description': 'string', 'portalType': 'string', 'portalTestUrl': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': ['string'], 'certificateGroupTag': 'string', 'fqdn': 'string', 'authenticationMethod': 'string', 'idleTimeout': 0, 'displayLang': 'string', 'fallbackLanguage': 'string', 'availableSsids': ['string']}, 'loginPageSettings': {'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAupScrolling': True, 'socialConfigs': []}, 'aupSettings': {'includeAup': True, 'requireScrolling': True, 'displayFrequency': 'string', 'displayFrequencyIntervalDays': 0}, 'sponsorChangePasswordSettings': {'allowSponsorToChangePwd': True}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'postAccessBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'bannerColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {'viewLanguage': 'string'}, 'globalCustomizations': {'mobileLogoImage': {'data': 'string'}, 'desktopLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}, 'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string'}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -13150,7 +13150,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
             self.certificate_profile_get_version_response()
             return
 
-        if self.matches_CERTIFICATE_TEMPLATE_e04f248274ea584aa30857975a28297f():
+        if self.matches_CERTIFICATE_TEMPLATE_40ef36cc17a55cb38bf1fe2973dcc312():
             self.certificate_template_get_certificate_template_by_name_response()
             return
 

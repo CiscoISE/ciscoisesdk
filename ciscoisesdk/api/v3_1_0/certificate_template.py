@@ -136,7 +136,7 @@ class CertificateTemplate(object):
             'name': name,
         }
 
-        e_url = ('/ers/config/certificatetemplate/{name}')
+        e_url = ('/ers/config/certificatetemplate/name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -144,7 +144,7 @@ class CertificateTemplate(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e04f248274ea584aa30857975a28297f_v3_1_0', _api_response)
+        return self._object_factory('bpm_ef36cc17a55cb38bf1fe2973dcc312_v3_1_0', _api_response)
 
     def get_by_name(self,
                     name,

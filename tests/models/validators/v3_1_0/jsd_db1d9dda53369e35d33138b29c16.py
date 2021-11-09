@@ -45,17 +45,41 @@ class JSONSchemaValidatorDb1D9Dda53369E35D33138B29C16(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "code": {
-                "type": "integer"
+                "response": {
+                "properties": {
+                "id": {
+                "type": "string"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "message": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "code",
-                "message"
-                ],
+                "type": "object"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

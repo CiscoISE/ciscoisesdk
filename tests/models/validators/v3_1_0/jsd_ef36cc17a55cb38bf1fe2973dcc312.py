@@ -37,10 +37,10 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorE04F248274Ea584AA30857975A28297F(object):
+class JSONSchemaValidatorEf36Cc17A55Cb38Bf1Fe2973Dcc312(object):
     """getCertificateTemplateByName request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorE04F248274Ea584AA30857975A28297F, self).__init__()
+        super(JSONSchemaValidatorEf36Cc17A55Cb38Bf1Fe2973Dcc312, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",

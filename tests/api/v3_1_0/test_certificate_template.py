@@ -38,7 +38,7 @@ def is_valid_get_certificate_template_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
 
-    json_schema_validate('jsd_e04f248274ea584aa30857975a28297f_v3_1_0').validate(obj.response)
+    json_schema_validate('jsd_40ef36cc17a55cb38bf1fe2973dcc312_v3_1_0').validate(obj.response)
     return True
 
 

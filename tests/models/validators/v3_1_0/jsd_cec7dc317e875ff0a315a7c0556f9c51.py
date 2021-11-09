@@ -55,7 +55,7 @@ class JSONSchemaValidatorCec7Dc317E875Ff0A315A7C0556F9C51(object):
                 "type": "string"
                 },
                 "fileSize": {
-                "type": "string"
+                "type": "integer"
                 },
                 "hostName": {
                 "type": "string"

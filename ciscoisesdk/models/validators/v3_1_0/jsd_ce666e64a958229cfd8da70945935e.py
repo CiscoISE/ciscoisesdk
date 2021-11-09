@@ -58,7 +58,7 @@ class JSONSchemaValidatorCe666E64A958229Cfd8Da70945935E(object):
                 "type": "string"
                 },
                 "generationId": {
-                "type": "integer"
+                "type": "string"
                 },
                 "id": {
                 "type": "string"

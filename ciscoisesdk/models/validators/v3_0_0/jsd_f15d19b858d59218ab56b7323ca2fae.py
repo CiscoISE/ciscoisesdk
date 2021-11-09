@@ -227,7 +227,10 @@ class JSONSchemaValidatorF15D19B858D59218Ab56B7323Ca2Fae(object):
                 "type": "string"
                 },
                 "availableSsids": {
+                "items": {
                 "type": "string"
+                },
+                "type": "array"
                 },
                 "certificateGroupTag": {
                 "type": "string"
