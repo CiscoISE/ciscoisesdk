@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_active_directory_by_name(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_7c6be021c4ca59e48c97afe218219bb1_v3_1_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_active_directory_by_name(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_active_directory_by_name_default(api, validator):
 def is_valid_get_user_groups(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_b839d4dee9b958e48ccef056603e253f_v3_1_0').validate(obj.response)
     return True
 
@@ -113,7 +110,7 @@ def test_get_user_groups(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -142,12 +139,10 @@ def test_get_user_groups_default(api, validator):
 def is_valid_load_groups_from_domain(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_14104b05e80058df96e685baa727d578_v3_1_0').validate(obj.response)
     return True
 
@@ -178,7 +173,7 @@ def test_load_groups_from_domain(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -214,12 +209,10 @@ def test_load_groups_from_domain_default(api, validator):
 def is_valid_leave_domain(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_8091e84541805d1da1fa3d4d581102a9_v3_1_0').validate(obj.response)
     return True
 
@@ -243,7 +236,7 @@ def test_leave_domain(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -272,12 +265,10 @@ def test_leave_domain_default(api, validator):
 def is_valid_is_user_member_of_groups(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_eae60ece5110590e97ddd910e8144ed2_v3_1_0').validate(obj.response)
     return True
 
@@ -301,7 +292,7 @@ def test_is_user_member_of_groups(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -330,12 +321,10 @@ def test_is_user_member_of_groups_default(api, validator):
 def is_valid_get_trusted_domains(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_7d0ed84901325292ad4e2a91a174f6b2_v3_1_0').validate(obj.response)
     return True
 
@@ -358,7 +347,7 @@ def test_get_trusted_domains(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -386,12 +375,10 @@ def test_get_trusted_domains_default(api, validator):
 def is_valid_join_domain_with_all_nodes(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_e84705b918955b53afe61fc37911eb8b_v3_1_0').validate(obj.response)
     return True
 
@@ -415,7 +402,7 @@ def test_join_domain_with_all_nodes(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -444,12 +431,10 @@ def test_join_domain_with_all_nodes_default(api, validator):
 def is_valid_leave_domain_with_all_nodes(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_d011417d18d055ccb864c1dc2ae0456d_v3_1_0').validate(obj.response)
     return True
 
@@ -473,7 +458,7 @@ def test_leave_domain_with_all_nodes(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -502,12 +487,10 @@ def test_leave_domain_with_all_nodes_default(api, validator):
 def is_valid_get_groups_by_domain(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_48fd729f50e65695966359b589a1606b_v3_1_0').validate(obj.response)
     return True
 
@@ -531,7 +514,7 @@ def test_get_groups_by_domain(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -560,12 +543,10 @@ def test_get_groups_by_domain_default(api, validator):
 def is_valid_get_active_directory_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_15236cfcc7615d0492e2dd1b04dd03a9_v3_1_0').validate(obj.response)
     return True
 
@@ -586,7 +567,7 @@ def test_get_active_directory_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -612,12 +593,10 @@ def test_get_active_directory_by_id_default(api, validator):
 def is_valid_delete_active_directory_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_786febbe79ed5bb780d97a98f292b606_v3_1_0').validate(obj.response)
     return True
 
@@ -638,7 +617,7 @@ def test_delete_active_directory_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -664,12 +643,10 @@ def test_delete_active_directory_by_id_default(api, validator):
 def is_valid_join_domain(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_b3284240745e5b929c51495fe80bc1c4_v3_1_0').validate(obj.response)
     return True
 
@@ -693,7 +670,7 @@ def test_join_domain(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -722,12 +699,10 @@ def test_join_domain_default(api, validator):
 def is_valid_get_active_directory(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c8dbec9679d453f78cb47d894c507a7b_v3_1_0').validate(obj.response)
     return True
 
@@ -749,7 +724,7 @@ def test_get_active_directory(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -776,12 +751,10 @@ def test_get_active_directory_default(api, validator):
 def is_valid_create_active_directory(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_64e9318040a456978757d7abfa3e66b1_v3_1_0').validate(obj.response)
     return True
 
@@ -812,7 +785,7 @@ def test_create_active_directory(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -848,12 +821,10 @@ def test_create_active_directory_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c2d0923990e35be1882e4dee000254a9_v3_1_0').validate(obj.response)
     return True
 
@@ -874,7 +845,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

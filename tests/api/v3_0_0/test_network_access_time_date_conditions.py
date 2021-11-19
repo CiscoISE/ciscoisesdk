@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_network_access_time_conditions(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_ab916b19789c59b79dddbc2d0a3c57fc_v3_0_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_network_access_time_conditions(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_network_access_time_conditions_default(api, validator):
 def is_valid_create_network_access_time_condition(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_784b314d32b258a1b53c5c84cf84d396_v3_0_0').validate(obj.response)
     return True
 
@@ -130,7 +127,7 @@ def test_create_network_access_time_condition(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -176,12 +173,10 @@ def test_create_network_access_time_condition_default(api, validator):
 def is_valid_get_network_access_time_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c941303330bc5615b3eb8d4d2702b874_v3_0_0').validate(obj.response)
     return True
 
@@ -202,7 +197,7 @@ def test_get_network_access_time_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -228,12 +223,10 @@ def test_get_network_access_time_condition_by_id_default(api, validator):
 def is_valid_update_network_access_time_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_11232a518d5655f69e8687c9c98740c6_v3_0_0').validate(obj.response)
     return True
 
@@ -274,7 +267,7 @@ def test_update_network_access_time_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -320,12 +313,10 @@ def test_update_network_access_time_condition_by_id_default(api, validator):
 def is_valid_delete_network_access_time_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_e2a697abfe2058d3adc7ad9922f5a5d6_v3_0_0').validate(obj.response)
     return True
 
@@ -346,7 +337,7 @@ def test_delete_network_access_time_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

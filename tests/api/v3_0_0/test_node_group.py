@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_node_groups(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_a0824f9a589c58cd8df522524cb550ad_v3_0_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_node_groups(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_node_groups_default(api, validator):
 def is_valid_get_node_group(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_64a0aadd33595645bf671efc4912f89a_v3_0_0').validate(obj.response)
     return True
 
@@ -110,7 +107,7 @@ def test_get_node_group(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -136,12 +133,10 @@ def test_get_node_group_default(api, validator):
 def is_valid_create_node_group(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_f41d844dbee15f7680920652004f69b6_v3_0_0').validate(obj.response)
     return True
 
@@ -166,7 +161,7 @@ def test_create_node_group(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -196,12 +191,10 @@ def test_create_node_group_default(api, validator):
 def is_valid_update_node_group(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_2875a99695fd5ee0b00efce79a5761ff_v3_0_0').validate(obj.response)
     return True
 
@@ -226,7 +219,7 @@ def test_update_node_group(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -256,12 +249,10 @@ def test_update_node_group_default(api, validator):
 def is_valid_delete_node_group(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_2c5c37c343c050e0af67b2223e64faf3_v3_0_0').validate(obj.response)
     return True
 
@@ -282,7 +273,7 @@ def test_delete_node_group(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

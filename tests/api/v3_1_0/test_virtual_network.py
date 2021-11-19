@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_virtual_networks(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_2199bd42dc595dd68ab56120039f89f1_v3_1_0').validate(obj.response)
     return True
 
@@ -63,7 +62,7 @@ def test_get_virtual_networks(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -94,12 +93,10 @@ def test_get_virtual_networks_default(api, validator):
 def is_valid_create_virtual_network(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_fe478ea1775758638d714efe1b67eec2_v3_1_0').validate(obj.response)
     return True
 
@@ -125,7 +122,7 @@ def test_create_virtual_network(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -156,12 +153,10 @@ def test_create_virtual_network_default(api, validator):
 def is_valid_bulk_create_virtual_networks(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_f7253733d7025c8b8459478b159e84fc_v3_1_0').validate(obj.response)
     return True
 
@@ -183,7 +178,7 @@ def test_bulk_create_virtual_networks(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -210,12 +205,10 @@ def test_bulk_create_virtual_networks_default(api, validator):
 def is_valid_bulk_delete_virtual_networks(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_b6cdd5dd57b95d8bac87ce9600a84b5d_v3_1_0').validate(obj.response)
     return True
 
@@ -237,7 +230,7 @@ def test_bulk_delete_virtual_networks(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -264,12 +257,10 @@ def test_bulk_delete_virtual_networks_default(api, validator):
 def is_valid_bulk_update_virtual_networks(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_e3c62bba9f9e5344a38479f6437cf8b4_v3_1_0').validate(obj.response)
     return True
 
@@ -291,7 +282,7 @@ def test_bulk_update_virtual_networks(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -318,12 +309,10 @@ def test_bulk_update_virtual_networks_default(api, validator):
 def is_valid_get_virtual_network_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_d89686dd9cb05c02833cdefc5d3ba9f2_v3_1_0').validate(obj.response)
     return True
 
@@ -344,7 +333,7 @@ def test_get_virtual_network_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -370,12 +359,10 @@ def test_get_virtual_network_by_id_default(api, validator):
 def is_valid_update_virtual_network_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_6d02f9a7ed46581b8baf07e182f80695_v3_1_0').validate(obj.response)
     return True
 
@@ -401,7 +388,7 @@ def test_update_virtual_network_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -432,12 +419,10 @@ def test_update_virtual_network_by_id_default(api, validator):
 def is_valid_delete_virtual_network_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_30f7fda88868581085da6ac8c0e04b5c_v3_1_0').validate(obj.response)
     return True
 
@@ -458,7 +443,7 @@ def test_delete_virtual_network_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_downloadable_acl_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_dfa8f48210e85715beebb44e62fac408_v3_1_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_downloadable_acl_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_downloadable_acl_by_id_default(api, validator):
 def is_valid_update_downloadable_acl_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_2d8c7ba0cb8f56d99135e16d2d973d11_v3_1_0').validate(obj.response)
     return True
 
@@ -116,7 +113,7 @@ def test_update_downloadable_acl_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -148,12 +145,10 @@ def test_update_downloadable_acl_by_id_default(api, validator):
 def is_valid_delete_downloadable_acl_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_42b3db444eaa50678218c29f88de60e8_v3_1_0').validate(obj.response)
     return True
 
@@ -174,7 +169,7 @@ def test_delete_downloadable_acl_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -200,12 +195,10 @@ def test_delete_downloadable_acl_by_id_default(api, validator):
 def is_valid_get_downloadable_acl(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_9191bc200af85d598885a990ff9bcbf8_v3_1_0').validate(obj.response)
     return True
 
@@ -227,7 +220,7 @@ def test_get_downloadable_acl(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -254,12 +247,10 @@ def test_get_downloadable_acl_default(api, validator):
 def is_valid_create_downloadable_acl(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_adcf947c42fe5588b7b82d9c43a3bbf0_v3_1_0').validate(obj.response)
     return True
 
@@ -285,7 +276,7 @@ def test_create_downloadable_acl(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -316,12 +307,10 @@ def test_create_downloadable_acl_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_d10b7914625e5da0861cbeab4cf6440e_v3_1_0').validate(obj.response)
     return True
 
@@ -342,7 +331,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

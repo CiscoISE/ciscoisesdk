@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_tacacs_command_sets_by_name(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_34f8ba0e97135ca6bacff94d5a76df97_v3_0_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_tacacs_command_sets_by_name(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_tacacs_command_sets_by_name_default(api, validator):
 def is_valid_get_tacacs_command_sets_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_2caefe2cb042513ab4a4a76f227330cb_v3_0_0').validate(obj.response)
     return True
 
@@ -110,7 +107,7 @@ def test_get_tacacs_command_sets_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -136,12 +133,10 @@ def test_get_tacacs_command_sets_by_id_default(api, validator):
 def is_valid_update_tacacs_command_sets_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_20eb6323be425816a4116eea48f16f4b_v3_0_0').validate(obj.response)
     return True
 
@@ -168,7 +163,7 @@ def test_update_tacacs_command_sets_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -200,12 +195,10 @@ def test_update_tacacs_command_sets_by_id_default(api, validator):
 def is_valid_delete_tacacs_command_sets_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_4a319a83b14252eba0f00bb4c4ab0d7c_v3_0_0').validate(obj.response)
     return True
 
@@ -226,7 +219,7 @@ def test_delete_tacacs_command_sets_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -252,12 +245,10 @@ def test_delete_tacacs_command_sets_by_id_default(api, validator):
 def is_valid_get_tacacs_command_sets(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c9a67d3e9015580f93a52627f19e9916_v3_0_0').validate(obj.response)
     return True
 
@@ -279,7 +270,7 @@ def test_get_tacacs_command_sets(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -306,12 +297,10 @@ def test_get_tacacs_command_sets_default(api, validator):
 def is_valid_create_tacacs_command_sets(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_d9cc879878ee5a34ac1c32f2f0cb8c6d_v3_0_0').validate(obj.response)
     return True
 
@@ -337,7 +326,7 @@ def test_create_tacacs_command_sets(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -368,12 +357,10 @@ def test_create_tacacs_command_sets_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_5865f0adb7f554eb810687bd8699149a_v3_0_0').validate(obj.response)
     return True
 
@@ -394,7 +381,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

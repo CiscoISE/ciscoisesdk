@@ -14,6 +14,10 @@ IdentityServicesEngineAPI
 The :class:`IdentityServicesEngineAPI` class creates "connection objects" for working with the Identity Services Engine APIs and hierarchically organizes the Identity Services Engine APIs and their endpoints underneath these connection objects.
 
 
+.. warning::
+    The minimum supported version is ISE 3.1. Future releases may drop the ISE version 3.0.0.
+
+
 IdentityServicesEngineAPI summary structure
 ===========================================
 

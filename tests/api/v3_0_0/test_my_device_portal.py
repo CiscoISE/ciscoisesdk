@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_my_device_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_4bb3528d280652678f8e211b9e418e66_v3_0_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_my_device_portal_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_my_device_portal_by_id_default(api, validator):
 def is_valid_update_my_device_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_83079c64b769537ea7c586565f6ed2a2_v3_0_0').validate(obj.response)
     return True
 
@@ -118,7 +115,7 @@ def test_update_my_device_portal_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -152,12 +149,10 @@ def test_update_my_device_portal_by_id_default(api, validator):
 def is_valid_delete_my_device_portal_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c04f18d6afee5f649a5700bf3074adb9_v3_0_0').validate(obj.response)
     return True
 
@@ -178,7 +173,7 @@ def test_delete_my_device_portal_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -204,12 +199,10 @@ def test_delete_my_device_portal_by_id_default(api, validator):
 def is_valid_get_my_device_portal(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_90a71ccf29f05ee29af909b07bb9c754_v3_0_0').validate(obj.response)
     return True
 
@@ -235,7 +228,7 @@ def test_get_my_device_portal(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -266,12 +259,10 @@ def test_get_my_device_portal_default(api, validator):
 def is_valid_create_my_device_portal(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_e643a5ac8bca55f58ea8d6260c57eafe_v3_0_0').validate(obj.response)
     return True
 
@@ -299,7 +290,7 @@ def test_create_my_device_portal(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -332,12 +323,10 @@ def test_create_my_device_portal_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_5e356376df735e72aa55332951806f42_v3_0_0').validate(obj.response)
     return True
 
@@ -358,7 +347,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

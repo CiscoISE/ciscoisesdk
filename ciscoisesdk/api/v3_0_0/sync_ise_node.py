@@ -42,7 +42,6 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class SyncIseNode(object):

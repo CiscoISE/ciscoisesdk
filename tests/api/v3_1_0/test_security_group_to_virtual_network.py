@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_security_groups_to_vn_to_vlan_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_2112393ea0a65da3ae0346b912a9efac_v3_1_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_security_groups_to_vn_to_vlan_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_security_groups_to_vn_to_vlan_by_id_default(api, validator):
 def is_valid_update_security_groups_to_vn_to_vlan_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_eae98db0c24b5ecca77cce8279e20785_v3_1_0').validate(obj.response)
     return True
 
@@ -116,7 +113,7 @@ def test_update_security_groups_to_vn_to_vlan_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -148,12 +145,10 @@ def test_update_security_groups_to_vn_to_vlan_by_id_default(api, validator):
 def is_valid_delete_security_groups_to_vn_to_vlan_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_9462680497c852dbb953860bef3326e0_v3_1_0').validate(obj.response)
     return True
 
@@ -174,7 +169,7 @@ def test_delete_security_groups_to_vn_to_vlan_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -200,12 +195,10 @@ def test_delete_security_groups_to_vn_to_vlan_by_id_default(api, validator):
 def is_valid_get_security_groups_to_vn_to_vlan(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_e51b6e745cdb5bdda4de26a27b8d92bb_v3_1_0').validate(obj.response)
     return True
 
@@ -229,7 +222,7 @@ def test_get_security_groups_to_vn_to_vlan(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -258,12 +251,10 @@ def test_get_security_groups_to_vn_to_vlan_default(api, validator):
 def is_valid_create_security_groups_to_vn_to_vlan(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_97830a0710ba581da4d3fd00e84d59e3_v3_1_0').validate(obj.response)
     return True
 
@@ -290,7 +281,7 @@ def test_create_security_groups_to_vn_to_vlan(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -322,12 +313,10 @@ def test_create_security_groups_to_vn_to_vlan_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_7b2811387f4e55c8839c94ea241a3236_v3_1_0').validate(obj.response)
     return True
 
@@ -348,7 +337,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -374,12 +363,10 @@ def test_get_version_default(api, validator):
 def is_valid_bulk_request_for_security_groups_to_vn_to_vlan(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_86bd1af169fa52c59cbc87b010c36f9e_v3_1_0').validate(obj.response)
     return True
 
@@ -403,7 +390,7 @@ def test_bulk_request_for_security_groups_to_vn_to_vlan(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -432,12 +419,10 @@ def test_bulk_request_for_security_groups_to_vn_to_vlan_default(api, validator):
 def is_valid_monitor_bulk_status_security_groups_to_vn_to_vlan(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_10ea793a0b1b5ac498f7bc74a0aba257_v3_1_0').validate(obj.response)
     return True
 
@@ -458,7 +443,7 @@ def test_monitor_bulk_status_security_groups_to_vn_to_vlan(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_allowed_protocol_by_name(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_010ac8c8cb9b5007a1e1a6434a20a881_v3_1_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_allowed_protocol_by_name(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_allowed_protocol_by_name_default(api, validator):
 def is_valid_get_allowed_protocol_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_696e3ddfddd45e299f14ed194926f8de_v3_1_0').validate(obj.response)
     return True
 
@@ -110,7 +107,7 @@ def test_get_allowed_protocol_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -136,12 +133,10 @@ def test_get_allowed_protocol_by_id_default(api, validator):
 def is_valid_update_allowed_protocol_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_61a0b312f70257b1bfa90d0260f0c971_v3_1_0').validate(obj.response)
     return True
 
@@ -188,7 +183,7 @@ def test_update_allowed_protocol_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -240,12 +235,10 @@ def test_update_allowed_protocol_by_id_default(api, validator):
 def is_valid_delete_allowed_protocol_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_a6cbd2c420785cfcbdecc3495bca8af4_v3_1_0').validate(obj.response)
     return True
 
@@ -266,7 +259,7 @@ def test_delete_allowed_protocol_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -292,12 +285,10 @@ def test_delete_allowed_protocol_by_id_default(api, validator):
 def is_valid_get_allowed_protocols(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_d82fe0f9e4635b74af809beaaf98bd07_v3_1_0').validate(obj.response)
     return True
 
@@ -319,7 +310,7 @@ def test_get_allowed_protocols(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -346,12 +337,10 @@ def test_get_allowed_protocols_default(api, validator):
 def is_valid_create_allowed_protocol(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_1b40ad23ab0a5a7b8adade320c8912e7_v3_1_0').validate(obj.response)
     return True
 
@@ -397,7 +386,7 @@ def test_create_allowed_protocol(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -448,12 +437,10 @@ def test_create_allowed_protocol_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c0f61393474f5744ab0a263a232d3b96_v3_1_0').validate(obj.response)
     return True
 
@@ -474,7 +461,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

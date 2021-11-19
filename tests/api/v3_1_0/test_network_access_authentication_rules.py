@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_network_access_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_794bee301e7f5ccfa2e788dcafbf92cc_v3_1_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_network_access_authentication_rules(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_network_access_authentication_rules_default(api, validator):
 def is_valid_create_network_access_authentication_rule(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_0017f2fcf04554db9ea4cdc3a7024322_v3_1_0').validate(obj.response)
     return True
 
@@ -118,7 +115,7 @@ def test_create_network_access_authentication_rule(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -152,12 +149,10 @@ def test_create_network_access_authentication_rule_default(api, validator):
 def is_valid_reset_hit_counts_network_access_authentication_rules(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_3944cd727fc45ccf8607a744aa71df66_v3_1_0').validate(obj.response)
     return True
 
@@ -180,7 +175,7 @@ def test_reset_hit_counts_network_access_authentication_rules(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -208,12 +203,10 @@ def test_reset_hit_counts_network_access_authentication_rules_default(api, valid
 def is_valid_get_network_access_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_57a588d29d5a527388ee8498f746d1f5_v3_1_0').validate(obj.response)
     return True
 
@@ -235,7 +228,7 @@ def test_get_network_access_authentication_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -262,12 +255,10 @@ def test_get_network_access_authentication_rule_by_id_default(api, validator):
 def is_valid_update_network_access_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_aa4daefaa3b95ecca521188a43eacbd9_v3_1_0').validate(obj.response)
     return True
 
@@ -297,7 +288,7 @@ def test_update_network_access_authentication_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -332,12 +323,10 @@ def test_update_network_access_authentication_rule_by_id_default(api, validator)
 def is_valid_delete_network_access_authentication_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_8af104d12b5c5e668af1504feca5c9b1_v3_1_0').validate(obj.response)
     return True
 
@@ -359,7 +348,7 @@ def test_delete_network_access_authentication_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

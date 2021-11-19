@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_update_guest_type_email(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_cf310e621a395bb7bac7b90d7d4c8603_v3_1_0').validate(obj.response)
     return True
 
@@ -61,7 +60,7 @@ def test_update_guest_type_email(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -90,12 +89,10 @@ def test_update_guest_type_email_default(api, validator):
 def is_valid_update_guest_type_sms(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_0493eb42e79d5cc38bd1a6eef20613d6_v3_1_0').validate(obj.response)
     return True
 
@@ -119,7 +116,7 @@ def test_update_guest_type_sms(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -148,12 +145,10 @@ def test_update_guest_type_sms_default(api, validator):
 def is_valid_get_guest_type_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_4acb5a41fe395b158a3fe1cda996b0cf_v3_1_0').validate(obj.response)
     return True
 
@@ -174,7 +169,7 @@ def test_get_guest_type_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -200,12 +195,10 @@ def test_get_guest_type_by_id_default(api, validator):
 def is_valid_update_guest_type_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_bac6d4d95ac45a0a8933b8712dcbe70d_v3_1_0').validate(obj.response)
     return True
 
@@ -235,7 +228,7 @@ def test_update_guest_type_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -270,12 +263,10 @@ def test_update_guest_type_by_id_default(api, validator):
 def is_valid_delete_guest_type_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_6faa7211d68e5b329034e17c82b78694_v3_1_0').validate(obj.response)
     return True
 
@@ -296,7 +287,7 @@ def test_delete_guest_type_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -322,12 +313,10 @@ def test_delete_guest_type_by_id_default(api, validator):
 def is_valid_get_guest_type(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_0f41a1e47105581fabf212f259626903_v3_1_0').validate(obj.response)
     return True
 
@@ -353,7 +342,7 @@ def test_get_guest_type(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -384,12 +373,10 @@ def test_get_guest_type_default(api, validator):
 def is_valid_create_guest_type(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_f46c01449d585b088490c4db530c56d5_v3_1_0').validate(obj.response)
     return True
 
@@ -418,7 +405,7 @@ def test_create_guest_type(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -452,12 +439,10 @@ def test_create_guest_type_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_a6bfaedfca185fb7b6a86621e866a5f6_v3_1_0').validate(obj.response)
     return True
 
@@ -478,7 +463,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

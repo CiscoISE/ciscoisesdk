@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_csrs(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_2eeef18d70b159f788b717e301dd3643_v3_0_0').validate(obj.response)
     return True
 
@@ -63,7 +62,7 @@ def test_get_csrs(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -94,12 +93,10 @@ def test_get_csrs_default(api, validator):
 def is_valid_generate_csr(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_e39868ea7aec5efcaaf55009699eda5d_v3_0_0').validate(obj.response)
     return True
 
@@ -139,7 +136,7 @@ def test_generate_csr(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -184,13 +181,8 @@ def test_generate_csr_default(api, validator):
 def is_valid_export_csr(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-
-    json_schema_validate('jsd_ec26ec11d92356a594a6efa55ccb9be7_v3_0_0').validate(obj.response)
+    assert hasattr(obj, 'data')
     return True
 
 
@@ -213,7 +205,7 @@ def test_export_csr(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -242,12 +234,10 @@ def test_export_csr_default(api, validator):
 def is_valid_generate_intermediate_ca_csr(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_bf95f099207a5b6599e04c47c22789c0_v3_0_0').validate(obj.response)
     return True
 
@@ -269,7 +259,7 @@ def test_generate_intermediate_ca_csr(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -296,12 +286,10 @@ def test_generate_intermediate_ca_csr_default(api, validator):
 def is_valid_get_csr_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_b8104a50fc565ae9a756d6d0152e0e5b_v3_0_0').validate(obj.response)
     return True
 
@@ -323,7 +311,7 @@ def test_get_csr_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -350,12 +338,10 @@ def test_get_csr_by_id_default(api, validator):
 def is_valid_delete_csr_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_bf792ec664fa5202beb776556908b0c1_v3_0_0').validate(obj.response)
     return True
 
@@ -377,7 +363,7 @@ def test_delete_csr_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -404,12 +390,10 @@ def test_delete_csr_by_id_default(api, validator):
 def is_valid_regenerate_ise_root_ca(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_18e6d1b224e058288a8c4d70be72c9a6_v3_0_0').validate(obj.response)
     return True
 
@@ -432,7 +416,7 @@ def test_regenerate_ise_root_ca(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -460,12 +444,10 @@ def test_regenerate_ise_root_ca_default(api, validator):
 def is_valid_renew_certificates(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_254c288192f954309b4b35aa612ff226_v3_0_0').validate(obj.response)
     return True
 
@@ -488,7 +470,7 @@ def test_renew_certificates(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -516,12 +498,10 @@ def test_renew_certificates_default(api, validator):
 def is_valid_bind_csr(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_2b94d7d3f0ed5d0b938151ae2cae9fa4_v3_0_0').validate(obj.response)
     return True
 
@@ -560,7 +540,7 @@ def test_bind_csr(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -604,13 +584,8 @@ def test_bind_csr_default(api, validator):
 def is_valid_export_system_certificate(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-
-    json_schema_validate('jsd_1dbe47028859573988880de76fec0936_v3_0_0').validate(obj.response)
+    assert hasattr(obj, 'data')
     return True
 
 
@@ -636,7 +611,7 @@ def test_export_system_certificate(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -668,12 +643,10 @@ def test_export_system_certificate_default(api, validator):
 def is_valid_import_system_certificate(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_517e6c7251a8508597f1b7ae61cbf953_v3_0_0').validate(obj.response)
     return True
 
@@ -714,7 +687,7 @@ def test_import_system_certificate(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -760,12 +733,10 @@ def test_import_system_certificate_default(api, validator):
 def is_valid_get_system_certificates(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_662594a56f5c5f739a83e8806da16be5_v3_0_0').validate(obj.response)
     return True
 
@@ -792,7 +763,7 @@ def test_get_system_certificates(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -824,12 +795,10 @@ def test_get_system_certificates_default(api, validator):
 def is_valid_get_system_certificate_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_3f36e90115b05416a71506061fed7e5c_v3_0_0').validate(obj.response)
     return True
 
@@ -851,7 +820,7 @@ def test_get_system_certificate_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -878,12 +847,10 @@ def test_get_system_certificate_by_id_default(api, validator):
 def is_valid_update_system_certificate(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_48fb9c22ad9a5eddb590c85abdab460b_v3_0_0').validate(obj.response)
     return True
 
@@ -921,7 +888,7 @@ def test_update_system_certificate(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -964,12 +931,10 @@ def test_update_system_certificate_default(api, validator):
 def is_valid_delete_system_certificate_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_35241dc2eec65ad680a3c5de47cd87c8_v3_0_0').validate(obj.response)
     return True
 
@@ -991,7 +956,7 @@ def test_delete_system_certificate_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -1018,12 +983,10 @@ def test_delete_system_certificate_by_id_default(api, validator):
 def is_valid_get_trusted_certificates(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c654a18faf1b5571ac5ba61145d298c4_v3_0_0').validate(obj.response)
     return True
 
@@ -1049,7 +1012,7 @@ def test_get_trusted_certificates(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -1080,13 +1043,8 @@ def test_get_trusted_certificates_default(api, validator):
 def is_valid_export_trusted_certificate(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-
-    json_schema_validate('jsd_1b62a711ce705542b5d1d92b7d3ca431_v3_0_0').validate(obj.response)
+    assert hasattr(obj, 'data')
     return True
 
 
@@ -1108,7 +1066,7 @@ def test_export_trusted_certificate(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -1136,12 +1094,10 @@ def test_export_trusted_certificate_default(api, validator):
 def is_valid_import_trust_certificate(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c8cd2f618b655d988ce626e579486596_v3_0_0').validate(obj.response)
     return True
 
@@ -1174,7 +1130,7 @@ def test_import_trust_certificate(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -1212,12 +1168,10 @@ def test_import_trust_certificate_default(api, validator):
 def is_valid_get_trusted_certificate_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_1091757f8f4956d29b821fa9bbf23266_v3_0_0').validate(obj.response)
     return True
 
@@ -1238,7 +1192,7 @@ def test_get_trusted_certificate_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -1264,12 +1218,10 @@ def test_get_trusted_certificate_by_id_default(api, validator):
 def is_valid_update_trusted_certificate(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_239661cb625d5ad0ad76b93282f5818a_v3_0_0').validate(obj.response)
     return True
 
@@ -1315,7 +1267,7 @@ def test_update_trusted_certificate(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -1366,12 +1318,10 @@ def test_update_trusted_certificate_default(api, validator):
 def is_valid_delete_trusted_certificate_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c578ef80918b5d038024d126cd6e3b8d_v3_0_0').validate(obj.response)
     return True
 
@@ -1392,7 +1342,7 @@ def test_delete_trusted_certificate_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

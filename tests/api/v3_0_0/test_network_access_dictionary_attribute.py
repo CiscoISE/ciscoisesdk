@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_network_access_dictionary_attributes_by_dictionary_name(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_d83302be1f7c528e8211524aeaacd66d_v3_0_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_network_access_dictionary_attributes_by_dictionary_name(api, valida
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_network_access_dictionary_attributes_by_dictionary_name_default(api
 def is_valid_create_network_access_dictionary_attribute(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_706f4508bb3352ff920dbdc229e0fc50_v3_0_0').validate(obj.response)
     return True
 
@@ -119,7 +116,7 @@ def test_create_network_access_dictionary_attribute(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -154,12 +151,10 @@ def test_create_network_access_dictionary_attribute_default(api, validator):
 def is_valid_get_network_access_dictionary_attribute_by_name(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c77600d349fc5c259dbd22d65b3ffa1d_v3_0_0').validate(obj.response)
     return True
 
@@ -181,7 +176,7 @@ def test_get_network_access_dictionary_attribute_by_name(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -208,12 +203,10 @@ def test_get_network_access_dictionary_attribute_by_name_default(api, validator)
 def is_valid_update_network_access_dictionary_attribute_by_name(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_a60b29bfe2b055299e4360d84380ddd4_v3_0_0').validate(obj.response)
     return True
 
@@ -243,7 +236,7 @@ def test_update_network_access_dictionary_attribute_by_name(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -278,12 +271,10 @@ def test_update_network_access_dictionary_attribute_by_name_default(api, validat
 def is_valid_delete_network_access_dictionary_attribute_by_name(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_dd6c2553ae0053c1bbbdbd46c1df0ef9_v3_0_0').validate(obj.response)
     return True
 
@@ -305,7 +296,7 @@ def test_delete_network_access_dictionary_attribute_by_name(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

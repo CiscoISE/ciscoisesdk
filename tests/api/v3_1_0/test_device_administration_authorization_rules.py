@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_device_admin_authorization_rules(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_f831d9ed2beb5c2b967aa10db8c22046_v3_1_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_device_admin_authorization_rules(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_device_admin_authorization_rules_default(api, validator):
 def is_valid_create_device_admin_authorization_rule(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_53a03a30be865ca599e77c63a332978b_v3_1_0').validate(obj.response)
     return True
 
@@ -116,7 +113,7 @@ def test_create_device_admin_authorization_rule(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -148,12 +145,10 @@ def test_create_device_admin_authorization_rule_default(api, validator):
 def is_valid_reset_hit_counts_device_admin_authorization_rules(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_4f0698a9c9075b46a46193b1fb4b9563_v3_1_0').validate(obj.response)
     return True
 
@@ -176,7 +171,7 @@ def test_reset_hit_counts_device_admin_authorization_rules(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -204,12 +199,10 @@ def test_reset_hit_counts_device_admin_authorization_rules_default(api, validato
 def is_valid_get_device_admin_authorization_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_51dc966c73c65649a244d507bd53fd19_v3_1_0').validate(obj.response)
     return True
 
@@ -231,7 +224,7 @@ def test_get_device_admin_authorization_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -258,12 +251,10 @@ def test_get_device_admin_authorization_rule_by_id_default(api, validator):
 def is_valid_update_device_admin_authorization_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_f92e61297eb05379bd9b92bc60735912_v3_1_0').validate(obj.response)
     return True
 
@@ -291,7 +282,7 @@ def test_update_device_admin_authorization_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -324,12 +315,10 @@ def test_update_device_admin_authorization_rule_by_id_default(api, validator):
 def is_valid_delete_device_admin_authorization_rule_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_60fb4ef0633057a1acdc47e23b120073_v3_1_0').validate(obj.response)
     return True
 
@@ -351,7 +340,7 @@ def test_delete_device_admin_authorization_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

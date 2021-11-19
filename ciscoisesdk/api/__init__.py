@@ -668,6 +668,9 @@ class IdentityServicesEngineAPI(object):
                 )
             )
 
+        if version == '3.0.0':
+            print("The minimum supported version is ISE 3.1. Future releases may drop the current version (3.0.0)")
+
         if isinstance(debug, str):
             debug = 'true' in debug.lower()
 

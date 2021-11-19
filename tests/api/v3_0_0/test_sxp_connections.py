@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_sxp_connections_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_86a5b160a5675039b7ddf3dc960c7968_v3_0_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_sxp_connections_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_sxp_connections_by_id_default(api, validator):
 def is_valid_update_sxp_connections_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_1cab8440e21553c3a807d23d05e5e1aa_v3_0_0').validate(obj.response)
     return True
 
@@ -120,7 +117,7 @@ def test_update_sxp_connections_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -156,12 +153,10 @@ def test_update_sxp_connections_by_id_default(api, validator):
 def is_valid_delete_sxp_connections_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_65954377fb665776b98ba815b52515a6_v3_0_0').validate(obj.response)
     return True
 
@@ -182,7 +177,7 @@ def test_delete_sxp_connections_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -208,12 +203,10 @@ def test_delete_sxp_connections_by_id_default(api, validator):
 def is_valid_get_sxp_connections(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_7c56dfcff6285f9b882c884873d5d6c1_v3_0_0').validate(obj.response)
     return True
 
@@ -239,7 +232,7 @@ def test_get_sxp_connections(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -270,12 +263,10 @@ def test_get_sxp_connections_default(api, validator):
 def is_valid_create_sxp_connections(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_789c371214c759f791c0a522b9eaf5b5_v3_0_0').validate(obj.response)
     return True
 
@@ -305,7 +296,7 @@ def test_create_sxp_connections(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -340,12 +331,10 @@ def test_create_sxp_connections_default(api, validator):
 def is_valid_get_version(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_c1ceea62877152f6a4cf7ce709f4d0f8_v3_0_0').validate(obj.response)
     return True
 
@@ -366,7 +355,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -392,12 +381,10 @@ def test_get_version_default(api, validator):
 def is_valid_bulk_request_for_sxp_connections(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_e390313557e95aa9b8c2453d6f1de1e8_v3_0_0').validate(obj.response)
     return True
 
@@ -421,7 +408,7 @@ def test_bulk_request_for_sxp_connections(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -450,12 +437,10 @@ def test_bulk_request_for_sxp_connections_default(api, validator):
 def is_valid_monitor_bulk_status_sxp_connections(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_9462c2fb20ca5eb79facdda896457507_v3_0_0').validate(obj.response)
     return True
 
@@ -476,7 +461,7 @@ def test_monitor_bulk_status_sxp_connections(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

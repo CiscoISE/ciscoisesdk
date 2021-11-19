@@ -2518,7 +2518,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'description': 'string', 'file': 'string', 'filename': 'string', 'inputStream': {}, 'open': True, 'readable': True, 'uri': 'string', 'url': 'string'})
+        response_content = json.dumps('string')
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2644,7 +2644,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'description': 'string', 'file': 'string', 'filename': 'string', 'inputStream': {}, 'open': True, 'readable': True, 'uri': 'string', 'url': 'string'})
+        response_content = json.dumps('string')
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2770,7 +2770,7 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'description': 'string', 'file': 'string', 'filename': 'string', 'inputStream': {}, 'open': True, 'readable': True, 'uri': 'string', 'url': 'string'})
+        response_content = json.dumps('string')
         self.wfile.write(response_content.encode('utf-8'))
         return
 

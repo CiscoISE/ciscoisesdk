@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.0.0', rea
 def is_valid_get_device_admin_network_conditions(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_b4ceac9ee830523ca5ddbfdf3e1b44be_v3_0_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_device_admin_network_conditions(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_device_admin_network_conditions_default(api, validator):
 def is_valid_create_device_admin_network_condition(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_b95cf8c9aed95518b38be1fa4b514b67_v3_0_0').validate(obj.response)
     return True
 
@@ -117,7 +114,7 @@ def test_create_device_admin_network_condition(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -150,12 +147,10 @@ def test_create_device_admin_network_condition_default(api, validator):
 def is_valid_get_device_admin_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_33e9cc593c395c48b31b30149467c846_v3_0_0').validate(obj.response)
     return True
 
@@ -176,7 +171,7 @@ def test_get_device_admin_network_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -202,12 +197,10 @@ def test_get_device_admin_network_condition_by_id_default(api, validator):
 def is_valid_update_device_admin_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_23f78898b7d655b2b81085dc7c0a964e_v3_0_0').validate(obj.response)
     return True
 
@@ -235,7 +228,7 @@ def test_update_device_admin_network_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -268,12 +261,10 @@ def test_update_device_admin_network_condition_by_id_default(api, validator):
 def is_valid_delete_device_admin_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_7c0b4d1bbda75355912f208521362a41_v3_0_0').validate(obj.response)
     return True
 
@@ -294,7 +285,7 @@ def test_delete_device_admin_network_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

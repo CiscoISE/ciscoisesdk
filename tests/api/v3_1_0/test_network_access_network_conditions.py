@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -32,12 +33,10 @@ pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', rea
 def is_valid_get_network_access_network_conditions(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_d43fec9e7dc556cbb9bf0ebd1dcd6aad_v3_1_0').validate(obj.response)
     return True
 
@@ -58,7 +57,7 @@ def test_get_network_access_network_conditions(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -84,12 +83,10 @@ def test_get_network_access_network_conditions_default(api, validator):
 def is_valid_create_network_access_network_condition(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_f4dbfb874b3b56d7a651d6732f1bd55e_v3_1_0').validate(obj.response)
     return True
 
@@ -117,7 +114,7 @@ def test_create_network_access_network_condition(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -150,12 +147,10 @@ def test_create_network_access_network_condition_default(api, validator):
 def is_valid_get_network_access_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_0ab015a9eb6d5f2b91002af068cb4ce2_v3_1_0').validate(obj.response)
     return True
 
@@ -176,7 +171,7 @@ def test_get_network_access_network_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -202,12 +197,10 @@ def test_get_network_access_network_condition_by_id_default(api, validator):
 def is_valid_update_network_access_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_49780cf65cd559628b26f6eb5ea20f14_v3_1_0').validate(obj.response)
     return True
 
@@ -235,7 +228,7 @@ def test_update_network_access_network_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -268,12 +261,10 @@ def test_update_network_access_network_condition_by_id_default(api, validator):
 def is_valid_delete_network_access_network_condition_by_id(json_schema_validate, obj):
     if not obj:
         return False
-
     assert hasattr(obj, 'headers')
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-
     json_schema_validate('jsd_95e92c6e47625711b9ce06f92bd4d219_v3_1_0').validate(obj.response)
     return True
 
@@ -294,7 +285,7 @@ def test_delete_network_access_network_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
