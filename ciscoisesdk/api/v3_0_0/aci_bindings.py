@@ -264,7 +264,8 @@ class AciBindings(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def get_all_generator(self,
                           filter_by=None,
@@ -288,7 +289,8 @@ class AciBindings(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def get_version(self,
                     headers=None,

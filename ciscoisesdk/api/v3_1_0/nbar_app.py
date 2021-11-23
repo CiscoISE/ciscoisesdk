@@ -283,7 +283,8 @@ class NbarApp(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def get_all_generator(self,
                           filter=None,
@@ -307,7 +308,8 @@ class NbarApp(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def create_nbar_app(self,
                         description=None,

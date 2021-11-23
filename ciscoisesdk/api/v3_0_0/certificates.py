@@ -267,7 +267,8 @@ class Certificates(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def generate_csr(self,
                      allow_wild_card_cert=None,
@@ -1714,7 +1715,8 @@ class Certificates(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def get_system_certificate_by_id(self,
                                      host_name,
@@ -2276,7 +2278,8 @@ class Certificates(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def export_trusted_certificate(self,
                                    id,
