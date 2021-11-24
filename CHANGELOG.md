@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+## [1.2.0] - 2021-11-24
+
+### Added
+- Adds notice for 3.0.0 (soon to be deprecated)
+- Adds Trust Sec endpoints to ISE version 3.1.0
+
+### Changed
+- Fixes paths for Policy endpoints (get_device_admin_profiles, get_network_access_profiles)
+- Updates ISE version 3.1.0 as separate version
+### Removed
+- Removes link of 3.1.0 modules to 3.0.0 version
+
 ## [1.1.0] - 2021-10-22
 
 ### Added
@@ -123,4 +135,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v0.5.1...v1.0.0
 [1.0.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...v1.0.1
 [1.1.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.1...v1.1.0
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...main
+[1.2.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...v1.2.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.2.0...main
