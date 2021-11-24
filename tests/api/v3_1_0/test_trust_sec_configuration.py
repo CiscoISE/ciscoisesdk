@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_security_groups(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9b5b0eb1671a51758acf5ec364d80738_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9b5b0eb1671a51758acf5ec364d80738_v3_1_0').validate(obj.response)
     return True
 
 
@@ -57,7 +58,7 @@ def test_get_security_groups(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -88,7 +89,7 @@ def is_valid_get_security_group_acls(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_02b4aa5797455ee4a27390b77262992d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_02b4aa5797455ee4a27390b77262992d_v3_1_0').validate(obj.response)
     return True
 
 
@@ -109,7 +110,7 @@ def test_get_security_group_acls(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -140,7 +141,7 @@ def is_valid_get_egress_policies(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3da8b5be1a475510a5aa1593d625ffbb_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_3da8b5be1a475510a5aa1593d625ffbb_v3_1_0').validate(obj.response)
     return True
 
 
@@ -161,7 +162,7 @@ def test_get_egress_policies(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -192,7 +193,7 @@ def is_valid_get_egress_matrices(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3f9e6e1c33155fdd9a88f48d093f375b_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_3f9e6e1c33155fdd9a88f48d093f375b_v3_1_0').validate(obj.response)
     return True
 
 
@@ -213,7 +214,7 @@ def test_get_egress_matrices(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

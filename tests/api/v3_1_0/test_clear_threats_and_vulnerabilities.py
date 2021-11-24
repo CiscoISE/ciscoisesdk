@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_clear_threats_and_vulnerabilities(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e3110fc63ecb5428a075a8af8497fb35_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e3110fc63ecb5428a075a8af8497fb35_v3_1_0').validate(obj.response)
     return True
 
 
@@ -58,7 +59,7 @@ def test_clear_threats_and_vulnerabilities(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -90,7 +91,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_83379c74d24e5ae9bb90f798a190cca3_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_83379c74d24e5ae9bb90f798a190cca3_v3_1_0').validate(obj.response)
     return True
 
 
@@ -110,7 +111,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

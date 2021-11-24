@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_config_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0740db1d9dda53369e35d33138b29c16_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0740db1d9dda53369e35d33138b29c16_v3_1_0').validate(obj.response)
     return True
 
 
@@ -60,7 +61,7 @@ def test_config_backup(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -94,7 +95,7 @@ def is_valid_cancel_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3e155669bc74586e9ef2580ec5752902_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_3e155669bc74586e9ef2580ec5752902_v3_1_0').validate(obj.response)
     return True
 
 
@@ -115,7 +116,7 @@ def test_cancel_backup(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -146,7 +147,7 @@ def is_valid_get_last_config_backup_status(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_d388e26255a15233ac682c0406880cfb_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_d388e26255a15233ac682c0406880cfb_v3_1_0').validate(obj.response)
     return True
 
 
@@ -166,7 +167,7 @@ def test_get_last_config_backup_status(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -196,7 +197,7 @@ def is_valid_restore_config_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b8319a8b5d195348a8763acd95ca2967_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b8319a8b5d195348a8763acd95ca2967_v3_1_0').validate(obj.response)
     return True
 
 
@@ -221,7 +222,7 @@ def test_restore_config_backup(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -256,7 +257,7 @@ def is_valid_update_scheduled_config_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3585fc7103b05336a7960d9f34033eca_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_3585fc7103b05336a7960d9f34033eca_v3_1_0').validate(obj.response)
     return True
 
 
@@ -288,7 +289,7 @@ def test_update_scheduled_config_backup(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -330,7 +331,7 @@ def is_valid_create_scheduled_config_backup(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2b994e6c8b8d53f29230686824c9fafa_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2b994e6c8b8d53f29230686824c9fafa_v3_1_0').validate(obj.response)
     return True
 
 
@@ -362,7 +363,7 @@ def test_create_scheduled_config_backup(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

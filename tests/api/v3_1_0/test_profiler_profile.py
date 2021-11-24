@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_profiler_profile_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0e176356698b5ec49609504a530c1d8a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0e176356698b5ec49609504a530c1d8a_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_profiler_profile_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,7 +87,7 @@ def is_valid_get_profiler_profiles(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_688d53f6d85a5d609d49bd38cfd65e57_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_688d53f6d85a5d609d49bd38cfd65e57_v3_1_0').validate(obj.response)
     return True
 
 
@@ -111,7 +112,7 @@ def test_get_profiler_profiles(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -146,7 +147,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_de35c041dc1456cca42b7b2e32a4713d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_de35c041dc1456cca42b7b2e32a4713d_v3_1_0').validate(obj.response)
     return True
 
 
@@ -166,7 +167,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

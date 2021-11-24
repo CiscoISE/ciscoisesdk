@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_anc_policy_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_983a095b061f564ebba331f66505b0e3_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_983a095b061f564ebba331f66505b0e3_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_anc_policy_by_name(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,7 +87,7 @@ def is_valid_get_anc_policy_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f41f77362663580d8cc3e6e88623889d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f41f77362663580d8cc3e6e88623889d_v3_1_0').validate(obj.response)
     return True
 
 
@@ -106,7 +107,7 @@ def test_get_anc_policy_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -136,7 +137,7 @@ def is_valid_update_anc_policy_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1d79b507bda155c180d42f0a67ef64d5_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1d79b507bda155c180d42f0a67ef64d5_v3_1_0').validate(obj.response)
     return True
 
 
@@ -160,7 +161,7 @@ def test_update_anc_policy_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -194,7 +195,7 @@ def is_valid_delete_anc_policy_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_7c6b8dd764e052699d4d7a0d8ba43640_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_7c6b8dd764e052699d4d7a0d8ba43640_v3_1_0').validate(obj.response)
     return True
 
 
@@ -214,7 +215,7 @@ def test_delete_anc_policy_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -244,7 +245,7 @@ def is_valid_get_anc_policy(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_440813c9722c56108cac8ca50bf8f01c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_440813c9722c56108cac8ca50bf8f01c_v3_1_0').validate(obj.response)
     return True
 
 
@@ -269,7 +270,7 @@ def test_get_anc_policy(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -304,7 +305,7 @@ def is_valid_create_anc_policy(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2acfdb4060de5a1895b383238c205986_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2acfdb4060de5a1895b383238c205986_v3_1_0').validate(obj.response)
     return True
 
 
@@ -327,7 +328,7 @@ def test_create_anc_policy(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -360,7 +361,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b01a12e2b55e582084fab915465bf962_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b01a12e2b55e582084fab915465bf962_v3_1_0').validate(obj.response)
     return True
 
 
@@ -380,7 +381,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -410,7 +411,7 @@ def is_valid_bulk_request_for_anc_policy(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_4d67f9f6fba65dcbbcf64ca3e31b39a6_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_4d67f9f6fba65dcbbcf64ca3e31b39a6_v3_1_0').validate(obj.response)
     return True
 
 
@@ -433,7 +434,7 @@ def test_bulk_request_for_anc_policy(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -466,7 +467,7 @@ def is_valid_monitor_bulk_status_anc_policy(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_10023cdff02b5185b9b54c9e58762704_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_10023cdff02b5185b9b54c9e58762704_v3_1_0').validate(obj.response)
     return True
 
 
@@ -486,7 +487,7 @@ def test_monitor_bulk_status_anc_policy(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

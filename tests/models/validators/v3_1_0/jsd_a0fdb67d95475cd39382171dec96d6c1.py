@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getCertificateTemplateByName data model.
+"""Identity Services Engine getNetworkDeviceGroupById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,15 +37,15 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorE04F248274Ea584AA30857975A28297F(object):
-    """getCertificateTemplateByName request schema definition."""
+class JSONSchemaValidatorA0Fdb67D95475Cd39382171Dec96D6C1(object):
+    """getNetworkDeviceGroupById request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorE04F248274Ea584AA30857975A28297F, self).__init__()
+        super(JSONSchemaValidatorA0Fdb67D95475Cd39382171Dec96D6C1, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "ERSCertificateTemplate": {
+                "NetworkDeviceGroup": {
                 "properties": {
                 "description":
                  {
@@ -54,17 +54,25 @@ class JSONSchemaValidatorE04F248274Ea584AA30857975A28297F(object):
                 "id": {
                 "type": "string"
                 },
-                "keySize": {
-                "type": "integer"
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 },
                 "name": {
                 "type": "string"
                 },
-                "raprofile": {
+                "othername": {
                 "type": "string"
-                },
-                "validityPeriod": {
-                "type": "integer"
                 }
                 },
                 "type": "object"

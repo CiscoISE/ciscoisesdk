@@ -42,11 +42,10 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class AuthorizationProfile(object):
-    """Identity Services Engine AuthorizationProfile API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine AuthorizationProfile API (version: 3.0.0).
 
     Wraps the Identity Services Engine AuthorizationProfile
     API and exposes the API as native Python

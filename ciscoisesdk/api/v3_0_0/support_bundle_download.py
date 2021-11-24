@@ -42,11 +42,10 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class SupportBundleDownload(object):
-    """Identity Services Engine SupportBundleDownload API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine SupportBundleDownload API (version: 3.0.0).
 
     Wraps the Identity Services Engine SupportBundleDownload
     API and exposes the API as native Python

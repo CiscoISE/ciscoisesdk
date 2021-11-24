@@ -42,11 +42,10 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class TrustSecConfiguration(object):
-    """Identity Services Engine TrustSec Configuration API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine TrustSec Configuration API (version: 3.0.0).
 
     Wraps the Identity Services Engine TrustSec Configuration
     API and exposes the API as native Python

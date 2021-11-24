@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_identity_group_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1f18bdd1938755409bf6db6b29e85d3a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1f18bdd1938755409bf6db6b29e85d3a_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_identity_group_by_name(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,7 +87,7 @@ def is_valid_get_identity_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ca3df31c13b857e6b5dbc8357a8ab010_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_ca3df31c13b857e6b5dbc8357a8ab010_v3_1_0').validate(obj.response)
     return True
 
 
@@ -106,7 +107,7 @@ def test_get_identity_group_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -136,7 +137,7 @@ def is_valid_update_identity_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1c0689e940ba5526946ad15976cc3365_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1c0689e940ba5526946ad15976cc3365_v3_1_0').validate(obj.response)
     return True
 
 
@@ -161,7 +162,7 @@ def test_update_identity_group_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -196,7 +197,7 @@ def is_valid_get_identity_groups(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9d904c521059563490c4a93871b33d51_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9d904c521059563490c4a93871b33d51_v3_1_0').validate(obj.response)
     return True
 
 
@@ -221,7 +222,7 @@ def test_get_identity_groups(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -256,7 +257,7 @@ def is_valid_create_identity_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_592250bf19f653f9a5c48d1fb1890409_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_592250bf19f653f9a5c48d1fb1890409_v3_1_0').validate(obj.response)
     return True
 
 
@@ -280,7 +281,7 @@ def test_create_identity_group(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -314,7 +315,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_aab79aee0b455bfea8a6d7c6464a2a09_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_aab79aee0b455bfea8a6d7c6464a2a09_v3_1_0').validate(obj.response)
     return True
 
 
@@ -334,7 +335,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

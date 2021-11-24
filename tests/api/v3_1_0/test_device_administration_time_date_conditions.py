@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_device_admin_time_conditions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f79ab23563d857e58e01a74e37333572_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f79ab23563d857e58e01a74e37333572_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_device_admin_time_conditions(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,14 +87,13 @@ def is_valid_create_device_admin_time_condition(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_26a4d5b5da6a50bfaaecc180543fd952_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_26a4d5b5da6a50bfaaecc180543fd952_v3_1_0').validate(obj.response)
     return True
 
 
 def create_device_admin_time_condition(api):
     endpoint_result = api.device_administration_time_date_conditions.create_device_admin_time_condition(
         active_validation=False,
-        attribute_id='string',
         attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -126,14 +126,13 @@ def test_create_device_admin_time_condition(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
 def create_device_admin_time_condition_default(api):
     endpoint_result = api.device_administration_time_date_conditions.create_device_admin_time_condition(
         active_validation=False,
-        attribute_id=None,
         attribute_name=None,
         attribute_value=None,
         children=None,
@@ -176,7 +175,7 @@ def is_valid_get_device_admin_time_condition_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_4709e603092f597ab6c25381e59c4a70_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_4709e603092f597ab6c25381e59c4a70_v3_1_0').validate(obj.response)
     return True
 
 
@@ -196,7 +195,7 @@ def test_get_device_admin_time_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -226,14 +225,13 @@ def is_valid_update_device_admin_time_condition_by_id(json_schema_validate, obj)
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6ee1780a38a85d1ba57c9a38e1093721_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_6ee1780a38a85d1ba57c9a38e1093721_v3_1_0').validate(obj.response)
     return True
 
 
 def update_device_admin_time_condition_by_id(api):
     endpoint_result = api.device_administration_time_date_conditions.update_device_admin_time_condition_by_id(
         active_validation=False,
-        attribute_id='string',
         attribute_name='string',
         attribute_value='string',
         children=[{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}],
@@ -266,7 +264,7 @@ def test_update_device_admin_time_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -274,7 +272,6 @@ def update_device_admin_time_condition_by_id_default(api):
     endpoint_result = api.device_administration_time_date_conditions.update_device_admin_time_condition_by_id(
         active_validation=False,
         id='string',
-        attribute_id=None,
         attribute_name=None,
         attribute_value=None,
         children=None,
@@ -316,7 +313,7 @@ def is_valid_delete_device_admin_time_condition_by_id(json_schema_validate, obj)
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c1052ac49dd35088a9874a4350182015_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c1052ac49dd35088a9874a4350182015_v3_1_0').validate(obj.response)
     return True
 
 
@@ -336,7 +333,7 @@ def test_delete_device_admin_time_condition_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

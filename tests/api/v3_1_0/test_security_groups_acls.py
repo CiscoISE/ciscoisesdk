@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_security_groups_acl_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a50d1bd34d5f593aadf8eb02083c67b0_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_a50d1bd34d5f593aadf8eb02083c67b0_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_security_groups_acl_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,7 +87,7 @@ def is_valid_update_security_groups_acl_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_afc81cd1e25c50319f75606b97c23b3d_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_afc81cd1e25c50319f75606b97c23b3d_v3_1_0').validate(obj.response)
     return True
 
 
@@ -115,7 +116,7 @@ def test_update_security_groups_acl_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -154,7 +155,7 @@ def is_valid_delete_security_groups_acl_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_b0a2bea8bfec52b68663ef3f7ac6d7a7_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_b0a2bea8bfec52b68663ef3f7ac6d7a7_v3_1_0').validate(obj.response)
     return True
 
 
@@ -174,7 +175,7 @@ def test_delete_security_groups_acl_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -204,7 +205,7 @@ def is_valid_get_security_groups_acl(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_999b22d6ad9f595ab7e3eee5cf44de8a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_999b22d6ad9f595ab7e3eee5cf44de8a_v3_1_0').validate(obj.response)
     return True
 
 
@@ -229,7 +230,7 @@ def test_get_security_groups_acl(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -264,7 +265,7 @@ def is_valid_create_security_groups_acl(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_9ab61f24bdaf508590f7686e1130913f_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_9ab61f24bdaf508590f7686e1130913f_v3_1_0').validate(obj.response)
     return True
 
 
@@ -292,7 +293,7 @@ def test_create_security_groups_acl(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -330,7 +331,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6704e67a1131578aa794d8377da9a1de_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_6704e67a1131578aa794d8377da9a1de_v3_1_0').validate(obj.response)
     return True
 
 
@@ -350,7 +351,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -380,7 +381,7 @@ def is_valid_bulk_request_for_security_groups_acl(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_7da250e23ac05e6a8dcf32a81effcee9_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_7da250e23ac05e6a8dcf32a81effcee9_v3_1_0').validate(obj.response)
     return True
 
 
@@ -403,7 +404,7 @@ def test_bulk_request_for_security_groups_acl(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -436,7 +437,7 @@ def is_valid_monitor_bulk_status_security_groups_acl(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_07af5ee576605a5a915d888924c1e804_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_07af5ee576605a5a915d888924c1e804_v3_1_0').validate(obj.response)
     return True
 
 
@@ -456,7 +457,7 @@ def test_monitor_bulk_status_security_groups_acl(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

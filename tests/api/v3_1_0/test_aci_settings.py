@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_aci_settings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_2ea5c865993b56f48f7f43475294a20c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_2ea5c865993b56f48f7f43475294a20c_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_aci_settings(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,7 +87,7 @@ def is_valid_test_aci_connectivity(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1b155c91eec153338302d492db1afb80_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1b155c91eec153338302d492db1afb80_v3_1_0').validate(obj.response)
     return True
 
 
@@ -107,7 +108,7 @@ def test_test_aci_connectivity(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -138,7 +139,7 @@ def is_valid_update_aci_settings_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_56cea2e785ee57908a9ee3b118e49cfa_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_56cea2e785ee57908a9ee3b118e49cfa_v3_1_0').validate(obj.response)
     return True
 
 
@@ -182,7 +183,7 @@ def test_update_aci_settings_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -236,7 +237,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_462410ea47f65521bcf0ab949b5d72b5_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_462410ea47f65521bcf0ab949b5d72b5_v3_1_0').validate(obj.response)
     return True
 
 
@@ -256,7 +257,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

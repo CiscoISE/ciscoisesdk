@@ -42,11 +42,10 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class SupportBundleTriggerConfiguration(object):
-    """Identity Services Engine SupportBundleTriggerConfiguration API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine SupportBundleTriggerConfiguration API (version: 3.0.0).
 
     Wraps the Identity Services Engine SupportBundleTriggerConfiguration
     API and exposes the API as native Python

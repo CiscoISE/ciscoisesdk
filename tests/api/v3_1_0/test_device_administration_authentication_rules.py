@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_device_admin_authentication_rules(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_141b9e8541f25c4ea29944f659f68994_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_141b9e8541f25c4ea29944f659f68994_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_device_admin_authentication_rules(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,14 +87,13 @@ def is_valid_create_device_admin_authentication_rule(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f1ff2b82953f5131884f0779db37190c_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f1ff2b82953f5131884f0779db37190c_v3_1_0').validate(obj.response)
     return True
 
 
 def create_device_admin_authentication_rule(api):
     endpoint_result = api.device_administration_authentication_rules.create_device_admin_authentication_rule(
         active_validation=False,
-        identity_source_id='string',
         identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
@@ -101,7 +101,7 @@ def create_device_admin_authentication_rule(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -115,7 +115,7 @@ def test_create_device_admin_authentication_rule(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -123,7 +123,6 @@ def create_device_admin_authentication_rule_default(api):
     endpoint_result = api.device_administration_authentication_rules.create_device_admin_authentication_rule(
         active_validation=False,
         policy_id='string',
-        identity_source_id=None,
         identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,
@@ -154,7 +153,7 @@ def is_valid_reset_hit_counts_device_admin_authentication_rules(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_dd2d3e1f258252579386f21705613d26_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_dd2d3e1f258252579386f21705613d26_v3_1_0').validate(obj.response)
     return True
 
 
@@ -176,7 +175,7 @@ def test_reset_hit_counts_device_admin_authentication_rules(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -208,7 +207,7 @@ def is_valid_get_device_admin_authentication_rule_by_id(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_97a160f293375ae9924d8240c4efdc6a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_97a160f293375ae9924d8240c4efdc6a_v3_1_0').validate(obj.response)
     return True
 
 
@@ -229,7 +228,7 @@ def test_get_device_admin_authentication_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -260,7 +259,7 @@ def is_valid_update_device_admin_authentication_rule_by_id(json_schema_validate,
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_1269ca61ff725fedb94fba602d7afe46_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_1269ca61ff725fedb94fba602d7afe46_v3_1_0').validate(obj.response)
     return True
 
 
@@ -268,7 +267,6 @@ def update_device_admin_authentication_rule_by_id(api):
     endpoint_result = api.device_administration_authentication_rules.update_device_admin_authentication_rule_by_id(
         active_validation=False,
         id='string',
-        identity_source_id='string',
         identity_source_name='string',
         if_auth_fail='string',
         if_process_fail='string',
@@ -276,7 +274,7 @@ def update_device_admin_authentication_rule_by_id(api):
         link={'href': 'string', 'rel': 'string', 'type': 'string'},
         payload=None,
         policy_id='string',
-        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
+        rule={'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}
     )
     return endpoint_result
 
@@ -290,7 +288,7 @@ def test_update_device_admin_authentication_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -299,7 +297,6 @@ def update_device_admin_authentication_rule_by_id_default(api):
         active_validation=False,
         id='string',
         policy_id='string',
-        identity_source_id=None,
         identity_source_name=None,
         if_auth_fail=None,
         if_process_fail=None,
@@ -330,7 +327,7 @@ def is_valid_delete_device_admin_authentication_rule_by_id(json_schema_validate,
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_30085a9f1f24542dbd244e31691a2e09_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_30085a9f1f24542dbd244e31691a2e09_v3_1_0').validate(obj.response)
     return True
 
 
@@ -351,7 +348,7 @@ def test_delete_device_admin_authentication_rule_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

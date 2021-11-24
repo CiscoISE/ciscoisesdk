@@ -42,11 +42,10 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class SecurityGroups(object):
-    """Identity Services Engine SecurityGroups API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine SecurityGroups API (version: 3.0.0).
 
     Wraps the Identity Services Engine SecurityGroups
     API and exposes the API as native Python
@@ -179,7 +178,7 @@ class SecurityGroups(object):
                 request body (list of objects).
             description(string): description, property of the
                 request body.
-            generation_id(integer): generationId, property of the
+            generation_id(string): generationId, property of the
                 request body.
             id(string): id, property of the request body.
             is_read_only(boolean): isReadOnly, property of the
@@ -703,7 +702,7 @@ class SecurityGroups(object):
                 request body (list of objects).
             description(string): description, property of the
                 request body.
-            generation_id(integer): generationId, property of the
+            generation_id(string): generationId, property of the
                 request body.
             is_read_only(boolean): isReadOnly, property of the
                 request body.

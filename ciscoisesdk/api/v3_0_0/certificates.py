@@ -42,11 +42,10 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class Certificates(object):
-    """Identity Services Engine Certificates API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine Certificates API (version: 3.0.0).
 
     Wraps the Identity Services Engine Certificates
     API and exposes the API as native Python
@@ -268,7 +267,8 @@ class Certificates(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def generate_csr(self,
                      allow_wild_card_cert=None,
@@ -1715,7 +1715,8 @@ class Certificates(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def get_system_certificate_by_id(self,
                                      host_name,
@@ -2277,7 +2278,8 @@ class Certificates(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def export_trusted_certificate(self,
                                    id,

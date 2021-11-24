@@ -402,12 +402,14 @@ def get_err_message(err_response, access_next_list):
     return value if found else None
 
 
-def get_next_page(function, params, access_next_list=["SearchResult", "nextPage", "href"]):
+def get_next_page(function, params, access_next_list=["SearchResult", "nextPage", "href"],
+                  access_resource_list=["SearchResult", "resources"]):
     """
     Args:
         function(function): The API function to call
         params(dict): The parameters of the function
         access_next_list(list): List of strings. Allows to access the URL for the next page using the previous response object
+        access_resource_list(list): List of strings. Allows to access the response object
 
     Yields:
         Generator: A generator object containing the RestResponse objects for all pages.
@@ -415,10 +417,11 @@ def get_next_page(function, params, access_next_list=["SearchResult", "nextPage"
     """
     response = function(**params)
     if response.response:
+        result = response.response
         value = response.response
         found = True
         for access_next in access_next_list:
-            if isinstance(value, dict) and value.get(access_next):
+            if isinstance(value, dict) and value.get(access_next) is not None:
                 value = value.get(access_next)
             else:
                 found = False
@@ -426,10 +429,25 @@ def get_next_page(function, params, access_next_list=["SearchResult", "nextPage"
         if not isinstance(value, str):
             found = False
 
+        for access_resource in access_resource_list:
+            # print("[test] [access_resource]", access_resource)
+            if isinstance(result, dict) and result.get(access_resource) is not None:
+                result = result.get(access_resource)
+
         if not found:
-            yield response
+            if isinstance(result, list):
+                if len(result) == 0:
+                    yield response
+                else:
+                    _params = dict(params)
+                    if 'page' in params and 'size' in params:
+                        _params['page'] = (params['page'] or 0) + 1
+                    yield response
+                    yield from get_next_page(function, {**_params}, access_next_list=access_next_list, access_resource_list=access_resource_list)
+            else:
+                yield response
         else:
             yield response
             url = value
             _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
-            yield from get_next_page(function, {**params, **_query_params}, access_next_list=access_next_list)
+            yield from get_next_page(function, {**params, **_query_params}, access_next_list=access_next_list, access_resource_list=access_resource_list)

@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_portal_global_setting_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_0ac243ecb8c157658a4bcfe77a102c14_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_0ac243ecb8c157658a4bcfe77a102c14_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_portal_global_setting_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,7 +87,7 @@ def is_valid_update_portal_global_setting_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c97e7851003e5a63a2a8005ac8807dc7_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c97e7851003e5a63a2a8005ac8807dc7_v3_1_0').validate(obj.response)
     return True
 
 
@@ -109,7 +110,7 @@ def test_update_portal_global_setting_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -142,7 +143,7 @@ def is_valid_get_portal_global_settings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_e9ce4a1e1cf955f098343646760e9d58_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_e9ce4a1e1cf955f098343646760e9d58_v3_1_0').validate(obj.response)
     return True
 
 
@@ -167,7 +168,7 @@ def test_get_portal_global_settings(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -202,7 +203,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_a9a99c0aacce5a8181e2ff79bf99ae20_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_a9a99c0aacce5a8181e2ff79bf99ae20_v3_1_0').validate(obj.response)
     return True
 
 
@@ -222,7 +223,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

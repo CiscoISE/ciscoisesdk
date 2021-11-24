@@ -42,11 +42,10 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class SmsProvider(object):
-    """Identity Services Engine SMSProvider API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine SMSProvider API (version: 3.0.0).
 
     Wraps the Identity Services Engine SMSProvider
     API and exposes the API as native Python

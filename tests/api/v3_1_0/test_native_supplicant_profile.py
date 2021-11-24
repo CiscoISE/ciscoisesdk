@@ -24,6 +24,7 @@ SOFTWARE.
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.exceptions import ciscoisesdkException
 from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.0', reason='version does not match')
@@ -36,7 +37,7 @@ def is_valid_get_native_supplicant_profile_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_5d1b9755414c5dcbb61987b2dd06839a_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_5d1b9755414c5dcbb61987b2dd06839a_v3_1_0').validate(obj.response)
     return True
 
 
@@ -56,7 +57,7 @@ def test_get_native_supplicant_profile_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -86,7 +87,7 @@ def is_valid_update_native_supplicant_profile_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_c54a2ad63f46527dbec140a05f1213b7_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_c54a2ad63f46527dbec140a05f1213b7_v3_1_0').validate(obj.response)
     return True
 
 
@@ -111,7 +112,7 @@ def test_update_native_supplicant_profile_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -146,7 +147,7 @@ def is_valid_delete_native_supplicant_profile_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_3fff9d421c78597d98a54dd08a9a99f9_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_3fff9d421c78597d98a54dd08a9a99f9_v3_1_0').validate(obj.response)
     return True
 
 
@@ -166,7 +167,7 @@ def test_delete_native_supplicant_profile_by_id(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -196,7 +197,7 @@ def is_valid_get_native_supplicant_profile(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_6470fa9802505d7bbdf85b951581db47_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_6470fa9802505d7bbdf85b951581db47_v3_1_0').validate(obj.response)
     return True
 
 
@@ -217,7 +218,7 @@ def test_get_native_supplicant_profile(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 
@@ -248,7 +249,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_f577c55d36b05178b0275dd88c71e118_v3_0_0').validate(obj.response)
+    json_schema_validate('jsd_f577c55d36b05178b0275dd88c71e118_v3_1_0').validate(obj.response)
     return True
 
 
@@ -268,7 +269,7 @@ def test_get_version(api, validator):
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
+            print("ERROR: {error}".format(error=original_e))
             raise original_e
 
 

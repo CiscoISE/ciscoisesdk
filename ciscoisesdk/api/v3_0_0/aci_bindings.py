@@ -42,11 +42,10 @@ from ...utils import (
     dict_of_str,
     get_next_page,
 )
-import urllib.parse
 
 
 class AciBindings(object):
-    """Identity Services Engine ACIBindings API (version: 3.0.0 and 3.1.0).
+    """Identity Services Engine ACIBindings API (version: 3.0.0).
 
     Wraps the Identity Services Engine ACIBindings
     API and exposes the API as native Python
@@ -265,7 +264,8 @@ class AciBindings(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def get_all_generator(self,
                           filter_by=None,
@@ -289,7 +289,8 @@ class AciBindings(object):
             sort_by=sort_by,
             headers=headers,
             **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        ), access_next_list=["nextPage", "href"]
+        , access_resource_list=["response"])
 
     def get_version(self,
                     headers=None,

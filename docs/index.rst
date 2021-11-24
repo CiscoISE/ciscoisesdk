@@ -25,6 +25,11 @@ With ciscoisesdk, you can easily:
 To *dive in* and see how ciscoisesdk makes your life better, check out the
 :ref:`Quickstart`!
 
+
+.. warning::
+    The minimum supported version is ISE 3.1. Future releases may drop the ISE version 3.0.0.
+
+
 The User Guide
 ==============
 
