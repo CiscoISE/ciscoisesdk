@@ -689,12 +689,15 @@ class ExternalRadiusServer(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_external_radius_server, dict(
-            page=page,
-            size=size,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_external_radius_server, dict(
+                page=page,
+                size=size,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def get_all_generator(self,
                           page=None,
@@ -705,12 +708,15 @@ class ExternalRadiusServer(object):
         api.v3_1_1.external_radius_server.
         ExternalRadiusServer.get_external_radius_server_generator>`_
         """
-        yield from get_next_page(self.get_external_radius_server, dict(
-            page=page,
-            size=size,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_external_radius_server, dict(
+                page=page,
+                size=size,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def create_external_radius_server(self,
                                       accounting_port=None,

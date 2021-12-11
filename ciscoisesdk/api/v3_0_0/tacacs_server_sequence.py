@@ -649,12 +649,15 @@ class TacacsServerSequence(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_tacacs_server_sequence, dict(
-            page=page,
-            size=size,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_tacacs_server_sequence, dict(
+                page=page,
+                size=size,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def get_all_generator(self,
                           page=None,
@@ -665,12 +668,15 @@ class TacacsServerSequence(object):
         api.v3_0_0.tacacs_server_sequence.
         TacacsServerSequence.get_tacacs_server_sequence_generator>`_
         """
-        yield from get_next_page(self.get_tacacs_server_sequence, dict(
-            page=page,
-            size=size,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_tacacs_server_sequence, dict(
+                page=page,
+                size=size,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def create_tacacs_server_sequence(self,
                                       description=None,

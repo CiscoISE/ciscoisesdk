@@ -255,17 +255,19 @@ class AciBindings(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_aci_bindings, dict(
-            filter_by=filter_by,
-            filter_value=filter_value,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_aci_bindings, dict(
+                filter_by=filter_by,
+                filter_value=filter_value,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def get_all_generator(self,
                           filter_by=None,
@@ -280,17 +282,19 @@ class AciBindings(object):
         api.v3_0_0.aci_bindings.
         AciBindings.get_aci_bindings_generator>`_
         """
-        yield from get_next_page(self.get_aci_bindings, dict(
-            filter_by=filter_by,
-            filter_value=filter_value,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_aci_bindings, dict(
+                filter_by=filter_by,
+                filter_value=filter_value,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def get_version(self,
                     headers=None,

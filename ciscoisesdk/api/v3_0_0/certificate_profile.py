@@ -562,12 +562,15 @@ class CertificateProfile(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_certificate_profile, dict(
-            page=page,
-            size=size,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_certificate_profile, dict(
+                page=page,
+                size=size,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def get_all_generator(self,
                           page=None,
@@ -578,12 +581,15 @@ class CertificateProfile(object):
         api.v3_0_0.certificate_profile.
         CertificateProfile.get_certificate_profile_generator>`_
         """
-        yield from get_next_page(self.get_certificate_profile, dict(
-            page=page,
-            size=size,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_certificate_profile, dict(
+                page=page,
+                size=size,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def create_certificate_profile(self,
                                    allowed_as_user_name=None,

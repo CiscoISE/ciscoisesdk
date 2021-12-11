@@ -646,16 +646,19 @@ class SelfRegisteredPortal(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_self_registered_portals, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sortasc=sortasc,
-            sortdsc=sortdsc,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_self_registered_portals, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sortasc=sortasc,
+                sortdsc=sortdsc,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def get_all_generator(self,
                           filter=None,
@@ -670,16 +673,19 @@ class SelfRegisteredPortal(object):
         api.v3_1_0.self_registered_portal.
         SelfRegisteredPortal.get_self_registered_portals_generator>`_
         """
-        yield from get_next_page(self.get_self_registered_portals, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sortasc=sortasc,
-            sortdsc=sortdsc,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_self_registered_portals, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sortasc=sortasc,
+                sortdsc=sortdsc,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def create_self_registered_portal(self,
                                       customizations=None,

@@ -274,17 +274,19 @@ class SgVnMapping(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_sg_vn_mappings, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_sg_vn_mappings, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def get_all_generator(self,
                           filter=None,
@@ -299,17 +301,19 @@ class SgVnMapping(object):
         api.v3_1_0.sg_vn_mapping.
         SgVnMapping.get_sg_vn_mappings_generator>`_
         """
-        yield from get_next_page(self.get_sg_vn_mappings, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_sg_vn_mappings, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def create_sg_vn_mapping(self,
                              id=None,

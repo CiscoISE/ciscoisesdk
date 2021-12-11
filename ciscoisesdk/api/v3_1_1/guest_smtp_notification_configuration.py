@@ -597,16 +597,19 @@ class GuestSmtpNotificationConfiguration(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_guest_smtp_notification_settings, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sortasc=sortasc,
-            sortdsc=sortdsc,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_guest_smtp_notification_settings, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sortasc=sortasc,
+                sortdsc=sortdsc,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def get_all_generator(self,
                           filter=None,
@@ -621,16 +624,19 @@ class GuestSmtpNotificationConfiguration(object):
         api.v3_1_1.guest_smtp_notification_configuration.
         GuestSmtpNotificationConfiguration.get_guest_smtp_notification_settings_generator>`_
         """
-        yield from get_next_page(self.get_guest_smtp_notification_settings, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sortasc=sortasc,
-            sortdsc=sortdsc,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["SearchResult", "nextPage", "href"])
+        yield from get_next_page(
+            self.get_guest_smtp_notification_settings, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sortasc=sortasc,
+                sortdsc=sortdsc,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["SearchResult", "nextPage", "href"],
+            access_resource_list=["SearchResult", "resources"])
 
     def create_guest_smtp_notification_settings(self,
                                                 connection_timeout=None,

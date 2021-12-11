@@ -274,17 +274,19 @@ class VirtualNetwork(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_virtual_networks, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_virtual_networks, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def get_all_generator(self,
                           filter=None,
@@ -299,17 +301,19 @@ class VirtualNetwork(object):
         api.v3_1_0.virtual_network.
         VirtualNetwork.get_virtual_networks_generator>`_
         """
-        yield from get_next_page(self.get_virtual_networks, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_virtual_networks, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def create_virtual_network(self,
                                additional_attributes=None,

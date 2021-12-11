@@ -443,11 +443,15 @@ def get_next_page(function, params, access_next_list=["SearchResult", "nextPage"
                     if 'page' in params and 'size' in params:
                         _params['page'] = (params['page'] or 0) + 1
                     yield response
-                    yield from get_next_page(function, {**_params}, access_next_list=access_next_list, access_resource_list=access_resource_list)
+                    yield from get_next_page(
+                        function, {**_params},
+                        access_next_list=access_next_list, access_resource_list=access_resource_list)
             else:
                 yield response
         else:
             yield response
             url = value
             _query_params = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
-            yield from get_next_page(function, {**params, **_query_params}, access_next_list=access_next_list, access_resource_list=access_resource_list)
+            yield from get_next_page(
+                function, {**params, **_query_params},
+                access_next_list=access_next_list, access_resource_list=access_resource_list)

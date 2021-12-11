@@ -258,17 +258,19 @@ class Certificates(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_csrs, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_csrs, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def generate_csr(self,
                      allow_wild_card_cert=None,
@@ -2142,18 +2144,20 @@ class Certificates(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_system_certificates, dict(
-            host_name=host_name,
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_system_certificates, dict(
+                host_name=host_name,
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def get_system_certificate_by_id(self,
                                      host_name,
@@ -2728,17 +2732,19 @@ class Certificates(object):
             ApiError: If the Identity Services Engine cloud returns an error.
         """
 
-        yield from get_next_page(self.get_trusted_certificates, dict(
-            filter=filter,
-            filter_type=filter_type,
-            page=page,
-            size=size,
-            sort=sort,
-            sort_by=sort_by,
-            headers=headers,
-            **query_parameters
-        ), access_next_list=["nextPage", "href"]
-        , access_resource_list=["response"])
+        yield from get_next_page(
+            self.get_trusted_certificates, dict(
+                filter=filter,
+                filter_type=filter_type,
+                page=page,
+                size=size,
+                sort=sort,
+                sort_by=sort_by,
+                headers=headers,
+                **query_parameters
+            ),
+            access_next_list=["nextPage", "href"],
+            access_resource_list=["response"])
 
     def export_trusted_cert(self,
                             id,
