@@ -57,7 +57,41 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "type": "string"
                 },
                 "conditions": {
-                "items": {},
+                "items": {
+                "properties": {
+                "cliDnisList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "deviceGroupList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "deviceList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "ipAddrList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "macAddrList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                }
+                },
+                "type": "object"
+                },
                 "type": "array"
                 },
                 "description":

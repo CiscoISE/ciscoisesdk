@@ -47,8 +47,15 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 "properties": {
                 "response": {
                 "items": {
-                "allOf": [
-                {
+                "properties": {
+                "attributeName": {
+                "type": "string"
+                },
+                "attributeValue": {
+                "type": "string"
+                },
+                "children": {
+                "items": {
                 "properties": {
                 "conditionType": {
                 "enum": [
@@ -84,19 +91,13 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "href"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "conditionType"
-                ],
                 "type": "object"
                 },
-                {
-                "properties": {
+                "type": "array"
+                },
                 "conditionType": {
                 "enum": [
                 "ConditionAndBlock",
@@ -142,6 +143,12 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 },
                 "description":
                  {
+                "type": "string"
+                },
+                "dictionaryName": {
+                "type": "string"
+                },
+                "dictionaryValue": {
                 "type": "string"
                 },
                 "hoursRange": {
@@ -206,6 +213,30 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 "name": {
                 "type": "string"
                 },
+                "operator": {
+                "enum": [
+                "contains",
+                "endsWith",
+                "equals",
+                "greaterOrEquals",
+                "greaterThan",
+                "in",
+                "ipEquals",
+                "ipGreaterThan",
+                "ipLessThan",
+                "ipNotEquals",
+                "lessOrEquals",
+                "lessThan",
+                "matches",
+                "notContains",
+                "notEndsWith",
+                "notEquals",
+                "notIn",
+                "notStartsWith",
+                "startsWith"
+                ],
+                "type": "string"
+                },
                 "weekDays": {
                 "items": {
                 "enum": [
@@ -237,13 +268,7 @@ class JSONSchemaValidatorF79Ab23563D857E58E01A74E37333572(object):
                 "type": "array"
                 }
                 },
-                "required": [
-                "conditionType",
-                "name"
-                ],
                 "type": "object"
-                }
-                ]
                 },
                 "type": "array"
                 },

@@ -47,8 +47,18 @@ class JSONSchemaValidatorAb916B19789C59B79DddBc2D0A3C57Fc(object):
                 "properties": {
                 "response": {
                 "items": {
-                "allOf": [
-                {
+                "properties": {
+                "attributeId": {
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
+                "attributeValue": {
+                "type": "string"
+                },
+                "children": {
+                "items": {
                 "properties": {
                 "conditionType": {
                 "enum": [
@@ -85,19 +95,27 @@ class JSONSchemaValidatorAb916B19789C59B79DddBc2D0A3C57Fc(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "href"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "conditionType"
-                ],
                 "type": "object"
                 },
-                {
-                "properties": {
+                "minItems": 2,
+                "type": "array"
+                },
+                "conditionType": {
+                "enum": [
+                "ConditionReference",
+                "ConditionAttributes",
+                "LibraryConditionAttributes",
+                "ConditionAndBlock",
+                "LibraryConditionAndBlock",
+                "ConditionOrBlock",
+                "LibraryConditionOrBlock",
+                "TimeAndDateCondition"
+                ],
+                "type": "string"
+                },
                 "datesRange": {
                 "properties": {
                 "endDate": {
@@ -141,6 +159,12 @@ class JSONSchemaValidatorAb916B19789C59B79DddBc2D0A3C57Fc(object):
                 "default": "",
                 "type": "string"
                 },
+                "dictionaryName": {
+                "type": "string"
+                },
+                "dictionaryValue": {
+                "type": "string"
+                },
                 "hoursRange": {
                 "properties": {
                 "endTime": {
@@ -174,7 +198,55 @@ class JSONSchemaValidatorAb916B19789C59B79DddBc2D0A3C57Fc(object):
                 "id": {
                 "type": "string"
                 },
+                "isNegate": {
+                "default": false,
+                "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
+                "type": "string"
+                },
+                "operator": {
+                "enum": [
+                "equals",
+                "notEquals",
+                "contains",
+                "notContains",
+                "matches",
+                "in",
+                "notIn",
+                "startsWith",
+                "notStartsWith",
+                "endsWith",
+                "notEndsWith",
+                "greaterThan",
+                "lessThan",
+                "greaterOrEquals",
+                "lessOrEquals",
+                "ipGreaterThan",
+                "ipLessThan",
+                "ipEquals",
+                "ipNotEquals"
+                ],
                 "type": "string"
                 },
                 "weekDays": {
@@ -209,14 +281,7 @@ class JSONSchemaValidatorAb916B19789C59B79DddBc2D0A3C57Fc(object):
                 "type": "array"
                 }
                 },
-                "required": [
-                "name"
-                ],
                 "type": "object"
-                }
-                ],
-                "x-discriminator-value": "TimeAndDateCondition",
-                "x-ms-discriminator-value": "TimeAndDateCondition"
                 },
                 "type": "array"
                 },

@@ -84,6 +84,18 @@ class JSONSchemaValidatorBba3187F0Be4563AA8B6Ff5931A123E7(object):
                 "properties": {
                 "condition": {
                 "properties": {
+                "attributeId": {
+                "type": "string"
+                },
+                "attributeName": {
+                "type": "string"
+                },
+                "attributeValue": {
+                "type": "string"
+                },
+                "children": {
+                "items": {
+                "properties": {
                 "conditionType": {
                 "enum": [
                 "ConditionReference",
@@ -119,15 +131,176 @@ class JSONSchemaValidatorBba3187F0Be4563AA8B6Ff5931A123E7(object):
                 "type": "string"
                 }
                 },
-                "required": [
-                "href"
-                ],
                 "type": "object"
                 }
                 },
-                "required": [
-                "conditionType"
+                "type": "object"
+                },
+                "minItems": 2,
+                "type": "array"
+                },
+                "conditionType": {
+                "enum": [
+                "ConditionReference",
+                "ConditionAttributes",
+                "LibraryConditionAttributes",
+                "ConditionAndBlock",
+                "LibraryConditionAndBlock",
+                "ConditionOrBlock",
+                "LibraryConditionOrBlock",
+                "TimeAndDateCondition"
                 ],
+                "type": "string"
+                },
+                "datesRange": {
+                "properties": {
+                "endDate": {
+                "maxLength": 10,
+                "minLength": 10,
+                "type": "string"
+                },
+                "startDate": {
+                "maxLength": 10,
+                "minLength": 10,
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "datesRangeException": {
+                "properties": {
+                "endDate": {
+                "maxLength": 10,
+                "minLength": 10,
+                "type": "string"
+                },
+                "startDate": {
+                "maxLength": 10,
+                "minLength": 10,
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "description":
+                 {
+                "default": "",
+                "type": "string"
+                },
+                "dictionaryName": {
+                "type": "string"
+                },
+                "dictionaryValue": {
+                "type": "string"
+                },
+                "hoursRange": {
+                "properties": {
+                "endTime": {
+                "type": "string"
+                },
+                "startTime": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "hoursRangeException": {
+                "properties": {
+                "endTime": {
+                "type": "string"
+                },
+                "startTime": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "id": {
+                "type": "string"
+                },
+                "isNegate": {
+                "default": false,
+                "type": "boolean"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "name": {
+                "type": "string"
+                },
+                "operator": {
+                "enum": [
+                "equals",
+                "notEquals",
+                "contains",
+                "notContains",
+                "matches",
+                "in",
+                "notIn",
+                "startsWith",
+                "notStartsWith",
+                "endsWith",
+                "notEndsWith",
+                "greaterThan",
+                "lessThan",
+                "greaterOrEquals",
+                "lessOrEquals",
+                "ipGreaterThan",
+                "ipLessThan",
+                "ipEquals",
+                "ipNotEquals"
+                ],
+                "type": "string"
+                },
+                "weekDays": {
+                "items": {
+                "enum": [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+                ],
+                "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+                },
+                "weekDaysException": {
+                "items": {
+                "enum": [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+                ],
+                "type": "string"
+                },
+                "type": "array"
+                }
+                },
                 "type": "object"
                 },
                 "default": {

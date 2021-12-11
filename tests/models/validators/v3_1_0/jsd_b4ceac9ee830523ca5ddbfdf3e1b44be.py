@@ -57,7 +57,80 @@ class JSONSchemaValidatorB4Ceac9EE830523CA5DdBfdf3E1B44Be(object):
                 "type": "string"
                 },
                 "conditions": {
-                "items": {},
+                "items": {
+                "properties": {
+                "cliDnisList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "conditionType": {
+                "enum": [
+                "DeviceCondition",
+                "DevicePortCondition",
+                "EndstationCondition"
+                ],
+                "type": "string"
+                },
+                "description":
+                 {
+                "type": "string"
+                },
+                "deviceGroupList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "deviceList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "id": {
+                "readOnly": true,
+                "type": "string"
+                },
+                "ipAddrList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "link": {
+                "properties": {
+                "href": {
+                "type": "string"
+                },
+                "rel": {
+                "enum": [
+                "next",
+                "previous",
+                "self",
+                "status"
+                ],
+                "type": "string"
+                },
+                "type": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "macAddrList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
+                "name": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
                 "type": "array"
                 },
                 "description":
