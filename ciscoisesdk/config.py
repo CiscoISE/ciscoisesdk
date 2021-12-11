@@ -28,7 +28,7 @@
 DEFAULT_DEBUG = 'False'
 
 #: **version** default value.
-DEFAULT_VERSION = '3.1.0'
+DEFAULT_VERSION = '3.1.1'
 
 #: **base_url** default value.
 DEFAULT_BASE_URL = 'https://dcloud-dna-ise-rtp.cisco.com'

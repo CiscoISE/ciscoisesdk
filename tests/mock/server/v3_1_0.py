@@ -64,47 +64,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
     REPOSITORY_386e380a5c1d585ab9012874ca959982_PATTERN = re.compile(r"/api/v1/repository/string")
     REPOSITORY_c3a2e8960455547da94117ef465db97f_PATTERN = re.compile(r"/api/v1/repository/string")
     REPOSITORY_c9dea644f40453fead2b003b06c4c52b_PATTERN = re.compile(r"/api/v1/repository/string/files")
-    ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345_PATTERN = re.compile(r"/ers/config/ancendpoint/string")
-    ANC_ENDPOINT_2131fc6670fd50dfb04b1f6b16981256_PATTERN = re.compile(r"/ers/config/ancendpoint/clear")
-    ANC_ENDPOINT_502e681462295b8b8faea9ce6099ff0c_PATTERN = re.compile(r"/ers/config/ancendpoint")
-    ANC_ENDPOINT_136bc936bcb25464b9f3f227647b0443_PATTERN = re.compile(r"/ers/config/ancendpoint/apply")
-    ANC_ENDPOINT_d5eb6cea45635ef58f5bc624de004f16_PATTERN = re.compile(r"/ers/config/ancendpoint/versioninfo")
-    ANC_ENDPOINT_5e6167fc5cb6593b8b48429187a26a67_PATTERN = re.compile(r"/ers/config/ancendpoint/bulk/submit")
-    ANC_ENDPOINT_0a1c6b9323e55505830673a1819840f3_PATTERN = re.compile(r"/ers/config/ancendpoint/bulk/string")
-    ANC_POLICY_983a095b061f564ebba331f66505b0e3_PATTERN = re.compile(r"/ers/config/ancpolicy/name/string")
-    ANC_POLICY_f41f77362663580d8cc3e6e88623889d_PATTERN = re.compile(r"/ers/config/ancpolicy/string")
-    ANC_POLICY_1d79b507bda155c180d42f0a67ef64d5_PATTERN = re.compile(r"/ers/config/ancpolicy/string")
-    ANC_POLICY_7c6b8dd764e052699d4d7a0d8ba43640_PATTERN = re.compile(r"/ers/config/ancpolicy/string")
-    ANC_POLICY_440813c9722c56108cac8ca50bf8f01c_PATTERN = re.compile(r"/ers/config/ancpolicy")
-    ANC_POLICY_2acfdb4060de5a1895b383238c205986_PATTERN = re.compile(r"/ers/config/ancpolicy")
-    ANC_POLICY_b01a12e2b55e582084fab915465bf962_PATTERN = re.compile(r"/ers/config/ancpolicy/versioninfo")
-    ANC_POLICY_4d67f9f6fba65dcbbcf64ca3e31b39a6_PATTERN = re.compile(r"/ers/config/ancpolicy/bulk/submit")
-    ANC_POLICY_10023cdff02b5185b9b54c9e58762704_PATTERN = re.compile(r"/ers/config/ancpolicy/bulk/string")
-    CLEAR_THREATS_AND_VULNERABILITIES_e3110fc63ecb5428a075a8af8497fb35_PATTERN = re.compile(r"/ers/config/threat/clearThreatsAndVulneribilities")
-    CLEAR_THREATS_AND_VULNERABILITIES_83379c74d24e5ae9bb90f798a190cca3_PATTERN = re.compile(r"/ers/config/threat/versioninfo")
-    NODE_DETAILS_ab48268c76aa598788a5ebc370226f3a_PATTERN = re.compile(r"/ers/config/node/name/string")
-    NODE_DETAILS_0397bb2e9d6651c7bf18c1b60ff7eb14_PATTERN = re.compile(r"/ers/config/node/string")
-    NODE_DETAILS_775d9b8599f55fc4a1bd9d6ac02619eb_PATTERN = re.compile(r"/ers/config/node")
-    NODE_DETAILS_ca9a3d8217d5507aa11020bee82ef228_PATTERN = re.compile(r"/ers/config/node/versioninfo")
-    PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_ab225d0b2a6c52a99df1f1d8fb6a4dac_PATTERN = re.compile(r"/ers/config/sessionservicenode/name/string")
-    PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_c988bb742d055294b74b4d6916ca1ada_PATTERN = re.compile(r"/ers/config/sessionservicenode/string")
-    PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_66dccbf248575cbeb3cd3dda5cdbcf20_PATTERN = re.compile(r"/ers/config/sessionservicenode")
-    PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_05c0bfee23f95034842993a83d77c4e4_PATTERN = re.compile(r"/ers/config/sessionservicenode/versioninfo")
-    PULL_DEPLOYMENT_INFO_f9159c9f9a1951568daee7080e1dda47_PATTERN = re.compile(r"/ers/config/deploymentinfo/getAllInfo")
-    PULL_DEPLOYMENT_INFO_8698cc09209259dcbde7c851b5a6eda6_PATTERN = re.compile(r"/ers/config/deploymentinfo/versioninfo")
-    PX_GRID_NODE_f47d656ed0805859a85e5cc082c78dcf_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string/approve")
-    PX_GRID_NODE_111a9d109aac585a89bdd3fae400064b_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string")
-    PX_GRID_NODE_849e718d5054593b94a2fef39461c24a_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string")
-    PX_GRID_NODE_d24ade0b53405fbc898cb0cc1ea57fb8_PATTERN = re.compile(r"/ers/config/pxgridnode/string")
-    PX_GRID_NODE_52661028d97156379640002f79b2007c_PATTERN = re.compile(r"/ers/config/pxgridnode")
-    PX_GRID_NODE_73c2962d70ef5964be55cfeae68e5ba6_PATTERN = re.compile(r"/ers/config/pxgridnode/versioninfo")
-    SUPPORT_BUNDLE_DOWNLOAD_737531846d125b968b9d362a3458621d_PATTERN = re.compile(r"/ers/config/supportbundledownload")
-    SUPPORT_BUNDLE_DOWNLOAD_25c57752629f546fb86e84c59285350f_PATTERN = re.compile(r"/ers/config/supportbundledownload/versioninfo")
-    SUPPORT_BUNDLE_STATUS_cec7dc317e875ff0a315a7c0556f9c51_PATTERN = re.compile(r"/ers/config/supportbundlestatus/string")
-    SUPPORT_BUNDLE_STATUS_505300e162f051d58c6ae9d5e3851780_PATTERN = re.compile(r"/ers/config/supportbundlestatus")
-    SUPPORT_BUNDLE_STATUS_7ae30c71acc45385a6b3e9a49a8281a9_PATTERN = re.compile(r"/ers/config/supportbundlestatus/versioninfo")
-    SUPPORT_BUNDLE_TRIGGER_CONFIGURATION_492171fac48e5c63abfe2feec6fd1903_PATTERN = re.compile(r"/ers/config/supportbundle")
-    SUPPORT_BUNDLE_TRIGGER_CONFIGURATION_a2b17c3c4eab52caa2fc7c811965c79d_PATTERN = re.compile(r"/ers/config/supportbundle/versioninfo")
     CERTIFICATES_2eeef18d70b159f788b717e301dd3643_PATTERN = re.compile(r"/api/v1/certs/certificate-signing-request")
     CERTIFICATES_e39868ea7aec5efcaaf55009699eda5d_PATTERN = re.compile(r"/api/v1/certs/certificate-signing-request")
     CERTIFICATES_ec26ec11d92356a594a6efa55ccb9be7_PATTERN = re.compile(r"/api/v1/certs/certificate-signing-request/export/string/string")
@@ -252,6 +211,47 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
     NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874_PATTERN = re.compile(r"/api/v1/policy/network-access/time-condition/string")
     NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6_PATTERN = re.compile(r"/api/v1/policy/network-access/time-condition/string")
     NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6_PATTERN = re.compile(r"/api/v1/policy/network-access/time-condition/string")
+    ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345_PATTERN = re.compile(r"/ers/config/ancendpoint/string")
+    ANC_ENDPOINT_2131fc6670fd50dfb04b1f6b16981256_PATTERN = re.compile(r"/ers/config/ancendpoint/clear")
+    ANC_ENDPOINT_502e681462295b8b8faea9ce6099ff0c_PATTERN = re.compile(r"/ers/config/ancendpoint")
+    ANC_ENDPOINT_136bc936bcb25464b9f3f227647b0443_PATTERN = re.compile(r"/ers/config/ancendpoint/apply")
+    ANC_ENDPOINT_d5eb6cea45635ef58f5bc624de004f16_PATTERN = re.compile(r"/ers/config/ancendpoint/versioninfo")
+    ANC_ENDPOINT_5e6167fc5cb6593b8b48429187a26a67_PATTERN = re.compile(r"/ers/config/ancendpoint/bulk/submit")
+    ANC_ENDPOINT_0a1c6b9323e55505830673a1819840f3_PATTERN = re.compile(r"/ers/config/ancendpoint/bulk/string")
+    ANC_POLICY_983a095b061f564ebba331f66505b0e3_PATTERN = re.compile(r"/ers/config/ancpolicy/name/string")
+    ANC_POLICY_f41f77362663580d8cc3e6e88623889d_PATTERN = re.compile(r"/ers/config/ancpolicy/string")
+    ANC_POLICY_1d79b507bda155c180d42f0a67ef64d5_PATTERN = re.compile(r"/ers/config/ancpolicy/string")
+    ANC_POLICY_7c6b8dd764e052699d4d7a0d8ba43640_PATTERN = re.compile(r"/ers/config/ancpolicy/string")
+    ANC_POLICY_440813c9722c56108cac8ca50bf8f01c_PATTERN = re.compile(r"/ers/config/ancpolicy")
+    ANC_POLICY_2acfdb4060de5a1895b383238c205986_PATTERN = re.compile(r"/ers/config/ancpolicy")
+    ANC_POLICY_b01a12e2b55e582084fab915465bf962_PATTERN = re.compile(r"/ers/config/ancpolicy/versioninfo")
+    ANC_POLICY_4d67f9f6fba65dcbbcf64ca3e31b39a6_PATTERN = re.compile(r"/ers/config/ancpolicy/bulk/submit")
+    ANC_POLICY_10023cdff02b5185b9b54c9e58762704_PATTERN = re.compile(r"/ers/config/ancpolicy/bulk/string")
+    CLEAR_THREATS_AND_VULNERABILITIES_e3110fc63ecb5428a075a8af8497fb35_PATTERN = re.compile(r"/ers/config/threat/clearThreatsAndVulneribilities")
+    CLEAR_THREATS_AND_VULNERABILITIES_83379c74d24e5ae9bb90f798a190cca3_PATTERN = re.compile(r"/ers/config/threat/versioninfo")
+    NODE_DETAILS_ab48268c76aa598788a5ebc370226f3a_PATTERN = re.compile(r"/ers/config/node/name/string")
+    NODE_DETAILS_0397bb2e9d6651c7bf18c1b60ff7eb14_PATTERN = re.compile(r"/ers/config/node/string")
+    NODE_DETAILS_775d9b8599f55fc4a1bd9d6ac02619eb_PATTERN = re.compile(r"/ers/config/node")
+    NODE_DETAILS_ca9a3d8217d5507aa11020bee82ef228_PATTERN = re.compile(r"/ers/config/node/versioninfo")
+    PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_ab225d0b2a6c52a99df1f1d8fb6a4dac_PATTERN = re.compile(r"/ers/config/sessionservicenode/name/string")
+    PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_c988bb742d055294b74b4d6916ca1ada_PATTERN = re.compile(r"/ers/config/sessionservicenode/string")
+    PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_66dccbf248575cbeb3cd3dda5cdbcf20_PATTERN = re.compile(r"/ers/config/sessionservicenode")
+    PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_05c0bfee23f95034842993a83d77c4e4_PATTERN = re.compile(r"/ers/config/sessionservicenode/versioninfo")
+    PULL_DEPLOYMENT_INFO_f9159c9f9a1951568daee7080e1dda47_PATTERN = re.compile(r"/ers/config/deploymentinfo/getAllInfo")
+    PULL_DEPLOYMENT_INFO_8698cc09209259dcbde7c851b5a6eda6_PATTERN = re.compile(r"/ers/config/deploymentinfo/versioninfo")
+    PX_GRID_NODE_f47d656ed0805859a85e5cc082c78dcf_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string/approve")
+    PX_GRID_NODE_111a9d109aac585a89bdd3fae400064b_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string")
+    PX_GRID_NODE_849e718d5054593b94a2fef39461c24a_PATTERN = re.compile(r"/ers/config/pxgridnode/name/string")
+    PX_GRID_NODE_d24ade0b53405fbc898cb0cc1ea57fb8_PATTERN = re.compile(r"/ers/config/pxgridnode/string")
+    PX_GRID_NODE_52661028d97156379640002f79b2007c_PATTERN = re.compile(r"/ers/config/pxgridnode")
+    PX_GRID_NODE_73c2962d70ef5964be55cfeae68e5ba6_PATTERN = re.compile(r"/ers/config/pxgridnode/versioninfo")
+    SUPPORT_BUNDLE_DOWNLOAD_737531846d125b968b9d362a3458621d_PATTERN = re.compile(r"/ers/config/supportbundledownload")
+    SUPPORT_BUNDLE_DOWNLOAD_25c57752629f546fb86e84c59285350f_PATTERN = re.compile(r"/ers/config/supportbundledownload/versioninfo")
+    SUPPORT_BUNDLE_STATUS_cec7dc317e875ff0a315a7c0556f9c51_PATTERN = re.compile(r"/ers/config/supportbundlestatus/string")
+    SUPPORT_BUNDLE_STATUS_505300e162f051d58c6ae9d5e3851780_PATTERN = re.compile(r"/ers/config/supportbundlestatus")
+    SUPPORT_BUNDLE_STATUS_7ae30c71acc45385a6b3e9a49a8281a9_PATTERN = re.compile(r"/ers/config/supportbundlestatus/versioninfo")
+    SUPPORT_BUNDLE_TRIGGER_CONFIGURATION_492171fac48e5c63abfe2feec6fd1903_PATTERN = re.compile(r"/ers/config/supportbundle")
+    SUPPORT_BUNDLE_TRIGGER_CONFIGURATION_a2b17c3c4eab52caa2fc7c811965c79d_PATTERN = re.compile(r"/ers/config/supportbundle/versioninfo")
     ACI_BINDINGS_3d1448851f0154d0b6e9c856ec6cc6f0_PATTERN = re.compile(r"/ers/config/acibindings/getall")
     ACI_BINDINGS_d74b5214bad656c98f21e4968661c3c0_PATTERN = re.compile(r"/ers/config/acibindings/versioninfo")
     ACI_SETTINGS_2ea5c865993b56f48f7f43475294a20c_PATTERN = re.compile(r"/ers/config/acisettings")
@@ -621,6 +621,8 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
     TELEMETRY_INFORMATION_13891f52605b5f6481f6a99ec8a7e8e6_PATTERN = re.compile(r"/ers/config/telemetryinfo/string")
     TELEMETRY_INFORMATION_8f1a8ae602c95ac08676391c374274f2_PATTERN = re.compile(r"/ers/config/telemetryinfo")
     TELEMETRY_INFORMATION_86338cd5bfb6540cb70f4bc100a96aed_PATTERN = re.compile(r"/ers/config/telemetryinfo/versioninfo")
+    VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN = re.compile(r"/ers/config/op/systemconfig/iseversion")
+    VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN = re.compile(r"/ers/config/string/versioninfo")
     MISC_0e629f554fa652d980ff08988c788c57_PATTERN = re.compile(r"/admin/API/mnt/Session/ActiveCount")
     MISC_6a6c71a1e4d2597ea1b5533e9f1b438f_PATTERN = re.compile(r"/admin/API/mnt/Session/ActiveList")
     MISC_2d91e71e5b84583fb8ea91fcd9fb6751_PATTERN = re.compile(r"/admin/API/mnt/Session/AuthList/null/null")
@@ -665,8 +667,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
     TRUST_SEC_CONFIGURATION_3da8b5be1a475510a5aa1593d625ffbb_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/config/trustsec/getEgressPolicies")
     TRUST_SEC_CONFIGURATION_3f9e6e1c33155fdd9a88f48d093f375b_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/config/trustsec/getEgressMatrices")
     TRUST_SEC_SXP_900a7bddaf5159e68b2caeb19b9979c4_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/sxp/getBindings")
-    VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN = re.compile(r"/ers/config/op/systemconfig/iseversion")
-    VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN = re.compile(r"/ers/config/string/versioninfo")
 
     def matches_NBAR_APP_1e8a476ad8455fdebad0d8973c810495(self):
         return re.search(
@@ -1730,6 +1730,2652 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
+    def matches_CERTIFICATES_2eeef18d70b159f788b717e301dd3643(self):
+        return re.search(
+            self.CERTIFICATES_2eeef18d70b159f788b717e301dd3643_PATTERN,
+            self.path
+        )
+
+    def certificates_get_csrs_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'nextPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'previousPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'response': [{'friendlyName': 'string', 'groupTag': 'string', 'hostName': 'string', 'id': 'string', 'keySize': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'signatureAlgorithm': 'string', 'subject': 'string', 'timeStamp': 'string', 'usedFor': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_e39868ea7aec5efcaaf55009699eda5d(self):
+        return re.search(
+            self.CERTIFICATES_e39868ea7aec5efcaaf55009699eda5d_PATTERN,
+            self.path
+        )
+
+    def certificates_generate_csr_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_ec26ec11d92356a594a6efa55ccb9be7(self):
+        return re.search(
+            self.CERTIFICATES_ec26ec11d92356a594a6efa55ccb9be7_PATTERN,
+            self.path
+        )
+
+    def certificates_export_csr_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps('string')
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_bf95f099207a5b6599e04c47c22789c0(self):
+        return re.search(
+            self.CERTIFICATES_bf95f099207a5b6599e04c47c22789c0_PATTERN,
+            self.path
+        )
+
+    def certificates_generate_intermediate_ca_csr_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_b8104a50fc565ae9a756d6d0152e0e5b(self):
+        return re.search(
+            self.CERTIFICATES_b8104a50fc565ae9a756d6d0152e0e5b_PATTERN,
+            self.path
+        )
+
+    def certificates_get_csr_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'csrContents': 'string', 'friendlyName': 'string', 'groupTag': 'string', 'hostName': 'string', 'id': 'string', 'keySize': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'signatureAlgorithm': 'string', 'subject': 'string', 'timeStamp': 'string', 'usedFor': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_bf792ec664fa5202beb776556908b0c1(self):
+        return re.search(
+            self.CERTIFICATES_bf792ec664fa5202beb776556908b0c1_PATTERN,
+            self.path
+        )
+
+    def certificates_delete_csr_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_18e6d1b224e058288a8c4d70be72c9a6(self):
+        return re.search(
+            self.CERTIFICATES_18e6d1b224e058288a8c4d70be72c9a6_PATTERN,
+            self.path
+        )
+
+    def certificates_regenerate_ise_root_ca_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_254c288192f954309b4b35aa612ff226(self):
+        return re.search(
+            self.CERTIFICATES_254c288192f954309b4b35aa612ff226_PATTERN,
+            self.path
+        )
+
+    def certificates_renew_certificates_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_2b94d7d3f0ed5d0b938151ae2cae9fa4(self):
+        return re.search(
+            self.CERTIFICATES_2b94d7d3f0ed5d0b938151ae2cae9fa4_PATTERN,
+            self.path
+        )
+
+    def certificates_bind_csr_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'message': 'string', 'status': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_1dbe47028859573988880de76fec0936(self):
+        return re.search(
+            self.CERTIFICATES_1dbe47028859573988880de76fec0936_PATTERN,
+            self.path
+        )
+
+    def certificates_export_system_certificate_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps('string')
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_517e6c7251a8508597f1b7ae61cbf953(self):
+        return re.search(
+            self.CERTIFICATES_517e6c7251a8508597f1b7ae61cbf953_PATTERN,
+            self.path
+        )
+
+    def certificates_import_system_certificate_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'message': 'string', 'status': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_662594a56f5c5f739a83e8806da16be5(self):
+        return re.search(
+            self.CERTIFICATES_662594a56f5c5f739a83e8806da16be5_PATTERN,
+            self.path
+        )
+
+    def certificates_get_system_certificates_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'nextPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'previousPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'response': [{'expirationDate': 'string', 'friendlyName': 'string', 'groupTag': 'string', 'id': 'string', 'issuedBy': 'string', 'issuedTo': 'string', 'keySize': 0, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'portalsUsingTheTag': 'string', 'selfSigned': True, 'serialNumberDecimalFormat': 'string', 'sha256Fingerprint': 'string', 'signatureAlgorithm': 'string', 'usedBy': 'string', 'validFrom': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_3f36e90115b05416a71506061fed7e5c(self):
+        return re.search(
+            self.CERTIFICATES_3f36e90115b05416a71506061fed7e5c_PATTERN,
+            self.path
+        )
+
+    def certificates_get_system_certificate_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'expirationDate': 'string', 'friendlyName': 'string', 'groupTag': 'string', 'id': 'string', 'issuedBy': 'string', 'issuedTo': 'string', 'keySize': 0, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'portalsUsingTheTag': 'string', 'selfSigned': True, 'serialNumberDecimalFormat': 'string', 'sha256Fingerprint': 'string', 'signatureAlgorithm': 'string', 'usedBy': 'string', 'validFrom': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_48fb9c22ad9a5eddb590c85abdab460b(self):
+        return re.search(
+            self.CERTIFICATES_48fb9c22ad9a5eddb590c85abdab460b_PATTERN,
+            self.path
+        )
+
+    def certificates_update_system_certificate_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string', 'status': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_35241dc2eec65ad680a3c5de47cd87c8(self):
+        return re.search(
+            self.CERTIFICATES_35241dc2eec65ad680a3c5de47cd87c8_PATTERN,
+            self.path
+        )
+
+    def certificates_delete_system_certificate_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_c654a18faf1b5571ac5ba61145d298c4(self):
+        return re.search(
+            self.CERTIFICATES_c654a18faf1b5571ac5ba61145d298c4_PATTERN,
+            self.path
+        )
+
+    def certificates_get_trusted_certificates_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'nextPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'previousPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'response': [{'authenticateBeforeCRLReceived': 'string', 'automaticCRLUpdate': 'string', 'automaticCRLUpdatePeriod': 'string', 'automaticCRLUpdateUnits': 'string', 'crlDistributionUrl': 'string', 'crlDownloadFailureRetries': 'string', 'crlDownloadFailureRetriesUnits': 'string', 'description': 'string', 'downloadCRL': 'string', 'enableOCSPValidation': 'string', 'enableServerIdentityCheck': 'string', 'expirationDate': 'string', 'friendlyName': 'string', 'id': 'string', 'ignoreCRLExpiration': 'string', 'internalCA': True, 'issuedBy': 'string', 'issuedTo': 'string', 'keySize': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'nonAutomaticCRLUpdatePeriod': 'string', 'nonAutomaticCRLUpdateUnits': 'string', 'rejectIfNoStatusFromOCSP': 'string', 'rejectIfUnreachableFromOCSP': 'string', 'selectedOCSPService': 'string', 'serialNumberDecimalFormat': 'string', 'sha256Fingerprint': 'string', 'signatureAlgorithm': 'string', 'status': 'string', 'subject': 'string', 'trustedFor': 'string', 'validFrom': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_1b62a711ce705542b5d1d92b7d3ca431(self):
+        return re.search(
+            self.CERTIFICATES_1b62a711ce705542b5d1d92b7d3ca431_PATTERN,
+            self.path
+        )
+
+    def certificates_export_trusted_certificate_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps('string')
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_c8cd2f618b655d988ce626e579486596(self):
+        return re.search(
+            self.CERTIFICATES_c8cd2f618b655d988ce626e579486596_PATTERN,
+            self.path
+        )
+
+    def certificates_import_trust_certificate_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'message': 'string', 'status': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_1091757f8f4956d29b821fa9bbf23266(self):
+        return re.search(
+            self.CERTIFICATES_1091757f8f4956d29b821fa9bbf23266_PATTERN,
+            self.path
+        )
+
+    def certificates_get_trusted_certificate_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'authenticateBeforeCRLReceived': 'string', 'automaticCRLUpdate': 'string', 'automaticCRLUpdatePeriod': 'string', 'automaticCRLUpdateUnits': 'string', 'crlDistributionUrl': 'string', 'crlDownloadFailureRetries': 'string', 'crlDownloadFailureRetriesUnits': 'string', 'description': 'string', 'downloadCRL': 'string', 'enableOCSPValidation': 'string', 'enableServerIdentityCheck': 'string', 'expirationDate': 'string', 'friendlyName': 'string', 'id': 'string', 'ignoreCRLExpiration': 'string', 'internalCA': True, 'isReferredInPolicy': True, 'issuedBy': 'string', 'issuedTo': 'string', 'keySize': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'nonAutomaticCRLUpdatePeriod': 'string', 'nonAutomaticCRLUpdateUnits': 'string', 'rejectIfNoStatusFromOCSP': 'string', 'rejectIfUnreachableFromOCSP': 'string', 'selectedOCSPService': 'string', 'serialNumberDecimalFormat': 'string', 'sha256Fingerprint': 'string', 'signatureAlgorithm': 'string', 'status': 'string', 'subject': 'string', 'trustedFor': 'string', 'validFrom': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_239661cb625d5ad0ad76b93282f5818a(self):
+        return re.search(
+            self.CERTIFICATES_239661cb625d5ad0ad76b93282f5818a_PATTERN,
+            self.path
+        )
+
+    def certificates_update_trusted_certificate_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATES_c578ef80918b5d038024d126cd6e3b8d(self):
+        return re.search(
+            self.CERTIFICATES_c578ef80918b5d038024d126cd6e3b8d_PATTERN,
+            self.path
+        )
+
+    def certificates_delete_trusted_certificate_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994_PATTERN,
+            self.path
+        )
+
+    def device_administration_authentication_rules_get_device_admin_authentication_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c_PATTERN,
+            self.path
+        )
+
+    def device_administration_authentication_rules_create_device_admin_authentication_rule_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26_PATTERN,
+            self.path
+        )
+
+    def device_administration_authentication_rules_reset_hit_counts_device_admin_authentication_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a_PATTERN,
+            self.path
+        )
+
+    def device_administration_authentication_rules_get_device_admin_authentication_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46_PATTERN,
+            self.path
+        )
+
+    def device_administration_authentication_rules_update_device_admin_authentication_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09_PATTERN,
+            self.path
+        )
+
+    def device_administration_authentication_rules_delete_device_admin_authentication_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_exception_rules_get_device_admin_local_exception_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_exception_rules_create_device_admin_local_exception_rule_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_exception_rules_reset_hit_counts_device_admin_local_exceptions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_exception_rules_get_device_admin_local_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_exception_rules_update_device_admin_local_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_exception_rules_delete_device_admin_local_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_global_exception_rules_create_device_admin_policy_set_global_exception_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_bd8a6c63d0235f3699f2669ca4734c13(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_bd8a6c63d0235f3699f2669ca4734c13_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_global_exception_rules_reset_hit_counts_device_admin_global_exceptions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_by_rule_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_global_exception_rules_update_device_admin_policy_set_global_exception_by_rule_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_global_exception_rules_delete_device_admin_policy_set_global_exception_by_rule_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_rules_get_device_admin_authorization_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_rules_create_device_admin_authorization_rule_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_rules_reset_hit_counts_device_admin_authorization_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_rules_get_device_admin_authorization_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_rules_update_device_admin_authorization_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073_PATTERN,
+            self.path
+        )
+
+    def device_administration_authorization_rules_delete_device_admin_authorization_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2_PATTERN,
+            self.path
+        )
+
+    def device_administration_command_set_get_device_admin_command_sets_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_564635feb825519f98bd1541ef3c367d(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_564635feb825519f98bd1541ef3c367d_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_get_device_admin_conditions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_create_device_admin_condition_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_get_device_admin_conditions_for_authentication_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_get_device_admin_conditions_for_authorization_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_get_device_admin_condition_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_update_device_admin_condition_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_delete_device_admin_condition_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_get_device_admin_conditions_for_policy_sets_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_get_device_admin_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_update_device_admin_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286_PATTERN,
+            self.path
+        )
+
+    def device_administration_conditions_delete_device_admin_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969_PATTERN,
+            self.path
+        )
+
+    def device_administration_dictionary_attributes_list_get_device_admin_dictionaries_authentication_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904_PATTERN,
+            self.path
+        )
+
+    def device_administration_dictionary_attributes_list_get_device_admin_dictionaries_authorization_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2_PATTERN,
+            self.path
+        )
+
+    def device_administration_dictionary_attributes_list_get_device_admin_dictionaries_policy_set_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6_PATTERN,
+            self.path
+        )
+
+    def device_administration_identity_stores_get_device_admin_identity_stores_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b4ceac9ee830523ca5ddbfdf3e1b44be(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b4ceac9ee830523ca5ddbfdf3e1b44be_PATTERN,
+            self.path
+        )
+
+    def device_administration_network_conditions_get_device_admin_network_conditions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b95cf8c9aed95518b38be1fa4b514b67(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b95cf8c9aed95518b38be1fa4b514b67_PATTERN,
+            self.path
+        )
+
+    def device_administration_network_conditions_create_device_admin_network_condition_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846_PATTERN,
+            self.path
+        )
+
+    def device_administration_network_conditions_get_device_admin_network_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e_PATTERN,
+            self.path
+        )
+
+    def device_administration_network_conditions_update_device_admin_network_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41_PATTERN,
+            self.path
+        )
+
+    def device_administration_network_conditions_delete_device_admin_network_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb_PATTERN,
+            self.path
+        )
+
+    def device_administration_policy_set_get_device_admin_policy_sets_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_cc909c2717cf55f1863a04a785166fe0(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_POLICY_SET_cc909c2717cf55f1863a04a785166fe0_PATTERN,
+            self.path
+        )
+
+    def device_administration_policy_set_create_device_admin_policy_set_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_8e38ddb381965981b66f00a9c8634485(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_POLICY_SET_8e38ddb381965981b66f00a9c8634485_PATTERN,
+            self.path
+        )
+
+    def device_administration_policy_set_reset_hit_counts_device_admin_policy_sets_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017_PATTERN,
+            self.path
+        )
+
+    def device_administration_policy_set_get_device_admin_policy_set_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084_PATTERN,
+            self.path
+        )
+
+    def device_administration_policy_set_update_device_admin_policy_set_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d_PATTERN,
+            self.path
+        )
+
+    def device_administration_policy_set_delete_device_admin_policy_set_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_PROFILES_8ce2f3cdfbfe512b85eeca7b133c81ff(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_PROFILES_8ce2f3cdfbfe512b85eeca7b133c81ff_PATTERN,
+            self.path
+        )
+
+    def device_administration_profiles_get_device_admin_profiles_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_SERVICE_NAMES_8ea7e01261355dcfae6412e0615ba1f5(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_SERVICE_NAMES_8ea7e01261355dcfae6412e0615ba1f5_PATTERN,
+            self.path
+        )
+
+    def device_administration_service_names_get_device_admin_service_names_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'id': 'string', 'isLocalAuthorization': True, 'name': 'string', 'serviceType': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_f79ab23563d857e58e01a74e37333572(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_f79ab23563d857e58e01a74e37333572_PATTERN,
+            self.path
+        )
+
+    def device_administration_time_date_conditions_get_device_admin_time_conditions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_26a4d5b5da6a50bfaaecc180543fd952(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_26a4d5b5da6a50bfaaecc180543fd952_PATTERN,
+            self.path
+        )
+
+    def device_administration_time_date_conditions_create_device_admin_time_condition_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70_PATTERN,
+            self.path
+        )
+
+    def device_administration_time_date_conditions_get_device_admin_time_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721_PATTERN,
+            self.path
+        )
+
+    def device_administration_time_date_conditions_update_device_admin_time_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015(self):
+        return re.search(
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015_PATTERN,
+            self.path
+        )
+
+    def device_administration_time_date_conditions_delete_device_admin_time_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc_PATTERN,
+            self.path
+        )
+
+    def network_access_authentication_rules_get_network_access_authentication_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322_PATTERN,
+            self.path
+        )
+
+    def network_access_authentication_rules_create_network_access_authentication_rule_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66_PATTERN,
+            self.path
+        )
+
+    def network_access_authentication_rules_reset_hit_counts_network_access_authentication_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5_PATTERN,
+            self.path
+        )
+
+    def network_access_authentication_rules_get_network_access_authentication_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9_PATTERN,
+            self.path
+        )
+
+    def network_access_authentication_rules_update_network_access_authentication_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1_PATTERN,
+            self.path
+        )
+
+    def network_access_authentication_rules_delete_network_access_authentication_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_exception_rules_get_network_access_local_exception_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_exception_rules_create_network_access_local_exception_rule_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_exception_rules_reset_hit_counts_network_access_local_exceptions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_exception_rules_get_network_access_local_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_exception_rules_update_network_access_local_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_exception_rules_delete_network_access_local_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_global_exception_rules_create_network_access_policy_set_global_exception_rule_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f2a4d5ef4e915ff8aac91b666fc86326(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f2a4d5ef4e915ff8aac91b666fc86326_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_global_exception_rules_reset_hit_counts_network_access_global_exceptions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_global_exception_rules_update_network_access_policy_set_global_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_global_exception_rules_delete_network_access_policy_set_global_exception_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_rules_get_network_access_authorization_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_rules_create_network_access_authorization_rule_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_rules_reset_hit_counts_network_access_authorization_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_rules_get_network_access_authorization_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_rules_update_network_access_authorization_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2(self):
+        return re.search(
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2_PATTERN,
+            self.path
+        )
+
+    def network_access_authorization_rules_delete_network_access_authorization_rule_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_get_network_access_conditions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_create_network_access_condition_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_get_network_access_conditions_for_authentication_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_get_network_access_conditions_for_authorization_rules_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_get_network_access_condition_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_update_network_access_condition_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_delete_network_access_condition_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_get_network_access_conditions_for_policy_sets_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_get_network_access_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_update_network_access_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb(self):
+        return re.search(
+            self.NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb_PATTERN,
+            self.path
+        )
+
+    def network_access_conditions_delete_network_access_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_get_network_access_dictionaries_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_89a57687cef65891a6f48dd17f456c4e(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_89a57687cef65891a6f48dd17f456c4e_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_create_network_access_dictionaries_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_get_network_access_dictionary_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_update_network_access_dictionary_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_delete_network_access_dictionary_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_attribute_get_network_access_dictionary_attributes_by_dictionary_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_attribute_create_network_access_dictionary_attribute_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_c77600d349fc5c259dbd22d65b3ffa1d(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_c77600d349fc5c259dbd22d65b3ffa1d_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_attribute_get_network_access_dictionary_attribute_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_a60b29bfe2b055299e4360d84380ddd4(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_a60b29bfe2b055299e4360d84380ddd4_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_attribute_update_network_access_dictionary_attribute_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_dd6c2553ae0053c1bbbdbd46c1df0ef9(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_dd6c2553ae0053c1bbbdbd46c1df0ef9_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_attribute_delete_network_access_dictionary_attribute_by_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_2ab96d3d76de5d05bbac1f27feacb7b0(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_2ab96d3d76de5d05bbac1f27feacb7b0_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_attributes_list_get_network_access_dictionaries_authentication_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_f68aee0cdb425390b3ca90b0b46e6e2c(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_f68aee0cdb425390b3ca90b0b46e6e2c_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_attributes_list_get_network_access_dictionaries_authorization_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136(self):
+        return re.search(
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136_PATTERN,
+            self.path
+        )
+
+    def network_access_dictionary_attributes_list_get_network_access_dictionaries_policy_set_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f(self):
+        return re.search(
+            self.NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f_PATTERN,
+            self.path
+        )
+
+    def network_access_identity_stores_get_network_access_identity_stores_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_d43fec9e7dc556cbb9bf0ebd1dcd6aad(self):
+        return re.search(
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_d43fec9e7dc556cbb9bf0ebd1dcd6aad_PATTERN,
+            self.path
+        )
+
+    def network_access_network_conditions_get_network_access_network_conditions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e(self):
+        return re.search(
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e_PATTERN,
+            self.path
+        )
+
+    def network_access_network_conditions_create_network_access_network_condition_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2(self):
+        return re.search(
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2_PATTERN,
+            self.path
+        )
+
+    def network_access_network_conditions_get_network_access_network_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14(self):
+        return re.search(
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14_PATTERN,
+            self.path
+        )
+
+    def network_access_network_conditions_update_network_access_network_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219(self):
+        return re.search(
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219_PATTERN,
+            self.path
+        )
+
+    def network_access_network_conditions_delete_network_access_network_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365(self):
+        return re.search(
+            self.NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365_PATTERN,
+            self.path
+        )
+
+    def network_access_policy_set_get_network_access_policy_sets_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_POLICY_SET_9dfe1db8729d541fb3a17d31d47d1881(self):
+        return re.search(
+            self.NETWORK_ACCESS_POLICY_SET_9dfe1db8729d541fb3a17d31d47d1881_PATTERN,
+            self.path
+        )
+
+    def network_access_policy_set_create_network_access_policy_set_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_POLICY_SET_71fb6c1b3f335dbf8176a29e30eb6333(self):
+        return re.search(
+            self.NETWORK_ACCESS_POLICY_SET_71fb6c1b3f335dbf8176a29e30eb6333_PATTERN,
+            self.path
+        )
+
+    def network_access_policy_set_reset_hit_counts_network_access_policy_sets_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_POLICY_SET_768d9f17adde53e2a08a650b9fe1714c(self):
+        return re.search(
+            self.NETWORK_ACCESS_POLICY_SET_768d9f17adde53e2a08a650b9fe1714c_PATTERN,
+            self.path
+        )
+
+    def network_access_policy_set_get_network_access_policy_set_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b(self):
+        return re.search(
+            self.NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b_PATTERN,
+            self.path
+        )
+
+    def network_access_policy_set_update_network_access_policy_set_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f(self):
+        return re.search(
+            self.NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f_PATTERN,
+            self.path
+        )
+
+    def network_access_policy_set_delete_network_access_policy_set_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_PROFILES_99c764d87cf255a7b803aad17f0f5db8(self):
+        return re.search(
+            self.NETWORK_ACCESS_PROFILES_99c764d87cf255a7b803aad17f0f5db8_PATTERN,
+            self.path
+        )
+
+    def network_access_profiles_get_network_access_profiles_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_SECURITY_GROUPS_598f564c3eda5c20bb807b8c062c8e7b(self):
+        return re.search(
+            self.NETWORK_ACCESS_SECURITY_GROUPS_598f564c3eda5c20bb807b8c062c8e7b_PATTERN,
+            self.path
+        )
+
+    def network_access_security_groups_get_network_access_security_groups_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_SERVICE_NAMES_8304c137cad852579f4b810ff8adf661(self):
+        return re.search(
+            self.NETWORK_ACCESS_SERVICE_NAMES_8304c137cad852579f4b810ff8adf661_PATTERN,
+            self.path
+        )
+
+    def network_access_service_names_get_network_access_service_names_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'id': 'string', 'isLocalAuthorization': True, 'name': 'string', 'serviceType': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_ab916b19789c59b79dddbc2d0a3c57fc(self):
+        return re.search(
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_ab916b19789c59b79dddbc2d0a3c57fc_PATTERN,
+            self.path
+        )
+
+    def network_access_time_date_conditions_get_network_access_time_conditions_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396(self):
+        return re.search(
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396_PATTERN,
+            self.path
+        )
+
+    def network_access_time_date_conditions_create_network_access_time_condition_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874(self):
+        return re.search(
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874_PATTERN,
+            self.path
+        )
+
+    def network_access_time_date_conditions_get_network_access_time_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6(self):
+        return re.search(
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6_PATTERN,
+            self.path
+        )
+
+    def network_access_time_date_conditions_update_network_access_time_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6(self):
+        return re.search(
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6_PATTERN,
+            self.path
+        )
+
+    def network_access_time_date_conditions_delete_network_access_time_condition_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
     def matches_ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345(self):
         return re.search(
             self.ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345_PATTERN,
@@ -2465,2652 +5111,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.end_headers()
         # Add response content.
         response_content = json.dumps({'VersionInfo': {'currentServerVersion': 'string', 'supportedVersions': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_2eeef18d70b159f788b717e301dd3643(self):
-        return re.search(
-            self.CERTIFICATES_2eeef18d70b159f788b717e301dd3643_PATTERN,
-            self.path
-        )
-
-    def certificates_get_csrs_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'nextPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'previousPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'response': [{'friendlyName': 'string', 'groupTag': 'string', 'hostName': 'string', 'id': 'string', 'keySize': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'signatureAlgorithm': 'string', 'subject': 'string', 'timeStamp': 'string', 'usedFor': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_e39868ea7aec5efcaaf55009699eda5d(self):
-        return re.search(
-            self.CERTIFICATES_e39868ea7aec5efcaaf55009699eda5d_PATTERN,
-            self.path
-        )
-
-    def certificates_generate_csr_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_ec26ec11d92356a594a6efa55ccb9be7(self):
-        return re.search(
-            self.CERTIFICATES_ec26ec11d92356a594a6efa55ccb9be7_PATTERN,
-            self.path
-        )
-
-    def certificates_export_csr_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps('string')
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_bf95f099207a5b6599e04c47c22789c0(self):
-        return re.search(
-            self.CERTIFICATES_bf95f099207a5b6599e04c47c22789c0_PATTERN,
-            self.path
-        )
-
-    def certificates_generate_intermediate_ca_csr_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_b8104a50fc565ae9a756d6d0152e0e5b(self):
-        return re.search(
-            self.CERTIFICATES_b8104a50fc565ae9a756d6d0152e0e5b_PATTERN,
-            self.path
-        )
-
-    def certificates_get_csr_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'csrContents': 'string', 'friendlyName': 'string', 'groupTag': 'string', 'hostName': 'string', 'id': 'string', 'keySize': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'signatureAlgorithm': 'string', 'subject': 'string', 'timeStamp': 'string', 'usedFor': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_bf792ec664fa5202beb776556908b0c1(self):
-        return re.search(
-            self.CERTIFICATES_bf792ec664fa5202beb776556908b0c1_PATTERN,
-            self.path
-        )
-
-    def certificates_delete_csr_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'message': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_18e6d1b224e058288a8c4d70be72c9a6(self):
-        return re.search(
-            self.CERTIFICATES_18e6d1b224e058288a8c4d70be72c9a6_PATTERN,
-            self.path
-        )
-
-    def certificates_regenerate_ise_root_ca_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_254c288192f954309b4b35aa612ff226(self):
-        return re.search(
-            self.CERTIFICATES_254c288192f954309b4b35aa612ff226_PATTERN,
-            self.path
-        )
-
-    def certificates_renew_certificates_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_2b94d7d3f0ed5d0b938151ae2cae9fa4(self):
-        return re.search(
-            self.CERTIFICATES_2b94d7d3f0ed5d0b938151ae2cae9fa4_PATTERN,
-            self.path
-        )
-
-    def certificates_bind_csr_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'message': 'string', 'status': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_1dbe47028859573988880de76fec0936(self):
-        return re.search(
-            self.CERTIFICATES_1dbe47028859573988880de76fec0936_PATTERN,
-            self.path
-        )
-
-    def certificates_export_system_certificate_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps('string')
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_517e6c7251a8508597f1b7ae61cbf953(self):
-        return re.search(
-            self.CERTIFICATES_517e6c7251a8508597f1b7ae61cbf953_PATTERN,
-            self.path
-        )
-
-    def certificates_import_system_certificate_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'id': 'string', 'message': 'string', 'status': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_662594a56f5c5f739a83e8806da16be5(self):
-        return re.search(
-            self.CERTIFICATES_662594a56f5c5f739a83e8806da16be5_PATTERN,
-            self.path
-        )
-
-    def certificates_get_system_certificates_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'nextPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'previousPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'response': [{'expirationDate': 'string', 'friendlyName': 'string', 'groupTag': 'string', 'id': 'string', 'issuedBy': 'string', 'issuedTo': 'string', 'keySize': 0, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'portalsUsingTheTag': 'string', 'selfSigned': True, 'serialNumberDecimalFormat': 'string', 'sha256Fingerprint': 'string', 'signatureAlgorithm': 'string', 'usedBy': 'string', 'validFrom': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_3f36e90115b05416a71506061fed7e5c(self):
-        return re.search(
-            self.CERTIFICATES_3f36e90115b05416a71506061fed7e5c_PATTERN,
-            self.path
-        )
-
-    def certificates_get_system_certificate_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'expirationDate': 'string', 'friendlyName': 'string', 'groupTag': 'string', 'id': 'string', 'issuedBy': 'string', 'issuedTo': 'string', 'keySize': 0, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'portalsUsingTheTag': 'string', 'selfSigned': True, 'serialNumberDecimalFormat': 'string', 'sha256Fingerprint': 'string', 'signatureAlgorithm': 'string', 'usedBy': 'string', 'validFrom': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_48fb9c22ad9a5eddb590c85abdab460b(self):
-        return re.search(
-            self.CERTIFICATES_48fb9c22ad9a5eddb590c85abdab460b_PATTERN,
-            self.path
-        )
-
-    def certificates_update_system_certificate_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string', 'status': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_35241dc2eec65ad680a3c5de47cd87c8(self):
-        return re.search(
-            self.CERTIFICATES_35241dc2eec65ad680a3c5de47cd87c8_PATTERN,
-            self.path
-        )
-
-    def certificates_delete_system_certificate_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'message': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_c654a18faf1b5571ac5ba61145d298c4(self):
-        return re.search(
-            self.CERTIFICATES_c654a18faf1b5571ac5ba61145d298c4_PATTERN,
-            self.path
-        )
-
-    def certificates_get_trusted_certificates_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'nextPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'previousPage': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'response': [{'authenticateBeforeCRLReceived': 'string', 'automaticCRLUpdate': 'string', 'automaticCRLUpdatePeriod': 'string', 'automaticCRLUpdateUnits': 'string', 'crlDistributionUrl': 'string', 'crlDownloadFailureRetries': 'string', 'crlDownloadFailureRetriesUnits': 'string', 'description': 'string', 'downloadCRL': 'string', 'enableOCSPValidation': 'string', 'enableServerIdentityCheck': 'string', 'expirationDate': 'string', 'friendlyName': 'string', 'id': 'string', 'ignoreCRLExpiration': 'string', 'internalCA': True, 'issuedBy': 'string', 'issuedTo': 'string', 'keySize': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'nonAutomaticCRLUpdatePeriod': 'string', 'nonAutomaticCRLUpdateUnits': 'string', 'rejectIfNoStatusFromOCSP': 'string', 'rejectIfUnreachableFromOCSP': 'string', 'selectedOCSPService': 'string', 'serialNumberDecimalFormat': 'string', 'sha256Fingerprint': 'string', 'signatureAlgorithm': 'string', 'status': 'string', 'subject': 'string', 'trustedFor': 'string', 'validFrom': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_1b62a711ce705542b5d1d92b7d3ca431(self):
-        return re.search(
-            self.CERTIFICATES_1b62a711ce705542b5d1d92b7d3ca431_PATTERN,
-            self.path
-        )
-
-    def certificates_export_trusted_certificate_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps('string')
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_c8cd2f618b655d988ce626e579486596(self):
-        return re.search(
-            self.CERTIFICATES_c8cd2f618b655d988ce626e579486596_PATTERN,
-            self.path
-        )
-
-    def certificates_import_trust_certificate_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'id': 'string', 'message': 'string', 'status': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_1091757f8f4956d29b821fa9bbf23266(self):
-        return re.search(
-            self.CERTIFICATES_1091757f8f4956d29b821fa9bbf23266_PATTERN,
-            self.path
-        )
-
-    def certificates_get_trusted_certificate_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'authenticateBeforeCRLReceived': 'string', 'automaticCRLUpdate': 'string', 'automaticCRLUpdatePeriod': 'string', 'automaticCRLUpdateUnits': 'string', 'crlDistributionUrl': 'string', 'crlDownloadFailureRetries': 'string', 'crlDownloadFailureRetriesUnits': 'string', 'description': 'string', 'downloadCRL': 'string', 'enableOCSPValidation': 'string', 'enableServerIdentityCheck': 'string', 'expirationDate': 'string', 'friendlyName': 'string', 'id': 'string', 'ignoreCRLExpiration': 'string', 'internalCA': True, 'isReferredInPolicy': True, 'issuedBy': 'string', 'issuedTo': 'string', 'keySize': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'nonAutomaticCRLUpdatePeriod': 'string', 'nonAutomaticCRLUpdateUnits': 'string', 'rejectIfNoStatusFromOCSP': 'string', 'rejectIfUnreachableFromOCSP': 'string', 'selectedOCSPService': 'string', 'serialNumberDecimalFormat': 'string', 'sha256Fingerprint': 'string', 'signatureAlgorithm': 'string', 'status': 'string', 'subject': 'string', 'trustedFor': 'string', 'validFrom': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_239661cb625d5ad0ad76b93282f5818a(self):
-        return re.search(
-            self.CERTIFICATES_239661cb625d5ad0ad76b93282f5818a_PATTERN,
-            self.path
-        )
-
-    def certificates_update_trusted_certificate_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'message': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_CERTIFICATES_c578ef80918b5d038024d126cd6e3b8d(self):
-        return re.search(
-            self.CERTIFICATES_c578ef80918b5d038024d126cd6e3b8d_PATTERN,
-            self.path
-        )
-
-    def certificates_delete_trusted_certificate_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'message': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994_PATTERN,
-            self.path
-        )
-
-    def device_administration_authentication_rules_get_device_admin_authentication_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c_PATTERN,
-            self.path
-        )
-
-    def device_administration_authentication_rules_create_device_admin_authentication_rule_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26_PATTERN,
-            self.path
-        )
-
-    def device_administration_authentication_rules_reset_hit_counts_device_admin_authentication_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a_PATTERN,
-            self.path
-        )
-
-    def device_administration_authentication_rules_get_device_admin_authentication_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46_PATTERN,
-            self.path
-        )
-
-    def device_administration_authentication_rules_update_device_admin_authentication_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09_PATTERN,
-            self.path
-        )
-
-    def device_administration_authentication_rules_delete_device_admin_authentication_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_exception_rules_get_device_admin_local_exception_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_exception_rules_create_device_admin_local_exception_rule_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_exception_rules_reset_hit_counts_device_admin_local_exceptions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_exception_rules_get_device_admin_local_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_exception_rules_update_device_admin_local_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_exception_rules_delete_device_admin_local_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_global_exception_rules_create_device_admin_policy_set_global_exception_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_bd8a6c63d0235f3699f2669ca4734c13(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_bd8a6c63d0235f3699f2669ca4734c13_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_global_exception_rules_reset_hit_counts_device_admin_global_exceptions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_by_rule_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_global_exception_rules_update_device_admin_policy_set_global_exception_by_rule_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_global_exception_rules_delete_device_admin_policy_set_global_exception_by_rule_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_rules_get_device_admin_authorization_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_rules_create_device_admin_authorization_rule_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_rules_reset_hit_counts_device_admin_authorization_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_rules_get_device_admin_authorization_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_rules_update_device_admin_authorization_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073_PATTERN,
-            self.path
-        )
-
-    def device_administration_authorization_rules_delete_device_admin_authorization_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2_PATTERN,
-            self.path
-        )
-
-    def device_administration_command_set_get_device_admin_command_sets_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_564635feb825519f98bd1541ef3c367d(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_564635feb825519f98bd1541ef3c367d_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_get_device_admin_conditions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_create_device_admin_condition_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_get_device_admin_conditions_for_authentication_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_get_device_admin_conditions_for_authorization_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_get_device_admin_condition_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_update_device_admin_condition_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_delete_device_admin_condition_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_get_device_admin_conditions_for_policy_sets_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_get_device_admin_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_update_device_admin_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286_PATTERN,
-            self.path
-        )
-
-    def device_administration_conditions_delete_device_admin_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969_PATTERN,
-            self.path
-        )
-
-    def device_administration_dictionary_attributes_list_get_device_admin_dictionaries_authentication_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904_PATTERN,
-            self.path
-        )
-
-    def device_administration_dictionary_attributes_list_get_device_admin_dictionaries_authorization_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2_PATTERN,
-            self.path
-        )
-
-    def device_administration_dictionary_attributes_list_get_device_admin_dictionaries_policy_set_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6_PATTERN,
-            self.path
-        )
-
-    def device_administration_identity_stores_get_device_admin_identity_stores_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b4ceac9ee830523ca5ddbfdf3e1b44be(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b4ceac9ee830523ca5ddbfdf3e1b44be_PATTERN,
-            self.path
-        )
-
-    def device_administration_network_conditions_get_device_admin_network_conditions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{}]}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b95cf8c9aed95518b38be1fa4b514b67(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b95cf8c9aed95518b38be1fa4b514b67_PATTERN,
-            self.path
-        )
-
-    def device_administration_network_conditions_create_device_admin_network_condition_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846_PATTERN,
-            self.path
-        )
-
-    def device_administration_network_conditions_get_device_admin_network_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e_PATTERN,
-            self.path
-        )
-
-    def device_administration_network_conditions_update_device_admin_network_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41_PATTERN,
-            self.path
-        )
-
-    def device_administration_network_conditions_delete_device_admin_network_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb_PATTERN,
-            self.path
-        )
-
-    def device_administration_policy_set_get_device_admin_policy_sets_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_cc909c2717cf55f1863a04a785166fe0(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_cc909c2717cf55f1863a04a785166fe0_PATTERN,
-            self.path
-        )
-
-    def device_administration_policy_set_create_device_admin_policy_set_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_8e38ddb381965981b66f00a9c8634485(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_8e38ddb381965981b66f00a9c8634485_PATTERN,
-            self.path
-        )
-
-    def device_administration_policy_set_reset_hit_counts_device_admin_policy_sets_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017_PATTERN,
-            self.path
-        )
-
-    def device_administration_policy_set_get_device_admin_policy_set_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084_PATTERN,
-            self.path
-        )
-
-    def device_administration_policy_set_update_device_admin_policy_set_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d_PATTERN,
-            self.path
-        )
-
-    def device_administration_policy_set_delete_device_admin_policy_set_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_PROFILES_8ce2f3cdfbfe512b85eeca7b133c81ff(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_PROFILES_8ce2f3cdfbfe512b85eeca7b133c81ff_PATTERN,
-            self.path
-        )
-
-    def device_administration_profiles_get_device_admin_profiles_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_SERVICE_NAMES_8ea7e01261355dcfae6412e0615ba1f5(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_SERVICE_NAMES_8ea7e01261355dcfae6412e0615ba1f5_PATTERN,
-            self.path
-        )
-
-    def device_administration_service_names_get_device_admin_service_names_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps([{'id': 'string', 'isLocalAuthorization': True, 'name': 'string', 'serviceType': 'string'}])
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_f79ab23563d857e58e01a74e37333572(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_f79ab23563d857e58e01a74e37333572_PATTERN,
-            self.path
-        )
-
-    def device_administration_time_date_conditions_get_device_admin_time_conditions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_26a4d5b5da6a50bfaaecc180543fd952(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_26a4d5b5da6a50bfaaecc180543fd952_PATTERN,
-            self.path
-        )
-
-    def device_administration_time_date_conditions_create_device_admin_time_condition_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70_PATTERN,
-            self.path
-        )
-
-    def device_administration_time_date_conditions_get_device_admin_time_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721_PATTERN,
-            self.path
-        )
-
-    def device_administration_time_date_conditions_update_device_admin_time_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015(self):
-        return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015_PATTERN,
-            self.path
-        )
-
-    def device_administration_time_date_conditions_delete_device_admin_time_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc_PATTERN,
-            self.path
-        )
-
-    def network_access_authentication_rules_get_network_access_authentication_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322_PATTERN,
-            self.path
-        )
-
-    def network_access_authentication_rules_create_network_access_authentication_rule_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66_PATTERN,
-            self.path
-        )
-
-    def network_access_authentication_rules_reset_hit_counts_network_access_authentication_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5_PATTERN,
-            self.path
-        )
-
-    def network_access_authentication_rules_get_network_access_authentication_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9_PATTERN,
-            self.path
-        )
-
-    def network_access_authentication_rules_update_network_access_authentication_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1_PATTERN,
-            self.path
-        )
-
-    def network_access_authentication_rules_delete_network_access_authentication_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_exception_rules_get_network_access_local_exception_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_exception_rules_create_network_access_local_exception_rule_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_exception_rules_reset_hit_counts_network_access_local_exceptions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_exception_rules_get_network_access_local_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_exception_rules_update_network_access_local_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_exception_rules_delete_network_access_local_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_global_exception_rules_create_network_access_policy_set_global_exception_rule_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f2a4d5ef4e915ff8aac91b666fc86326(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f2a4d5ef4e915ff8aac91b666fc86326_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_global_exception_rules_reset_hit_counts_network_access_global_exceptions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_global_exception_rules_update_network_access_policy_set_global_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_global_exception_rules_delete_network_access_policy_set_global_exception_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_rules_get_network_access_authorization_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_rules_create_network_access_authorization_rule_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_rules_reset_hit_counts_network_access_authorization_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_rules_get_network_access_authorization_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_rules_update_network_access_authorization_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2(self):
-        return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2_PATTERN,
-            self.path
-        )
-
-    def network_access_authorization_rules_delete_network_access_authorization_rule_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_get_network_access_conditions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_create_network_access_condition_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_get_network_access_conditions_for_authentication_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_get_network_access_conditions_for_authorization_rules_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_get_network_access_condition_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_update_network_access_condition_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_delete_network_access_condition_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_get_network_access_conditions_for_policy_sets_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_get_network_access_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_update_network_access_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb(self):
-        return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb_PATTERN,
-            self.path
-        )
-
-    def network_access_conditions_delete_network_access_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_get_network_access_dictionaries_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_89a57687cef65891a6f48dd17f456c4e(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_89a57687cef65891a6f48dd17f456c4e_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_create_network_access_dictionaries_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_get_network_access_dictionary_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_update_network_access_dictionary_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_delete_network_access_dictionary_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'description': 'string', 'dictionaryAttrType': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'version': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_attribute_get_network_access_dictionary_attributes_by_dictionary_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_attribute_create_network_access_dictionary_attribute_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_c77600d349fc5c259dbd22d65b3ffa1d(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_c77600d349fc5c259dbd22d65b3ffa1d_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_attribute_get_network_access_dictionary_attribute_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_a60b29bfe2b055299e4360d84380ddd4(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_a60b29bfe2b055299e4360d84380ddd4_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_attribute_update_network_access_dictionary_attribute_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_dd6c2553ae0053c1bbbdbd46c1df0ef9(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_dd6c2553ae0053c1bbbdbd46c1df0ef9_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_attribute_delete_network_access_dictionary_attribute_by_name_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_2ab96d3d76de5d05bbac1f27feacb7b0(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_2ab96d3d76de5d05bbac1f27feacb7b0_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_attributes_list_get_network_access_dictionaries_authentication_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_f68aee0cdb425390b3ca90b0b46e6e2c(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_f68aee0cdb425390b3ca90b0b46e6e2c_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_attributes_list_get_network_access_dictionaries_authorization_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136(self):
-        return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136_PATTERN,
-            self.path
-        )
-
-    def network_access_dictionary_attributes_list_get_network_access_dictionaries_policy_set_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'allowedValues': [{'isDefault': True, 'key': 'string', 'value': 'string'}], 'dataType': 'string', 'description': 'string', 'dictionaryName': 'string', 'directionType': 'string', 'id': 'string', 'internalName': 'string', 'name': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f(self):
-        return re.search(
-            self.NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f_PATTERN,
-            self.path
-        )
-
-    def network_access_identity_stores_get_network_access_identity_stores_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_d43fec9e7dc556cbb9bf0ebd1dcd6aad(self):
-        return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_d43fec9e7dc556cbb9bf0ebd1dcd6aad_PATTERN,
-            self.path
-        )
-
-    def network_access_network_conditions_get_network_access_network_conditions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{}]}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e(self):
-        return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e_PATTERN,
-            self.path
-        )
-
-    def network_access_network_conditions_create_network_access_network_condition_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2(self):
-        return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2_PATTERN,
-            self.path
-        )
-
-    def network_access_network_conditions_get_network_access_network_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14(self):
-        return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14_PATTERN,
-            self.path
-        )
-
-    def network_access_network_conditions_update_network_access_network_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'conditionType': 'string', 'description': 'string', 'id': 'string', 'ipAddrList': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'macAddrList': ['string'], 'name': 'string', 'deviceGroupList': ['string'], 'deviceList': ['string']}]}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219(self):
-        return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219_PATTERN,
-            self.path
-        )
-
-    def network_access_network_conditions_delete_network_access_network_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365(self):
-        return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365_PATTERN,
-            self.path
-        )
-
-    def network_access_policy_set_get_network_access_policy_sets_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_POLICY_SET_9dfe1db8729d541fb3a17d31d47d1881(self):
-        return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_9dfe1db8729d541fb3a17d31d47d1881_PATTERN,
-            self.path
-        )
-
-    def network_access_policy_set_create_network_access_policy_set_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_POLICY_SET_71fb6c1b3f335dbf8176a29e30eb6333(self):
-        return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_71fb6c1b3f335dbf8176a29e30eb6333_PATTERN,
-            self.path
-        )
-
-    def network_access_policy_set_reset_hit_counts_network_access_policy_sets_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'message': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_POLICY_SET_768d9f17adde53e2a08a650b9fe1714c(self):
-        return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_768d9f17adde53e2a08a650b9fe1714c_PATTERN,
-            self.path
-        )
-
-    def network_access_policy_set_get_network_access_policy_set_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b(self):
-        return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b_PATTERN,
-            self.path
-        )
-
-    def network_access_policy_set_update_network_access_policy_set_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f(self):
-        return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f_PATTERN,
-            self.path
-        )
-
-    def network_access_policy_set_delete_network_access_policy_set_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_PROFILES_99c764d87cf255a7b803aad17f0f5db8(self):
-        return re.search(
-            self.NETWORK_ACCESS_PROFILES_99c764d87cf255a7b803aad17f0f5db8_PATTERN,
-            self.path
-        )
-
-    def network_access_profiles_get_network_access_profiles_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_SECURITY_GROUPS_598f564c3eda5c20bb807b8c062c8e7b(self):
-        return re.search(
-            self.NETWORK_ACCESS_SECURITY_GROUPS_598f564c3eda5c20bb807b8c062c8e7b_PATTERN,
-            self.path
-        )
-
-    def network_access_security_groups_get_network_access_security_groups_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps([{'id': 'string', 'name': 'string'}])
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_SERVICE_NAMES_8304c137cad852579f4b810ff8adf661(self):
-        return re.search(
-            self.NETWORK_ACCESS_SERVICE_NAMES_8304c137cad852579f4b810ff8adf661_PATTERN,
-            self.path
-        )
-
-    def network_access_service_names_get_network_access_service_names_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps([{'id': 'string', 'isLocalAuthorization': True, 'name': 'string', 'serviceType': 'string'}])
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_ab916b19789c59b79dddbc2d0a3c57fc(self):
-        return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_ab916b19789c59b79dddbc2d0a3c57fc_PATTERN,
-            self.path
-        )
-
-    def network_access_time_date_conditions_get_network_access_time_conditions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': [{}], 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396(self):
-        return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396_PATTERN,
-            self.path
-        )
-
-    def network_access_time_date_conditions_create_network_access_time_condition_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874(self):
-        return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874_PATTERN,
-            self.path
-        )
-
-    def network_access_time_date_conditions_get_network_access_time_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6(self):
-        return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6_PATTERN,
-            self.path
-        )
-
-    def network_access_time_date_conditions_update_network_access_time_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'response': {}, 'version': 'string'})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6(self):
-        return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6_PATTERN,
-            self.path
-        )
-
-    def network_access_time_date_conditions_delete_network_access_time_condition_by_id_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'id': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -11756,6 +11756,42 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
+    def matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff(self):
+        return re.search(
+            self.VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN,
+            self.path
+        )
+
+    def version_and_patch_get_ise_version_and_patch_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'OperationResult': {'resultValue': [{'value': 'string', 'name': 'string'}]}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f(self):
+        return re.search(
+            self.VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN,
+            self.path
+        )
+
+    def version_info_get_version_info_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'VersionInfo': {'currentServerVersion': 'string', 'supportedVersions': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
     def matches_MISC_0e629f554fa652d980ff08988c788c57(self):
         return re.search(
             self.MISC_0e629f554fa652d980ff08988c788c57_PATTERN,
@@ -12548,42 +12584,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff(self):
-        return re.search(
-            self.VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN,
-            self.path
-        )
-
-    def version_and_patch_get_ise_version_and_patch_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'OperationResult': {'resultValue': [{'value': 'string', 'name': 'string'}]}})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f(self):
-        return re.search(
-            self.VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN,
-            self.path
-        )
-
-    def version_info_get_version_info_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'VersionInfo': {'currentServerVersion': 'string', 'supportedVersions': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
     def do_GET(self):
 
         if self.matches_NBAR_APP_1e8a476ad8455fdebad0d8973c810495():
@@ -12664,122 +12664,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
 
         if self.matches_REPOSITORY_c9dea644f40453fead2b003b06c4c52b():
             self.repository_get_repository_files_response()
-            return
-
-        if self.matches_ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345():
-            self.anc_endpoint_get_anc_endpoint_by_id_response()
-            return
-
-        if self.matches_ANC_ENDPOINT_502e681462295b8b8faea9ce6099ff0c():
-            self.anc_endpoint_get_anc_endpoint_response()
-            return
-
-        if self.matches_ANC_ENDPOINT_d5eb6cea45635ef58f5bc624de004f16():
-            self.anc_endpoint_get_version_response()
-            return
-
-        if self.matches_ANC_ENDPOINT_0a1c6b9323e55505830673a1819840f3():
-            self.anc_endpoint_monitor_bulk_status_anc_endpoint_response()
-            return
-
-        if self.matches_ANC_POLICY_983a095b061f564ebba331f66505b0e3():
-            self.anc_policy_get_anc_policy_by_name_response()
-            return
-
-        if self.matches_ANC_POLICY_f41f77362663580d8cc3e6e88623889d():
-            self.anc_policy_get_anc_policy_by_id_response()
-            return
-
-        if self.matches_ANC_POLICY_440813c9722c56108cac8ca50bf8f01c():
-            self.anc_policy_get_anc_policy_response()
-            return
-
-        if self.matches_ANC_POLICY_b01a12e2b55e582084fab915465bf962():
-            self.anc_policy_get_version_response()
-            return
-
-        if self.matches_ANC_POLICY_10023cdff02b5185b9b54c9e58762704():
-            self.anc_policy_monitor_bulk_status_anc_policy_response()
-            return
-
-        if self.matches_CLEAR_THREATS_AND_VULNERABILITIES_83379c74d24e5ae9bb90f798a190cca3():
-            self.clear_threats_and_vulnerabilities_get_version_response()
-            return
-
-        if self.matches_NODE_DETAILS_ab48268c76aa598788a5ebc370226f3a():
-            self.node_details_get_node_detail_by_name_response()
-            return
-
-        if self.matches_NODE_DETAILS_0397bb2e9d6651c7bf18c1b60ff7eb14():
-            self.node_details_get_node_detail_by_id_response()
-            return
-
-        if self.matches_NODE_DETAILS_775d9b8599f55fc4a1bd9d6ac02619eb():
-            self.node_details_get_node_details_response()
-            return
-
-        if self.matches_NODE_DETAILS_ca9a3d8217d5507aa11020bee82ef228():
-            self.node_details_get_version_response()
-            return
-
-        if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_ab225d0b2a6c52a99df1f1d8fb6a4dac():
-            self.psn_node_details_with_radius_service_get_session_service_node_by_name_response()
-            return
-
-        if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_c988bb742d055294b74b4d6916ca1ada():
-            self.psn_node_details_with_radius_service_get_session_service_node_by_id_response()
-            return
-
-        if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_66dccbf248575cbeb3cd3dda5cdbcf20():
-            self.psn_node_details_with_radius_service_get_session_service_node_response()
-            return
-
-        if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_05c0bfee23f95034842993a83d77c4e4():
-            self.psn_node_details_with_radius_service_get_version_response()
-            return
-
-        if self.matches_PULL_DEPLOYMENT_INFO_f9159c9f9a1951568daee7080e1dda47():
-            self.pull_deployment_info_get_deployment_info_response()
-            return
-
-        if self.matches_PULL_DEPLOYMENT_INFO_8698cc09209259dcbde7c851b5a6eda6():
-            self.pull_deployment_info_get_version_response()
-            return
-
-        if self.matches_PX_GRID_NODE_111a9d109aac585a89bdd3fae400064b():
-            self.px_grid_node_get_px_grid_node_by_name_response()
-            return
-
-        if self.matches_PX_GRID_NODE_d24ade0b53405fbc898cb0cc1ea57fb8():
-            self.px_grid_node_get_px_grid_node_by_id_response()
-            return
-
-        if self.matches_PX_GRID_NODE_52661028d97156379640002f79b2007c():
-            self.px_grid_node_get_px_grid_node_response()
-            return
-
-        if self.matches_PX_GRID_NODE_73c2962d70ef5964be55cfeae68e5ba6():
-            self.px_grid_node_get_version_response()
-            return
-
-        if self.matches_SUPPORT_BUNDLE_DOWNLOAD_25c57752629f546fb86e84c59285350f():
-            self.support_bundle_download_get_version_response()
-            return
-
-        if self.matches_SUPPORT_BUNDLE_STATUS_cec7dc317e875ff0a315a7c0556f9c51():
-            self.support_bundle_status_get_support_bundle_status_by_id_response()
-            return
-
-        if self.matches_SUPPORT_BUNDLE_STATUS_505300e162f051d58c6ae9d5e3851780():
-            self.support_bundle_status_get_support_bundle_status_response()
-            return
-
-        if self.matches_SUPPORT_BUNDLE_STATUS_7ae30c71acc45385a6b3e9a49a8281a9():
-            self.support_bundle_status_get_version_response()
-            return
-
-        if self.matches_SUPPORT_BUNDLE_TRIGGER_CONFIGURATION_a2b17c3c4eab52caa2fc7c811965c79d():
-            self.support_bundle_trigger_configuration_get_version_response()
             return
 
         if self.matches_CERTIFICATES_2eeef18d70b159f788b717e301dd3643():
@@ -13044,6 +12928,122 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
 
         if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874():
             self.network_access_time_date_conditions_get_network_access_time_condition_by_id_response()
+            return
+
+        if self.matches_ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345():
+            self.anc_endpoint_get_anc_endpoint_by_id_response()
+            return
+
+        if self.matches_ANC_ENDPOINT_502e681462295b8b8faea9ce6099ff0c():
+            self.anc_endpoint_get_anc_endpoint_response()
+            return
+
+        if self.matches_ANC_ENDPOINT_d5eb6cea45635ef58f5bc624de004f16():
+            self.anc_endpoint_get_version_response()
+            return
+
+        if self.matches_ANC_ENDPOINT_0a1c6b9323e55505830673a1819840f3():
+            self.anc_endpoint_monitor_bulk_status_anc_endpoint_response()
+            return
+
+        if self.matches_ANC_POLICY_983a095b061f564ebba331f66505b0e3():
+            self.anc_policy_get_anc_policy_by_name_response()
+            return
+
+        if self.matches_ANC_POLICY_f41f77362663580d8cc3e6e88623889d():
+            self.anc_policy_get_anc_policy_by_id_response()
+            return
+
+        if self.matches_ANC_POLICY_440813c9722c56108cac8ca50bf8f01c():
+            self.anc_policy_get_anc_policy_response()
+            return
+
+        if self.matches_ANC_POLICY_b01a12e2b55e582084fab915465bf962():
+            self.anc_policy_get_version_response()
+            return
+
+        if self.matches_ANC_POLICY_10023cdff02b5185b9b54c9e58762704():
+            self.anc_policy_monitor_bulk_status_anc_policy_response()
+            return
+
+        if self.matches_CLEAR_THREATS_AND_VULNERABILITIES_83379c74d24e5ae9bb90f798a190cca3():
+            self.clear_threats_and_vulnerabilities_get_version_response()
+            return
+
+        if self.matches_NODE_DETAILS_ab48268c76aa598788a5ebc370226f3a():
+            self.node_details_get_node_detail_by_name_response()
+            return
+
+        if self.matches_NODE_DETAILS_0397bb2e9d6651c7bf18c1b60ff7eb14():
+            self.node_details_get_node_detail_by_id_response()
+            return
+
+        if self.matches_NODE_DETAILS_775d9b8599f55fc4a1bd9d6ac02619eb():
+            self.node_details_get_node_details_response()
+            return
+
+        if self.matches_NODE_DETAILS_ca9a3d8217d5507aa11020bee82ef228():
+            self.node_details_get_version_response()
+            return
+
+        if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_ab225d0b2a6c52a99df1f1d8fb6a4dac():
+            self.psn_node_details_with_radius_service_get_session_service_node_by_name_response()
+            return
+
+        if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_c988bb742d055294b74b4d6916ca1ada():
+            self.psn_node_details_with_radius_service_get_session_service_node_by_id_response()
+            return
+
+        if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_66dccbf248575cbeb3cd3dda5cdbcf20():
+            self.psn_node_details_with_radius_service_get_session_service_node_response()
+            return
+
+        if self.matches_PSN_NODE_DETAILS_WITH_RADIUS_SERVICE_05c0bfee23f95034842993a83d77c4e4():
+            self.psn_node_details_with_radius_service_get_version_response()
+            return
+
+        if self.matches_PULL_DEPLOYMENT_INFO_f9159c9f9a1951568daee7080e1dda47():
+            self.pull_deployment_info_get_deployment_info_response()
+            return
+
+        if self.matches_PULL_DEPLOYMENT_INFO_8698cc09209259dcbde7c851b5a6eda6():
+            self.pull_deployment_info_get_version_response()
+            return
+
+        if self.matches_PX_GRID_NODE_111a9d109aac585a89bdd3fae400064b():
+            self.px_grid_node_get_px_grid_node_by_name_response()
+            return
+
+        if self.matches_PX_GRID_NODE_d24ade0b53405fbc898cb0cc1ea57fb8():
+            self.px_grid_node_get_px_grid_node_by_id_response()
+            return
+
+        if self.matches_PX_GRID_NODE_52661028d97156379640002f79b2007c():
+            self.px_grid_node_get_px_grid_node_response()
+            return
+
+        if self.matches_PX_GRID_NODE_73c2962d70ef5964be55cfeae68e5ba6():
+            self.px_grid_node_get_version_response()
+            return
+
+        if self.matches_SUPPORT_BUNDLE_DOWNLOAD_25c57752629f546fb86e84c59285350f():
+            self.support_bundle_download_get_version_response()
+            return
+
+        if self.matches_SUPPORT_BUNDLE_STATUS_cec7dc317e875ff0a315a7c0556f9c51():
+            self.support_bundle_status_get_support_bundle_status_by_id_response()
+            return
+
+        if self.matches_SUPPORT_BUNDLE_STATUS_505300e162f051d58c6ae9d5e3851780():
+            self.support_bundle_status_get_support_bundle_status_response()
+            return
+
+        if self.matches_SUPPORT_BUNDLE_STATUS_7ae30c71acc45385a6b3e9a49a8281a9():
+            self.support_bundle_status_get_version_response()
+            return
+
+        if self.matches_SUPPORT_BUNDLE_TRIGGER_CONFIGURATION_a2b17c3c4eab52caa2fc7c811965c79d():
+            self.support_bundle_trigger_configuration_get_version_response()
             return
 
         if self.matches_ACI_BINDINGS_3d1448851f0154d0b6e9c856ec6cc6f0():
@@ -13806,6 +13806,14 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
             self.telemetry_information_get_version_response()
             return
 
+        if self.matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff():
+            self.version_and_patch_get_ise_version_and_patch_response()
+            return
+
+        if self.matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f():
+            self.version_info_get_version_info_response()
+            return
+
         if self.matches_MISC_0e629f554fa652d980ff08988c788c57():
             self.misc_get_active_count_response()
             return
@@ -13872,14 +13880,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
 
         if self.matches_RADIUS_FAILURE_13a3d2bc1bed5e90b1056649e7703d77():
             self.radius_failure_get_failures_response()
-            return
-
-        if self.matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff():
-            self.version_and_patch_get_ise_version_and_patch_response()
-            return
-
-        if self.matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f():
-            self.version_info_get_version_info_response()
             return
 
     def do_POST(self):
@@ -13970,14 +13970,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
 
         if self.matches_REPOSITORY_9a207a157244508c99bf3e9abb26aab8():
             self.repository_create_repository_response()
-            return
-
-        if self.matches_ANC_POLICY_2acfdb4060de5a1895b383238c205986():
-            self.anc_policy_create_anc_policy_response()
-            return
-
-        if self.matches_SUPPORT_BUNDLE_TRIGGER_CONFIGURATION_492171fac48e5c63abfe2feec6fd1903():
-            self.support_bundle_trigger_configuration_create_support_bundle_response()
             return
 
         if self.matches_CERTIFICATES_e39868ea7aec5efcaaf55009699eda5d():
@@ -14122,6 +14114,14 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
 
         if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396():
             self.network_access_time_date_conditions_create_network_access_time_condition_response()
+            return
+
+        if self.matches_ANC_POLICY_2acfdb4060de5a1895b383238c205986():
+            self.anc_policy_create_anc_policy_response()
+            return
+
+        if self.matches_SUPPORT_BUNDLE_TRIGGER_CONFIGURATION_492171fac48e5c63abfe2feec6fd1903():
+            self.support_bundle_trigger_configuration_create_support_bundle_response()
             return
 
         if self.matches_ACTIVE_DIRECTORY_64e9318040a456978757d7abfa3e66b1():
@@ -14434,38 +14434,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
             self.repository_update_repository_response()
             return
 
-        if self.matches_ANC_ENDPOINT_2131fc6670fd50dfb04b1f6b16981256():
-            self.anc_endpoint_clear_anc_endpoint_response()
-            return
-
-        if self.matches_ANC_ENDPOINT_136bc936bcb25464b9f3f227647b0443():
-            self.anc_endpoint_apply_anc_endpoint_response()
-            return
-
-        if self.matches_ANC_ENDPOINT_5e6167fc5cb6593b8b48429187a26a67():
-            self.anc_endpoint_bulk_request_for_anc_endpoint_response()
-            return
-
-        if self.matches_ANC_POLICY_1d79b507bda155c180d42f0a67ef64d5():
-            self.anc_policy_update_anc_policy_by_id_response()
-            return
-
-        if self.matches_ANC_POLICY_4d67f9f6fba65dcbbcf64ca3e31b39a6():
-            self.anc_policy_bulk_request_for_anc_policy_response()
-            return
-
-        if self.matches_CLEAR_THREATS_AND_VULNERABILITIES_e3110fc63ecb5428a075a8af8497fb35():
-            self.clear_threats_and_vulnerabilities_clear_threats_and_vulnerabilities_response()
-            return
-
-        if self.matches_PX_GRID_NODE_f47d656ed0805859a85e5cc082c78dcf():
-            self.px_grid_node_approve_px_grid_node_response()
-            return
-
-        if self.matches_SUPPORT_BUNDLE_DOWNLOAD_737531846d125b968b9d362a3458621d():
-            self.support_bundle_download_download_support_bundle_response()
-            return
-
         if self.matches_CERTIFICATES_48fb9c22ad9a5eddb590c85abdab460b():
             self.certificates_update_system_certificate_response()
             return
@@ -14552,6 +14520,38 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
 
         if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6():
             self.network_access_time_date_conditions_update_network_access_time_condition_by_id_response()
+            return
+
+        if self.matches_ANC_ENDPOINT_2131fc6670fd50dfb04b1f6b16981256():
+            self.anc_endpoint_clear_anc_endpoint_response()
+            return
+
+        if self.matches_ANC_ENDPOINT_136bc936bcb25464b9f3f227647b0443():
+            self.anc_endpoint_apply_anc_endpoint_response()
+            return
+
+        if self.matches_ANC_ENDPOINT_5e6167fc5cb6593b8b48429187a26a67():
+            self.anc_endpoint_bulk_request_for_anc_endpoint_response()
+            return
+
+        if self.matches_ANC_POLICY_1d79b507bda155c180d42f0a67ef64d5():
+            self.anc_policy_update_anc_policy_by_id_response()
+            return
+
+        if self.matches_ANC_POLICY_4d67f9f6fba65dcbbcf64ca3e31b39a6():
+            self.anc_policy_bulk_request_for_anc_policy_response()
+            return
+
+        if self.matches_CLEAR_THREATS_AND_VULNERABILITIES_e3110fc63ecb5428a075a8af8497fb35():
+            self.clear_threats_and_vulnerabilities_clear_threats_and_vulnerabilities_response()
+            return
+
+        if self.matches_PX_GRID_NODE_f47d656ed0805859a85e5cc082c78dcf():
+            self.px_grid_node_approve_px_grid_node_response()
+            return
+
+        if self.matches_SUPPORT_BUNDLE_DOWNLOAD_737531846d125b968b9d362a3458621d():
+            self.support_bundle_download_download_support_bundle_response()
             return
 
         if self.matches_ACI_SETTINGS_1b155c91eec153338302d492db1afb80():
@@ -14964,14 +14964,6 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
             self.repository_delete_repository_response()
             return
 
-        if self.matches_ANC_POLICY_7c6b8dd764e052699d4d7a0d8ba43640():
-            self.anc_policy_delete_anc_policy_by_id_response()
-            return
-
-        if self.matches_PX_GRID_NODE_849e718d5054593b94a2fef39461c24a():
-            self.px_grid_node_delete_px_grid_node_by_name_response()
-            return
-
         if self.matches_CERTIFICATES_bf792ec664fa5202beb776556908b0c1():
             self.certificates_delete_csr_by_id_response()
             return
@@ -15062,6 +15054,14 @@ class MockServerRequestHandler_v3_1_0(BaseHTTPRequestHandler):
 
         if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6():
             self.network_access_time_date_conditions_delete_network_access_time_condition_by_id_response()
+            return
+
+        if self.matches_ANC_POLICY_7c6b8dd764e052699d4d7a0d8ba43640():
+            self.anc_policy_delete_anc_policy_by_id_response()
+            return
+
+        if self.matches_PX_GRID_NODE_849e718d5054593b94a2fef39461c24a():
+            self.px_grid_node_delete_px_grid_node_by_name_response()
             return
 
         if self.matches_ACTIVE_DIRECTORY_786febbe79ed5bb780d97a98f292b606():

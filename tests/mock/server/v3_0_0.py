@@ -592,6 +592,8 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     TELEMETRY_INFORMATION_13891f52605b5f6481f6a99ec8a7e8e6_PATTERN = re.compile(r"/ers/config/telemetryinfo/string")
     TELEMETRY_INFORMATION_8f1a8ae602c95ac08676391c374274f2_PATTERN = re.compile(r"/ers/config/telemetryinfo")
     TELEMETRY_INFORMATION_86338cd5bfb6540cb70f4bc100a96aed_PATTERN = re.compile(r"/ers/config/telemetryinfo/versioninfo")
+    VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN = re.compile(r"/ers/config/op/systemconfig/iseversion")
+    VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN = re.compile(r"/ers/config/string/versioninfo")
     MISC_0e629f554fa652d980ff08988c788c57_PATTERN = re.compile(r"/admin/API/mnt/Session/ActiveCount")
     MISC_6a6c71a1e4d2597ea1b5533e9f1b438f_PATTERN = re.compile(r"/admin/API/mnt/Session/ActiveList")
     MISC_2d91e71e5b84583fb8ea91fcd9fb6751_PATTERN = re.compile(r"/admin/API/mnt/Session/AuthList/null/null")
@@ -636,8 +638,6 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
     TRUST_SEC_CONFIGURATION_3da8b5be1a475510a5aa1593d625ffbb_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/config/trustsec/getEgressPolicies")
     TRUST_SEC_CONFIGURATION_3f9e6e1c33155fdd9a88f48d093f375b_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/config/trustsec/getEgressMatrices")
     TRUST_SEC_SXP_900a7bddaf5159e68b2caeb19b9979c4_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/sxp/getBindings")
-    VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN = re.compile(r"/ers/config/op/systemconfig/iseversion")
-    VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN = re.compile(r"/ers/config/string/versioninfo")
 
     def matches_TASKS_38eb7df265a55d2cbedb08847549b39a(self):
         return re.search(
@@ -2309,7 +2309,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2417,7 +2417,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2525,7 +2525,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -2633,7 +2633,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'commands': ['string'], 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': 'string', 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3029,7 +3029,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{}]}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}]}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3119,7 +3119,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3263,7 +3263,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3353,7 +3353,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'identitySourceId': 'string', 'identitySourceName': 'string', 'ifAuthFail': 'string', 'ifProcessFail': 'string', 'ifUserNotFound': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3461,7 +3461,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3569,7 +3569,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3677,7 +3677,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'profile': ['string'], 'rule': {'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'hitCounts': 0, 'id': 'string', 'name': 'string', 'rank': 0, 'state': 'string'}, 'securityGroup': 'string'}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4235,7 +4235,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{}]}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'description': 'string', 'id': 'string', 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'conditions': [{'cliDnisList': ['string'], 'ipAddrList': ['string'], 'macAddrList': ['string'], 'deviceGroupList': ['string'], 'deviceList': ['string']}]}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4325,7 +4325,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'condition': {'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}, 'default': True, 'description': 'string', 'hitCounts': 0, 'id': 'string', 'isProxy': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'name': 'string', 'rank': 0, 'serviceName': 'string', 'state': 'string'}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4487,7 +4487,7 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
-        response_content = json.dumps({'response': [{}], 'version': 'string'})
+        response_content = json.dumps({'response': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}, 'description': 'string', 'id': 'string', 'name': 'string', 'attributeName': 'string', 'attributeId': 'string', 'attributeValue': 'string', 'dictionaryName': 'string', 'dictionaryValue': 'string', 'operator': 'string', 'children': [{'conditionType': 'string', 'isNegate': True, 'link': {'href': 'string', 'rel': 'string', 'type': 'string'}}], 'datesRange': {'endDate': 'string', 'startDate': 'string'}, 'datesRangeException': {'endDate': 'string', 'startDate': 'string'}, 'hoursRange': {'endTime': 'string', 'startTime': 'string'}, 'hoursRangeException': {'endTime': 'string', 'startTime': 'string'}, 'weekDays': ['string'], 'weekDaysException': ['string']}], 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -11205,6 +11205,42 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
+    def matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff(self):
+        return re.search(
+            self.VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN,
+            self.path
+        )
+
+    def version_and_patch_get_ise_version_and_patch_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'OperationResult': {'resultValue': [{'value': 'string', 'name': 'string'}]}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f(self):
+        return re.search(
+            self.VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN,
+            self.path
+        )
+
+    def version_info_get_version_info_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'VersionInfo': {'currentServerVersion': 'string', 'supportedVersions': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
     def matches_MISC_0e629f554fa652d980ff08988c788c57(self):
         return re.search(
             self.MISC_0e629f554fa652d980ff08988c788c57_PATTERN,
@@ -11994,42 +12030,6 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
         self.end_headers()
         # Add response content.
         response_content = json.dumps({})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff(self):
-        return re.search(
-            self.VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff_PATTERN,
-            self.path
-        )
-
-    def version_and_patch_get_ise_version_and_patch_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'OperationResult': {'resultValue': [{'value': 'string', 'name': 'string'}]}})
-        self.wfile.write(response_content.encode('utf-8'))
-        return
-
-    def matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f(self):
-        return re.search(
-            self.VERSION_INFO_9821681a250e5e46850384fa5cb10a5f_PATTERN,
-            self.path
-        )
-
-    def version_info_get_version_info_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header('Content-Type', 'application/json; charset=utf-8')
-        self.send_header('Accept', 'application/json')
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps({'VersionInfo': {'currentServerVersion': 'string', 'supportedVersions': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -13223,6 +13223,14 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
             self.telemetry_information_get_version_response()
             return
 
+        if self.matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff():
+            self.version_and_patch_get_ise_version_and_patch_response()
+            return
+
+        if self.matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f():
+            self.version_info_get_version_info_response()
+            return
+
         if self.matches_MISC_0e629f554fa652d980ff08988c788c57():
             self.misc_get_active_count_response()
             return
@@ -13289,14 +13297,6 @@ class MockServerRequestHandler_v3_0_0(BaseHTTPRequestHandler):
 
         if self.matches_RADIUS_FAILURE_13a3d2bc1bed5e90b1056649e7703d77():
             self.radius_failure_get_failures_response()
-            return
-
-        if self.matches_VERSION_AND_PATCH_edea91f35e90539f87a80eb107e02fff():
-            self.version_and_patch_get_ise_version_and_patch_response()
-            return
-
-        if self.matches_VERSION_INFO_9821681a250e5e46850384fa5cb10a5f():
-            self.version_info_get_version_info_response()
             return
 
     def do_POST(self):

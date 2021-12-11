@@ -29,6 +29,7 @@ pytest_plugins = [
     'tests.api',
     'tests.api.v3_0_0',
     'tests.api.v3_1_0',
+    'tests.api.v3_1_1',
 ]
 
 
