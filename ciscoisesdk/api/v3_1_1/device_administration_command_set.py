@@ -121,7 +121,7 @@ class DeviceAdministrationCommandSet(object):
         path_params = {
         }
 
-        e_url = ('/device-admin/command-sets')
+        e_url = ('/api/v1/policy/device-admin/command-sets')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -129,7 +129,7 @@ class DeviceAdministrationCommandSet(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dc13c523c82c2f747a81cf187_v3_1_1', _api_response)
+        return self._object_factory('bpm_e68f07767522ba1e49dc474e936d2_v3_1_1', _api_response)
 
     def get_all(self,
                 headers=None,

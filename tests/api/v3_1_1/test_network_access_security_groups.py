@@ -37,7 +37,7 @@ def is_valid_get_network_access_security_groups(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_27c33c9c96635465bdad3324f6b5b363_v3_1_1').validate(obj.response)
+    json_schema_validate('jsd_598f564c3eda5c20bb807b8c062c8e7b_v3_1_1').validate(obj.response)
     return True
 
 

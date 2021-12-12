@@ -121,7 +121,7 @@ class NetworkAccessProfiles(object):
         path_params = {
         }
 
-        e_url = ('/network-access/authorization-profiles')
+        e_url = ('/api/v1/policy/network-access/authorization-profiles')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -129,7 +129,7 @@ class NetworkAccessProfiles(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e77ef593139561fa4e877ecbe81e050_v3_1_1', _api_response)
+        return self._object_factory('bpm_c764d87cf255a7b803aad17f0f5db8_v3_1_1', _api_response)
 
     def get_all(self,
                 headers=None,

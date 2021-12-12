@@ -120,7 +120,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         path_params = {
         }
 
-        e_url = ('/device-admin/policy-set/global-exception')
+        e_url = ('/api/v1/policy/device-admin/policy-set/global-exception')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -128,7 +128,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a461326a2e8c5f0bb96456f631b02754_v3_1_1', _api_response)
+        return self._object_factory('bpm_e75d766151e85011870229f30e4f5ec3_v3_1_1', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -239,10 +239,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_c1931b0be5ed56ec8f005c51b623dea6_v3_1_1')\
+            self._request_validator('jsd_da0a59db7654cfa89df49ca3ac3414_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/device-admin/policy-set/global-exception')
+        e_url = ('/api/v1/policy/device-admin/policy-set/global-exception')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -254,7 +254,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_c1931b0be5ed56ec8f005c51b623dea6_v3_1_1', _api_response)
+        return self._object_factory('bpm_da0a59db7654cfa89df49ca3ac3414_v3_1_1', _api_response)
 
     def create(self,
                commands=None,
@@ -327,7 +327,8 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         path_params = {
         }
 
-        e_url = ('/device-admin/policy-set/global-exception/reset-hitcount')
+        e_url = ('/api/v1/policy/device-admin/policy-set/global-'
+                 + 'exception/reset-hitcount')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         if with_custom_headers:
@@ -336,7 +337,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f25be2aac53ff9f2d77790eeb278f_v3_1_1', _api_response)
+        return self._object_factory('bpm_bd8a6c63d0235f3699f2669ca4734c13_v3_1_1', _api_response)
 
     def reset_hit_counts(self,
                          headers=None,
@@ -402,7 +403,8 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             'id': id,
         }
 
-        e_url = ('/device-admin/policy-set/global-exception/{id}')
+        e_url = ('/api/v1/policy/device-admin/policy-set/global-'
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -410,7 +412,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e609e4ae0d5e6789320fc6bbeef5b4_v3_1_1', _api_response)
+        return self._object_factory('bpm_b3d905ee2883501281de916733b4025c_v3_1_1', _api_response)
 
     def get_by_id(self,
                   id,
@@ -520,10 +522,11 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_be6e45d04d959aa965834d241eb8a76_v3_1_1')\
+            self._request_validator('jsd_d9ddc2557a495493bca08b8b973601aa_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/device-admin/policy-set/global-exception/{id}')
+        e_url = ('/api/v1/policy/device-admin/policy-set/global-'
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -536,7 +539,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_be6e45d04d959aa965834d241eb8a76_v3_1_1', _api_response)
+        return self._object_factory('bpm_d9ddc2557a495493bca08b8b973601aa_v3_1_1', _api_response)
 
     def update_by_id(self,
                      id,
@@ -616,7 +619,8 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             'id': id,
         }
 
-        e_url = ('/device-admin/policy-set/global-exception/{id}')
+        e_url = ('/api/v1/policy/device-admin/policy-set/global-'
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -624,7 +628,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e48447069a5f8a8f70788964e88fac_v3_1_1', _api_response)
+        return self._object_factory('bpm_f16d14057660520dba53cc0df60db4a8_v3_1_1', _api_response)
 
     def delete_by_id(self,
                      id,

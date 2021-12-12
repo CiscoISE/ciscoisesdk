@@ -124,7 +124,7 @@ class DeviceAdministrationServiceNames(object):
         path_params = {
         }
 
-        e_url = ('/device-admin/service-names')
+        e_url = ('/api/v1/policy/device-admin/service-names')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -132,7 +132,7 @@ class DeviceAdministrationServiceNames(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_af8824a28b245816af767df50e72c513_v3_1_1', _api_response)
+        return self._object_factory('bpm_ea7e01261355dcfae6412e0615ba1f5_v3_1_1', _api_response)
 
     def get_all(self,
                 headers=None,

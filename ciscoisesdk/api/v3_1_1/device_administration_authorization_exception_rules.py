@@ -126,7 +126,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             'policyId': policy_id,
         }
 
-        e_url = ('/device-admin/policy-set/{policyId}/exception')
+        e_url = ('/api/v1/policy/device-admin/policy-'
+                 + 'set/{policyId}/exception')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -134,7 +135,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b7d3d36a4e0655ab99b9e1aeb026a388_v3_1_1', _api_response)
+        return self._object_factory('bpm_bba3187f0be4563aa8b6ff5931a123e7_v3_1_1', _api_response)
 
     def get_all(self,
                 policy_id,
@@ -253,10 +254,11 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_bc905c794c5575b51a36f5184396fe_v3_1_1')\
+            self._request_validator('jsd_ebcdc835e9b8d6844c1da6cf252_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/device-admin/policy-set/{policyId}/exception')
+        e_url = ('/api/v1/policy/device-admin/policy-'
+                 + 'set/{policyId}/exception')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -268,7 +270,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_bc905c794c5575b51a36f5184396fe_v3_1_1', _api_response)
+        return self._object_factory('bpm_ebcdc835e9b8d6844c1da6cf252_v3_1_1', _api_response)
 
     def create(self,
                policy_id,
@@ -349,8 +351,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             'policyId': policy_id,
         }
 
-        e_url = ('/device-admin/policy-set/{policyId}/exception/reset-'
-                 + 'hitcount')
+        e_url = ('/api/v1/policy/device-admin/policy-'
+                 + 'set/{policyId}/exception/reset-hitcount')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         if with_custom_headers:
@@ -359,7 +361,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d3567e00f647509c911e143859ea15e7_v3_1_1', _api_response)
+        return self._object_factory('bpm_f9452f1ecd64528ba7a4a99295bb715c_v3_1_1', _api_response)
 
     def reset_hit_counts_by_id(self,
                                policy_id,
@@ -433,7 +435,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             'id': id,
         }
 
-        e_url = ('/device-admin/policy-set/{policyId}/exception/{id}')
+        e_url = ('/api/v1/policy/device-admin/policy-'
+                 + 'set/{policyId}/exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -441,7 +444,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b049038756b0a914adf57bf7b717_v3_1_1', _api_response)
+        return self._object_factory('bpm_d8e470a4ef6a58b3b21f9adbbdcc7a46_v3_1_1', _api_response)
 
     def get_by_id(self,
                   id,
@@ -559,10 +562,11 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_d7216992aa255039f59eb681bdac681_v3_1_1')\
+            self._request_validator('jsd_a87d60d590485830aed781bfb15b5c95_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/device-admin/policy-set/{policyId}/exception/{id}')
+        e_url = ('/api/v1/policy/device-admin/policy-'
+                 + 'set/{policyId}/exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -575,7 +579,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_d7216992aa255039f59eb681bdac681_v3_1_1', _api_response)
+        return self._object_factory('bpm_a87d60d590485830aed781bfb15b5c95_v3_1_1', _api_response)
 
     def update_by_id(self,
                      id,
@@ -663,7 +667,8 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
             'id': id,
         }
 
-        e_url = ('/device-admin/policy-set/{policyId}/exception/{id}')
+        e_url = ('/api/v1/policy/device-admin/policy-'
+                 + 'set/{policyId}/exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -671,7 +676,7 @@ class DeviceAdministrationAuthorizationExceptionRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e8fa027f736f53bea5ba46649936a5da_v3_1_1', _api_response)
+        return self._object_factory('bpm_c7d6bb4abf53f6aa2f40b6986f58a9_v3_1_1', _api_response)
 
     def delete_by_id(self,
                      id,

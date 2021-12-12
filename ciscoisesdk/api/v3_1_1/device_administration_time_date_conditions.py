@@ -120,7 +120,7 @@ class DeviceAdministrationTimeDateConditions(object):
         path_params = {
         }
 
-        e_url = ('/device-admin/time-condition')
+        e_url = ('/api/v1/policy/device-admin/time-condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -128,7 +128,7 @@ class DeviceAdministrationTimeDateConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e99a9d3415fc4a85547c481f40e35_v3_1_1', _api_response)
+        return self._object_factory('bpm_f79ab23563d857e58e01a74e37333572_v3_1_1', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -358,10 +358,10 @@ class DeviceAdministrationTimeDateConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_db9265bf1c5a5de2b26df4461618e965_v3_1_1')\
+            self._request_validator('jsd_a4d5b5da6a50bfaaecc180543fd952_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/device-admin/time-condition')
+        e_url = ('/api/v1/policy/device-admin/time-condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -373,7 +373,7 @@ class DeviceAdministrationTimeDateConditions(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_db9265bf1c5a5de2b26df4461618e965_v3_1_1', _api_response)
+        return self._object_factory('bpm_a4d5b5da6a50bfaaecc180543fd952_v3_1_1', _api_response)
 
     def create(self,
                attribute_name=None,
@@ -479,7 +479,7 @@ class DeviceAdministrationTimeDateConditions(object):
             'id': id,
         }
 
-        e_url = ('/device-admin/time-condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -487,7 +487,7 @@ class DeviceAdministrationTimeDateConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b0bc8c49447258bbbdb4e50693064d00_v3_1_1', _api_response)
+        return self._object_factory('bpm_e603092f597ab6c25381e59c4a70_v3_1_1', _api_response)
 
     def get_by_id(self,
                   id,
@@ -723,10 +723,10 @@ class DeviceAdministrationTimeDateConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_d94fcdde737658a4a874631d3bd2e98d_v3_1_1')\
+            self._request_validator('jsd_ee1780a38a85d1ba57c9a38e1093721_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/device-admin/time-condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -739,7 +739,7 @@ class DeviceAdministrationTimeDateConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_d94fcdde737658a4a874631d3bd2e98d_v3_1_1', _api_response)
+        return self._object_factory('bpm_ee1780a38a85d1ba57c9a38e1093721_v3_1_1', _api_response)
 
     def update_by_id(self,
                      id,
@@ -845,7 +845,7 @@ class DeviceAdministrationTimeDateConditions(object):
             'id': id,
         }
 
-        e_url = ('/device-admin/time-condition/{id}')
+        e_url = ('/api/v1/policy/device-admin/time-condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -853,7 +853,7 @@ class DeviceAdministrationTimeDateConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_aae929f02e50b782a492bd8bbad596_v3_1_1', _api_response)
+        return self._object_factory('bpm_c1052ac49dd35088a9874a4350182015_v3_1_1', _api_response)
 
     def delete_by_id(self,
                      id,

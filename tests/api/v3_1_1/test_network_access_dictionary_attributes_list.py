@@ -37,7 +37,7 @@ def is_valid_get_network_access_dictionaries_authentication(json_schema_validate
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_ea5f9905a8e85dc9906a7aeac1f63b36_v3_1_1').validate(obj.response)
+    json_schema_validate('jsd_2ab96d3d76de5d05bbac1f27feacb7b0_v3_1_1').validate(obj.response)
     return True
 
 
@@ -87,7 +87,7 @@ def is_valid_get_network_access_dictionaries_authorization(json_schema_validate,
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bab0f222e253599ba29f4b95c8a94637_v3_1_1').validate(obj.response)
+    json_schema_validate('jsd_f68aee0cdb425390b3ca90b0b46e6e2c_v3_1_1').validate(obj.response)
     return True
 
 
@@ -137,7 +137,7 @@ def is_valid_get_network_access_dictionaries_policy_set(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_60e9c47ce5015db29a6d4e5f89b5f62a_v3_1_1').validate(obj.response)
+    json_schema_validate('jsd_21c53b22885f5e5d82fb8cadd0332136_v3_1_1').validate(obj.response)
     return True
 
 

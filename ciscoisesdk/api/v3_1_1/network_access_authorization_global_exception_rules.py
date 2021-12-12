@@ -120,7 +120,8 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         path_params = {
         }
 
-        e_url = ('/network-access/policy-set/global-exception')
+        e_url = ('/api/v1/policy/network-access/policy-set/global-'
+                 + 'exception')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -128,7 +129,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c9a838a5d2d53d8a83d54f33f159598_v3_1_1', _api_response)
+        return self._object_factory('bpm_a11a1ff1ee5387b669bcde99f86fbf_v3_1_1', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -236,10 +237,11 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ca0931b76554ebb7ef366bd77e89c_v3_1_1')\
+            self._request_validator('jsd_c5c9b7ab72b5442ae7026a5dcc0fec3_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/network-access/policy-set/global-exception')
+        e_url = ('/api/v1/policy/network-access/policy-set/global-'
+                 + 'exception')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -251,7 +253,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_ca0931b76554ebb7ef366bd77e89c_v3_1_1', _api_response)
+        return self._object_factory('bpm_c5c9b7ab72b5442ae7026a5dcc0fec3_v3_1_1', _api_response)
 
     def create(self,
                link=None,
@@ -324,8 +326,8 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         path_params = {
         }
 
-        e_url = ('/network-access/policy-set/global-exception/reset-'
-                 + 'hitcount')
+        e_url = ('/api/v1/policy/network-access/policy-set/global-'
+                 + 'exception/reset-hitcount')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         if with_custom_headers:
@@ -334,7 +336,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_bfe4ad8fa95208a480b4a73d423c8b_v3_1_1', _api_response)
+        return self._object_factory('bpm_f2a4d5ef4e915ff8aac91b666fc86326_v3_1_1', _api_response)
 
     def reset_hit_counts(self,
                          headers=None,
@@ -400,7 +402,8 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             'id': id,
         }
 
-        e_url = ('/network-access/policy-set/global-exception/{id}')
+        e_url = ('/api/v1/policy/network-access/policy-set/global-'
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -408,7 +411,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c1db8937e67a57b08d2e8c6d821558ad_v3_1_1', _api_response)
+        return self._object_factory('bpm_c14128e5729b55e9b1feb638a8295e10_v3_1_1', _api_response)
 
     def get_by_id(self,
                   id,
@@ -515,10 +518,11 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_f891e15d9ff59cc96a525303cc7736c_v3_1_1')\
+            self._request_validator('jsd_ac171b8ccf79502fbc4b35909970a1cb_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/network-access/policy-set/global-exception/{id}')
+        e_url = ('/api/v1/policy/network-access/policy-set/global-'
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -531,7 +535,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_f891e15d9ff59cc96a525303cc7736c_v3_1_1', _api_response)
+        return self._object_factory('bpm_ac171b8ccf79502fbc4b35909970a1cb_v3_1_1', _api_response)
 
     def update_by_id(self,
                      id,
@@ -611,7 +615,8 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
             'id': id,
         }
 
-        e_url = ('/network-access/policy-set/global-exception/{id}')
+        e_url = ('/api/v1/policy/network-access/policy-set/global-'
+                 + 'exception/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -619,7 +624,7 @@ class NetworkAccessAuthorizationGlobalExceptionRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fe6c791b0b5879afd3251b263962af_v3_1_1', _api_response)
+        return self._object_factory('bpm_fd707ac0454be8fecc73a918a27b6_v3_1_1', _api_response)
 
     def delete_by_id(self,
                      id,

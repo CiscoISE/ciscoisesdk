@@ -120,7 +120,7 @@ class NetworkAccessConditions(object):
         path_params = {
         }
 
-        e_url = ('/network-access/condition')
+        e_url = ('/api/v1/policy/network-access/condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -128,7 +128,7 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c513fa483ee5144bbea860bf9e449d6_v3_1_1', _api_response)
+        return self._object_factory('bpm_df4fb303a3e5661ba12058f18b225af_v3_1_1', _api_response)
 
     def get_all(self,
                 headers=None,
@@ -385,10 +385,10 @@ class NetworkAccessConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_ec901d2e3f635112bfbc494932ec29aa_v3_1_1')\
+            self._request_validator('jsd_e7bd468ee94f53869e52e84454efd0e6_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/network-access/condition')
+        e_url = ('/api/v1/policy/network-access/condition')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -400,7 +400,7 @@ class NetworkAccessConditions(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_ec901d2e3f635112bfbc494932ec29aa_v3_1_1', _api_response)
+        return self._object_factory('bpm_e7bd468ee94f53869e52e84454efd0e6_v3_1_1', _api_response)
 
     def create(self,
                attribute_name=None,
@@ -502,7 +502,7 @@ class NetworkAccessConditions(object):
         path_params = {
         }
 
-        e_url = ('/network-access/condition/authentication')
+        e_url = ('/api/v1/policy/network-access/condition/authentication')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -510,7 +510,7 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f70bb7d0d53a51f4b95d62d76768bc78_v3_1_1', _api_response)
+        return self._object_factory('bpm_e34177d675622acd0a532f5b7c41b_v3_1_1', _api_response)
 
     def get_network_access_conditions_for_authorization_rules(self,
                                                               headers=None,
@@ -560,7 +560,7 @@ class NetworkAccessConditions(object):
         path_params = {
         }
 
-        e_url = ('/network-access/condition/authorization')
+        e_url = ('/api/v1/policy/network-access/condition/authorization')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -568,7 +568,7 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c9ecd05ddcd054e1b26d5efbd668527d_v3_1_1', _api_response)
+        return self._object_factory('bpm_fff985b5159a0aa52bfe9e62ba7_v3_1_1', _api_response)
 
     def get_network_access_condition_by_name(self,
                                              name,
@@ -622,7 +622,8 @@ class NetworkAccessConditions(object):
             'name': name,
         }
 
-        e_url = ('/network-access/condition/condition-by-name/{name}')
+        e_url = ('/api/v1/policy/network-access/condition/condition-by-'
+                 + 'name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -630,7 +631,7 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f96e2cbe85ebe9c534ced3ef81f49_v3_1_1', _api_response)
+        return self._object_factory('bpm_f3b949de4363575398dc1c9e681630bb_v3_1_1', _api_response)
 
     def get_by_name(self,
                     name,
@@ -866,10 +867,11 @@ class NetworkAccessConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_007c5a2b8fc09b7eb812b06f_v3_1_1')\
+            self._request_validator('jsd_bea2910401185295a9715d65cb1c07c9_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/network-access/condition/condition-by-name/{name}')
+        e_url = ('/api/v1/policy/network-access/condition/condition-by-'
+                 + 'name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -882,7 +884,7 @@ class NetworkAccessConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_007c5a2b8fc09b7eb812b06f_v3_1_1', _api_response)
+        return self._object_factory('bpm_bea2910401185295a9715d65cb1c07c9_v3_1_1', _api_response)
 
     def update_by_name(self,
                        name,
@@ -988,7 +990,8 @@ class NetworkAccessConditions(object):
             'name': name,
         }
 
-        e_url = ('/network-access/condition/condition-by-name/{name}')
+        e_url = ('/api/v1/policy/network-access/condition/condition-by-'
+                 + 'name/{name}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -996,7 +999,7 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_735e5581a04692b267521132_v3_1_1', _api_response)
+        return self._object_factory('bpm_ea1c05d19955fd4801e6c996705f3fc_v3_1_1', _api_response)
 
     def delete_by_name(self,
                        name,
@@ -1060,7 +1063,7 @@ class NetworkAccessConditions(object):
         path_params = {
         }
 
-        e_url = ('/network-access/condition/policyset')
+        e_url = ('/api/v1/policy/network-access/condition/policyset')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -1068,7 +1071,7 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fe01bf5cb5f1a9d0ce514cbb90521_v3_1_1', _api_response)
+        return self._object_factory('bpm_c0984cde5e925c209ab87472ab905476_v3_1_1', _api_response)
 
     def get_all_for_policy_sets(self,
                                 headers=None,
@@ -1134,7 +1137,7 @@ class NetworkAccessConditions(object):
             'id': id,
         }
 
-        e_url = ('/network-access/condition/{id}')
+        e_url = ('/api/v1/policy/network-access/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -1142,7 +1145,7 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_df324efb035cd5997bc0a6326438a0_v3_1_1', _api_response)
+        return self._object_factory('bpm_f2b0a67d389a592dba005895594b77cc_v3_1_1', _api_response)
 
     def get_by_id(self,
                   id,
@@ -1378,10 +1381,10 @@ class NetworkAccessConditions(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_d4249c8c63015955bd934d594049cfd3_v3_1_1')\
+            self._request_validator('jsd_e405a20316825460a1f37a2f161e7ac5_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/network-access/condition/{id}')
+        e_url = ('/api/v1/policy/network-access/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -1394,7 +1397,7 @@ class NetworkAccessConditions(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_d4249c8c63015955bd934d594049cfd3_v3_1_1', _api_response)
+        return self._object_factory('bpm_e405a20316825460a1f37a2f161e7ac5_v3_1_1', _api_response)
 
     def update_by_id(self,
                      id,
@@ -1500,7 +1503,7 @@ class NetworkAccessConditions(object):
             'id': id,
         }
 
-        e_url = ('/network-access/condition/{id}')
+        e_url = ('/api/v1/policy/network-access/condition/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -1508,7 +1511,7 @@ class NetworkAccessConditions(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a7e97c382f5ece8efd82e7e86f8b7b_v3_1_1', _api_response)
+        return self._object_factory('bpm_d87a24994c514d955149d33e1a99fb_v3_1_1', _api_response)
 
     def delete_by_id(self,
                      id,

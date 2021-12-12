@@ -126,7 +126,8 @@ class NetworkAccessAuthorizationRules(object):
             'policyId': policy_id,
         }
 
-        e_url = ('/network-access/policy-set/{policyId}/authorization')
+        e_url = ('/api/v1/policy/network-access/policy-'
+                 + 'set/{policyId}/authorization')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -134,7 +135,7 @@ class NetworkAccessAuthorizationRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e166d103155959b07ac7775e5522eb_v3_1_1', _api_response)
+        return self._object_factory('bpm_e623dba049b5569c83e13ccf4360e369_v3_1_1', _api_response)
 
     def get_all(self,
                 policy_id,
@@ -250,10 +251,11 @@ class NetworkAccessAuthorizationRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_f26ba15deabd1da9a19c28c17c_v3_1_1')\
+            self._request_validator('jsd_eca5db5147b1e3b35a032ced4b_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/network-access/policy-set/{policyId}/authorization')
+        e_url = ('/api/v1/policy/network-access/policy-'
+                 + 'set/{policyId}/authorization')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -265,7 +267,7 @@ class NetworkAccessAuthorizationRules(object):
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                **request_params)
 
-        return self._object_factory('bpm_f26ba15deabd1da9a19c28c17c_v3_1_1', _api_response)
+        return self._object_factory('bpm_eca5db5147b1e3b35a032ced4b_v3_1_1', _api_response)
 
     def create(self,
                policy_id,
@@ -346,7 +348,7 @@ class NetworkAccessAuthorizationRules(object):
             'policyId': policy_id,
         }
 
-        e_url = ('/network-access/policy-'
+        e_url = ('/api/v1/policy/network-access/policy-'
                  + 'set/{policyId}/authorization/reset-hitcount')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
@@ -356,7 +358,7 @@ class NetworkAccessAuthorizationRules(object):
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d4beeb69c1f25eb88b69c544352d944d_v3_1_1', _api_response)
+        return self._object_factory('bpm_c860146231095e85839639db33c93cfe_v3_1_1', _api_response)
 
     def reset_hit_counts_by_id(self,
                                policy_id,
@@ -430,7 +432,8 @@ class NetworkAccessAuthorizationRules(object):
             'id': id,
         }
 
-        e_url = ('/network-access/policy-set/{policyId}/authorization/{id}')
+        e_url = ('/api/v1/policy/network-access/policy-'
+                 + 'set/{policyId}/authorization/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -438,7 +441,7 @@ class NetworkAccessAuthorizationRules(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_db950665905478934047ff1af006be_v3_1_1', _api_response)
+        return self._object_factory('bpm_fcf7754d5b45523a8227d37c476a1880_v3_1_1', _api_response)
 
     def get_by_id(self,
                   id,
@@ -553,10 +556,11 @@ class NetworkAccessAuthorizationRules(object):
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation and not is_xml_payload:
-            self._request_validator('jsd_dafb1310dfd559cba25d89d6f54f3c3_v3_1_1')\
+            self._request_validator('jsd_fd9e7e03a6056d1b6e9705e3096d946_v3_1_1')\
                 .validate(_payload)
 
-        e_url = ('/network-access/policy-set/{policyId}/authorization/{id}')
+        e_url = ('/api/v1/policy/network-access/policy-'
+                 + 'set/{policyId}/authorization/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -569,7 +573,7 @@ class NetworkAccessAuthorizationRules(object):
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               **request_params)
 
-        return self._object_factory('bpm_dafb1310dfd559cba25d89d6f54f3c3_v3_1_1', _api_response)
+        return self._object_factory('bpm_fd9e7e03a6056d1b6e9705e3096d946_v3_1_1', _api_response)
 
     def update_by_id(self,
                      id,
@@ -657,7 +661,8 @@ class NetworkAccessAuthorizationRules(object):
             'id': id,
         }
 
-        e_url = ('/network-access/policy-set/{policyId}/authorization/{id}')
+        e_url = ('/api/v1/policy/network-access/policy-'
+                 + 'set/{policyId}/authorization/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -665,7 +670,7 @@ class NetworkAccessAuthorizationRules(object):
         else:
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a3095b432c5fe9993416329569349e_v3_1_1', _api_response)
+        return self._object_factory('bpm_dedf09f59e754c6ae5212d43b1c8fb2_v3_1_1', _api_response)
 
     def delete_by_id(self,
                      id,

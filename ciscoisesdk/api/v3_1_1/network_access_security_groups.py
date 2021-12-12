@@ -122,7 +122,7 @@ class NetworkAccessSecurityGroups(object):
         path_params = {
         }
 
-        e_url = ('/network-access/security-groups')
+        e_url = ('/api/v1/policy/network-access/security-groups')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -130,7 +130,7 @@ class NetworkAccessSecurityGroups(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c33c9c96635465bdad3324f6b5b363_v3_1_1', _api_response)
+        return self._object_factory('bpm_f564c3eda5c20bb807b8c062c8e7b_v3_1_1', _api_response)
 
     def get_all(self,
                 headers=None,

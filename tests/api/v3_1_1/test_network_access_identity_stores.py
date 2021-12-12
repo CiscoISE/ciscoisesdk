@@ -37,7 +37,7 @@ def is_valid_get_network_access_identity_stores(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
-    json_schema_validate('jsd_947718212dd65e4980807472a5c9fbac_v3_1_1').validate(obj.response)
+    json_schema_validate('jsd_c7aa2a6cac155a6cb7ace3fd76a81e0f_v3_1_1').validate(obj.response)
     return True
 
 

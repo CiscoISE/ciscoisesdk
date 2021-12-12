@@ -72,132 +72,132 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
     PATCHING_df2031d0bbb75aa0898d8b2ee2635fae_PATTERN = re.compile(r"/api/v1/patch")
     PATCHING_c6c3a7326c6a542899be49cb9289e1ae_PATTERN = re.compile(r"/api/v1/patch/install")
     PATCHING_207bbf4f0a09516dbb4d0c7d7416fb20_PATTERN = re.compile(r"/api/v1/patch/rollback")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7e09c429220955d89449e67ad583daa0_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_31cb8dda6fd7555d9251dfba9042378d_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_d7d1204f3ee653d2bc8f67bbe41919e7_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication/reset-hitcount")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_432d271720a75fc1a905121fb5ea6e27_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication/string")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_13bc465cc6825d0ca45080b1ffa18b1c_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication/string")
-    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_05d50b1447855e97911072d2d0602cce_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_b7d3d36a4e0655ab99b9e1aeb026a388_PATTERN = re.compile(r"/device-admin/policy-set/string/exception")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_00bc905c794c5575b51a36f5184396fe_PATTERN = re.compile(r"/device-admin/policy-set/string/exception")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d3567e00f647509c911e143859ea15e7_PATTERN = re.compile(r"/device-admin/policy-set/string/exception/reset-hitcount")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_9980b049038756b0a914adf57bf7b717_PATTERN = re.compile(r"/device-admin/policy-set/string/exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_3d7216992aa255039f59eb681bdac681_PATTERN = re.compile(r"/device-admin/policy-set/string/exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e8fa027f736f53bea5ba46649936a5da_PATTERN = re.compile(r"/device-admin/policy-set/string/exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_a461326a2e8c5f0bb96456f631b02754_PATTERN = re.compile(r"/device-admin/policy-set/global-exception")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c1931b0be5ed56ec8f005c51b623dea6_PATTERN = re.compile(r"/device-admin/policy-set/global-exception")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_328f25be2aac53ff9f2d77790eeb278f_PATTERN = re.compile(r"/device-admin/policy-set/global-exception/reset-hitcount")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_52e609e4ae0d5e6789320fc6bbeef5b4_PATTERN = re.compile(r"/device-admin/policy-set/global-exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_4be6e45d04d959aa965834d241eb8a76_PATTERN = re.compile(r"/device-admin/policy-set/global-exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28e48447069a5f8a8f70788964e88fac_PATTERN = re.compile(r"/device-admin/policy-set/global-exception/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_2f5ce52d781d58afa23d01f5b7143ff0_PATTERN = re.compile(r"/device-admin/policy-set/string/authorization")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_e95645303ad45fc5bf4e2ae92f97660a_PATTERN = re.compile(r"/device-admin/policy-set/string/authorization")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_249d3b4cb0215bf0a52b2e12b93f6eb5_PATTERN = re.compile(r"/device-admin/policy-set/string/authorization/reset-hitcount")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4d076e69ee2453b49fa49c6e68dba989_PATTERN = re.compile(r"/device-admin/policy-set/string/authorization/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_94dcb612da7a5399a885fc029edcc87c_PATTERN = re.compile(r"/device-admin/policy-set/string/authorization/string")
-    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b62fca8b68145e3abdff6b24738e4f0b_PATTERN = re.compile(r"/device-admin/policy-set/string/authorization/string")
-    DEVICE_ADMINISTRATION_COMMAND_SET_3326601dc13c523c82c2f747a81cf187_PATTERN = re.compile(r"/device-admin/command-sets")
-    DEVICE_ADMINISTRATION_CONDITIONS_e587c20317715a8c8543cb68579f47ae_PATTERN = re.compile(r"/device-admin/condition")
-    DEVICE_ADMINISTRATION_CONDITIONS_00fb0215d2d35317af508cc690d7fa95_PATTERN = re.compile(r"/device-admin/condition")
-    DEVICE_ADMINISTRATION_CONDITIONS_dda48630706d56a485ed551392453ef9_PATTERN = re.compile(r"/device-admin/condition/authentication")
-    DEVICE_ADMINISTRATION_CONDITIONS_5c3d54132e5b51d492a8dc703046ac43_PATTERN = re.compile(r"/device-admin/condition/authorization")
-    DEVICE_ADMINISTRATION_CONDITIONS_c4671f7ef81e50338dc5e20250ea7989_PATTERN = re.compile(r"/device-admin/condition/condition-by-name/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_6df1812adf495165bddf7b52a83cbc26_PATTERN = re.compile(r"/device-admin/condition/condition-by-name/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_6aede43577a158e8ad4cb8828d4a2439_PATTERN = re.compile(r"/device-admin/condition/condition-by-name/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_8cea876c7655519ebde8eb4946990414_PATTERN = re.compile(r"/device-admin/condition/policyset")
-    DEVICE_ADMINISTRATION_CONDITIONS_e58982dd97b955dbaa83b1964abd1e38_PATTERN = re.compile(r"/device-admin/condition/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_2e79f8beface5ea197839128bfba4b0e_PATTERN = re.compile(r"/device-admin/condition/string")
-    DEVICE_ADMINISTRATION_CONDITIONS_e866df55c3785f26930f3bc22e96cde5_PATTERN = re.compile(r"/device-admin/condition/string")
-    DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_4f74a3e991b7535e8a810540ef47cfda_PATTERN = re.compile(r"/device-admin/dictionaries/authentication")
-    DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_ae98c0dfbd8f5c80b62def7cf2fb70e6_PATTERN = re.compile(r"/device-admin/dictionaries/authorization")
-    DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_1b83a635ff055d7b94d1cce6f0a492ec_PATTERN = re.compile(r"/device-admin/dictionaries/policyset")
-    DEVICE_ADMINISTRATION_IDENTITY_STORES_cab7725976095496997cdbecf3d617c0_PATTERN = re.compile(r"/device-admin/identity-stores")
-    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_168d880ea4935a2bbe4e6ac6296f3889_PATTERN = re.compile(r"/device-admin/network-condition")
-    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_e681688c136e55b89da160f59c317cdf_PATTERN = re.compile(r"/device-admin/network-condition")
-    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_ba09778fe16b5c9ea9e93b39cb3bb370_PATTERN = re.compile(r"/device-admin/network-condition/string")
-    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_673c77ff0d845ac695dee98a254d31bc_PATTERN = re.compile(r"/device-admin/network-condition/string")
-    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_c5cbe8434bdd5baab7564eadae90e862_PATTERN = re.compile(r"/device-admin/network-condition/string")
-    DEVICE_ADMINISTRATION_POLICY_SET_6ced27d4073c53f290ac38d837f0f3f2_PATTERN = re.compile(r"/device-admin/policy-set")
-    DEVICE_ADMINISTRATION_POLICY_SET_0d332d79cbae5967855822beeef26a56_PATTERN = re.compile(r"/device-admin/policy-set")
-    DEVICE_ADMINISTRATION_POLICY_SET_40139524c97c568d8caf52ec896cbbba_PATTERN = re.compile(r"/device-admin/policy-set/reset-hitcount")
-    DEVICE_ADMINISTRATION_POLICY_SET_45fee0e1f5535f80886029edb2ebf239_PATTERN = re.compile(r"/device-admin/policy-set/string")
-    DEVICE_ADMINISTRATION_POLICY_SET_efb7371737f857d093b24c2fdd156053_PATTERN = re.compile(r"/device-admin/policy-set/string")
-    DEVICE_ADMINISTRATION_POLICY_SET_8bb5baccbc03575b85d62d145a936225_PATTERN = re.compile(r"/device-admin/policy-set/string")
-    DEVICE_ADMINISTRATION_PROFILES_874f5c0afa74536b86e8dffdf84cbdbd_PATTERN = re.compile(r"/device-admin/shell-profiles")
-    DEVICE_ADMINISTRATION_SERVICE_NAMES_af8824a28b245816af767df50e72c513_PATTERN = re.compile(r"/device-admin/service-names")
-    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_060e99a9d3415fc4a85547c481f40e35_PATTERN = re.compile(r"/device-admin/time-condition")
-    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_db9265bf1c5a5de2b26df4461618e965_PATTERN = re.compile(r"/device-admin/time-condition")
-    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_b0bc8c49447258bbbdb4e50693064d00_PATTERN = re.compile(r"/device-admin/time-condition/string")
-    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_d94fcdde737658a4a874631d3bd2e98d_PATTERN = re.compile(r"/device-admin/time-condition/string")
-    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_22aae929f02e50b782a492bd8bbad596_PATTERN = re.compile(r"/device-admin/time-condition/string")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_21bc064630335416850573ada235189c_PATTERN = re.compile(r"/network-access/policy-set/string/authentication")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_1f1e5c8f6732560bb20989459018402b_PATTERN = re.compile(r"/network-access/policy-set/string/authentication")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_931ce06ff96456e88f85943ed0572444_PATTERN = re.compile(r"/network-access/policy-set/string/authentication/reset-hitcount")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_97a0883ac517516c885241460293f6e4_PATTERN = re.compile(r"/network-access/policy-set/string/authentication/string")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_e09eb5adcc5458a9a97153dcd6893c38_PATTERN = re.compile(r"/network-access/policy-set/string/authentication/string")
-    NETWORK_ACCESS_AUTHENTICATION_RULES_82a0670269755446afd0d15e2d77eb5a_PATTERN = re.compile(r"/network-access/policy-set/string/authentication/string")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_daf2f01f25815376ab845436ca2ba022_PATTERN = re.compile(r"/network-access/policy-set/string/exception")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_fe2075eb070252018b1a3cf7fbba8b29_PATTERN = re.compile(r"/network-access/policy-set/string/exception")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8af3567ff04856f08ec36d74100a6dcd_PATTERN = re.compile(r"/network-access/policy-set/string/exception/reset-hitcount")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_f7b73bfcda29551bb80a3d0681f4e241_PATTERN = re.compile(r"/network-access/policy-set/string/exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_fd7a62ac7041587ea4a7f61944e9ffbf_PATTERN = re.compile(r"/network-access/policy-set/string/exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_705e1ccb07605108b7f4a7985332799c_PATTERN = re.compile(r"/network-access/policy-set/string/exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_1c9a838a5d2d53d8a83d54f33f159598_PATTERN = re.compile(r"/network-access/policy-set/global-exception")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_790ca0931b76554ebb7ef366bd77e89c_PATTERN = re.compile(r"/network-access/policy-set/global-exception")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_27bfe4ad8fa95208a480b4a73d423c8b_PATTERN = re.compile(r"/network-access/policy-set/global-exception/reset-hitcount")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c1db8937e67a57b08d2e8c6d821558ad_PATTERN = re.compile(r"/network-access/policy-set/global-exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_0f891e15d9ff59cc96a525303cc7736c_PATTERN = re.compile(r"/network-access/policy-set/global-exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_13fe6c791b0b5879afd3251b263962af_PATTERN = re.compile(r"/network-access/policy-set/global-exception/string")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_62e166d103155959b07ac7775e5522eb_PATTERN = re.compile(r"/network-access/policy-set/string/authorization")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_435147f26ba15deabd1da9a19c28c17c_PATTERN = re.compile(r"/network-access/policy-set/string/authorization")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_d4beeb69c1f25eb88b69c544352d944d_PATTERN = re.compile(r"/network-access/policy-set/string/authorization/reset-hitcount")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_37db950665905478934047ff1af006be_PATTERN = re.compile(r"/network-access/policy-set/string/authorization/string")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_8dafb1310dfd559cba25d89d6f54f3c3_PATTERN = re.compile(r"/network-access/policy-set/string/authorization/string")
-    NETWORK_ACCESS_AUTHORIZATION_RULES_15a3095b432c5fe9993416329569349e_PATTERN = re.compile(r"/network-access/policy-set/string/authorization/string")
-    NETWORK_ACCESS_CONDITIONS_8c513fa483ee5144bbea860bf9e449d6_PATTERN = re.compile(r"/network-access/condition")
-    NETWORK_ACCESS_CONDITIONS_ec901d2e3f635112bfbc494932ec29aa_PATTERN = re.compile(r"/network-access/condition")
-    NETWORK_ACCESS_CONDITIONS_f70bb7d0d53a51f4b95d62d76768bc78_PATTERN = re.compile(r"/network-access/condition/authentication")
-    NETWORK_ACCESS_CONDITIONS_c9ecd05ddcd054e1b26d5efbd668527d_PATTERN = re.compile(r"/network-access/condition/authorization")
-    NETWORK_ACCESS_CONDITIONS_385f96e2cbe85ebe9c534ced3ef81f49_PATTERN = re.compile(r"/network-access/condition/condition-by-name/string")
-    NETWORK_ACCESS_CONDITIONS_54085117007c5a2b8fc09b7eb812b06f_PATTERN = re.compile(r"/network-access/condition/condition-by-name/string")
-    NETWORK_ACCESS_CONDITIONS_55795416735e5581a04692b267521132_PATTERN = re.compile(r"/network-access/condition/condition-by-name/string")
-    NETWORK_ACCESS_CONDITIONS_308fe01bf5cb5f1a9d0ce514cbb90521_PATTERN = re.compile(r"/network-access/condition/policyset")
-    NETWORK_ACCESS_CONDITIONS_11df324efb035cd5997bc0a6326438a0_PATTERN = re.compile(r"/network-access/condition/string")
-    NETWORK_ACCESS_CONDITIONS_d4249c8c63015955bd934d594049cfd3_PATTERN = re.compile(r"/network-access/condition/string")
-    NETWORK_ACCESS_CONDITIONS_98a7e97c382f5ece8efd82e7e86f8b7b_PATTERN = re.compile(r"/network-access/condition/string")
-    NETWORK_ACCESS_DICTIONARY_8f0c9b561c6257a5b5fcc4f0eb8d875a_PATTERN = re.compile(r"/network-access/dictionaries")
-    NETWORK_ACCESS_DICTIONARY_20c038e43a955a42ad4a6822f525d05e_PATTERN = re.compile(r"/network-access/dictionaries")
-    NETWORK_ACCESS_DICTIONARY_d36440a5e1f8560ba7146ce16cc5e9d7_PATTERN = re.compile(r"/network-access/dictionaries/string")
-    NETWORK_ACCESS_DICTIONARY_6005031ca76d5d419ee9d9fb4d6df9d6_PATTERN = re.compile(r"/network-access/dictionaries/string")
-    NETWORK_ACCESS_DICTIONARY_37db7520334b5264acb4ee9eea31e543_PATTERN = re.compile(r"/network-access/dictionaries/string")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_8cb6bd5d682f50e6a0a02a9748caf8a5_PATTERN = re.compile(r"/network-access/dictionaries/string/attribute")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_06ca9de20c5e5e64a9faca9770b6f405_PATTERN = re.compile(r"/network-access/dictionaries/string/attribute")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_6d037df04ec4580fa3a1439847a594dd_PATTERN = re.compile(r"/network-access/dictionaries/string/attribute/string")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_7fca80b77f285ef89305440cd3261621_PATTERN = re.compile(r"/network-access/dictionaries/string/attribute/string")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_96ebb208a73854d98ca6284f2bcbca28_PATTERN = re.compile(r"/network-access/dictionaries/string/attribute/string")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_ea5f9905a8e85dc9906a7aeac1f63b36_PATTERN = re.compile(r"/network-access/dictionaries/authentication")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_bab0f222e253599ba29f4b95c8a94637_PATTERN = re.compile(r"/network-access/dictionaries/authorization")
-    NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_60e9c47ce5015db29a6d4e5f89b5f62a_PATTERN = re.compile(r"/network-access/dictionaries/policyset")
-    NETWORK_ACCESS_IDENTITY_STORES_947718212dd65e4980807472a5c9fbac_PATTERN = re.compile(r"/network-access/identity-stores")
-    NETWORK_ACCESS_NETWORK_CONDITIONS_fd07bdc9dc9f5fb6a7de7b3ed7fd744f_PATTERN = re.compile(r"/network-access/network-condition")
-    NETWORK_ACCESS_NETWORK_CONDITIONS_b5d0462a0dfa50da9b23dbf00c5e3344_PATTERN = re.compile(r"/network-access/network-condition")
-    NETWORK_ACCESS_NETWORK_CONDITIONS_9979014d05b75a0eb49d7502907ca9ae_PATTERN = re.compile(r"/network-access/network-condition/string")
-    NETWORK_ACCESS_NETWORK_CONDITIONS_8395a2d838e651a2af402faddc2df95c_PATTERN = re.compile(r"/network-access/network-condition/string")
-    NETWORK_ACCESS_NETWORK_CONDITIONS_434e343d039a54fd910e03bb84ead0d9_PATTERN = re.compile(r"/network-access/network-condition/string")
-    NETWORK_ACCESS_POLICY_SET_a638a439d6bb5bc68cc773b535e54e25_PATTERN = re.compile(r"/network-access/policy-set")
-    NETWORK_ACCESS_POLICY_SET_c36400bc9a4159e98fde4e9c57879d15_PATTERN = re.compile(r"/network-access/policy-set")
-    NETWORK_ACCESS_POLICY_SET_78bf0dd348dc5f4887d71554cb38a6b5_PATTERN = re.compile(r"/network-access/policy-set/reset-hitcount")
-    NETWORK_ACCESS_POLICY_SET_8586b743d82959c8babbc2c8adb3f345_PATTERN = re.compile(r"/network-access/policy-set/string")
-    NETWORK_ACCESS_POLICY_SET_b209f469fc145f08a59ab271758147d1_PATTERN = re.compile(r"/network-access/policy-set/string")
-    NETWORK_ACCESS_POLICY_SET_0540065c9ae85e70bda77ecba6d11671_PATTERN = re.compile(r"/network-access/policy-set/string")
-    NETWORK_ACCESS_PROFILES_3e77ef593139561fa4e877ecbe81e050_PATTERN = re.compile(r"/network-access/authorization-profiles")
-    NETWORK_ACCESS_SECURITY_GROUPS_27c33c9c96635465bdad3324f6b5b363_PATTERN = re.compile(r"/network-access/security-groups")
-    NETWORK_ACCESS_SERVICE_NAMES_dec4e584b74e5ebc917016c2bb3bb14d_PATTERN = re.compile(r"/network-access/service-names")
-    NETWORK_ACCESS_TIME_DATE_CONDITIONS_e36bd4fce1ac5f2ab1bb360087f90dd4_PATTERN = re.compile(r"/network-access/time-condition")
-    NETWORK_ACCESS_TIME_DATE_CONDITIONS_12f5ff5f858c5476b416f489423aaef2_PATTERN = re.compile(r"/network-access/time-condition")
-    NETWORK_ACCESS_TIME_DATE_CONDITIONS_00b4f4d0f5955ee9af9293e6fc50bfd9_PATTERN = re.compile(r"/network-access/time-condition/string")
-    NETWORK_ACCESS_TIME_DATE_CONDITIONS_0b99ad3bab1e59968087474e162c51d1_PATTERN = re.compile(r"/network-access/time-condition/string")
-    NETWORK_ACCESS_TIME_DATE_CONDITIONS_ca238e7ff26e509fae59f1065967e2a3_PATTERN = re.compile(r"/network-access/time-condition/string")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authentication")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authentication")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authentication/reset-hitcount")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authentication/string")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authentication/string")
+    DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authentication/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/exception")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/exception")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/exception/reset-hitcount")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/global-exception")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/global-exception")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_bd8a6c63d0235f3699f2669ca4734c13_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/global-exception/reset-hitcount")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/global-exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/global-exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/global-exception/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authorization")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authorization")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authorization/reset-hitcount")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authorization/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authorization/string")
+    DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string/authorization/string")
+    DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2_PATTERN = re.compile(r"/api/v1/policy/device-admin/command-sets")
+    DEVICE_ADMINISTRATION_CONDITIONS_564635feb825519f98bd1541ef3c367d_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition")
+    DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition")
+    DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/authentication")
+    DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/authorization")
+    DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/condition-by-name/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/condition-by-name/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/condition-by-name/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/policyset")
+    DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/string")
+    DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286_PATTERN = re.compile(r"/api/v1/policy/device-admin/condition/string")
+    DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969_PATTERN = re.compile(r"/api/v1/policy/device-admin/dictionaries/authentication")
+    DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904_PATTERN = re.compile(r"/api/v1/policy/device-admin/dictionaries/authorization")
+    DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2_PATTERN = re.compile(r"/api/v1/policy/device-admin/dictionaries/policyset")
+    DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6_PATTERN = re.compile(r"/api/v1/policy/device-admin/identity-stores")
+    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b4ceac9ee830523ca5ddbfdf3e1b44be_PATTERN = re.compile(r"/api/v1/policy/device-admin/network-condition")
+    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b95cf8c9aed95518b38be1fa4b514b67_PATTERN = re.compile(r"/api/v1/policy/device-admin/network-condition")
+    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846_PATTERN = re.compile(r"/api/v1/policy/device-admin/network-condition/string")
+    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e_PATTERN = re.compile(r"/api/v1/policy/device-admin/network-condition/string")
+    DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41_PATTERN = re.compile(r"/api/v1/policy/device-admin/network-condition/string")
+    DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set")
+    DEVICE_ADMINISTRATION_POLICY_SET_cc909c2717cf55f1863a04a785166fe0_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set")
+    DEVICE_ADMINISTRATION_POLICY_SET_8e38ddb381965981b66f00a9c8634485_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/reset-hitcount")
+    DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string")
+    DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string")
+    DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d_PATTERN = re.compile(r"/api/v1/policy/device-admin/policy-set/string")
+    DEVICE_ADMINISTRATION_PROFILES_8ce2f3cdfbfe512b85eeca7b133c81ff_PATTERN = re.compile(r"/api/v1/policy/device-admin/shell-profiles")
+    DEVICE_ADMINISTRATION_SERVICE_NAMES_8ea7e01261355dcfae6412e0615ba1f5_PATTERN = re.compile(r"/api/v1/policy/device-admin/service-names")
+    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_f79ab23563d857e58e01a74e37333572_PATTERN = re.compile(r"/api/v1/policy/device-admin/time-condition")
+    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_26a4d5b5da6a50bfaaecc180543fd952_PATTERN = re.compile(r"/api/v1/policy/device-admin/time-condition")
+    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70_PATTERN = re.compile(r"/api/v1/policy/device-admin/time-condition/string")
+    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721_PATTERN = re.compile(r"/api/v1/policy/device-admin/time-condition/string")
+    DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015_PATTERN = re.compile(r"/api/v1/policy/device-admin/time-condition/string")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authentication")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authentication")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authentication/reset-hitcount")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authentication/string")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authentication/string")
+    NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authentication/string")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/exception")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/exception")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/exception/reset-hitcount")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/global-exception")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/global-exception")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f2a4d5ef4e915ff8aac91b666fc86326_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/global-exception/reset-hitcount")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/global-exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/global-exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/global-exception/string")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authorization")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authorization")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authorization/reset-hitcount")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authorization/string")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authorization/string")
+    NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string/authorization/string")
+    NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af_PATTERN = re.compile(r"/api/v1/policy/network-access/condition")
+    NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6_PATTERN = re.compile(r"/api/v1/policy/network-access/condition")
+    NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/authentication")
+    NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/authorization")
+    NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/condition-by-name/string")
+    NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/condition-by-name/string")
+    NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/condition-by-name/string")
+    NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/policyset")
+    NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/string")
+    NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/string")
+    NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb_PATTERN = re.compile(r"/api/v1/policy/network-access/condition/string")
+    NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries")
+    NETWORK_ACCESS_DICTIONARY_89a57687cef65891a6f48dd17f456c4e_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries")
+    NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/string")
+    NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/string")
+    NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/string")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/string/attribute")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/string/attribute")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_c77600d349fc5c259dbd22d65b3ffa1d_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/string/attribute/string")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_a60b29bfe2b055299e4360d84380ddd4_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/string/attribute/string")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_dd6c2553ae0053c1bbbdbd46c1df0ef9_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/string/attribute/string")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_2ab96d3d76de5d05bbac1f27feacb7b0_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/authentication")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_f68aee0cdb425390b3ca90b0b46e6e2c_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/authorization")
+    NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136_PATTERN = re.compile(r"/api/v1/policy/network-access/dictionaries/policyset")
+    NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f_PATTERN = re.compile(r"/api/v1/policy/network-access/identity-stores")
+    NETWORK_ACCESS_NETWORK_CONDITIONS_d43fec9e7dc556cbb9bf0ebd1dcd6aad_PATTERN = re.compile(r"/api/v1/policy/network-access/network-condition")
+    NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e_PATTERN = re.compile(r"/api/v1/policy/network-access/network-condition")
+    NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2_PATTERN = re.compile(r"/api/v1/policy/network-access/network-condition/string")
+    NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14_PATTERN = re.compile(r"/api/v1/policy/network-access/network-condition/string")
+    NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219_PATTERN = re.compile(r"/api/v1/policy/network-access/network-condition/string")
+    NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set")
+    NETWORK_ACCESS_POLICY_SET_9dfe1db8729d541fb3a17d31d47d1881_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set")
+    NETWORK_ACCESS_POLICY_SET_71fb6c1b3f335dbf8176a29e30eb6333_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/reset-hitcount")
+    NETWORK_ACCESS_POLICY_SET_768d9f17adde53e2a08a650b9fe1714c_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string")
+    NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string")
+    NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f_PATTERN = re.compile(r"/api/v1/policy/network-access/policy-set/string")
+    NETWORK_ACCESS_PROFILES_99c764d87cf255a7b803aad17f0f5db8_PATTERN = re.compile(r"/api/v1/policy/network-access/authorization-profiles")
+    NETWORK_ACCESS_SECURITY_GROUPS_598f564c3eda5c20bb807b8c062c8e7b_PATTERN = re.compile(r"/api/v1/policy/network-access/security-groups")
+    NETWORK_ACCESS_SERVICE_NAMES_8304c137cad852579f4b810ff8adf661_PATTERN = re.compile(r"/api/v1/policy/network-access/service-names")
+    NETWORK_ACCESS_TIME_DATE_CONDITIONS_ab916b19789c59b79dddbc2d0a3c57fc_PATTERN = re.compile(r"/api/v1/policy/network-access/time-condition")
+    NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396_PATTERN = re.compile(r"/api/v1/policy/network-access/time-condition")
+    NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874_PATTERN = re.compile(r"/api/v1/policy/network-access/time-condition/string")
+    NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6_PATTERN = re.compile(r"/api/v1/policy/network-access/time-condition/string")
+    NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6_PATTERN = re.compile(r"/api/v1/policy/network-access/time-condition/string")
     REPOSITORY_8f9081a48e3c5f4fae5aa00f889216dd_PATTERN = re.compile(r"/api/v1/repository")
     REPOSITORY_9a207a157244508c99bf3e9abb26aab8_PATTERN = re.compile(r"/api/v1/repository")
     REPOSITORY_e4fd4586ad825f69843d9213e956cf81_PATTERN = re.compile(r"/api/v1/repository/string")
@@ -1886,9 +1886,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7e09c429220955d89449e67ad583daa0(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7e09c429220955d89449e67ad583daa0_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994_PATTERN,
             self.path
         )
 
@@ -1904,9 +1904,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_31cb8dda6fd7555d9251dfba9042378d(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_31cb8dda6fd7555d9251dfba9042378d_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c_PATTERN,
             self.path
         )
 
@@ -1922,9 +1922,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_d7d1204f3ee653d2bc8f67bbe41919e7(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_d7d1204f3ee653d2bc8f67bbe41919e7_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26_PATTERN,
             self.path
         )
 
@@ -1940,9 +1940,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_432d271720a75fc1a905121fb5ea6e27(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_432d271720a75fc1a905121fb5ea6e27_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a_PATTERN,
             self.path
         )
 
@@ -1958,9 +1958,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_13bc465cc6825d0ca45080b1ffa18b1c(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_13bc465cc6825d0ca45080b1ffa18b1c_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46_PATTERN,
             self.path
         )
 
@@ -1976,9 +1976,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_05d50b1447855e97911072d2d0602cce(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_05d50b1447855e97911072d2d0602cce_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09_PATTERN,
             self.path
         )
 
@@ -1994,9 +1994,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_b7d3d36a4e0655ab99b9e1aeb026a388(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_b7d3d36a4e0655ab99b9e1aeb026a388_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7_PATTERN,
             self.path
         )
 
@@ -2012,9 +2012,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_00bc905c794c5575b51a36f5184396fe(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_00bc905c794c5575b51a36f5184396fe_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252_PATTERN,
             self.path
         )
 
@@ -2030,9 +2030,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d3567e00f647509c911e143859ea15e7(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d3567e00f647509c911e143859ea15e7_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c_PATTERN,
             self.path
         )
 
@@ -2048,9 +2048,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_9980b049038756b0a914adf57bf7b717(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_9980b049038756b0a914adf57bf7b717_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46_PATTERN,
             self.path
         )
 
@@ -2066,9 +2066,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_3d7216992aa255039f59eb681bdac681(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_3d7216992aa255039f59eb681bdac681_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95_PATTERN,
             self.path
         )
 
@@ -2084,9 +2084,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e8fa027f736f53bea5ba46649936a5da(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e8fa027f736f53bea5ba46649936a5da_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9_PATTERN,
             self.path
         )
 
@@ -2102,9 +2102,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_a461326a2e8c5f0bb96456f631b02754(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_a461326a2e8c5f0bb96456f631b02754_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3_PATTERN,
             self.path
         )
 
@@ -2120,9 +2120,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c1931b0be5ed56ec8f005c51b623dea6(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c1931b0be5ed56ec8f005c51b623dea6_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414_PATTERN,
             self.path
         )
 
@@ -2138,9 +2138,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_328f25be2aac53ff9f2d77790eeb278f(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_bd8a6c63d0235f3699f2669ca4734c13(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_328f25be2aac53ff9f2d77790eeb278f_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_bd8a6c63d0235f3699f2669ca4734c13_PATTERN,
             self.path
         )
 
@@ -2156,9 +2156,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_52e609e4ae0d5e6789320fc6bbeef5b4(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_52e609e4ae0d5e6789320fc6bbeef5b4_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c_PATTERN,
             self.path
         )
 
@@ -2174,9 +2174,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_4be6e45d04d959aa965834d241eb8a76(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_4be6e45d04d959aa965834d241eb8a76_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa_PATTERN,
             self.path
         )
 
@@ -2192,9 +2192,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28e48447069a5f8a8f70788964e88fac(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28e48447069a5f8a8f70788964e88fac_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8_PATTERN,
             self.path
         )
 
@@ -2210,9 +2210,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_2f5ce52d781d58afa23d01f5b7143ff0(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_2f5ce52d781d58afa23d01f5b7143ff0_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046_PATTERN,
             self.path
         )
 
@@ -2228,9 +2228,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_e95645303ad45fc5bf4e2ae92f97660a(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_e95645303ad45fc5bf4e2ae92f97660a_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b_PATTERN,
             self.path
         )
 
@@ -2246,9 +2246,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_249d3b4cb0215bf0a52b2e12b93f6eb5(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_249d3b4cb0215bf0a52b2e12b93f6eb5_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563_PATTERN,
             self.path
         )
 
@@ -2264,9 +2264,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4d076e69ee2453b49fa49c6e68dba989(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4d076e69ee2453b49fa49c6e68dba989_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19_PATTERN,
             self.path
         )
 
@@ -2282,9 +2282,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_94dcb612da7a5399a885fc029edcc87c(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_94dcb612da7a5399a885fc029edcc87c_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912_PATTERN,
             self.path
         )
 
@@ -2300,9 +2300,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b62fca8b68145e3abdff6b24738e4f0b(self):
+    def matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b62fca8b68145e3abdff6b24738e4f0b_PATTERN,
+            self.DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073_PATTERN,
             self.path
         )
 
@@ -2318,9 +2318,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_COMMAND_SET_3326601dc13c523c82c2f747a81cf187(self):
+    def matches_DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_COMMAND_SET_3326601dc13c523c82c2f747a81cf187_PATTERN,
+            self.DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2_PATTERN,
             self.path
         )
 
@@ -2336,9 +2336,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_e587c20317715a8c8543cb68579f47ae(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_564635feb825519f98bd1541ef3c367d(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_e587c20317715a8c8543cb68579f47ae_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_564635feb825519f98bd1541ef3c367d_PATTERN,
             self.path
         )
 
@@ -2354,9 +2354,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_00fb0215d2d35317af508cc690d7fa95(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_00fb0215d2d35317af508cc690d7fa95_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49_PATTERN,
             self.path
         )
 
@@ -2372,9 +2372,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_dda48630706d56a485ed551392453ef9(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_dda48630706d56a485ed551392453ef9_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9_PATTERN,
             self.path
         )
 
@@ -2390,9 +2390,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_5c3d54132e5b51d492a8dc703046ac43(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_5c3d54132e5b51d492a8dc703046ac43_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa_PATTERN,
             self.path
         )
 
@@ -2408,9 +2408,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_c4671f7ef81e50338dc5e20250ea7989(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_c4671f7ef81e50338dc5e20250ea7989_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae_PATTERN,
             self.path
         )
 
@@ -2426,9 +2426,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_6df1812adf495165bddf7b52a83cbc26(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_6df1812adf495165bddf7b52a83cbc26_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05_PATTERN,
             self.path
         )
 
@@ -2444,9 +2444,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_6aede43577a158e8ad4cb8828d4a2439(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_6aede43577a158e8ad4cb8828d4a2439_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d_PATTERN,
             self.path
         )
 
@@ -2462,9 +2462,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_8cea876c7655519ebde8eb4946990414(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_8cea876c7655519ebde8eb4946990414_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007_PATTERN,
             self.path
         )
 
@@ -2480,9 +2480,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_e58982dd97b955dbaa83b1964abd1e38(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_e58982dd97b955dbaa83b1964abd1e38_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369_PATTERN,
             self.path
         )
 
@@ -2498,9 +2498,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_2e79f8beface5ea197839128bfba4b0e(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_2e79f8beface5ea197839128bfba4b0e_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2_PATTERN,
             self.path
         )
 
@@ -2516,9 +2516,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_CONDITIONS_e866df55c3785f26930f3bc22e96cde5(self):
+    def matches_DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_CONDITIONS_e866df55c3785f26930f3bc22e96cde5_PATTERN,
+            self.DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286_PATTERN,
             self.path
         )
 
@@ -2534,9 +2534,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_4f74a3e991b7535e8a810540ef47cfda(self):
+    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_4f74a3e991b7535e8a810540ef47cfda_PATTERN,
+            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969_PATTERN,
             self.path
         )
 
@@ -2552,9 +2552,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_ae98c0dfbd8f5c80b62def7cf2fb70e6(self):
+    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_ae98c0dfbd8f5c80b62def7cf2fb70e6_PATTERN,
+            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904_PATTERN,
             self.path
         )
 
@@ -2570,9 +2570,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_1b83a635ff055d7b94d1cce6f0a492ec(self):
+    def matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_1b83a635ff055d7b94d1cce6f0a492ec_PATTERN,
+            self.DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2_PATTERN,
             self.path
         )
 
@@ -2588,9 +2588,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_IDENTITY_STORES_cab7725976095496997cdbecf3d617c0(self):
+    def matches_DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_IDENTITY_STORES_cab7725976095496997cdbecf3d617c0_PATTERN,
+            self.DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6_PATTERN,
             self.path
         )
 
@@ -2606,9 +2606,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_168d880ea4935a2bbe4e6ac6296f3889(self):
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b4ceac9ee830523ca5ddbfdf3e1b44be(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_168d880ea4935a2bbe4e6ac6296f3889_PATTERN,
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b4ceac9ee830523ca5ddbfdf3e1b44be_PATTERN,
             self.path
         )
 
@@ -2624,9 +2624,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_e681688c136e55b89da160f59c317cdf(self):
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b95cf8c9aed95518b38be1fa4b514b67(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_e681688c136e55b89da160f59c317cdf_PATTERN,
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b95cf8c9aed95518b38be1fa4b514b67_PATTERN,
             self.path
         )
 
@@ -2642,9 +2642,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_ba09778fe16b5c9ea9e93b39cb3bb370(self):
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_ba09778fe16b5c9ea9e93b39cb3bb370_PATTERN,
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846_PATTERN,
             self.path
         )
 
@@ -2660,9 +2660,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_673c77ff0d845ac695dee98a254d31bc(self):
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_673c77ff0d845ac695dee98a254d31bc_PATTERN,
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e_PATTERN,
             self.path
         )
 
@@ -2678,9 +2678,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_c5cbe8434bdd5baab7564eadae90e862(self):
+    def matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_c5cbe8434bdd5baab7564eadae90e862_PATTERN,
+            self.DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41_PATTERN,
             self.path
         )
 
@@ -2696,9 +2696,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_6ced27d4073c53f290ac38d837f0f3f2(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_6ced27d4073c53f290ac38d837f0f3f2_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb_PATTERN,
             self.path
         )
 
@@ -2714,9 +2714,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_0d332d79cbae5967855822beeef26a56(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_cc909c2717cf55f1863a04a785166fe0(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_0d332d79cbae5967855822beeef26a56_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_cc909c2717cf55f1863a04a785166fe0_PATTERN,
             self.path
         )
 
@@ -2732,9 +2732,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_40139524c97c568d8caf52ec896cbbba(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_8e38ddb381965981b66f00a9c8634485(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_40139524c97c568d8caf52ec896cbbba_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_8e38ddb381965981b66f00a9c8634485_PATTERN,
             self.path
         )
 
@@ -2750,9 +2750,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_45fee0e1f5535f80886029edb2ebf239(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_45fee0e1f5535f80886029edb2ebf239_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017_PATTERN,
             self.path
         )
 
@@ -2768,9 +2768,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_efb7371737f857d093b24c2fdd156053(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_efb7371737f857d093b24c2fdd156053_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084_PATTERN,
             self.path
         )
 
@@ -2786,9 +2786,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_POLICY_SET_8bb5baccbc03575b85d62d145a936225(self):
+    def matches_DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_POLICY_SET_8bb5baccbc03575b85d62d145a936225_PATTERN,
+            self.DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d_PATTERN,
             self.path
         )
 
@@ -2804,9 +2804,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_PROFILES_874f5c0afa74536b86e8dffdf84cbdbd(self):
+    def matches_DEVICE_ADMINISTRATION_PROFILES_8ce2f3cdfbfe512b85eeca7b133c81ff(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_PROFILES_874f5c0afa74536b86e8dffdf84cbdbd_PATTERN,
+            self.DEVICE_ADMINISTRATION_PROFILES_8ce2f3cdfbfe512b85eeca7b133c81ff_PATTERN,
             self.path
         )
 
@@ -2822,9 +2822,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_SERVICE_NAMES_af8824a28b245816af767df50e72c513(self):
+    def matches_DEVICE_ADMINISTRATION_SERVICE_NAMES_8ea7e01261355dcfae6412e0615ba1f5(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_SERVICE_NAMES_af8824a28b245816af767df50e72c513_PATTERN,
+            self.DEVICE_ADMINISTRATION_SERVICE_NAMES_8ea7e01261355dcfae6412e0615ba1f5_PATTERN,
             self.path
         )
 
@@ -2840,9 +2840,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_060e99a9d3415fc4a85547c481f40e35(self):
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_f79ab23563d857e58e01a74e37333572(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_060e99a9d3415fc4a85547c481f40e35_PATTERN,
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_f79ab23563d857e58e01a74e37333572_PATTERN,
             self.path
         )
 
@@ -2858,9 +2858,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_db9265bf1c5a5de2b26df4461618e965(self):
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_26a4d5b5da6a50bfaaecc180543fd952(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_db9265bf1c5a5de2b26df4461618e965_PATTERN,
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_26a4d5b5da6a50bfaaecc180543fd952_PATTERN,
             self.path
         )
 
@@ -2876,9 +2876,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_b0bc8c49447258bbbdb4e50693064d00(self):
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_b0bc8c49447258bbbdb4e50693064d00_PATTERN,
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70_PATTERN,
             self.path
         )
 
@@ -2894,9 +2894,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_d94fcdde737658a4a874631d3bd2e98d(self):
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_d94fcdde737658a4a874631d3bd2e98d_PATTERN,
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721_PATTERN,
             self.path
         )
 
@@ -2912,9 +2912,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_22aae929f02e50b782a492bd8bbad596(self):
+    def matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015(self):
         return re.search(
-            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_22aae929f02e50b782a492bd8bbad596_PATTERN,
+            self.DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015_PATTERN,
             self.path
         )
 
@@ -2930,9 +2930,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_21bc064630335416850573ada235189c(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_21bc064630335416850573ada235189c_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc_PATTERN,
             self.path
         )
 
@@ -2948,9 +2948,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_1f1e5c8f6732560bb20989459018402b(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_1f1e5c8f6732560bb20989459018402b_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322_PATTERN,
             self.path
         )
 
@@ -2966,9 +2966,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_931ce06ff96456e88f85943ed0572444(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_931ce06ff96456e88f85943ed0572444_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66_PATTERN,
             self.path
         )
 
@@ -2984,9 +2984,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_97a0883ac517516c885241460293f6e4(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_97a0883ac517516c885241460293f6e4_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5_PATTERN,
             self.path
         )
 
@@ -3002,9 +3002,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_e09eb5adcc5458a9a97153dcd6893c38(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_e09eb5adcc5458a9a97153dcd6893c38_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9_PATTERN,
             self.path
         )
 
@@ -3020,9 +3020,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_82a0670269755446afd0d15e2d77eb5a(self):
+    def matches_NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHENTICATION_RULES_82a0670269755446afd0d15e2d77eb5a_PATTERN,
+            self.NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1_PATTERN,
             self.path
         )
 
@@ -3038,9 +3038,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_daf2f01f25815376ab845436ca2ba022(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_daf2f01f25815376ab845436ca2ba022_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189_PATTERN,
             self.path
         )
 
@@ -3056,9 +3056,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_fe2075eb070252018b1a3cf7fbba8b29(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_fe2075eb070252018b1a3cf7fbba8b29_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c_PATTERN,
             self.path
         )
 
@@ -3074,9 +3074,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8af3567ff04856f08ec36d74100a6dcd(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8af3567ff04856f08ec36d74100a6dcd_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2_PATTERN,
             self.path
         )
 
@@ -3092,9 +3092,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_f7b73bfcda29551bb80a3d0681f4e241(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_f7b73bfcda29551bb80a3d0681f4e241_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e_PATTERN,
             self.path
         )
 
@@ -3110,9 +3110,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_fd7a62ac7041587ea4a7f61944e9ffbf(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_fd7a62ac7041587ea4a7f61944e9ffbf_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65_PATTERN,
             self.path
         )
 
@@ -3128,9 +3128,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_705e1ccb07605108b7f4a7985332799c(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_705e1ccb07605108b7f4a7985332799c_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a_PATTERN,
             self.path
         )
 
@@ -3146,9 +3146,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_1c9a838a5d2d53d8a83d54f33f159598(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_1c9a838a5d2d53d8a83d54f33f159598_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf_PATTERN,
             self.path
         )
 
@@ -3164,9 +3164,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_790ca0931b76554ebb7ef366bd77e89c(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_790ca0931b76554ebb7ef366bd77e89c_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3_PATTERN,
             self.path
         )
 
@@ -3182,9 +3182,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_27bfe4ad8fa95208a480b4a73d423c8b(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f2a4d5ef4e915ff8aac91b666fc86326(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_27bfe4ad8fa95208a480b4a73d423c8b_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f2a4d5ef4e915ff8aac91b666fc86326_PATTERN,
             self.path
         )
 
@@ -3200,9 +3200,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c1db8937e67a57b08d2e8c6d821558ad(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c1db8937e67a57b08d2e8c6d821558ad_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10_PATTERN,
             self.path
         )
 
@@ -3218,9 +3218,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_0f891e15d9ff59cc96a525303cc7736c(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_0f891e15d9ff59cc96a525303cc7736c_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb_PATTERN,
             self.path
         )
 
@@ -3236,9 +3236,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_13fe6c791b0b5879afd3251b263962af(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_13fe6c791b0b5879afd3251b263962af_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6_PATTERN,
             self.path
         )
 
@@ -3254,9 +3254,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_62e166d103155959b07ac7775e5522eb(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_62e166d103155959b07ac7775e5522eb_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369_PATTERN,
             self.path
         )
 
@@ -3272,9 +3272,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_435147f26ba15deabd1da9a19c28c17c(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_435147f26ba15deabd1da9a19c28c17c_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b_PATTERN,
             self.path
         )
 
@@ -3290,9 +3290,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_d4beeb69c1f25eb88b69c544352d944d(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_d4beeb69c1f25eb88b69c544352d944d_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe_PATTERN,
             self.path
         )
 
@@ -3308,9 +3308,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_37db950665905478934047ff1af006be(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_37db950665905478934047ff1af006be_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880_PATTERN,
             self.path
         )
 
@@ -3326,9 +3326,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_8dafb1310dfd559cba25d89d6f54f3c3(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_8dafb1310dfd559cba25d89d6f54f3c3_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946_PATTERN,
             self.path
         )
 
@@ -3344,9 +3344,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_15a3095b432c5fe9993416329569349e(self):
+    def matches_NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2(self):
         return re.search(
-            self.NETWORK_ACCESS_AUTHORIZATION_RULES_15a3095b432c5fe9993416329569349e_PATTERN,
+            self.NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2_PATTERN,
             self.path
         )
 
@@ -3362,9 +3362,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_8c513fa483ee5144bbea860bf9e449d6(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_8c513fa483ee5144bbea860bf9e449d6_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af_PATTERN,
             self.path
         )
 
@@ -3380,9 +3380,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_ec901d2e3f635112bfbc494932ec29aa(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_ec901d2e3f635112bfbc494932ec29aa_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6_PATTERN,
             self.path
         )
 
@@ -3398,9 +3398,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_f70bb7d0d53a51f4b95d62d76768bc78(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_f70bb7d0d53a51f4b95d62d76768bc78_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b_PATTERN,
             self.path
         )
 
@@ -3416,9 +3416,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_c9ecd05ddcd054e1b26d5efbd668527d(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_c9ecd05ddcd054e1b26d5efbd668527d_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7_PATTERN,
             self.path
         )
 
@@ -3434,9 +3434,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_385f96e2cbe85ebe9c534ced3ef81f49(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_385f96e2cbe85ebe9c534ced3ef81f49_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb_PATTERN,
             self.path
         )
 
@@ -3452,9 +3452,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_54085117007c5a2b8fc09b7eb812b06f(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_54085117007c5a2b8fc09b7eb812b06f_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9_PATTERN,
             self.path
         )
 
@@ -3470,9 +3470,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_55795416735e5581a04692b267521132(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_55795416735e5581a04692b267521132_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc_PATTERN,
             self.path
         )
 
@@ -3488,9 +3488,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_308fe01bf5cb5f1a9d0ce514cbb90521(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_308fe01bf5cb5f1a9d0ce514cbb90521_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476_PATTERN,
             self.path
         )
 
@@ -3506,9 +3506,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_11df324efb035cd5997bc0a6326438a0(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_11df324efb035cd5997bc0a6326438a0_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc_PATTERN,
             self.path
         )
 
@@ -3524,9 +3524,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_d4249c8c63015955bd934d594049cfd3(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_d4249c8c63015955bd934d594049cfd3_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5_PATTERN,
             self.path
         )
 
@@ -3542,9 +3542,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_CONDITIONS_98a7e97c382f5ece8efd82e7e86f8b7b(self):
+    def matches_NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb(self):
         return re.search(
-            self.NETWORK_ACCESS_CONDITIONS_98a7e97c382f5ece8efd82e7e86f8b7b_PATTERN,
+            self.NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb_PATTERN,
             self.path
         )
 
@@ -3560,9 +3560,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_8f0c9b561c6257a5b5fcc4f0eb8d875a(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_8f0c9b561c6257a5b5fcc4f0eb8d875a_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e_PATTERN,
             self.path
         )
 
@@ -3578,9 +3578,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_20c038e43a955a42ad4a6822f525d05e(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_89a57687cef65891a6f48dd17f456c4e(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_20c038e43a955a42ad4a6822f525d05e_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_89a57687cef65891a6f48dd17f456c4e_PATTERN,
             self.path
         )
 
@@ -3596,9 +3596,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_d36440a5e1f8560ba7146ce16cc5e9d7(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_d36440a5e1f8560ba7146ce16cc5e9d7_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137_PATTERN,
             self.path
         )
 
@@ -3614,9 +3614,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_6005031ca76d5d419ee9d9fb4d6df9d6(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_6005031ca76d5d419ee9d9fb4d6df9d6_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7_PATTERN,
             self.path
         )
 
@@ -3632,9 +3632,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_37db7520334b5264acb4ee9eea31e543(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_37db7520334b5264acb4ee9eea31e543_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0_PATTERN,
             self.path
         )
 
@@ -3650,9 +3650,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_8cb6bd5d682f50e6a0a02a9748caf8a5(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_8cb6bd5d682f50e6a0a02a9748caf8a5_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d_PATTERN,
             self.path
         )
 
@@ -3668,9 +3668,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_06ca9de20c5e5e64a9faca9770b6f405(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_06ca9de20c5e5e64a9faca9770b6f405_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50_PATTERN,
             self.path
         )
 
@@ -3686,9 +3686,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_6d037df04ec4580fa3a1439847a594dd(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_c77600d349fc5c259dbd22d65b3ffa1d(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_6d037df04ec4580fa3a1439847a594dd_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_c77600d349fc5c259dbd22d65b3ffa1d_PATTERN,
             self.path
         )
 
@@ -3704,9 +3704,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_7fca80b77f285ef89305440cd3261621(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_a60b29bfe2b055299e4360d84380ddd4(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_7fca80b77f285ef89305440cd3261621_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_a60b29bfe2b055299e4360d84380ddd4_PATTERN,
             self.path
         )
 
@@ -3722,9 +3722,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_96ebb208a73854d98ca6284f2bcbca28(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_dd6c2553ae0053c1bbbdbd46c1df0ef9(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_96ebb208a73854d98ca6284f2bcbca28_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_dd6c2553ae0053c1bbbdbd46c1df0ef9_PATTERN,
             self.path
         )
 
@@ -3740,9 +3740,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_ea5f9905a8e85dc9906a7aeac1f63b36(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_2ab96d3d76de5d05bbac1f27feacb7b0(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_ea5f9905a8e85dc9906a7aeac1f63b36_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_2ab96d3d76de5d05bbac1f27feacb7b0_PATTERN,
             self.path
         )
 
@@ -3758,9 +3758,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_bab0f222e253599ba29f4b95c8a94637(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_f68aee0cdb425390b3ca90b0b46e6e2c(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_bab0f222e253599ba29f4b95c8a94637_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_f68aee0cdb425390b3ca90b0b46e6e2c_PATTERN,
             self.path
         )
 
@@ -3776,9 +3776,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_60e9c47ce5015db29a6d4e5f89b5f62a(self):
+    def matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136(self):
         return re.search(
-            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_60e9c47ce5015db29a6d4e5f89b5f62a_PATTERN,
+            self.NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136_PATTERN,
             self.path
         )
 
@@ -3794,9 +3794,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_IDENTITY_STORES_947718212dd65e4980807472a5c9fbac(self):
+    def matches_NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f(self):
         return re.search(
-            self.NETWORK_ACCESS_IDENTITY_STORES_947718212dd65e4980807472a5c9fbac_PATTERN,
+            self.NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f_PATTERN,
             self.path
         )
 
@@ -3812,9 +3812,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_fd07bdc9dc9f5fb6a7de7b3ed7fd744f(self):
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_d43fec9e7dc556cbb9bf0ebd1dcd6aad(self):
         return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_fd07bdc9dc9f5fb6a7de7b3ed7fd744f_PATTERN,
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_d43fec9e7dc556cbb9bf0ebd1dcd6aad_PATTERN,
             self.path
         )
 
@@ -3830,9 +3830,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_b5d0462a0dfa50da9b23dbf00c5e3344(self):
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e(self):
         return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_b5d0462a0dfa50da9b23dbf00c5e3344_PATTERN,
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e_PATTERN,
             self.path
         )
 
@@ -3848,9 +3848,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_9979014d05b75a0eb49d7502907ca9ae(self):
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2(self):
         return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_9979014d05b75a0eb49d7502907ca9ae_PATTERN,
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2_PATTERN,
             self.path
         )
 
@@ -3866,9 +3866,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_8395a2d838e651a2af402faddc2df95c(self):
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14(self):
         return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_8395a2d838e651a2af402faddc2df95c_PATTERN,
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14_PATTERN,
             self.path
         )
 
@@ -3884,9 +3884,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_434e343d039a54fd910e03bb84ead0d9(self):
+    def matches_NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219(self):
         return re.search(
-            self.NETWORK_ACCESS_NETWORK_CONDITIONS_434e343d039a54fd910e03bb84ead0d9_PATTERN,
+            self.NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219_PATTERN,
             self.path
         )
 
@@ -3902,9 +3902,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_POLICY_SET_a638a439d6bb5bc68cc773b535e54e25(self):
+    def matches_NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365(self):
         return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_a638a439d6bb5bc68cc773b535e54e25_PATTERN,
+            self.NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365_PATTERN,
             self.path
         )
 
@@ -3920,9 +3920,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_POLICY_SET_c36400bc9a4159e98fde4e9c57879d15(self):
+    def matches_NETWORK_ACCESS_POLICY_SET_9dfe1db8729d541fb3a17d31d47d1881(self):
         return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_c36400bc9a4159e98fde4e9c57879d15_PATTERN,
+            self.NETWORK_ACCESS_POLICY_SET_9dfe1db8729d541fb3a17d31d47d1881_PATTERN,
             self.path
         )
 
@@ -3938,9 +3938,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_POLICY_SET_78bf0dd348dc5f4887d71554cb38a6b5(self):
+    def matches_NETWORK_ACCESS_POLICY_SET_71fb6c1b3f335dbf8176a29e30eb6333(self):
         return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_78bf0dd348dc5f4887d71554cb38a6b5_PATTERN,
+            self.NETWORK_ACCESS_POLICY_SET_71fb6c1b3f335dbf8176a29e30eb6333_PATTERN,
             self.path
         )
 
@@ -3956,9 +3956,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_POLICY_SET_8586b743d82959c8babbc2c8adb3f345(self):
+    def matches_NETWORK_ACCESS_POLICY_SET_768d9f17adde53e2a08a650b9fe1714c(self):
         return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_8586b743d82959c8babbc2c8adb3f345_PATTERN,
+            self.NETWORK_ACCESS_POLICY_SET_768d9f17adde53e2a08a650b9fe1714c_PATTERN,
             self.path
         )
 
@@ -3974,9 +3974,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_POLICY_SET_b209f469fc145f08a59ab271758147d1(self):
+    def matches_NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b(self):
         return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_b209f469fc145f08a59ab271758147d1_PATTERN,
+            self.NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b_PATTERN,
             self.path
         )
 
@@ -3992,9 +3992,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_POLICY_SET_0540065c9ae85e70bda77ecba6d11671(self):
+    def matches_NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f(self):
         return re.search(
-            self.NETWORK_ACCESS_POLICY_SET_0540065c9ae85e70bda77ecba6d11671_PATTERN,
+            self.NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f_PATTERN,
             self.path
         )
 
@@ -4010,9 +4010,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_PROFILES_3e77ef593139561fa4e877ecbe81e050(self):
+    def matches_NETWORK_ACCESS_PROFILES_99c764d87cf255a7b803aad17f0f5db8(self):
         return re.search(
-            self.NETWORK_ACCESS_PROFILES_3e77ef593139561fa4e877ecbe81e050_PATTERN,
+            self.NETWORK_ACCESS_PROFILES_99c764d87cf255a7b803aad17f0f5db8_PATTERN,
             self.path
         )
 
@@ -4028,9 +4028,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_SECURITY_GROUPS_27c33c9c96635465bdad3324f6b5b363(self):
+    def matches_NETWORK_ACCESS_SECURITY_GROUPS_598f564c3eda5c20bb807b8c062c8e7b(self):
         return re.search(
-            self.NETWORK_ACCESS_SECURITY_GROUPS_27c33c9c96635465bdad3324f6b5b363_PATTERN,
+            self.NETWORK_ACCESS_SECURITY_GROUPS_598f564c3eda5c20bb807b8c062c8e7b_PATTERN,
             self.path
         )
 
@@ -4046,9 +4046,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_SERVICE_NAMES_dec4e584b74e5ebc917016c2bb3bb14d(self):
+    def matches_NETWORK_ACCESS_SERVICE_NAMES_8304c137cad852579f4b810ff8adf661(self):
         return re.search(
-            self.NETWORK_ACCESS_SERVICE_NAMES_dec4e584b74e5ebc917016c2bb3bb14d_PATTERN,
+            self.NETWORK_ACCESS_SERVICE_NAMES_8304c137cad852579f4b810ff8adf661_PATTERN,
             self.path
         )
 
@@ -4064,9 +4064,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e36bd4fce1ac5f2ab1bb360087f90dd4(self):
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_ab916b19789c59b79dddbc2d0a3c57fc(self):
         return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_e36bd4fce1ac5f2ab1bb360087f90dd4_PATTERN,
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_ab916b19789c59b79dddbc2d0a3c57fc_PATTERN,
             self.path
         )
 
@@ -4082,9 +4082,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_12f5ff5f858c5476b416f489423aaef2(self):
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396(self):
         return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_12f5ff5f858c5476b416f489423aaef2_PATTERN,
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396_PATTERN,
             self.path
         )
 
@@ -4100,9 +4100,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_00b4f4d0f5955ee9af9293e6fc50bfd9(self):
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874(self):
         return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_00b4f4d0f5955ee9af9293e6fc50bfd9_PATTERN,
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874_PATTERN,
             self.path
         )
 
@@ -4118,9 +4118,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_0b99ad3bab1e59968087474e162c51d1(self):
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6(self):
         return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_0b99ad3bab1e59968087474e162c51d1_PATTERN,
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6_PATTERN,
             self.path
         )
 
@@ -4136,9 +4136,9 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
-    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_ca238e7ff26e509fae59f1065967e2a3(self):
+    def matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6(self):
         return re.search(
-            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_ca238e7ff26e509fae59f1065967e2a3_PATTERN,
+            self.NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6_PATTERN,
             self.path
         )
 
@@ -12918,235 +12918,235 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.patching_list_installed_patches_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7e09c429220955d89449e67ad583daa0():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_141b9e8541f25c4ea29944f659f68994():
             self.device_administration_authentication_rules_get_device_admin_authentication_rules_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_432d271720a75fc1a905121fb5ea6e27():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_97a160f293375ae9924d8240c4efdc6a():
             self.device_administration_authentication_rules_get_device_admin_authentication_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_b7d3d36a4e0655ab99b9e1aeb026a388():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_bba3187f0be4563aa8b6ff5931a123e7():
             self.device_administration_authorization_exception_rules_get_device_admin_local_exception_rules_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_9980b049038756b0a914adf57bf7b717():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d8e470a4ef6a58b3b21f9adbbdcc7a46():
             self.device_administration_authorization_exception_rules_get_device_admin_local_exception_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_a461326a2e8c5f0bb96456f631b02754():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_e75d766151e85011870229f30e4f5ec3():
             self.device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_rules_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_52e609e4ae0d5e6789320fc6bbeef5b4():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_b3d905ee2883501281de916733b4025c():
             self.device_administration_authorization_global_exception_rules_get_device_admin_policy_set_global_exception_by_rule_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_2f5ce52d781d58afa23d01f5b7143ff0():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f831d9ed2beb5c2b967aa10db8c22046():
             self.device_administration_authorization_rules_get_device_admin_authorization_rules_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4d076e69ee2453b49fa49c6e68dba989():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_51dc966c73c65649a244d507bd53fd19():
             self.device_administration_authorization_rules_get_device_admin_authorization_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_COMMAND_SET_3326601dc13c523c82c2f747a81cf187():
+        if self.matches_DEVICE_ADMINISTRATION_COMMAND_SET_717e68f07767522ba1e49dc474e936d2():
             self.device_administration_command_set_get_device_admin_command_sets_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_e587c20317715a8c8543cb68579f47ae():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_564635feb825519f98bd1541ef3c367d():
             self.device_administration_conditions_get_device_admin_conditions_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_dda48630706d56a485ed551392453ef9():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_f1b8eaf23e795f1a8525eb5905187aa9():
             self.device_administration_conditions_get_device_admin_conditions_for_authentication_rules_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_5c3d54132e5b51d492a8dc703046ac43():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_ecff2eb67fe5591f8d9026f928a0d8aa():
             self.device_administration_conditions_get_device_admin_conditions_for_authorization_rules_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_c4671f7ef81e50338dc5e20250ea7989():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_a47bbc05a3e056fcad73f2cb5b894dae():
             self.device_administration_conditions_get_device_admin_condition_by_name_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_8cea876c7655519ebde8eb4946990414():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_2a40f9e169a95d6dbf3ebbb020291007():
             self.device_administration_conditions_get_device_admin_conditions_for_policy_sets_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_e58982dd97b955dbaa83b1964abd1e38():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_5dec8e9d819b5bc088e351b69efd0369():
             self.device_administration_conditions_get_device_admin_condition_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_4f74a3e991b7535e8a810540ef47cfda():
+        if self.matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_b09ea91f72885e05b6aa73e89546f969():
             self.device_administration_dictionary_attributes_list_get_device_admin_dictionaries_authentication_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_ae98c0dfbd8f5c80b62def7cf2fb70e6():
+        if self.matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_fc9ecf1e469154ae845236dbed070904():
             self.device_administration_dictionary_attributes_list_get_device_admin_dictionaries_authorization_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_1b83a635ff055d7b94d1cce6f0a492ec():
+        if self.matches_DEVICE_ADMINISTRATION_DICTIONARY_ATTRIBUTES_LIST_149c8aec23a55399a175acf105dbe1c2():
             self.device_administration_dictionary_attributes_list_get_device_admin_dictionaries_policy_set_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_IDENTITY_STORES_cab7725976095496997cdbecf3d617c0():
+        if self.matches_DEVICE_ADMINISTRATION_IDENTITY_STORES_22ce65f2bd375be1ba41a7d6f02ad7b6():
             self.device_administration_identity_stores_get_device_admin_identity_stores_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_168d880ea4935a2bbe4e6ac6296f3889():
+        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b4ceac9ee830523ca5ddbfdf3e1b44be():
             self.device_administration_network_conditions_get_device_admin_network_conditions_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_ba09778fe16b5c9ea9e93b39cb3bb370():
+        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_33e9cc593c395c48b31b30149467c846():
             self.device_administration_network_conditions_get_device_admin_network_condition_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_6ced27d4073c53f290ac38d837f0f3f2():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_fe54c96ccba65af1abe3cd08f4fc69cb():
             self.device_administration_policy_set_get_device_admin_policy_sets_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_45fee0e1f5535f80886029edb2ebf239():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_440b1da14ba95aa48b498c76d0bc1017():
             self.device_administration_policy_set_get_device_admin_policy_set_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_PROFILES_874f5c0afa74536b86e8dffdf84cbdbd():
+        if self.matches_DEVICE_ADMINISTRATION_PROFILES_8ce2f3cdfbfe512b85eeca7b133c81ff():
             self.device_administration_profiles_get_device_admin_profiles_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_SERVICE_NAMES_af8824a28b245816af767df50e72c513():
+        if self.matches_DEVICE_ADMINISTRATION_SERVICE_NAMES_8ea7e01261355dcfae6412e0615ba1f5():
             self.device_administration_service_names_get_device_admin_service_names_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_060e99a9d3415fc4a85547c481f40e35():
+        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_f79ab23563d857e58e01a74e37333572():
             self.device_administration_time_date_conditions_get_device_admin_time_conditions_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_b0bc8c49447258bbbdb4e50693064d00():
+        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_4709e603092f597ab6c25381e59c4a70():
             self.device_administration_time_date_conditions_get_device_admin_time_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_21bc064630335416850573ada235189c():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_794bee301e7f5ccfa2e788dcafbf92cc():
             self.network_access_authentication_rules_get_network_access_authentication_rules_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_97a0883ac517516c885241460293f6e4():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_57a588d29d5a527388ee8498f746d1f5():
             self.network_access_authentication_rules_get_network_access_authentication_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_daf2f01f25815376ab845436ca2ba022():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_2249e23ac4c658f5b75f19d13d6f7189():
             self.network_access_authorization_exception_rules_get_network_access_local_exception_rules_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_f7b73bfcda29551bb80a3d0681f4e241():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_0b3fe0f3ea8a5368aea79a847288993e():
             self.network_access_authorization_exception_rules_get_network_access_local_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_1c9a838a5d2d53d8a83d54f33f159598():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_19a11a1ff1ee5387b669bcde99f86fbf():
             self.network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rules_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c1db8937e67a57b08d2e8c6d821558ad():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c14128e5729b55e9b1feb638a8295e10():
             self.network_access_authorization_global_exception_rules_get_network_access_policy_set_global_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_62e166d103155959b07ac7775e5522eb():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_e623dba049b5569c83e13ccf4360e369():
             self.network_access_authorization_rules_get_network_access_authorization_rules_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_37db950665905478934047ff1af006be():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_fcf7754d5b45523a8227d37c476a1880():
             self.network_access_authorization_rules_get_network_access_authorization_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_8c513fa483ee5144bbea860bf9e449d6():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_6df4fb303a3e5661ba12058f18b225af():
             self.network_access_conditions_get_network_access_conditions_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_f70bb7d0d53a51f4b95d62d76768bc78():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_104e34177d675622acd0a532f5b7c41b():
             self.network_access_conditions_get_network_access_conditions_for_authentication_rules_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_c9ecd05ddcd054e1b26d5efbd668527d():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_83852fff985b5159a0aa52bfe9e62ba7():
             self.network_access_conditions_get_network_access_conditions_for_authorization_rules_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_385f96e2cbe85ebe9c534ced3ef81f49():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_f3b949de4363575398dc1c9e681630bb():
             self.network_access_conditions_get_network_access_condition_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_308fe01bf5cb5f1a9d0ce514cbb90521():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_c0984cde5e925c209ab87472ab905476():
             self.network_access_conditions_get_network_access_conditions_for_policy_sets_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_11df324efb035cd5997bc0a6326438a0():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_f2b0a67d389a592dba005895594b77cc():
             self.network_access_conditions_get_network_access_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_8f0c9b561c6257a5b5fcc4f0eb8d875a():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_e5a8315e699f55c09102e7c653333d4e():
             self.network_access_dictionary_get_network_access_dictionaries_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_d36440a5e1f8560ba7146ce16cc5e9d7():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_19f1fd8e2bd1581aabf7cd87bff65137():
             self.network_access_dictionary_get_network_access_dictionary_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_8cb6bd5d682f50e6a0a02a9748caf8a5():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_d83302be1f7c528e8211524aeaacd66d():
             self.network_access_dictionary_attribute_get_network_access_dictionary_attributes_by_dictionary_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_6d037df04ec4580fa3a1439847a594dd():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_c77600d349fc5c259dbd22d65b3ffa1d():
             self.network_access_dictionary_attribute_get_network_access_dictionary_attribute_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_ea5f9905a8e85dc9906a7aeac1f63b36():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_2ab96d3d76de5d05bbac1f27feacb7b0():
             self.network_access_dictionary_attributes_list_get_network_access_dictionaries_authentication_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_bab0f222e253599ba29f4b95c8a94637():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_f68aee0cdb425390b3ca90b0b46e6e2c():
             self.network_access_dictionary_attributes_list_get_network_access_dictionaries_authorization_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_60e9c47ce5015db29a6d4e5f89b5f62a():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTES_LIST_21c53b22885f5e5d82fb8cadd0332136():
             self.network_access_dictionary_attributes_list_get_network_access_dictionaries_policy_set_response()
             return
 
-        if self.matches_NETWORK_ACCESS_IDENTITY_STORES_947718212dd65e4980807472a5c9fbac():
+        if self.matches_NETWORK_ACCESS_IDENTITY_STORES_c7aa2a6cac155a6cb7ace3fd76a81e0f():
             self.network_access_identity_stores_get_network_access_identity_stores_response()
             return
 
-        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_fd07bdc9dc9f5fb6a7de7b3ed7fd744f():
+        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_d43fec9e7dc556cbb9bf0ebd1dcd6aad():
             self.network_access_network_conditions_get_network_access_network_conditions_response()
             return
 
-        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_9979014d05b75a0eb49d7502907ca9ae():
+        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_0ab015a9eb6d5f2b91002af068cb4ce2():
             self.network_access_network_conditions_get_network_access_network_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_POLICY_SET_a638a439d6bb5bc68cc773b535e54e25():
+        if self.matches_NETWORK_ACCESS_POLICY_SET_ed1ef503c091506aa8e446182e625365():
             self.network_access_policy_set_get_network_access_policy_sets_response()
             return
 
-        if self.matches_NETWORK_ACCESS_POLICY_SET_8586b743d82959c8babbc2c8adb3f345():
+        if self.matches_NETWORK_ACCESS_POLICY_SET_768d9f17adde53e2a08a650b9fe1714c():
             self.network_access_policy_set_get_network_access_policy_set_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_PROFILES_3e77ef593139561fa4e877ecbe81e050():
+        if self.matches_NETWORK_ACCESS_PROFILES_99c764d87cf255a7b803aad17f0f5db8():
             self.network_access_profiles_get_network_access_profiles_response()
             return
 
-        if self.matches_NETWORK_ACCESS_SECURITY_GROUPS_27c33c9c96635465bdad3324f6b5b363():
+        if self.matches_NETWORK_ACCESS_SECURITY_GROUPS_598f564c3eda5c20bb807b8c062c8e7b():
             self.network_access_security_groups_get_network_access_security_groups_response()
             return
 
-        if self.matches_NETWORK_ACCESS_SERVICE_NAMES_dec4e584b74e5ebc917016c2bb3bb14d():
+        if self.matches_NETWORK_ACCESS_SERVICE_NAMES_8304c137cad852579f4b810ff8adf661():
             self.network_access_service_names_get_network_access_service_names_response()
             return
 
-        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e36bd4fce1ac5f2ab1bb360087f90dd4():
+        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_ab916b19789c59b79dddbc2d0a3c57fc():
             self.network_access_time_date_conditions_get_network_access_time_conditions_response()
             return
 
-        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_00b4f4d0f5955ee9af9293e6fc50bfd9():
+        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_c941303330bc5615b3eb8d4d2702b874():
             self.network_access_time_date_conditions_get_network_access_time_condition_by_id_response()
             return
 
@@ -14260,115 +14260,115 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.patching_rollback_patch_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_31cb8dda6fd7555d9251dfba9042378d():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_f1ff2b82953f5131884f0779db37190c():
             self.device_administration_authentication_rules_create_device_admin_authentication_rule_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_d7d1204f3ee653d2bc8f67bbe41919e7():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_dd2d3e1f258252579386f21705613d26():
             self.device_administration_authentication_rules_reset_hit_counts_device_admin_authentication_rules_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_00bc905c794c5575b51a36f5184396fe():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_12905ebcdc835e9b8d6844c1da6cf252():
             self.device_administration_authorization_exception_rules_create_device_admin_local_exception_rule_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_d3567e00f647509c911e143859ea15e7():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_f9452f1ecd64528ba7a4a99295bb715c():
             self.device_administration_authorization_exception_rules_reset_hit_counts_device_admin_local_exceptions_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_c1931b0be5ed56ec8f005c51b623dea6():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28da0a59db7654cfa89df49ca3ac3414():
             self.device_administration_authorization_global_exception_rules_create_device_admin_policy_set_global_exception_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_328f25be2aac53ff9f2d77790eeb278f():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_bd8a6c63d0235f3699f2669ca4734c13():
             self.device_administration_authorization_global_exception_rules_reset_hit_counts_device_admin_global_exceptions_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_e95645303ad45fc5bf4e2ae92f97660a():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_53a03a30be865ca599e77c63a332978b():
             self.device_administration_authorization_rules_create_device_admin_authorization_rule_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_249d3b4cb0215bf0a52b2e12b93f6eb5():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_4f0698a9c9075b46a46193b1fb4b9563():
             self.device_administration_authorization_rules_reset_hit_counts_device_admin_authorization_rules_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_00fb0215d2d35317af508cc690d7fa95():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_599abc25887a5daab1216195e08cbd49():
             self.device_administration_conditions_create_device_admin_condition_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_e681688c136e55b89da160f59c317cdf():
+        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_b95cf8c9aed95518b38be1fa4b514b67():
             self.device_administration_network_conditions_create_device_admin_network_condition_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_0d332d79cbae5967855822beeef26a56():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_cc909c2717cf55f1863a04a785166fe0():
             self.device_administration_policy_set_create_device_admin_policy_set_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_40139524c97c568d8caf52ec896cbbba():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_8e38ddb381965981b66f00a9c8634485():
             self.device_administration_policy_set_reset_hit_counts_device_admin_policy_sets_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_db9265bf1c5a5de2b26df4461618e965():
+        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_26a4d5b5da6a50bfaaecc180543fd952():
             self.device_administration_time_date_conditions_create_device_admin_time_condition_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_1f1e5c8f6732560bb20989459018402b():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_0017f2fcf04554db9ea4cdc3a7024322():
             self.network_access_authentication_rules_create_network_access_authentication_rule_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_931ce06ff96456e88f85943ed0572444():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_3944cd727fc45ccf8607a744aa71df66():
             self.network_access_authentication_rules_reset_hit_counts_network_access_authentication_rules_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_fe2075eb070252018b1a3cf7fbba8b29():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_5c475afd2a5e57e4bd0952f2c5349c6c():
             self.network_access_authorization_exception_rules_create_network_access_local_exception_rule_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8af3567ff04856f08ec36d74100a6dcd():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_8fc04e49e2a959cd8c498858e46f72f2():
             self.network_access_authorization_exception_rules_reset_hit_counts_network_access_local_exceptions_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_790ca0931b76554ebb7ef366bd77e89c():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_3c5c9b7ab72b5442ae7026a5dcc0fec3():
             self.network_access_authorization_global_exception_rules_create_network_access_policy_set_global_exception_rule_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_27bfe4ad8fa95208a480b4a73d423c8b():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f2a4d5ef4e915ff8aac91b666fc86326():
             self.network_access_authorization_global_exception_rules_reset_hit_counts_network_access_global_exceptions_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_435147f26ba15deabd1da9a19c28c17c():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_741498eca5db5147b1e3b35a032ced4b():
             self.network_access_authorization_rules_create_network_access_authorization_rule_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_d4beeb69c1f25eb88b69c544352d944d():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_c860146231095e85839639db33c93cfe():
             self.network_access_authorization_rules_reset_hit_counts_network_access_authorization_rules_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_ec901d2e3f635112bfbc494932ec29aa():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_e7bd468ee94f53869e52e84454efd0e6():
             self.network_access_conditions_create_network_access_condition_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_20c038e43a955a42ad4a6822f525d05e():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_89a57687cef65891a6f48dd17f456c4e():
             self.network_access_dictionary_create_network_access_dictionaries_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_06ca9de20c5e5e64a9faca9770b6f405():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_706f4508bb3352ff920dbdc229e0fc50():
             self.network_access_dictionary_attribute_create_network_access_dictionary_attribute_response()
             return
 
-        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_b5d0462a0dfa50da9b23dbf00c5e3344():
+        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_f4dbfb874b3b56d7a651d6732f1bd55e():
             self.network_access_network_conditions_create_network_access_network_condition_response()
             return
 
-        if self.matches_NETWORK_ACCESS_POLICY_SET_c36400bc9a4159e98fde4e9c57879d15():
+        if self.matches_NETWORK_ACCESS_POLICY_SET_9dfe1db8729d541fb3a17d31d47d1881():
             self.network_access_policy_set_create_network_access_policy_set_response()
             return
 
-        if self.matches_NETWORK_ACCESS_POLICY_SET_78bf0dd348dc5f4887d71554cb38a6b5():
+        if self.matches_NETWORK_ACCESS_POLICY_SET_71fb6c1b3f335dbf8176a29e30eb6333():
             self.network_access_policy_set_reset_hit_counts_network_access_policy_sets_response()
             return
 
-        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_12f5ff5f858c5476b416f489423aaef2():
+        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_784b314d32b258a1b53c5c84cf84d396():
             self.network_access_time_date_conditions_create_network_access_time_condition_response()
             return
 
@@ -14710,83 +14710,83 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.pan_ha_update_pan_ha_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_13bc465cc6825d0ca45080b1ffa18b1c():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_1269ca61ff725fedb94fba602d7afe46():
             self.device_administration_authentication_rules_update_device_admin_authentication_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_3d7216992aa255039f59eb681bdac681():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_a87d60d590485830aed781bfb15b5c95():
             self.device_administration_authorization_exception_rules_update_device_admin_local_exception_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_4be6e45d04d959aa965834d241eb8a76():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_d9ddc2557a495493bca08b8b973601aa():
             self.device_administration_authorization_global_exception_rules_update_device_admin_policy_set_global_exception_by_rule_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_94dcb612da7a5399a885fc029edcc87c():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_f92e61297eb05379bd9b92bc60735912():
             self.device_administration_authorization_rules_update_device_admin_authorization_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_6df1812adf495165bddf7b52a83cbc26():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_1d17bf558051575aba9f7435c7fcbe05():
             self.device_administration_conditions_update_device_admin_condition_by_name_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_2e79f8beface5ea197839128bfba4b0e():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_9ed5bf99062d5dee87fe5cd96e360ec2():
             self.device_administration_conditions_update_device_admin_condition_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_673c77ff0d845ac695dee98a254d31bc():
+        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_23f78898b7d655b2b81085dc7c0a964e():
             self.device_administration_network_conditions_update_device_admin_network_condition_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_efb7371737f857d093b24c2fdd156053():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_e2c930d3d75859b8b7d30e79f3eab084():
             self.device_administration_policy_set_update_device_admin_policy_set_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_d94fcdde737658a4a874631d3bd2e98d():
+        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_6ee1780a38a85d1ba57c9a38e1093721():
             self.device_administration_time_date_conditions_update_device_admin_time_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_e09eb5adcc5458a9a97153dcd6893c38():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_aa4daefaa3b95ecca521188a43eacbd9():
             self.network_access_authentication_rules_update_network_access_authentication_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_fd7a62ac7041587ea4a7f61944e9ffbf():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_a22b2304dcc855abb2a298de6ecddb65():
             self.network_access_authorization_exception_rules_update_network_access_local_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_0f891e15d9ff59cc96a525303cc7736c():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_ac171b8ccf79502fbc4b35909970a1cb():
             self.network_access_authorization_global_exception_rules_update_network_access_policy_set_global_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_8dafb1310dfd559cba25d89d6f54f3c3():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_3fd9e7e03a6056d1b6e9705e3096d946():
             self.network_access_authorization_rules_update_network_access_authorization_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_54085117007c5a2b8fc09b7eb812b06f():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_bea2910401185295a9715d65cb1c07c9():
             self.network_access_conditions_update_network_access_condition_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_d4249c8c63015955bd934d594049cfd3():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_e405a20316825460a1f37a2f161e7ac5():
             self.network_access_conditions_update_network_access_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_6005031ca76d5d419ee9d9fb4d6df9d6():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_99a4cccea3c9567498f6f688e0cf86e7():
             self.network_access_dictionary_update_network_access_dictionary_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_7fca80b77f285ef89305440cd3261621():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_a60b29bfe2b055299e4360d84380ddd4():
             self.network_access_dictionary_attribute_update_network_access_dictionary_attribute_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_8395a2d838e651a2af402faddc2df95c():
+        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_49780cf65cd559628b26f6eb5ea20f14():
             self.network_access_network_conditions_update_network_access_network_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_POLICY_SET_b209f469fc145f08a59ab271758147d1():
+        if self.matches_NETWORK_ACCESS_POLICY_SET_ff0055f9ef115a42bea6ffdd8e57d41b():
             self.network_access_policy_set_update_network_access_policy_set_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_0b99ad3bab1e59968087474e162c51d1():
+        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_11232a518d5655f69e8687c9c98740c6():
             self.network_access_time_date_conditions_update_network_access_time_condition_by_id_response()
             return
 
@@ -15240,83 +15240,83 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.node_group_delete_node_group_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_05d50b1447855e97911072d2d0602cce():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_30085a9f1f24542dbd244e31691a2e09():
             self.device_administration_authentication_rules_delete_device_admin_authentication_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_e8fa027f736f53bea5ba46649936a5da():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_EXCEPTION_RULES_20c7d6bb4abf53f6aa2f40b6986f58a9():
             self.device_administration_authorization_exception_rules_delete_device_admin_local_exception_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_28e48447069a5f8a8f70788964e88fac():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_f16d14057660520dba53cc0df60db4a8():
             self.device_administration_authorization_global_exception_rules_delete_device_admin_policy_set_global_exception_by_rule_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_b62fca8b68145e3abdff6b24738e4f0b():
+        if self.matches_DEVICE_ADMINISTRATION_AUTHORIZATION_RULES_60fb4ef0633057a1acdc47e23b120073():
             self.device_administration_authorization_rules_delete_device_admin_authorization_rule_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_6aede43577a158e8ad4cb8828d4a2439():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_ea7a58e36047592d8f37a4ec4e15701d():
             self.device_administration_conditions_delete_device_admin_condition_by_name_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_e866df55c3785f26930f3bc22e96cde5():
+        if self.matches_DEVICE_ADMINISTRATION_CONDITIONS_ea5b356b4bc053068a0052b6c807d286():
             self.device_administration_conditions_delete_device_admin_condition_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_c5cbe8434bdd5baab7564eadae90e862():
+        if self.matches_DEVICE_ADMINISTRATION_NETWORK_CONDITIONS_7c0b4d1bbda75355912f208521362a41():
             self.device_administration_network_conditions_delete_device_admin_network_condition_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_8bb5baccbc03575b85d62d145a936225():
+        if self.matches_DEVICE_ADMINISTRATION_POLICY_SET_b5c6ed4306f059cc963895a04f219d5d():
             self.device_administration_policy_set_delete_device_admin_policy_set_by_id_response()
             return
 
-        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_22aae929f02e50b782a492bd8bbad596():
+        if self.matches_DEVICE_ADMINISTRATION_TIME_DATE_CONDITIONS_c1052ac49dd35088a9874a4350182015():
             self.device_administration_time_date_conditions_delete_device_admin_time_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_82a0670269755446afd0d15e2d77eb5a():
+        if self.matches_NETWORK_ACCESS_AUTHENTICATION_RULES_8af104d12b5c5e668af1504feca5c9b1():
             self.network_access_authentication_rules_delete_network_access_authentication_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_705e1ccb07605108b7f4a7985332799c():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_EXCEPTION_RULES_29c0ec3a56f65447ba863ae0cac5ef6a():
             self.network_access_authorization_exception_rules_delete_network_access_local_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_13fe6c791b0b5879afd3251b263962af():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_GLOBAL_EXCEPTION_RULES_836fd707ac0454be8fecc73a918a27b6():
             self.network_access_authorization_global_exception_rules_delete_network_access_policy_set_global_exception_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_15a3095b432c5fe9993416329569349e():
+        if self.matches_NETWORK_ACCESS_AUTHORIZATION_RULES_0dedf09f59e754c6ae5212d43b1c8fb2():
             self.network_access_authorization_rules_delete_network_access_authorization_rule_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_55795416735e5581a04692b267521132():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_0ea1c05d19955fd4801e6c996705f3fc():
             self.network_access_conditions_delete_network_access_condition_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_CONDITIONS_98a7e97c382f5ece8efd82e7e86f8b7b():
+        if self.matches_NETWORK_ACCESS_CONDITIONS_99d87a24994c514d955149d33e1a99fb():
             self.network_access_conditions_delete_network_access_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_37db7520334b5264acb4ee9eea31e543():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_dfae2409eecc551298e9fa31d14f43d0():
             self.network_access_dictionary_delete_network_access_dictionary_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_96ebb208a73854d98ca6284f2bcbca28():
+        if self.matches_NETWORK_ACCESS_DICTIONARY_ATTRIBUTE_dd6c2553ae0053c1bbbdbd46c1df0ef9():
             self.network_access_dictionary_attribute_delete_network_access_dictionary_attribute_by_name_response()
             return
 
-        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_434e343d039a54fd910e03bb84ead0d9():
+        if self.matches_NETWORK_ACCESS_NETWORK_CONDITIONS_95e92c6e47625711b9ce06f92bd4d219():
             self.network_access_network_conditions_delete_network_access_network_condition_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_POLICY_SET_0540065c9ae85e70bda77ecba6d11671():
+        if self.matches_NETWORK_ACCESS_POLICY_SET_fd4b5a56f8bd5f8f919e9fffc172e72f():
             self.network_access_policy_set_delete_network_access_policy_set_by_id_response()
             return
 
-        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_ca238e7ff26e509fae59f1065967e2a3():
+        if self.matches_NETWORK_ACCESS_TIME_DATE_CONDITIONS_e2a697abfe2058d3adc7ad9922f5a5d6():
             self.network_access_time_date_conditions_delete_network_access_time_condition_by_id_response()
             return
 

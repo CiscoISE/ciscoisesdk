@@ -121,7 +121,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/device-admin/dictionaries/authentication')
+        e_url = ('/api/v1/policy/device-admin/dictionaries/authentication')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -129,7 +129,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f74a3e991b7535e8a810540ef47cfda_v3_1_1', _api_response)
+        return self._object_factory('bpm_b09ea91f72885e05b6aa73e89546f969_v3_1_1', _api_response)
 
     def get_all_authentication(self,
                                headers=None,
@@ -191,7 +191,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/device-admin/dictionaries/authorization')
+        e_url = ('/api/v1/policy/device-admin/dictionaries/authorization')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -199,7 +199,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ae98c0dfbd8f5c80b62def7cf2fb70e6_v3_1_1', _api_response)
+        return self._object_factory('bpm_fc9ecf1e469154ae845236dbed070904_v3_1_1', _api_response)
 
     def get_all_authorization(self,
                               headers=None,
@@ -261,7 +261,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         path_params = {
         }
 
-        e_url = ('/device-admin/dictionaries/policyset')
+        e_url = ('/api/v1/policy/device-admin/dictionaries/policyset')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -269,7 +269,7 @@ class DeviceAdministrationDictionaryAttributesList(object):
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b83a635ff055d7b94d1cce6f0a492ec_v3_1_1', _api_response)
+        return self._object_factory('bpm_c8aec23a55399a175acf105dbe1c2_v3_1_1', _api_response)
 
     def get_all_policy_set(self,
                            headers=None,
