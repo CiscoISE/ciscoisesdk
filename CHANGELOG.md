@@ -6,6 +6,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2021-12-13
+
+### Added
+- Adds licensing module
+- Adds node_services module
+- Adds patching module
+- Adds proxy module
+- Adds telemetry module
+- Adds certificates.generate_self_signed_certificate function
+- Adds node_deployment.make_primary function
+- Adds node_deployment.make_standalone function
+- Adds node_deployment.sync_node function
+- Adds node_group.add_node function
+- Adds node_group.get_nodes function
+- Adds node_group.remove_node function
+- Adds pan_ha.update_pan_ha function
+
+### Removed
+- Removes pan_ha.disable_pan_ha function
+- Removes pan_ha.enable_pan_ha function
+- Removes replication_status module
+- Removes sg_vn_mapping module
+- Removes sync_ise_node module
+- Removes vn_vlan_mapping module
 
 ## [1.2.0] - 2021-11-24
 
@@ -136,4 +160,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...v1.0.1
 [1.1.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.1...v1.1.0
 [1.2.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...v1.2.0
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.2.0...main
+[1.3.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.2.0...v1.3.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.0...main
