@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteNBARAppById data model.
+"""Identity Services Engine DeleteNBARAppById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD289D5685350F5B00F130Db0A45142(object):
-    """deleteNBARAppById request schema definition."""
+    """DeleteNBARAppById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD289D5685350F5B00F130Db0A45142, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

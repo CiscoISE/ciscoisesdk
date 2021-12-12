@@ -588,6 +588,8 @@ from ciscoisesdk.api.v3_1_1.identity_sequence import \
     IdentitySequence as IdentitySequence_v3_1_1
 from ciscoisesdk.api.v3_1_1.internal_user import \
     InternalUser as InternalUser_v3_1_1
+from ciscoisesdk.api.v3_1_1.licensing import \
+    Licensing as Licensing_v3_1_1
 from ciscoisesdk.api.v3_1_1.mdm import \
     Mdm as Mdm_v3_1_1
 from ciscoisesdk.api.v3_1_1.misc import \
@@ -634,10 +636,14 @@ from ciscoisesdk.api.v3_1_1.node_deployment import \
     NodeDeployment as NodeDeployment_v3_1_1
 from ciscoisesdk.api.v3_1_1.node_group import \
     NodeGroup as NodeGroup_v3_1_1
+from ciscoisesdk.api.v3_1_1.node_services import \
+    NodeServices as NodeServices_v3_1_1
 from ciscoisesdk.api.v3_1_1.node_details import \
     NodeDetails as NodeDetails_v3_1_1
 from ciscoisesdk.api.v3_1_1.pan_ha import \
     PanHa as PanHa_v3_1_1
+from ciscoisesdk.api.v3_1_1.patching import \
+    Patching as Patching_v3_1_1
 from ciscoisesdk.api.v3_1_1.portal_global_setting import \
     PortalGlobalSetting as PortalGlobalSetting_v3_1_1
 from ciscoisesdk.api.v3_1_1.portal_theme import \
@@ -718,12 +724,20 @@ from ciscoisesdk.api.v3_1_1.version_info import \
     VersionInfo as VersionInfo_v3_1_1
 from ciscoisesdk.api.v3_1_1.endpoint import \
     Endpoint as Endpoint_v3_1_1
+from ciscoisesdk.api.v3_1_1.nbar_app import \
+    NbarApp as NbarApp_v3_1_1
 from ciscoisesdk.api.v3_1_1.portal import \
     Portal as Portal_v3_1_1
+from ciscoisesdk.api.v3_1_1.proxy import \
+    Proxy as Proxy_v3_1_1
 from ciscoisesdk.api.v3_1_1.px_grid_node import \
     PxGridNode as PxGridNode_v3_1_1
 from ciscoisesdk.api.v3_1_1.tasks import \
     Tasks as Tasks_v3_1_1
+from ciscoisesdk.api.v3_1_1.telemetry import \
+    Telemetry as Telemetry_v3_1_1
+from ciscoisesdk.api.v3_1_1.virtual_network import \
+    VirtualNetwork as VirtualNetwork_v3_1_1
 from ciscoisesdk.api.custom_caller import CustomCaller
 
 from tests.config import (
@@ -1094,6 +1108,7 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.identity_groups, IdentityGroups_v3_1_1)
             assert isinstance(api.identity_sequence, IdentitySequence_v3_1_1)
             assert isinstance(api.internal_user, InternalUser_v3_1_1)
+            assert isinstance(api.licensing, Licensing_v3_1_1)
             assert isinstance(api.mdm, Mdm_v3_1_1)
             assert isinstance(api.misc, Misc_v3_1_1)
             assert isinstance(api.my_device_portal, MyDevicePortal_v3_1_1)
@@ -1117,8 +1132,10 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.network_device_group, NetworkDeviceGroup_v3_1_1)
             assert isinstance(api.node_deployment, NodeDeployment_v3_1_1)
             assert isinstance(api.node_group, NodeGroup_v3_1_1)
+            assert isinstance(api.node_services, NodeServices_v3_1_1)
             assert isinstance(api.node_details, NodeDetails_v3_1_1)
             assert isinstance(api.pan_ha, PanHa_v3_1_1)
+            assert isinstance(api.patching, Patching_v3_1_1)
             assert isinstance(api.portal_global_setting, PortalGlobalSetting_v3_1_1)
             assert isinstance(api.portal_theme, PortalTheme_v3_1_1)
             assert isinstance(api.profiler, Profiler_v3_1_1)
@@ -1159,6 +1176,10 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.version_and_patch, VersionAndPatch_v3_1_1)
             assert isinstance(api.version_info, VersionInfo_v3_1_1)
             assert isinstance(api.endpoint, Endpoint_v3_1_1)
+            assert isinstance(api.nbar_app, NbarApp_v3_1_1)
             assert isinstance(api.portal, Portal_v3_1_1)
+            assert isinstance(api.proxy, Proxy_v3_1_1)
             assert isinstance(api.px_grid_node, PxGridNode_v3_1_1)
             assert isinstance(api.tasks, Tasks_v3_1_1)
+            assert isinstance(api.telemetry, Telemetry_v3_1_1)
+            assert isinstance(api.virtual_network, VirtualNetwork_v3_1_1)

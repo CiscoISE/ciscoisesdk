@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteVirtualNetworkById data model.
+"""Identity Services Engine DeleteVirtualNetworkById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorF7Fda88868581085Da6Ac8C0E04B5C(object):
-    """deleteVirtualNetworkById request schema definition."""
+    """DeleteVirtualNetworkById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF7Fda88868581085Da6Ac8C0E04B5C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

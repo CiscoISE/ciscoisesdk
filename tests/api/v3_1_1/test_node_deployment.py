@@ -30,7 +30,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.1', reason='version does not match')
 
 
-def is_valid_get_deployment_nodes(json_schema_validate, obj):
+def is_valid_get_nodes(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -41,8 +41,8 @@ def is_valid_get_deployment_nodes(json_schema_validate, obj):
     return True
 
 
-def get_deployment_nodes(api):
-    endpoint_result = api.node_deployment.get_deployment_nodes(
+def get_nodes(api):
+    endpoint_result = api.node_deployment.get_nodes(
         filter='value1,value2',
         filter_type='string'
     )
@@ -50,11 +50,11 @@ def get_deployment_nodes(api):
 
 
 @pytest.mark.node_deployment
-def test_get_deployment_nodes(api, validator):
+def test_get_nodes(api, validator):
     try:
-        assert is_valid_get_deployment_nodes(
+        assert is_valid_get_nodes(
             validator,
-            get_deployment_nodes(api)
+            get_nodes(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -62,8 +62,8 @@ def test_get_deployment_nodes(api, validator):
             raise original_e
 
 
-def get_deployment_nodes_default(api):
-    endpoint_result = api.node_deployment.get_deployment_nodes(
+def get_nodes_default(api):
+    endpoint_result = api.node_deployment.get_nodes(
         filter=None,
         filter_type=None
     )
@@ -71,11 +71,11 @@ def get_deployment_nodes_default(api):
 
 
 @pytest.mark.node_deployment
-def test_get_deployment_nodes_default(api, validator):
+def test_get_nodes_default(api, validator):
     try:
-        assert is_valid_get_deployment_nodes(
+        assert is_valid_get_nodes(
             validator,
-            get_deployment_nodes_default(api)
+            get_nodes_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -196,7 +196,7 @@ def test_get_node_details_default(api, validator):
             raise original_e
 
 
-def is_valid_update_deployment_node(json_schema_validate, obj):
+def is_valid_update_node(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -207,8 +207,8 @@ def is_valid_update_deployment_node(json_schema_validate, obj):
     return True
 
 
-def update_deployment_node(api):
-    endpoint_result = api.node_deployment.update_deployment_node(
+def update_node(api):
+    endpoint_result = api.node_deployment.update_node(
         active_validation=False,
         hostname='string',
         payload=None,
@@ -219,11 +219,11 @@ def update_deployment_node(api):
 
 
 @pytest.mark.node_deployment
-def test_update_deployment_node(api, validator):
+def test_update_node(api, validator):
     try:
-        assert is_valid_update_deployment_node(
+        assert is_valid_update_node(
             validator,
-            update_deployment_node(api)
+            update_node(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -231,8 +231,8 @@ def test_update_deployment_node(api, validator):
             raise original_e
 
 
-def update_deployment_node_default(api):
-    endpoint_result = api.node_deployment.update_deployment_node(
+def update_node_default(api):
+    endpoint_result = api.node_deployment.update_node(
         active_validation=False,
         hostname='string',
         payload=None,
@@ -243,18 +243,18 @@ def update_deployment_node_default(api):
 
 
 @pytest.mark.node_deployment
-def test_update_deployment_node_default(api, validator):
+def test_update_node_default(api, validator):
     try:
-        assert is_valid_update_deployment_node(
+        assert is_valid_update_node(
             validator,
-            update_deployment_node_default(api)
+            update_node_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_deployment_node(json_schema_validate, obj):
+def is_valid_delete_node(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -265,19 +265,19 @@ def is_valid_delete_deployment_node(json_schema_validate, obj):
     return True
 
 
-def delete_deployment_node(api):
-    endpoint_result = api.node_deployment.delete_deployment_node(
+def delete_node(api):
+    endpoint_result = api.node_deployment.delete_node(
         hostname='string'
     )
     return endpoint_result
 
 
 @pytest.mark.node_deployment
-def test_delete_deployment_node(api, validator):
+def test_delete_node(api, validator):
     try:
-        assert is_valid_delete_deployment_node(
+        assert is_valid_delete_node(
             validator,
-            delete_deployment_node(api)
+            delete_node(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -285,19 +285,19 @@ def test_delete_deployment_node(api, validator):
             raise original_e
 
 
-def delete_deployment_node_default(api):
-    endpoint_result = api.node_deployment.delete_deployment_node(
+def delete_node_default(api):
+    endpoint_result = api.node_deployment.delete_node(
         hostname='string'
     )
     return endpoint_result
 
 
 @pytest.mark.node_deployment
-def test_delete_deployment_node_default(api, validator):
+def test_delete_node_default(api, validator):
     try:
-        assert is_valid_delete_deployment_node(
+        assert is_valid_delete_node(
             validator,
-            delete_deployment_node_default(api)
+            delete_node_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

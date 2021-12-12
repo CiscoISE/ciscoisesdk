@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine exportSystemCertificate data model.
+"""Identity Services Engine ExportSystemCertificate data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorDbe47028859573988880De76Fec0936(object):
-    """exportSystemCertificate request schema definition."""
+    """ExportSystemCertificate request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDbe47028859573988880De76Fec0936, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

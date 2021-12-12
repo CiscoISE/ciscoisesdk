@@ -30,7 +30,7 @@ from tests.environment import IDENTITY_SERVICES_ENGINE_VERSION
 pytestmark = pytest.mark.skipif(IDENTITY_SERVICES_ENGINE_VERSION != '3.1.1', reason='version does not match')
 
 
-def is_valid_get_all_task_status(json_schema_validate, obj):
+def is_valid_get_task_status(json_schema_validate, obj):
     if not obj:
         return False
     assert hasattr(obj, 'headers')
@@ -41,59 +41,9 @@ def is_valid_get_all_task_status(json_schema_validate, obj):
     return True
 
 
-def get_all_task_status(api):
-    endpoint_result = api.tasks.get_all_task_status(
-
-    )
-    return endpoint_result
-
-
-@pytest.mark.tasks
-def test_get_all_task_status(api, validator):
-    try:
-        assert is_valid_get_all_task_status(
-            validator,
-            get_all_task_status(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print("ERROR: {error}".format(error=original_e))
-            raise original_e
-
-
-def get_all_task_status_default(api):
-    endpoint_result = api.tasks.get_all_task_status(
-
-    )
-    return endpoint_result
-
-
-@pytest.mark.tasks
-def test_get_all_task_status_default(api, validator):
-    try:
-        assert is_valid_get_all_task_status(
-            validator,
-            get_all_task_status_default(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
-def is_valid_get_task_status(json_schema_validate, obj):
-    if not obj:
-        return False
-    assert hasattr(obj, 'headers')
-    assert hasattr(obj, 'content')
-    assert hasattr(obj, 'text')
-    assert hasattr(obj, 'response')
-    json_schema_validate('jsd_bcee1c9523a45056ab79dc64bdf827fe_v3_1_1').validate(obj.response)
-    return True
-
-
 def get_task_status(api):
     endpoint_result = api.tasks.get_task_status(
-        task_id='string'
+
     )
     return endpoint_result
 
@@ -113,7 +63,7 @@ def test_get_task_status(api, validator):
 
 def get_task_status_default(api):
     endpoint_result = api.tasks.get_task_status(
-        task_id='string'
+
     )
     return endpoint_result
 
@@ -124,6 +74,56 @@ def test_get_task_status_default(api, validator):
         assert is_valid_get_task_status(
             validator,
             get_task_status_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_get_task_status_by_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    json_schema_validate('jsd_bcee1c9523a45056ab79dc64bdf827fe_v3_1_1').validate(obj.response)
+    return True
+
+
+def get_task_status_by_id(api):
+    endpoint_result = api.tasks.get_task_status_by_id(
+        task_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.tasks
+def test_get_task_status_by_id(api, validator):
+    try:
+        assert is_valid_get_task_status_by_id(
+            validator,
+            get_task_status_by_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def get_task_status_by_id_default(api):
+    endpoint_result = api.tasks.get_task_status_by_id(
+        task_id='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.tasks
+def test_get_task_status_by_id_default(api, validator):
+    try:
+        assert is_valid_get_task_status_by_id(
+            validator,
+            get_task_status_by_id_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

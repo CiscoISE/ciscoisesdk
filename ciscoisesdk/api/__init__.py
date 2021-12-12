@@ -605,6 +605,8 @@ from .v3_1_1.identity_sequence import \
     IdentitySequence as IdentitySequence_v3_1_1
 from .v3_1_1.internal_user import \
     InternalUser as InternalUser_v3_1_1
+from .v3_1_1.licensing import \
+    Licensing as Licensing_v3_1_1
 from .v3_1_1.mdm import \
     Mdm as Mdm_v3_1_1
 from .v3_1_1.misc import \
@@ -651,10 +653,14 @@ from .v3_1_1.node_deployment import \
     NodeDeployment as NodeDeployment_v3_1_1
 from .v3_1_1.node_group import \
     NodeGroup as NodeGroup_v3_1_1
+from .v3_1_1.node_services import \
+    NodeServices as NodeServices_v3_1_1
 from .v3_1_1.node_details import \
     NodeDetails as NodeDetails_v3_1_1
 from .v3_1_1.pan_ha import \
     PanHa as PanHa_v3_1_1
+from .v3_1_1.patching import \
+    Patching as Patching_v3_1_1
 from .v3_1_1.portal_global_setting import \
     PortalGlobalSetting as PortalGlobalSetting_v3_1_1
 from .v3_1_1.portal_theme import \
@@ -735,12 +741,20 @@ from .v3_1_1.version_info import \
     VersionInfo as VersionInfo_v3_1_1
 from .v3_1_1.endpoint import \
     Endpoint as Endpoint_v3_1_1
+from .v3_1_1.nbar_app import \
+    NbarApp as NbarApp_v3_1_1
 from .v3_1_1.portal import \
     Portal as Portal_v3_1_1
+from .v3_1_1.proxy import \
+    Proxy as Proxy_v3_1_1
 from .v3_1_1.px_grid_node import \
     PxGridNode as PxGridNode_v3_1_1
 from .v3_1_1.tasks import \
     Tasks as Tasks_v3_1_1
+from .v3_1_1.telemetry import \
+    Telemetry as Telemetry_v3_1_1
+from .v3_1_1.virtual_network import \
+    VirtualNetwork as VirtualNetwork_v3_1_1
 from .custom_caller import CustomCaller
 import copy
 
@@ -2147,6 +2161,10 @@ class IdentityServicesEngineAPI(object):
                 InternalUser_v3_1_1(
                     self._session_ers, object_factory, _validator
                 )
+            self.licensing = \
+                Licensing_v3_1_1(
+                    self._session_ui, object_factory, _validator
+                )
             self.mdm = \
                 Mdm_v3_1_1(
                     self._session_px_grid, object_factory, _validator
@@ -2239,12 +2257,20 @@ class IdentityServicesEngineAPI(object):
                 NodeGroup_v3_1_1(
                     self._session_ui, object_factory, _validator
                 )
+            self.node_services = \
+                NodeServices_v3_1_1(
+                    self._session_ui, object_factory, _validator
+                )
             self.node_details = \
                 NodeDetails_v3_1_1(
                     self._session_ers, object_factory, _validator
                 )
             self.pan_ha = \
                 PanHa_v3_1_1(
+                    self._session_ui, object_factory, _validator
+                )
+            self.patching = \
+                Patching_v3_1_1(
                     self._session_ui, object_factory, _validator
                 )
             self.portal_global_setting = \
@@ -2407,9 +2433,17 @@ class IdentityServicesEngineAPI(object):
                 Endpoint_v3_1_1(
                     self._session_ers, object_factory, _validator
                 )
+            self.nbar_app = \
+                NbarApp_v3_1_1(
+                    self._session_ui, object_factory, _validator
+                )
             self.portal = \
                 Portal_v3_1_1(
                     self._session_ers, object_factory, _validator
+                )
+            self.proxy = \
+                Proxy_v3_1_1(
+                    self._session_ui, object_factory, _validator
                 )
             self.px_grid_node = \
                 PxGridNode_v3_1_1(
@@ -2417,6 +2451,14 @@ class IdentityServicesEngineAPI(object):
                 )
             self.tasks = \
                 Tasks_v3_1_1(
+                    self._session_ui, object_factory, _validator
+                )
+            self.telemetry = \
+                Telemetry_v3_1_1(
+                    self._session_ui, object_factory, _validator
+                )
+            self.virtual_network = \
+                VirtualNetwork_v3_1_1(
                     self._session_ui, object_factory, _validator
                 )
         self.custom_caller = \

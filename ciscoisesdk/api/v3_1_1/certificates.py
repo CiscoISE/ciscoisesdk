@@ -688,11 +688,11 @@ class Certificates(object):
 
         return self._object_factory('bpm_b8104a50fc565ae9a756d6d0152e0e5b_v3_1_1', _api_response)
 
-    def delete_csr(self,
-                   host_name,
-                   id,
-                   headers=None,
-                   **query_parameters):
+    def delete_csr_by_id(self,
+                         host_name,
+                         id,
+                         headers=None,
+                         **query_parameters):
         """This API deletes a Certificate Signing Request of a particular
         node based on given HostName and ID.
 
@@ -849,12 +849,12 @@ class Certificates(object):
 
         return self._object_factory('bpm_e6d1b224e058288a8c4d70be72c9a6_v3_1_1', _api_response)
 
-    def renew_certs(self,
-                    cert_type=None,
-                    headers=None,
-                    payload=None,
-                    active_validation=True,
-                    **query_parameters):
+    def renew_certificates(self,
+                           cert_type=None,
+                           headers=None,
+                           payload=None,
+                           active_validation=True,
+                           **query_parameters):
         """This API initiates regeneration of certificates. Response
         contains ID which can be used to track the status.
 
@@ -1174,14 +1174,16 @@ class Certificates(object):
 
         return self._object_factory('bpm_b94d7d3f0ed5d0b938151ae2cae9fa4_v3_1_1', _api_response)
 
-    def export_system_cert(self,
-                           export=None,
-                           id=None,
-                           password=None,
-                           headers=None,
-                           payload=None,
-                           active_validation=True,
-                           **query_parameters):
+    def export_system_certificate(self,
+                                  export=None,
+                                  id=None,
+                                  password=None,
+                                  dirpath=None,
+                                  save_file=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """    Export System Certificate.   Following parameters are used
         in POST body         PARAMETER   DESCRIPTION   EXAMPLE
         id * required   ID of a System Certificate (required).
@@ -1211,6 +1213,10 @@ class Certificates(object):
             id(string): id, property of the request body.
             password(string): password, property of the request
                 body.
+            dirpath(basestring): Directory absolute path. Defaults to
+                os.getcwd().
+            save_file(bool): Enable or disable automatic file creation of
+                raw response.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -1221,19 +1227,15 @@ class Certificates(object):
                 support for parameters that may be added in the future).
 
         Returns:
-
-            RestResponse: REST response with following properties:
-
-              - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
+            urllib3.response.HTTPResponse: HTTP Response container. For more
+            information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
+            DownloadFailure: If was not able to download the raw
+            response to a file.
         """
         check_type(headers, dict)
 
@@ -1282,9 +1284,11 @@ class Certificates(object):
         if with_custom_headers:
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                headers=_headers,
+                                               stream=True, dirpath=dirpath, save_file=save_file,
                                                **request_params)
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params,
+                                               stream=True, dirpath=dirpath, save_file=save_file,
                                                **request_params)
 
         return self._object_factory('bpm_dbe47028859573988880de76fec0936_v3_1_1', _api_response)
@@ -1662,32 +1666,32 @@ class Certificates(object):
 
         return self._object_factory('bpm_fdc480ada5105f60af5fbe922e5690e7_v3_1_1', _api_response)
 
-    def import_system_cert(self,
-                           admin=None,
-                           allow_extended_validity=None,
-                           allow_out_of_date_cert=None,
-                           allow_portal_tag_transfer_for_same_subject=None,
-                           allow_replacement_of_certificates=None,
-                           allow_replacement_of_portal_group_tag=None,
-                           allow_role_transfer_for_same_subject=None,
-                           allow_sha1_certificates=None,
-                           allow_wild_card_certificates=None,
-                           data=None,
-                           eap=None,
-                           ims=None,
-                           name=None,
-                           password=None,
-                           portal=None,
-                           portal_group_tag=None,
-                           private_key_data=None,
-                           pxgrid=None,
-                           radius=None,
-                           saml=None,
-                           validate_certificate_extensions=None,
-                           headers=None,
-                           payload=None,
-                           active_validation=True,
-                           **query_parameters):
+    def import_system_certificate(self,
+                                  admin=None,
+                                  allow_extended_validity=None,
+                                  allow_out_of_date_cert=None,
+                                  allow_portal_tag_transfer_for_same_subject=None,
+                                  allow_replacement_of_certificates=None,
+                                  allow_replacement_of_portal_group_tag=None,
+                                  allow_role_transfer_for_same_subject=None,
+                                  allow_sha1_certificates=None,
+                                  allow_wild_card_certificates=None,
+                                  data=None,
+                                  eap=None,
+                                  ims=None,
+                                  name=None,
+                                  password=None,
+                                  portal=None,
+                                  portal_group_tag=None,
+                                  private_key_data=None,
+                                  pxgrid=None,
+                                  radius=None,
+                                  saml=None,
+                                  validate_certificate_extensions=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """    Import an X509 certificate as a system certificate.   NOTE:
         The certificate may have a validity period longer than
         398 days. It may be untrusted by many browsers.   NOTE:
@@ -2228,29 +2232,29 @@ class Certificates(object):
 
         return self._object_factory('bpm_f36e90115b05416a71506061fed7e5c_v3_1_1', _api_response)
 
-    def update_system_cert(self,
-                           host_name,
-                           id,
-                           admin=None,
-                           allow_portal_tag_transfer_for_same_subject=None,
-                           allow_replacement_of_portal_group_tag=None,
-                           allow_role_transfer_for_same_subject=None,
-                           description=None,
-                           eap=None,
-                           expiration_ttl_period=None,
-                           expiration_ttl_units=None,
-                           ims=None,
-                           name=None,
-                           portal=None,
-                           portal_group_tag=None,
-                           pxgrid=None,
-                           radius=None,
-                           renew_self_signed_certificate=None,
-                           saml=None,
-                           headers=None,
-                           payload=None,
-                           active_validation=True,
-                           **query_parameters):
+    def update_system_certificate(self,
+                                  host_name,
+                                  id,
+                                  admin=None,
+                                  allow_portal_tag_transfer_for_same_subject=None,
+                                  allow_replacement_of_portal_group_tag=None,
+                                  allow_role_transfer_for_same_subject=None,
+                                  description=None,
+                                  eap=None,
+                                  expiration_ttl_period=None,
+                                  expiration_ttl_units=None,
+                                  ims=None,
+                                  name=None,
+                                  portal=None,
+                                  portal_group_tag=None,
+                                  pxgrid=None,
+                                  radius=None,
+                                  renew_self_signed_certificate=None,
+                                  saml=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """    Update a System Certificate.   NOTE:  Renewing a certificate
         causes an application server restart on the selected
         node.    NOTE:  Request parameters accepting True and
@@ -2746,35 +2750,37 @@ class Certificates(object):
             access_next_list=["nextPage", "href"],
             access_resource_list=["response"])
 
-    def export_trusted_cert(self,
-                            id,
-                            headers=None,
-                            **query_parameters):
+    def export_trusted_certificate(self,
+                                   id,
+                                   dirpath=None,
+                                   save_file=None,
+                                   headers=None,
+                                   **query_parameters):
         """The response of this API carries a trusted certificate file
         mapped to the requested ID.
 
         Args:
             id(basestring): id path parameter. ID of the Trusted
                 Certificate to be exported.
+            dirpath(basestring): Directory absolute path. Defaults to
+                os.getcwd().
+            save_file(bool): Enable or disable automatic file creation of
+                raw response.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
-
-            RestResponse: REST response with following properties:
-
-              - headers(MyDict): response headers.
-              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
-                or the bracket notation.
-              - content(bytes): representation of the request's response
-              - text(str): representation of the request's response
+            urllib3.response.HTTPResponse: HTTP Response container. For more
+            information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Identity Services Engine cloud returns an error.
+            DownloadFailure: If was not able to download the raw
+            response to a file.
         """
         check_type(headers, dict)
 
@@ -2802,28 +2808,30 @@ class Certificates(object):
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              headers=_headers)
+                                              headers=_headers,
+                                              stream=True, dirpath=dirpath, save_file=save_file)
         else:
-            _api_response = self._session.get(endpoint_full_url, params=_params)
+            _api_response = self._session.get(endpoint_full_url, params=_params,
+                                              stream=True, dirpath=dirpath, save_file=save_file)
 
         return self._object_factory('bpm_b62a711ce705542b5d1d92b7d3ca431_v3_1_1', _api_response)
 
-    def import_trust_cert(self,
-                          allow_basic_constraint_cafalse=None,
-                          allow_out_of_date_cert=None,
-                          allow_sha1_certificates=None,
-                          data=None,
-                          description=None,
-                          name=None,
-                          trust_for_certificate_based_admin_auth=None,
-                          trust_for_cisco_services_auth=None,
-                          trust_for_client_auth=None,
-                          trust_for_ise_auth=None,
-                          validate_certificate_extensions=None,
-                          headers=None,
-                          payload=None,
-                          active_validation=True,
-                          **query_parameters):
+    def import_trust_certificate(self,
+                                 allow_basic_constraint_cafalse=None,
+                                 allow_out_of_date_cert=None,
+                                 allow_sha1_certificates=None,
+                                 data=None,
+                                 description=None,
+                                 name=None,
+                                 trust_for_certificate_based_admin_auth=None,
+                                 trust_for_cisco_services_auth=None,
+                                 trust_for_client_auth=None,
+                                 trust_for_ise_auth=None,
+                                 validate_certificate_extensions=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """    Import an X509 certificate as a trust certificate.   NOTE:
         Request parameters accepting True and False as input can
         be replaced by 1 and 0 respectively.    Following

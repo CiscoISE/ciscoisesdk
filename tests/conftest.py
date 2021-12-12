@@ -185,6 +185,9 @@ def pytest_configure(config):
         "markers", "internal_user: internal_user wrapper test"
     )
     config.addinivalue_line(
+        "markers", "licensing: licensing wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "mdm: mdm wrapper test"
     )
     config.addinivalue_line(
@@ -254,10 +257,16 @@ def pytest_configure(config):
         "markers", "node_group: node_group wrapper test"
     )
     config.addinivalue_line(
+        "markers", "node_services: node_services wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "node_details: node_details wrapper test"
     )
     config.addinivalue_line(
         "markers", "pan_ha: pan_ha wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "patching: patching wrapper test"
     )
     config.addinivalue_line(
         "markers", "portal_global_setting: portal_global_setting wrapper test"
@@ -392,6 +401,9 @@ def pytest_configure(config):
         "markers", "portal: portal wrapper test"
     )
     config.addinivalue_line(
+        "markers", "proxy: proxy wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "px_grid_node: px_grid_node wrapper test"
     )
     config.addinivalue_line(
@@ -399,6 +411,9 @@ def pytest_configure(config):
     )
     config.addinivalue_line(
         "markers", "tasks: tasks wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "telemetry: telemetry wrapper test"
     )
     config.addinivalue_line(
         "markers", "virtual_network: virtual_network wrapper test"

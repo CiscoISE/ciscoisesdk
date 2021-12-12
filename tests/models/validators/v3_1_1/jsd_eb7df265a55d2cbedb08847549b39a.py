@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine getAllTaskStatus data model.
+"""Identity Services Engine GetTaskStatus data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorEb7Df265A55D2CBedb08847549B39A(object):
-    """getAllTaskStatus request schema definition."""
+    """GetTaskStatus request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEb7Df265A55D2CBedb08847549B39A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

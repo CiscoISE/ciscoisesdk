@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine renewCertificates data model.
+"""Identity Services Engine RenewCertificates data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorC288192F954309B4B35Aa612Ff226(object):
-    """renewCertificates request schema definition."""
+    """RenewCertificates request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC288192F954309B4B35Aa612Ff226, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

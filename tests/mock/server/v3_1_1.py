@@ -50,8 +50,28 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
     NODE_GROUP_fc44ec6afaf95ea9b51dd404abf46e4e_PATTERN = re.compile(r"/api/v1/deployment/node-group/string/add-node")
     NODE_GROUP_8fe420544d425d3d873632dbb6c1b8c2_PATTERN = re.compile(r"/api/v1/deployment/node-group/string/node")
     NODE_GROUP_19b1a343c45952a79d0bbfbadb02002b_PATTERN = re.compile(r"/api/v1/deployment/node-group/string/remove-node")
+    NODE_SERVICES_f6f429e124ea58ba85f0b34296d61300_PATTERN = re.compile(r"/api/v1/node/string/interface")
+    NODE_SERVICES_86620252ba4b550caf3845b4cbe1074d_PATTERN = re.compile(r"/api/v1/node/string/sxp-interface")
+    NODE_SERVICES_6c6d188a13915253869849c4b0be7759_PATTERN = re.compile(r"/api/v1/node/string/sxp-interface")
+    NODE_SERVICES_94bfa308ed7b5fb6acde734f6267b4e3_PATTERN = re.compile(r"/api/v1/profile/string")
+    NODE_SERVICES_bba25b96ab6c5a99a7e7933a1ef71977_PATTERN = re.compile(r"/api/v1/profile/string")
     PAN_HA_02daa171ab765a02a714c48376b3790d_PATTERN = re.compile(r"/api/v1/deployment/pan-ha")
     PAN_HA_beae5f8477835ee9b8407a50fcfebd2e_PATTERN = re.compile(r"/api/v1/deployment/pan-ha")
+    LICENSING_10deae9edd2c53f39c64695de70e8120_PATTERN = re.compile(r"/api/v1/license/system/connection-type")
+    LICENSING_d7f0e3aa9642540cb8c9c31f95f6c317_PATTERN = re.compile(r"/api/v1/license/system/eval-license")
+    LICENSING_d73e6ed50d6d5f10b75c773a1df2fcfd_PATTERN = re.compile(r"/api/v1/license/system/feature-to-tier-mapping")
+    LICENSING_fb4dcfcdb3e3528380bcc644fa9656b5_PATTERN = re.compile(r"/api/v1/license/system/register")
+    LICENSING_8ef3dd04312255cc9b5605141bf8fd03_PATTERN = re.compile(r"/api/v1/license/system/register")
+    LICENSING_53c3b7a2b80553559ed00849b25715c5_PATTERN = re.compile(r"/api/v1/license/system/smart-state")
+    LICENSING_82bb02a9d24c5cda91845fec33541553_PATTERN = re.compile(r"/api/v1/license/system/smart-state")
+    LICENSING_3249312d398d5702ab68df0bbca8520f_PATTERN = re.compile(r"/api/v1/license/system/tier-state")
+    LICENSING_98d89f61af725550ba6291585d77463b_PATTERN = re.compile(r"/api/v1/license/system/tier-state")
+    PATCHING_20505f21b6f9513bb973027ba49f7c0d_PATTERN = re.compile(r"/api/v1/hotpatch")
+    PATCHING_a59ee76eaca6561888e738155395eaeb_PATTERN = re.compile(r"/api/v1/hotpatch/install")
+    PATCHING_f65b1178749c5f2399a9d2395591dade_PATTERN = re.compile(r"/api/v1/hotpatch/rollback")
+    PATCHING_df2031d0bbb75aa0898d8b2ee2635fae_PATTERN = re.compile(r"/api/v1/patch")
+    PATCHING_c6c3a7326c6a542899be49cb9289e1ae_PATTERN = re.compile(r"/api/v1/patch/install")
+    PATCHING_207bbf4f0a09516dbb4d0c7d7416fb20_PATTERN = re.compile(r"/api/v1/patch/rollback")
     DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7e09c429220955d89449e67ad583daa0_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication")
     DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_31cb8dda6fd7555d9251dfba9042378d_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication")
     DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_d7d1204f3ee653d2bc8f67bbe41919e7_PATTERN = re.compile(r"/device-admin/policy-set/string/authentication/reset-hitcount")
@@ -184,8 +204,25 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
     REPOSITORY_f757b04825bb5c29a1b3475aae870d04_PATTERN = re.compile(r"/api/v1/repository/string")
     REPOSITORY_12e3bcabbd0e5e899945592039694139_PATTERN = re.compile(r"/api/v1/repository/string")
     REPOSITORY_4c6f272fde105e50a210f88a9e3f032c_PATTERN = re.compile(r"/api/v1/repository/string/files")
+    PROXY_d788d0c12f7956f0b7e37810d21f10f1_PATTERN = re.compile(r"/api/v1/system-settings/proxy")
+    PROXY_6903ddc568fc56f7b6310160e3fb3b2f_PATTERN = re.compile(r"/api/v1/system-settings/proxy")
+    TELEMETRY_5f8b7d18b20e59428e711c8c762216ab_PATTERN = re.compile(r"/api/v1/system-settings/telemetry/transport-gateway")
+    TELEMETRY_b5d7c38199c9502f9f4233d5002cb7f6_PATTERN = re.compile(r"/api/v1/system-settings/telemetry/transport-gateway")
     TASKS_38eb7df265a55d2cbedb08847549b39a_PATTERN = re.compile(r"/api/v1/task")
     TASKS_bcee1c9523a45056ab79dc64bdf827fe_PATTERN = re.compile(r"/api/v1/task/string")
+    NBAR_APP_1e8a476ad8455fdebad0d8973c810495_PATTERN = re.compile(r"/api/v1/trustsec/sgacl/nbarapp")
+    NBAR_APP_ccc30178afce5e51a65e96cd95ca1773_PATTERN = re.compile(r"/api/v1/trustsec/sgacl/nbarapp")
+    NBAR_APP_61e99726f3745554a07ee102f74fe3bd_PATTERN = re.compile(r"/api/v1/trustsec/sgacl/nbarapp/string")
+    NBAR_APP_b55622f1671359919573b261ba16ea71_PATTERN = re.compile(r"/api/v1/trustsec/sgacl/nbarapp/string")
+    NBAR_APP_44d289d5685350f5b00f130db0a45142_PATTERN = re.compile(r"/api/v1/trustsec/sgacl/nbarapp/string")
+    VIRTUAL_NETWORK_2199bd42dc595dd68ab56120039f89f1_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork")
+    VIRTUAL_NETWORK_fe478ea1775758638d714efe1b67eec2_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork")
+    VIRTUAL_NETWORK_f7253733d7025c8b8459478b159e84fc_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/bulk/create")
+    VIRTUAL_NETWORK_b6cdd5dd57b95d8bac87ce9600a84b5d_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/bulk/delete")
+    VIRTUAL_NETWORK_e3c62bba9f9e5344a38479f6437cf8b4_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/bulk/update")
+    VIRTUAL_NETWORK_d89686dd9cb05c02833cdefc5d3ba9f2_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/string")
+    VIRTUAL_NETWORK_6d02f9a7ed46581b8baf07e182f80695_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/string")
+    VIRTUAL_NETWORK_30f7fda88868581085da6ac8c0e04b5c_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/string")
     ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345_PATTERN = re.compile(r"/ers/config/ancendpoint/string")
     ANC_ENDPOINT_2131fc6670fd50dfb04b1f6b16981256_PATTERN = re.compile(r"/ers/config/ancendpoint/clear")
     ANC_ENDPOINT_502e681462295b8b8faea9ce6099ff0c_PATTERN = re.compile(r"/ers/config/ancendpoint")
@@ -847,7 +884,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_delete_csr_response(self):
+    def certificates_delete_csr_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -883,7 +920,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_renew_certs_response(self):
+    def certificates_renew_certificates_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -919,7 +956,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_export_system_cert_response(self):
+    def certificates_export_system_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -955,7 +992,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_import_system_cert_response(self):
+    def certificates_import_system_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1009,7 +1046,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_update_system_cert_response(self):
+    def certificates_update_system_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1063,7 +1100,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_export_trusted_cert_response(self):
+    def certificates_export_trusted_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1081,7 +1118,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def certificates_import_trust_cert_response(self):
+    def certificates_import_trust_certificate_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1153,7 +1190,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def node_deployment_get_deployment_nodes_response(self):
+    def node_deployment_get_nodes_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1207,7 +1244,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def node_deployment_update_deployment_node_response(self):
+    def node_deployment_update_node_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1225,7 +1262,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def node_deployment_delete_deployment_node_response(self):
+    def node_deployment_delete_node_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -1453,6 +1490,96 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
+    def matches_NODE_SERVICES_f6f429e124ea58ba85f0b34296d61300(self):
+        return re.search(
+            self.NODE_SERVICES_f6f429e124ea58ba85f0b34296d61300_PATTERN,
+            self.path
+        )
+
+    def node_services_get_interfaces_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'interface': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NODE_SERVICES_86620252ba4b550caf3845b4cbe1074d(self):
+        return re.search(
+            self.NODE_SERVICES_86620252ba4b550caf3845b4cbe1074d_PATTERN,
+            self.path
+        )
+
+    def node_services_get_sxp_interface_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'interface': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NODE_SERVICES_6c6d188a13915253869849c4b0be7759(self):
+        return re.search(
+            self.NODE_SERVICES_6c6d188a13915253869849c4b0be7759_PATTERN,
+            self.path
+        )
+
+    def node_services_set_sxp_interface_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'success': {'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NODE_SERVICES_94bfa308ed7b5fb6acde734f6267b4e3(self):
+        return re.search(
+            self.NODE_SERVICES_94bfa308ed7b5fb6acde734f6267b4e3_PATTERN,
+            self.path
+        )
+
+    def node_services_get_profiler_probe_config_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'activeDirectory': {'daysBeforeRescan': 0}, 'dhcp': {'interfaces': [{'interface': 'string'}], 'port': 0}, 'dhcpSpan': {'interfaces': [{'interface': 'string'}]}, 'dns': {'timeout': 0}, 'http': {'interfaces': [{'interface': 'string'}]}, 'netflow': {'interfaces': [{'interface': 'string'}], 'port': 0}, 'nmap': [{}], 'pxgrid': [{}], 'radius': [{}], 'snmpQuery': {'eventTimeout': 0, 'retries': 0, 'timeout': 0}, 'snmpTrap': {'interfaces': [{'interface': 'string'}], 'linkTrapQuery': True, 'macTrapQuery': True, 'port': 0}}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NODE_SERVICES_bba25b96ab6c5a99a7e7933a1ef71977(self):
+        return re.search(
+            self.NODE_SERVICES_bba25b96ab6c5a99a7e7933a1ef71977_PATTERN,
+            self.path
+        )
+
+    def node_services_set_profiler_probe_config_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'success': {'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
     def matches_PAN_HA_02daa171ab765a02a714c48376b3790d(self):
         return re.search(
             self.PAN_HA_02daa171ab765a02a714c48376b3790d_PATTERN,
@@ -1486,6 +1613,276 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.end_headers()
         # Add response content.
         response_content = json.dumps({'success': {'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_10deae9edd2c53f39c64695de70e8120(self):
+        return re.search(
+            self.LICENSING_10deae9edd2c53f39c64695de70e8120_PATTERN,
+            self.path
+        )
+
+    def licensing_get_connection_type_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'connectionType': 'string', 'state': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_d7f0e3aa9642540cb8c9c31f95f6c317(self):
+        return re.search(
+            self.LICENSING_d7f0e3aa9642540cb8c9c31f95f6c317_PATTERN,
+            self.path
+        )
+
+    def licensing_get_eval_license_info_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'daysRemaining': 0})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_d73e6ed50d6d5f10b75c773a1df2fcfd(self):
+        return re.search(
+            self.LICENSING_d73e6ed50d6d5f10b75c773a1df2fcfd_PATTERN,
+            self.path
+        )
+
+    def licensing_get_feature_to_tier_mapping_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'featureName': ['string'], 'tier': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_fb4dcfcdb3e3528380bcc644fa9656b5(self):
+        return re.search(
+            self.LICENSING_fb4dcfcdb3e3528380bcc644fa9656b5_PATTERN,
+            self.path
+        )
+
+    def licensing_get_registration_info_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'connectionType': 'string', 'registrationState': 'string', 'ssmOnPremServer': 'string', 'tier': ['string']}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_8ef3dd04312255cc9b5605141bf8fd03(self):
+        return re.search(
+            self.LICENSING_8ef3dd04312255cc9b5605141bf8fd03_PATTERN,
+            self.path
+        )
+
+    def licensing_create_registration_info_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps('string')
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_53c3b7a2b80553559ed00849b25715c5(self):
+        return re.search(
+            self.LICENSING_53c3b7a2b80553559ed00849b25715c5_PATTERN,
+            self.path
+        )
+
+    def licensing_get_smart_state_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'connectionType': 'string', 'state': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_82bb02a9d24c5cda91845fec33541553(self):
+        return re.search(
+            self.LICENSING_82bb02a9d24c5cda91845fec33541553_PATTERN,
+            self.path
+        )
+
+    def licensing_configure_smart_state_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps('string')
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_3249312d398d5702ab68df0bbca8520f(self):
+        return re.search(
+            self.LICENSING_3249312d398d5702ab68df0bbca8520f_PATTERN,
+            self.path
+        )
+
+    def licensing_get_tier_state_info_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps([{'compliance': 'string', 'consumptionCounter': 0, 'daysOutOfCompliance': 'string', 'lastAuthorization': 'string', 'name': 'string', 'status': 'string'}])
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_LICENSING_98d89f61af725550ba6291585d77463b(self):
+        return re.search(
+            self.LICENSING_98d89f61af725550ba6291585d77463b_PATTERN,
+            self.path
+        )
+
+    def licensing_update_tier_state_info_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'message': 'string', 'name': 'string', 'status': 'string'}], 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_PATCHING_20505f21b6f9513bb973027ba49f7c0d(self):
+        return re.search(
+            self.PATCHING_20505f21b6f9513bb973027ba49f7c0d_PATTERN,
+            self.path
+        )
+
+    def patching_list_installed_hotpatches_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'hotpatchName': 'string', 'installDate': 'string'}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_PATCHING_a59ee76eaca6561888e738155395eaeb(self):
+        return re.search(
+            self.PATCHING_a59ee76eaca6561888e738155395eaeb_PATTERN,
+            self.path
+        )
+
+    def patching_install_hotpatch_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_PATCHING_f65b1178749c5f2399a9d2395591dade(self):
+        return re.search(
+            self.PATCHING_f65b1178749c5f2399a9d2395591dade_PATTERN,
+            self.path
+        )
+
+    def patching_rollback_hotpatch_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_PATCHING_df2031d0bbb75aa0898d8b2ee2635fae(self):
+        return re.search(
+            self.PATCHING_df2031d0bbb75aa0898d8b2ee2635fae_PATTERN,
+            self.path
+        )
+
+    def patching_list_installed_patches_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'iseVersion': 'string', 'patchVersion': [{'installDate': 'string', 'patchNumber': 0}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_PATCHING_c6c3a7326c6a542899be49cb9289e1ae(self):
+        return re.search(
+            self.PATCHING_c6c3a7326c6a542899be49cb9289e1ae_PATTERN,
+            self.path
+        )
+
+    def patching_install_patch_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'message': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_PATCHING_207bbf4f0a09516dbb4d0c7d7416fb20(self):
+        return re.search(
+            self.PATCHING_207bbf4f0a09516dbb4d0c7d7416fb20_PATTERN,
+            self.path
+        )
+
+    def patching_rollback_patch_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'id': 'string', 'message': 'string'}, 'version': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -3865,13 +4262,85 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
+    def matches_PROXY_d788d0c12f7956f0b7e37810d21f10f1(self):
+        return re.search(
+            self.PROXY_d788d0c12f7956f0b7e37810d21f10f1_PATTERN,
+            self.path
+        )
+
+    def proxy_get_proxy_connection_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'bypassHosts': 'string', 'fqdn': 'string', 'password': 'string', 'passwordRequired': True, 'port': 0, 'userName': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_PROXY_6903ddc568fc56f7b6310160e3fb3b2f(self):
+        return re.search(
+            self.PROXY_6903ddc568fc56f7b6310160e3fb3b2f_PATTERN,
+            self.path
+        )
+
+    def proxy_update_proxy_connection_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'bypassHosts': 'string', 'fqdn': 'string', 'password': 'string', 'passwordRequired': True, 'port': 0, 'userName': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_TELEMETRY_5f8b7d18b20e59428e711c8c762216ab(self):
+        return re.search(
+            self.TELEMETRY_5f8b7d18b20e59428e711c8c762216ab_PATTERN,
+            self.path
+        )
+
+    def telemetry_get_transport_gateway_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'enableTransportGateway': True, 'url': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_TELEMETRY_b5d7c38199c9502f9f4233d5002cb7f6(self):
+        return re.search(
+            self.TELEMETRY_b5d7c38199c9502f9f4233d5002cb7f6_PATTERN,
+            self.path
+        )
+
+    def telemetry_update_transport_gateway_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': {'enableTransportGateway': True, 'url': 'string'}, 'version': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
     def matches_TASKS_38eb7df265a55d2cbedb08847549b39a(self):
         return re.search(
             self.TASKS_38eb7df265a55d2cbedb08847549b39a_PATTERN,
             self.path
         )
 
-    def tasks_get_all_task_status_response(self):
+    def tasks_get_task_status_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3889,7 +4358,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.path
         )
 
-    def tasks_get_task_status_response(self):
+    def tasks_get_task_status_by_id_response(self):
         # Add response status code.
         self.send_response(requests.codes.ok)
         # Add response headers.
@@ -3898,6 +4367,240 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.end_headers()
         # Add response content.
         response_content = json.dumps({'detailStatus': [{}], 'executionStatus': 'string', 'failCount': 0, 'id': 'string', 'moduleType': 'string', 'resourcesCount': 0, 'startTime': 'string', 'successCount': 0})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NBAR_APP_1e8a476ad8455fdebad0d8973c810495(self):
+        return re.search(
+            self.NBAR_APP_1e8a476ad8455fdebad0d8973c810495_PATTERN,
+            self.path
+        )
+
+    def nbar_app_get_nbar_apps_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'description': 'string', 'id': 'string', 'name': 'string', 'networkIdentities': [{'ports': 'string', 'protocol': 'string'}]}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NBAR_APP_ccc30178afce5e51a65e96cd95ca1773(self):
+        return re.search(
+            self.NBAR_APP_ccc30178afce5e51a65e96cd95ca1773_PATTERN,
+            self.path
+        )
+
+    def nbar_app_create_nbar_app_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NBAR_APP_61e99726f3745554a07ee102f74fe3bd(self):
+        return re.search(
+            self.NBAR_APP_61e99726f3745554a07ee102f74fe3bd_PATTERN,
+            self.path
+        )
+
+    def nbar_app_get_nbar_app_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'description': 'string', 'id': 'string', 'name': 'string', 'networkIdentities': [{'ports': 'string', 'protocol': 'string'}]}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NBAR_APP_b55622f1671359919573b261ba16ea71(self):
+        return re.search(
+            self.NBAR_APP_b55622f1671359919573b261ba16ea71_PATTERN,
+            self.path
+        )
+
+    def nbar_app_update_nbar_app_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'code': 0, 'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NBAR_APP_44d289d5685350f5b00f130db0a45142(self):
+        return re.search(
+            self.NBAR_APP_44d289d5685350f5b00f130db0a45142_PATTERN,
+            self.path
+        )
+
+    def nbar_app_delete_nbar_app_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VIRTUAL_NETWORK_2199bd42dc595dd68ab56120039f89f1(self):
+        return re.search(
+            self.VIRTUAL_NETWORK_2199bd42dc595dd68ab56120039f89f1_PATTERN,
+            self.path
+        )
+
+    def virtual_network_get_virtual_networks_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'additionalAttributes': 'string', 'id': 'string', 'lastUpdate': 'string', 'name': 'string'}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VIRTUAL_NETWORK_fe478ea1775758638d714efe1b67eec2(self):
+        return re.search(
+            self.VIRTUAL_NETWORK_fe478ea1775758638d714efe1b67eec2_PATTERN,
+            self.path
+        )
+
+    def virtual_network_create_virtual_network_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VIRTUAL_NETWORK_f7253733d7025c8b8459478b159e84fc(self):
+        return re.search(
+            self.VIRTUAL_NETWORK_f7253733d7025c8b8459478b159e84fc_PATTERN,
+            self.path
+        )
+
+    def virtual_network_bulk_create_virtual_networks_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VIRTUAL_NETWORK_b6cdd5dd57b95d8bac87ce9600a84b5d(self):
+        return re.search(
+            self.VIRTUAL_NETWORK_b6cdd5dd57b95d8bac87ce9600a84b5d_PATTERN,
+            self.path
+        )
+
+    def virtual_network_bulk_delete_virtual_networks_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VIRTUAL_NETWORK_e3c62bba9f9e5344a38479f6437cf8b4(self):
+        return re.search(
+            self.VIRTUAL_NETWORK_e3c62bba9f9e5344a38479f6437cf8b4_PATTERN,
+            self.path
+        )
+
+    def virtual_network_bulk_update_virtual_networks_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VIRTUAL_NETWORK_d89686dd9cb05c02833cdefc5d3ba9f2(self):
+        return re.search(
+            self.VIRTUAL_NETWORK_d89686dd9cb05c02833cdefc5d3ba9f2_PATTERN,
+            self.path
+        )
+
+    def virtual_network_get_virtual_network_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'additionalAttributes': 'string', 'id': 'string', 'lastUpdate': 'string', 'name': 'string'}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VIRTUAL_NETWORK_6d02f9a7ed46581b8baf07e182f80695(self):
+        return re.search(
+            self.VIRTUAL_NETWORK_6d02f9a7ed46581b8baf07e182f80695_PATTERN,
+            self.path
+        )
+
+    def virtual_network_update_virtual_network_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'code': 0, 'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VIRTUAL_NETWORK_30f7fda88868581085da6ac8c0e04b5c(self):
+        return re.search(
+            self.VIRTUAL_NETWORK_30f7fda88868581085da6ac8c0e04b5c_PATTERN,
+            self.path
+        )
+
+    def virtual_network_delete_virtual_network_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -12140,7 +12843,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_1b62a711ce705542b5d1d92b7d3ca431():
-            self.certificates_export_trusted_cert_response()
+            self.certificates_export_trusted_certificate_response()
             return
 
         if self.matches_CERTIFICATES_1091757f8f4956d29b821fa9bbf23266():
@@ -12148,7 +12851,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             return
 
         if self.matches_NODE_DEPLOYMENT_51b95cb82a8954c5a785140a9a8f3156():
-            self.node_deployment_get_deployment_nodes_response()
+            self.node_deployment_get_nodes_response()
             return
 
         if self.matches_NODE_DEPLOYMENT_ae8d7c8f33bb52ceb04880845f2f45ba():
@@ -12167,8 +12870,52 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.node_group_get_nodes_response()
             return
 
+        if self.matches_NODE_SERVICES_f6f429e124ea58ba85f0b34296d61300():
+            self.node_services_get_interfaces_response()
+            return
+
+        if self.matches_NODE_SERVICES_86620252ba4b550caf3845b4cbe1074d():
+            self.node_services_get_sxp_interface_response()
+            return
+
+        if self.matches_NODE_SERVICES_94bfa308ed7b5fb6acde734f6267b4e3():
+            self.node_services_get_profiler_probe_config_response()
+            return
+
         if self.matches_PAN_HA_02daa171ab765a02a714c48376b3790d():
             self.pan_ha_get_pan_ha_status_response()
+            return
+
+        if self.matches_LICENSING_10deae9edd2c53f39c64695de70e8120():
+            self.licensing_get_connection_type_response()
+            return
+
+        if self.matches_LICENSING_d7f0e3aa9642540cb8c9c31f95f6c317():
+            self.licensing_get_eval_license_info_response()
+            return
+
+        if self.matches_LICENSING_d73e6ed50d6d5f10b75c773a1df2fcfd():
+            self.licensing_get_feature_to_tier_mapping_response()
+            return
+
+        if self.matches_LICENSING_fb4dcfcdb3e3528380bcc644fa9656b5():
+            self.licensing_get_registration_info_response()
+            return
+
+        if self.matches_LICENSING_53c3b7a2b80553559ed00849b25715c5():
+            self.licensing_get_smart_state_response()
+            return
+
+        if self.matches_LICENSING_3249312d398d5702ab68df0bbca8520f():
+            self.licensing_get_tier_state_info_response()
+            return
+
+        if self.matches_PATCHING_20505f21b6f9513bb973027ba49f7c0d():
+            self.patching_list_installed_hotpatches_response()
+            return
+
+        if self.matches_PATCHING_df2031d0bbb75aa0898d8b2ee2635fae():
+            self.patching_list_installed_patches_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_7e09c429220955d89449e67ad583daa0():
@@ -12415,12 +13162,36 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.repository_get_repository_files_response()
             return
 
+        if self.matches_PROXY_d788d0c12f7956f0b7e37810d21f10f1():
+            self.proxy_get_proxy_connection_response()
+            return
+
+        if self.matches_TELEMETRY_5f8b7d18b20e59428e711c8c762216ab():
+            self.telemetry_get_transport_gateway_response()
+            return
+
         if self.matches_TASKS_38eb7df265a55d2cbedb08847549b39a():
-            self.tasks_get_all_task_status_response()
+            self.tasks_get_task_status_response()
             return
 
         if self.matches_TASKS_bcee1c9523a45056ab79dc64bdf827fe():
-            self.tasks_get_task_status_response()
+            self.tasks_get_task_status_by_id_response()
+            return
+
+        if self.matches_NBAR_APP_1e8a476ad8455fdebad0d8973c810495():
+            self.nbar_app_get_nbar_apps_response()
+            return
+
+        if self.matches_NBAR_APP_61e99726f3745554a07ee102f74fe3bd():
+            self.nbar_app_get_nbar_app_by_id_response()
+            return
+
+        if self.matches_VIRTUAL_NETWORK_2199bd42dc595dd68ab56120039f89f1():
+            self.virtual_network_get_virtual_networks_response()
+            return
+
+        if self.matches_VIRTUAL_NETWORK_d89686dd9cb05c02833cdefc5d3ba9f2():
+            self.virtual_network_get_virtual_network_by_id_response()
             return
 
         if self.matches_ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345():
@@ -13406,7 +14177,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_254c288192f954309b4b35aa612ff226():
-            self.certificates_renew_certs_response()
+            self.certificates_renew_certificates_response()
             return
 
         if self.matches_CERTIFICATES_2b94d7d3f0ed5d0b938151ae2cae9fa4():
@@ -13414,7 +14185,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_1dbe47028859573988880de76fec0936():
-            self.certificates_export_system_cert_response()
+            self.certificates_export_system_certificate_response()
             return
 
         if self.matches_CERTIFICATES_fdc480ada5105f60af5fbe922e5690e7():
@@ -13422,11 +14193,11 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_517e6c7251a8508597f1b7ae61cbf953():
-            self.certificates_import_system_cert_response()
+            self.certificates_import_system_certificate_response()
             return
 
         if self.matches_CERTIFICATES_c8cd2f618b655d988ce626e579486596():
-            self.certificates_import_trust_cert_response()
+            self.certificates_import_trust_certificate_response()
             return
 
         if self.matches_NODE_DEPLOYMENT_58d0ee193cc65780af11ed96b1758755():
@@ -13459,6 +14230,34 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
 
         if self.matches_NODE_GROUP_19b1a343c45952a79d0bbfbadb02002b():
             self.node_group_remove_node_response()
+            return
+
+        if self.matches_LICENSING_8ef3dd04312255cc9b5605141bf8fd03():
+            self.licensing_create_registration_info_response()
+            return
+
+        if self.matches_LICENSING_82bb02a9d24c5cda91845fec33541553():
+            self.licensing_configure_smart_state_response()
+            return
+
+        if self.matches_LICENSING_98d89f61af725550ba6291585d77463b():
+            self.licensing_update_tier_state_info_response()
+            return
+
+        if self.matches_PATCHING_a59ee76eaca6561888e738155395eaeb():
+            self.patching_install_hotpatch_response()
+            return
+
+        if self.matches_PATCHING_f65b1178749c5f2399a9d2395591dade():
+            self.patching_rollback_hotpatch_response()
+            return
+
+        if self.matches_PATCHING_c6c3a7326c6a542899be49cb9289e1ae():
+            self.patching_install_patch_response()
+            return
+
+        if self.matches_PATCHING_207bbf4f0a09516dbb4d0c7d7416fb20():
+            self.patching_rollback_patch_response()
             return
 
         if self.matches_DEVICE_ADMINISTRATION_AUTHENTICATION_RULES_31cb8dda6fd7555d9251dfba9042378d():
@@ -13575,6 +14374,26 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
 
         if self.matches_REPOSITORY_9a207a157244508c99bf3e9abb26aab8():
             self.repository_create_repository_response()
+            return
+
+        if self.matches_NBAR_APP_ccc30178afce5e51a65e96cd95ca1773():
+            self.nbar_app_create_nbar_app_response()
+            return
+
+        if self.matches_VIRTUAL_NETWORK_fe478ea1775758638d714efe1b67eec2():
+            self.virtual_network_create_virtual_network_response()
+            return
+
+        if self.matches_VIRTUAL_NETWORK_f7253733d7025c8b8459478b159e84fc():
+            self.virtual_network_bulk_create_virtual_networks_response()
+            return
+
+        if self.matches_VIRTUAL_NETWORK_b6cdd5dd57b95d8bac87ce9600a84b5d():
+            self.virtual_network_bulk_delete_virtual_networks_response()
+            return
+
+        if self.matches_VIRTUAL_NETWORK_e3c62bba9f9e5344a38479f6437cf8b4():
+            self.virtual_network_bulk_update_virtual_networks_response()
             return
 
         if self.matches_ANC_POLICY_2acfdb4060de5a1895b383238c205986():
@@ -13864,7 +14683,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             return
 
         if self.matches_CERTIFICATES_48fb9c22ad9a5eddb590c85abdab460b():
-            self.certificates_update_system_cert_response()
+            self.certificates_update_system_certificate_response()
             return
 
         if self.matches_CERTIFICATES_239661cb625d5ad0ad76b93282f5818a():
@@ -13872,11 +14691,19 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             return
 
         if self.matches_NODE_DEPLOYMENT_682c1fa3bf115c77be99b602aca1493b():
-            self.node_deployment_update_deployment_node_response()
+            self.node_deployment_update_node_response()
             return
 
         if self.matches_NODE_GROUP_fbd772420b8851349aa58fb4a9b006b8():
             self.node_group_update_node_group_response()
+            return
+
+        if self.matches_NODE_SERVICES_6c6d188a13915253869849c4b0be7759():
+            self.node_services_set_sxp_interface_response()
+            return
+
+        if self.matches_NODE_SERVICES_bba25b96ab6c5a99a7e7933a1ef71977():
+            self.node_services_set_profiler_probe_config_response()
             return
 
         if self.matches_PAN_HA_beae5f8477835ee9b8407a50fcfebd2e():
@@ -13965,6 +14792,22 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
 
         if self.matches_REPOSITORY_f757b04825bb5c29a1b3475aae870d04():
             self.repository_update_repository_response()
+            return
+
+        if self.matches_PROXY_6903ddc568fc56f7b6310160e3fb3b2f():
+            self.proxy_update_proxy_connection_response()
+            return
+
+        if self.matches_TELEMETRY_b5d7c38199c9502f9f4233d5002cb7f6():
+            self.telemetry_update_transport_gateway_response()
+            return
+
+        if self.matches_NBAR_APP_b55622f1671359919573b261ba16ea71():
+            self.nbar_app_update_nbar_app_by_id_response()
+            return
+
+        if self.matches_VIRTUAL_NETWORK_6d02f9a7ed46581b8baf07e182f80695():
+            self.virtual_network_update_virtual_network_by_id_response()
             return
 
         if self.matches_ANC_ENDPOINT_2131fc6670fd50dfb04b1f6b16981256():
@@ -14378,7 +15221,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
     def do_DELETE(self):
 
         if self.matches_CERTIFICATES_bf792ec664fa5202beb776556908b0c1():
-            self.certificates_delete_csr_response()
+            self.certificates_delete_csr_by_id_response()
             return
 
         if self.matches_CERTIFICATES_35241dc2eec65ad680a3c5de47cd87c8():
@@ -14390,7 +15233,7 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             return
 
         if self.matches_NODE_DEPLOYMENT_161d26670a205a78800cb50673027a6e():
-            self.node_deployment_delete_deployment_node_response()
+            self.node_deployment_delete_node_response()
             return
 
         if self.matches_NODE_GROUP_b2eacaba249e5762874a801f71631ae8():
@@ -14479,6 +15322,14 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
 
         if self.matches_REPOSITORY_12e3bcabbd0e5e899945592039694139():
             self.repository_delete_repository_response()
+            return
+
+        if self.matches_NBAR_APP_44d289d5685350f5b00f130db0a45142():
+            self.nbar_app_delete_nbar_app_by_id_response()
+            return
+
+        if self.matches_VIRTUAL_NETWORK_30f7fda88868581085da6ac8c0e04b5c():
+            self.virtual_network_delete_virtual_network_by_id_response()
             return
 
         if self.matches_ANC_POLICY_7c6b8dd764e052699d4d7a0d8ba43640():

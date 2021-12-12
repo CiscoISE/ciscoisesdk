@@ -73,11 +73,11 @@ class NodeDeployment(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_deployment_nodes(self,
-                             filter=None,
-                             filter_type=None,
-                             headers=None,
-                             **query_parameters):
+    def get_nodes(self,
+                  filter=None,
+                  filter_type=None,
+                  headers=None,
+                  **query_parameters):
         """The API lists all the nodes that are deployed in the cluster.
         Returns basic information about each of the deployed
         nodes in the cluster like hostname, status, roles, and
@@ -361,14 +361,14 @@ class NodeDeployment(object):
             **query_parameters
         )
 
-    def update_deployment_node(self,
-                               hostname,
-                               roles=None,
-                               services=None,
-                               headers=None,
-                               payload=None,
-                               active_validation=True,
-                               **query_parameters):
+    def update_node(self,
+                    hostname,
+                    roles=None,
+                    services=None,
+                    headers=None,
+                    payload=None,
+                    active_validation=True,
+                    **query_parameters):
         """This API updates the configuration of the Cisco ISE node with
         the configuration provided.   Approximate execution time
         300 seconds. .
@@ -471,10 +471,10 @@ class NodeDeployment(object):
 
         return self._object_factory('bpm_c1fa3bf115c77be99b602aca1493b_v3_1_1', _api_response)
 
-    def delete_deployment_node(self,
-                               hostname,
-                               headers=None,
-                               **query_parameters):
+    def delete_node(self,
+                    hostname,
+                    headers=None,
+                    **query_parameters):
         """The deregistered node becomes a standalone Cisco ISE node.  It
         retains the last configuration that it received from the
         primary PAN and assumes the default roles and services

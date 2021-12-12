@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine deleteNode data model.
+"""Identity Services Engine DeleteNode data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -38,7 +38,7 @@ from builtins import *
 
 
 class JSONSchemaValidatorD26670A205A78800CB50673027A6E(object):
-    """deleteNode request schema definition."""
+    """DeleteNode request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD26670A205A78800CB50673027A6E, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

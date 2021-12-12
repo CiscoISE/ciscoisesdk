@@ -2595,6 +2595,15 @@ internal_user
 
 
 
+.. _licensing_3_1_1:
+
+licensing
+---------
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.licensing.Licensing()
+
+
+
 .. _mdm_3_1_1:
 
 mdm
@@ -2802,6 +2811,15 @@ node_group
 
 
 
+.. _node_services_3_1_1:
+
+node_services
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.node_services.NodeServices()
+
+
+
 .. _node_details_3_1_1:
 
 node_details
@@ -2817,6 +2835,15 @@ pan_ha
 ------
 
 .. autoclass:: ciscoisesdk.api.v3_1_1.pan_ha.PanHa()
+
+
+
+.. _patching_3_1_1:
+
+patching
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.patching.Patching()
 
 
 
@@ -3180,12 +3207,30 @@ endpoint
 
 
 
+.. _nbar_app_3_1_1:
+
+nbar_app
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.nbar_app.NbarApp()
+
+
+
 .. _portal_3_1_1:
 
 portal
 ------
 
 .. autoclass:: ciscoisesdk.api.v3_1_1.portal.Portal()
+
+
+
+.. _proxy_3_1_1:
+
+proxy
+-----
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.proxy.Proxy()
 
 
 
@@ -3204,6 +3249,24 @@ tasks
 -----
 
 .. autoclass:: ciscoisesdk.api.v3_1_1.tasks.Tasks()
+
+
+
+.. _telemetry_3_1_1:
+
+telemetry
+---------
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.telemetry.Telemetry()
+
+
+
+.. _virtual_network_3_1_1:
+
+virtual_network
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.virtual_network.VirtualNetwork()
 
 
 .. _Identity Services Engine Data Object:

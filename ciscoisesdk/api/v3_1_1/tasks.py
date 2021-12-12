@@ -73,9 +73,9 @@ class Tasks(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_task_status(self,
-                            headers=None,
-                            **query_parameters):
+    def get_task_status(self,
+                        headers=None,
+                        **query_parameters):
         """get all task status.
 
         Args:
@@ -128,10 +128,10 @@ class Tasks(object):
 
         return self._object_factory('bpm_eb7df265a55d2cbedb08847549b39a_v3_1_1', _api_response)
 
-    def get_task_status(self,
-                        task_id,
-                        headers=None,
-                        **query_parameters):
+    def get_task_status_by_id(self,
+                              task_id,
+                              headers=None,
+                              **query_parameters):
         """Monitor task status.
 
         Args:

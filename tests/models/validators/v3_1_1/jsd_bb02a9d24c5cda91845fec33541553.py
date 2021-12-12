@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine exportSystemCert data model.
+"""Identity Services Engine configureSmartState data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,10 +37,10 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorDbe47028859573988880De76Fec0936(object):
-    """exportSystemCert request schema definition."""
+class JSONSchemaValidatorBb02A9D24C5Cda91845Fec33541553(object):
+    """configureSmartState request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorDbe47028859573988880De76Fec0936, self).__init__()
+        super(JSONSchemaValidatorBb02A9D24C5Cda91845Fec33541553, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",

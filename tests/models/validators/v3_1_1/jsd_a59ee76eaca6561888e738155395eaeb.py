@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine exportTrustedCert data model.
+"""Identity Services Engine installHotpatch data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,14 +37,30 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorB62A711Ce705542B5D1D92B7D3Ca431(object):
-    """exportTrustedCert request schema definition."""
+class JSONSchemaValidatorA59Ee76EAca6561888E738155395Eaeb(object):
+    """installHotpatch request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorB62A711Ce705542B5D1D92B7D3Ca431, self).__init__()
+        super(JSONSchemaValidatorA59Ee76EAca6561888E738155395Eaeb, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                "response": {
+                "properties": {
+                "id": {
                 "type": "string"
+                },
+                "message": {
+                "type": "string"
+                }
+                },
+                "type": "object"
+                },
+                "version": {
+                "type": "string"
+                }
+                },
+                "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
 
