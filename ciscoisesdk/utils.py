@@ -441,7 +441,7 @@ def get_next_page(function, params, access_next_list=["SearchResult", "nextPage"
                 else:
                     _params = dict(params)
                     if 'page' in params and 'size' in params:
-                        _params['page'] = (params['page'] or 0) + 1
+                        _params['page'] = (params['page'] or 1) + 1
                     yield response
                     yield from get_next_page(
                         function, {**_params},
