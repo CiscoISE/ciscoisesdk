@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine DeleteVirtualNetworkById data model.
+"""Identity Services Engine getVnVlanMappingById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,25 +37,50 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorF7Fda88868581085Da6Ac8C0E04B5C(object):
-    """DeleteVirtualNetworkById request schema definition."""
+class JSONSchemaValidatorBad1Af5249925176A0694E6E9F170Ffb(object):
+    """getVnVlanMappingById request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorF7Fda88868581085Da6Ac8C0E04B5C, self).__init__()
+        super(JSONSchemaValidatorBad1Af5249925176A0694E6E9F170Ffb, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "code": {
+                "response": {
+                "items": {
+                "properties": {
+                "id": {
+                "type": "string"
+                },
+                "isData": {
+                "type": "boolean"
+                },
+                "isDefaultVlan": {
+                "type": "boolean"
+                },
+                "lastUpdate": {
+                "type": "string"
+                },
+                "maxValue": {
                 "type": "integer"
                 },
-                "message": {
+                "name": {
+                "type": "string"
+                },
+                "vnId": {
+                "type": "string"
+                },
+                "vnName": {
                 "type": "string"
                 }
                 },
                 "required": [
-                "code",
-                "message"
+                "name"
                 ],
+                "type": "object"
+                },
+                "type": "array"
+                }
+                },
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

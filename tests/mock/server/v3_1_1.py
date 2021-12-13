@@ -215,6 +215,14 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
     NBAR_APP_61e99726f3745554a07ee102f74fe3bd_PATTERN = re.compile(r"/api/v1/trustsec/sgacl/nbarapp/string")
     NBAR_APP_b55622f1671359919573b261ba16ea71_PATTERN = re.compile(r"/api/v1/trustsec/sgacl/nbarapp/string")
     NBAR_APP_44d289d5685350f5b00f130db0a45142_PATTERN = re.compile(r"/api/v1/trustsec/sgacl/nbarapp/string")
+    SG_VN_MAPPING_e69e3338166d5c1887e5fa82efb72a11_PATTERN = re.compile(r"/api/v1/trustsec/sgvnmapping")
+    SG_VN_MAPPING_018b050fff6a5302ace3e16674c8b19a_PATTERN = re.compile(r"/api/v1/trustsec/sgvnmapping")
+    SG_VN_MAPPING_3e81b5f00f35577dbad11186f70f25be_PATTERN = re.compile(r"/api/v1/trustsec/sgvnmapping/bulk/create")
+    SG_VN_MAPPING_3c5cad090a875d9d8bd87e59654c9d75_PATTERN = re.compile(r"/api/v1/trustsec/sgvnmapping/bulk/delete")
+    SG_VN_MAPPING_80c9c798a8ce58b88b3231575f5b8c98_PATTERN = re.compile(r"/api/v1/trustsec/sgvnmapping/bulk/update")
+    SG_VN_MAPPING_8fceb2944abb59e2a748b970ee79fbb7_PATTERN = re.compile(r"/api/v1/trustsec/sgvnmapping/string")
+    SG_VN_MAPPING_147075a66f9651fca28e85b97cf1b968_PATTERN = re.compile(r"/api/v1/trustsec/sgvnmapping/string")
+    SG_VN_MAPPING_0718cb6b83a55dfb8f3536b43cfaf081_PATTERN = re.compile(r"/api/v1/trustsec/sgvnmapping/string")
     VIRTUAL_NETWORK_2199bd42dc595dd68ab56120039f89f1_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork")
     VIRTUAL_NETWORK_fe478ea1775758638d714efe1b67eec2_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork")
     VIRTUAL_NETWORK_f7253733d7025c8b8459478b159e84fc_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/bulk/create")
@@ -223,6 +231,14 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
     VIRTUAL_NETWORK_d89686dd9cb05c02833cdefc5d3ba9f2_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/string")
     VIRTUAL_NETWORK_6d02f9a7ed46581b8baf07e182f80695_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/string")
     VIRTUAL_NETWORK_30f7fda88868581085da6ac8c0e04b5c_PATTERN = re.compile(r"/api/v1/trustsec/virtualnetwork/string")
+    VN_VLAN_MAPPING_d2274589b635566d9762368adf0e841a_PATTERN = re.compile(r"/api/v1/trustsec/vnvlanmapping")
+    VN_VLAN_MAPPING_6b06fcd396bc5494be66e198df78e1b2_PATTERN = re.compile(r"/api/v1/trustsec/vnvlanmapping")
+    VN_VLAN_MAPPING_539fd28158d85d37ab1a1d616c56448c_PATTERN = re.compile(r"/api/v1/trustsec/vnvlanmapping/bulk/create")
+    VN_VLAN_MAPPING_67dcb60f20b95a999fa1f4918ad1a9e3_PATTERN = re.compile(r"/api/v1/trustsec/vnvlanmapping/bulk/delete")
+    VN_VLAN_MAPPING_bc2c834bbed356fcafd18fd78d900c0b_PATTERN = re.compile(r"/api/v1/trustsec/vnvlanmapping/bulk/update")
+    VN_VLAN_MAPPING_bad1af5249925176a0694e6e9f170ffb_PATTERN = re.compile(r"/api/v1/trustsec/vnvlanmapping/string")
+    VN_VLAN_MAPPING_c3d67df26a4d58f5a5efc6083ba187eb_PATTERN = re.compile(r"/api/v1/trustsec/vnvlanmapping/string")
+    VN_VLAN_MAPPING_97fae20bb0ed56cd9a07518b06fdf67f_PATTERN = re.compile(r"/api/v1/trustsec/vnvlanmapping/string")
     ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345_PATTERN = re.compile(r"/ers/config/ancendpoint/string")
     ANC_ENDPOINT_2131fc6670fd50dfb04b1f6b16981256_PATTERN = re.compile(r"/ers/config/ancendpoint/clear")
     ANC_ENDPOINT_502e681462295b8b8faea9ce6099ff0c_PATTERN = re.compile(r"/ers/config/ancendpoint")
@@ -4456,7 +4472,151 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
+        response_content = json.dumps({'code': 0, 'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SG_VN_MAPPING_e69e3338166d5c1887e5fa82efb72a11(self):
+        return re.search(
+            self.SG_VN_MAPPING_e69e3338166d5c1887e5fa82efb72a11_PATTERN,
+            self.path
+        )
+
+    def sg_vn_mapping_get_sg_vn_mappings_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'id': 'string', 'lastUpdate': 'string', 'sgName': 'string', 'sgtId': 'string', 'vnId': 'string', 'vnName': 'string'}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SG_VN_MAPPING_018b050fff6a5302ace3e16674c8b19a(self):
+        return re.search(
+            self.SG_VN_MAPPING_018b050fff6a5302ace3e16674c8b19a_PATTERN,
+            self.path
+        )
+
+    def sg_vn_mapping_create_sg_vn_mapping_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
         response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SG_VN_MAPPING_3e81b5f00f35577dbad11186f70f25be(self):
+        return re.search(
+            self.SG_VN_MAPPING_3e81b5f00f35577dbad11186f70f25be_PATTERN,
+            self.path
+        )
+
+    def sg_vn_mapping_bulk_create_sg_vn_mappings_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SG_VN_MAPPING_3c5cad090a875d9d8bd87e59654c9d75(self):
+        return re.search(
+            self.SG_VN_MAPPING_3c5cad090a875d9d8bd87e59654c9d75_PATTERN,
+            self.path
+        )
+
+    def sg_vn_mapping_bulk_delete_sg_vn_mappings_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SG_VN_MAPPING_80c9c798a8ce58b88b3231575f5b8c98(self):
+        return re.search(
+            self.SG_VN_MAPPING_80c9c798a8ce58b88b3231575f5b8c98_PATTERN,
+            self.path
+        )
+
+    def sg_vn_mapping_bulk_update_sg_vn_mappings_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SG_VN_MAPPING_8fceb2944abb59e2a748b970ee79fbb7(self):
+        return re.search(
+            self.SG_VN_MAPPING_8fceb2944abb59e2a748b970ee79fbb7_PATTERN,
+            self.path
+        )
+
+    def sg_vn_mapping_get_sg_vn_mapping_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'id': 'string', 'lastUpdate': 'string', 'sgName': 'string', 'sgtId': 'string', 'vnId': 'string', 'vnName': 'string'}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SG_VN_MAPPING_147075a66f9651fca28e85b97cf1b968(self):
+        return re.search(
+            self.SG_VN_MAPPING_147075a66f9651fca28e85b97cf1b968_PATTERN,
+            self.path
+        )
+
+    def sg_vn_mapping_update_sg_vn_mapping_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'code': 0, 'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SG_VN_MAPPING_0718cb6b83a55dfb8f3536b43cfaf081(self):
+        return re.search(
+            self.SG_VN_MAPPING_0718cb6b83a55dfb8f3536b43cfaf081_PATTERN,
+            self.path
+        )
+
+    def sg_vn_mapping_delete_sg_vn_mapping_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'code': 0, 'message': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -4600,7 +4760,151 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
         self.send_header('Accept', 'application/json')
         self.end_headers()
         # Add response content.
+        response_content = json.dumps({'code': 0, 'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VN_VLAN_MAPPING_d2274589b635566d9762368adf0e841a(self):
+        return re.search(
+            self.VN_VLAN_MAPPING_d2274589b635566d9762368adf0e841a_PATTERN,
+            self.path
+        )
+
+    def vn_vlan_mapping_get_vn_vlan_mappings_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'id': 'string', 'isData': True, 'isDefaultVlan': True, 'lastUpdate': 'string', 'maxValue': 0, 'name': 'string', 'vnId': 'string', 'vnName': 'string'}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VN_VLAN_MAPPING_6b06fcd396bc5494be66e198df78e1b2(self):
+        return re.search(
+            self.VN_VLAN_MAPPING_6b06fcd396bc5494be66e198df78e1b2_PATTERN,
+            self.path
+        )
+
+    def vn_vlan_mapping_create_vn_vlan_mapping_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
         response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VN_VLAN_MAPPING_539fd28158d85d37ab1a1d616c56448c(self):
+        return re.search(
+            self.VN_VLAN_MAPPING_539fd28158d85d37ab1a1d616c56448c_PATTERN,
+            self.path
+        )
+
+    def vn_vlan_mapping_bulk_create_vn_vlan_mappings_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VN_VLAN_MAPPING_67dcb60f20b95a999fa1f4918ad1a9e3(self):
+        return re.search(
+            self.VN_VLAN_MAPPING_67dcb60f20b95a999fa1f4918ad1a9e3_PATTERN,
+            self.path
+        )
+
+    def vn_vlan_mapping_bulk_delete_vn_vlan_mappings_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VN_VLAN_MAPPING_bc2c834bbed356fcafd18fd78d900c0b(self):
+        return re.search(
+            self.VN_VLAN_MAPPING_bc2c834bbed356fcafd18fd78d900c0b_PATTERN,
+            self.path
+        )
+
+    def vn_vlan_mapping_bulk_update_vn_vlan_mappings_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'id': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VN_VLAN_MAPPING_bad1af5249925176a0694e6e9f170ffb(self):
+        return re.search(
+            self.VN_VLAN_MAPPING_bad1af5249925176a0694e6e9f170ffb_PATTERN,
+            self.path
+        )
+
+    def vn_vlan_mapping_get_vn_vlan_mapping_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'response': [{'id': 'string', 'isData': True, 'isDefaultVlan': True, 'lastUpdate': 'string', 'maxValue': 0, 'name': 'string', 'vnId': 'string', 'vnName': 'string'}]})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VN_VLAN_MAPPING_c3d67df26a4d58f5a5efc6083ba187eb(self):
+        return re.search(
+            self.VN_VLAN_MAPPING_c3d67df26a4d58f5a5efc6083ba187eb_PATTERN,
+            self.path
+        )
+
+    def vn_vlan_mapping_update_vn_vlan_mapping_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'code': 0, 'message': 'string'})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_VN_VLAN_MAPPING_97fae20bb0ed56cd9a07518b06fdf67f(self):
+        return re.search(
+            self.VN_VLAN_MAPPING_97fae20bb0ed56cd9a07518b06fdf67f_PATTERN,
+            self.path
+        )
+
+    def vn_vlan_mapping_delete_vn_vlan_mapping_by_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'code': 0, 'message': 'string'})
         self.wfile.write(response_content.encode('utf-8'))
         return
 
@@ -13186,12 +13490,28 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.nbar_app_get_nbar_app_by_id_response()
             return
 
+        if self.matches_SG_VN_MAPPING_e69e3338166d5c1887e5fa82efb72a11():
+            self.sg_vn_mapping_get_sg_vn_mappings_response()
+            return
+
+        if self.matches_SG_VN_MAPPING_8fceb2944abb59e2a748b970ee79fbb7():
+            self.sg_vn_mapping_get_sg_vn_mapping_by_id_response()
+            return
+
         if self.matches_VIRTUAL_NETWORK_2199bd42dc595dd68ab56120039f89f1():
             self.virtual_network_get_virtual_networks_response()
             return
 
         if self.matches_VIRTUAL_NETWORK_d89686dd9cb05c02833cdefc5d3ba9f2():
             self.virtual_network_get_virtual_network_by_id_response()
+            return
+
+        if self.matches_VN_VLAN_MAPPING_d2274589b635566d9762368adf0e841a():
+            self.vn_vlan_mapping_get_vn_vlan_mappings_response()
+            return
+
+        if self.matches_VN_VLAN_MAPPING_bad1af5249925176a0694e6e9f170ffb():
+            self.vn_vlan_mapping_get_vn_vlan_mapping_by_id_response()
             return
 
         if self.matches_ANC_ENDPOINT_5ffbc09a97795b8d872a943895c00345():
@@ -14380,6 +14700,22 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.nbar_app_create_nbar_app_response()
             return
 
+        if self.matches_SG_VN_MAPPING_018b050fff6a5302ace3e16674c8b19a():
+            self.sg_vn_mapping_create_sg_vn_mapping_response()
+            return
+
+        if self.matches_SG_VN_MAPPING_3e81b5f00f35577dbad11186f70f25be():
+            self.sg_vn_mapping_bulk_create_sg_vn_mappings_response()
+            return
+
+        if self.matches_SG_VN_MAPPING_3c5cad090a875d9d8bd87e59654c9d75():
+            self.sg_vn_mapping_bulk_delete_sg_vn_mappings_response()
+            return
+
+        if self.matches_SG_VN_MAPPING_80c9c798a8ce58b88b3231575f5b8c98():
+            self.sg_vn_mapping_bulk_update_sg_vn_mappings_response()
+            return
+
         if self.matches_VIRTUAL_NETWORK_fe478ea1775758638d714efe1b67eec2():
             self.virtual_network_create_virtual_network_response()
             return
@@ -14394,6 +14730,22 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
 
         if self.matches_VIRTUAL_NETWORK_e3c62bba9f9e5344a38479f6437cf8b4():
             self.virtual_network_bulk_update_virtual_networks_response()
+            return
+
+        if self.matches_VN_VLAN_MAPPING_6b06fcd396bc5494be66e198df78e1b2():
+            self.vn_vlan_mapping_create_vn_vlan_mapping_response()
+            return
+
+        if self.matches_VN_VLAN_MAPPING_539fd28158d85d37ab1a1d616c56448c():
+            self.vn_vlan_mapping_bulk_create_vn_vlan_mappings_response()
+            return
+
+        if self.matches_VN_VLAN_MAPPING_67dcb60f20b95a999fa1f4918ad1a9e3():
+            self.vn_vlan_mapping_bulk_delete_vn_vlan_mappings_response()
+            return
+
+        if self.matches_VN_VLAN_MAPPING_bc2c834bbed356fcafd18fd78d900c0b():
+            self.vn_vlan_mapping_bulk_update_vn_vlan_mappings_response()
             return
 
         if self.matches_ANC_POLICY_2acfdb4060de5a1895b383238c205986():
@@ -14806,8 +15158,16 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.nbar_app_update_nbar_app_by_id_response()
             return
 
+        if self.matches_SG_VN_MAPPING_147075a66f9651fca28e85b97cf1b968():
+            self.sg_vn_mapping_update_sg_vn_mapping_by_id_response()
+            return
+
         if self.matches_VIRTUAL_NETWORK_6d02f9a7ed46581b8baf07e182f80695():
             self.virtual_network_update_virtual_network_by_id_response()
+            return
+
+        if self.matches_VN_VLAN_MAPPING_c3d67df26a4d58f5a5efc6083ba187eb():
+            self.vn_vlan_mapping_update_vn_vlan_mapping_by_id_response()
             return
 
         if self.matches_ANC_ENDPOINT_2131fc6670fd50dfb04b1f6b16981256():
@@ -15328,8 +15688,16 @@ class MockServerRequestHandler_v3_1_1(BaseHTTPRequestHandler):
             self.nbar_app_delete_nbar_app_by_id_response()
             return
 
+        if self.matches_SG_VN_MAPPING_0718cb6b83a55dfb8f3536b43cfaf081():
+            self.sg_vn_mapping_delete_sg_vn_mapping_by_id_response()
+            return
+
         if self.matches_VIRTUAL_NETWORK_30f7fda88868581085da6ac8c0e04b5c():
             self.virtual_network_delete_virtual_network_by_id_response()
+            return
+
+        if self.matches_VN_VLAN_MAPPING_97fae20bb0ed56cd9a07518b06fdf67f():
+            self.vn_vlan_mapping_delete_vn_vlan_mapping_by_id_response()
             return
 
         if self.matches_ANC_POLICY_7c6b8dd764e052699d4d7a0d8ba43640():

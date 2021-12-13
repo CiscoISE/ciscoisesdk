@@ -3243,6 +3243,15 @@ px_grid_node
 
 
 
+.. _sg_vn_mapping_3_1_1:
+
+sg_vn_mapping
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.sg_vn_mapping.SgVnMapping()
+
+
+
 .. _tasks_3_1_1:
 
 tasks
@@ -3267,6 +3276,15 @@ virtual_network
 ---------------
 
 .. autoclass:: ciscoisesdk.api.v3_1_1.virtual_network.VirtualNetwork()
+
+
+
+.. _vn_vlan_mapping_3_1_1:
+
+vn_vlan_mapping
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_1_1.vn_vlan_mapping.VnVlanMapping()
 
 
 .. _Identity Services Engine Data Object:

@@ -732,12 +732,16 @@ from ciscoisesdk.api.v3_1_1.proxy import \
     Proxy as Proxy_v3_1_1
 from ciscoisesdk.api.v3_1_1.px_grid_node import \
     PxGridNode as PxGridNode_v3_1_1
+from ciscoisesdk.api.v3_1_1.sg_vn_mapping import \
+    SgVnMapping as SgVnMapping_v3_1_1
 from ciscoisesdk.api.v3_1_1.tasks import \
     Tasks as Tasks_v3_1_1
 from ciscoisesdk.api.v3_1_1.telemetry import \
     Telemetry as Telemetry_v3_1_1
 from ciscoisesdk.api.v3_1_1.virtual_network import \
     VirtualNetwork as VirtualNetwork_v3_1_1
+from ciscoisesdk.api.v3_1_1.vn_vlan_mapping import \
+    VnVlanMapping as VnVlanMapping_v3_1_1
 from ciscoisesdk.api.custom_caller import CustomCaller
 
 from tests.config import (
@@ -1180,6 +1184,8 @@ class TestIdentityServicesEngineSDK:
             assert isinstance(api.portal, Portal_v3_1_1)
             assert isinstance(api.proxy, Proxy_v3_1_1)
             assert isinstance(api.px_grid_node, PxGridNode_v3_1_1)
+            assert isinstance(api.sg_vn_mapping, SgVnMapping_v3_1_1)
             assert isinstance(api.tasks, Tasks_v3_1_1)
             assert isinstance(api.telemetry, Telemetry_v3_1_1)
             assert isinstance(api.virtual_network, VirtualNetwork_v3_1_1)
+            assert isinstance(api.vn_vlan_mapping, VnVlanMapping_v3_1_1)

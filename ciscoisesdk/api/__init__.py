@@ -749,12 +749,16 @@ from .v3_1_1.proxy import \
     Proxy as Proxy_v3_1_1
 from .v3_1_1.px_grid_node import \
     PxGridNode as PxGridNode_v3_1_1
+from .v3_1_1.sg_vn_mapping import \
+    SgVnMapping as SgVnMapping_v3_1_1
 from .v3_1_1.tasks import \
     Tasks as Tasks_v3_1_1
 from .v3_1_1.telemetry import \
     Telemetry as Telemetry_v3_1_1
 from .v3_1_1.virtual_network import \
     VirtualNetwork as VirtualNetwork_v3_1_1
+from .v3_1_1.vn_vlan_mapping import \
+    VnVlanMapping as VnVlanMapping_v3_1_1
 from .custom_caller import CustomCaller
 import copy
 
@@ -2449,6 +2453,10 @@ class IdentityServicesEngineAPI(object):
                 PxGridNode_v3_1_1(
                     self._session_ers, object_factory, _validator
                 )
+            self.sg_vn_mapping = \
+                SgVnMapping_v3_1_1(
+                    self._session_ui, object_factory, _validator
+                )
             self.tasks = \
                 Tasks_v3_1_1(
                     self._session_ui, object_factory, _validator
@@ -2459,6 +2467,10 @@ class IdentityServicesEngineAPI(object):
                 )
             self.virtual_network = \
                 VirtualNetwork_v3_1_1(
+                    self._session_ui, object_factory, _validator
+                )
+            self.vn_vlan_mapping = \
+                VnVlanMapping_v3_1_1(
                     self._session_ui, object_factory, _validator
                 )
         self.custom_caller = \

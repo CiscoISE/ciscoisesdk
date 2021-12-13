@@ -45,10 +45,17 @@ class JSONSchemaValidatorD289D5685350F5B00F130Db0A45142(object):
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "id": {
+                "code": {
+                "type": "integer"
+                },
+                "message": {
                 "type": "string"
                 }
                 },
+                "required": [
+                "code",
+                "message"
+                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))

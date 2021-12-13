@@ -27,9 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removes pan_ha.disable_pan_ha function
 - Removes pan_ha.enable_pan_ha function
 - Removes replication_status module
-- Removes sg_vn_mapping module
 - Removes sync_ise_node module
-- Removes vn_vlan_mapping module
 
 ## [1.2.0] - 2021-11-24
 

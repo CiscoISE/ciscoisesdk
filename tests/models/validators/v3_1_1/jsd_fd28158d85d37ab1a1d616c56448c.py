@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine DeleteVirtualNetworkById data model.
+"""Identity Services Engine bulkCreateVnVlanMappings data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -37,25 +37,18 @@ from ciscoisesdk.exceptions import MalformedRequest
 from builtins import *
 
 
-class JSONSchemaValidatorF7Fda88868581085Da6Ac8C0E04B5C(object):
-    """DeleteVirtualNetworkById request schema definition."""
+class JSONSchemaValidatorFd28158D85D37Ab1A1D616C56448C(object):
+    """bulkCreateVnVlanMappings request schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorF7Fda88868581085Da6Ac8C0E04B5C, self).__init__()
+        super(JSONSchemaValidatorFd28158D85D37Ab1A1D616C56448C, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                "code": {
-                "type": "integer"
-                },
-                "message": {
+                "id": {
                 "type": "string"
                 }
                 },
-                "required": [
-                "code",
-                "message"
-                ],
                 "type": "object"
                 }'''.replace("\n" + ' ' * 16, '')
         ))
