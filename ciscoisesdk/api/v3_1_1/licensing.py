@@ -40,8 +40,8 @@ from ...utils import (
     dict_from_items_with_values,
     apply_path_params,
     dict_of_str,
-    get_next_page,
 )
+from ...pagination import get_next_page
 
 
 class Licensing(object):

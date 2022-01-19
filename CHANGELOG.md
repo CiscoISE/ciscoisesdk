@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2022-01-19
+
+### Changed
+- Update requirements
+### Fixed
+- Update pagination, get_next_page inner logic and location from utils to pagination.
+
 ## [1.3.1] - 2021-12-13
 
 ### Changed
@@ -165,4 +172,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.2.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...v1.2.0
 [1.3.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.2.0...v1.3.0
 [1.3.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.0...v1.3.1
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...main
+[1.4.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.0...main
