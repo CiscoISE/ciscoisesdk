@@ -51,45 +51,33 @@ class PortalTheme(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Portal Theme API allows the client to add, delete, update and search
-    Portal Theme among other operations which are available from all the
-    portals.
+    Portal Theme API allows the client to add, delete, update and search Portal Theme among other operations which are available from all the portals.
 
     Revision History
     ----------------
 
-    +----------------+----------------+----------------+----------------+
-    | **Revision #** | **Resource     | **Cisco ISE    | *              |
-    |                | Version**      | Version**      | *Description** |
-    +----------------+----------------+----------------+----------------+
-    | 0              | 1.0            | 2.2            | Initial Cisco  |
-    |                |                |                | ISE Version    |
-    +----------------+----------------+----------------+----------------+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.2                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
 
     |
 
     Resource Definition
     -------------------
 
-    +-------------+----------+-------------+-------------+-------------+
-    | **          | **Type** | *           | **De        | **Example   |
-    | Attribute** |          | *Required** | scription** | Values**    |
-    +-------------+----------+-------------+-------------+-------------+
-    | name        | String   | Yes         | Resource    | Default     |
-    |             |          |             | Name        | Blue theme  |
-    +-------------+----------+-------------+-------------+-------------+
-    | id          | String   | No          | Resource    | 9eb         |
-    |             |          |             | UUID,       | 421c0-8c01- |
-    |             |          |             | mandatory   | 11e6-996c-5 |
-    |             |          |             | for update  | 25400b48521 |
-    +-------------+----------+-------------+-------------+-------------+
-    | description | String   | No          |             |             |
-    +-------------+----------+-------------+-------------+-------------+
-    | themeData   | String   | Yes         | Portal      | Base 64     |
-    |             |          |             | Theme for   | encoded     |
-    |             |          |             | all portals | string of   |
-    |             |          |             |             | CSS file    |
-    +-------------+----------+-------------+-------------+-------------+
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | **Attribute** | **Type** | **Required** | **Description**                     | **Example Values**                   |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | name          | String   | Yes          | Resource Name                       | Default Blue theme                   |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | id            | String   | No           | Resource UUID, mandatory for update | 9eb421c0-8c01-11e6-996c-525400b48521 |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | description   | String   | No           |                                     |                                      |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | themeData     | String   | Yes          | Portal Theme for all portals        | Base 64 encoded string of CSS file   |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
 
     """
 

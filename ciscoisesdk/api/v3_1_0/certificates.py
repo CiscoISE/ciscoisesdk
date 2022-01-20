@@ -52,6 +52,7 @@ class Certificates(object):
     methods that return native Python objects.
 
 
+
     """
 
     def __init__(self, session, object_factory, request_validator):
@@ -960,8 +961,8 @@ class Certificates(object):
         DESCRIPTION   EXAMPLE           name   Friendly name of
         the certificate.   Signed Certificate       data
         Plain-text contents of the certificate file. Every space
-        needs to be replaced with newline escape sequence (\\n)
-        (required).   awk 'NF {sub(/\\r/, ""); printf
+        needs to be replaced with newline escape sequence (\n)
+        (required).   awk 'NF {sub(/\r/, ""); printf
         "%s\\n",$0;}' <<your .pem file>>
         allowExtendedValidity   Allow the certificates greater
         than validity of 398 days (required)   false
@@ -1309,11 +1310,11 @@ class Certificates(object):
         Password of the certificate to be imported (required).
         Passw***       data   Plain-text contents of the
         certificate file. Every space needs to be replaced with
-        newline escape sequence (\\n) (required).   awk 'NF
-        {sub(/\\r/, ""); printf "%s\\n",$0;}' <<your .pem file>>
+        newline escape sequence (\n) (required).   awk 'NF
+        {sub(/\r/, ""); printf "%s\\n",$0;}' <<your .pem file>>
         privateKeyData   Plain-text contents of the private key
         file. Every space needs to be replaced with newline
-        escape sequence (\\n) (required).   awk 'NF {sub(/\\r/,
+        escape sequence (\n) (required).   awk 'NF {sub(/\r/,
         ""); printf "%s\\n",$0;}' <<your .pem file>>
         allowOutOfDateCert   Allow out of date certificates
         (required)   false       allowSHA1Certificates   Allow
@@ -2415,7 +2416,7 @@ class Certificates(object):
         the certificate   Trust Certificate       description
         Description of the certificate   Passw***       data
         Plain-text contents of the certificate file. Every space
-        needs to be replaced with newline escape sequence (\\n)
+        needs to be replaced with newline escape sequence (\n)
         (required).   awk 'NF {sub(/\r/, ""); printf
         "%s\\n",$0;}' <<your .pem file>>
         allowOutOfDateCert   Allow out of date certificates

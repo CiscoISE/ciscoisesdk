@@ -51,21 +51,16 @@ class SupportBundleTriggerConfiguration(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Support Bundle Trigger API allows clients to trigger support bundle
-    provided the log settings are given using which the support needs to be
-    generated.
+    Support Bundle Trigger API allows clients to trigger support bundle provided the log settings are given using which the support needs to be generated.
 
     Revision History
     ----------------
 
-    +-------------+-------------+-------------+-------------+---+---+
-    | **Revision  | **Resource  | **Cisco ISE | **De        |   |   |
-    | #**         | Version**   | Version**   | scription** |   |   |
-    +-------------+-------------+-------------+-------------+---+---+
-    | 0           | 1.0         | 2.7         | Initial     |   |   |
-    |             |             |             | Cisco ISE   |   |   |
-    |             |             |             | Version     |   |   |
-    +-------------+-------------+-------------+-------------+---+---+
+    +----------------+----------------------+-----------------------+---------------------------+---+---+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |   |
+    +----------------+----------------------+-----------------------+---------------------------+---+---+
+    | 0              | 1.0                  | 2.7                   | Initial Cisco ISE Version |   |   |
+    +----------------+----------------------+-----------------------+---------------------------+---+---+
 
     |
 

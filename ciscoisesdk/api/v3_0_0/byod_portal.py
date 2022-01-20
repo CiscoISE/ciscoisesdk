@@ -51,622 +51,182 @@ class ByodPortal(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    BYOD Portal API provides the ability to Create, Read, Update, Delete and
-    Search BYOD portals.
+    BYOD Portal API provides the ability to Create, Read, Update, Delete and Search BYOD portals.
 
     Revision History
     ----------------
 
-    +----------------+----------------+----------------+----------------+
-    | **Revision #** | **Resource     | **Cisco ISE    | *              |
-    |                | Version**      | Version**      | *Description** |
-    +----------------+----------------+----------------+----------------+
-    | 0              | 1.0            | 2.2            | Initial Cisco  |
-    |                |                |                | ISE Version    |
-    +----------------+----------------+----------------+----------------+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.2                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
 
     |
 
     Resource Definition
     -------------------
 
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
-    | tribute** |           | equired** | ription** | Values**  | Values**  |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | name      | String    | Yes       | Resource  |           | BYOD      |
-    |           |           |           | Name      |           | Portal    |
-    |           |           |           |           |           | (default) |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | id        | String    | No        | Resource  |           | 9a9b910c- |
-    |           |           |           | UUID,     |           | 54d3-44a4 |
-    |           |           |           | mandatory |           | -a3c3-dd0 |
-    |           |           |           | for       |           | 07c171599 |
-    |           |           |           | update    |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | de        | String    | No        |           |           | Default   |
-    | scription |           |           |           |           | portal    |
-    |           |           |           |           |           | and user  |
-    |           |           |           |           |           | e         |
-    |           |           |           |           |           | xperience |
-    |           |           |           |           |           | used when |
-    |           |           |           |           |           | employees |
-    |           |           |           |           |           | register  |
-    |           |           |           |           |           | a         |
-    |           |           |           |           |           | personal  |
-    |           |           |           |           |           | device on |
-    |           |           |           |           |           | the       |
-    |           |           |           |           |           | network   |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | port      | String    | No        | URL to    |           | h         |
-    | alTestUrl |           |           | bring up  |           | ttps://{i |
-    |           |           |           | a test    |           | se-ip}:84 |
-    |           |           |           | page for  |           | 43/portal |
-    |           |           |           | this      |           | /PortalSe |
-    |           |           |           | portal    |           | tup.actio |
-    |           |           |           |           |           | n?portal= |
-    |           |           |           |           |           | 9a9b910c- |
-    |           |           |           |           |           | 54d3-44a4 |
-    |           |           |           |           |           | -a3c3-dd0 |
-    |           |           |           |           |           | 07c171599 |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | p         | Enum      | Yes       | Allowed   | BYOD      |           |
-    | ortalType |           |           | values:   |           |           |
-    |           |           |           | - BYOD,   |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | HOTS      |           |           |
-    |           |           |           | POTGUEST, |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | MYDEVICE, |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | SELF      |           |           |
-    |           |           |           | REGGUEST, |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | SPONSOR,  |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | SPONS     |           |           |
-    |           |           |           | OREDGUEST |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | settings  | List      | No        | Defines   |           |           |
-    |           |           |           | all of    |           |           |
-    |           |           |           | the       |           |           |
-    |           |           |           | settings  |           |           |
-    |           |           |           | groups    |           |           |
-    |           |           |           | available |           |           |
-    |           |           |           | for a     |           |           |
-    |           |           |           | BYOD      |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | -         | List      | No        | The port, |           |           |
-    | porta     |           |           | i         |           |           |
-    | lSettings |           |           | nterface, |           |           |
-    |           |           |           | cer       |           |           |
-    |           |           |           | tificate, |           |           |
-    |           |           |           | and other |           |           |
-    |           |           |           | basic     |           |           |
-    |           |           |           | settings  |           |           |
-    |           |           |           | of a      |           |           |
-    |           |           |           | portal    |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Integer   | Yes       | The port  |           | 8443      |
-    | httpsPort |           |           | number    |           |           |
-    |           |           |           | that the  |           |           |
-    |           |           |           | allowed   |           |           |
-    |           |           |           | i         |           |           |
-    |           |           |           | nterfaces |           |           |
-    |           |           |           | will      |           |           |
-    |           |           |           | listen    |           |           |
-    |           |           |           | on. Range |           |           |
-    |           |           |           | from 8000 |           |           |
-    |           |           |           | to 8999   |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Enum      | Yes       | I         |           | [ "eth0", |
-    | allowedI  |           |           | nterfaces |           | "bond0" ] |
-    | nterfaces |           |           | that the  |           |           |
-    |           |           |           | portal    |           |           |
-    |           |           |           | will be   |           |           |
-    |           |           |           | reachable |           |           |
-    |           |           |           | on.       |           |           |
-    |           |           |           | Allowed   |           |           |
-    |           |           |           | values:   |           |           |
-    |           |           |           | - eth0,   |           |           |
-    |           |           |           | - eth1,   |           |           |
-    |           |           |           | - eth2,   |           |           |
-    |           |           |           | - eth3,   |           |           |
-    |           |           |           | - eth4,   |           |           |
-    |           |           |           | - eth5,   |           |           |
-    |           |           |           | - bond0,  |           |           |
-    |           |           |           | - bond1,  |           |           |
-    |           |           |           | - bond2   |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | Yes       | Logical   |           | Default   |
-    | c         |           |           | name of   |           | Portal    |
-    | ertificat |           |           | the x.509 |           | Ce        |
-    | eGroupTag |           |           | server    |           | rtificate |
-    |           |           |           | ce        |           | Group     |
-    |           |           |           | rtificate |           |           |
-    |           |           |           | that will |           |           |
-    |           |           |           | be used   |           |           |
-    |           |           |           | for the   |           |           |
-    |           |           |           | portal    |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | Yes       | Unique Id |           |           |
-    | end       |           |           | of the    |           |           |
-    | pointIden |           |           | endpoint  |           |           |
-    | tityGroup |           |           | identity  |           |           |
-    |           |           |           | group     |           |           |
-    |           |           |           | where     |           |           |
-    |           |           |           | user's    |           |           |
-    |           |           |           | devices   |           |           |
-    |           |           |           | will be   |           |           |
-    |           |           |           | added.    |           |           |
-    |           |           |           | Used only |           |           |
-    |           |           |           | in        |           |           |
-    |           |           |           | Hotspot   |           |           |
-    |           |           |           | Portal    |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Enum      | No        | Allowed   |           | USEBROW   |
-    | di        |           |           | values:   |           | SERLOCALE |
-    | splayLang |           |           | -         |           |           |
-    |           |           |           | USEBROWS  |           |           |
-    |           |           |           | ERLOCALE, |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | ALWAYSUSE |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        | Used when |           | English   |
-    | fallbac   |           |           | di        |           |           |
-    | kLanguage |           |           | splayLang |           |           |
-    |           |           |           | =         |           |           |
-    |           |           |           | USEBROW   |           |           |
-    |           |           |           | SERLOCALE |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        | Used when |           | English   |
-    | alwaysUse |           |           | di        |           |           |
-    | dLanguage |           |           | splayLang |           |           |
-    |           |           |           | =         |           |           |
-    |           |           |           | ALWAYSUSE |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | -         | List      | No        | Conf      |           |           |
-    | byo       |           |           | iguration |           |           |
-    | dSettings |           |           | of BYOD   |           |           |
-    |           |           |           | Device    |           |           |
-    |           |           |           | Welcome,  |           |           |
-    |           |           |           | Reg       |           |           |
-    |           |           |           | istration |           |           |
-    |           |           |           | and       |           |           |
-    |           |           |           | Success   |           |           |
-    |           |           |           | steps     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | List      | No        | Conf      |           |           |
-    | b         |           |           | iguration |           |           |
-    | yodWelcom |           |           | of BYOD   |           |           |
-    | eSettings |           |           | endpoint  |           |           |
-    |           |           |           | welcome   |           |           |
-    |           |           |           | step      |           |           |
-    |           |           |           | conf      |           |           |
-    |           |           |           | iguration |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Boolean   | No        |           | true      |           |
-    | e         |           |           |           |           |           |
-    | nableBYOD |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Boolean   | No        |           | false     |           |
-    | enableGu  |           |           |           |           |           |
-    | estAccess |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Boolean   | No        |           | false     |           |
-    | r         |           |           |           |           |           |
-    | equireMDM |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Boolean   | No        |           | true      |           |
-    | i         |           |           |           |           |           |
-    | ncludeAup |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Enum      | No        | How the   | ONPAGE    |           |
-    | a         |           |           | AUP       |           |           |
-    | upDisplay |           |           | should be |           |           |
-    |           |           |           | d         |           |           |
-    |           |           |           | isplayed, |           |           |
-    |           |           |           | either on |           |           |
-    |           |           |           | page or   |           |           |
-    |           |           |           | as a      |           |           |
-    |           |           |           | link.     |           |           |
-    |           |           |           | Only      |           |           |
-    |           |           |           | valid if  |           |           |
-    |           |           |           | i         |           |           |
-    |           |           |           | ncludeAup |           |           |
-    |           |           |           | = true.   |           |           |
-    |           |           |           | Allowed   |           |           |
-    |           |           |           | values:   |           |           |
-    |           |           |           | - ONPAGE, |           |           |
-    |           |           |           | - ASLINK  |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Boolean   | No        |           | false     |           |
-    | re        |           |           |           |           |           |
-    | quireAupA |           |           |           |           |           |
-    | cceptance |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Boolean   | No        | Require   | false     |           |
-    | require   |           |           | BYOD      |           |           |
-    | Scrolling |           |           | devices   |           |           |
-    |           |           |           | to scroll |           |           |
-    |           |           |           | down to   |           |           |
-    |           |           |           | the       |           |           |
-    |           |           |           | bottom of |           |           |
-    |           |           |           | the AUP,  |           |           |
-    |           |           |           | Only      |           |           |
-    |           |           |           | valid if  |           |           |
-    |           |           |           | i         |           |           |
-    |           |           |           | ncludeAup |           |           |
-    |           |           |           | = true    |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | List      | No        | Conf      |           |           |
-    | byodRe    |           |           | iguration |           |           |
-    | gistratio |           |           | of BYOD   |           |           |
-    | nSettings |           |           | endpoint  |           |           |
-    |           |           |           | Reg       |           |           |
-    |           |           |           | istration |           |           |
-    |           |           |           | step      |           |           |
-    |           |           |           | conf      |           |           |
-    |           |           |           | iguration |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Boolean   | No        | Display   | true      |           |
-    | sho       |           |           | Device ID |           |           |
-    | wDeviceID |           |           | field     |           |           |
-    |           |           |           | during    |           |           |
-    |           |           |           | reg       |           |           |
-    |           |           |           | istration |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | String    | No        | Identity  |           | aa13bb40- |
-    | endPo     |           |           | group id  |           | 8bff-11e6 |
-    | intIdenti |           |           | for which |           | -996c-525 |
-    | tyGroupId |           |           | endpoint  |           | 400b48521 |
-    |           |           |           | belongs   |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | List      | No        | Conf      |           |           |
-    | byod      |           |           | iguration |           |           |
-    | Registrat |           |           | of BYOD   |           |           |
-    | ionSucces |           |           | endpoint  |           |           |
-    | sSettings |           |           | Reg       |           |           |
-    |           |           |           | istration |           |           |
-    |           |           |           | Success   |           |           |
-    |           |           |           | step      |           |           |
-    |           |           |           | conf      |           |           |
-    |           |           |           | iguration |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | Enum      | No        | After an  | AUTHSU    |           |
-    | succes    |           |           | Authe     | CCESSPAGE |           |
-    | sRedirect |           |           | ntication |           |           |
-    |           |           |           | Success   |           |           |
-    |           |           |           | where     |           |           |
-    |           |           |           | should    |           |           |
-    |           |           |           | device be |           |           |
-    |           |           |           | re        |           |           |
-    |           |           |           | directed. |           |           |
-    |           |           |           | Allowed   |           |           |
-    |           |           |           | values:   |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | AUTHSUC   |           |           |
-    |           |           |           | CESSPAGE, |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | ORIGIN    |           |           |
-    |           |           |           | ATINGURL, |           |           |
-    |           |           |           | - URL     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | String    | No        | Target    |           | Redirect  |
-    | re        |           |           | URL for   |           | URL       |
-    | directUrl |           |           | red       |           |           |
-    |           |           |           | irection, |           |           |
-    |           |           |           | used when |           |           |
-    |           |           |           | succes    |           |           |
-    |           |           |           | sRedirect |           |           |
-    |           |           |           | = URL     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | -         | List      | No        | Conf      |           |           |
-    | s         |           |           | iguration |           |           |
-    | upportInf |           |           | of BYOD   |           |           |
-    | oSettings |           |           | endpoint  |           |           |
-    |           |           |           | welcome   |           |           |
-    |           |           |           | step      |           |           |
-    |           |           |           | conf      |           |           |
-    |           |           |           | iguration |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Boolean   | No        |           | false     |           |
-    | incl      |           |           |           |           |           |
-    | udeSuppor |           |           |           |           |           |
-    | tInfoPage |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Boolean   | No        |           | false     |           |
-    | inclu     |           |           |           |           |           |
-    | deMacAddr |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Boolean   | No        |           | false     |           |
-    | include   |           |           |           |           |           |
-    | IpAddress |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Boolean   | No        |           | false     |           |
-    | inclu     |           |           |           |           |           |
-    | deBrowser |           |           |           |           |           |
-    | UserAgent |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Boolean   | No        |           | false     |           |
-    | i         |           |           |           |           |           |
-    | ncludePol |           |           |           |           |           |
-    | icyServer |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Boolean   | No        |           | false     |           |
-    | includeFa |           |           |           |           |           |
-    | ilureCode |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Enum      | No        | Specifies |           | HIDE      |
-    | emptyFie  |           |           | how empty |           |           |
-    | ldDisplay |           |           | fields    |           |           |
-    |           |           |           | are       |           |           |
-    |           |           |           | handled   |           |           |
-    |           |           |           | on the    |           |           |
-    |           |           |           | Support   |           |           |
-    |           |           |           | In        |           |           |
-    |           |           |           | formation |           |           |
-    |           |           |           | Page.     |           |           |
-    |           |           |           | Allowed   |           |           |
-    |           |           |           | values:   |           |           |
-    |           |           |           | - HIDE,   |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | D         |           |           |
-    |           |           |           | ISPLAYWIT |           |           |
-    |           |           |           | HNOVALUE, |           |           |
-    |           |           |           | -         |           |           |
-    |           |           |           | DISPL     |           |           |
-    |           |           |           | AYWITHDEF |           |           |
-    |           |           |           | AULTVALUE |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        | The       |           |           |
-    | defa      |           |           | default   |           |           |
-    | ultEmptyF |           |           | value     |           |           |
-    | ieldValue |           |           | displayed |           |           |
-    |           |           |           | for an    |           |           |
-    |           |           |           | empty     |           |           |
-    |           |           |           | field     |           |           |
-    |           |           |           | Only      |           |           |
-    |           |           |           | valid     |           |           |
-    |           |           |           | when      |           |           |
-    |           |           |           | emptyFie  |           |           |
-    |           |           |           | ldDisplay |           |           |
-    |           |           |           | =         |           |           |
-    |           |           |           | DISPL     |           |           |
-    |           |           |           | AYWITHDEF |           |           |
-    |           |           |           | AULTVALUE |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | custo     | List      | No        | Defines   |           |           |
-    | mizations |           |           | all of    |           |           |
-    |           |           |           | the       |           |           |
-    |           |           |           | Portal    |           |           |
-    |           |           |           | Custo     |           |           |
-    |           |           |           | mizations |           |           |
-    |           |           |           | available |           |           |
-    |           |           |           | for a     |           |           |
-    |           |           |           | BYOD      |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | -         | List      | No        | Defines   |           |           |
-    | po        |           |           | the       |           |           |
-    | rtalTheme |           |           | conf      |           |           |
-    |           |           |           | iguration |           |           |
-    |           |           |           | for       |           |           |
-    |           |           |           | portal    |           |           |
-    |           |           |           | theme     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   - id    | String    | No        | The       |           | 9eb421c0- |
-    |           |           |           | unique    |           | 8c01-11e6 |
-    |           |           |           | internal  |           | -996c-525 |
-    |           |           |           | i         |           | 400b48521 |
-    |           |           |           | dentifier |           |           |
-    |           |           |           | of the    |           |           |
-    |           |           |           | portal    |           |           |
-    |           |           |           | theme     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   - name  | String    | Yes       | The       |           | Default   |
-    |           |           |           | system-   |           | Blue      |
-    |           |           |           | or        |           | theme     |
-    |           |           |           | user      |           |           |
-    |           |           |           | -assigned |           |           |
-    |           |           |           | name of   |           |           |
-    |           |           |           | the       |           |           |
-    |           |           |           | portal    |           |           |
-    |           |           |           | theme     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        | A CSS     |           | Base 64   |
-    | themeData |           |           | file,     |           | encoded   |
-    |           |           |           | re        |           | string of |
-    |           |           |           | presented |           | Theme CSS |
-    |           |           |           | as a      |           | file      |
-    |           |           |           | Base6     |           |           |
-    |           |           |           | 4-encoded |           |           |
-    |           |           |           | byte      |           |           |
-    |           |           |           | array     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | -         | List      | No        | The Tweak |           |           |
-    | p         |           |           | Settings  |           |           |
-    | ortalTwea |           |           | are a     |           |           |
-    | kSettings |           |           | cust      |           |           |
-    |           |           |           | omization |           |           |
-    |           |           |           | of the    |           |           |
-    |           |           |           | Portal    |           |           |
-    |           |           |           | Theme     |           |           |
-    |           |           |           | that has  |           |           |
-    |           |           |           | been      |           |           |
-    |           |           |           | selected  |           |           |
-    |           |           |           | for the   |           |           |
-    |           |           |           | portal.   |           |           |
-    |           |           |           | When the  |           |           |
-    |           |           |           | Portal    |           |           |
-    |           |           |           | Theme     |           |           |
-    |           |           |           | selection |           |           |
-    |           |           |           | is        |           |           |
-    |           |           |           | changed,  |           |           |
-    |           |           |           | the Tweak |           |           |
-    |           |           |           | Settings  |           |           |
-    |           |           |           | are       |           |           |
-    |           |           |           | ov        |           |           |
-    |           |           |           | erwritten |           |           |
-    |           |           |           | to match  |           |           |
-    |           |           |           | the       |           |           |
-    |           |           |           | values in |           |           |
-    |           |           |           | the       |           |           |
-    |           |           |           | theme.    |           |           |
-    |           |           |           | The Tweak |           |           |
-    |           |           |           | Settings  |           |           |
-    |           |           |           | can       |           |           |
-    |           |           |           | sub       |           |           |
-    |           |           |           | sequently |           |           |
-    |           |           |           | be        |           |           |
-    |           |           |           | changed   |           |           |
-    |           |           |           | by the    |           |           |
-    |           |           |           | user      |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        | Hex value |           | #0000FF   |
-    | ba        |           |           | of color  |           |           |
-    | nnerColor |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        |           |           | Banner    |
-    | banner    |           |           |           |           | Text      |
-    | TextColor |           |           |           |           | color     |
-    |           |           |           |           |           | code from |
-    |           |           |           |           |           | GUI       |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        |           |           | Color     |
-    | p         |           |           |           |           | code from |
-    | ageBackgr |           |           |           |           | GUI       |
-    | oundColor |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        |           |           | Label and |
-    | pag       |           |           |           |           | Text      |
-    | eLabelAnd |           |           |           |           | color     |
-    | TextColor |           |           |           |           | from GUI  |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | -         | List      | No        | This      |           |           |
-    | language  |           |           | property  |           |           |
-    |           |           |           | is        |           |           |
-    |           |           |           | supported |           |           |
-    |           |           |           | only for  |           |           |
-    |           |           |           | Read      |           |           |
-    |           |           |           | operation |           |           |
-    |           |           |           | and it    |           |           |
-    |           |           |           | allows to |           |           |
-    |           |           |           | show the  |           |           |
-    |           |           |           | custo     |           |           |
-    |           |           |           | mizations |           |           |
-    |           |           |           | in        |           |           |
-    |           |           |           | English.  |           |           |
-    |           |           |           | Other     |           |           |
-    |           |           |           | languages |           |           |
-    |           |           |           | are not   |           |           |
-    |           |           |           | supported |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        |           |           | English   |
-    | vie       |           |           |           |           |           |
-    | wLanguage |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | -         | List      | No        | Represent |           |           |
-    | gl        |           |           | the       |           |           |
-    | obalCusto |           |           | portal    |           |           |
-    | mizations |           |           | Global    |           |           |
-    |           |           |           | custo     |           |           |
-    |           |           |           | mizations |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        |           |           | BYOD      |
-    | ba        |           |           |           |           | Portal    |
-    | nnerTitle |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        |           |           | Contact   |
-    | co        |           |           |           |           | Support   |
-    | ntactText |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | String    | No        |           |           | Footer    |
-    | foot      |           |           |           |           | Element   |
-    | erElement |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Image     | No        |           |           |           |
-    | mobile    |           |           |           |           |           |
-    | LogoImage |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | String    | No        | Re        |           | base 64   |
-    | data      |           |           | presented |           | encoded   |
-    |           |           |           | as base   |           | value of  |
-    |           |           |           | 64        |           | image     |
-    |           |           |           | encoded   |           |           |
-    |           |           |           | string of |           |           |
-    |           |           |           | the image |           |           |
-    |           |           |           | byte      |           |           |
-    |           |           |           | array     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Image     | No        |           |           |           |
-    | desktop   |           |           |           |           |           |
-    | LogoImage |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | String    | No        | Re        |           | base 64   |
-    | data      |           |           | presented |           | encoded   |
-    |           |           |           | as base   |           | value of  |
-    |           |           |           | 64        |           | image     |
-    |           |           |           | encoded   |           |           |
-    |           |           |           | string of |           |           |
-    |           |           |           | the image |           |           |
-    |           |           |           | byte      |           |           |
-    |           |           |           | array     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Image     | No        |           |           |           |
-    | ba        |           |           |           |           |           |
-    | nnerImage |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | String    | No        | Re        |           | base 64   |
-    | data      |           |           | presented |           | encoded   |
-    |           |           |           | as base   |           | value of  |
-    |           |           |           | 64        |           | image     |
-    |           |           |           | encoded   |           |           |
-    |           |           |           | string of |           |           |
-    |           |           |           | the image |           |           |
-    |           |           |           | byte      |           |           |
-    |           |           |           | array     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   -       | Image     | No        |           |           |           |
-    | backgr    |           |           |           |           |           |
-    | oundImage |           |           |           |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | String    | No        | Re        |           | base 64   |
-    | data      |           |           | presented |           | encoded   |
-    |           |           |           | as base   |           | value of  |
-    |           |           |           | 64        |           | image     |
-    |           |           |           | encoded   |           |           |
-    |           |           |           | string of |           |           |
-    |           |           |           | the image |           |           |
-    |           |           |           | byte      |           |           |
-    |           |           |           | array     |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    | -         | List      | No        | Represent |           |           |
-    | pageCusto |           |           | the       |           |           |
-    | mizations |           |           | entire    |           |           |
-    |           |           |           | page      |           |           |
-    |           |           |           | cust      |           |           |
-    |           |           |           | omization |           |           |
-    |           |           |           | as a      |           |           |
-    |           |           |           | giant     |           |           |
-    |           |           |           | d         |           |           |
-    |           |           |           | ictionary |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |   - data  | List      | No        | The       |           |           |
-    |           |           |           | D         |           |           |
-    |           |           |           | ictionary |           |           |
-    |           |           |           | will be   |           |           |
-    |           |           |           | exposed   |           |           |
-    |           |           |           | here as   |           |           |
-    |           |           |           | key value |           |           |
-    |           |           |           | pair      |           |           |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     - key | String    | Yes       |           |           | ui_contac |
-    |           |           |           |           |           | t_ip_addr |
-    |           |           |           |           |           | ess_label |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
-    |     -     | String    | Yes       |           |           | SVAgYWR   |
-    | value     |           |           |           |           | kcmVzczo= |
-    +-----------+-----------+-----------+-----------+-----------+-----------+
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | **Attribute**                       | **Type**  | **Required** | **Description**                                                                                                                                                                                                                                                               | **Default Values** | **Example Values**                                                                               |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | name                                | String    | Yes          | Resource Name                                                                                                                                                                                                                                                                 |                    | BYOD Portal (default)                                                                            |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | id                                  | String    | No           | Resource UUID, mandatory for update                                                                                                                                                                                                                                           |                    | 9a9b910c-54d3-44a4-a3c3-dd007c171599                                                             |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | description                         | String    | No           |                                                                                                                                                                                                                                                                               |                    | Default portal and user experience used when employees register a personal device on the network |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | portalTestUrl                       | String    | No           | URL to bring up a test page for this portal                                                                                                                                                                                                                                   |                    | https://{ise-ip}:8443/portal/PortalSetup.action?portal=9a9b910c-54d3-44a4-a3c3-dd007c171599      |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | portalType                          | Enum      | Yes          | Allowed values:                                                                                                                                                                                                                                                               | BYOD               |                                                                                                  |
+    |                                     |           |              | - BYOD,                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    |                                     |           |              | - HOTSPOTGUEST,                                                                                                                                                                                                                                                               |                    |                                                                                                  |
+    |                                     |           |              | - MYDEVICE,                                                                                                                                                                                                                                                                   |                    |                                                                                                  |
+    |                                     |           |              | - SELFREGGUEST,                                                                                                                                                                                                                                                               |                    |                                                                                                  |
+    |                                     |           |              | - SPONSOR,                                                                                                                                                                                                                                                                    |                    |                                                                                                  |
+    |                                     |           |              | - SPONSOREDGUEST                                                                                                                                                                                                                                                              |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | settings                            | List      | No           | Defines all of the settings groups available for a BYOD                                                                                                                                                                                                                       |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | - portalSettings                    | List      | No           | The port, interface, certificate, and other basic settings of a portal                                                                                                                                                                                                        |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - httpsPort                       | Integer   | Yes          | The port number that the allowed interfaces will listen on. Range from 8000 to 8999                                                                                                                                                                                           |                    | 8443                                                                                             |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - allowedInterfaces               | Enum      | Yes          | Interfaces that the portal will be reachable on. Allowed values:                                                                                                                                                                                                              |                    | [ "eth0", "bond0" ]                                                                              |
+    |                                     |           |              | - eth0,                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    |                                     |           |              | - eth1,                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    |                                     |           |              | - eth2,                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    |                                     |           |              | - eth3,                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    |                                     |           |              | - eth4,                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    |                                     |           |              | - eth5,                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    |                                     |           |              | - bond0,                                                                                                                                                                                                                                                                      |                    |                                                                                                  |
+    |                                     |           |              | - bond1,                                                                                                                                                                                                                                                                      |                    |                                                                                                  |
+    |                                     |           |              | - bond2                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - certificateGroupTag             | String    | Yes          | Logical name of the x.509 server certificate that will be used for the portal                                                                                                                                                                                                 |                    | Default Portal Certificate Group                                                                 |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - endpointIdentityGroup           | String    | Yes          | Unique Id of the endpoint identity group where user's devices will be added. Used only in Hotspot Portal                                                                                                                                                                      |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - displayLang                     | Enum      | No           | Allowed values:                                                                                                                                                                                                                                                               |                    | USEBROWSERLOCALE                                                                                 |
+    |                                     |           |              | - USEBROWSERLOCALE,                                                                                                                                                                                                                                                           |                    |                                                                                                  |
+    |                                     |           |              | - ALWAYSUSE                                                                                                                                                                                                                                                                   |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - fallbackLanguage                | String    | No           | Used when displayLang = USEBROWSERLOCALE                                                                                                                                                                                                                                      |                    | English                                                                                          |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - alwaysUsedLanguage              | String    | No           | Used when displayLang = ALWAYSUSE                                                                                                                                                                                                                                             |                    | English                                                                                          |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | - byodSettings                      | List      | No           | Configuration of BYOD Device Welcome, Registration and Success steps                                                                                                                                                                                                          |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - byodWelcomeSettings             | List      | No           | Configuration of BYOD endpoint welcome step configuration                                                                                                                                                                                                                     |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - enableBYOD                    | Boolean   | No           |                                                                                                                                                                                                                                                                               | true               |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - enableGuestAccess             | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - requireMDM                    | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - includeAup                    | Boolean   | No           |                                                                                                                                                                                                                                                                               | true               |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - aupDisplay                    | Enum      | No           | How the AUP should be displayed, either on page or as a link. Only valid if includeAup = true. Allowed values:                                                                                                                                                                | ONPAGE             |                                                                                                  |
+    |                                     |           |              | - ONPAGE,                                                                                                                                                                                                                                                                     |                    |                                                                                                  |
+    |                                     |           |              | - ASLINK                                                                                                                                                                                                                                                                      |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - requireAupAcceptance          | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - requireScrolling              | Boolean   | No           | Require BYOD devices to scroll down to the bottom of the AUP, Only valid if includeAup = true                                                                                                                                                                                 | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - byodRegistrationSettings        | List      | No           | Configuration of BYOD endpoint Registration step configuration                                                                                                                                                                                                                |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - showDeviceID                  | Boolean   | No           | Display Device ID field during registration                                                                                                                                                                                                                                   | true               |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - endPointIdentityGroupId       | String    | No           | Identity group id for which endpoint belongs                                                                                                                                                                                                                                  |                    | aa13bb40-8bff-11e6-996c-525400b48521                                                             |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - byodRegistrationSuccessSettings | List      | No           | Configuration of BYOD endpoint Registration Success step configuration                                                                                                                                                                                                        |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - successRedirect               | Enum      | No           | After an Authentication Success where should device be redirected. Allowed values:                                                                                                                                                                                            | AUTHSUCCESSPAGE    |                                                                                                  |
+    |                                     |           |              | - AUTHSUCCESSPAGE,                                                                                                                                                                                                                                                            |                    |                                                                                                  |
+    |                                     |           |              | - ORIGINATINGURL,                                                                                                                                                                                                                                                             |                    |                                                                                                  |
+    |                                     |           |              | - URL                                                                                                                                                                                                                                                                         |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - redirectUrl                   | String    | No           | Target URL for redirection, used when successRedirect = URL                                                                                                                                                                                                                   |                    | Redirect URL                                                                                     |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | - supportInfoSettings               | List      | No           | Configuration of BYOD endpoint welcome step configuration                                                                                                                                                                                                                     |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - includeSupportInfoPage          | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - includeMacAddr                  | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - includeIpAddress                | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - includeBrowserUserAgent         | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - includePolicyServer             | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - includeFailureCode              | Boolean   | No           |                                                                                                                                                                                                                                                                               | false              |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - emptyFieldDisplay               | Enum      | No           | Specifies how empty fields are handled on the Support Information Page. Allowed values:                                                                                                                                                                                       |                    | HIDE                                                                                             |
+    |                                     |           |              | - HIDE,                                                                                                                                                                                                                                                                       |                    |                                                                                                  |
+    |                                     |           |              | - DISPLAYWITHNOVALUE,                                                                                                                                                                                                                                                         |                    |                                                                                                  |
+    |                                     |           |              | - DISPLAYWITHDEFAULTVALUE                                                                                                                                                                                                                                                     |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - defaultEmptyFieldValue          | String    | No           | The default value displayed for an empty field Only valid when emptyFieldDisplay = DISPLAYWITHDEFAULTVALUE                                                                                                                                                                    |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | customizations                      | List      | No           | Defines all of the Portal Customizations available for a BYOD                                                                                                                                                                                                                 |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | - portalTheme                       | List      | No           | Defines the configuration for portal theme                                                                                                                                                                                                                                    |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - id                              | String    | No           | The unique internal identifier of the portal theme                                                                                                                                                                                                                            |                    | 9eb421c0-8c01-11e6-996c-525400b48521                                                             |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - name                            | String    | Yes          | The system- or user-assigned name of the portal theme                                                                                                                                                                                                                         |                    | Default Blue theme                                                                               |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - themeData                       | String    | No           | A CSS file, represented as a Base64-encoded byte array                                                                                                                                                                                                                        |                    | Base 64 encoded string of Theme CSS file                                                         |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | - portalTweakSettings               | List      | No           | The Tweak Settings are a customization of the Portal Theme that has been selected for the portal. When the Portal Theme selection is changed, the Tweak Settings are overwritten to match the values in the theme. The Tweak Settings can subsequently be changed by the user |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - bannerColor                     | String    | No           | Hex value of color                                                                                                                                                                                                                                                            |                    | #0000FF                                                                                          |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - bannerTextColor                 | String    | No           |                                                                                                                                                                                                                                                                               |                    | Banner Text color code from GUI                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - pageBackgroundColor             | String    | No           |                                                                                                                                                                                                                                                                               |                    | Color code from GUI                                                                              |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - pageLabelAndTextColor           | String    | No           |                                                                                                                                                                                                                                                                               |                    | Label and Text color from GUI                                                                    |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | - language                          | List      | No           | This property is supported only for Read operation and it allows to show the customizations in English. Other languages are not supported                                                                                                                                     |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - viewLanguage                    | String    | No           |                                                                                                                                                                                                                                                                               |                    | English                                                                                          |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | - globalCustomizations              | List      | No           | Represent the portal Global customizations                                                                                                                                                                                                                                    |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - bannerTitle                     | String    | No           |                                                                                                                                                                                                                                                                               |                    | BYOD Portal                                                                                      |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - contactText                     | String    | No           |                                                                                                                                                                                                                                                                               |                    | Contact Support                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - footerElement                   | String    | No           |                                                                                                                                                                                                                                                                               |                    | Footer Element                                                                                   |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - mobileLogoImage                 | Image     | No           |                                                                                                                                                                                                                                                                               |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - data                          | String    | No           | Represented as base 64 encoded string of the image byte array                                                                                                                                                                                                                 |                    | base 64 encoded value of image                                                                   |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - desktopLogoImage                | Image     | No           |                                                                                                                                                                                                                                                                               |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - data                          | String    | No           | Represented as base 64 encoded string of the image byte array                                                                                                                                                                                                                 |                    | base 64 encoded value of image                                                                   |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - bannerImage                     | Image     | No           |                                                                                                                                                                                                                                                                               |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - data                          | String    | No           | Represented as base 64 encoded string of the image byte array                                                                                                                                                                                                                 |                    | base 64 encoded value of image                                                                   |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - backgroundImage                 | Image     | No           |                                                                                                                                                                                                                                                                               |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - data                          | String    | No           | Represented as base 64 encoded string of the image byte array                                                                                                                                                                                                                 |                    | base 64 encoded value of image                                                                   |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    | - pageCustomizations                | List      | No           | Represent the entire page customization as a giant dictionary                                                                                                                                                                                                                 |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |   - data                            | List      | No           | The Dictionary will be exposed here as key value pair                                                                                                                                                                                                                         |                    |                                                                                                  |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - key                           | String    | Yes          |                                                                                                                                                                                                                                                                               |                    | ui_contact_ip_address_label                                                                      |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
+    |     - value                         | String    | Yes          |                                                                                                                                                                                                                                                                               |                    | SVAgYWRkcmVzczo=                                                                                 |
+    +-------------------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------+
 
     """
 

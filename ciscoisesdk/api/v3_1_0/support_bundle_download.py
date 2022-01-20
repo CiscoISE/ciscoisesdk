@@ -51,47 +51,33 @@ class SupportBundleDownload(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Support Bundle Download API allows client to download support bundles
-    provided those are generated and available in the default location.
+    Support Bundle Download API allows client to download support bundles provided those are generated and available in the default location.
 
     Revision History
     ----------------
 
-    +-------------+-------------+-------------+-------------+---+---+
-    | **Revision  | **Resource  | **Cisco ISE | **De        |   |   |
-    | #**         | Version**   | Version**   | scription** |   |   |
-    +-------------+-------------+-------------+-------------+---+---+
-    | 0           | 1.0         | 2.7         | Initial     |   |   |
-    |             |             |             | Cisco ISE   |   |   |
-    |             |             |             | Version     |   |   |
-    +-------------+-------------+-------------+-------------+---+---+
+    +----------------+----------------------+-----------------------+---------------------------+---+---+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |   |
+    +----------------+----------------------+-----------------------+---------------------------+---+---+
+    | 0              | 1.0                  | 2.7                   | Initial Cisco ISE Version |   |   |
+    +----------------+----------------------+-----------------------+---------------------------+---+---+
 
     |
 
     Resource Definition
     -------------------
 
-    +-------------+----------+-------------+-------------+-------------+
-    | **          | **Type** | *           | **De        | **Example   |
-    | Attribute** |          | *Required** | scription** | Values**    |
-    +-------------+----------+-------------+-------------+-------------+
-    | name        | String   | Yes         | Resource    |             |
-    |             |          |             | Name        |             |
-    +-------------+----------+-------------+-------------+-------------+
-    | id          | String   | No          | Resource    |             |
-    |             |          |             | UUID,       |             |
-    |             |          |             | mandatory   |             |
-    |             |          |             | for update  |             |
-    +-------------+----------+-------------+-------------+-------------+
-    | description | String   | No          |             |             |
-    +-------------+----------+-------------+-------------+-------------+
-    | fileName    | String   | Yes         | File name   | filename    |
-    |             |          |             | along with  |             |
-    |             |          |             | path from   |             |
-    |             |          |             | where file  |             |
-    |             |          |             | needs to be |             |
-    |             |          |             | downloaded  |             |
-    +-------------+----------+-------------+-------------+-------------+
+    +---------------+----------+--------------+------------------------------------------------------------------+--------------------+
+    | **Attribute** | **Type** | **Required** | **Description**                                                  | **Example Values** |
+    +---------------+----------+--------------+------------------------------------------------------------------+--------------------+
+    | name          | String   | Yes          | Resource Name                                                    |                    |
+    +---------------+----------+--------------+------------------------------------------------------------------+--------------------+
+    | id            | String   | No           | Resource UUID, mandatory for update                              |                    |
+    +---------------+----------+--------------+------------------------------------------------------------------+--------------------+
+    | description   | String   | No           |                                                                  |                    |
+    +---------------+----------+--------------+------------------------------------------------------------------+--------------------+
+    | fileName      | String   | Yes          | File name along with path from where file needs to be downloaded | filename           |
+    +---------------+----------+--------------+------------------------------------------------------------------+--------------------+
 
     """
 

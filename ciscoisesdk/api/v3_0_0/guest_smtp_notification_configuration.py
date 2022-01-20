@@ -51,151 +51,51 @@ class GuestSmtpNotificationConfiguration(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Guest SMTP notification configuration API is a global setting for
-    enabling email notifications within guest application. These APIs allow
-    to create, update and retrieve the notification settings. The create API
-    may not be required to be used as of Cisco ISE Release 2.2 because the
-    single SMTP notification configuration is the only one used and it
-    always gets created during the Cisco ISE application initialization
-    period.
+    Guest SMTP notification configuration API is a global setting for enabling email notifications within guest application. These APIs allow to create, update and retrieve the notification settings. The create API may not be required to be used as of Cisco ISE Release 2.2 because the single SMTP notification configuration is the only one used and it always gets created during the Cisco ISE application initialization period.
 
     Revision History
     ----------------
 
-    +----------------+----------------+----------------+----------------+
-    | **Revision #** | **Resource     | **Cisco ISE    | *              |
-    |                | Version**      | Version**      | *Description** |
-    +----------------+----------------+----------------+----------------+
-    | 0              | 1.0            | 2.2            | Initial Cisco  |
-    |                |                |                | ISE Version    |
-    +----------------+----------------+----------------+----------------+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.2                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
 
     |
 
     Resource Definition
     -------------------
 
-    +----------+----------+----------+----------+----------+----------+
-    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
-    | ribute** |          | quired** | iption** | *Default | *Example |
-    |          |          |          |          | Values** | Values** |
-    +----------+----------+----------+----------+----------+----------+
-    | name     | String   | Yes      | Resource |          |          |
-    |          |          |          | Name     |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | id       | String   | No       | Resource |          | 9ecb     |
-    |          |          |          | UUID,    |          | 5340-8c0 |
-    |          |          |          | m        |          | 1-11e6-9 |
-    |          |          |          | andatory |          | 96c-5254 |
-    |          |          |          | for      |          | 00b48521 |
-    |          |          |          | update   |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | des      | String   | No       |          |          |          |
-    | cription |          |          |          |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | de       | String   | No       | The      | donotr   |          |
-    | faultFro |          |          | default  | eply@exa |          |
-    | mAddress |          |          | from     | mple.com |          |
-    |          |          |          | email    |          |          |
-    |          |          |          | address  |          |          |
-    |          |          |          | to be    |          |          |
-    |          |          |          | used to  |          |          |
-    |          |          |          | send     |          |          |
-    |          |          |          | emails   |          |          |
-    |          |          |          | from     |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | not      | Boolean  | No       | I        | true     |          |
-    | ificatio |          |          | ndicates |          |          |
-    | nEnabled |          |          | if the   |          |          |
-    |          |          |          | email    |          |          |
-    |          |          |          | noti     |          |          |
-    |          |          |          | fication |          |          |
-    |          |          |          | service  |          |          |
-    |          |          |          | is to be |          |          |
-    |          |          |          | enabled  |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | sm       | String   | No       | The SMTP |          |          |
-    | tpServer |          |          | server   |          |          |
-    |          |          |          | ip       |          |          |
-    |          |          |          | address  |          |          |
-    |          |          |          | or fqdn  |          |          |
-    |          |          |          | such as  |          |          |
-    |          |          |          | outbou   |          |          |
-    |          |          |          | nd.mycom |          |          |
-    |          |          |          | pany.com |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | useDe    | Boolean  | No       | If the   | false    |          |
-    | faultFro |          |          | default  |          |          |
-    | mAddress |          |          | from     |          |          |
-    |          |          |          | address  |          |          |
-    |          |          |          | should   |          |          |
-    |          |          |          | be used  |          |          |
-    |          |          |          | rather   |          |          |
-    |          |          |          | than     |          |          |
-    |          |          |          | using a  |          |          |
-    |          |          |          | sponsor  |          |          |
-    |          |          |          | user     |          |          |
-    |          |          |          | email    |          |          |
-    |          |          |          | address  |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | smtpPort | String   | No       | Port at  | 25       |          |
-    |          |          |          | which    |          |          |
-    |          |          |          | SMTP     |          |          |
-    |          |          |          | Secure   |          |          |
-    |          |          |          | Server   |          |          |
-    |          |          |          | is       |          |          |
-    |          |          |          | l        |          |          |
-    |          |          |          | istening |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | c        | String   | No       | Interval | 60       |          |
-    | onnectio |          |          | in       |          |          |
-    | nTimeout |          |          | seconds  |          |          |
-    |          |          |          | for all  |          |          |
-    |          |          |          | the SMTP |          |          |
-    |          |          |          | client   |          |          |
-    |          |          |          | con      |          |          |
-    |          |          |          | nections |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | useTL    | Boolean  | No       | If       | false    |          |
-    | SorSSLEn |          |          | co       |          |          |
-    | cryption |          |          | nfigured |          |          |
-    |          |          |          | to true, |          |          |
-    |          |          |          | SMTP     |          |          |
-    |          |          |          | server   |          |          |
-    |          |          |          | authen   |          |          |
-    |          |          |          | tication |          |          |
-    |          |          |          | will     |          |          |
-    |          |          |          | happen   |          |          |
-    |          |          |          | using    |          |          |
-    |          |          |          | TLS/SSL  |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | u        | Boolean  | No       | If       | false    |          |
-    | sePasswo |          |          | co       |          |          |
-    | rdAuthen |          |          | nfigured |          |          |
-    | tication |          |          | to true, |          |          |
-    |          |          |          | SMTP     |          |          |
-    |          |          |          | server   |          |          |
-    |          |          |          | authen   |          |          |
-    |          |          |          | tication |          |          |
-    |          |          |          | will     |          |          |
-    |          |          |          | happen   |          |          |
-    |          |          |          | using    |          |          |
-    |          |          |          | u        |          |          |
-    |          |          |          | sername/ |          |          |
-    |          |          |          | password |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | userName | String   | No       | Username |          |          |
-    |          |          |          | of       |          |          |
-    |          |          |          | Secure   |          |          |
-    |          |          |          | SMTP     |          |          |
-    |          |          |          | server   |          |          |
-    +----------+----------+----------+----------+----------+----------+
-    | password | String   | No       | Password |          |          |
-    |          |          |          | of       |          |          |
-    |          |          |          | Secure   |          |          |
-    |          |          |          | SMTP     |          |          |
-    |          |          |          | server   |          |          |
-    +----------+----------+----------+----------+----------+----------+
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | **Attribute**             | **Type** | **Required** | **Description**                                                                           | **Default Values**     | **Example Values**                   |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | name                      | String   | Yes          | Resource Name                                                                             |                        |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | id                        | String   | No           | Resource UUID, mandatory for update                                                       |                        | 9ecb5340-8c01-11e6-996c-525400b48521 |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | description               | String   | No           |                                                                                           |                        |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | defaultFromAddress        | String   | No           | The default from email address to be used to send emails from                             | donotreply@example.com |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | notificationEnabled       | Boolean  | No           | Indicates if the email notification service is to be enabled                              | true                   |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | smtpServer                | String   | No           | The SMTP server ip address or fqdn such as outbound.mycompany.com                         |                        |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | useDefaultFromAddress     | Boolean  | No           | If the default from address should be used rather than using a sponsor user email address | false                  |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | smtpPort                  | String   | No           | Port at which SMTP Secure Server is listening                                             | 25                     |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | connectionTimeout         | String   | No           | Interval in seconds for all the SMTP client connections                                   | 60                     |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | useTLSorSSLEncryption     | Boolean  | No           | If configured to true, SMTP server authentication will happen using TLS/SSL               | false                  |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | usePasswordAuthentication | Boolean  | No           | If configured to true, SMTP server authentication will happen using username/password     | false                  |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | userName                  | String   | No           | Username of Secure SMTP server                                                            |                        |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
+    | password                  | String   | No           | Password of Secure SMTP server                                                            |                        |                                      |
+    +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
 
     """
 

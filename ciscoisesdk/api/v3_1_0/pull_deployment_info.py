@@ -51,20 +51,16 @@ class PullDeploymentInfo(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Pull Deployment Info API allows clients to get the complete information
-    about a Cisco ISE deployment. The information includes details about the
-    deployment, network zccess, NADs, MDMs, licenses, posture and profiler.
+    Pull Deployment Info API allows clients to get the complete information about a Cisco ISE deployment. The information includes details about the deployment, network zccess, NADs, MDMs, licenses, posture and profiler.
 
     Revision History
     ----------------
 
-    +----------------+----------------+----------------+----------------+
-    | **Revision #** | **Resource     | **Cisco ISE    | *              |
-    |                | Version**      | Version**      | *Description** |
-    +----------------+----------------+----------------+----------------+
-    | 0              | 1.0            | 2.7            | Initial Cisco  |
-    |                |                |                | ISE Version    |
-    +----------------+----------------+----------------+----------------+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.7                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
 
     |
 
@@ -143,8 +139,7 @@ class PullDeploymentInfo(object):
 
     No
 
-    | Includes 'content' which is an array of dictionaries describing
-      various attributes with the properties:
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
     | - name (String),
     | - declaredType (String),
     | - scope (String),
@@ -156,10 +151,8 @@ class PullDeploymentInfo(object):
     | ["deployment",
     | "content": {
     |   "name": "{http://www.cisco.com/NetworkAccessInfo}AuthorizationInfo",
-    |   "declaredType":
-      "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node$AuthorizationInfo",
-    |   "scope":
-      "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node",
+    |   "declaredType": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node$AuthorizationInfo",
+    |   "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node",
     |   "value": {
     |     "policyLineCount": 0,
     |     "activeVLANCount": 0,
@@ -223,8 +216,7 @@ class PullDeploymentInfo(object):
 
     No
 
-    | Includes 'profiles' which is an array of dictionaries describing
-      various attributes with the properties:
+    | Includes 'profiles' which is an array of dictionaries describing various attributes with the properties:
     | - profile (List),
     | - customProfilesCount (Integer),
     | - endpointTypes (String),
@@ -276,8 +268,7 @@ class PullDeploymentInfo(object):
 
     No
 
-    | Array of dictionaries describing various attributes with the
-      properties:
+    | Array of dictionaries describing various attributes with the properties:
     | - opType (String),
     | - mainVersion (String),
     | - epochTime (Integer)
@@ -304,8 +295,7 @@ class PullDeploymentInfo(object):
 
     No
 
-    | Includes 'content' which is an array of dictionaries describing
-      various attributes with the properties:
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
     | - name (String),
     | - declaredType (String),
     | - scope (String),
@@ -318,8 +308,7 @@ class PullDeploymentInfo(object):
     | {
     |   "name": "{http://www.cisco.com/DeploymentInfo}NodeTypes",
     |   "declaredType": "java.lang.String",
-    |   "scope":
-      "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+    |   "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
     |   "value": "PAP,MNT,PDP,PXG",
     |   "nil": false,
     |   "globalScope": false,
@@ -367,8 +356,7 @@ class PullDeploymentInfo(object):
 
     No
 
-    | Includes 'content' which is an array of dictionaries describing
-      various attributes with the properties:
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
     | - name (String),
     | - declaredType (String),
     | - scope (String),
@@ -381,10 +369,8 @@ class PullDeploymentInfo(object):
     | "content": [
     |  {
     |     "name": "{http://www.cisco.com/NADInfo}NADProfileInfo",
-    |     "declaredType":
-      "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
-    |     "scope":
-      "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+    |     "declaredType": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+    |     "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
     |     "value": {
     |       "name": "Cisco",
     |       "isCiscoProvided": true,
@@ -472,8 +458,7 @@ class PullDeploymentInfo(object):
 
     No
 
-    | Includes 'content' which is an array of dictionaries describing
-      various attributes with the properties:
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
     | - name (String),
     | - declaredType (String),
     | - scope (String),
@@ -521,8 +506,7 @@ class PullDeploymentInfo(object):
 
     No
 
-    | Includes 'content' which is an array of dictionaries describing
-      various attributes with the properties:
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
     | - name (String),
     | - declaredType (String),
     | - scope (String),
@@ -537,8 +521,7 @@ class PullDeploymentInfo(object):
     |     {
     |     "name": "{http://www.cisco.com/LicenseInfo}SmartAccountName",
     |     "declaredType": "java.lang.String",
-    |     "scope":
-      "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+    |     "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
     |     "value": "",
     |     "nil": false,
     |     "globalScope": false,
@@ -562,8 +545,7 @@ class PullDeploymentInfo(object):
 
     Yes
 
-    | Array of dictionaries describing various attributes with the
-      properties:
+    | Array of dictionaries describing various attributes with the properties:
     | - name (String),
     | - declaredType (String),
     | - scope (String),
@@ -576,8 +558,7 @@ class PullDeploymentInfo(object):
     | {
     |   "name": "{http://www.cisco.com/PostureInfo}ActivePoliciesCount",
     |   "declaredType": "java.lang.Integer",
-    |   "scope":
-      "com.cisco.cpm.infrastructure.telemetry.jaxbgen.PostureInfo",
+    |   "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.PostureInfo",
     |   "value": 0,
     |   "nil": false,
     |   "globalScope": false,
@@ -617,8 +598,7 @@ class PullDeploymentInfo(object):
 
     No
 
-    | Array of dictionaries describing various attributes with the
-      properties:
+    | Array of dictionaries describing various attributes with the properties:
     | - sn (String),
     | - service (List)
 

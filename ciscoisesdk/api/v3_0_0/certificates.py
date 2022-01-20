@@ -51,8 +51,7 @@ class Certificates(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Certificate APIs for managing Cisco ISE Certificate Management
-    Operations.
+    Certificate APIs for managing Cisco ISE Certificate Management Operations.
 
     """
 

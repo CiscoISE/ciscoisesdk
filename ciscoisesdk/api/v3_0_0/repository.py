@@ -51,8 +51,7 @@ class Repository(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Repository APIs for managing the repositories in ISE, namely create,
-    retrieve, update, validate and delete.
+    Repository APIs for managing the repositories in ISE, namely create, retrieve, update, validate and delete.
 
     """
 

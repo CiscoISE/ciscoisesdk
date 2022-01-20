@@ -1,5 +1,6 @@
 [flake8]
 ignore =
+    E501,
     W605,
     # E402 module level import not at top of file
     E402,
@@ -25,4 +26,3 @@ exclude =
     versioneer.py,
     isesdk/_version.py,
     tests/,
-max-line-length = 140

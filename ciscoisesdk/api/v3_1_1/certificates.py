@@ -52,6 +52,7 @@ class Certificates(object):
     methods that return native Python objects.
 
 
+
     """
 
     def __init__(self, session, object_factory, request_validator):
@@ -971,8 +972,8 @@ class Certificates(object):
         the certificate.   "name": "CA Signed Certificate"
         data * required    Plain-text contents of the
         certificate file. Every space needs to be replaced with
-        newline escape sequence (\\n) (required).  Use  awk 'NF
-        {sub(/\\r/, ""); printf "%s\\n",$0;}' <<your .pem file>>
+        newline escape sequence (\n) (required).  Use  awk 'NF
+        {sub(/\r/, ""); printf "%s\\n",$0;}' <<your .pem file>>
         to extract data from certificate file.    "data":
         "Plain-text contents of the certificate file."
         allowExtendedValidity * required   Allow the
@@ -1705,14 +1706,14 @@ class Certificates(object):
         imported (required).   "password": "certificate
         password"       data * required    Plain-text contents
         of the certificate file. Every space needs to be
-        replaced with newline escape sequence (\\n) (required).
-        Use  awk 'NF {sub(/\\r/, ""); printf "%s\\n",$0;}' <<your
+        replaced with newline escape sequence (\n) (required).
+        Use  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <<your
         .pem file>>  to extract data from certificate file.
         "data": "Plain-text contents of the certificate file."
         privateKeyData * required    Plain-text contents of the
         private key file. Every space needs to be replaced with
-        newline escape sequence (\\n) (required). Use  awk 'NF
-        {sub(/\\r/, ""); printf "%s\\n",$0;}' <<your .pem file>>
+        newline escape sequence (\n) (required). Use  awk 'NF
+        {sub(/\r/, ""); printf "%s\\n",$0;}' <<your .pem file>>
         to extract privateKeyData from private key file.
         "data": "Plain-text contents of the private key file."
         allowOutOfDateCert * required    Allow out of date
@@ -2843,7 +2844,7 @@ class Certificates(object):
         "description": "Imported Trust Certificate"       data *
         required    Plain-text contents of the certificate file.
         Every space needs to be replaced with newline escape
-        sequence (\\n) (required).  Use  awk 'NF {sub(/\\r/, "");
+        sequence (\n) (required).  Use  awk 'NF {sub(/\r/, "");
         printf "%s\\n",$0;}' <<your .pem file>>  to extract data
         from certificate file.    "data": "Plain-text contents
         of the certificate file."       allowOutOfDateCert *

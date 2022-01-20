@@ -51,11 +51,7 @@ class Endpoint(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Endpoint API allows the client to add, delete, update, search, register
-    and de-register endpoints. Please note that each API description shows
-    whether the API is supported in bulk operation. The Bulk section is
-    showing only 'create' bulk operation however, all other operation which
-    are bulk supported can be used in same way.
+    Endpoint API allows the client to add, delete, update, search, register and de-register endpoints. Please note that each API description shows whether the API is supported in bulk operation. The Bulk section is showing only 'create' bulk operation however, all other operation which are bulk supported can be used in same way.
 
     Revision History
     ----------------
@@ -92,8 +88,7 @@ class Endpoint(object):
 
     customAttributes
 
-    Added custom attibutes for the user to include custom attributes when
-    adding endpoints to Cisco ISE
+    Added custom attibutes for the user to include custom attributes when adding endpoints to Cisco ISE
 
     2
 
@@ -105,61 +100,44 @@ class Endpoint(object):
 
     apiAdded
 
-    Added custom operation to get list of rejected endpoints:
-    '/getrejectedendpoints'
+    Added custom operation to get list of rejected endpoints: '/getrejectedendpoints'
 
     apiAdded
 
-    Added custom operation to release rejected endpoint:
-    '{id}/releaserejectedendpoint'
+    Added custom operation to release rejected endpoint: '{id}/releaserejectedendpoint'
 
     |
 
     Resource Definition
     -------------------
 
-    +-------------+----------+-------------+-------------+-------------+
-    | **          | **Type** | *           | **De        | **Example   |
-    | Attribute** |          | *Required** | scription** | Values**    |
-    +-------------+----------+-------------+-------------+-------------+
-    | name        | String   | Yes         | Resource    | 11:22:      |
-    |             |          |             | Name        | 33:44:55:66 |
-    +-------------+----------+-------------+-------------+-------------+
-    | id          | String   | No          | Resource    | 172         |
-    |             |          |             | UUID,       | f8270-8f4f- |
-    |             |          |             | mandatory   | 11eb-b4a8-9 |
-    |             |          |             | for update  | eb04987ed29 |
-    +-------------+----------+-------------+-------------+-------------+
-    | description | String   | No          |             | MyEndpoint  |
-    +-------------+----------+-------------+-------------+-------------+
-    | custo       | Map      | No          | Key value   | {"key1" :   |
-    | mAttributes |          |             | map         | "value1"}   |
-    +-------------+----------+-------------+-------------+-------------+
-    | groupId     | String   | Yes         |             | aa1         |
-    |             |          |             |             | 3bb40-8bff- |
-    |             |          |             |             | 11e6-996c-5 |
-    |             |          |             |             | 25400b48521 |
-    +-------------+----------+-------------+-------------+-------------+
-    | id          | String   | No          |             | id          |
-    | entityStore |          |             |             | entityStore |
-    +-------------+----------+-------------+-------------+-------------+
-    | iden        | String   | No          |             | iden        |
-    | tityStoreId |          |             |             | tityStoreId |
-    +-------------+----------+-------------+-------------+-------------+
-    | mac         | String   | Yes         |             | 11:22:      |
-    |             |          |             |             | 33:44:55:66 |
-    +-------------+----------+-------------+-------------+-------------+
-    | portalUser  | String   | No          |             | portalUser  |
-    +-------------+----------+-------------+-------------+-------------+
-    | profileId   | String   | No          |             | profileId   |
-    +-------------+----------+-------------+-------------+-------------+
-    | staticGrou  | Boolean  | Yes         |             | true        |
-    | pAssignment |          |             |             |             |
-    +-------------+----------+-------------+-------------+-------------+
-    | s           | Boolean  | Yes         |             | false       |
-    | taticProfil |          |             |             |             |
-    | eAssignment |          |             |             |             |
-    +-------------+----------+-------------+-------------+-------------+
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | **Attribute**           | **Type** | **Required** | **Description**                     | **Example Values**                   |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | name                    | String   | Yes          | Resource Name                       | 11:22:33:44:55:66                    |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | id                      | String   | No           | Resource UUID, mandatory for update | 172f8270-8f4f-11eb-b4a8-9eb04987ed29 |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | description             | String   | No           |                                     | MyEndpoint                           |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | customAttributes        | Map      | No           | Key value map                       | {"key1" : "value1"}                  |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | groupId                 | String   | Yes          |                                     | aa13bb40-8bff-11e6-996c-525400b48521 |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | identityStore           | String   | No           |                                     | identityStore                        |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | identityStoreId         | String   | No           |                                     | identityStoreId                      |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | mac                     | String   | Yes          |                                     | 11:22:33:44:55:66                    |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | portalUser              | String   | No           |                                     | portalUser                           |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | profileId               | String   | No           |                                     | profileId                            |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | staticGroupAssignment   | Boolean  | Yes          |                                     | true                                 |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | staticProfileAssignment | Boolean  | Yes          |                                     | false                                |
+    +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
 
     """
 

@@ -51,43 +51,31 @@ class ClearThreatsAndVulnerabilities(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Clear Threats and Vulnerabilities API allows the user to delete the
-    ThreatContext and Threat events that are associated with the given MAC
-    Address.
+    Clear Threats and Vulnerabilities API allows the user to delete the ThreatContext and Threat events that are associated with the given MAC Address.
 
     Revision History
     ----------------
 
-    +----------------+----------------+----------------+----------------+
-    | **Revision #** | **Resource     | **Cisco ISE    | *              |
-    |                | Version**      | Version**      | *Description** |
-    +----------------+----------------+----------------+----------------+
-    | 0              | 1.0            | 2.1            | Initial Cisco  |
-    |                |                |                | ISE Version    |
-    +----------------+----------------+----------------+----------------+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.1                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
 
     |
 
     Resource Definition
     -------------------
 
-    +-------------+----------+-------------+-------------+-------------+
-    | **          | **Type** | *           | **De        | **Example   |
-    | Attribute** |          | *Required** | scription** | Values**    |
-    +-------------+----------+-------------+-------------+-------------+
-    | name        | String   | Yes         | Resource    |             |
-    |             |          |             | Name        |             |
-    +-------------+----------+-------------+-------------+-------------+
-    | id          | String   | Yes         | Resource    |             |
-    |             |          |             | UUID value  |             |
-    +-------------+----------+-------------+-------------+-------------+
-    | m           | String   | Yes         | One or more | [           |
-    | acAddresses |          |             | endpoint    | "00:00:00   |
-    |             |          |             | MAC         | :00:00:F2", |
-    |             |          |             | addresses   | "00:00:0    |
-    |             |          |             |             | 0:00:00:F3" |
-    |             |          |             |             | ]           |
-    +-------------+----------+-------------+-------------+-------------+
+    +---------------+----------+--------------+------------------------------------+----------------------------------------------+
+    | **Attribute** | **Type** | **Required** | **Description**                    | **Example Values**                           |
+    +---------------+----------+--------------+------------------------------------+----------------------------------------------+
+    | name          | String   | Yes          | Resource Name                      |                                              |
+    +---------------+----------+--------------+------------------------------------+----------------------------------------------+
+    | id            | String   | Yes          | Resource UUID value                |                                              |
+    +---------------+----------+--------------+------------------------------------+----------------------------------------------+
+    | macAddresses  | String   | Yes          | One or more endpoint MAC addresses | [ "00:00:00:00:00:F2", "00:00:00:00:00:F3" ] |
+    +---------------+----------+--------------+------------------------------------+----------------------------------------------+
 
     """
 
