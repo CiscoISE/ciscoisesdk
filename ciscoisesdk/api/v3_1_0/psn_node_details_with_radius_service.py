@@ -50,6 +50,7 @@ class PsnNodeDetailsWithRadiusService(object):
     Wraps the Identity Services Engine PsnNodeDetailsWithRadiusService
     API and exposes the API as native Python
     methods that return native Python objects.
+
     PSN Node Details with RADIUS Service API allows the client to get
     deployment node details where 'Session Services' is enabled.
 

@@ -50,6 +50,7 @@ class SxpLocalBindings(object):
     Wraps the Identity Services Engine SXPLocalBindings
     API and exposes the API as native Python
     methods that return native Python objects.
+
     SXP Local Bindings API allows clients to add, get, update and delete SGT
     static mappings.
 

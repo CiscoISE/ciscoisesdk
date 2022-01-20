@@ -50,6 +50,7 @@ class NodeDetails(object):
     Wraps the Identity Services Engine NodeDetails
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Node Details API allows the client to get deployment node details, get
     all nodes and filter nodes based on NodeServiceTypes.
 

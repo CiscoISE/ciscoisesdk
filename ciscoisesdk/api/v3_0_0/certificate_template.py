@@ -50,6 +50,7 @@ class CertificateTemplate(object):
     Wraps the Identity Services Engine CertificateTemplate
     API and exposes the API as native Python
     methods that return native Python objects.
+
     The certificate template API provides the ability to search for
     certificate templates.
 

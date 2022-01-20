@@ -50,6 +50,7 @@ class TacacsServerSequence(object):
     Wraps the Identity Services Engine TacacsServerSequence
     API and exposes the API as native Python
     methods that return native Python objects.
+
     TACACS Server Sequence API aallows the client to add, delete, update,
     search and perform actions on TACACS server sequence.
 

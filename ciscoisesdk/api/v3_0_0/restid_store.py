@@ -50,6 +50,7 @@ class RestidStore(object):
     Wraps the Identity Services Engine RESTIDStore
     API and exposes the API as native Python
     methods that return native Python objects.
+
     REST ID Store API allows clients to add, get, update and delete REST ID
     stores.
 

@@ -50,6 +50,7 @@ class SupportBundleDownload(object):
     Wraps the Identity Services Engine SupportBundleDownload
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Support Bundle Download API allows client to download support bundles
     provided those are generated and available in the default location.
 

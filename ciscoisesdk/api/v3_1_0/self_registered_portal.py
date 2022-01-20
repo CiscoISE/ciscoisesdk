@@ -50,6 +50,7 @@ class SelfRegisteredPortal(object):
     Wraps the Identity Services Engine SelfRegisteredPortal
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Self Registered Guest Portal API provides the ability to create, read,
     update, delete and search self registered portals.
 

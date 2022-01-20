@@ -50,6 +50,7 @@ class IdentitySequence(object):
     Wraps the Identity Services Engine IdentitySequence
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Identity Sequence API allows the client to add, delete, update and
     search Identity sequences.
 

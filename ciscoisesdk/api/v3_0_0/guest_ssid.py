@@ -50,6 +50,7 @@ class GuestSsid(object):
     Wraps the Identity Services Engine GuestSSID
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Guest SSIDs are global objects that are referenced by Cisco ISE sponsor
     portals. Guest SSID API allows the client to add, delete, update and
     search guest SSID among other operations which are available from all

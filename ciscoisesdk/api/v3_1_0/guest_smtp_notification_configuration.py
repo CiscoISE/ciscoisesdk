@@ -50,6 +50,7 @@ class GuestSmtpNotificationConfiguration(object):
     Wraps the Identity Services Engine GuestSMTPNotificationConfiguration
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Guest SMTP notification configuration API is a global setting for
     enabling email notifications within guest application. These APIs allow
     to create, update and retrieve the notification settings. The create API

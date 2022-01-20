@@ -50,6 +50,7 @@ class NodeGroup(object):
     Wraps the Identity Services Engine Node Group
     API and exposes the API as native Python
     methods that return native Python objects.
+
     APIs for the configuration, administration and monitoring of the nodes
     in an ISE cluster deployment.
 

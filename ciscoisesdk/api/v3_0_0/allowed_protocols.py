@@ -50,6 +50,7 @@ class AllowedProtocols(object):
     Wraps the Identity Services Engine AllowedProtocols
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Allowed Protocols API allows the client to add, delete, update, search
     and perform actions on allowed protocols.
 

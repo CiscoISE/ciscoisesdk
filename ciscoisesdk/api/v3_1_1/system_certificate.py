@@ -50,6 +50,7 @@ class SystemCertificate(object):
     Wraps the Identity Services Engine SystemCertificate
     API and exposes the API as native Python
     methods that return native Python objects.
+
     System Certificate API provides the ability to create certificates like
     SAML, pxGrid.
 

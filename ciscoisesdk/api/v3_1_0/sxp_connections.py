@@ -50,6 +50,7 @@ class SxpConnections(object):
     Wraps the Identity Services Engine SXPConnections
     API and exposes the API as native Python
     methods that return native Python objects.
+
     SXP Connections API allows clients to add, get, update and delete the
     Security Group Tag (SGT) Exchange Protocol (SXP) connections.
 

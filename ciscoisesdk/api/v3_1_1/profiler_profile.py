@@ -50,6 +50,7 @@ class ProfilerProfile(object):
     Wraps the Identity Services Engine ProfilerProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Profiler Profile API allows the client to search profiles.
 
     Revision History

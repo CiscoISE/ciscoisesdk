@@ -50,6 +50,7 @@ class SecurityGroups(object):
     Wraps the Identity Services Engine SecurityGroups
     API and exposes the API as native Python
     methods that return native Python objects.
+
     SGT API allows the client to search SGTs.
 
     Revision History

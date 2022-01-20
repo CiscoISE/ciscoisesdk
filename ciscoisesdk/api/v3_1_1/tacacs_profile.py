@@ -50,6 +50,7 @@ class TacacsProfile(object):
     Wraps the Identity Services Engine TACACSProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+
     TACACS Profile API allows the client to add, delete, update, search and
     perform actions on TACACS profile.
 

@@ -50,6 +50,7 @@ class SponsorPortal(object):
     Wraps the Identity Services Engine SponsorPortal
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Sponsor Portal API provides the ability to create, read, update, delete
     and search sponsor portals.
 

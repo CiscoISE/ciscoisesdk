@@ -50,6 +50,7 @@ class PortalGlobalSetting(object):
     Wraps the Identity Services Engine PortalGlobalSetting
     API and exposes the API as native Python
     methods that return native Python objects.
+
     The Portal Global Setting API allows the user to customize the text that
     is displayed in the Cisco ISE portals. This global setting controls
     whether HTML alone or both HTML and Javascript are permitted to be used

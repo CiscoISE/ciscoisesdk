@@ -50,6 +50,7 @@ class SupportBundleStatus(object):
     Wraps the Identity Services Engine SupportBundleStatus
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Support Bundle Status API allows clients to query status of a triggered
     support bundle.
 

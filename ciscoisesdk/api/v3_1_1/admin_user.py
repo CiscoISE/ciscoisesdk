@@ -50,6 +50,7 @@ class AdminUser(object):
     Wraps the Identity Services Engine AdminUser
     API and exposes the API as native Python
     methods that return native Python objects.
+
     The Admin User API allows to retrieve information related to admin users
     configured on Cisco ISE.
 

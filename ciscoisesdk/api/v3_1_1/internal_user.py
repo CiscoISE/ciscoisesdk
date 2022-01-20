@@ -50,6 +50,7 @@ class InternalUser(object):
     Wraps the Identity Services Engine InternalUser
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Internal User API allows the client to add, delete, update and search
     internal users.
 

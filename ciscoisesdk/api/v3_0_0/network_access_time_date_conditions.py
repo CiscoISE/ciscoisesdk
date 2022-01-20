@@ -50,6 +50,7 @@ class NetworkAccessTimeDateConditions(object):
     Wraps the Identity Services Engine Network Access - Time/Date Conditions
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Policy APIs for manage Policy Sets, authorization policies,
     authentication policies, and policy elements.
 

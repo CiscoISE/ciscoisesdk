@@ -50,6 +50,7 @@ class AncEndpoint(object):
     Wraps the Identity Services Engine ANCEndpoint
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Adaptive Network Control (ANC) provides the ability to create network
     endpoint authorization controls based on ANC policies.
 

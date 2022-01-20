@@ -50,6 +50,7 @@ class PullDeploymentInfo(object):
     Wraps the Identity Services Engine PullDeploymentInfo
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Pull Deployment Info API allows clients to get the complete information
     about a Cisco ISE deployment. The information includes details about the
     deployment, network zccess, NADs, MDMs, licenses, posture and profiler.

@@ -50,6 +50,7 @@ class NetworkDeviceGroup(object):
     Wraps the Identity Services Engine NetworkDeviceGroup
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Network Device Group API allows the client to search network device
     groups.
 

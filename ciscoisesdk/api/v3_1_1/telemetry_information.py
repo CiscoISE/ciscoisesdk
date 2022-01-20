@@ -50,6 +50,7 @@ class TelemetryInformation(object):
     Wraps the Identity Services Engine TelemetryInformation
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Telemetry Information API allows clients to get telemetry configuration
     information.
 

@@ -50,6 +50,7 @@ class Portal(object):
     Wraps the Identity Services Engine portal
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Portal API allows the client to search profiles.
 
     Revision History

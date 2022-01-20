@@ -50,6 +50,7 @@ class EndpointCertificate(object):
     Wraps the Identity Services Engine EndpointCertificate
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Endpoint Certificate API allows the client to create endpoint
     certificates signed by the Cisco ISE Internal CA. This API can takes in
     certificate request details, create a RSA key pair, create a certificate

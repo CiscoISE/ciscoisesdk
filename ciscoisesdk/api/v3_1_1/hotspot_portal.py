@@ -50,6 +50,7 @@ class HotspotPortal(object):
     Wraps the Identity Services Engine HotspotPortal
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Hotspot Guest Portal API provides the ability to create, read, update,
     delete and search hotspot guest portals.
 

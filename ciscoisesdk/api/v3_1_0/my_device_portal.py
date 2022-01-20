@@ -50,6 +50,7 @@ class MyDevicePortal(object):
     Wraps the Identity Services Engine MyDevicePortal
     API and exposes the API as native Python
     methods that return native Python objects.
+
     My Device Portal API provides the ability to create, read, update,
     delete and search my device portals.
 

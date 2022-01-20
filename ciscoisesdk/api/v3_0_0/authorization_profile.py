@@ -50,6 +50,7 @@ class AuthorizationProfile(object):
     Wraps the Identity Services Engine AuthorizationProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Authorization Profile API allows the client to add, delete, update,
     search and perform actions on authorization profiles.
 

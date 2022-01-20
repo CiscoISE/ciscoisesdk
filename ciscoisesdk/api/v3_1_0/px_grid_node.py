@@ -50,6 +50,7 @@ class PxGridNode(object):
     Wraps the Identity Services Engine pxGridNode
     API and exposes the API as native Python
     methods that return native Python objects.
+
     pxGrid Node API allows the client to retrieve pxGrid information, delete
     an existing pxGrid node, and approve new pxGrid nodes. \**Note:*\* From
     Cisco ISE Release 3.1, all pxGrid connections must be based on pxGrid

@@ -50,6 +50,7 @@ class AciBindings(object):
     Wraps the Identity Services Engine ACIBindings
     API and exposes the API as native Python
     methods that return native Python objects.
+
     The ACI Bindings API allows clients to retrieve bindings that were sent
     to Cisco ISE by ACI or received on ACI from Cisco ISE. The binding
     information will be identical to the information on the ACI bindings

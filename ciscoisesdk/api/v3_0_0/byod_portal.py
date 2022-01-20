@@ -50,6 +50,7 @@ class ByodPortal(object):
     Wraps the Identity Services Engine BYODPortal
     API and exposes the API as native Python
     methods that return native Python objects.
+
     BYOD Portal API provides the ability to Create, Read, Update, Delete and
     Search BYOD portals.
 

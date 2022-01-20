@@ -50,6 +50,7 @@ class SponsorGroup(object):
     Wraps the Identity Services Engine SponsorGroup
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Sponsor Group API allows the client to add, delete, update and search
     sponsor groups.
 

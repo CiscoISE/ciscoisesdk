@@ -50,6 +50,7 @@ class SecurityGroupToVirtualNetwork(object):
     Wraps the Identity Services Engine SecurityGroupToVirtualNetwork
     API and exposes the API as native Python
     methods that return native Python objects.
+
     SGT mapping to virtual networks are mapped to referenced vlan. These
     constructs come from out side of Cisco ISE and are not CRUDable inside
     Cisco ISE.

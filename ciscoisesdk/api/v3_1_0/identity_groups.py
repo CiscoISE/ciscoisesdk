@@ -50,6 +50,7 @@ class IdentityGroups(object):
     Wraps the Identity Services Engine IdentityGroups
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Identity Groups API allows the client to search identity groups.
 
     Revision History

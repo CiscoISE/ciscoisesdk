@@ -50,6 +50,7 @@ class VersionInfo(object):
     Wraps the Identity Services Engine VersionInfo
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Version and Patch API is used to provide the Cisco ISE version on which
     the Cisco ISE cluster is running, and a comma-separated list of the
     patches that are installed. The highest numbered patch is the patch that

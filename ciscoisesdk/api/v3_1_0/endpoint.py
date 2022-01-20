@@ -50,6 +50,7 @@ class Endpoint(object):
     Wraps the Identity Services Engine endpoint
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Endpoint API allows the client to add, delete, update, search, register
     and de-register endpoints. Please note that each API description shows
     whether the API is supported in bulk operation. The Bulk section is

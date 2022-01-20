@@ -50,6 +50,7 @@ class SxpVpns(object):
     Wraps the Identity Services Engine SXPVPNs
     API and exposes the API as native Python
     methods that return native Python objects.
+
     SXP VPNs API allows clients to add, get and delete SXP VPNs (SXP
     Domains).
 

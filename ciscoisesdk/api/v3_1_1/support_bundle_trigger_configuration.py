@@ -50,6 +50,7 @@ class SupportBundleTriggerConfiguration(object):
     Wraps the Identity Services Engine SupportBundleTriggerConfiguration
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Support Bundle Trigger API allows clients to trigger support bundle
     provided the log settings are given using which the support needs to be
     generated.

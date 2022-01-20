@@ -50,6 +50,7 @@ class CertificateProfile(object):
     Wraps the Identity Services Engine CertificateProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+
     The certificate profile API allows the client to add, search and perform
     actions on the certificate profiles.
 

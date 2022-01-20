@@ -50,6 +50,7 @@ class SponsoredGuestPortal(object):
     Wraps the Identity Services Engine SponsoredGuestPortal
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Sponsored Guest Portal API provides the ability to create, read, update,
     delete and search sponsored guest portals.
 

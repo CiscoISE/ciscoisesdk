@@ -50,6 +50,7 @@ class NetworkDevice(object):
     Wraps the Identity Services Engine NetworkDevice
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Network Device API allows the client to add, delete, update, and search
     network devices. Please note that each API description shows whether the
     API is supported in bulk operation. The bulk section is showing only

@@ -50,6 +50,7 @@ class IpToSgtMappingGroup(object):
     Wraps the Identity Services Engine IPToSGTMappingGroup
     API and exposes the API as native Python
     methods that return native Python objects.
+
     IP To SGT Mapping Group API allows the client to add, delete, update,
     search and deploy IP to SGT mapping groups.
 

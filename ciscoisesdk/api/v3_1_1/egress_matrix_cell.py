@@ -50,6 +50,7 @@ class EgressMatrixCell(object):
     Wraps the Identity Services Engine EgressMatrixCell
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Egress Policy Matrix Cell API allows the client to add, update, delete
     and search egress matrix cells among other operations.
 

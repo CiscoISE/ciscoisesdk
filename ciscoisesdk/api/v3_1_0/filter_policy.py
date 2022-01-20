@@ -50,6 +50,7 @@ class FilterPolicy(object):
     Wraps the Identity Services Engine FilterPolicy
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Filter Policy API allows clients to add, get, update and delete SXP
     domain filter policies.
 

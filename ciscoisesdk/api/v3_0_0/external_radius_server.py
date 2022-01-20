@@ -50,6 +50,7 @@ class ExternalRadiusServer(object):
     Wraps the Identity Services Engine ExternalRADIUSServer
     API and exposes the API as native Python
     methods that return native Python objects.
+
     External RADIUS Server API allows the client to add, delete, update,
     search and perform actions on external RADIUS server.
 

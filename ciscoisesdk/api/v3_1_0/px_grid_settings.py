@@ -50,6 +50,7 @@ class PxGridSettings(object):
     Wraps the Identity Services Engine PxGridSettings
     API and exposes the API as native Python
     methods that return native Python objects.
+
     pxGrid Settings API allows the client to change auto-approve settings
     for pxGrid nodes. \**Note:*\* From Cisco ISE Release 3.1, all pxGrid
     connections must be based on pxGrid 2.0. pxGrid 1.0-based (XMPP-based)

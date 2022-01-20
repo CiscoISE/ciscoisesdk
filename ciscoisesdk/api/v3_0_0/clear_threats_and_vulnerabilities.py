@@ -50,6 +50,7 @@ class ClearThreatsAndVulnerabilities(object):
     Wraps the Identity Services Engine ClearThreatsAndVulnerabilities
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Clear Threats and Vulnerabilities API allows the user to delete the
     ThreatContext and Threat events that are associated with the given MAC
     Address.

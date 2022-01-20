@@ -50,6 +50,7 @@ class GuestUser(object):
     Wraps the Identity Services Engine GuestUser
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Guest User API allows the client to add, delete, update and search guest
     users among other operations which are available from the sponsor
     portal. Please note that each API description shows whether the API is

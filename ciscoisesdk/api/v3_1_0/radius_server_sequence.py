@@ -50,6 +50,7 @@ class RadiusServerSequence(object):
     Wraps the Identity Services Engine RADIUSServerSequence
     API and exposes the API as native Python
     methods that return native Python objects.
+
     RADIUS Server Sequence API allows the client to add, delete, update,
     search and perform actions on RADIUS server sequence.
 

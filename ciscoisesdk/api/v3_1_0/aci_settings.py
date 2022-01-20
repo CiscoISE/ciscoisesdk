@@ -50,6 +50,7 @@ class AciSettings(object):
     Wraps the Identity Services Engine ACISettings
     API and exposes the API as native Python
     methods that return native Python objects.
+
     ACI Settings API allows the client to get and update the ACI Settings.
     In addition, testing the ACI Domain Manager connection is also possible
     using the TestACIConnection.

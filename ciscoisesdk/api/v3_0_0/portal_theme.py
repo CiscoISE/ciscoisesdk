@@ -50,6 +50,7 @@ class PortalTheme(object):
     Wraps the Identity Services Engine PortalTheme
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Portal Theme API allows the client to add, delete, update and search
     Portal Theme among other operations which are available from all the
     portals.

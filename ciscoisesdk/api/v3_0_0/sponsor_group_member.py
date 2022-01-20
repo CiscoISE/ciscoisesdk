@@ -50,6 +50,7 @@ class SponsorGroupMember(object):
     Wraps the Identity Services Engine SponsorGroupMember
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Sponsor Group API allows the client to search the group members from
     different identity stores configured in the GUI.
 

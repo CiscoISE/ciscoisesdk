@@ -50,6 +50,7 @@ class NativeSupplicantProfile(object):
     Wraps the Identity Services Engine NativeSupplicantProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+
     Native supplicant profile API provides the ability to update, delete and
     search native supplicant profiles.
 
