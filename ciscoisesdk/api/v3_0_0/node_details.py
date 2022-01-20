@@ -50,6 +50,117 @@ class NodeDetails(object):
     Wraps the Identity Services Engine NodeDetails
     API and exposes the API as native Python
     methods that return native Python objects.
+    Node Details API allows the client to get deployment node details, get
+    all nodes and filter nodes based on NodeServiceTypes.
+
+    Revision History
+    ----------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **       | **       | **Cisco  | **Descr  | **       |          |
+    | Revision | Resource | ISE      | iption** | Revision |          |
+    | #**      | V        | V        |          | Modifi   |          |
+    |          | ersion** | ersion** |          | cation** |          |
+    +----------+----------+----------+----------+----------+----------+
+    |          |          |          |          | **Att    | **Descr  |
+    |          |          |          |          | ribute** | iption** |
+    +----------+----------+----------+----------+----------+----------+
+    | 0        | 1.0      | 2.2      | Initial  |          |          |
+    |          |          |          | Cisco    |          |          |
+    |          |          |          | ISE      |          |          |
+    |          |          |          | Version  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | 1        | 1.1      | 2.4      | Support  | NodeServ | Added    |
+    |          |          |          | Node     | iceTypes | String   |
+    |          |          |          | Service  |          | Field    |
+    |          |          |          | Types as |          | N        |
+    |          |          |          | part of  |          | odeServi |
+    |          |          |          | Node     |          | ceTypes. |
+    |          |          |          | Object   |          | String   |
+    |          |          |          |          |          | re       |
+    |          |          |          |          |          | presents |
+    |          |          |          |          |          | services |
+    |          |          |          |          |          | co       |
+    |          |          |          |          |          | nfigured |
+    |          |          |          |          |          | on the   |
+    |          |          |          |          |          | Node     |
+    +----------+----------+----------+----------+----------+----------+
+    | 2        | 1.2      | 2.7      | Support  | fqdn     | Added    |
+    |          |          |          | Node     |          | String   |
+    |          |          |          | FQDN as  |          | Field    |
+    |          |          |          | part of  |          | FQDN.    |
+    |          |          |          | Node     |          | String   |
+    |          |          |          | Object   |          | re       |
+    |          |          |          |          |          | presents |
+    |          |          |          |          |          | FQDN of  |
+    |          |          |          |          |          | the Node |
+    +----------+----------+----------+----------+----------+----------+
+    | 3        | 1.3      | 3.0      | Support  | sxpI     | Added    |
+    |          |          |          | SXP IP   | pAddress | String   |
+    |          |          |          | Address  |          | Field    |
+    |          |          |          | as part  |          | sxpIp    |
+    |          |          |          | of Node  |          | Address. |
+    |          |          |          | Details  |          | String   |
+    |          |          |          |          |          | re       |
+    |          |          |          |          |          | presents |
+    |          |          |          |          |          | SXP IP   |
+    |          |          |          |          |          | Address  |
+    |          |          |          |          |          | of the   |
+    |          |          |          |          |          | Node     |
+    +----------+----------+----------+----------+----------+----------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | TestNode    |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | ab6         |
+    |             |          |             | UUID,       | deded-fcc2- |
+    |             |          |             | mandatory   | 47ff-8577-0 |
+    |             |          |             | for update  | 014737c8fcf |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | gateWay     | String   | No          |             | 10.0.10.11  |
+    +-------------+----------+-------------+-------------+-------------+
+    | displayName | String   | No          |             | TestNode    |
+    +-------------+----------+-------------+-------------+-------------+
+    | i           | Boolean  | No          |             | false       |
+    | nDeployment |          |             |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | ipAddresses | String   | No          |             | [           |
+    |             |          |             |             | "10.0.0.1", |
+    |             |          |             |             | "10.0.0.2"  |
+    |             |          |             |             | ]           |
+    +-------------+----------+-------------+-------------+-------------+
+    | o           | String   | No          |             | Ot          |
+    | therPapFqdn |          |             |             | herTestNode |
+    +-------------+----------+-------------+-------------+-------------+
+    | ipAddress   | String   | No          |             | 10.0.0.3    |
+    +-------------+----------+-------------+-------------+-------------+
+    | s           | String   | No          |             | 10.10.10.1  |
+    | xpIpAddress |          |             |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | nodeS       | String   | No          |             | DEVICE      |
+    | erviceTypes |          |             |             | ADMIN       |
+    +-------------+----------+-------------+-------------+-------------+
+    | fqdn        | String   | No          |             | test.er     |
+    |             |          |             |             | s.cisco.com |
+    +-------------+----------+-------------+-------------+-------------+
+    | pri         | Boolean  | No          |             | true        |
+    | maryPapNode |          |             |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | papNode     | Boolean  | No          |             | true        |
+    +-------------+----------+-------------+-------------+-------------+
+    | pxGridNode  | Boolean  | No          |             | true        |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

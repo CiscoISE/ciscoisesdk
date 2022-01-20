@@ -50,6 +50,195 @@ class GuestUser(object):
     Wraps the Identity Services Engine GuestUser
     API and exposes the API as native Python
     methods that return native Python objects.
+    Guest User API allows the client to add, delete, update and search guest
+    users among other operations which are available from the sponsor
+    portal. Please note that each API description shows whether the API is
+    supported in bulk operation. The bulk section is showing only 'create'
+    bulk operation. However, all other operation which are bulk supported
+    can be used in the same way.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 1.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+    | 1              | 2.0            | 1.3            | Introducing    |
+    |                |                |                | new schema -   |
+    |                |                |                | not supporting |
+    |                |                |                | 1.0 anymore    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Default | *Example |
+    |          |          |          |          | Values** | Values** |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          | g        |
+    |          |          |          | Name     |          | uestUser |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | No       | Resource |          | ab6d     |
+    |          |          |          | UUID,    |          | eded-fcc |
+    |          |          |          | m        |          | 2-47ff-8 |
+    |          |          |          | andatory |          | 577-0014 |
+    |          |          |          | for      |          | 737c8fcf |
+    |          |          |          | update   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          | ERS      |
+    | cription |          |          |          |          | Example  |
+    |          |          |          |          |          | user     |
+    +----------+----------+----------+----------+----------+----------+
+    | cust     | Map      | No       | Key      |          | "some    |
+    | omFields |          |          | value    |          | key" :   |
+    |          |          |          | map      |          | "some    |
+    |          |          |          |          |          | value"   |
+    +----------+----------+----------+----------+----------+----------+
+    | g        | String   | No       |          |          | Co       |
+    | uestType |          |          |          |          | ntractor |
+    +----------+----------+----------+----------+----------+----------+
+    | status   | String   | No       |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | reason   | String   | No       |          |          |          |
+    | ForVisit |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | pe       | String   | No       |          |          |          |
+    | rsonBein |          |          |          |          |          |
+    | gVisited |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | sponsor  | String   | No       |          |          | Mr Spons |
+    | UserName |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | spons    | String   | No       |          |          |          |
+    | orUserId |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | stat     | String   | No       |          |          |          |
+    | usReason |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | portalId | String   | No       |          |          | 234      |
+    |          |          |          |          |          | 23432523 |
+    +----------+----------+----------+----------+----------+----------+
+    | guestAc  | List     | No       |          |          |          |
+    | cessInfo |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | Integer  | Yes      | Number   |          | 90       |
+    | v        |          |          | of days  |          |          |
+    | alidDays |          |          | guest    |          |          |
+    |          |          |          | user is  |          |          |
+    |          |          |          | valid.   |          |          |
+    |          |          |          | To       |          |          |
+    |          |          |          | validate |          |          |
+    |          |          |          | v        |          |          |
+    |          |          |          | alidDays |          |          |
+    |          |          |          | p        |          |          |
+    |          |          |          | roperty, |          |          |
+    |          |          |          | Cisco    |          |          |
+    |          |          |          | ISE      |          |          |
+    |          |          |          | c        |          |          |
+    |          |          |          | onsiders |          |          |
+    |          |          |          | only     |          |          |
+    |          |          |          | date     |          |          |
+    |          |          |          | (not     |          |          |
+    |          |          |          | time)    |          |          |
+    |          |          |          | between  |          |          |
+    |          |          |          | fromDate |          |          |
+    |          |          |          | and      |          |          |
+    |          |          |          | toDate   |          |          |
+    |          |          |          | pr       |          |          |
+    |          |          |          | operites |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          | 07       |
+    | fromDate |          |          |          |          | /29/2014 |
+    |          |          |          |          |          | 14:44    |
+    +----------+----------+----------+----------+----------+----------+
+    | - toDate | String   | No       |          |          | 10       |
+    |          |          |          |          |          | /29/2014 |
+    |          |          |          |          |          | 17:30    |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          | San Jose |
+    | location |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | - ssid   | String   | No       |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          |          |
+    | groupTag |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | G        | List     | Yes      |          |          |          |
+    | uestInfo |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          | em       |
+    | emai     |          |          |          |          | ail@some |
+    | lAddress |          |          |          |          | .uri.com |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | Boolean  | Yes      | This     | false    |          |
+    | enabled  |          |          | field is |          |          |
+    |          |          |          | only for |          |          |
+    |          |          |          | Get      |          |          |
+    |          |          |          | o        |          |          |
+    |          |          |          | peration |          |          |
+    |          |          |          | not      |          |          |
+    |          |          |          | ap       |          |          |
+    |          |          |          | plicable |          |          |
+    |          |          |          | for      |          |          |
+    |          |          |          | Create,  |          |          |
+    |          |          |          | Update   |          |          |
+    |          |          |          | op       |          |          |
+    |          |          |          | erations |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | Yes      |          |          | asd      |
+    | password |          |          |          |          | lkj324ew |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       | Phone    |          | +132     |
+    | pho      |          |          | number   |          | 11239034 |
+    | neNumber |          |          | should   |          |          |
+    |          |          |          | be E.164 |          |          |
+    |          |          |          | format   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          | Global   |
+    | sm       |          |          |          |          | Default  |
+    | sService |          |          |          |          |          |
+    | Provider |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       | If       |          | DS3ew    |
+    | userName |          |          | account  |          | dsa34wWE |
+    |          |          |          | needs be |          |          |
+    |          |          |          | created  |          |          |
+    |          |          |          | with     |          |          |
+    |          |          |          | mobile   |          |          |
+    |          |          |          | number,  |          |          |
+    |          |          |          | please   |          |          |
+    |          |          |          | provide  |          |          |
+    |          |          |          | mobile   |          |          |
+    |          |          |          | number   |          |          |
+    |          |          |          | here     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          |          |
+    | f        |          |          |          |          |          |
+    | irstName |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          |          |
+    | lastName |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          |          |
+    | company  |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          |          |
+    | crea     |          |          |          |          |          |
+    | tionTime |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | -        | String   | No       |          |          |          |
+    | noti     |          |          |          |          |          |
+    | fication |          |          |          |          |          |
+    | Language |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

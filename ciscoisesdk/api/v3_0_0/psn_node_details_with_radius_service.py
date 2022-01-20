@@ -50,6 +50,43 @@ class PsnNodeDetailsWithRadiusService(object):
     Wraps the Identity Services Engine PsnNodeDetailsWithRadiusService
     API and exposes the API as native Python
     methods that return native Python objects.
+    PSN Node Details with RADIUS Service API allows the client to get
+    deployment node details where 'Session Services' is enabled.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | TestNode    |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | ab6         |
+    |             |          |             | UUID,       | deded-fcc2- |
+    |             |          |             | mandatory   | 47ff-8577-0 |
+    |             |          |             | for update  | 014737c8fcf |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             | PSN with    |
+    |             |          |             |             | Session     |
+    |             |          |             |             | Service     |
+    +-------------+----------+-------------+-------------+-------------+
+    | ipAddress   | String   | Yes         |             | 10.0.0.1    |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

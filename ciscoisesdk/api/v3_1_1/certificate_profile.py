@@ -50,6 +50,180 @@ class CertificateProfile(object):
     Wraps the Identity Services Engine CertificateProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+    The certificate profile API allows the client to add, search and perform
+    actions on the certificate profiles.
+
+    Revision History
+    ----------------
+
+    +---------------+---------------+---------------+---------------+---+
+    | **Revision    | **Resource    | **Cisco ISE   | **            |   |
+    | #**           | Version**     | Version**     | Description** |   |
+    +---------------+---------------+---------------+---------------+---+
+    | 0             | 1.0           | 2.4           | Initial Cisco |   |
+    |               |               |               | ISE Version   |   |
+    +---------------+---------------+---------------+---------------+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | C         |
+    |           |           |           | Name      |           | ertificat |
+    |           |           |           |           |           | e_Profile |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | f9269682- |
+    |           |           |           | UUID      |           | dcaf-11e3 |
+    |           |           |           |           |           | -ad0a-5bd |
+    |           |           |           |           |           | cd2d9fd69 |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           |           |
+    | scription |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | allowedA  | Boolean   | No        | To be set | false     |           |
+    | sUserName |           |           | true or   |           |           |
+    |           |           |           | false     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | externa   | String    | No        | Referred  | [not      | [not      |
+    | lIdentity |           |           | IDStore   | ap        | ap        |
+    | StoreName |           |           | name for  | plicable] | plicable] |
+    |           |           |           | the       |           |           |
+    |           |           |           | Ce        |           |           |
+    |           |           |           | rtificate |           |           |
+    |           |           |           | Profile   |           |           |
+    |           |           |           | or [not   |           |           |
+    |           |           |           | ap        |           |           |
+    |           |           |           | plicable] |           |           |
+    |           |           |           | in case   |           |           |
+    |           |           |           | no        |           |           |
+    |           |           |           | identity  |           |           |
+    |           |           |           | store is  |           |           |
+    |           |           |           | chosen    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | certif    | ENUM      | No        | Attribute | S         |           |
+    | icateAttr |           |           | name of   | UBJECT_CO |           |
+    | ibuteName |           |           | the       | MMON_NAME |           |
+    |           |           |           | Ce        |           |           |
+    |           |           |           | rtificate |           |           |
+    |           |           |           | Profile - |           |           |
+    |           |           |           | used only |           |           |
+    |           |           |           | when      |           |           |
+    |           |           |           | CE        |           |           |
+    |           |           |           | RTIFICATE |           |           |
+    |           |           |           | is chosen |           |           |
+    |           |           |           | in        |           |           |
+    |           |           |           | user      |           |           |
+    |           |           |           | nameFrom. |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | S         |           |           |
+    |           |           |           | UBJECT_CO |           |           |
+    |           |           |           | MMON_NAME |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SUBJEC    |           |           |
+    |           |           |           | T_ALTERNA |           |           |
+    |           |           |           | TIVE_NAME |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SUB       |           |           |
+    |           |           |           | JECT_SERI |           |           |
+    |           |           |           | AL_NUMBER |           |           |
+    |           |           |           | - SUBJECT |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SUBJECT_  |           |           |
+    |           |           |           | ALTERNATI |           |           |
+    |           |           |           | VE_NAME_O |           |           |
+    |           |           |           | THER_NAME |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SUB       |           |           |
+    |           |           |           | JECT_ALTE |           |           |
+    |           |           |           | RNATIVE_N |           |           |
+    |           |           |           | AME_EMAIL |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SU        |           |           |
+    |           |           |           | BJECT_ALT |           |           |
+    |           |           |           | ERNATIVE_ |           |           |
+    |           |           |           | NAME_DNS. |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | A         |           |           |
+    |           |           |           | dditional |           |           |
+    |           |           |           | internal  |           |           |
+    |           |           |           | value     |           |           |
+    |           |           |           | ALL_SU    |           |           |
+    |           |           |           | BJECT_AND |           |           |
+    |           |           |           | _ALTERNAT |           |           |
+    |           |           |           | IVE_NAMES |           |           |
+    |           |           |           | is used   |           |           |
+    |           |           |           | auto      |           |           |
+    |           |           |           | matically |           |           |
+    |           |           |           | when      |           |           |
+    |           |           |           | usernam   |           |           |
+    |           |           |           | eFrom=UPN |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | matchMode | ENUM      | No        | Match     | NEVER     |           |
+    |           |           |           | mode of   |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | Ce        |           |           |
+    |           |           |           | rtificate |           |           |
+    |           |           |           | Profile.  |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | - NEVER   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | RESOLVE_  |           |           |
+    |           |           |           | IDENTITY_ |           |           |
+    |           |           |           | AMBIGUITY |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | BINARY_C  |           |           |
+    |           |           |           | OMPARISON |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | use       | ENUM      | No        | The       | CE        |           |
+    | rnameFrom |           |           | attribute | RTIFICATE |           |
+    |           |           |           | in the    |           |           |
+    |           |           |           | ce        |           |           |
+    |           |           |           | rtificate |           |           |
+    |           |           |           | where the |           |           |
+    |           |           |           | user name |           |           |
+    |           |           |           | should be |           |           |
+    |           |           |           | taken     |           |           |
+    |           |           |           | from.     |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | CE        |           |           |
+    |           |           |           | RTIFICATE |           |           |
+    |           |           |           | (for a    |           |           |
+    |           |           |           | specific  |           |           |
+    |           |           |           | attribute |           |           |
+    |           |           |           | as        |           |           |
+    |           |           |           | defined   |           |           |
+    |           |           |           | in        |           |           |
+    |           |           |           | certifi   |           |           |
+    |           |           |           | cateAttri |           |           |
+    |           |           |           | buteName) |           |           |
+    |           |           |           | - UPN     |           |           |
+    |           |           |           | (for      |           |           |
+    |           |           |           | using any |           |           |
+    |           |           |           | Subject   |           |           |
+    |           |           |           | or        |           |           |
+    |           |           |           | Al        |           |           |
+    |           |           |           | ternative |           |           |
+    |           |           |           | Name      |           |           |
+    |           |           |           | A         |           |           |
+    |           |           |           | ttributes |           |           |
+    |           |           |           | in the    |           |           |
+    |           |           |           | Ce        |           |           |
+    |           |           |           | rtificate |           |           |
+    |           |           |           | - an      |           |           |
+    |           |           |           | option    |           |           |
+    |           |           |           | only in   |           |           |
+    |           |           |           | AD)       |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

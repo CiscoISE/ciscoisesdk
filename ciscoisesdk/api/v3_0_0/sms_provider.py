@@ -50,6 +50,39 @@ class SmsProvider(object):
     Wraps the Identity Services Engine SMSProvider
     API and exposes the API as native Python
     methods that return native Python objects.
+    SMS Provider API allows the client to search the SMS providers
+    configured from Cisco ISE GUI.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | name        |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | b11         |
+    |             |          |             | UUID,       | 55994-b736- |
+    |             |          |             | mandatory   | 46af-9add-0 |
+    |             |          |             | for update  | 4bed3058e3a |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

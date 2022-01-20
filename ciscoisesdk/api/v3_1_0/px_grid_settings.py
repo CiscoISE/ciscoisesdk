@@ -50,6 +50,65 @@ class PxGridSettings(object):
     Wraps the Identity Services Engine PxGridSettings
     API and exposes the API as native Python
     methods that return native Python objects.
+    pxGrid Settings API allows the client to change auto-approve settings
+    for pxGrid nodes. \**Note:*\* From Cisco ISE Release 3.1, all pxGrid
+    connections must be based on pxGrid 2.0. pxGrid 1.0-based (XMPP-based)
+    integrations will cease to work on Cisco ISE from Release 3.1 onwards.
+    pxGrid Version 2.0, which is based on WebSockets, was introduced in
+    Cisco ISE Release 2.4. We recommend that you plan and upgrade your other
+    systems to pxGrid 2.0-compliant versions in order to prevent potential
+    disruptions, if any, to integrations.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 3.0            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Default | *Example |
+    |          |          |          |          | Values** | Values** |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          |          |
+    |          |          |          | Name     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | No       | Resource |          |          |
+    |          |          |          | UUID,    |          |          |
+    |          |          |          | m        |          |          |
+    |          |          |          | andatory |          |          |
+    |          |          |          | for      |          |          |
+    |          |          |          | update   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          |          |
+    | cription |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | auto     | Boolean  | Yes      | Auto     | false    | true     |
+    | ApproveC |          |          | approve  |          |          |
+    | ertBased |          |          | cer      |          |          |
+    | Accounts |          |          | tificate |          |          |
+    |          |          |          | based    |          |          |
+    |          |          |          | accounts |          |          |
+    |          |          |          | when     |          |          |
+    |          |          |          | true     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | al       | Boolean  | Yes      | Allow    | false    |          |
+    | lowPassw |          |          | password |          |          |
+    | ordBased |          |          | based    |          |          |
+    | Accounts |          |          | acoounts |          |          |
+    |          |          |          | when     |          |          |
+    |          |          |          | true     |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

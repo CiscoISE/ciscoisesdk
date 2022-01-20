@@ -50,6 +50,66 @@ class AncEndpoint(object):
     Wraps the Identity Services Engine ANCEndpoint
     API and exposes the API as native Python
     methods that return native Python objects.
+    Adaptive Network Control (ANC) provides the ability to create network
+    endpoint authorization controls based on ANC policies.
+
+    Revision History
+    ----------------
+
+    +---------------+---------------+---------------+---------------+---+
+    | **Revision    | **Resource    | **Cisco ISE   | **            |   |
+    | #**           | Version**     | Version**     | Description** |   |
+    +---------------+---------------+---------------+---------------+---+
+    | 0             | 1.0           | 2.1           | Initial Cisco |   |
+    |               |               |               | ISE Version   |   |
+    +---------------+---------------+---------------+---------------+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    |             |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | f92         |
+    |             |          |             | UUID        | 69682-dcaf- |
+    |             |          |             |             | 11e3-ad0a-5 |
+    |             |          |             |             | bdcd2d9fd69 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | macAddress  | String   | Yes         | MAC address | 00:11:      |
+    |             |          |             | of the      | 22:33:44:55 |
+    |             |          |             | endpoint    |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | policyName  | String   | Yes         | Policy name | policy1     |
+    |             |          |             | to be       |             |
+    |             |          |             | applied to  |             |
+    |             |          |             | the         |             |
+    |             |          |             | endpoint    |             |
+    +-------------+----------+-------------+-------------+-------------+
+
+    Supported ANC API transactions per second
+    -----------------------------------------
+
+    | On a 5 node Cisco ISE deployment with 60k sessions or on a 9 node
+      Cisco ISE deployment with 200k/500k sessions, 250 transactions per
+      second (TPS) is supported for any ANC API.
+    | **Supported ANC APIs**
+    | \* applyEndpointByMacAddress \* clearEndpointByMacaddress \*
+      applyEndpointByIpAddress \* applyEndpointPolicy \* clearEndpointPolicy
+
+    ============== ====================== ==========================
+    **Deployment** **Number of Sessions** **Supported ANC APIs TPS**
+    5 nodes        60k                    250
+    9 nodes        200k                   250
+    5 nodes        500k                   250
+    ============== ====================== ==========================
 
     """
 

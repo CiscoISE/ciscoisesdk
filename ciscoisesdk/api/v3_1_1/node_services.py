@@ -51,6 +51,7 @@ class NodeServices(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+
     """
 
     def __init__(self, session, object_factory, request_validator):

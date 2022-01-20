@@ -50,6 +50,49 @@ class Portal(object):
     Wraps the Identity Services Engine portal
     API and exposes the API as native Python
     methods that return native Python objects.
+    Portal API allows the client to search profiles.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 1.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+    | 1              | 2.0            | 1.3            | Introducing    |
+    |                |                |                | new schema -   |
+    |                |                |                | not supporting |
+    |                |                |                | 1.0 anymore    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | ISE Portal  |
+    |             |          |             | Name        | (default)   |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | bc5         |
+    |             |          |             | UUID,       | 524ea-b1e5- |
+    |             |          |             | mandatory   | 47ed-a907-5 |
+    |             |          |             | for update  | 304821da916 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             | ISE Portal  |
+    |             |          |             |             | for saml    |
+    |             |          |             |             | based       |
+    |             |          |             |             | feature     |
+    |             |          |             |             | purpose     |
+    +-------------+----------+-------------+-------------+-------------+
+    | portalType  | String   | No          |             | GUEST       |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

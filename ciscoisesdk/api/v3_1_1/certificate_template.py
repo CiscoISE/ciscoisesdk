@@ -50,6 +50,57 @@ class CertificateTemplate(object):
     Wraps the Identity Services Engine CertificateTemplate
     API and exposes the API as native Python
     methods that return native Python objects.
+    The certificate template API provides the ability to search for
+    certificate templates.
+
+    Revision History
+    ----------------
+
+    +---------------+---------------+---------------+---------------+---+
+    | **Revision    | **Resource    | **Cisco ISE   | **            |   |
+    | #**           | Version**     | Version**     | Description** |   |
+    +---------------+---------------+---------------+---------------+---+
+    | 0             | 1.0           | 2.2           | Initial Cisco |   |
+    |               |               |               | ISE Version   |   |
+    +---------------+---------------+---------------+---------------+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    |             |
+    |             |             |             | Name        |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    | f92         |
+    |             |             |             | UUID        | 69682-dcaf- |
+    |             |             |             |             | 11e3-ad0a-5 |
+    |             |             |             |             | bdcd2d9fd69 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | ra          | String      | Yes         | RA profile  | ISE         |
+    | ProfileName |             |             | for the     | internal CA |
+    |             |             |             | Certificate |             |
+    |             |             |             | template    |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | keySize     | Integer     | No          | Key Size of | 2048        |
+    |             |             |             | the         | 1024        |
+    |             |             |             | Certificate |             |
+    |             |             |             | Template    |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | validity    | Integer     | No          | Validity    | 730         |
+    |             |             |             | period of   |             |
+    |             |             |             | the         |             |
+    |             |             |             | Certificate |             |
+    |             |             |             | Template:   |             |
+    |             |             |             | Valid Range |             |
+    |             |             |             | 21 - 3652   |             |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

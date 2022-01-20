@@ -50,6 +50,42 @@ class SxpVpns(object):
     Wraps the Identity Services Engine SXPVPNs
     API and exposes the API as native Python
     methods that return native Python objects.
+    SXP VPNs API allows clients to add, get and delete SXP VPNs (SXP
+    Domains).
+
+    Revision History
+    ----------------
+
+    +-------------+-------------+-------------+-------------+---+---+
+    | **Revision  | **Resource  | **Cisco ISE | **De        |   |   |
+    | #**         | Version**   | Version**   | scription** |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+    | 0           | 1.0         | 2.0         | Initial     |   |   |
+    |             |             |             | Cisco ISE   |   |   |
+    |             |             |             | Version     |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    |             |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | ef3         |
+    |             |          |             | UUID value  | 6ca16-0cf7- |
+    |             |          |             |             | 4806-b2a9-6 |
+    |             |          |             |             | f547cfe4805 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | sxpVpnName  | String   | Yes         |             | default     |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

@@ -50,6 +50,57 @@ class EndpointIdentityGroup(object):
     Wraps the Identity Services Engine EndpointIdentityGroup
     API and exposes the API as native Python
     methods that return native Python objects.
+    Endpoint Identity Groups API allows the client to add, delete, update,
+    and search endpoint groups.
+
+    Revision History
+    ----------------
+
+    +-------------+-------------+-------------+-------------+---+---+
+    | **Revision  | **Resource  | **Cisco ISE | **De        |   |   |
+    | #**         | Version**   | Version**   | scription** |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+    | 0           | 1.0         | 1.3         | Initial     |   |   |
+    |             |             |             | Cisco ISE   |   |   |
+    |             |             |             | Version     |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+    | 1           | 1.1         | 2.4         | Added       |   |   |
+    |             |             |             | GetByName   |   |   |
+    |             |             |             | operation   |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Default | *Example |
+    |          |          |          |          | Values** | Values** |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          | Cisc     |
+    |          |          |          | Name     |          | o-Meraki |
+    |          |          |          |          |          | -Devicee |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | No       | Resource |          | 1e27     |
+    |          |          |          | UUID,    |          | 00a0-8c0 |
+    |          |          |          | m        |          | 0-11e6-9 |
+    |          |          |          | andatory |          | 96c-5254 |
+    |          |          |          | for      |          | 00b48521 |
+    |          |          |          | update   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          | Identity |
+    | cription |          |          |          |          | Group    |
+    |          |          |          |          |          | for      |
+    |          |          |          |          |          | Profile: |
+    |          |          |          |          |          | Cis      |
+    |          |          |          |          |          | co-Merak |
+    |          |          |          |          |          | i-Device |
+    +----------+----------+----------+----------+----------+----------+
+    | syste    | Boolean  | Yes      |          | false    | true     |
+    | mDefined |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

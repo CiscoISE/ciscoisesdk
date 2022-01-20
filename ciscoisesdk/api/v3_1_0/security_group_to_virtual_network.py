@@ -50,6 +50,97 @@ class SecurityGroupToVirtualNetwork(object):
     Wraps the Identity Services Engine SecurityGroupToVirtualNetwork
     API and exposes the API as native Python
     methods that return native Python objects.
+    SGT mapping to virtual networks are mapped to referenced vlan. These
+    constructs come from out side of Cisco ISE and are not CRUDable inside
+    Cisco ISE.
+
+    Revision History
+    ----------------
+
+    +-------------+-------------+-------------+-------------+---+---+
+    | **Revision  | **Resource  | **Cisco ISE | **De        |   |   |
+    | #**         | Version**   | Version**   | scription** |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+    | 0           | 1.0         | 2.3         | Initial     |   |   |
+    |             |             |             | Cisco ISE   |   |   |
+    |             |             |             | Version     |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    | name        |
+    |             |             |             | Name        |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    | 1af         |
+    |             |             |             | UUID,       | 3d6e2-cc3b- |
+    |             |             |             | mandatory   | 4603-b80f-6 |
+    |             |             |             | for update  | 827768335ab |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             | description |
+    +-------------+-------------+-------------+-------------+-------------+
+    | sgtId       | String      | No          |             | sgt_id      |
+    +-------------+-------------+-------------+-------------+-------------+
+    | virtual     | List        | No          | Includes    | [           |
+    | networklist |             |             | 'vlans'     | {           |
+    |             |             |             | which is an |   "id" :    |
+    |             |             |             | array of    | "1af3d      |
+    |             |             |             | d           | 6e2-cc3b-46 |
+    |             |             |             | ictionaries | 03-b80f-682 |
+    |             |             |             | describing  | 7768335ab", |
+    |             |             |             | various     |   "name" :  |
+    |             |             |             | attributes  | "virtual1", |
+    |             |             |             | with the    |             |
+    |             |             |             | properties: | "d          |
+    |             |             |             | - id        | escription" |
+    |             |             |             | (String),   | :           |
+    |             |             |             | - name      | "de         |
+    |             |             |             | (String),   | scription", |
+    |             |             |             | -           |             |
+    |             |             |             | description | "           |
+    |             |             |             | (String),   | defaultVirt |
+    |             |             |             | -           | ualNetwork" |
+    |             |             |             | defaultVlan | : false,    |
+    |             |             |             | (Boolean),  |   "vlans" : |
+    |             |             |             | - maxValue  | [           |
+    |             |             |             | (Integer),  |     {       |
+    |             |             |             | - data      |       "id"  |
+    |             |             |             | (Boolean)   | :           |
+    |             |             |             |             | "1af3d      |
+    |             |             |             |             | 6e2-cc3b-46 |
+    |             |             |             |             | 03-b80f-682 |
+    |             |             |             |             | 7768335ab", |
+    |             |             |             |             |             |
+    |             |             |             |             | "name" :    |
+    |             |             |             |             | "vlan1",    |
+    |             |             |             |             |             |
+    |             |             |             |             | "d          |
+    |             |             |             |             | escription" |
+    |             |             |             |             | :           |
+    |             |             |             |             | "des        |
+    |             |             |             |             | cription1", |
+    |             |             |             |             |             |
+    |             |             |             |             | "d          |
+    |             |             |             |             | efaultVlan" |
+    |             |             |             |             | : true,     |
+    |             |             |             |             |             |
+    |             |             |             |             | "maxValue"  |
+    |             |             |             |             | :           |
+    |             |             |             |             | 1882725260, |
+    |             |             |             |             |             |
+    |             |             |             |             | "data" :    |
+    |             |             |             |             | true        |
+    |             |             |             |             |    }        |
+    |             |             |             |             |  ]          |
+    |             |             |             |             | }           |
+    |             |             |             |             | ]           |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

@@ -50,6 +50,78 @@ class EgressMatrixCell(object):
     Wraps the Identity Services Engine EgressMatrixCell
     API and exposes the API as native Python
     methods that return native Python objects.
+    Egress Policy Matrix Cell API allows the client to add, update, delete
+    and search egress matrix cells among other operations.
+
+    Revision History
+    ----------------
+
+    +---------------+---------------+---------------+---------------+---+
+    | **Revision    | **Resource    | **Cisco ISE   | **            |   |
+    | #**           | Version**     | Version**     | Description** |   |
+    +---------------+---------------+---------------+---------------+---+
+    | 0             | 1.0           | 2.0           | Initial Cisco |   |
+    |               |               |               | ISE Version   |   |
+    +---------------+---------------+---------------+---------------+---+
+    | 1             | 1.1           | 2.3           | Introducing   |   |
+    |               |               |               | bulk          |   |
+    |               |               |               | operations    |   |
+    +---------------+---------------+---------------+---------------+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | ANY-ANY   |
+    |           |           |           | Name      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | f         |
+    |           |           |           | UUID,     |           | 92c1a900- |
+    |           |           |           | mandatory |           | 8c01-11e6 |
+    |           |           |           | for       |           | -996c-525 |
+    |           |           |           | update    |           | 400b48521 |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | Default   |
+    | scription |           |           |           |           | egress    |
+    |           |           |           |           |           | rule      |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | Enum      | Yes       | Allowed   | NONE      | PERMIT_IP |
+    | faultRule |           |           | values:   |           |           |
+    |           |           |           | - NONE,   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | DENY_IP,  |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | PERMIT_IP |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | destina   | String    | Yes       |           |           | 92bb1950- |
+    | tionSgtId |           |           |           |           | 8c01-11e6 |
+    |           |           |           |           |           | -996c-525 |
+    |           |           |           |           |           | 400b48521 |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | matrixC   | Enum      | Yes       | Allowed   | DISABLED  | ENABLED   |
+    | ellStatus |           |           | values:   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | DISABLED, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | ENABLED,  |           |           |
+    |           |           |           | - MONITOR |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | sgACLs    | List      | Yes       |           |           | ["92      |
+    |           |           |           |           |           | 951ac0-8c |
+    |           |           |           |           |           | 01-11e6-9 |
+    |           |           |           |           |           | 96c-52540 |
+    |           |           |           |           |           | 0b48521"] |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | so        | String    | Yes       |           |           | 92bb1950- |
+    | urceSgtId |           |           |           |           | 8c01-11e6 |
+    |           |           |           |           |           | -996c-525 |
+    |           |           |           |           |           | 400b48521 |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

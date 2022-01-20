@@ -50,6 +50,43 @@ class PortalGlobalSetting(object):
     Wraps the Identity Services Engine PortalGlobalSetting
     API and exposes the API as native Python
     methods that return native Python objects.
+    The Portal Global Setting API allows the user to customize the text that
+    is displayed in the Cisco ISE portals. This global setting controls
+    whether HTML alone or both HTML and Javascript are permitted to be used
+    in customized text.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | Yes         | Resource    | 210         |
+    |             |             |             | UUID value  | 13cb2-d030- |
+    |             |             |             |             | 4fb1-9ba2-3 |
+    |             |             |             |             | 5757634d770 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | cu          | Enum        | Yes         | Allowed     | HTML        |
+    | stomization |             |             | values:     |             |
+    |             |             |             | - HTML,     |             |
+    |             |             |             | -           |             |
+    |             |             |             | HTMLAN      |             |
+    |             |             |             | DJAVASCRIPT |             |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

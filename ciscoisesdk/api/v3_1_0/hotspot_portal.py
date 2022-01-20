@@ -50,6 +50,597 @@ class HotspotPortal(object):
     Wraps the Identity Services Engine HotspotPortal
     API and exposes the API as native Python
     methods that return native Python objects.
+    Hotspot Guest Portal API provides the ability to create, read, update,
+    delete and search hotspot guest portals.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | Hotspot   |
+    |           |           |           | Name      |           | Guest     |
+    |           |           |           |           |           | Portal    |
+    |           |           |           |           |           | (default) |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | b132a9ef- |
+    |           |           |           | UUID,     |           | 1491-4e01 |
+    |           |           |           | mandatory |           | -9ad4-b48 |
+    |           |           |           | for       |           | a9c72e1c7 |
+    |           |           |           | update    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | Guests do |
+    | scription |           |           |           |           | not       |
+    |           |           |           |           |           | require   |
+    |           |           |           |           |           | username  |
+    |           |           |           |           |           | and       |
+    |           |           |           |           |           | password  |
+    |           |           |           |           |           | cr        |
+    |           |           |           |           |           | edentials |
+    |           |           |           |           |           | to access |
+    |           |           |           |           |           | the       |
+    |           |           |           |           |           | network,  |
+    |           |           |           |           |           | but you   |
+    |           |           |           |           |           | can       |
+    |           |           |           |           |           | o         |
+    |           |           |           |           |           | ptionally |
+    |           |           |           |           |           | require   |
+    |           |           |           |           |           | an access |
+    |           |           |           |           |           | code      |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | port      | String    | No        | URL to    |           | h         |
+    | alTestUrl |           |           | bring up  |           | ttps://{i |
+    |           |           |           | a test    |           | se-ip}:84 |
+    |           |           |           | page for  |           | 43/portal |
+    |           |           |           | this      |           | /PortalSe |
+    |           |           |           | portal    |           | tup.actio |
+    |           |           |           |           |           | n?portal= |
+    |           |           |           |           |           | b132a9ef- |
+    |           |           |           |           |           | 1491-4e01 |
+    |           |           |           |           |           | -9ad4-b48 |
+    |           |           |           |           |           | a9c72e1c7 |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | p         | Enum      | Yes       | Allowed   | HOT       |           |
+    | ortalType |           |           | values:   | SPOTGUEST |           |
+    |           |           |           | - BYOD,   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | HOTS      |           |           |
+    |           |           |           | POTGUEST, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | MYDEVICE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SELF      |           |           |
+    |           |           |           | REGGUEST, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SPONSOR,  |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SPONS     |           |           |
+    |           |           |           | OREDGUEST |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | settings  | List      | No        | Defines   |           |           |
+    |           |           |           | all of    |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | settings  |           |           |
+    |           |           |           | groups    |           |           |
+    |           |           |           | available |           |           |
+    |           |           |           | for a     |           |           |
+    |           |           |           | BYOD      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | The port, |           |           |
+    | porta     |           |           | i         |           |           |
+    | lSettings |           |           | nterface, |           |           |
+    |           |           |           | cer       |           |           |
+    |           |           |           | tificate, |           |           |
+    |           |           |           | and other |           |           |
+    |           |           |           | basic     |           |           |
+    |           |           |           | settings  |           |           |
+    |           |           |           | of a      |           |           |
+    |           |           |           | portal    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Integer   | Yes       | The port  |           | 8443      |
+    | httpsPort |           |           | number    |           |           |
+    |           |           |           | that the  |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | i         |           |           |
+    |           |           |           | nterfaces |           |           |
+    |           |           |           | will      |           |           |
+    |           |           |           | listen    |           |           |
+    |           |           |           | on. Range |           |           |
+    |           |           |           | from 8000 |           |           |
+    |           |           |           | to 8999   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Enum      | Yes       | I         |           | [ "eth0", |
+    | allowedI  |           |           | nterfaces |           | "bond0" ] |
+    | nterfaces |           |           | that the  |           |           |
+    |           |           |           | portal    |           |           |
+    |           |           |           | will be   |           |           |
+    |           |           |           | reachable |           |           |
+    |           |           |           | on.       |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | - eth0,   |           |           |
+    |           |           |           | - eth1,   |           |           |
+    |           |           |           | - eth2,   |           |           |
+    |           |           |           | - eth3,   |           |           |
+    |           |           |           | - eth4,   |           |           |
+    |           |           |           | - eth5,   |           |           |
+    |           |           |           | - bond0,  |           |           |
+    |           |           |           | - bond1,  |           |           |
+    |           |           |           | - bond2   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       | Logical   |           | Default   |
+    | c         |           |           | name of   |           | Portal    |
+    | ertificat |           |           | the x.509 |           | Ce        |
+    | eGroupTag |           |           | server    |           | rtificate |
+    |           |           |           | ce        |           | Group     |
+    |           |           |           | rtificate |           |           |
+    |           |           |           | that will |           |           |
+    |           |           |           | be used   |           |           |
+    |           |           |           | for the   |           |           |
+    |           |           |           | portal    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       | Unique Id |           | aa178bd0- |
+    | end       |           |           | of the    |           | 8bff-11e6 |
+    | pointIden |           |           | endpoint  |           | -996c-525 |
+    | tityGroup |           |           | identity  |           | 400b48521 |
+    |           |           |           | group     |           |           |
+    |           |           |           | where     |           |           |
+    |           |           |           | user's    |           |           |
+    |           |           |           | devices   |           |           |
+    |           |           |           | will be   |           |           |
+    |           |           |           | added.    |           |           |
+    |           |           |           | Used only |           |           |
+    |           |           |           | in        |           |           |
+    |           |           |           | Hotspot   |           |           |
+    |           |           |           | Portal    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Enum      | No        | Allowed   |           | USEBROW   |
+    | di        |           |           | values:   |           | SERLOCALE |
+    | splayLang |           |           | -         |           |           |
+    |           |           |           | USEBROWS  |           |           |
+    |           |           |           | ERLOCALE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | ALWAYSUSE |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | Used when |           | English   |
+    | fallbac   |           |           | di        |           |           |
+    | kLanguage |           |           | splayLang |           |           |
+    |           |           |           | =         |           |           |
+    |           |           |           | USEBROW   |           |           |
+    |           |           |           | SERLOCALE |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | Used when |           | English   |
+    | alwaysUse |           |           | di        |           |           |
+    | dLanguage |           |           | splayLang |           |           |
+    |           |           |           | =         |           |           |
+    |           |           |           | ALWAYSUSE |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Enum      | No        | Allowed   | COAREAUT  |           |
+    | coaType   |           |           | Values:   | HENTICATE |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | COAREAUTH |           |           |
+    |           |           |           | ENTICATE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | COA       |           |           |
+    |           |           |           | TERMINATE |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | Conf      |           |           |
+    | au        |           |           | iguration |           |           |
+    | pSettings |           |           | of the    |           |           |
+    |           |           |           | A         |           |           |
+    |           |           |           | cceptable |           |           |
+    |           |           |           | Use       |           |           |
+    |           |           |           | Policy    |           |           |
+    |           |           |           | (AUP) for |           |           |
+    |           |           |           | a portal  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        | Require   | false     |           |
+    | requireA  |           |           | the       |           |           |
+    | ccessCode |           |           | portal    |           |           |
+    |           |           |           | user to   |           |           |
+    |           |           |           | enter an  |           |           |
+    |           |           |           | access    |           |           |
+    |           |           |           | code.     |           |           |
+    |           |           |           | Only used |           |           |
+    |           |           |           | in        |           |           |
+    |           |           |           | Hotspot   |           |           |
+    |           |           |           | portal    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | Access    |           |           |
+    | a         |           |           | code that |           |           |
+    | ccessCode |           |           | must be   |           |           |
+    |           |           |           | entered   |           |           |
+    |           |           |           | by the    |           |           |
+    |           |           |           | portal    |           |           |
+    |           |           |           | user      |           |           |
+    |           |           |           | (only     |           |           |
+    |           |           |           | valid if  |           |           |
+    |           |           |           | requireA  |           |           |
+    |           |           |           | ccessCode |           |           |
+    |           |           |           | = true)   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        | Require   | true      |           |
+    | i         |           |           | the       |           |           |
+    | ncludeAup |           |           | portal    |           |           |
+    |           |           |           | user to   |           |           |
+    |           |           |           | read and  |           |           |
+    |           |           |           | accept an |           |           |
+    |           |           |           | AUP       |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        | Require   | false     |           |
+    | require   |           |           | the       |           |           |
+    | Scrolling |           |           | portal    |           |           |
+    |           |           |           | user to   |           |           |
+    |           |           |           | scroll to |           |           |
+    |           |           |           | the end   |           |           |
+    |           |           |           | of the    |           |           |
+    |           |           |           | AUP. Only |           |           |
+    |           |           |           | valid if  |           |           |
+    |           |           |           | re        |           |           |
+    |           |           |           | quireAupA |           |           |
+    |           |           |           | cceptance |           |           |
+    |           |           |           | = true    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        |           |           |           |
+    | a         |           |           |           |           |           |
+    | uthSucces |           |           |           |           |           |
+    | sSettings |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Enum      | No        | After an  | AUTHSU    |           |
+    | succes    |           |           | Authe     | CCESSPAGE |           |
+    | sRedirect |           |           | ntication |           |           |
+    |           |           |           | Success   |           |           |
+    |           |           |           | where     |           |           |
+    |           |           |           | should    |           |           |
+    |           |           |           | device be |           |           |
+    |           |           |           | re        |           |           |
+    |           |           |           | directed. |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | AUTHSUC   |           |           |
+    |           |           |           | CESSPAGE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | ORIGIN    |           |           |
+    |           |           |           | ATINGURL, |           |           |
+    |           |           |           | - URL     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | Target    |           | www.      |
+    | re        |           |           | URL for   |           | cisco.com |
+    | directUrl |           |           | red       |           |           |
+    |           |           |           | irection, |           |           |
+    |           |           |           | used when |           |           |
+    |           |           |           | succes    |           |           |
+    |           |           |           | sRedirect |           |           |
+    |           |           |           | = URL     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        |           |           |           |
+    | postL     |           |           |           |           |           |
+    | oginBanne |           |           |           |           |           |
+    | rSettings |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        | Include a | false     |           |
+    | inclu     |           |           | P         |           |           |
+    | dePostAcc |           |           | ost-Login |           |           |
+    | essBanner |           |           | Banner    |           |           |
+    |           |           |           | page      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | Portal    |           |           |
+    | s         |           |           | Support   |           |           |
+    | upportInf |           |           | In        |           |           |
+    | oSettings |           |           | formation |           |           |
+    |           |           |           | Settings  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | incl      |           |           |           |           |           |
+    | udeSuppor |           |           |           |           |           |
+    | tInfoPage |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | inclu     |           |           |           |           |           |
+    | deMacAddr |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | include   |           |           |           |           |           |
+    | IpAddress |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | inclu     |           |           |           |           |           |
+    | deBrowser |           |           |           |           |           |
+    | UserAgent |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | i         |           |           |           |           |           |
+    | ncludePol |           |           |           |           |           |
+    | icyServer |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | includeFa |           |           |           |           |           |
+    | ilureCode |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Enum      | No        | Specifies |           | HIDE      |
+    | emptyFie  |           |           | how empty |           |           |
+    | ldDisplay |           |           | fields    |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | handled   |           |           |
+    |           |           |           | on the    |           |           |
+    |           |           |           | Support   |           |           |
+    |           |           |           | In        |           |           |
+    |           |           |           | formation |           |           |
+    |           |           |           | Page.     |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | - HIDE,   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | D         |           |           |
+    |           |           |           | ISPLAYWIT |           |           |
+    |           |           |           | HNOVALUE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | DISPL     |           |           |
+    |           |           |           | AYWITHDEF |           |           |
+    |           |           |           | AULTVALUE |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | The       |           |           |
+    | defa      |           |           | default   |           |           |
+    | ultEmptyF |           |           | value     |           |           |
+    | ieldValue |           |           | displayed |           |           |
+    |           |           |           | for an    |           |           |
+    |           |           |           | empty     |           |           |
+    |           |           |           | field     |           |           |
+    |           |           |           | Only      |           |           |
+    |           |           |           | valid     |           |           |
+    |           |           |           | when      |           |           |
+    |           |           |           | emptyFie  |           |           |
+    |           |           |           | ldDisplay |           |           |
+    |           |           |           | =         |           |           |
+    |           |           |           | DISPL     |           |           |
+    |           |           |           | AYWITHDEF |           |           |
+    |           |           |           | AULTVALUE |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | custo     | List      | No        | Defines   |           |           |
+    | mizations |           |           | all of    |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | Portal    |           |           |
+    |           |           |           | Custo     |           |           |
+    |           |           |           | mizations |           |           |
+    |           |           |           | available |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | Defines   |           |           |
+    | po        |           |           | the       |           |           |
+    | rtalTheme |           |           | conf      |           |           |
+    |           |           |           | iguration |           |           |
+    |           |           |           | for       |           |           |
+    |           |           |           | portal    |           |           |
+    |           |           |           | theme     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - id    | String    | No        | The       |           | 9eb421c0- |
+    |           |           |           | unique    |           | 8c01-11e6 |
+    |           |           |           | internal  |           | -996c-525 |
+    |           |           |           | i         |           | 400b48521 |
+    |           |           |           | dentifier |           |           |
+    |           |           |           | of the    |           |           |
+    |           |           |           | portal    |           |           |
+    |           |           |           | theme     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - name  | String    | Yes       | The       |           | Default   |
+    |           |           |           | system-   |           | Blue      |
+    |           |           |           | or        |           | theme     |
+    |           |           |           | user      |           |           |
+    |           |           |           | -assigned |           |           |
+    |           |           |           | name of   |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | portal    |           |           |
+    |           |           |           | theme     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | A CSS     |           | Base 64   |
+    | themeData |           |           | file,     |           | encoded   |
+    |           |           |           | re        |           | string of |
+    |           |           |           | presented |           | Theme CSS |
+    |           |           |           | as a      |           | file      |
+    |           |           |           | Base6     |           |           |
+    |           |           |           | 4-encoded |           |           |
+    |           |           |           | byte      |           |           |
+    |           |           |           | array     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | The Tweak |           |           |
+    | p         |           |           | Settings  |           |           |
+    | ortalTwea |           |           | are a     |           |           |
+    | kSettings |           |           | cust      |           |           |
+    |           |           |           | omization |           |           |
+    |           |           |           | of the    |           |           |
+    |           |           |           | Portal    |           |           |
+    |           |           |           | Theme     |           |           |
+    |           |           |           | that has  |           |           |
+    |           |           |           | been      |           |           |
+    |           |           |           | selected  |           |           |
+    |           |           |           | for the   |           |           |
+    |           |           |           | portal.   |           |           |
+    |           |           |           | When the  |           |           |
+    |           |           |           | Portal    |           |           |
+    |           |           |           | Theme     |           |           |
+    |           |           |           | selection |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | changed,  |           |           |
+    |           |           |           | the Tweak |           |           |
+    |           |           |           | Settings  |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | ov        |           |           |
+    |           |           |           | erwritten |           |           |
+    |           |           |           | to match  |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | values in |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | theme.    |           |           |
+    |           |           |           | The Tweak |           |           |
+    |           |           |           | Settings  |           |           |
+    |           |           |           | can       |           |           |
+    |           |           |           | sub       |           |           |
+    |           |           |           | sequently |           |           |
+    |           |           |           | be        |           |           |
+    |           |           |           | changed   |           |           |
+    |           |           |           | by the    |           |           |
+    |           |           |           | user      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | Hex value |           | #0000FF   |
+    | ba        |           |           | of color  |           |           |
+    | nnerColor |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | Banner    |
+    | banner    |           |           |           |           | Text      |
+    | TextColor |           |           |           |           | color     |
+    |           |           |           |           |           | code from |
+    |           |           |           |           |           | GUI       |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | Color     |
+    | p         |           |           |           |           | code from |
+    | ageBackgr |           |           |           |           | GUI       |
+    | oundColor |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | Label and |
+    | pag       |           |           |           |           | Text      |
+    | eLabelAnd |           |           |           |           | color     |
+    | TextColor |           |           |           |           | from GUI  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | This      |           |           |
+    | language  |           |           | property  |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | supported |           |           |
+    |           |           |           | only for  |           |           |
+    |           |           |           | Read      |           |           |
+    |           |           |           | operation |           |           |
+    |           |           |           | and it    |           |           |
+    |           |           |           | allows to |           |           |
+    |           |           |           | show the  |           |           |
+    |           |           |           | custo     |           |           |
+    |           |           |           | mizations |           |           |
+    |           |           |           | in        |           |           |
+    |           |           |           | English.  |           |           |
+    |           |           |           | Other     |           |           |
+    |           |           |           | languages |           |           |
+    |           |           |           | are not   |           |           |
+    |           |           |           | supported |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | English   |
+    | vie       |           |           |           |           |           |
+    | wLanguage |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | Represent |           |           |
+    | gl        |           |           | the       |           |           |
+    | obalCusto |           |           | portal    |           |           |
+    | mizations |           |           | Global    |           |           |
+    |           |           |           | custo     |           |           |
+    |           |           |           | mizations |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | BYOD      |
+    | ba        |           |           |           |           | Portal    |
+    | nnerTitle |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | Contact   |
+    | co        |           |           |           |           | Support   |
+    | ntactText |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | Footer    |
+    | foot      |           |           |           |           | Element   |
+    | erElement |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Image     | No        |           |           |           |
+    | mobile    |           |           |           |           |           |
+    | LogoImage |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     -     | String    | No        | Re        |           | base 64   |
+    | data      |           |           | presented |           | encoded   |
+    |           |           |           | as base   |           | value of  |
+    |           |           |           | 64        |           | image     |
+    |           |           |           | encoded   |           |           |
+    |           |           |           | string of |           |           |
+    |           |           |           | the image |           |           |
+    |           |           |           | byte      |           |           |
+    |           |           |           | array     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Image     | No        |           |           |           |
+    | desktop   |           |           |           |           |           |
+    | LogoImage |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     -     | String    | No        | Re        |           | base 64   |
+    | data      |           |           | presented |           | encoded   |
+    |           |           |           | as base   |           | value of  |
+    |           |           |           | 64        |           | image     |
+    |           |           |           | encoded   |           |           |
+    |           |           |           | string of |           |           |
+    |           |           |           | the image |           |           |
+    |           |           |           | byte      |           |           |
+    |           |           |           | array     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Image     | No        |           |           |           |
+    | ba        |           |           |           |           |           |
+    | nnerImage |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     -     | String    | No        | Re        |           | base 64   |
+    | data      |           |           | presented |           | encoded   |
+    |           |           |           | as base   |           | value of  |
+    |           |           |           | 64        |           | image     |
+    |           |           |           | encoded   |           |           |
+    |           |           |           | string of |           |           |
+    |           |           |           | the image |           |           |
+    |           |           |           | byte      |           |           |
+    |           |           |           | array     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Image     | No        |           |           |           |
+    | backgr    |           |           |           |           |           |
+    | oundImage |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     -     | String    | No        | Re        |           | base 64   |
+    | data      |           |           | presented |           | encoded   |
+    |           |           |           | as base   |           | value of  |
+    |           |           |           | 64        |           | image     |
+    |           |           |           | encoded   |           |           |
+    |           |           |           | string of |           |           |
+    |           |           |           | the image |           |           |
+    |           |           |           | byte      |           |           |
+    |           |           |           | array     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | Represent |           |           |
+    | pageCusto |           |           | the       |           |           |
+    | mizations |           |           | entire    |           |           |
+    |           |           |           | page      |           |           |
+    |           |           |           | cust      |           |           |
+    |           |           |           | omization |           |           |
+    |           |           |           | as a      |           |           |
+    |           |           |           | giant     |           |           |
+    |           |           |           | d         |           |           |
+    |           |           |           | ictionary |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - data  | List      | No        | The       |           |           |
+    |           |           |           | D         |           |           |
+    |           |           |           | ictionary |           |           |
+    |           |           |           | will be   |           |           |
+    |           |           |           | exposed   |           |           |
+    |           |           |           | here as   |           |           |
+    |           |           |           | key value |           |           |
+    |           |           |           | pair      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     - key | String    | Yes       |           |           | ui_contac |
+    |           |           |           |           |           | t_ip_addr |
+    |           |           |           |           |           | ess_label |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     -     | String    | Yes       |           |           | SVAgYWR   |
+    | value     |           |           |           |           | kcmVzczo= |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

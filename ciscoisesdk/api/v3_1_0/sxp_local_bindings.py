@@ -50,6 +50,90 @@ class SxpLocalBindings(object):
     Wraps the Identity Services Engine SXPLocalBindings
     API and exposes the API as native Python
     methods that return native Python objects.
+    SXP Local Bindings API allows clients to add, get, update and delete SGT
+    static mappings.
+
+    Revision History
+    ----------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **       | **       | **Cisco  | **Descr  | **       |          |
+    | Revision | Resource | ISE      | iption** | Revision |          |
+    | #**      | V        | V        |          | Modifi   |          |
+    |          | ersion** | ersion** |          | cation** |          |
+    +----------+----------+----------+----------+----------+----------+
+    |          |          |          |          | **Att    | **Descr  |
+    |          |          |          |          | ribute** | iption** |
+    +----------+----------+----------+----------+----------+----------+
+    | 0        | 1.0      | 2.0      | Initial  |          |          |
+    |          |          |          | Cisco    |          |          |
+    |          |          |          | ISE      |          |          |
+    |          |          |          | Version  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | 1        | 1.1      | 3.0      | Cisco    | vns      | Added    |
+    |          |          |          | ISE 3.0  |          | new      |
+    |          |          |          | model    |          | property |
+    |          |          |          | changes  |          | for the  |
+    |          |          |          |          |          | Virtual  |
+    |          |          |          |          |          | Networks |
+    +----------+----------+----------+----------+----------+----------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    |             |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | f92         |
+    |             |          |             | UUID value  | 69682-dcaf- |
+    |             |          |             |             | 11e3-ad0a-5 |
+    |             |          |             |             | bdcd2d9fd69 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | bindingName | String   | No          | This field  |             |
+    |             |          |             | is          |             |
+    |             |          |             | depricated  |             |
+    |             |          |             | from Cisco  |             |
+    |             |          |             | ISE 3.0     |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | ipAd        | String   | Yes         | IP address  | ipAd        |
+    | dressOrHost |          |             | for static  | dressOrHost |
+    |             |          |             | mapping     |             |
+    |             |          |             | (hostname   |             |
+    |             |          |             | is not      |             |
+    |             |          |             | supported)  |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | sgt         | String   | Yes         | SGT name or | sgt_id      |
+    |             |          |             | ID          |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | sxpVpn      | String   | Yes         | List of SXP | Sxp Vpn     |
+    |             |          |             | Domains,    | Name        |
+    |             |          |             | separated   |             |
+    |             |          |             | with comma. |             |
+    |             |          |             | At least    |             |
+    |             |          |             | one of:     |             |
+    |             |          |             | sxpVpn or   |             |
+    |             |          |             | vns should  |             |
+    |             |          |             | be defined  |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | vns         | String   | Yes         | List of     | vir         |
+    |             |          |             | Virtual     | tualNetwork |
+    |             |          |             | Networks,   |             |
+    |             |          |             | separated   |             |
+    |             |          |             | with comma. |             |
+    |             |          |             | At least    |             |
+    |             |          |             | one of:     |             |
+    |             |          |             | sxpVpn or   |             |
+    |             |          |             | vns should  |             |
+    |             |          |             | be defined  |             |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

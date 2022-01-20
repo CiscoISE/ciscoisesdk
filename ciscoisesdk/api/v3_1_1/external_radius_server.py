@@ -50,6 +50,214 @@ class ExternalRadiusServer(object):
     Wraps the Identity Services Engine ExternalRADIUSServer
     API and exposes the API as native Python
     methods that return native Python objects.
+    External RADIUS Server API allows the client to add, delete, update,
+    search and perform actions on external RADIUS server.
+
+    Revision History
+    ----------------
+
+    **Revision #**
+
+    **Resource Version**
+
+    **Cisco ISE Version**
+
+    **Description**
+
+    **Revision Modification**
+
+    **Attribute**
+
+    **Description**
+
+    0
+
+    1.0
+
+    2.3
+
+    Initial Cisco ISE Version
+
+    1
+
+    1.1
+
+    2.6
+
+    Support new attribute Proxy Dead Timeout
+
+    proxyTimeout
+
+    Added int Attribute 'proxyTimeout'
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | ext       |
+    |           |           |           | Name.     |           | ernalRadi |
+    |           |           |           | Allowed   |           | usServer1 |
+    |           |           |           | c         |           |           |
+    |           |           |           | haractera |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | alp       |           |           |
+    |           |           |           | hanumeric |           |           |
+    |           |           |           | and \_    |           |           |
+    |           |           |           | (und      |           |           |
+    |           |           |           | erscore). |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | da095377- |
+    |           |           |           | UUID,     |           | dce8-486e |
+    |           |           |           | mandatory |           | -933a-6ea |
+    |           |           |           | for       |           | 788bbf51a |
+    |           |           |           | update    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | example   |
+    | scription |           |           |           |           | external  |
+    |           |           |           |           |           | radius    |
+    |           |           |           |           |           | server    |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | hostIP    | String    | Yes       | The IP of |           | 1.1.1.1   |
+    |           |           |           | the host  |           |           |
+    |           |           |           | - must be |           |           |
+    |           |           |           | a valid   |           |           |
+    |           |           |           | IPV4      |           |           |
+    |           |           |           | address   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | sha       | String    | Yes       | Shared    |           | sha       |
+    | redSecret |           |           | secret    |           | redSecret |
+    |           |           |           | maximum   |           |           |
+    |           |           |           | length is |           |           |
+    |           |           |           | 128       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | enab      | Boolean   | Yes       | KeyWrap   |           | true      |
+    | leKeyWrap |           |           | may only  |           |           |
+    |           |           |           | be        |           |           |
+    |           |           |           | enabled   |           |           |
+    |           |           |           | if it is  |           |           |
+    |           |           |           | supported |           |           |
+    |           |           |           | on the    |           |           |
+    |           |           |           | device.   |           |           |
+    |           |           |           | When      |           |           |
+    |           |           |           | running   |           |           |
+    |           |           |           | in FIPS   |           |           |
+    |           |           |           | mode this |           |           |
+    |           |           |           | option    |           |           |
+    |           |           |           | should be |           |           |
+    |           |           |           | enabled   |           |           |
+    |           |           |           | for such  |           |           |
+    |           |           |           | devices   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | encr      | String    | No        | The       |           | 1616161   |
+    | yptionKey |           |           | encr      |           | 616161616 |
+    |           |           |           | yptionKey |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | required  |           |           |
+    |           |           |           | only if   |           |           |
+    |           |           |           | enab      |           |           |
+    |           |           |           | leKeyWrap |           |           |
+    |           |           |           | is true,  |           |           |
+    |           |           |           | otherwise |           |           |
+    |           |           |           | it must   |           |           |
+    |           |           |           | be        |           |           |
+    |           |           |           | ignored   |           |           |
+    |           |           |           | or empty. |           |           |
+    |           |           |           | The       |           |           |
+    |           |           |           | maximum   |           |           |
+    |           |           |           | length is |           |           |
+    |           |           |           | 16 ASCII  |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | or 32     |           |           |
+    |           |           |           | HE        |           |           |
+    |           |           |           | XADECIMAL |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | (depend   |           |           |
+    |           |           |           | on        |           |           |
+    |           |           |           | selection |           |           |
+    |           |           |           | in field  |           |           |
+    |           |           |           | 'keyInpu  |           |           |
+    |           |           |           | tFormat') |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | authent   | String    | No        | The       |           | 20        |
+    | icatorKey |           |           | authent   |           | 202020202 |
+    |           |           |           | icatorKey |           | 020202020 |
+    |           |           |           | is        |           |           |
+    |           |           |           | required  |           |           |
+    |           |           |           | only if   |           |           |
+    |           |           |           | enab      |           |           |
+    |           |           |           | leKeyWrap |           |           |
+    |           |           |           | is true,  |           |           |
+    |           |           |           | otherwise |           |           |
+    |           |           |           | it must   |           |           |
+    |           |           |           | be        |           |           |
+    |           |           |           | ignored   |           |           |
+    |           |           |           | or empty. |           |           |
+    |           |           |           | The       |           |           |
+    |           |           |           | maximum   |           |           |
+    |           |           |           | length is |           |           |
+    |           |           |           | 20 ASCII  |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | or 40     |           |           |
+    |           |           |           | HE        |           |           |
+    |           |           |           | XADECIMAL |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | (depend   |           |           |
+    |           |           |           | on        |           |           |
+    |           |           |           | selection |           |           |
+    |           |           |           | in field  |           |           |
+    |           |           |           | 'keyInpu  |           |           |
+    |           |           |           | tFormat') |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | keyIn     | Enum      | Yes       | Specifies |           | ASCII     |
+    | putFormat |           |           | the       |           |           |
+    |           |           |           | format of |           |           |
+    |           |           |           | the input |           |           |
+    |           |           |           | for       |           |           |
+    |           |           |           | fields    |           |           |
+    |           |           |           | 'encry    |           |           |
+    |           |           |           | ptionKey' |           |           |
+    |           |           |           | and       |           |           |
+    |           |           |           | '         |           |           |
+    |           |           |           | authentic |           |           |
+    |           |           |           | atorKey'. |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | Values:   |           |           |
+    |           |           |           | - ASCII,  |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | HE        |           |           |
+    |           |           |           | XADECIMAL |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | authentic | Integer   | Yes       | Valid     |           | 1812      |
+    | ationPort |           |           | Range 1   |           |           |
+    |           |           |           | to 65535  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | accou     | Integer   | Yes       | Valid     |           | 1813      |
+    | ntingPort |           |           | Range 1   |           |           |
+    |           |           |           | to 65535  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | timeout   | Integer   | Yes       | Valid     |           | 5         |
+    |           |           |           | Range 1   |           |           |
+    |           |           |           | to 120    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | retries   | Integer   | Yes       | Valid     |           | 3         |
+    |           |           |           | Range 1   |           |           |
+    |           |           |           | to 9      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | pro       | Integer   | No        | Valid     | 300       |           |
+    | xyTimeout |           |           | Range 1   |           |           |
+    |           |           |           | to 600    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

@@ -50,6 +50,183 @@ class InternalUser(object):
     Wraps the Identity Services Engine InternalUser
     API and exposes the API as native Python
     methods that return native Python objects.
+    Internal User API allows the client to add, delete, update and search
+    internal users.
+
+    Revision History
+    ----------------
+
+    **Revision #**
+
+    **Resource Version**
+
+    **Cisco ISE Version**
+
+    **Description**
+
+    **Revision Modification**
+
+    **Attribute**
+
+    **Description**
+
+    0
+
+    1.0
+
+    1.2
+
+    Initial Cisco ISE Version
+
+    1
+
+    1.1
+
+    2.0
+
+    Cisco ISE 2.0 model changes
+
+    enablePassword
+
+    Added Attribute 'enablePassword' for TACACS
+
+    2
+
+    1.2
+
+    2.1
+
+    Cisco ISE 2.1 model changes
+
+    passwordIDStore
+
+    Added Attribute 'passwordIDStore' for choosing where passwords are
+    stored. default value:'Internal Users'
+
+    expiryDateEnabled
+
+    Added Attribute 'expiryDateEnabled' for choosing whether ExpiryDate
+    enabled or not . default value:'false'
+
+    expiryDate
+
+    Added Attribute 'expiryDate' to know the Expiry Date. Format is =
+    YYYY-MM-DD
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Default | *Example |
+    |          |          |          |          | Values** | Values** |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          | name     |
+    |          |          |          | Name     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | No       | Resource |          | b24b     |
+    |          |          |          | UUID,    |          | 09e2-16f |
+    |          |          |          | m        |          | 8-4e48-a |
+    |          |          |          | andatory |          | ce1-2c26 |
+    |          |          |          | for      |          | 2a9449f1 |
+    |          |          |          | update   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          | des      |
+    | cription |          |          |          |          | cription |
+    +----------+----------+----------+----------+----------+----------+
+    | change   | Boolean  | Yes      |          | true     |          |
+    | Password |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | email    | String   | No       |          |          | email@do |
+    |          |          |          |          |          | main.com |
+    +----------+----------+----------+----------+----------+----------+
+    | enable   | String   | No       | Enable   |          | enable   |
+    | Password |          |          | Password |          | Password |
+    |          |          |          | field is |          |          |
+    |          |          |          | added in |          |          |
+    |          |          |          | ISE 2.0  |          |          |
+    |          |          |          | to       |          |          |
+    |          |          |          | support  |          |          |
+    |          |          |          | T+       |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | enabled  | Boolean  | Yes      | Whether  |          | true     |
+    |          |          |          | the user |          |          |
+    |          |          |          | is       |          |          |
+    |          |          |          | e        |          |          |
+    |          |          |          | nabled/d |          |          |
+    |          |          |          | isabled. |          |          |
+    |          |          |          | To use   |          |          |
+    |          |          |          | it as    |          |          |
+    |          |          |          | filter,  |          |          |
+    |          |          |          | the      |          |          |
+    |          |          |          | values   |          |          |
+    |          |          |          | should   |          |          |
+    |          |          |          | be       |          |          |
+    |          |          |          | '        |          |          |
+    |          |          |          | Enabled' |          |          |
+    |          |          |          | or       |          |          |
+    |          |          |          | 'Di      |          |          |
+    |          |          |          | sabled'. |          |          |
+    |          |          |          | The      |          |          |
+    |          |          |          | values   |          |          |
+    |          |          |          | are case |          |          |
+    |          |          |          | se       |          |          |
+    |          |          |          | nsitive. |          |          |
+    |          |          |          | For      |          |          |
+    |          |          |          | example, |          |          |
+    |          |          |          | '[       |          |          |
+    |          |          |          | ERSObjec |          |          |
+    |          |          |          | tURL]?fi |          |          |
+    |          |          |          | lter=ena |          |          |
+    |          |          |          | bled.EQ. |          |          |
+    |          |          |          | Enabled' |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | customAt | String   | No       | Key      |          | {"key1"  |
+    | tributes |          |          | value    |          | :        |
+    |          |          |          | map      |          | "        |
+    |          |          |          |          |          | value1"} |
+    +----------+----------+----------+----------+----------+----------+
+    | f        | String   | No       |          |          | f        |
+    | irstName |          |          |          |          | irstName |
+    +----------+----------+----------+----------+----------+----------+
+    | identi   | String   | No       | CSV of   |          | identi   |
+    | tyGroups |          |          | identity |          | tyGroups |
+    |          |          |          | group    |          |          |
+    |          |          |          | IDs      |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | lastName | String   | No       |          |          | lastName |
+    +----------+----------+----------+----------+----------+----------+
+    | password | String   | No       |          |          | password |
+    +----------+----------+----------+----------+----------+----------+
+    | passwor  | String   | Yes      | The id   | Internal |          |
+    | dIDStore |          |          | store    | Users    |          |
+    |          |          |          | where    |          |          |
+    |          |          |          | the      |          |          |
+    |          |          |          | internal |          |          |
+    |          |          |          | user's   |          |          |
+    |          |          |          | password |          |          |
+    |          |          |          | is kept  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | e        | Boolean  | No       |          | false    |          |
+    | xpiryDat |          |          |          |          |          |
+    | eEnabled |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | ex       | String   | No       | To store |          | 20       |
+    | piryDate |          |          | the      |          | 21-05-19 |
+    |          |          |          | internal |          |          |
+    |          |          |          | user's   |          |          |
+    |          |          |          | expiry   |          |          |
+    |          |          |          | date     |          |          |
+    |          |          |          | info     |          |          |
+    |          |          |          | rmation. |          |          |
+    |          |          |          | It's     |          |          |
+    |          |          |          | format   |          |          |
+    |          |          |          | is =     |          |          |
+    |          |          |          | 'YYY     |          |          |
+    |          |          |          | Y-MM-DD' |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

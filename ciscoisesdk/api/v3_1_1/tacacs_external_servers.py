@@ -50,6 +50,73 @@ class TacacsExternalServers(object):
     Wraps the Identity Services Engine TACACSExternalServers
     API and exposes the API as native Python
     methods that return native Python objects.
+    TACACS External Servers API allows the client to add, delete, update,
+    search and perform actions on TACACS external servers.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.4            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Default | *Example |
+    |          |          |          |          | Values** | Values** |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          | Tacac    |
+    |          |          |          | Name     |          | sExterna |
+    |          |          |          |          |          | lServer1 |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | No       | Resource |          | 1af3     |
+    |          |          |          | UUID,    |          | d6e2-cc3 |
+    |          |          |          | m        |          | b-4603-b |
+    |          |          |          | andatory |          | 80f-6827 |
+    |          |          |          | for      |          | 768335ab |
+    |          |          |          | update   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          | Ta       |
+    | cription |          |          |          |          | cacsExte |
+    |          |          |          |          |          | rnalServ |
+    |          |          |          |          |          | erForSDK |
+    +----------+----------+----------+----------+----------+----------+
+    | hostIP   | String   | Yes      | The      |          | 1.1.1.1  |
+    |          |          |          | server   |          |          |
+    |          |          |          | IPV4     |          |          |
+    |          |          |          | address  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | connec   | Integer  | No       | The port | 49       |          |
+    | tionPort |          |          | to       |          |          |
+    |          |          |          | connect  |          |          |
+    |          |          |          | the      |          |          |
+    |          |          |          | server   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | singl    | Boolean  | No       | Define   | true     |          |
+    | eConnect |          |          | the use  |          |          |
+    |          |          |          | of       |          |          |
+    |          |          |          | single   |          |          |
+    |          |          |          | co       |          |          |
+    |          |          |          | nnection |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | shar     | String   | Yes      | The      |          | Shar     |
+    | edSecret |          |          | server   |          | edSecret |
+    |          |          |          | shared   |          |          |
+    |          |          |          | secret   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | timeout  | Integer  | No       | The      | 20       |          |
+    |          |          |          | server   |          |          |
+    |          |          |          | timeout  |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

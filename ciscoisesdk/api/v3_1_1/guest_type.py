@@ -50,6 +50,232 @@ class GuestType(object):
     Wraps the Identity Services Engine GuestType
     API and exposes the API as native Python
     methods that return native Python objects.
+    Guest Type API allows the client to add, delete, update and search guest
+    types.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | C         |
+    |           |           |           | Name      |           | ontractor |
+    |           |           |           |           |           | (default) |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | 9f03a151- |
+    |           |           |           | UUID,     |           | 8c01-11e6 |
+    |           |           |           | mandatory |           | -996c-525 |
+    |           |           |           | for       |           | 400b48521 |
+    |           |           |           | update    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | Default   |
+    | scription |           |           |           |           | settings  |
+    |           |           |           |           |           | allow     |
+    |           |           |           |           |           | network   |
+    |           |           |           |           |           | access    |
+    |           |           |           |           |           | for up to |
+    |           |           |           |           |           | a year.   |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | a         | List      | No        |           |           |           |
+    | ccessTime |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        | Enable    | false     |           |
+    | all       |           |           | Specific  |           |           |
+    | owAccessO |           |           | Day Time  |           |           |
+    | nSpecific |           |           | Limits    |           |           |
+    | DaysTimes |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | No        |           | 90        |           |
+    | defaul    |           |           |           |           |           |
+    | tDuration |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | No        | Allowed   | DAYS      |           |
+    | duratio   |           |           | values    |           |           |
+    | nTimeUnit |           |           | are:      |           |           |
+    |           |           |           | - DAYS,   |           |           |
+    |           |           |           | - HOURS,  |           |           |
+    |           |           |           | - MINUTES |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        | When      | false     |           |
+    | fromF     |           |           | Account   |           |           |
+    | irstLogin |           |           | Duration  |           |           |
+    |           |           |           | starts    |           |           |
+    |           |           |           | from      |           |           |
+    |           |           |           | first     |           |           |
+    |           |           |           | login or  |           |           |
+    |           |           |           | specified |           |           |
+    |           |           |           | date      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | No        | Maximum   | 365       |           |
+    | maxAccoun |           |           | value of  |           |           |
+    | tDuration |           |           | Account   |           |           |
+    |           |           |           | Duration  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | List of   |           |           |
+    | dayT      |           |           | Time      |           |           |
+    | imeLimits |           |           | Ranges    |           |           |
+    |           |           |           | for       |           |           |
+    |           |           |           | account   |           |           |
+    |           |           |           | access    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | List      | No        | Time      |           |           |
+    | day       |           |           | Ranges    |           |           |
+    | TimeLimit |           |           | for       |           |           |
+    |           |           |           | account   |           |           |
+    |           |           |           | access    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     -     | String    | No        | Start     | 09:00     |           |
+    | startTime |           |           | time in   |           |           |
+    |           |           |           | HH:mm     |           |           |
+    |           |           |           | format    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     -     | String    | No        | End time  | 17:00     |           |
+    | endTime   |           |           | in HH:mm  |           |           |
+    |           |           |           | format    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |     -     | List      | No        | List of   |           |           |
+    | days      |           |           | Days      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |       -   | Enum      | No        | Value     |           |           |
+    | day       |           |           | should be |           |           |
+    |           |           |           | one of    |           |           |
+    |           |           |           | Week day. |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values    |           |           |
+    |           |           |           | are:      |           |           |
+    |           |           |           | - Sunday, |           |           |
+    |           |           |           | - Monday, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | Tuesday,  |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | W         |           |           |
+    |           |           |           | ednesday, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | Thursday, |           |           |
+    |           |           |           | - Friday, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | Saturday  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | log       | List      | No        | Login     |           |           |
+    | inOptions |           |           | options   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           | false     |           |
+    | allo      |           |           |           |           |           |
+    | wGuestPor |           |           |           |           |           |
+    | talBypass |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | No        | When      | D         |           |
+    | fail      |           |           | Guest     | isconnect |           |
+    | ureAction |           |           | Exceeds   | _Oldest_C |           |
+    |           |           |           | limit     | onnection |           |
+    |           |           |           | this      |           |           |
+    |           |           |           | action    |           |           |
+    |           |           |           | will be   |           |           |
+    |           |           |           | invoked,  |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values    |           |           |
+    |           |           |           | are:      |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | Di        |           |           |
+    |           |           |           | sconnect_ |           |           |
+    |           |           |           | Oldest_Co |           |           |
+    |           |           |           | nnection, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | D         |           |           |
+    |           |           |           | isconnect |           |           |
+    |           |           |           | _Newest_C |           |           |
+    |           |           |           | onnection |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | Yes       | ID of     |           | aa178bd0- |
+    | identi    |           |           | Guest     |           | 8bff-11e6 |
+    | tyGroupId |           |           | Identity  |           | -996c-525 |
+    |           |           |           | Group     |           | 400b48521 |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        | Enable    | true      |           |
+    | limit     |           |           | Sim       |           |           |
+    | Simultane |           |           | ultaneous |           |           |
+    | ousLogins |           |           | Logins    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | No        | Maximum   | 5         |           |
+    | ma        |           |           | devices   |           |           |
+    | xRegister |           |           | guests    |           |           |
+    | edDevices |           |           | can       |           |           |
+    |           |           |           | register  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | No        | Number of | 3         |           |
+    | max       |           |           | Sim       |           |           |
+    | Simultane |           |           | ultaneous |           |           |
+    | ousLogins |           |           | Logins    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | expi      | List      | No        | E         |           |           |
+    | rationNot |           |           | xpiration |           |           |
+    | ification |           |           | Not       |           |           |
+    |           |           |           | ification |           |           |
+    |           |           |           | Settings  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | No        | Send      | 3         |           |
+    | advanceNo |           |           | Account   |           |           |
+    | tificatio |           |           | E         |           |           |
+    | nDuration |           |           | xpiration |           |           |
+    |           |           |           | Not       |           |           |
+    |           |           |           | ification |           |           |
+    |           |           |           | Duration  |           |           |
+    |           |           |           | before (  |           |           |
+    |           |           |           | Days,     |           |           |
+    |           |           |           | Hours,    |           |           |
+    |           |           |           | Minutes ) |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | No        | Allowed   | DAYS      |           |
+    | advanc    |           |           | values    |           |           |
+    | eNotifica |           |           | are:      |           |           |
+    | tionUnits |           |           | - DAYS,   |           |           |
+    |           |           |           | - HOURS,  |           |           |
+    |           |           |           | - MINUTES |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        | Enable    | false     |           |
+    | enableNot |           |           | Not       |           |           |
+    | ification |           |           | ification |           |           |
+    |           |           |           | settings  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        | Enable    | false     |           |
+    | sen       |           |           | Email     |           |           |
+    | dEmailNot |           |           | Not       |           |           |
+    | ification |           |           | ification |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | No        | Maximum   | 5         |           |
+    | s         |           |           | devices   |           |           |
+    | endSmsNot |           |           | guests    |           |           |
+    | ification |           |           | can       |           |           |
+    |           |           |           | register  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | spon      | List      | Yes       | List of   |           | ["GROUP   |
+    | sorGroups |           |           | Sponsor   |           | _ACCOUNTS |
+    |           |           |           | Groups    |           | (d        |
+    |           |           |           |           |           | efault)", |
+    |           |           |           |           |           | "ALL      |
+    |           |           |           |           |           | _ACCOUNTS |
+    |           |           |           |           |           | (d        |
+    |           |           |           |           |           | efault)", |
+    |           |           |           |           |           | "OWN      |
+    |           |           |           |           |           | _ACCOUNTS |
+    |           |           |           |           |           | (d        |
+    |           |           |           |           |           | efault)"] |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

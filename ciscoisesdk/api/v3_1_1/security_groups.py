@@ -50,6 +50,114 @@ class SecurityGroups(object):
     Wraps the Identity Services Engine SecurityGroups
     API and exposes the API as native Python
     methods that return native Python objects.
+    SGT API allows the client to search SGTs.
+
+    Revision History
+    ----------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **       | **       | **Cisco  | **Descr  | **       |          |
+    | Revision | Resource | ISE      | iption** | Revision |          |
+    | #**      | V        | V        |          | Modifi   |          |
+    |          | ersion** | ersion** |          | cation** |          |
+    +----------+----------+----------+----------+----------+----------+
+    |          |          |          |          | **Att    | **Descr  |
+    |          |          |          |          | ribute** | iption** |
+    +----------+----------+----------+----------+----------+----------+
+    | 0        | 1.0      | 1.2      | Initial  |          |          |
+    |          |          |          | Cisco    |          |          |
+    |          |          |          | ISE      |          |          |
+    |          |          |          | Version  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | 1        | 1.1      | 1.4      | Cisco    | isTagF   | Removed  |
+    |          |          |          | ISE 1.4  | romRange | A        |
+    |          |          |          | model    |          | ttribute |
+    |          |          |          | changes  |          | isTagF   |
+    |          |          |          |          |          | romRange |
+    |          |          |          |          |          | -        |
+    |          |          |          |          |          | de       |
+    |          |          |          |          |          | pricated |
+    |          |          |          |          |          | - set to |
+    |          |          |          |          |          | FALSE    |
+    |          |          |          |          |          | value by |
+    |          |          |          |          |          | default  |
+    +----------+----------+----------+----------+----------+----------+
+    | 2        | 1.2      | 2.3      | Cisco    | propoga  | Added    |
+    |          |          |          | ISE 2.3  | teToApic | Boolean  |
+    |          |          |          | model    |          | A        |
+    |          |          |          | changes  |          | ttribute |
+    |          |          |          |          |          | propoga  |
+    |          |          |          |          |          | teToApic |
+    |          |          |          |          |          | - By     |
+    |          |          |          |          |          | default  |
+    |          |          |          |          |          | value is |
+    |          |          |          |          |          | false    |
+    +----------+----------+----------+----------+----------+----------+
+    | 3        | 1.3      | 2.7      | Cisco    | is       | Added    |
+    |          |          |          | ISE 2.7  | ReadOnly | Boolean  |
+    |          |          |          | model    |          | A        |
+    |          |          |          | changes  |          | ttribute |
+    |          |          |          |          |          | is       |
+    |          |          |          |          |          | ReadOnly |
+    |          |          |          |          |          | - By     |
+    |          |          |          |          |          | default  |
+    |          |          |          |          |          | value is |
+    |          |          |          |          |          | false    |
+    +----------+----------+----------+----------+----------+----------+
+    |          |          |          |          | defau    | Added    |
+    |          |          |          |          | ltSGACLs | List     |
+    |          |          |          |          |          | A        |
+    |          |          |          |          |          | ttribute |
+    |          |          |          |          |          | defau    |
+    |          |          |          |          |          | ltSGACLs |
+    +----------+----------+----------+----------+----------+----------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Default | *Example |
+    |          |          |          |          | Values** | Values** |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          | E        |
+    |          |          |          | Name     |          | mployees |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | No       | Resource |          | 93ad     |
+    |          |          |          | UUID,    |          | 6890-8c0 |
+    |          |          |          | m        |          | 1-11e6-9 |
+    |          |          |          | andatory |          | 96c-5254 |
+    |          |          |          | for      |          | 00b48521 |
+    |          |          |          | update   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          | Employee |
+    | cription |          |          |          |          | Security |
+    |          |          |          |          |          | Group    |
+    +----------+----------+----------+----------+----------+----------+
+    | value    | Integer  | Yes      | Value    |          | 4        |
+    |          |          |          | range: 2 |          |          |
+    |          |          |          | ot 65519 |          |          |
+    |          |          |          | or -1 to |          |          |
+    |          |          |          | auto-    |          |          |
+    |          |          |          | generate |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | propoga  | Boolean  | No       |          |          | true     |
+    | teToApic |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | is       | Boolean  | No       |          | false    |          |
+    | ReadOnly |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | defau    | List     | No       |          |          | [ ]      |
+    | ltSGACLs |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | propoga  | Boolean  | No       |          |          | true     |
+    | teToApic |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | gene     | Integer  | No       |          |          | 0        |
+    | rationId |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

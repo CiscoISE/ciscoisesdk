@@ -50,6 +50,74 @@ class TacacsCommandSets(object):
     Wraps the Identity Services Engine TACACSCommandSets
     API and exposes the API as native Python
     methods that return native Python objects.
+    TACACS Command Sets API allows the client to add, delete, update, search
+    and perform actions on TACACS command sets.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.4            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | DenyAl    |
+    |           |           |           | Name      |           | lCommands |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | 0cef7990- |
+    |           |           |           | UUID,     |           | 6120-11ea |
+    |           |           |           | mandatory |           | -bffb-7a8 |
+    |           |           |           | for       |           | 2c56e81f0 |
+    |           |           |           | update    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | Default   |
+    | scription |           |           |           |           | Command   |
+    |           |           |           |           |           | Set       |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | permit    | Boolean   | No        |           | false     |           |
+    | Unmatched |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | commands  | List      | No        | Holds     |           |           |
+    |           |           |           | list of   |           |           |
+    |           |           |           | Commands  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | Array of  |           | [         |
+    | co        |           |           | dic       |           |  {        |
+    | mmandList |           |           | tionaries |           |           |
+    |           |           |           | d         |           | "grant" : |
+    |           |           |           | escribing |           | "PERMIT", |
+    |           |           |           | various   |           |           |
+    |           |           |           | a         |           | "command" |
+    |           |           |           | ttributes |           | :         |
+    |           |           |           | with the  |           | "create", |
+    |           |           |           | pr        |           |           |
+    |           |           |           | operties: |           | "a        |
+    |           |           |           | - grant   |           | rguments" |
+    |           |           |           | (Enum.    |           | : "value" |
+    |           |           |           | Allowed   |           |  }        |
+    |           |           |           | values:   |           | ]         |
+    |           |           |           | PERMIT,   |           |           |
+    |           |           |           | DENY,     |           |           |
+    |           |           |           | DENY      |           |           |
+    |           |           |           | _ALWAYS), |           |           |
+    |           |           |           | - command |           |           |
+    |           |           |           | (String), |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | arguments |           |           |
+    |           |           |           | (String)  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

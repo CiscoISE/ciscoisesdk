@@ -50,6 +50,49 @@ class TelemetryInformation(object):
     Wraps the Identity Services Engine TelemetryInformation
     API and exposes the API as native Python
     methods that return native Python objects.
+    Telemetry Information API allows clients to get telemetry configuration
+    information.
+
+    Revision History
+    ----------------
+
+    +-------------+-------------+-------------+-------------+---+---+
+    | **Revision  | **Resource  | **Cisco ISE | **De        |   |   |
+    | #**         | Version**   | Version**   | scription** |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+    | 0           | 1.0         | 3.0         | Initial     |   |   |
+    |             |             |             | Cisco ISE   |   |   |
+    |             |             |             | Version     |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    |             |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | ed7         |
+    |             |          |             | UUID,       | 176fb-3faf- |
+    |             |          |             | mandatory   | 4060-845e-d |
+    |             |          |             | for update  | 5fa5236bd6e |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | status      | String   | No          |             | SCHEnable   |
+    +-------------+----------+-------------+-------------+-------------+
+    | d           | String   | No          |             | ed7         |
+    | eploymentId |          |             |             | 176fb-3faf- |
+    |             |          |             |             | 4060-845e-d |
+    |             |          |             |             | 5fa5236bd6e |
+    +-------------+----------+-------------+-------------+-------------+
+    | udiSN       | String   | No          |             | CH2MKIEGBGO |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

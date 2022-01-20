@@ -50,6 +50,48 @@ class NetworkDeviceGroup(object):
     Wraps the Identity Services Engine NetworkDeviceGroup
     API and exposes the API as native Python
     methods that return native Python objects.
+    Network Device Group API allows the client to search network device
+    groups.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 1.3            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+    | 1              | 1.1            | 2.4            | Added          |
+    |                |                |                | GetByName      |
+    |                |                |                | operation      |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | Device      |
+    |             |          |             | Name        | Type#All    |
+    |             |          |             |             | Device      |
+    |             |          |             |             | Types       |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | 70c         |
+    |             |          |             | UUID,       | 79c30-8bff- |
+    |             |          |             | mandatory   | 11e6-996c-5 |
+    |             |          |             | for update  | 25400b48521 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             | All Device  |
+    |             |          |             |             | Types       |
+    +-------------+----------+-------------+-------------+-------------+
+    | othername   | String   | No          |             | Device Type |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

@@ -50,6 +50,45 @@ class SponsorGroupMember(object):
     Wraps the Identity Services Engine SponsorGroupMember
     API and exposes the API as native Python
     methods that return native Python objects.
+    Sponsor Group API allows the client to search the group members from
+    different identity stores configured in the GUI.
+
+    Revision History
+    ----------------
+
+    +-------------+-------------+-------------+-------------+---+---+
+    | **Revision  | **Resource  | **Cisco ISE | **De        |   |   |
+    | #**         | Version**   | Version**   | scription** |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+    | 0           | 1.0         | 2.2         | Initial     |   |   |
+    |             |             |             | Cisco ISE   |   |   |
+    |             |             |             | Version     |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | A           |
+    |             |          |             | Name        | LL_ACCOUNTS |
+    |             |          |             |             | (default)   |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | a17         |
+    |             |          |             | UUID value  | 6c430-8c01- |
+    |             |          |             |             | 11e6-996c-5 |
+    |             |          |             |             | 25400b48521 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | dicType     | String   | Yes         |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | guid        | String   | Yes         |             |             |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

@@ -50,6 +50,626 @@ class ActiveDirectory(object):
     Wraps the Identity Services Engine ActiveDirectory
     API and exposes the API as native Python
     methods that return native Python objects.
+    | The Active Directory API allows the user to carry out add, delete, and
+      search operations on the active directory domains through Cisco ISE's
+      join points. For example, if you want to connect to the domain
+      cisco.com and retrieve the domain groups, you can carry out the
+      following steps which are also available as APIs: Step 1 Create a
+      domain join point in Cisco ISE. In the "domain" parameter use
+      cisco.com.
+    | Step 2 Get all defined join points and copy your join point's ID from
+      the response.
+    | Step 3 Join all Cisco ISE nodes to the domain. Use the ID received in
+      the Step 2 in the URL. From this point onwards, you can perform
+      several actions. In each action you should specify the joint point ID
+      in the URL, as retrieved in step 2 in the previous configuration task.
+      For example, you can: • Retrieve the user groups using the join point
+      ID.
+    | • Retrieve the groups of a specific domain using the join point ID.
+      The domain parameter can be cisco.com or any of its trusted domains.
+      You can use the get all trusted domains operation to retrieve the
+      list.
+
+    Revision History
+    ----------------
+
+    **Revision #**
+
+    **Resource Version**
+
+    **Cisco ISE Version**
+
+    **Description**
+
+    **Revision Modification**
+
+    **Attribute**
+
+    **Description**
+
+    0
+
+    1.0
+
+    2.2
+
+    Initial Cisco ISE Version
+
+    1
+
+    1.1
+
+    2.4
+
+    Support new attributes
+
+    advancedSettings
+
+    Added ERSActiveDirectoryAdvancedSettings Attribute 'advancedSettings'
+
+    adAttributes
+
+    Added ERSActiveDirectoryAttributes Attribute 'adAttributes'
+
+    enableDomainWhiteList
+
+    Added Boolean Attribute 'enableDomainWhiteList'
+
+    2
+
+    1.2
+
+    3.1
+
+    Support new attributes under ActiveDirectory AdvancedSettings
+
+    enableFailedAuthProtection
+
+    Added Boolean Attribute 'enableFailedAuthProtection'
+
+    failedAuthThreshold
+
+    Added Integer Attribute 'failedAuthThreshold'
+
+    authProtectionType
+
+    Added Enum Attribute 'authProtectionType'
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | Comp      |
+    |           |           |           | Name.     |           | any_users |
+    |           |           |           | Maximum   |           |           |
+    |           |           |           | 32        |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | allowed.  |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | alp       |           |           |
+    |           |           |           | hanumeric |           |           |
+    |           |           |           | and       |           |           |
+    |           |           |           | .-_/\\\   |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | af1cd190- |
+    |           |           |           | UUID      |           | 7d71-11eb |
+    |           |           |           | value     |           | -b02e-ead |
+    |           |           |           |           |           | 13cf60dcb |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        | No        |           | Group of  |
+    | scription |           |           | character |           | Active    |
+    |           |           |           | re        |           | company   |
+    |           |           |           | striction |           | users     |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | domain    | String    | Yes       | The AD    |           | cisco.com |
+    |           |           |           | domain.   |           |           |
+    |           |           |           | Alph      |           |           |
+    |           |           |           | anumeric, |           |           |
+    |           |           |           | hyphen    |           |           |
+    |           |           |           | (-) and   |           |           |
+    |           |           |           | dot (.)   |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | adSc      | String    | No        | String    | Defa      |           |
+    | opesNames |           |           | that      | ult_Scope |           |
+    |           |           |           | contains  |           |           |
+    |           |           |           | the names |           |           |
+    |           |           |           | of the    |           |           |
+    |           |           |           | scopes    |           |           |
+    |           |           |           | that the  |           |           |
+    |           |           |           | active    |           |           |
+    |           |           |           | directory |           |           |
+    |           |           |           | belongs   |           |           |
+    |           |           |           | to. Names |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | separated |           |           |
+    |           |           |           | by comma. |           |           |
+    |           |           |           | Alph      |           |           |
+    |           |           |           | anumeric, |           |           |
+    |           |           |           | u         |           |           |
+    |           |           |           | nderscore |           |           |
+    |           |           |           | (_)       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | ena       | Boolean   | No        |           | true      |           |
+    | bleDomain |           |           |           |           |           |
+    | WhiteList |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | adGroups  | List      | No        | Holds     |           |           |
+    |           |           |           | list of   |           |           |
+    |           |           |           | AD Groups |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - groups  | List      | No        | List of   |           |           |
+    |           |           |           | Groups    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - name  | String    | Yes       | Required  |           | c         |
+    |           |           |           | for each  |           | isco.com/ |
+    |           |           |           | group in  |           | operators |
+    |           |           |           | the group |           |           |
+    |           |           |           | list with |           |           |
+    |           |           |           | no        |           |           |
+    |           |           |           | du        |           |           |
+    |           |           |           | plication |           |           |
+    |           |           |           | between   |           |           |
+    |           |           |           | groups.   |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - sid   | String    | Yes       | Cisco ISE |           | S-1       |
+    |           |           |           | uses      |           | -5-32-548 |
+    |           |           |           | security  |           |           |
+    |           |           |           | id        |           |           |
+    |           |           |           | entifiers |           |           |
+    |           |           |           | (SIDs)    |           |           |
+    |           |           |           | for       |           |           |
+    |           |           |           | opt       |           |           |
+    |           |           |           | imization |           |           |
+    |           |           |           | of group  |           |           |
+    |           |           |           | m         |           |           |
+    |           |           |           | embership |           |           |
+    |           |           |           | ev        |           |           |
+    |           |           |           | aluation. |           |           |
+    |           |           |           | SIDs are  |           |           |
+    |           |           |           | useful    |           |           |
+    |           |           |           | for       |           |           |
+    |           |           |           | e         |           |           |
+    |           |           |           | fficiency |           |           |
+    |           |           |           | (speed)   |           |           |
+    |           |           |           | when the  |           |           |
+    |           |           |           | groups    |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | e         |           |           |
+    |           |           |           | valuated. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - type  | String    | No        | No        |           | GLOBAL    |
+    |           |           |           | character |           |           |
+    |           |           |           | re        |           |           |
+    |           |           |           | striction |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | adA       | List      | No        | Holds     |           |           |
+    | ttributes |           |           | list of   |           |           |
+    |           |           |           | AD        |           |           |
+    |           |           |           | A         |           |           |
+    |           |           |           | ttributes |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | List of   |           |           |
+    | a         |           |           | A         |           |           |
+    | ttributes |           |           | ttributes |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - name  | String    | Yes       | Required  |           | name1     |
+    |           |           |           | for each  |           |           |
+    |           |           |           | attribute |           |           |
+    |           |           |           | in the    |           |           |
+    |           |           |           | attribute |           |           |
+    |           |           |           | list with |           |           |
+    |           |           |           | no        |           |           |
+    |           |           |           | du        |           |           |
+    |           |           |           | plication |           |           |
+    |           |           |           | between   |           |           |
+    |           |           |           | at        |           |           |
+    |           |           |           | tributes. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except    |           |           |
+    |           |           |           | <%"       |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - type  | Enum      | Yes       | Required  | STRING    |           |
+    |           |           |           | for each  |           |           |
+    |           |           |           | group in  |           |           |
+    |           |           |           | the group |           |           |
+    |           |           |           | list.     |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | - STRING, |           |           |
+    |           |           |           | - IP,     |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | BOOLEAN,  |           |           |
+    |           |           |           | - INT,    |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | OCT       |           |           |
+    |           |           |           | ET_STRING |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       | Required  |           | inte      |
+    | int       |           |           | for each  |           | rnalName1 |
+    | ernalName |           |           | attribute |           |           |
+    |           |           |           | in the    |           |           |
+    |           |           |           | attribute |           |           |
+    |           |           |           | list. All |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except    |           |           |
+    |           |           |           | <%"       |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       | Required  |           | defa      |
+    | def       |           |           | for each  |           | ultString |
+    | aultValue |           |           | attribute |           |           |
+    |           |           |           | in the    |           |           |
+    |           |           |           | attribute |           |           |
+    |           |           |           | list. Can |           |           |
+    |           |           |           | contain   |           |           |
+    |           |           |           | an empty  |           |           |
+    |           |           |           | string.   |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except    |           |           |
+    |           |           |           | <%"       |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | advance   | List      | No        |           |           |           |
+    | dSettings |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        | Identity  |           |           |
+    | rew       |           |           | rewrite   |           |           |
+    | riteRules |           |           | is an     |           |           |
+    |           |           |           | advanced  |           |           |
+    |           |           |           | feature   |           |           |
+    |           |           |           | that      |           |           |
+    |           |           |           | directs   |           |           |
+    |           |           |           | Cisco ISE |           |           |
+    |           |           |           | to        |           |           |
+    |           |           |           | m         |           |           |
+    |           |           |           | anipulate |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | identity  |           |           |
+    |           |           |           | before it |           |           |
+    |           |           |           | is passed |           |           |
+    |           |           |           | to the    |           |           |
+    |           |           |           | external  |           |           |
+    |           |           |           | Active    |           |           |
+    |           |           |           | Directory |           |           |
+    |           |           |           | system.   |           |           |
+    |           |           |           | You can   |           |           |
+    |           |           |           | create    |           |           |
+    |           |           |           | rules to  |           |           |
+    |           |           |           | change    |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | identity  |           |           |
+    |           |           |           | to a      |           |           |
+    |           |           |           | desired   |           |           |
+    |           |           |           | format    |           |           |
+    |           |           |           | that      |           |           |
+    |           |           |           | includes  |           |           |
+    |           |           |           | or        |           |           |
+    |           |           |           | excludes  |           |           |
+    |           |           |           | a domain  |           |           |
+    |           |           |           | prefix    |           |           |
+    |           |           |           | and/or    |           |           |
+    |           |           |           | suffix or |           |           |
+    |           |           |           | other     |           |           |
+    |           |           |           | a         |           |           |
+    |           |           |           | dditional |           |           |
+    |           |           |           | markup of |           |           |
+    |           |           |           | your      |           |           |
+    |           |           |           | choice    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - rowId | Integer   | Yes       | Required  |           | 0         |
+    |           |           |           | for each  |           |           |
+    |           |           |           | rule in   |           |           |
+    |           |           |           | the list  |           |           |
+    |           |           |           | in serial |           |           |
+    |           |           |           | order     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       | Required  |           | exam      |
+    | rew       |           |           | for each  |           | pleMatch0 |
+    | riteMatch |           |           | rule in   |           |           |
+    |           |           |           | the list  |           |           |
+    |           |           |           | with no   |           |           |
+    |           |           |           | du        |           |           |
+    |           |           |           | plication |           |           |
+    |           |           |           | between   |           |           |
+    |           |           |           | rules.    |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %" |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       | Required  |           | examp     |
+    | rewr      |           |           | for each  |           | leResult0 |
+    | iteResult |           |           | rule in   |           |           |
+    |           |           |           | the list. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %" |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           | false     |           |
+    | enabl     |           |           |           |           |           |
+    | eRewrites |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           | true      |           |
+    | enableP   |           |           |           |           |           |
+    | assChange |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           | true      |           |
+    | enableMa  |           |           |           |           |           |
+    | chineAuth |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           | true      |           |
+    | e         |           |           |           |           |           |
+    | nableMach |           |           |           |           |           |
+    | ineAccess |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           | false     |           |
+    | enableDia |           |           |           |           |           |
+    | linPermis |           |           |           |           |           |
+    | sionCheck |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           | false     |           |
+    | plai      |           |           |           |           |           |
+    | ntextAuth |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | No        | Range     | 5         |           |
+    | agingTime |           |           | 1-8760    |           |           |
+    |           |           |           | hours     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           | false     |           |
+    | en        |           |           |           |           |           |
+    | ableCallb |           |           |           |           |           |
+    | ackForDia |           |           |           |           |           |
+    | linClient |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | No        | Allowed   | SE        |           |
+    | identi    |           |           | values:   | ARCH_JOIN |           |
+    | tyNotInAd |           |           | - REJECT, | ED_FOREST |           |
+    | Behaviour |           |           | -         |           |           |
+    |           |           |           | SEA       |           |           |
+    |           |           |           | RCH_JOINE |           |           |
+    |           |           |           | D_FOREST, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | S         |           |           |
+    |           |           |           | EARCH_ALL |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | No        | Allowed   | PROCEED   |           |
+    | unreachab |           |           | values:   |           |           |
+    | leDomains |           |           | -         |           |           |
+    | Behaviour |           |           | PROCEED,  |           |           |
+    |           |           |           | - DROP    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - schema  | Enum      | No        | Allowed   | ACTIVE_   |           |
+    |           |           |           | values:   | DIRECTORY |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | ACTIVE_D  |           |           |
+    |           |           |           | IRECTORY, |           |           |
+    |           |           |           | - CUSTOM  |           |           |
+    |           |           |           | Choose    |           |           |
+    |           |           |           | ACTIVE_   |           |           |
+    |           |           |           | DIRECTORY |           |           |
+    |           |           |           | schema    |           |           |
+    |           |           |           | when the  |           |           |
+    |           |           |           | AD        |           |           |
+    |           |           |           | a         |           |           |
+    |           |           |           | ttributes |           |           |
+    |           |           |           | defined   |           |           |
+    |           |           |           | in AD can |           |           |
+    |           |           |           | be copied |           |           |
+    |           |           |           | to        |           |           |
+    |           |           |           | relevant  |           |           |
+    |           |           |           | a         |           |           |
+    |           |           |           | ttributes |           |           |
+    |           |           |           | in Cisco  |           |           |
+    |           |           |           | ISE. If   |           |           |
+    |           |           |           | cust      |           |           |
+    |           |           |           | omization |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | needed,   |           |           |
+    |           |           |           | choose    |           |           |
+    |           |           |           | CUSTOM    |           |           |
+    |           |           |           | schema.   |           |           |
+    |           |           |           | All User  |           |           |
+    |           |           |           | info      |           |           |
+    |           |           |           | a         |           |           |
+    |           |           |           | ttributes |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | always    |           |           |
+    |           |           |           | set to    |           |           |
+    |           |           |           | default   |           |           |
+    |           |           |           | value if  |           |           |
+    |           |           |           | schema is |           |           |
+    |           |           |           | ACTIVE_D  |           |           |
+    |           |           |           | IRECTORY. |           |           |
+    |           |           |           | Values    |           |           |
+    |           |           |           | can be    |           |           |
+    |           |           |           | changed   |           |           |
+    |           |           |           | only for  |           |           |
+    |           |           |           | CUSTOM    |           |           |
+    |           |           |           | schema    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | givenName |           |
+    | firstName |           |           | a         |           |           |
+    |           |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | d         |           |
+    | d         |           |           | a         | epartment |           |
+    | epartment |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | sn        |           |
+    | lastName  |           |           | a         |           |           |
+    |           |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | company   |           |
+    | organizat |           |           | a         |           |           |
+    | ionalUnit |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | title     |           |
+    | jobTitle  |           |           | a         |           |           |
+    |           |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | l         |           |
+    | locality  |           |           | a         |           |           |
+    |           |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - email   | String    | No        | User info | mail      |           |
+    |           |           |           | a         |           |           |
+    |           |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | st        |           |
+    | stateO    |           |           | a         |           |           |
+    | rProvince |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | teleph    |           |
+    | telephone |           |           | a         | oneNumber |           |
+    |           |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - country | String    | No        | User info | co        |           |
+    |           |           |           | a         |           |           |
+    |           |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | User info | stre      |           |
+    | stre      |           |           | a         | etAddress |           |
+    | etAddress |           |           | ttribute. |           |           |
+    |           |           |           | All       |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | are       |           |           |
+    |           |           |           | allowed   |           |           |
+    |           |           |           | except %  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        | Enable    | false     |           |
+    | enableFa  |           |           | prevent   |           |           |
+    | iledAuthP |           |           | AD        |           |           |
+    | rotection |           |           | account   |           |           |
+    |           |           |           | lockout   |           |           |
+    |           |           |           | due to    |           |           |
+    |           |           |           | too many  |           |           |
+    |           |           |           | bad       |           |           |
+    |           |           |           | password  |           |           |
+    |           |           |           | attempts  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | No        | Number of | 5         |           |
+    | f         |           |           | bad       |           |           |
+    | ailedAuth |           |           | password  |           |           |
+    | Threshold |           |           | attempts  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | No        | Enable    | WIRELESS  |           |
+    | authProte |           |           | prevent   |           |           |
+    | ctionType |           |           | AD        |           |           |
+    |           |           |           | account   |           |           |
+    |           |           |           | lockout.  |           |           |
+    |           |           |           | Allowed   |           |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | WIRELESS, |           |           |
+    |           |           |           | - WIRED,  |           |           |
+    |           |           |           | - BOTH    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

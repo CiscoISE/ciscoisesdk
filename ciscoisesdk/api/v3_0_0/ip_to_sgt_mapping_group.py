@@ -50,6 +50,62 @@ class IpToSgtMappingGroup(object):
     Wraps the Identity Services Engine IPToSGTMappingGroup
     API and exposes the API as native Python
     methods that return native Python objects.
+    IP To SGT Mapping Group API allows the client to add, delete, update,
+    search and deploy IP to SGT mapping groups.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.0            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | groupA    |
+    |           |           |           | Name      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           |           |
+    |           |           |           | UUID,     |           |           |
+    |           |           |           | mandatory |           |           |
+    |           |           |           | for       |           |           |
+    |           |           |           | update    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           |           |
+    | scription |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | deployTo  | String    | Mandatory |           |           | network_  |
+    |           |           | unless    |           |           | device_id |
+    |           |           | map       |           |           |           |
+    |           |           | pingGroup |           |           |           |
+    |           |           | is set or |           |           |           |
+    |           |           | unless    |           |           |           |
+    |           |           | deplo     |           |           |           |
+    |           |           | yType=ALL |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | d         | Enum      | Yes       | Allowed   | ALL       |           |
+    | eployType |           |           | values:   |           |           |
+    |           |           |           | - ALL,    |           |           |
+    |           |           |           | - ND,     |           |           |
+    |           |           |           | - NDG     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | sgt       | String    | Mandatory |           |           | sgt_id    |
+    |           |           | unless    |           |           |           |
+    |           |           | map       |           |           |           |
+    |           |           | pingGroup |           |           |           |
+    |           |           | is set    |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

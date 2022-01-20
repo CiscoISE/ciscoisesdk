@@ -50,6 +50,851 @@ class AllowedProtocols(object):
     Wraps the Identity Services Engine AllowedProtocols
     API and exposes the API as native Python
     methods that return native Python objects.
+    Allowed Protocols API allows the client to add, delete, update, search
+    and perform actions on allowed protocols.
+
+    Revision History
+    ----------------
+
+    **Revision #**
+
+    **Resource Version**
+
+    **Cisco ISE Version**
+
+    **Description**
+
+    **Revision Modification**
+
+    **Attribute**
+
+    **Description**
+
+    0
+
+    1.0
+
+    2.3
+
+    Initial Cisco ISE Version
+
+    1
+
+    1.1
+
+    2.7
+
+    Added support for TEAP
+
+    preferredEapProtocol
+
+    Added value 'TEAP' to enum attribute preferredEapProtocol
+
+    allowTeap
+
+    Added boolean attribute allowTeap
+
+    allowTeapEapMsChapV2
+
+    Added boolean attribute allowTeapEapMsChapV2
+
+    allowTeapEapMsChapV2PwdChange
+
+    Added boolean attribute allowTeap
+
+    allowTeapEapMsChapV2PwdChangeRetries
+
+    Added int attribute allowTeapEapMsChapV2PwdChangeRetries
+
+    allowTeapEapTls
+
+    Added boolean attribute allowTeapEapTls
+
+    allowTeapEapTlsAuthOfExpiredCerts
+
+    Added boolean attribute allowTeapEapTlsAuthOfExpiredCerts
+
+    acceptClientCertDuringTunnelEst
+
+    Added boolean attribute acceptClientCertDuringTunnelEst
+
+    enableEapChaining
+
+    Added boolean attribute enableEapChaining
+
+    allowDowngradeMsk
+
+    Added boolean attribute allowDowngradeMsk
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    | Default     |
+    |             |             |             | Name        | Device      |
+    |             |             |             |             | Admin       |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    | 926         |
+    |             |             |             | UUID,       | 901b0-8c01- |
+    |             |             |             | Mandatory   | 11e6-996c-5 |
+    |             |             |             | for update  | 25400b48521 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             | Default     |
+    |             |             |             |             | Allowed     |
+    |             |             |             |             | Protocol    |
+    |             |             |             |             | Service     |
+    |             |             |             |             | Device      |
+    |             |             |             |             | Admin       |
+    +-------------+-------------+-------------+-------------+-------------+
+    | proces      | Boolean     | Yes         |             | true        |
+    | sHostLookup |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | al          | Boolean     | No          |             | true        |
+    | lowPapAscii |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | allowChap   | Boolean     | Yes         |             | false       |
+    +-------------+-------------+-------------+-------------+-------------+
+    | al          | Boolean     | Yes         |             | false       |
+    | lowMsChapV1 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | al          | Boolean     | Yes         |             | false       |
+    | lowMsChapV2 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | allowEapMd5 | Boolean     | Yes         |             | true        |
+    +-------------+-------------+-------------+-------------+-------------+
+    | allowLeap   | Boolean     | Yes         |             | false       |
+    +-------------+-------------+-------------+-------------+-------------+
+    | allowEapTls | Boolean     | Yes         |             | true        |
+    +-------------+-------------+-------------+-------------+-------------+
+    | a           | Boolean     | Yes         |             | true        |
+    | llowEapTtls |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | a           | Boolean     | Yes         |             | true        |
+    | llowEapFast |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | allowPeap   | Boolean     | Yes         |             | true        |
+    +-------------+-------------+-------------+-------------+-------------+
+    | allowTeap   | Boolean     | Yes         |             | true        |
+    +-------------+-------------+-------------+-------------+-------------+
+    | all         | Boolean     | Yes         |             | true        |
+    | owPreferred |             |             |             |             |
+    | EapProtocol |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | eapTlsLBit  | Boolean     | Yes         |             | false       |
+    +-------------+-------------+-------------+-------------+-------------+
+    | allowWeakCi | Boolean     | Yes         |             | false       |
+    | phersForEap |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | require     | Boolean     | Yes         |             | false       |
+    | MessageAuth |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | preferred   | Enum        | No          | The         | PEAP        |
+    | EapProtocol |             |             | preferred   |             |
+    |             |             |             | EapProtocol |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | all         |             |
+    |             |             |             | owPreferred |             |
+    |             |             |             | EapProtocol |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Allowed     |             |
+    |             |             |             | Values:     |             |
+    |             |             |             | - EAP_FAST, |             |
+    |             |             |             | - PEAP,     |             |
+    |             |             |             | - LEAP,     |             |
+    |             |             |             | - EAP_MD5,  |             |
+    |             |             |             | - EAP_TLS,  |             |
+    |             |             |             | - EAP_TTLS, |             |
+    |             |             |             | - TEAP      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | eapTls      | List        | No          | The eapTls  |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowEapTls |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | The object  |             |
+    |             |             |             | eapTls      |             |
+    |             |             |             | contains    |             |
+    |             |             |             | the         |             |
+    |             |             |             | settings    |             |
+    |             |             |             | for EAP TLS |             |
+    |             |             |             | protocol    |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | false       |
+    | allowEa     |             |             |             |             |
+    | pTlsAuthOfE |             |             |             |             |
+    | xpiredCerts |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | false       |
+    | e           |             |             |             |             |
+    | apTlsEnable |             |             |             |             |
+    | StatelessSe |             |             |             |             |
+    | ssionResume |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | Time to     | 1           |
+    | eapTlsSessi |             |             | live. The   |             |
+    | onTicketTtl |             |             | eapTlsSessi |             |
+    |             |             |             | onTicketTtl |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | e           |             |
+    |             |             |             | apTlsEnable |             |
+    |             |             |             | StatelessSe |             |
+    |             |             |             | ssionResume |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Enum        | No          | Time to     | SECONDS     |
+    | eapTl       |             |             | live time   |             |
+    | sSessionTic |             |             | units. The  |             |
+    | ketTtlUnits |             |             | eapTl       |             |
+    |             |             |             | sSessionTic |             |
+    |             |             |             | ketTtlUnits |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | e           |             |
+    |             |             |             | apTlsEnable |             |
+    |             |             |             | StatelessSe |             |
+    |             |             |             | ssionResume |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Allowed     |             |
+    |             |             |             | Values:     |             |
+    |             |             |             | - SECONDS,  |             |
+    |             |             |             | - MINUTES,  |             |
+    |             |             |             | - HOURS,    |             |
+    |             |             |             | - DAYS,     |             |
+    |             |             |             | - WEEKS     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 1           |
+    | eapTlsS     |             |             | eapTlsS     |             |
+    | essionTicke |             |             | essionTicke |             |
+    | tPrecentage |             |             | tPrecentage |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | e           |             |
+    |             |             |             | apTlsEnable |             |
+    |             |             |             | StatelessSe |             |
+    |             |             |             | ssionResume |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | peap        | List        | No          | The peap is |             |
+    |             |             |             | required    |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowPeap   |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | The object  |             |
+    |             |             |             | peap        |             |
+    |             |             |             | contains    |             |
+    |             |             |             | the         |             |
+    |             |             |             | settings    |             |
+    |             |             |             | for PEAP    |             |
+    |             |             |             | protocol    |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | allowPeap   |             |             |             |             |
+    | EapMsChapV2 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | true        |
+    | allowPe     |             |             | allowPe     |             |
+    | apEapMsChap |             |             | apEapMsChap |             |
+    | V2PwdChange |             |             | V2PwdChange |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowPeap   |             |
+    |             |             |             | EapMsChapV2 |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 1           |
+    | all         |             |             | all         |             |
+    | owPeapEapMs |             |             | owPeapEapMs |             |
+    | ChapV2PwdCh |             |             | ChapV2PwdCh |             |
+    | angeRetries |             |             | angeRetries |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowPeap   |             |
+    |             |             |             | EapMsChapV2 |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Valid range |             |
+    |             |             |             | is 0-3      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | false       |
+    | allo        |             |             |             |             |
+    | wPeapEapGtc |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | al          |             |             | al          |             |
+    | lowPeapEapG |             |             | lowPeapEapG |             |
+    | tcPwdChange |             |             | tcPwdChange |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allo        |             |
+    |             |             |             | wPeapEapGtc |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 1           |
+    | allowPeap   |             |             | allowPeap   |             |
+    | EapGtcPwdCh |             |             | EapGtcPwdCh |             |
+    | angeRetries |             |             | angeRetries |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allo        |             |
+    |             |             |             | wPeapEapGtc |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Valid range |             |
+    |             |             |             | is 0-3      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | allo        |             |             |             |             |
+    | wPeapEapTls |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | allowPeapEa |             |             | allowPeapEa |             |
+    | pTlsAuthOfE |             |             | pTlsAuthOfE |             |
+    | xpiredCerts |             |             | xpiredCerts |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allo        |             |
+    |             |             |             | wPeapEapTls |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | false       |
+    | requireCr   |             |             |             |             |
+    | yptobinding |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | false       |
+    | allowPeapV0 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | eapTtls     | List        | No          | The eapTtls |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | a           |             |
+    |             |             |             | llowEapTtls |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | The object  |             |
+    |             |             |             | eapTtls     |             |
+    |             |             |             | contains    |             |
+    |             |             |             | the         |             |
+    |             |             |             | settings    |             |
+    |             |             |             | for EAP     |             |
+    |             |             |             | TTLS        |             |
+    |             |             |             | protocol    |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | eapT        |             |             |             |             |
+    | tlsPapAscii |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | eapTtlsChap |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | eapT        |             |             |             |             |
+    | tlsMsChapV1 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | eapT        |             |             |             |             |
+    | tlsMsChapV2 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | ea          |             |             |             |             |
+    | pTtlsEapMd5 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | eapTtls     |             |             |             |             |
+    | EapMsChapV2 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | true        |
+    | eapTt       |             |             | eapTt       |             |
+    | lsEapMsChap |             |             | lsEapMsChap |             |
+    | V2PwdChange |             |             | V2PwdChange |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eapTtls     |             |
+    |             |             |             | EapMsChapV2 |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 1           |
+    | e           |             |             | e           |             |
+    | apTtlsEapMs |             |             | apTtlsEapMs |             |
+    | ChapV2PwdCh |             |             | ChapV2PwdCh |             |
+    | angeRetries |             |             | angeRetries |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eapTtls     |             |
+    |             |             |             | EapMsChapV2 |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Valid range |             |
+    |             |             |             | is 0-3      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | eapFast     | List        | No          | The eapFast |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | a           |             |
+    |             |             |             | llowEapFast |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | The object  |             |
+    |             |             |             | eapFast     |             |
+    |             |             |             | contains    |             |
+    |             |             |             | the         |             |
+    |             |             |             | settings    |             |
+    |             |             |             | for EAP     |             |
+    |             |             |             | FAST        |             |
+    |             |             |             | protocol    |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | a           |             |             |             |             |
+    | llowEapFast |             |             |             |             |
+    | EapMsChapV2 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | true        |
+    | allowEapFa  |             |             | allowEapFa  |             |
+    | stEapMsChap |             |             | stEapMsChap |             |
+    | V2PwdChange |             |             | V2PwdChange |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | a           |             |
+    |             |             |             | llowEapFast |             |
+    |             |             |             | EapMsChapV2 |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 1           |
+    | allowE      |             |             | allowE      |             |
+    | apFastEapMs |             |             | apFastEapMs |             |
+    | ChapV2PwdCh |             |             | ChapV2PwdCh |             |
+    | angeRetries |             |             | angeRetries |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eapTtls     |             |
+    |             |             |             | EapMsChapV2 |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Valid range |             |
+    |             |             |             | is 0-3      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | allowEa     |             |             |             |             |
+    | pFastEapGtc |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | true        |
+    | allow       |             |             | allow       |             |
+    | EapFastEapG |             |             | EapFastEapG |             |
+    | tcPwdChange |             |             | tcPwdChange |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowEa     |             |
+    |             |             |             | pFastEapGtc |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 1           |
+    | a           |             |             | a           |             |
+    | llowEapFast |             |             | llowEapFast |             |
+    | EapGtcPwdCh |             |             | EapGtcPwdCh |             |
+    | angeRetries |             |             | angeRetries |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowEa     |             |
+    |             |             |             | pFastEapGtc |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Valid range |             |
+    |             |             |             | is 0-3      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | allowEa     |             |             |             |             |
+    | pFastEapTls |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | all         |             |             | all         |             |
+    | owEapFastEa |             |             | owEapFastEa |             |
+    | pTlsAuthOfE |             |             | pTlsAuthOfE |             |
+    | xpiredCerts |             |             | xpiredCerts |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowEa     |             |
+    |             |             |             | pFastEapTls |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | false       |
+    | ea          |             |             |             |             |
+    | pFastEnable |             |             |             |             |
+    | EAPChaining |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | eap         |             |             |             |             |
+    | FastUsePacs |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 7776000     |
+    | eapF        |             |             | eapF        |             |
+    | astUsePacsT |             |             | astUsePacsT |             |
+    | unnelPacTtl |             |             | unnelPacTtl |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Enum        | No          | The         | SECONDS     |
+    | eapFastUs   |             |             | eapFastUs   |             |
+    | ePacsTunnel |             |             | ePacsTunnel |             |
+    | PacTtlUnits |             |             | PacTtlUnits |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Allowed     |             |
+    |             |             |             | Values:     |             |
+    |             |             |             | - SECONDS,  |             |
+    |             |             |             | - MINUTES,  |             |
+    |             |             |             | - HOURS,    |             |
+    |             |             |             | - DAYS,     |             |
+    |             |             |             | - WEEKS     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 10          |
+    | e           |             |             | e           |             |
+    | apFastUsePa |             |             | apFastUsePa |             |
+    | csUseProact |             |             | csUseProact |             |
+    | ivePacUpdat |             |             | ivePacUpdat |             |
+    | ePrecentage |             |             | ePrecentage |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | eapF        |             |             | eapF        |             |
+    | astUsePacsA |             |             | astUsePacsA |             |
+    | llowAnonymP |             |             | llowAnonymP |             |
+    | rovisioning |             |             | rovisioning |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | eapF        |             |             | eapF        |             |
+    | astUsePacsA |             |             | astUsePacsA |             |
+    | llowAuthenP |             |             | llowAuthenP |             |
+    | rovisioning |             |             | rovisioning |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | eapFastUse  |             |             | eapFast     |             |
+    | PacsReturnA |             |             | UsePacsRetu |             |
+    | ccessAccept |             |             | rnAccessAcc |             |
+    | AfterAut    |             |             | eptAfterAut |             |
+    | henticatedP |             |             | henticatedP |             |
+    | rovisioning |             |             | rovisioning |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eapF        |             |
+    |             |             |             | astUsePacsA |             |
+    |             |             |             | llowAuthenP |             |
+    |             |             |             | rovisioning |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | eapFastU    |             |             | eapFastU    |             |
+    | sePacsAccep |             |             | sePacsAccep |             |
+    | tClientCert |             |             | tClientCert |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eapF        |             |
+    |             |             |             | astUsePacsA |             |
+    |             |             |             | llowAuthenP |             |
+    |             |             |             | rovisioning |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          |             | false       |
+    | eapFast     |             |             |             |             |
+    | UsePacsAllo |             |             |             |             |
+    | wMachineAut |             |             |             |             |
+    | hentication |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 1           |
+    | eapFa       |             |             | eapFa       |             |
+    | stUsePacsMa |             |             | stUsePacsMa |             |
+    | chinePacTtl |             |             | chinePacTtl |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eapFast     |             |
+    |             |             |             | UsePacsAllo |             |
+    |             |             |             | wMachineAut |             |
+    |             |             |             | hentication |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Enum        | No          | The         | SECONDS     |
+    | eapFastUse  |             |             | eapFastUse  |             |
+    | PacsMachine |             |             | PacsMachine |             |
+    | PacTtlUnits |             |             | PacTtlUnits |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eapFast     |             |
+    |             |             |             | UsePacsAllo |             |
+    |             |             |             | wMachineAut |             |
+    |             |             |             | hentication |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Allowed     |             |
+    |             |             |             | Values:     |             |
+    |             |             |             | - SECONDS,  |             |
+    |             |             |             | - MINUTES,  |             |
+    |             |             |             | - HOURS,    |             |
+    |             |             |             | - DAYS,     |             |
+    |             |             |             | - WEEKS     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | eap         |             |             | eap         |             |
+    | FastUsePacs |             |             | FastUsePacs |             |
+    | StatelessSe |             |             | StatelessSe |             |
+    | ssionResume |             |             | ssionResume |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 1           |
+    | eapFastUseP |             |             | eapFastUseP |             |
+    | acsAuthoriz |             |             | acsAuthoriz |             |
+    | ationPacTtl |             |             | ationPacTtl |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | StatelessSe |             |
+    |             |             |             | ssionResume |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Enum        | No          | The         | SECONDS     |
+    | eapFa       |             |             | eapFa       |             |
+    | stUsePacsAu |             |             | stUsePacsAu |             |
+    | thorization |             |             | thorization |             |
+    | PacTtlUnits |             |             | PacTtlUnits |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | StatelessSe |             |
+    |             |             |             | ssionResume |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Allowed     |             |
+    |             |             |             | Values:     |             |
+    |             |             |             | - SECONDS,  |             |
+    |             |             |             | - MINUTES,  |             |
+    |             |             |             | - HOURS,    |             |
+    |             |             |             | - DAYS,     |             |
+    |             |             |             | - WEEKS     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | e           |             |             | e           |             |
+    | apFastDontU |             |             | apFastDontU |             |
+    | sePacsAccep |             |             | sePacsAccep |             |
+    | tClientCert |             |             | tClientCert |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | is FALSE,   |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | eapFastDont |             |             | eapFastDont |             |
+    | UsePacsAllo |             |             | UsePacsAllo |             |
+    | wMachineAut |             |             | wMachineAut |             |
+    | hentication |             |             | hentication |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | eap         |             |
+    |             |             |             | FastUsePacs |             |
+    |             |             |             | is FALSE,   |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | teap        | List        | No          | The teap is |             |
+    |             |             |             | required    |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowTeap   |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | The object  |             |
+    |             |             |             | teap        |             |
+    |             |             |             | contains    |             |
+    |             |             |             | the         |             |
+    |             |             |             | settings    |             |
+    |             |             |             | for TEAP    |             |
+    |             |             |             | protocol    |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | allowTeap   |             |             |             |             |
+    | EapMsChapV2 |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | true        |
+    | allowTe     |             |             | allowTe     |             |
+    | apEapMsChap |             |             | apEapMsChap |             |
+    | V2PwdChange |             |             | V2PwdChange |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowTeap   |             |
+    |             |             |             | EapMsChapV2 |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Integer     | No          | The         | 3           |
+    | all         |             |             | all         |             |
+    | owTeapEapMs |             |             | owTeapEapMs |             |
+    | ChapV2PwdCh |             |             | ChapV2PwdCh |             |
+    | angeRetries |             |             | angeRetries |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allowTeap   |             |
+    |             |             |             | EapMsChapV2 |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored.    |             |
+    |             |             |             | Valid range |             |
+    |             |             |             | is 0-3      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | allo        |             |             |             |             |
+    | wTeapEapTls |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | No          | The         | false       |
+    | allowTeapEa |             |             | allowTeapEa |             |
+    | pTlsAuthOfE |             |             | pTlsAuthOfE |             |
+    | xpiredCerts |             |             | xpiredCerts |             |
+    |             |             |             | is required |             |
+    |             |             |             | only if     |             |
+    |             |             |             | allo        |             |
+    |             |             |             | wTeapEapTls |             |
+    |             |             |             | is true,    |             |
+    |             |             |             | otherwise   |             |
+    |             |             |             | it must be  |             |
+    |             |             |             | ignored     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | true        |
+    | acceptCli   |             |             |             |             |
+    | entCertDuri |             |             |             |             |
+    | ngTunnelEst |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | false       |
+    | enable      |             |             |             |             |
+    | EapChaining |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Boolean     | Yes         |             | false       |
+    | allowD      |             |             |             |             |
+    | owngradeMsk |             |             |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

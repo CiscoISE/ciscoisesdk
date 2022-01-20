@@ -50,6 +50,410 @@ class AuthorizationProfile(object):
     Wraps the Identity Services Engine AuthorizationProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+    Authorization Profile API allows the client to add, delete, update,
+    search and perform actions on authorization profiles.
+
+    Revision History
+    ----------------
+
+    **Revision #**
+
+    **Resource Version**
+
+    **Cisco ISE Version**
+
+    **Description**
+
+    **Revision Modification**
+
+    **Attribute**
+
+    **Description**
+
+    0
+
+    1.0
+
+    2.2
+
+    Initial Cisco ISE Version
+
+    1
+
+    1.1
+
+    2.3
+
+    Support new attributes under common tasks
+
+    accessType
+
+    Added Attribute 'accessType'. Default value:'ACCESS_ACCEPT', additional
+    values: 'ACCESS_REJECT'
+
+    authzProfileType
+
+    Added Attribute 'authzProfileType' to differentiate between types of
+    authorization profiles. Default value:'SWITCH' (used for Standard
+    Authorization Profiles) , additional values:'TACACS', 'TRUSTSEC'
+
+    reauth
+
+    Added Attribute 'reauth' to determine reauthentication policy
+
+    webRedirection
+
+    Added Attribute 'webRedirection' to support selection of portal
+    redirection
+
+    acl
+
+    Added String Attribute 'acl'
+
+    trackMovement
+
+    Added Boolean Attribute 'trackMovement'
+
+    serviceTemplate
+
+    Added Boolean Attribute 'serviceTemplate'
+
+    easywiredSessionCandidate
+
+    Added Boolean Attribute 'easywiredSessionCandidate'
+
+    daclName
+
+    Added String Attribute 'daclName'
+
+    voiceDomainPermission
+
+    Added Boolean Attribute 'voiceDomainPermission'
+
+    neat
+
+    Added Boolean Attribute 'neat'
+
+    webAuth
+
+    Added Boolean Attribute 'webAuth'
+
+    autoSmartPort
+
+    Added String Attribute 'autoSmartPort'
+
+    interfaceTemplate
+
+    Added String Attribute 'interfaceTemplate'
+
+    avcProfile
+
+    Added String Attribute 'avcProfile'
+
+    macSecPolicy
+
+    Added Attribute 'macSecPolicy'. Possible values:'MUST_SECURE',
+    'MUST_NOT_SECURE', 'SHOULD_SECURE'
+
+    asaVpn
+
+    Added String Attribute 'asaVpn'. String represent a RADIUS dictionary
+    attribute
+
+    2
+
+    1.2
+
+    2.4
+
+    Support Advanced Attributes
+
+    advancedAttributes
+
+    Added Attribute 'advancedAttributes' to support advanced attributes
+    configuration
+
+    profileName
+
+    Added Attribute 'profileName' to support Network Device Profiles
+
+    3
+
+    1.3
+
+    2.6
+
+    Support new attributes under common tasks
+
+    ipv6DaclName
+
+    Added String Attribute 'ipv6DaclName'
+
+    airespaceIPv6ACL
+
+    Added String Attribute 'airespaceIPv6ACL'
+
+    ipv6ACLFilter
+
+    Added String Attribute 'ipv6ACLFilter'
+
+    4
+
+    1.4
+
+    3.1
+
+    Support new attributes under Common Tasks
+
+    uniqueIdentifier
+
+    Added String Attribute 'uniqueIdentifier'. String represent a RADIUS
+    dictionary attribute
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | name      |
+    |           |           |           | Name      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | id        |
+    |           |           |           | UUID      |           |           |
+    |           |           |           | value     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | de        |
+    | scription |           |           |           |           | scription |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | vlan      | List      | No        |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - nameID  | String    | Yes       |           |           | vlanName  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - tagID   | Integer   | Yes       | Valid     |           | 1         |
+    |           |           |           | range is  |           |           |
+    |           |           |           | 0-31      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | air       | String    | No        |           |           | ACL       |
+    | espaceACL |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | webRe     | List      | No        |           |           |           |
+    | direction |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | Yes       | Value     |           | Centraliz |
+    | WebRedire |           |           | MUST be   |           | edWebAuth |
+    | ctionType |           |           | one of    |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | fo        |           |           |
+    |           |           |           | llowing:C |           |           |
+    |           |           |           | entralize |           |           |
+    |           |           |           | dWebAuth, |           |           |
+    |           |           |           | HotSpot,  |           |           |
+    |           |           |           | N         |           |           |
+    |           |           |           | ativeSupp |           |           |
+    |           |           |           | licanProv |           |           |
+    |           |           |           | isioning, |           |           |
+    |           |           |           | C         |           |           |
+    |           |           |           | lientProv |           |           |
+    |           |           |           | isioning. |           |           |
+    |           |           |           | The       |           |           |
+    |           |           |           | WebRedire |           |           |
+    |           |           |           | ctionType |           |           |
+    |           |           |           | must fit  |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | p         |           |           |
+    |           |           |           | ortalName |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - acl     | String    | Yes       |           |           | acl       |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | Yes       | A portal  |           | Sponsored |
+    | p         |           |           | that      |           | Guest     |
+    | ortalName |           |           | exist in  |           | Portal    |
+    |           |           |           | the DB    |           | (default) |
+    |           |           |           | and fits  |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | WebRedire |           |           |
+    |           |           |           | ctionType |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        |           |           | 10.       |
+    | st        |           |           |           |           | 56.54.200 |
+    | aticIPHos |           |           |           |           |           |
+    | tNameFQDN |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        | The       | true      |           |
+    | display   |           |           | display   |           |           |
+    | Certifica |           |           | Certifica |           |           |
+    | tesRenewa |           |           | tesRenewa |           |           |
+    | lMessages |           |           | lMessages |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | mandatory |           |           |
+    |           |           |           | when      |           |           |
+    |           |           |           | 'W        |           |           |
+    |           |           |           | ebRedirec |           |           |
+    |           |           |           | tionType' |           |           |
+    |           |           |           | value is  |           |           |
+    |           |           |           | 'Ce       |           |           |
+    |           |           |           | ntralized |           |           |
+    |           |           |           | WebAuth'. |           |           |
+    |           |           |           | For all   |           |           |
+    |           |           |           | other     |           |           |
+    |           |           |           | 'W        |           |           |
+    |           |           |           | ebRedirec |           |           |
+    |           |           |           | tionType' |           |           |
+    |           |           |           | values    |           |           |
+    |           |           |           | the field |           |           |
+    |           |           |           | must be   |           |           |
+    |           |           |           | ignored   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | a         | Enum      | No        | Allowed   | ACCE      |           |
+    | ccessType |           |           | Values:   | SS_ACCEPT |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | ACCES     |           |           |
+    |           |           |           | S_ACCEPT, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | ACCE      |           |           |
+    |           |           |           | SS_REJECT |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | authzPr   | Enum      | No        | Allowed   | SWITCH    |           |
+    | ofileType |           |           | Values:   |           |           |
+    |           |           |           | - SWITCH, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | TRUSTSEC, |           |           |
+    |           |           |           | - TACACS  |           |           |
+    |           |           |           | SWITCH is |           |           |
+    |           |           |           | used for  |           |           |
+    |           |           |           | Standard  |           |           |
+    |           |           |           | Auth      |           |           |
+    |           |           |           | orization |           |           |
+    |           |           |           | Profiles  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | pr        | String    | No        |           | Cisco     |           |
+    | ofileName |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | acl       | String    | No        |           |           | aclfilter |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | daclName  | String    | No        |           |           | PERMI     |
+    |           |           |           |           |           | T_ALL_IPV |
+    |           |           |           |           |           | 4_TRAFFIC |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | auto      | String    | No        |           |           | auto      |
+    | SmartPort |           |           |           |           | SmartPort |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | interfac  | Sring     | No        |           |           | interfac  |
+    | eTemplate |           |           |           |           | eTemplate |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | ipv6      | String    | No        |           |           | ipv6      |
+    | ACLFilter |           |           |           |           | ACLFilter |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | a         | String    | No        |           |           | a         |
+    | vcProfile |           |           |           |           | vcProfile |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | asaVpn    | String    | No        |           |           | Cis       |
+    |           |           |           |           |           | co:cisco- |
+    |           |           |           |           |           | call-type |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | trac      | Boolean   | No        |           | false     |           |
+    | kMovement |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | servic    | Boolean   | No        |           | false     |           |
+    | eTemplate |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | easywir   | Boolean   | No        |           | false     |           |
+    | edSession |           |           |           |           |           |
+    | Candidate |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | voi       | Boolean   | No        |           | false     |           |
+    | ceDomainP |           |           |           |           |           |
+    | ermission |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | neat      | Boolean   | No        |           | false     |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | webAuth   | Boolean   | No        |           | false     |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | mac       | Enum      | No        | Allowed   |           | MU        |
+    | SecPolicy |           |           | Values:   |           | ST_SECURE |
+    |           |           |           | -         |           |           |
+    |           |           |           | MUS       |           |           |
+    |           |           |           | T_SECURE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | MUST_NO   |           |           |
+    |           |           |           | T_SECURE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | SHOU      |           |           |
+    |           |           |           | LD_SECURE |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | reauth    | List      | No        |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | Yes       | Allowed   |           | RADIU     |
+    | con       |           |           | Values:   |           | S_REQUEST |
+    | nectivity |           |           | -         |           |           |
+    |           |           |           | DEFAULT,  |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | RADIU     |           |           |
+    |           |           |           | S_REQUEST |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - timer   | Integer   | Yes       | Valid     |           | 1800      |
+    |           |           |           | range is  |           |           |
+    |           |           |           | 1-65535   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | advancedA | List      | No        |           |           |           |
+    | ttributes |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | Yes       | Left side |           |           |
+    | lef       |           |           | D         |           |           |
+    | tHandSide |           |           | ictionary |           |           |
+    | Dictionar |           |           | and       |           |           |
+    | yAttribue |           |           | Attribute |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       | D         |           |           |
+    | dicti     |           |           | ictionary |           |           |
+    | onaryName |           |           | name      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       | Attribute |           |           |
+    | attr      |           |           | name      |           |           |
+    | ibuteName |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | LIst      | Yes       | Attribute |           |           |
+    | rightHan  |           |           | value can |           |           |
+    | dSideAttr |           |           | be of     |           |           |
+    | ibueValue |           |           | type      |           |           |
+    |           |           |           | Attri     |           |           |
+    |           |           |           | buteValue |           |           |
+    |           |           |           | or        |           |           |
+    |           |           |           | A         |           |           |
+    |           |           |           | dvancedDi |           |           |
+    |           |           |           | ctionaryA |           |           |
+    |           |           |           | ttribute. |           |           |
+    |           |           |           | For       |           |           |
+    |           |           |           | Attri     |           |           |
+    |           |           |           | buteValue |           |           |
+    |           |           |           | the value |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | String,   |           |           |
+    |           |           |           | For       |           |           |
+    |           |           |           | AdvancedD |           |           |
+    |           |           |           | ictionary |           |           |
+    |           |           |           | Attribute |           |           |
+    |           |           |           | the value |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | dicti     |           |           |
+    |           |           |           | onaryName |           |           |
+    |           |           |           | and       |           |           |
+    |           |           |           | attr      |           |           |
+    |           |           |           | ibuteName |           |           |
+    |           |           |           | p         |           |           |
+    |           |           |           | roperties |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | ipv       | String    | No        |           |           | PERMI     |
+    | 6DaclName |           |           |           |           | T_ALL_IPV |
+    |           |           |           |           |           | 6_TRAFFIC |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | airespa   | String    | No        |           |           | ACL6      |
+    | ceIPv6ACL |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

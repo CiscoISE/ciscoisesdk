@@ -50,6 +50,8 @@ class ReplicationStatus(object):
     Wraps the Identity Services Engine Replication Status
     API and exposes the API as native Python
     methods that return native Python objects.
+    APIs for the configuration, administration and monitoring of the nodes
+    in an ISE cluster deployment.
 
     """
 

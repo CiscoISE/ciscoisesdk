@@ -50,6 +50,99 @@ class AdminUser(object):
     Wraps the Identity Services Engine AdminUser
     API and exposes the API as native Python
     methods that return native Python objects.
+    The Admin User API allows to retrieve information related to admin users
+    configured on Cisco ISE.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 1.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+    | 1              | 1.1            | 2.0            | Cisco ISE      |
+    |                |                |                | Release 2.3    |
+    |                |                |                | Admin User     |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Example | *Default |
+    |          |          |          |          | Values** | Value**  |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          |          |
+    |          |          |          | Name     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | Yes      | Resource | f926     |          |
+    |          |          |          | UUID     | 9682-dca |          |
+    |          |          |          |          | f-11e3-a |          |
+    |          |          |          |          | d0a-5bdc |          |
+    |          |          |          |          | d2d9fd69 |          |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          |          |
+    | cription |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | change   | Boolean  | Yes      |          | true     | true     |
+    | Password |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | email    | String   | No       |          | e        |          |
+    |          |          |          |          | mail1@do |          |
+    |          |          |          |          | main.com |          |
+    +----------+----------+----------+----------+----------+----------+
+    | in       | Boolean  | No       |          | false    |          |
+    | cludeSys |          |          |          |          |          |
+    | temAlarm |          |          |          |          |          |
+    | sInEmail |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | inac     | Boolean  | No       |          | true     |          |
+    | tiveAcco |          |          |          |          |          |
+    | untNever |          |          |          |          |          |
+    | Disabled |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | enabled  | Boolean  | Yes      |          | false    |          |
+    +----------+----------+----------+----------+----------+----------+
+    | external | Boolean  | No       |          | true     |          |
+    +----------+----------+----------+----------+----------+----------+
+    | customAt | String   | No       | Key      | {"My     |          |
+    | tributes |          |          | Value    | CustomAt |          |
+    |          |          |          | Map      | tribute" |          |
+    |          |          |          |          | :        |          |
+    |          |          |          |          | "        |          |
+    |          |          |          |          | Value1"} |          |
+    +----------+----------+----------+----------+----------+----------+
+    | f        | String   | No       |          |          |          |
+    | irstName |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | adm      | String   | No       | Admin    | Super    |          |
+    | inGroups |          |          | Group    | Admin    |          |
+    |          |          |          | Names    |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | lastName | String   | No       |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | password | String   | No       | The      |          |          |
+    |          |          |          | password |          |          |
+    |          |          |          | field    |          |          |
+    |          |          |          | doesn't  |          |          |
+    |          |          |          | show the |          |          |
+    |          |          |          | actual   |          |          |
+    |          |          |          | password |          |          |
+    |          |          |          | con      |          |          |
+    |          |          |          | figured. |          |          |
+    |          |          |          | It is    |          |          |
+    |          |          |          | hidden   |          |          |
+    |          |          |          | with the |          |          |
+    |          |          |          | asterisk |          |          |
+    |          |          |          | (*)      |          |          |
+    |          |          |          | symbol   |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

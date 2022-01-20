@@ -50,6 +50,64 @@ class SupportBundleStatus(object):
     Wraps the Identity Services Engine SupportBundleStatus
     API and exposes the API as native Python
     methods that return native Python objects.
+    Support Bundle Status API allows clients to query status of a triggered
+    support bundle.
+
+    Revision History
+    ----------------
+
+    +-------------+-------------+-------------+-------------+---+---+
+    | **Revision  | **Resource  | **Cisco ISE | **De        |   |   |
+    | #**         | Version**   | Version**   | scription** |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+    | 0           | 1.0         | 2.7         | Initial     |   |   |
+    |             |             |             | Cisco ISE   |   |   |
+    |             |             |             | Version     |   |   |
+    +-------------+-------------+-------------+-------------+---+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | ciscoise    |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | ciscoise    |
+    |             |          |             | UUID,       |             |
+    |             |          |             | mandatory   |             |
+    |             |          |             | for update  |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             | Support     |
+    |             |          |             |             | Bundle      |
+    |             |          |             |             | Status api  |
+    +-------------+----------+-------------+-------------+-------------+
+    | fileName    | String   | No          |             | ise-su      |
+    |             |          |             |             | pport-bundl |
+    |             |          |             |             | e-pk-ciscoi |
+    |             |          |             |             | se-admin-04 |
+    |             |          |             |             | -09-2021-15 |
+    |             |          |             |             | -07.tar.gpg |
+    +-------------+----------+-------------+-------------+-------------+
+    | fileSize    | Integer  | No          |             | 1080924274  |
+    +-------------+----------+-------------+-------------+-------------+
+    | hostName    | String   | No          |             | ciscoise    |
+    +-------------+----------+-------------+-------------+-------------+
+    | message     | String   | No          |             | Support     |
+    |             |          |             |             | Bundle      |
+    |             |          |             |             | generation  |
+    |             |          |             |             | completed   |
+    +-------------+----------+-------------+-------------+-------------+
+    | startTime   | String   | No          |             | Fri Apr 09  |
+    |             |          |             |             | 15:07:55    |
+    |             |          |             |             | IST 2021    |
+    +-------------+----------+-------------+-------------+-------------+
+    | status      | String   | No          |             | complete    |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

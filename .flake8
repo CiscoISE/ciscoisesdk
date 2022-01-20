@@ -1,5 +1,6 @@
 [flake8]
 ignore =
+    W605,
     # E402 module level import not at top of file
     E402,
     # F401 'builtins.*' imported but unused

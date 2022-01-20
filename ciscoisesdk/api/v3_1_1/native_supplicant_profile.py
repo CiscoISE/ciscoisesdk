@@ -50,6 +50,100 @@ class NativeSupplicantProfile(object):
     Wraps the Identity Services Engine NativeSupplicantProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+    Native supplicant profile API provides the ability to update, delete and
+    search native supplicant profiles.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    | Ci          |
+    |             |             |             | Name        | sco-ISE-NSP |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    | b8c         |
+    |             |             |             | UUID,       | e01e6-b150- |
+    |             |             |             | mandatory   | 4d4e-9698-4 |
+    |             |             |             | for update  | 0e48d5e0197 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             | Pre         |
+    |             |             |             |             | -configured |
+    |             |             |             |             | Native      |
+    |             |             |             |             | Supplicant  |
+    |             |             |             |             | Profile.    |
+    |             |             |             |             | The SSID    |
+    |             |             |             |             | Will Need   |
+    |             |             |             |             | To Be       |
+    |             |             |             |             | Customized  |
+    |             |             |             |             | For Your    |
+    |             |             |             |             | Environment |
+    +-------------+-------------+-------------+-------------+-------------+
+    | wirel       | List        | Yes         | List of     |             |
+    | essProfiles |             |             | Wireless    |             |
+    |             |             |             | profiles    |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | - ssid      | String      | Yes         | SSID for    | ISE         |
+    |             |             |             | the         |             |
+    |             |             |             | wireless    |             |
+    |             |             |             | profile     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Enum        | Yes         | Allowed     | TLS         |
+    | allo        |             |             | protocol    |             |
+    | wedProtocol |             |             | for the     |             |
+    |             |             |             | wireless    |             |
+    |             |             |             | profile.    |             |
+    |             |             |             | Allowed     |             |
+    |             |             |             | values:     |             |
+    |             |             |             | - PEAP,     |             |
+    |             |             |             | - TLS,      |             |
+    |             |             |             | - EAP-FAST  |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | String      | No          | Certificate | 0ca         |
+    | certificat  |             |             | template ID | 8f1b6-500d- |
+    | eTemplateId |             |             |             | 560b-e053-7 |
+    |             |             |             |             | 5189a0ab0d1 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Enum        | Yes         | Action type | UPDATE      |
+    | actionType  |             |             | for         |             |
+    |             |             |             | W           |             |
+    |             |             |             | ifiProfile. |             |
+    |             |             |             | Allowed     |             |
+    |             |             |             | values:     |             |
+    |             |             |             | - ADD,      |             |
+    |             |             |             | - UPDATE,   |             |
+    |             |             |             | - DELETE    |             |
+    |             |             |             | (required   |             |
+    |             |             |             | for         |             |
+    |             |             |             | updating    |             |
+    |             |             |             | existing    |             |
+    |             |             |             | Wirel       |             |
+    |             |             |             | essProfile) |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | String      | Yes         | Previous    | ssid1       |
+    | p           |             |             | ssid for    |             |
+    | reviousSsid |             |             | WifiProfile |             |
+    |             |             |             | (required   |             |
+    |             |             |             | for         |             |
+    |             |             |             | updating    |             |
+    |             |             |             | existing    |             |
+    |             |             |             | Wirel       |             |
+    |             |             |             | essProfile) |             |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

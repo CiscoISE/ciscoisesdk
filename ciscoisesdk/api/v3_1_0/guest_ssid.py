@@ -50,6 +50,49 @@ class GuestSsid(object):
     Wraps the Identity Services Engine GuestSSID
     API and exposes the API as native Python
     methods that return native Python objects.
+    Guest SSIDs are global objects that are referenced by Cisco ISE sponsor
+    portals. Guest SSID API allows the client to add, delete, update and
+    search guest SSID among other operations which are available from all
+    the portals.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | ssid_value  |
+    |             |          |             | Name. Name  |             |
+    |             |          |             | may contain |             |
+    |             |          |             | a           |             |
+    |             |          |             | lphanumeric |             |
+    |             |          |             | or any of   |             |
+    |             |          |             | the         |             |
+    |             |          |             | following   |             |
+    |             |          |             | characters  |             |
+    |             |          |             | [_.-]       |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | 913         |
+    |             |          |             | UUID,       | 2eedc-7910- |
+    |             |          |             | mandatory   | 4ffe-805e-3 |
+    |             |          |             | for update  | d3a366f7fb7 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

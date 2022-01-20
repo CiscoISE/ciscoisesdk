@@ -50,6 +50,95 @@ class AciBindings(object):
     Wraps the Identity Services Engine ACIBindings
     API and exposes the API as native Python
     methods that return native Python objects.
+    The ACI Bindings API allows clients to retrieve bindings that were sent
+    to Cisco ISE by ACI or received on ACI from Cisco ISE. The binding
+    information will be identical to the information on the ACI bindings
+    page in the Cisco ISE UI. Filtering will be based on one attribute only,
+    such as ip, sgt, vn, psn, learnedFrom, or learnedBy with CONTAINS mode
+    of search.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 3.0            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    |             |
+    |             |             |             | Name        |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    | f92         |
+    |             |             |             | UUID value  | 69682-dcaf- |
+    |             |             |             |             | 11e3-ad0a-5 |
+    |             |             |             |             | bdcd2d9fd69 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | ip          | String      | Yes         | Binding     | 10.0.0.1    |
+    |             |             |             | IPv4        |             |
+    |             |             |             | address.    |             |
+    |             |             |             | Each        |             |
+    |             |             |             | binding     |             |
+    |             |             |             | will be     |             |
+    |             |             |             | exclusively |             |
+    |             |             |             | identified  |             |
+    |             |             |             | by its IP   |             |
+    |             |             |             | address and |             |
+    |             |             |             | virtual     |             |
+    |             |             |             | network     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | sgt         | String      | No          | Security    | 1234        |
+    |             |             |             | Group Tag   |             |
+    |             |             |             | (SGT)       |             |
+    |             |             |             | value. The  |             |
+    |             |             |             | valid range |             |
+    |             |             |             | for SGT     |             |
+    |             |             |             | values is   |             |
+    |             |             |             | 0-65534     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | vn          | String      | Yes         | Virtual     | vn1234      |
+    |             |             |             | network.    |             |
+    |             |             |             | Each        |             |
+    |             |             |             | binding     |             |
+    |             |             |             | will be     |             |
+    |             |             |             | exclusively |             |
+    |             |             |             | identified  |             |
+    |             |             |             | by its IP   |             |
+    |             |             |             | address and |             |
+    |             |             |             | virtual     |             |
+    |             |             |             | network     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | psn         | String      | No          | Cisco ISE   | 10          |
+    |             |             |             | Policy      | .86.189.216 |
+    |             |             |             | Service     |             |
+    |             |             |             | node (PSN)  |             |
+    |             |             |             | IP address  |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | learnedFrom | String      | Yes         | Binding     | ISE by ACI  |
+    |             |             |             | Source      | ACI by ISE  |
+    +-------------+-------------+-------------+-------------+-------------+
+    | learnedBy   | String      | Yes         | Binding     | SXP(SXP, 0) |
+    |             |             |             | Type        | STA         |
+    |             |             |             |             | TIC(Static, |
+    |             |             |             |             | 1)          |
+    |             |             |             |             | RAD         |
+    |             |             |             |             | IUS(RADIUS, |
+    |             |             |             |             | 2)          |
+    |             |             |             |             | ACI(ACI, 3) |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

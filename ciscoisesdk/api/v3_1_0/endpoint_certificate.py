@@ -50,6 +50,102 @@ class EndpointCertificate(object):
     Wraps the Identity Services Engine EndpointCertificate
     API and exposes the API as native Python
     methods that return native Python objects.
+    Endpoint Certificate API allows the client to create endpoint
+    certificates signed by the Cisco ISE Internal CA. This API can takes in
+    certificate request details, create a RSA key pair, create a certificate
+    and return the resulting key pair and certificate as a ZIP file. ZIP
+    files are returned as an octet stream.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.0            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    |             |
+    |             |             |             | Name        |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    |             |
+    |             |             |             | UUID,       |             |
+    |             |             |             | mandatory   |             |
+    |             |             |             | for update  |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | certT       | String      | Yes         | Name of an  | Cer         |
+    | emplateName |             |             | Internal CA | tificate_Te |
+    |             |             |             | template    | mplate_Name |
+    +-------------+-------------+-------------+-------------+-------------+
+    | format      | Enum        | Yes         | Allowed     | PKCS8       |
+    |             |             |             | values:     |             |
+    |             |             |             | - PKCS12,   |             |
+    |             |             |             | -           |             |
+    |             |             |             | PK          |             |
+    |             |             |             | CS12_CHAIN, |             |
+    |             |             |             | - PKCS8,    |             |
+    |             |             |             | -           |             |
+    |             |             |             | PKCS8_CHAIN |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | password    | String      | Yes         | Protects    | P           |
+    |             |             |             | the private | assword_123 |
+    |             |             |             | key. Must   |             |
+    |             |             |             | have more   |             |
+    |             |             |             | than 8      |             |
+    |             |             |             | characters, |             |
+    |             |             |             | less than   |             |
+    |             |             |             | 15          |             |
+    |             |             |             | characters, |             |
+    |             |             |             | at least    |             |
+    |             |             |             | one upper   |             |
+    |             |             |             | case        |             |
+    |             |             |             | letter, at  |             |
+    |             |             |             | least one   |             |
+    |             |             |             | lower case  |             |
+    |             |             |             | letter, at  |             |
+    |             |             |             | least one   |             |
+    |             |             |             | digit, and  |             |
+    |             |             |             | can only    |             |
+    |             |             |             | contain     |             |
+    |             |             |             | [A-Z][      |             |
+    |             |             |             | a-z][0-9]_# |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | certifi     | Map         | Yes         | Key value   |             |
+    | cateRequest |             |             | map. Must   |             |
+    |             |             |             | have CN and |             |
+    |             |             |             | SAN entries |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | - CN        | String      | Yes         | Matches the | userName    |
+    |             |             |             | requester's | [or]        |
+    |             |             |             | User Name,  | machineName |
+    |             |             |             | unless the  |             |
+    |             |             |             | Requester   |             |
+    |             |             |             | is an ERS   |             |
+    |             |             |             | Admin. ERS  |             |
+    |             |             |             | Admins are  |             |
+    |             |             |             | allowed to  |             |
+    |             |             |             | create      |             |
+    |             |             |             | requests    |             |
+    |             |             |             | for any CN  |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | - SAN       | String      | Yes         | Valid MAC   | 11-22-      |
+    |             |             |             | Address,    | 33-44-55-66 |
+    |             |             |             | delimited   |             |
+    |             |             |             | by '-'      |             |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

@@ -50,6 +50,91 @@ class SecurityGroupsAcls(object):
     Wraps the Identity Services Engine SecurityGroupsACLs
     API and exposes the API as native Python
     methods that return native Python objects.
+    Security Groups ACLs API allows the client to search security groups
+    access control lists.
+
+    Revision History
+    ----------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **       | **       | **Cisco  | **Descr  | **       |          |
+    | Revision | Resource | ISE      | iption** | Revision |          |
+    | #**      | V        | V        |          | Modifi   |          |
+    |          | ersion** | ersion** |          | cation** |          |
+    +----------+----------+----------+----------+----------+----------+
+    |          |          |          |          | **Att    | **Descr  |
+    |          |          |          |          | ribute** | iption** |
+    +----------+----------+----------+----------+----------+----------+
+    | 0        | 1.0      | 2.0      | Initial  |          |          |
+    |          |          |          | Cisco    |          |          |
+    |          |          |          | ISE      |          |          |
+    |          |          |          | Version  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | 1        | 1.1      | 2.3      | Int      |          |          |
+    |          |          |          | roducing |          |          |
+    |          |          |          | bulk     |          |          |
+    |          |          |          | op       |          |          |
+    |          |          |          | erations |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | 2        | 1.2      | 3.1      | Cisco    | modelle  | Adding   |
+    |          |          |          | ISE 3.1  | dContent | modelled |
+    |          |          |          | model    |          | content  |
+    |          |          |          | changes  |          | from     |
+    |          |          |          |          |          | Cisco    |
+    |          |          |          |          |          | ISE 3.1  |
+    +----------+----------+----------+----------+----------+----------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | Permit IP |
+    |           |           |           | Name      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | 92951ac0- |
+    |           |           |           | UUID,     |           | 8c01-11e6 |
+    |           |           |           | mandatory |           | -996c-525 |
+    |           |           |           | for       |           | 400b48521 |
+    |           |           |           | update    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | Permit IP |
+    | scription |           |           |           |           | SGACL     |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | A         | String    | No        |           |           | permit ip |
+    | CLContent |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | ipVersion | Enum      | Yes       | Allowed   | IPV4      |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | - IPV4,   |           |           |
+    |           |           |           | - IPV6,   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | IP        |           |           |
+    |           |           |           | _AGNOSTIC |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | i         | Boolean   | No        |           | false     |           |
+    | sReadOnly |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | gen       | String    | No        | Gen       |           | 0         |
+    | erationId |           |           | erationId |           |           |
+    |           |           |           | is a read |           |           |
+    |           |           |           | only      |           |           |
+    |           |           |           | attribute |           |           |
+    |           |           |           | and is    |           |           |
+    |           |           |           | being     |           |           |
+    |           |           |           | generated |           |           |
+    |           |           |           | by the    |           |           |
+    |           |           |           | server    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | modell    | List      | No        | Modelled  |           |           |
+    | edContent |           |           | content   |           |           |
+    |           |           |           | of        |           |           |
+    |           |           |           | contract  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

@@ -50,6 +50,54 @@ class IdentityGroups(object):
     Wraps the Identity Services Engine IdentityGroups
     API and exposes the API as native Python
     methods that return native Python objects.
+    Identity Groups API allows the client to search identity groups.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+    | 1              | 1.1            | 2.4            | Added Create   |
+    |                |                |                | and GetByName  |
+    |                |                |                | operations     |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | Guest       |
+    |             |          |             | Name        | Type_Weekly |
+    |             |          |             |             | (default)   |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | 9ef         |
+    |             |          |             | UUID,       | e2310-8c01- |
+    |             |          |             | mandatory   | 11e6-996c-5 |
+    |             |          |             | for update  | 25400b48521 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             | Identity    |
+    |             |          |             |             | group       |
+    |             |          |             |             | mirroring   |
+    |             |          |             |             | the guest   |
+    |             |          |             |             | type        |
+    +-------------+----------+-------------+-------------+-------------+
+    | parent      | String   | Yes         |             | NAC         |
+    |             |          |             |             | Group:N     |
+    |             |          |             |             | AC:Identity |
+    |             |          |             |             | Groups:User |
+    |             |          |             |             | Identity    |
+    |             |          |             |             | Groups      |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

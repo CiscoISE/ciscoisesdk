@@ -50,6 +50,69 @@ class TacacsProfile(object):
     Wraps the Identity Services Engine TACACSProfile
     API and exposes the API as native Python
     methods that return native Python objects.
+    TACACS Profile API allows the client to add, delete, update, search and
+    perform actions on TACACS profile.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.4            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    | Default     |
+    |             |             |             | Name        | Shell       |
+    |             |             |             |             | Profile     |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    | 93d         |
+    |             |             |             | UUID,       | 7ee70-92b5- |
+    |             |             |             | mandatory   | 11eb-a39d-9 |
+    |             |             |             | for update  | 6858bc78604 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             | Default     |
+    |             |             |             |             | Shell       |
+    |             |             |             |             | Profile     |
+    +-------------+-------------+-------------+-------------+-------------+
+    | sessio      | List        | No          | Holds list  |             |
+    | nAttributes |             |             | of session  |             |
+    |             |             |             | attributes. |             |
+    |             |             |             | View type   |             |
+    |             |             |             | for GUI is  |             |
+    |             |             |             | Shell by    |             |
+    |             |             |             | default     |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | List        | No          | Array of    | [           |
+    | sessionAt   |             |             | d           |  {          |
+    | tributeList |             |             | ictionaries |     "type"  |
+    |             |             |             | describing  | :           |
+    |             |             |             | various     | "           |
+    |             |             |             | attributes  | MANDATORY", |
+    |             |             |             | with the    |     "name"  |
+    |             |             |             | properties: | : "attr1",  |
+    |             |             |             | - type      |     "value" |
+    |             |             |             | (Enum.      | : "value"   |
+    |             |             |             | Allowed     |  }          |
+    |             |             |             | values:     | ]           |
+    |             |             |             | MANDATORY,  |             |
+    |             |             |             | OPTIONAL),  |             |
+    |             |             |             | - name      |             |
+    |             |             |             | (String),   |             |
+    |             |             |             | - value     |             |
+    |             |             |             | (String)    |             |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

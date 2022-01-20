@@ -50,6 +50,77 @@ class IpToSgtMapping(object):
     Wraps the Identity Services Engine IPToSGTMapping
     API and exposes the API as native Python
     methods that return native Python objects.
+    IP To SGT Mapping API allows the client to add, delete, update, search
+    and deploy IP to SGT mapping.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.0            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    | server      |
+    |             |             |             | Name        | 1.cisco.com |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    |             |
+    |             |             |             | UUID,       |             |
+    |             |             |             | mandatory   |             |
+    |             |             |             | for update  |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | deployTo    | String      | Mandatory   |             | networ      |
+    |             |             | unless      |             | k_device_id |
+    |             |             | m           |             |             |
+    |             |             | appingGroup |             |             |
+    |             |             | is set or   |             |             |
+    |             |             | unless      |             |             |
+    |             |             | dep         |             |             |
+    |             |             | loyType=ALL |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | deployType  | Enum        | Yes         | Allowed     | ND          |
+    |             |             |             | values:     |             |
+    |             |             |             | - ALL,      |             |
+    |             |             |             | - ND,       |             |
+    |             |             |             | - NDG       |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | hostName    | String      | Mandatory   |             | server      |
+    |             |             | if hostIp   |             | 1.cisco.com |
+    |             |             | is empty    |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | sgt         | String      | Mandatory   |             | sgt_id      |
+    |             |             | unless      |             |             |
+    |             |             | m           |             |             |
+    |             |             | appingGroup |             |             |
+    |             |             | is set      |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | hostIp      | String      | Mandatory   |             |             |
+    |             |             | if hostName |             |             |
+    |             |             | is empty -- |             |             |
+    |             |             | valid IPL   |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | m           | String      | Mandatory   |             |             |
+    | appingGroup |             | unless sgt  |             |             |
+    |             |             | and         |             |             |
+    |             |             | deployTo    |             |             |
+    |             |             | and         |             |             |
+    |             |             | deployType  |             |             |
+    |             |             | are set     |             |             |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

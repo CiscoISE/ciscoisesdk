@@ -50,6 +50,39 @@ class GuestLocation(object):
     Wraps the Identity Services Engine GuestLocation
     API and exposes the API as native Python
     methods that return native Python objects.
+    Guest Location API allows the client to search the locations configured
+    from Cisco ISE GUI.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    | name        |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | 9f0         |
+    |             |          |             | UUID,       | 83530-8c01- |
+    |             |          |             | mandatory   | 11e6-996c-5 |
+    |             |          |             | for update  | 25400b48521 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

@@ -50,6 +50,206 @@ class RadiusServerSequence(object):
     Wraps the Identity Services Engine RADIUSServerSequence
     API and exposes the API as native Python
     methods that return native Python objects.
+    RADIUS Server Sequence API allows the client to add, delete, update,
+    search and perform actions on RADIUS server sequence.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.3            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | name      |
+    |           |           |           | Name      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | ab6deded- |
+    |           |           |           | UUID,     |           | fcc2-47ff |
+    |           |           |           | mandatory |           | -8577-001 |
+    |           |           |           | for       |           | 4737c8fcf |
+    |           |           |           | update    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | de        |
+    | scription |           |           |           |           | scription |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | st        | Boolean   | No        |           | false     |           |
+    | ripPrefix |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | st        | Boolean   | No        |           | false     |           |
+    | ripSuffix |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | prefix    | String    | No        | The       | \\        |           |
+    | Separator |           |           | prefix    |           |           |
+    |           |           |           | Separator |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | required  |           |           |
+    |           |           |           | only if   |           |           |
+    |           |           |           | st        |           |           |
+    |           |           |           | ripPrefix |           |           |
+    |           |           |           | is true.  |           |           |
+    |           |           |           | The       |           |           |
+    |           |           |           | maximum   |           |           |
+    |           |           |           | length is |           |           |
+    |           |           |           | 1         |           |           |
+    |           |           |           | character |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | suffix    | String    | No        | The       | @         |           |
+    | Separator |           |           | suffix    |           |           |
+    |           |           |           | Separator |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | required  |           |           |
+    |           |           |           | only if   |           |           |
+    |           |           |           | st        |           |           |
+    |           |           |           | ripSuffix |           |           |
+    |           |           |           | is true.  |           |           |
+    |           |           |           | The       |           |           |
+    |           |           |           | maximum   |           |           |
+    |           |           |           | length is |           |           |
+    |           |           |           | 1         |           |           |
+    |           |           |           | character |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | remoteA   | Boolean   | No        |           | true      |           |
+    | ccounting |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | localA    | Boolean   | No        |           | false     |           |
+    | ccounting |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | u         | Boolean   | No        |           | false     |           |
+    | seAttrSet |           |           |           |           |           |
+    | OnRequest |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | u         | Boolean   | No        |           | false     |           |
+    | seAttrSet |           |           |           |           |           |
+    | BeforeAcc |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | con       | Boolean   | No        |           | false     |           |
+    | tinueAuth |           |           |           |           |           |
+    | orzPolicy |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | radi      | List      | Yes       | List with |           | [         |
+    | usServers |           |           | names of  |           | "exter    |
+    |           |           |           | external  |           | nalRadius |
+    |           |           |           | radius    |           | Server1", |
+    |           |           |           | server.   |           | "exte     |
+    |           |           |           | The order |           | rnalRadiu |
+    |           |           |           | of the    |           | sServer2" |
+    |           |           |           | names in  |           | ]         |
+    |           |           |           | the list  |           |           |
+    |           |           |           | is the    |           |           |
+    |           |           |           | order of  |           |           |
+    |           |           |           | servers   |           |           |
+    |           |           |           | that will |           |           |
+    |           |           |           | be used   |           |           |
+    |           |           |           | during    |           |           |
+    |           |           |           | authe     |           |           |
+    |           |           |           | ntication |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | onReque   | List      | No        | The       |           |           |
+    | stAttrMan |           |           | onReque   |           |           |
+    | ipulators |           |           | stAttrMan |           |           |
+    |           |           |           | ipulators |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | required  |           |           |
+    |           |           |           | only if   |           |           |
+    |           |           |           | u         |           |           |
+    |           |           |           | seAttrSet |           |           |
+    |           |           |           | OnRequest |           |           |
+    |           |           |           | is true   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        |           |           |           |
+    | At        |           |           |           |           |           |
+    | tributeMa |           |           |           |           |           |
+    | nipulator |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Enum      | Yes       | Allowed   |           | ADD       |
+    | action    |           |           | Values:   |           |           |
+    |           |           |           | - ADD,    |           |           |
+    |           |           |           | - UPDATE, |           |           |
+    |           |           |           | - REMOVE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | REMOVEANY |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       |           |           | Cisco     |
+    | dicti     |           |           |           |           |           |
+    | onaryName |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       |           |           | cisco-pr  |
+    | attr      |           |           |           |           | ev-hop-ip |
+    | ibuteName |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - value | String    | Yes       |           |           | test1     |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | The       |           | test2     |
+    | c         |           |           | c         |           |           |
+    | hangedVal |           |           | hangedVal |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | required  |           |           |
+    |           |           |           | only if   |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | action    |           |           |
+    |           |           |           | equals to |           |           |
+    |           |           |           | 'UPDATE'  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | b         | List      | No        | The       |           |           |
+    | eforeAcce |           |           | b         |           |           |
+    | ptAttrMan |           |           | eforeAcce |           |           |
+    | ipulators |           |           | ptAttrMan |           |           |
+    |           |           |           | ipulators |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | required  |           |           |
+    |           |           |           | only if   |           |           |
+    |           |           |           | u         |           |           |
+    |           |           |           | seAttrSet |           |           |
+    |           |           |           | BeforeAcc |           |           |
+    |           |           |           | is true   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | No        |           |           |           |
+    | At        |           |           |           |           |           |
+    | tributeMa |           |           |           |           |           |
+    | nipulator |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Enum      | Yes       | Allowed   |           | ADD       |
+    | action    |           |           | Values:   |           |           |
+    |           |           |           | - ADD,    |           |           |
+    |           |           |           | - UPDATE, |           |           |
+    |           |           |           | - REMOVE, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | REMOVEANY |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       |           |           | Cisco     |
+    | dicti     |           |           |           |           |           |
+    | onaryName |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | Yes       |           |           | cisco-pr  |
+    | attr      |           |           |           |           | ev-hop-ip |
+    | ibuteName |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   - value | String    | Yes       |           |           | test1     |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        | The       |           | test2     |
+    | c         |           |           | c         |           |           |
+    | hangedVal |           |           | hangedVal |           |           |
+    |           |           |           | is        |           |           |
+    |           |           |           | required  |           |           |
+    |           |           |           | only if   |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | action    |           |           |
+    |           |           |           | equals to |           |           |
+    |           |           |           | 'UPDATE'  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

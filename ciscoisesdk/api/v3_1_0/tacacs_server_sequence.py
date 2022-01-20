@@ -50,6 +50,113 @@ class TacacsServerSequence(object):
     Wraps the Identity Services Engine TacacsServerSequence
     API and exposes the API as native Python
     methods that return native Python objects.
+    TACACS Server Sequence API aallows the client to add, delete, update,
+    search and perform actions on TACACS server sequence.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.4            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Default | *Example |
+    |          |          |          |          | Values** | Values** |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          | Tacac    |
+    |          |          |          | Name     |          | sServerS |
+    |          |          |          |          |          | equence1 |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | No       | Resource |          | 1af3     |
+    |          |          |          | UUID,    |          | d6e2-cc3 |
+    |          |          |          | m        |          | b-4603-b |
+    |          |          |          | andatory |          | 80f-6827 |
+    |          |          |          | for      |          | 768335ab |
+    |          |          |          | update   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          | Ta       |
+    | cription |          |          |          |          | cacsServ |
+    |          |          |          |          |          | erSequen |
+    |          |          |          |          |          | ceForSDK |
+    +----------+----------+----------+----------+----------+----------+
+    | se       | String   | Yes      | The      |          | Tac      |
+    | rverList |          |          | names of |          | acsExter |
+    |          |          |          | Tacacs   |          | nalServe |
+    |          |          |          | external |          | r1,Tacac |
+    |          |          |          | servers  |          | sExterna |
+    |          |          |          | s        |          | lServer2 |
+    |          |          |          | eparated |          |          |
+    |          |          |          | by       |          |          |
+    |          |          |          | commas.  |          |          |
+    |          |          |          | The      |          |          |
+    |          |          |          | order of |          |          |
+    |          |          |          | the      |          |          |
+    |          |          |          | names in |          |          |
+    |          |          |          | the      |          |          |
+    |          |          |          | string   |          |          |
+    |          |          |          | is the   |          |          |
+    |          |          |          | order of |          |          |
+    |          |          |          | servers  |          |          |
+    |          |          |          | that     |          |          |
+    |          |          |          | will be  |          |          |
+    |          |          |          | used     |          |          |
+    |          |          |          | during   |          |          |
+    |          |          |          | authen   |          |          |
+    |          |          |          | tication |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | localAc  | Boolean  | No       |          | false    |          |
+    | counting |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | remoteAc | Boolean  | No       |          | true     |          |
+    | counting |          |          |          |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | pre      | Boolean  | No       | Define   | false    |          |
+    | fixStrip |          |          | if a     |          |          |
+    |          |          |          | d        |          |          |
+    |          |          |          | elimiter |          |          |
+    |          |          |          | will be  |          |          |
+    |          |          |          | used for |          |          |
+    |          |          |          | prefix   |          |          |
+    |          |          |          | strip    |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | suf      | Boolean  | No       | Define   | false    |          |
+    | fixStrip |          |          | if a     |          |          |
+    |          |          |          | d        |          |          |
+    |          |          |          | elimiter |          |          |
+    |          |          |          | will be  |          |          |
+    |          |          |          | used for |          |          |
+    |          |          |          | suffix   |          |          |
+    |          |          |          | strip    |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | prefixD  | String   | No       | The      | \\       |          |
+    | elimiter |          |          | d        |          |          |
+    |          |          |          | elimiter |          |          |
+    |          |          |          | that     |          |          |
+    |          |          |          | will be  |          |          |
+    |          |          |          | used for |          |          |
+    |          |          |          | prefix   |          |          |
+    |          |          |          | strip    |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | suffixD  | String   | No       | The      | @        |          |
+    | elimiter |          |          | d        |          |          |
+    |          |          |          | elimiter |          |          |
+    |          |          |          | that     |          |          |
+    |          |          |          | will be  |          |          |
+    |          |          |          | used for |          |          |
+    |          |          |          | suffix   |          |          |
+    |          |          |          | strip    |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

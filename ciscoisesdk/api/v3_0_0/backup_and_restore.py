@@ -50,6 +50,9 @@ class BackupAndRestore(object):
     Wraps the Identity Services Engine Backup And Restore
     API and exposes the API as native Python
     methods that return native Python objects.
+    Configuration Backup and Restore APIs for managing the configuration DB
+    Backup and Restore functionality. Schedule configuration DB backup,
+    cancel running backup and last backup status APIs are also available.
 
     """
 

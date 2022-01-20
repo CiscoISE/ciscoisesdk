@@ -50,6 +50,79 @@ class RestidStore(object):
     Wraps the Identity Services Engine RESTIDStore
     API and exposes the API as native Python
     methods that return native Python objects.
+    REST ID Store API allows clients to add, get, update and delete REST ID
+    stores.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 3.0            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    | R           |
+    |             |             |             | Name        | estIdStore1 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    | b11         |
+    |             |             |             | UUID,       | 55994-b736- |
+    |             |             |             | mandatory   | 46af-9add-0 |
+    |             |             |             | for update  | 4bed3058e3a |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             | Object that |
+    |             |             |             |             | represents  |
+    |             |             |             |             | the restID  |
+    |             |             |             |             | storee      |
+    +-------------+-------------+-------------+-------------+-------------+
+    | er          | List        | Yes         | Holds the   |             |
+    | sRestIDStor |             |             | attributes  |             |
+    | eAttributes |             |             | of the      |             |
+    |             |             |             | restID      |             |
+    |             |             |             | object      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | String      | Yes         | Suffix of   | @place.com  |
+    | use         |             |             | the         |             |
+    | rnameSuffix |             |             | username    |             |
+    |             |             |             | domain      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | - rootUrl   | String      | Yes         | url of the  | rootUrl     |
+    |             |             |             | root of the |             |
+    |             |             |             | RestIDStore |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | -           | Enum        | Yes         | The cloud   | Azure       |
+    | predefined  |             |             | provider    |             |
+    |             |             |             | connected   |             |
+    |             |             |             | to of the   |             |
+    |             |             |             | R           |             |
+    |             |             |             | estIDStore. |             |
+    |             |             |             | Options     |             |
+    |             |             |             | are:        |             |
+    |             |             |             | - Azure,    |             |
+    |             |             |             | - Okta,     |             |
+    |             |             |             | - None      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | - headers   | List        | Yes         | Headers for |             |
+    |             |             |             | the         |             |
+    |             |             |             | RestIDStore |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    |   - key     | String      | Yes         | Key of the  | tenantID    |
+    |             |             |             | header      |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    |   - value   | String      | Yes         | Value of    | ten         |
+    |             |             |             | the header  | antID_value |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 

@@ -50,6 +50,93 @@ class DownloadableAcl(object):
     Wraps the Identity Services Engine DownloadableACL
     API and exposes the API as native Python
     methods that return native Python objects.
+    Downloadable ACL API allows the client to add, delete, update, search
+    and perform actions on downloadable ACL.
+
+    Revision History
+    ----------------
+
+    **Revision #**
+
+    **Resource Version**
+
+    **Cisco ISE Version**
+
+    **Description**
+
+    **Revision Modification**
+
+    **Attribute**
+
+    **Description**
+
+    0
+
+    1.0
+
+    2.3
+
+    Initial Cisco ISE Version
+
+    1
+
+    1.1
+
+    2.6
+
+    Support new attribute IP version in 2.6
+
+    daclType
+
+    Added Enum Attribute 'daclType'
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | mult      |
+    |           |           |           | Name.     |           | iline_acl |
+    |           |           |           | Name may  |           |           |
+    |           |           |           | contain   |           |           |
+    |           |           |           | alp       |           |           |
+    |           |           |           | hanumeric |           |           |
+    |           |           |           | or any of |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | following |           |           |
+    |           |           |           | c         |           |           |
+    |           |           |           | haracters |           |           |
+    |           |           |           | [_.-]     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | Yes       | Resource  |           | c1e0e9e0- |
+    |           |           |           | UUID      |           | 717f-11eb |
+    |           |           |           |           |           | -9fb2-b6c |
+    |           |           |           |           |           | b23d38630 |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        | Use the   |           | de        |
+    | scription |           |           | string    |           | scription |
+    |           |           |           | \\n for a |           |           |
+    |           |           |           | newline   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | dacl      | String    | Yes       | The DACL  |           | permit ip |
+    |           |           |           | Content.  |           | any any   |
+    |           |           |           | Use the   |           |           |
+    |           |           |           | string    |           |           |
+    |           |           |           | \\n for a |           |           |
+    |           |           |           | newline   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | daclType  | Enum      | No        | Allowed   | IPV4      |           |
+    |           |           |           | values:   |           |           |
+    |           |           |           | - IPV4,   |           |           |
+    |           |           |           | - IPV6,   |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | IP        |           |           |
+    |           |           |           | _AGNOSTIC |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

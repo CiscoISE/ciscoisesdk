@@ -50,6 +50,73 @@ class FilterPolicy(object):
     Wraps the Identity Services Engine FilterPolicy
     API and exposes the API as native Python
     methods that return native Python objects.
+    Filter Policy API allows clients to add, get, update and delete SXP
+    domain filter policies.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 3.0            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    |             |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    |             |
+    |             |          |             | UUID,       |             |
+    |             |          |             | mandatory   |             |
+    |             |          |             | for update  |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | subnet      | String   | No          | Subnet for  | su          |
+    |             |          |             | filter      | bnetAddress |
+    |             |          |             | policy      |             |
+    |             |          |             | (hostname   |             |
+    |             |          |             | is not      |             |
+    |             |          |             | supported). |             |
+    |             |          |             | At least    |             |
+    |             |          |             | one of      |             |
+    |             |          |             | subnet or   |             |
+    |             |          |             | sgt or vn   |             |
+    |             |          |             | should be   |             |
+    |             |          |             | defined     |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | sgt         | String   | No          | SGT name or | sgt         |
+    |             |          |             | ID. At      |             |
+    |             |          |             | least one   |             |
+    |             |          |             | of subnet   |             |
+    |             |          |             | or sgt or   |             |
+    |             |          |             | vn should   |             |
+    |             |          |             | be defined  |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | vn          | String   | No          | Virtual     | vir         |
+    |             |          |             | Network. At | tualNetwork |
+    |             |          |             | least one   |             |
+    |             |          |             | of subnet   |             |
+    |             |          |             | or sgt or   |             |
+    |             |          |             | vn should   |             |
+    |             |          |             | be defined  |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | domains     | String   | Yes         | List of SXP | Sxp Vpn     |
+    |             |          |             | Domains,    | Name        |
+    |             |          |             | separated   |             |
+    |             |          |             | with comma  |             |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

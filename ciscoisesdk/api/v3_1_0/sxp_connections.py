@@ -50,6 +50,78 @@ class SxpConnections(object):
     Wraps the Identity Services Engine SXPConnections
     API and exposes the API as native Python
     methods that return native Python objects.
+    SXP Connections API allows clients to add, get, update and delete the
+    Security Group Tag (SGT) Exchange Protocol (SXP) connections.
+
+    Revision History
+    ----------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **       | **       | **Cisco  | **Descr  | **       |          |
+    | Revision | Resource | ISE      | iption** | Revision |          |
+    | #**      | V        | V        |          | Modifi   |          |
+    |          | ersion** | ersion** |          | cation** |          |
+    +----------+----------+----------+----------+----------+----------+
+    |          |          |          |          | **Att    | **Descr  |
+    |          |          |          |          | ribute** | iption** |
+    +----------+----------+----------+----------+----------+----------+
+    | 0        | 1.0      | 2.0      | Initial  |          |          |
+    |          |          |          | Cisco    |          |          |
+    |          |          |          | ISE      |          |          |
+    |          |          |          | Version  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | 1        | 1.1      | 3.0      | Cisco    | sxpVpn   | A        |
+    |          |          |          | ISE 3.0  |          | ttribute |
+    |          |          |          | model    |          | can      |
+    |          |          |          | changes  |          | include  |
+    |          |          |          |          |          | some     |
+    |          |          |          |          |          | VPNs     |
+    |          |          |          |          |          | s        |
+    |          |          |          |          |          | eparated |
+    |          |          |          |          |          | by comma |
+    +----------+----------+----------+----------+----------+----------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+----------+-------------+-------------+-------------+
+    | **          | **Type** | *           | **De        | **Example   |
+    | Attribute** |          | *Required** | scription** | Values**    |
+    +-------------+----------+-------------+-------------+-------------+
+    | name        | String   | Yes         | Resource    |             |
+    |             |          |             | Name        |             |
+    +-------------+----------+-------------+-------------+-------------+
+    | id          | String   | No          | Resource    | f92         |
+    |             |          |             | UUID value  | 69682-dcaf- |
+    |             |          |             |             | 11e3-ad0a-5 |
+    |             |          |             |             | bdcd2d9fd69 |
+    +-------------+----------+-------------+-------------+-------------+
+    | description | String   | No          |             | Brief       |
+    |             |          |             |             | description |
+    |             |          |             |             | about       |
+    |             |          |             |             | network     |
+    |             |          |             |             | peer        |
+    +-------------+----------+-------------+-------------+-------------+
+    | sxpPeer     | String   | Yes         |             | Sxp Peer    |
+    |             |          |             |             | Name        |
+    +-------------+----------+-------------+-------------+-------------+
+    | sxpVpn      | String   | Yes         |             | Sxp VPN     |
+    |             |          |             |             | Name        |
+    +-------------+----------+-------------+-------------+-------------+
+    | sxpNode     | String   | Yes         |             | Sxp Node    |
+    |             |          |             |             | Name        |
+    +-------------+----------+-------------+-------------+-------------+
+    | ipAddress   | String   | Yes         |             | Sxp Peer IP |
+    |             |          |             |             | address     |
+    +-------------+----------+-------------+-------------+-------------+
+    | sxpMode     | String   | Yes         |             | Sxp Mode    |
+    +-------------+----------+-------------+-------------+-------------+
+    | sxpVersion  | String   | Yes         |             | Sxp Version |
+    +-------------+----------+-------------+-------------+-------------+
+    | enabled     | Boolean  | Yes         |             | true        |
+    +-------------+----------+-------------+-------------+-------------+
 
     """
 

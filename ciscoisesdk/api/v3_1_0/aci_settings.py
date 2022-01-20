@@ -50,6 +50,156 @@ class AciSettings(object):
     Wraps the Identity Services Engine ACISettings
     API and exposes the API as native Python
     methods that return native Python objects.
+    ACI Settings API allows the client to get and update the ACI Settings.
+    In addition, testing the ACI Domain Manager connection is also possible
+    using the TestACIConnection.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 3.0            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +----------+----------+----------+----------+----------+----------+
+    | **Att    | **Type** | **Re     | **Descr  | *        | *        |
+    | ribute** |          | quired** | iption** | *Default | *Example |
+    |          |          |          |          | Values** | Values** |
+    +----------+----------+----------+----------+----------+----------+
+    | name     | String   | Yes      | Resource |          | Aci      |
+    |          |          |          | Name     |          | Settings |
+    +----------+----------+----------+----------+----------+----------+
+    | id       | String   | No       | Resource |          | 29fb     |
+    |          |          |          | UUID     |          | 45ab-6a8 |
+    |          |          |          | value    |          | e-4658-8 |
+    |          |          |          |          |          | a28-0252 |
+    |          |          |          |          |          | 1c258178 |
+    +----------+----------+----------+----------+----------+----------+
+    | des      | String   | No       |          |          | Aci      |
+    | cription |          |          |          |          | Settings |
+    +----------+----------+----------+----------+----------+----------+
+    | e        | Boolean  | Yes      | Enable   | false    |          |
+    | nableAci |          |          | ACI      |          |          |
+    |          |          |          | Int      |          |          |
+    |          |          |          | egration |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | isAci50  | Boolean  | Yes      | Enable   | false    |          |
+    |          |          |          | 5.0 ACI  |          |          |
+    |          |          |          | Version  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | i        | String   | No       | ACI      |          |          |
+    | pAddress |          |          | Cluster  |          |          |
+    | HostName |          |          | IP       |          |          |
+    |          |          |          | Address  |          |          |
+    |          |          |          | / Host   |          |          |
+    |          |          |          | name     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | a        | String   | No       | ACI      |          |          |
+    | dminName |          |          | Cluster  |          |          |
+    |          |          |          | Admin    |          |          |
+    |          |          |          | name     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | admin    | String   | No       | ACI      |          |          |
+    | Password |          |          | Cluster  |          |          |
+    |          |          |          | Admin    |          |          |
+    |          |          |          | password |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | te       | String   | No       | ACI      | ISE      |          |
+    | nantName |          |          | Cluster  |          |          |
+    |          |          |          | Tenant   |          |          |
+    |          |          |          | name     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | l3Rout   | String   | No       | ACI      | L3_ROUTE |          |
+    | eNetwork |          |          | Cluster  |          |          |
+    |          |          |          | L3 Route |          |          |
+    |          |          |          | network  |          |          |
+    |          |          |          | name     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | suf      | String   | No       | Name     | SGT      |          |
+    | fixToEpg |          |          | Co       |          |          |
+    |          |          |          | nversion |          |          |
+    |          |          |          | - EPG    |          |          |
+    |          |          |          | suffix   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | suf      | String   | No       | Name     | EPG      |          |
+    | fixToSgt |          |          | Co       |          |          |
+    |          |          |          | nversion |          |          |
+    |          |          |          | - SGT    |          |          |
+    |          |          |          | suffix   |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | allS     | Boolean  | No       | SXP      | false    |          |
+    | xpDomain |          |          | Pro      |          |          |
+    |          |          |          | pagation |          |          |
+    |          |          |          | to all   |          |          |
+    |          |          |          | the SXP  |          |          |
+    |          |          |          | domains  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | s        | Boolean  | No       | SXP      | true     |          |
+    | pecificS |          |          | Pro      |          |          |
+    | xpDomain |          |          | pagation |          |          |
+    |          |          |          | to       |          |          |
+    |          |          |          | specific |          |          |
+    |          |          |          | SXP      |          |          |
+    |          |          |          | domains  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | speci    | List     | No       | Specific | [        |          |
+    | fixSxpDo |          |          | SXP      | default] |          |
+    | mainList |          |          | domains  |          |          |
+    |          |          |          | list     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | isAci51  | Boolean  | Yes      | Enable   | false    |          |
+    |          |          |          | 5.1 ACI  |          |          |
+    |          |          |          | Version  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | acii     | String   | No       | ACI      |          |          |
+    | paddress |          |          | Domain   |          |          |
+    |          |          |          | manager  |          |          |
+    |          |          |          | Ip       |          |          |
+    |          |          |          | Address  |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | aci      | String   | No       | ACI      |          |          |
+    | userName |          |          | Domain   |          |          |
+    |          |          |          | manager  |          |          |
+    |          |          |          | Username |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | aci      | String   | No       | ACI      |          |          |
+    | password |          |          | Domain   |          |          |
+    |          |          |          | manager  |          |          |
+    |          |          |          | Password |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | enableD  | Boolean  | No       | Enable   | false    |          |
+    | ataPlane |          |          | data     |          |          |
+    |          |          |          | plane    |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | untagg   | String   | No       | Untagged | untagged |          |
+    | edPacket |          |          | IEPG     |          |          |
+    | IepgName |          |          | packets  |          |          |
+    |          |          |          | name     |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | defaul   | String   | No       | Default  | Unknown  |          |
+    | tSgtName |          |          | SGT name |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | ena      | Boolean  | No       | Enable   | false    |          |
+    | bleEleme |          |          | Elements |          |          |
+    | ntsLimit |          |          | Limit    |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | m        | Integer  | No       | Max      | 1000     |          |
+    | axNumIep |          |          | number   |          |          |
+    | gFromAci |          |          | of IEPGs |          |          |
+    +----------+----------+----------+----------+----------+----------+
+    | maxNum   | Integer  | No       | Max      | 500      |          |
+    | SgtToAci |          |          | number   |          |          |
+    |          |          |          | of SGTs  |          |          |
+    +----------+----------+----------+----------+----------+----------+
 
     """
 

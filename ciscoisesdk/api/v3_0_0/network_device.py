@@ -50,6 +50,366 @@ class NetworkDevice(object):
     Wraps the Identity Services Engine NetworkDevice
     API and exposes the API as native Python
     methods that return native Python objects.
+    Network Device API allows the client to add, delete, update, and search
+    network devices. Please note that each API description shows whether the
+    API is supported in bulk operation. The bulk section is showing only
+    'create' bulk operation however, all other operation which are bulk
+    supported can be used in same way.
+
+    Revision History
+    ----------------
+
+    **Revision #**
+
+    **Resource Version**
+
+    **Cisco ISE Version**
+
+    **Description**
+
+    **Revision Modification**
+
+    **Attribute**
+
+    **Description**
+
+    0
+
+    1.0
+
+    1.2
+
+    Initial Cisco ISE Version
+
+    1
+
+    1.1
+
+    2.0
+
+    Cisco ISE 2.0 model changes for TACACS+ and 3rd-Party support
+
+    tacacsSettings:sharedSecret
+
+    Added Attribute 'sharedSecret' for Tacacs+ support
+
+    tacacsSettings:connectModeOptions
+
+    Added Attribute 'connectModeOptions' for Tacacs+ support
+
+    profileName
+
+    Added Attribute 'profileName' for 3rd-Party support support
+
+    coaPort
+
+    Added Attribute 'coaPort' for 3rd-Party support support
+
+    2
+
+    1.2
+
+    2.4
+
+    Cisco ISE 2.4 model changes for Multi shared secret and DTLS Requierd
+    support
+
+    authenticationsettings:enableMultiSecret
+
+    Added Attribute 'enableMultiSecret' for mulitple shared secret
+
+    authenticationsettings:secondRadiusSharedSecret
+
+    Added Attribute 'secondRadiusSharedSecret' for mulitple shared secret
+
+    authenticationsettings:dtlsRequired
+
+    Added Attribute 'dtlsRequired' for dtls settings
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | **At      | **Type**  | **R       | **Desc    | **Default | **Example |
+    | tribute** |           | equired** | ription** | Values**  | Values**  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | name      | String    | Yes       | Resource  |           | ISE_EST_L |
+    |           |           |           | Name      |           | ocal_Host |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | id        | String    | No        | Resource  |           | 79aac430- |
+    |           |           |           | UUID,     |           | 7cc8-11eb |
+    |           |           |           | mandatory |           | -ad58-005 |
+    |           |           |           | for       |           | 056926583 |
+    |           |           |           | update    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | de        | String    | No        |           |           | example   |
+    | scription |           |           |           |           | nd        |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | auth      | List      | Yes       |           |           |           |
+    | enticatio |           |           |           |           |           |
+    | nSettings |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | Yes       |           |           | false     |
+    | enab      |           |           |           |           |           |
+    | leKeyWrap |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - enabled | Boolean   | Yes       |           | false     |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | Yes       |           |           | 1234567   |
+    | keyEncr   |           |           |           |           | 890123456 |
+    | yptionKey |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | Yes       | Allowed   | ASCII     |           |
+    | keyIn     |           |           | values:   |           |           |
+    | putFormat |           |           | - ASCII,  |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | HE        |           |           |
+    |           |           |           | XADECIMAL |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        |           |           | 12        |
+    | messageAu |           |           |           |           | 345678901 |
+    | thenticat |           |           |           |           | 234567890 |
+    | orCodeKey |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | No        | Allowed   | RADIUS    |           |
+    | networ    |           |           | values:   |           |           |
+    | kProtocol |           |           | - RADIUS, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | TA        |           |           |
+    |           |           |           | CACS_PLUS |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        |           |           | VHE       |
+    | radiusSha |           |           |           |           | GKOCCUHYB |
+    | redSecret |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        |           |           | false     |
+    | enableMu  |           |           |           |           |           |
+    | ltiSecret |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        |           |           |           |
+    | second    |           |           |           |           |           |
+    | RadiusSha |           |           |           |           |           |
+    | redSecret |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | No        | This      | false     |           |
+    | dtl       |           |           | value     |           |           |
+    | sRequired |           |           | enforces  |           |           |
+    |           |           |           | use of    |           |           |
+    |           |           |           | dtls      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | coaPort   | Integer   | Yes       | Since 2.0 |           | 0         |
+    |           |           |           | (for 3rd  |           |           |
+    |           |           |           | party)    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | dt        | String    | No        | This      |           | ISE2      |
+    | lsDnsName |           |           | value is  |           | 13.il.com |
+    |           |           |           | used to   |           |           |
+    |           |           |           | verify    |           |           |
+    |           |           |           | the       |           |           |
+    |           |           |           | client    |           |           |
+    |           |           |           | identity  |           |           |
+    |           |           |           | contained |           |           |
+    |           |           |           | in the    |           |           |
+    |           |           |           | X.509     |           |           |
+    |           |           |           | RA        |           |           |
+    |           |           |           | DIUS/DTLS |           |           |
+    |           |           |           | client    |           |           |
+    |           |           |           | ce        |           |           |
+    |           |           |           | rtificate |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | N         | List      | Yes       | List of   |           |           |
+    | etworkDev |           |           | IP        |           |           |
+    | iceIPList |           |           | Subnets   |           |           |
+    |           |           |           | for this  |           |           |
+    |           |           |           | node      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | Yes       | It can be |           | 127.0.0.1 |
+    | ipaddress |           |           | either    |           |           |
+    |           |           |           | single IP |           |           |
+    |           |           |           | address   |           |           |
+    |           |           |           | or IP     |           |           |
+    |           |           |           | range     |           |           |
+    |           |           |           | address   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | Yes       | It can be |           |           |
+    | g         |           |           | either    |           |           |
+    | etIpaddre |           |           | single IP |           |           |
+    | ssExclude |           |           | address   |           |           |
+    |           |           |           | or IP     |           |           |
+    |           |           |           | range     |           |           |
+    |           |           |           | address   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - mask    | Integer   | Yes       |           |           | 32        |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | Netw      | List      | No        | List of   |           | [         |
+    | orkDevice |           |           | Network   |           | "Loc      |
+    | GroupList |           |           | Device    |           | ation#All |
+    |           |           |           | Group     |           | Lo        |
+    |           |           |           | names for |           | cations", |
+    |           |           |           | this node |           | "Device   |
+    |           |           |           |           |           | Type#All  |
+    |           |           |           |           |           | Device    |
+    |           |           |           |           |           | Types" ]  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | modelName | String    | No        |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | softwa    | String    | No        |           |           |           |
+    | reVersion |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | pr        | String    | Yes       | Since 2.0 | true      | Cisco     |
+    | ofileName |           |           | (for 3rd  |           |           |
+    |           |           |           | party)    |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | snm       | List      | Yes       |           |           |           |
+    | psettings |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | Yes       | SNMP link | true      |           |
+    | link      |           |           | Trap      |           |           |
+    | TrapQuery |           |           | Query     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Boolean   | Yes       | SNMP MAC  | true      |           |
+    | mac       |           |           | Trap      |           |           |
+    | TrapQuery |           |           | Query     |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | Yes       | Or        | Auto      |           |
+    | or        |           |           | iginating |           |           |
+    | iginating |           |           | Policy    |           |           |
+    | PolicySer |           |           | Services  |           |           |
+    | vicesNode |           |           | Node      |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Integer   | Yes       | SNMP      | 3600      |           |
+    | pollin    |           |           | Polling   |           |           |
+    | gInterval |           |           | Interval  |           |           |
+    |           |           |           | in        |           |           |
+    |           |           |           | seconds   |           |           |
+    |           |           |           | (Valid    |           |           |
+    |           |           |           | Range 600 |           |           |
+    |           |           |           | to 86400) |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | No        | SNMP RO   |           | aaa       |
+    | ro        |           |           | Community |           |           |
+    | Community |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | - version | Enum      | No        | Allowed   |           | ONE       |
+    |           |           |           | values:   |           |           |
+    |           |           |           | - ONE,    |           |           |
+    |           |           |           | - TWO_C,  |           |           |
+    |           |           |           | - THREE   |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | tacac     | List      | Yes       | Since 2.0 |           |           |
+    | sSettings |           |           | (for      |           |           |
+    |           |           |           | Tacacs+)  |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | Enum      | No        | Allowed   |           | ON_LEGACY |
+    | connectMo |           |           | values:   |           |           |
+    | deOptions |           |           | - OFF,    |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | O         |           |           |
+    |           |           |           | N_LEGACY, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | ON_DRAFT_ |           |           |
+    |           |           |           | COMPLIANT |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | String    | Yes       | Since 2.0 |           | aaa       |
+    | sha       |           |           |           |           |           |
+    | redSecret |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | trustse   | List      | Yes       |           |           |           |
+    | csettings |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | Yes       |           |           |           |
+    | d         |           |           |           |           |           |
+    | eviceAuth |           |           |           |           |           |
+    | enticatio |           |           |           |           |           |
+    | nSettings |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | netwo     |
+    | sg        |           |           |           |           | rkDevice1 |
+    | aDeviceId |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | aaa       |
+    | sgaDevic  |           |           |           |           |           |
+    | ePassword |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | Yes       |           |           |           |
+    | de        |           |           |           |           |           |
+    | viceConfi |           |           |           |           |           |
+    | gurationD |           |           |           |           |           |
+    | eployment |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | aaa       |
+    | enableMod |           |           |           |           |           |
+    | ePassword |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | aaa       |
+    | execMod   |           |           |           |           |           |
+    | ePassword |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | String    | No        |           |           | aaa       |
+    | execMod   |           |           |           |           |           |
+    | eUsername |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | inc       |           |           |           |           |           |
+    | ludeWhenD |           |           |           |           |           |
+    | eployingS |           |           |           |           |           |
+    | GTUpdates |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | -         | List      | Yes       |           |           |           |
+    | sgaNoti   |           |           |           |           |           |
+    | ficationA |           |           |           |           |           |
+    | ndUpdates |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Integer   | No        |           | 86400     |           |
+    | downlaodE |           |           |           |           |           |
+    | nvironmen |           |           |           |           |           |
+    | tDataEver |           |           |           |           |           |
+    | yXSeconds |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Integer   | No        |           | 86400     |           |
+    | downlaod  |           |           |           |           |           |
+    | PeerAutho |           |           |           |           |           |
+    | rizationP |           |           |           |           |           |
+    | olicyEver |           |           |           |           |           |
+    | yXSeconds |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Integer   | No        |           | 86400     |           |
+    | down      |           |           |           |           |           |
+    | loadSGACL |           |           |           |           |           |
+    | ListsEver |           |           |           |           |           |
+    | yXSeconds |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | other     |           |           |           |           |           |
+    | SGADevice |           |           |           |           |           |
+    | sToTrustT |           |           |           |           |           |
+    | hisDevice |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Integer   | No        |           | 86400     |           |
+    | re        |           |           |           |           |           |
+    | Authentic |           |           |           |           |           |
+    | ationEver |           |           |           |           |           |
+    | yXSeconds |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Boolean   | No        |           | false     |           |
+    | sendCon   |           |           |           |           |           |
+    | figuratio |           |           |           |           |           |
+    | nToDevice |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |   -       | Enum      | No        | Allowed   | ENABLE_   |           |
+    | sen       |           |           | values:   | USING_COA |           |
+    | dConfigur |           |           | -         |           |           |
+    | ationToDe |           |           | ENABLE_U  |           |           |
+    | viceUsing |           |           | SING_COA, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | ENABLE_U  |           |           |
+    |           |           |           | SING_CLI, |           |           |
+    |           |           |           | -         |           |           |
+    |           |           |           | DI        |           |           |
+    |           |           |           | SABLE_ALL |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
     """
 

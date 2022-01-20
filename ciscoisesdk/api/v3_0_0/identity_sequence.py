@@ -50,6 +50,91 @@ class IdentitySequence(object):
     Wraps the Identity Services Engine IdentitySequence
     API and exposes the API as native Python
     methods that return native Python objects.
+    Identity Sequence API allows the client to add, delete, update and
+    search Identity sequences.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------+----------------+----------------+
+    | **Revision #** | **Resource     | **Cisco ISE    | *              |
+    |                | Version**      | Version**      | *Description** |
+    +----------------+----------------+----------------+----------------+
+    | 0              | 1.0            | 2.2            | Initial Cisco  |
+    |                |                |                | ISE Version    |
+    +----------------+----------------+----------------+----------------+
+    | 1              | 1.1            | 2.4            | Added          |
+    |                |                |                | GetByName      |
+    |                |                |                | operation      |
+    +----------------+----------------+----------------+----------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +-------------+-------------+-------------+-------------+-------------+
+    | **          | **Type**    | *           | **De        | **Example   |
+    | Attribute** |             | *Required** | scription** | Values**    |
+    +-------------+-------------+-------------+-------------+-------------+
+    | name        | String      | Yes         | Resource    | All_Use     |
+    |             |             |             | Name        | r_ID_Stores |
+    +-------------+-------------+-------------+-------------+-------------+
+    | id          | String      | No          | Resource    | 932         |
+    |             |             |             | UUID,       | 46270-8c01- |
+    |             |             |             | mandatory   | 11e6-996c-5 |
+    |             |             |             | for update  | 25400b48521 |
+    +-------------+-------------+-------------+-------------+-------------+
+    | description | String      | No          |             | A built-in  |
+    |             |             |             |             | Identity    |
+    |             |             |             |             | Sequence to |
+    |             |             |             |             | include all |
+    |             |             |             |             | User        |
+    |             |             |             |             | Identity    |
+    |             |             |             |             | Stores      |
+    +-------------+-------------+-------------+-------------+-------------+
+    | break       | Boolean     | Yes         | Do not      | false       |
+    | OnStoreFail |             |             | access      |             |
+    |             |             |             | other       |             |
+    |             |             |             | stores in   |             |
+    |             |             |             | the         |             |
+    |             |             |             | sequence If |             |
+    |             |             |             | a selected  |             |
+    |             |             |             | identity    |             |
+    |             |             |             | store       |             |
+    |             |             |             | cannot be   |             |
+    |             |             |             | accessed    |             |
+    |             |             |             | for         |             |
+    |             |             |             | aut         |             |
+    |             |             |             | hentication |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | certificat  | String      | Yes         | Certificate | Preload     |
+    | eAuthentica |             |             | Aut         | ed_Certific |
+    | tionProfile |             |             | hentication | ate_Profile |
+    |             |             |             | Profile,    |             |
+    |             |             |             | empty if    |             |
+    |             |             |             | doesn't     |             |
+    |             |             |             | exist       |             |
+    +-------------+-------------+-------------+-------------+-------------+
+    | idSeqItem   | List        | Yes         | List of id  | [ {         |
+    |             |             |             | stores      | "idstore":  |
+    |             |             |             | comprised   | "Internal   |
+    |             |             |             | of id store | Users",     |
+    |             |             |             | name and    | "order": 1  |
+    |             |             |             | order       | },          |
+    |             |             |             |             | {           |
+    |             |             |             |             | "idstore":  |
+    |             |             |             |             | "All_AD_Jo  |
+    |             |             |             |             | in_Points", |
+    |             |             |             |             | "order": 2  |
+    |             |             |             |             | },          |
+    |             |             |             |             | {           |
+    |             |             |             |             | "idstore":  |
+    |             |             |             |             | "Guest      |
+    |             |             |             |             | Users",     |
+    |             |             |             |             | "order": 3  |
+    |             |             |             |             | } ]         |
+    +-------------+-------------+-------------+-------------+-------------+
 
     """
 
