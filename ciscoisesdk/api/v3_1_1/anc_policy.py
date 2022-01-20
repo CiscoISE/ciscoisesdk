@@ -51,6 +51,37 @@ class AncPolicy(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    Adaptive Network Control (ANC) provides the ability to create network endpoint authorization controls based on ANC policies.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------------+-----------------------+---------------------------+---+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |
+    +----------------+----------------------+-----------------------+---------------------------+---+
+    | 0              | 1.0                  | 2.1                   | Initial Cisco ISE Version |   |
+    +----------------+----------------------+-----------------------+---------------------------+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +---------------+-------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------+
+    | **Attribute** | **Type**    | **Required** | **Description**                                                                                                                 | **Example Values** |
+    +---------------+-------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------+
+    | name          | String      | Yes          | Resource Name                                                                                                                   |                    |
+    +---------------+-------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------+
+    | id            | String      | No           | Resource ID                                                                                                                     | test               |
+    +---------------+-------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------+
+    | description   | String      | No           |                                                                                                                                 |                    |
+    +---------------+-------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------+
+    | action        | Enum        | Yes          | - QUARANTINE: Allows you to use Exception policies (authorization policies) to limit or deny an endpoint access to the network. |                    |
+    |               |             |              | - PORTBOUNCE: Resets the port on the network device to which the endpoint is connected                                          |                    |
+    |               |             |              | - SHUTDOWN : Shuts down the port on the network device to which the endpoint is connected                                       |                    |
+    |               |             |              | - RE_AUTHENTICATE: Re-authenticates the session from the endpoint                                                               |                    |
+    +---------------+-------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------+
+
     """
 
     def __init__(self, session, object_factory, request_validator):

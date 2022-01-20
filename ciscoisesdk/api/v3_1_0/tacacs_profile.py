@@ -51,6 +51,42 @@ class TacacsProfile(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    TACACS Profile API allows the client to add, delete, update, search and perform actions on TACACS profile.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.4                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +------------------------+-------------+--------------+--------------------------------------------------------------------------+--------------------------------------+
+    | **Attribute**          | **Type**    | **Required** | **Description**                                                          | **Example Values**                   |
+    +------------------------+-------------+--------------+--------------------------------------------------------------------------+--------------------------------------+
+    | name                   | String      | Yes          | Resource Name                                                            | Default Shell Profile                |
+    +------------------------+-------------+--------------+--------------------------------------------------------------------------+--------------------------------------+
+    | id                     | String      | No           | Resource UUID, mandatory for update                                      | 93d7ee70-92b5-11eb-a39d-96858bc78604 |
+    +------------------------+-------------+--------------+--------------------------------------------------------------------------+--------------------------------------+
+    | description            | String      | No           |                                                                          | Default Shell Profile                |
+    +------------------------+-------------+--------------+--------------------------------------------------------------------------+--------------------------------------+
+    | sessionAttributes      | List        | No           | Holds list of session attributes. View type for GUI is Shell by default  |                                      |
+    +------------------------+-------------+--------------+--------------------------------------------------------------------------+--------------------------------------+
+    | - sessionAttributeList | List        | No           | Array of dictionaries describing various attributes with the properties: | [                                    |
+    |                        |             |              | - type (Enum. Allowed values: MANDATORY, OPTIONAL),                      |  {                                   |
+    |                        |             |              | - name (String),                                                         |     "type" : "MANDATORY",            |
+    |                        |             |              | - value (String)                                                         |     "name" : "attr1",                |
+    |                        |             |              |                                                                          |     "value" : "value"                |
+    |                        |             |              |                                                                          |  }                                   |
+    |                        |             |              |                                                                          | ]                                    |
+    +------------------------+-------------+--------------+--------------------------------------------------------------------------+--------------------------------------+
+
     """
 
     def __init__(self, session, object_factory, request_validator):

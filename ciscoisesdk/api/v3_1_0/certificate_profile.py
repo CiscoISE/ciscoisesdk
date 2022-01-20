@@ -51,6 +51,55 @@ class CertificateProfile(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    The certificate profile API allows the client to add, search and perform actions on the certificate profiles.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------------+-----------------------+---------------------------+---+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |
+    +----------------+----------------------+-----------------------+---------------------------+---+
+    | 0              | 1.0                  | 2.4                   | Initial Cisco ISE Version |   |
+    +----------------+----------------------+-----------------------+---------------------------+---+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | **Attribute**             | **Type**  | **Required** | **Description**                                                                                                   | **Default Values**  | **Example Values**                   |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | name                      | String    | Yes          | Resource Name                                                                                                     |                     | Certificate_Profile                  |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | id                        | String    | No           | Resource UUID                                                                                                     |                     | f9269682-dcaf-11e3-ad0a-5bdcd2d9fd69 |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | description               | String    | No           |                                                                                                                   |                     |                                      |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | allowedAsUserName         | Boolean   | No           | To be set true or false                                                                                           | false               |                                      |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | externalIdentityStoreName | String    | No           | Referred IDStore name for the Certificate Profile or [not applicable] in case no identity store is chosen         | [not applicable]    | [not applicable]                     |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | certificateAttributeName  | ENUM      | No           | Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in usernameFrom. Allowed values: | SUBJECT_COMMON_NAME |                                      |
+    |                           |           |              | - SUBJECT_COMMON_NAME                                                                                             |                     |                                      |
+    |                           |           |              | - SUBJECT_ALTERNATIVE_NAME                                                                                        |                     |                                      |
+    |                           |           |              | - SUBJECT_SERIAL_NUMBER                                                                                           |                     |                                      |
+    |                           |           |              | - SUBJECT                                                                                                         |                     |                                      |
+    |                           |           |              | - SUBJECT_ALTERNATIVE_NAME_OTHER_NAME                                                                             |                     |                                      |
+    |                           |           |              | - SUBJECT_ALTERNATIVE_NAME_EMAIL                                                                                  |                     |                                      |
+    |                           |           |              | - SUBJECT_ALTERNATIVE_NAME_DNS.                                                                                   |                     |                                      |
+    |                           |           |              | - Additional internal value ALL_SUBJECT_AND_ALTERNATIVE_NAMES is used automatically when usernameFrom=UPN         |                     |                                      |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | matchMode                 | ENUM      | No           | Match mode of the Certificate Profile. Allowed values:                                                            | NEVER               |                                      |
+    |                           |           |              | - NEVER                                                                                                           |                     |                                      |
+    |                           |           |              | - RESOLVE_IDENTITY_AMBIGUITY                                                                                      |                     |                                      |
+    |                           |           |              | - BINARY_COMPARISON                                                                                               |                     |                                      |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+    | usernameFrom              | ENUM      | No           | The attribute in the certificate where the user name should be taken from. Allowed values:                        | CERTIFICATE         |                                      |
+    |                           |           |              | - CERTIFICATE (for a specific attribute as defined in certificateAttributeName)                                   |                     |                                      |
+    |                           |           |              | - UPN (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)            |                     |                                      |
+    +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
+
     """
 
     def __init__(self, session, object_factory, request_validator):

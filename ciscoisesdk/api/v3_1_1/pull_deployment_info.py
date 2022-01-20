@@ -51,6 +51,557 @@ class PullDeploymentInfo(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    Pull Deployment Info API allows clients to get the complete information about a Cisco ISE deployment. The information includes details about the deployment, network zccess, NADs, MDMs, licenses, posture and profiler.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.7                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    **Attribute**
+
+    **Type**
+
+    **Required**
+
+    **Description**
+
+    **Example Values**
+
+    name
+
+    String
+
+    Yes
+
+    Resource Name
+
+    id
+
+    String
+
+    No
+
+    Resource UUID, mandatory for update
+
+    description
+
+    String
+
+    No
+
+    networkAccessInfo
+
+    List
+
+    No
+
+    networkAccessInfo Details
+
+    - deploymentID
+
+    String
+
+    Yes
+
+    Deployment ID
+
+    8f0d1566-6e6c-48ad-abe0-ef2d813a2a11
+
+    - isCsnEnabled
+
+    Boolean
+
+    Yes
+
+    false
+
+    - nodeList
+
+    List
+
+    Yes
+
+    Node list
+
+      - nodeAndScope
+
+    List
+
+    No
+
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
+    | - name (String),
+    | - declaredType (String),
+    | - scope (String),
+    | - value (Varies),
+    | - nil (Boolean),
+    | - globalScope (Boolean),
+    | - typeSubstituted (Boolean)
+
+    | ["deployment",
+    | "content": {
+    |   "name": "{http://www.cisco.com/NetworkAccessInfo}AuthorizationInfo",
+    |   "declaredType": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node$AuthorizationInfo",
+    |   "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node",
+    |   "value": {
+    |     "policyLineCount": 0,
+    |     "activeVLANCount": 0,
+    |     "activedACLCount": 4
+    |   },
+    |   "nil": false,
+    |   "globalScope": false,
+    |   "typeSubstituted": false
+    | }
+    | ]
+
+    - sdaVNs
+
+    List
+
+    No
+
+    - trustSecControl
+
+    String
+
+    No
+
+    ISE
+
+    - radius3RdParty
+
+    List
+
+    No
+
+    profilerInfo
+
+    List
+
+    No
+
+    profilerInfo Details
+
+    - deploymentID
+
+    String
+
+    Yes
+
+    Deployment ID
+
+    8f0d1566-6e6c-48ad-abe0-ef2d813a2a11
+
+    - nodeList
+
+    List
+
+    Yes
+
+    Node list
+
+      - node
+
+    List
+
+    No
+
+    | Includes 'profiles' which is an array of dictionaries describing various attributes with the properties:
+    | - profile (List),
+    | - customProfilesCount (Integer),
+    | - endpointTypes (String),
+    | - totalProfilesCount (Integer),
+    | - uniqueEndpointsCount (Integer),
+    | - unknownEndpointsCount (Integer),
+    | - totalEndpointsCount (Integer),
+    | - unknownEndpointsPercentage (Integer)
+
+    | [
+    | {
+    |   "profiles": {
+    |     "profile": [],
+    |     "customProfilesCount": 0,
+    |     "endpointTypes": "",
+    |     "totalProfilesCount": 676,
+    |     "uniqueEndpointsCount": 0,
+    |     "unknownEndpointsCount": 0,
+    |     "totalEndpointsCount": 0,
+    |    "unknownEndpointsPercentage": 0
+    |   },
+    |   "onlineSubscriptionEnabled": true,
+    |   "lastAppliedFeedDateTime": "2021-03-30T01:06:01.621+00:00",
+    |   "scope": "deployment"
+    | }
+    | ]
+
+    deploymentInfo
+
+    List
+
+    No
+
+    deploymentInfo Details
+
+    - deploymentID
+
+    String
+
+    Yes
+
+    Deployment ID
+
+    8f0d1566-6e6c-48ad-abe0-ef2d813a2a11
+
+    - versionHistoryInfo
+
+    List
+
+    No
+
+    | Array of dictionaries describing various attributes with the properties:
+    | - opType (String),
+    | - mainVersion (String),
+    | - epochTime (Integer)
+
+    | [
+    | {
+    |   "opType": "Application Install",
+    |   "mainVersion": "3.1.0.280",
+    |   "epochTime": 1614847786000
+    | }
+    | ]
+
+    - nodeList
+
+    List
+
+    Yes
+
+    Node list
+
+      - nodeAndNodeCountAndCountInfo
+
+    List
+
+    No
+
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
+    | - name (String),
+    | - declaredType (String),
+    | - scope (String),
+    | - value (Varies),
+    | - nil (Boolean),
+    | - globalScope (Boolean),
+    | - typeSubstituted (Boolean)
+
+    | [
+    | {
+    |   "name": "{http://www.cisco.com/DeploymentInfo}NodeTypes",
+    |   "declaredType": "java.lang.String",
+    |   "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+    |   "value": "PAP,MNT,PDP,PXG",
+    |   "nil": false,
+    |   "globalScope": false,
+    |   "typeSubstituted": false
+    | }
+    | ]
+
+    - fipsstatus
+
+    String
+
+    No
+
+    Disabled
+
+    nadInfo
+
+    List
+
+    No
+
+    nadInfo Details
+
+    - deploymentID
+
+    String
+
+    Yes
+
+    Deployment ID
+
+    8f0d1566-6e6c-48ad-abe0-ef2d813a2a11
+
+    - nodeList
+
+    List
+
+    Yes
+
+    Node list
+
+      - nodeAndScope
+
+    List
+
+    No
+
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
+    | - name (String),
+    | - declaredType (String),
+    | - scope (String),
+    | - value (List),
+    | - nil (Boolean),
+    | - globalScope (Boolean),
+    | - typeSubstituted (Boolean)
+
+    | ["deployment",
+    | "content": [
+    |  {
+    |     "name": "{http://www.cisco.com/NADInfo}NADProfileInfo",
+    |     "declaredType": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+    |     "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+    |     "value": {
+    |       "name": "Cisco",
+    |       "isCiscoProvided": true,
+    |       "isDefProfile": true, "isTacacsSupported": true,
+    |       "isRadiusSupported": true,
+    |       "isTrustSecSupported": true,
+    |       "activeNADCount": 0,
+    |       "totalNADCount": 0
+    |     },
+    |     "nil": false,
+    |     "globalScope": false,
+    |     "typeSubstituted": false
+    |   }
+    |   ]
+    | }
+    | ]
+
+    - nadcountInfo
+
+    List
+
+    No
+
+      - totalActiveNADCount
+
+    Integer
+
+    No
+
+    0
+
+    mdmInfo
+
+    List
+
+    No
+
+    mdmInfo Details
+
+    - activeMdmServersCount
+
+    Integer
+
+    Yes
+
+    0
+
+    - activeDesktopMdmServersCount
+
+    Integer
+
+    Yes
+
+    0
+
+    - activeMobileMdmServersCount
+
+    Integer
+
+    Yes
+
+    0
+
+    - deploymentID
+
+    String
+
+    Yes
+
+    Deployment ID
+
+    8f0d1566-6e6c-48ad-abe0-ef2d813a2a11
+
+    - nodeList
+
+    List
+
+    Yes
+
+    Node list
+
+      - nodeAndScope
+
+    List
+
+    No
+
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
+    | - name (String),
+    | - declaredType (String),
+    | - scope (String),
+    | - value (Varies),
+    | - nil (Boolean),
+    | - globalScope (Boolean),
+    | - typeSubstituted (Boolean)
+
+    | [
+    | "deployment",
+    |   {
+    |     "content": []
+    |   }
+    | ]
+
+    licensesInfo
+
+    List
+
+    No
+
+    licensesInfo Details
+
+    - deploymentID
+
+    String
+
+    Yes
+
+    Deployment ID
+
+    8f0d1566-6e6c-48ad-abe0-ef2d813a2a11
+
+    - nodeList
+
+    List
+
+    Yes
+
+    Node list
+
+      - nodeAndScope
+
+    List
+
+    No
+
+    | Includes 'content' which is an array of dictionaries describing various attributes with the properties:
+    | - name (String),
+    | - declaredType (String),
+    | - scope (String),
+    | - value (Varies),
+    | - nil (Boolean),
+    | - globalScope (Boolean),
+    | - typeSubstituted (Boolean)
+
+    | [
+    | {
+    |   "content": [
+    |     {
+    |     "name": "{http://www.cisco.com/LicenseInfo}SmartAccountName",
+    |     "declaredType": "java.lang.String",
+    |     "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+    |     "value": "",
+    |     "nil": false,
+    |     "globalScope": false,
+    |     "typeSubstituted": false
+    |     }
+    |   ]
+    | }
+    | ]
+
+    postureInfo
+
+    List
+
+    No
+
+    postureInfo Details
+
+    - content
+
+    List
+
+    Yes
+
+    | Array of dictionaries describing various attributes with the properties:
+    | - name (String),
+    | - declaredType (String),
+    | - scope (String),
+    | - value (Varies),
+    | - nil (Boolean),
+    | - globalScope (Boolean),
+    | - typeSubstituted (Boolean)
+
+    | [
+    | {
+    |   "name": "{http://www.cisco.com/PostureInfo}ActivePoliciesCount",
+    |   "declaredType": "java.lang.Integer",
+    |   "scope": "com.cisco.cpm.infrastructure.telemetry.jaxbgen.PostureInfo",
+    |   "value": 0,
+    |   "nil": false,
+    |   "globalScope": false,
+    |   "typeSubstituted": false
+    | }
+    | ]
+
+    kongInfo
+
+    List
+
+    No
+
+    kongInfo Details
+
+    - deploymentID
+
+    String
+
+    Yes
+
+    Deployment ID
+
+    8f0d1566-6e6c-48ad-abe0-ef2d813a2a11
+
+    - nodeList
+
+    List
+
+    Yes
+
+    Node list
+
+      - node
+
+    List
+
+    No
+
+    | Array of dictionaries describing various attributes with the properties:
+    | - sn (String),
+    | - service (List)
+
     """
 
     def __init__(self, session, object_factory, request_validator):

@@ -51,6 +51,67 @@ class DownloadableAcl(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    Downloadable ACL API allows the client to add, delete, update, search and perform actions on downloadable ACL.
+
+    Revision History
+    ----------------
+
+    **Revision #**
+
+    **Resource Version**
+
+    **Cisco ISE Version**
+
+    **Description**
+
+    **Revision Modification**
+
+    **Attribute**
+
+    **Description**
+
+    0
+
+    1.0
+
+    2.3
+
+    Initial Cisco ISE Version
+
+    1
+
+    1.1
+
+    2.6
+
+    Support new attribute IP version in 2.6
+
+    daclType
+
+    Added Enum Attribute 'daclType'
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
+    | **Attribute** | **Type**  | **Required** | **Description**                                                                       | **Default Values** | **Example Values**                   |
+    +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
+    | name          | String    | Yes          | Resource Name. Name may contain alphanumeric or any of the following characters [_.-] |                    | multiline_acl                        |
+    +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
+    | id            | String    | Yes          | Resource UUID                                                                         |                    | c1e0e9e0-717f-11eb-9fb2-b6cb23d38630 |
+    +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
+    | description   | String    | No           | Use the string \\n for a newline                                                      |                    | description                          |
+    +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
+    | dacl          | String    | Yes          | The DACL Content. Use the string \\n for a newline                                    |                    | permit ip any any                    |
+    +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
+    | daclType      | Enum      | No           | Allowed values:                                                                       | IPV4               |                                      |
+    |               |           |              | - IPV4,                                                                               |                    |                                      |
+    |               |           |              | - IPV6,                                                                               |                    |                                      |
+    |               |           |              | - IP_AGNOSTIC                                                                         |                    |                                      |
+    +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
+
     """
 
     def __init__(self, session, object_factory, request_validator):

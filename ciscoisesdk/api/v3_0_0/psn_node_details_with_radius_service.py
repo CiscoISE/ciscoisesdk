@@ -51,6 +51,34 @@ class PsnNodeDetailsWithRadiusService(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    PSN Node Details with RADIUS Service API allows the client to get deployment node details where 'Session Services' is enabled.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.2                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | **Attribute** | **Type** | **Required** | **Description**                     | **Example Values**                   |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | name          | String   | Yes          | Resource Name                       | TestNode                             |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | id            | String   | No           | Resource UUID, mandatory for update | ab6deded-fcc2-47ff-8577-0014737c8fcf |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | description   | String   | No           |                                     | PSN with Session Service             |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | ipAddress     | String   | Yes          |                                     | 10.0.0.1                             |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+
     """
 
     def __init__(self, session, object_factory, request_validator):

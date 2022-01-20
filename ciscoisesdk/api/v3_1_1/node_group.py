@@ -51,6 +51,8 @@ class NodeGroup(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+
+
     """
 
     def __init__(self, session, object_factory, request_validator):
@@ -169,7 +171,7 @@ class NodeGroup(object):
         "site6","marCache": {"replication-timeout": 5}}
         NOTE 1:  : Node group name and description cannot
         contain any of the following characters: ! % ^ : ; , . ~
-        @ # & [ { ( | ) } ] ` > <  / \\ " + = ?  NOTE 2:  :
+        @ # & [ { ( | ) } ] ` > <  / \ " + = ?  NOTE 2:  :
         Parameter marCache stands for Machine Access Restriction
         (MAR) cache that provides an additional means of
         controlling authorization for Active Directory-
@@ -366,7 +368,7 @@ class NodeGroup(object):
         "site6","marCache": {"replication-timeout": 5}}
         NOTE 1:   Node group name and description cannot contain
         any of the following characters: ! % ^ : ; , . ~ @ # & [
-        { ( | ) } ] ` > <  / \\ " + = ?  NOTE 2:   Parameter
+        { ( | ) } ] ` > <  / \ " + = ?  NOTE 2:   Parameter
         marCache stands for Machine Access Restriction (MAR)
         cache that provides an additional means of controlling
         authorization for Active Directory-authentication users.

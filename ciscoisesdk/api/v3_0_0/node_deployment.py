@@ -51,6 +51,8 @@ class NodeDeployment(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    APIs for the configuration, administration and monitoring of the nodes in an ISE cluster deployment.
+
     """
 
     def __init__(self, session, object_factory, request_validator):

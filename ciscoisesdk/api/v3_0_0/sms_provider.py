@@ -51,6 +51,32 @@ class SmsProvider(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    SMS Provider API allows the client to search the SMS providers configured from Cisco ISE GUI.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.2                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | **Attribute** | **Type** | **Required** | **Description**                     | **Example Values**                   |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | name          | String   | Yes          | Resource Name                       | name                                 |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | id            | String   | No           | Resource UUID, mandatory for update | b1155994-b736-46af-9add-04bed3058e3a |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | description   | String   | No           |                                     |                                      |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+
     """
 
     def __init__(self, session, object_factory, request_validator):

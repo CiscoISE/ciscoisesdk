@@ -51,6 +51,66 @@ class PxGridNode(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    pxGrid Node API allows the client to retrieve pxGrid information, delete an existing pxGrid node, and approve new pxGrid nodes. \**Note:*\* From Cisco ISE Release 3.1, all pxGrid connections must be based on pxGrid 2.0. pxGrid 1.0-based (XMPP-based) integrations will cease to work on Cisco ISE from Release 3.1 onwards. pxGrid Version 2.0, which is based on WebSockets, was introduced in Cisco ISE Release 2.4. We recommend that you plan and upgrade your other systems to pxGrid 2.0-compliant versions in order to prevent potential disruptions, if any, to integrations.
+
+    Revision History
+    ----------------
+
+    +----------------+----------------------+-----------------------+---------------------------+
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
+    +----------------+----------------------+-----------------------+---------------------------+
+    | 0              | 1.0                  | 2.4                   | Initial Cisco ISE Version |
+    +----------------+----------------------+-----------------------+---------------------------+
+
+    |
+
+    Resource Definition
+    -------------------
+
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | **Attribute** | **Type** | **Required** | **Description**                     | **Example Values**                   |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | name          | String   | Yes          | Resource Name                       | ers-sample-client                    |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | id            | String   | No           | Resource UUID, mandatory for update | ab6deded-fcc2-47ff-8577-0014737c8fcf |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | description   | String   | No           |                                     | ERS sample client                    |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | status        | String   | No           |                                     | Online (XMPP)                        |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | authMethod    | String   | No           |                                     | Certificate                          |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+    | groups        | String   | No           |                                     |                                      |
+    +---------------+----------+--------------+-------------------------------------+--------------------------------------+
+
+    |
+
+    pxGrid Characterization
+    -----------------------
+
+    **Session data Consumption over pxGrid**
+
+    On a 35 node Cisco ISE deployment with a dedicated primary Policy Administration node (PAN), dedicated secondary PAN, dedicated primary Monitoring and Troubleshooting node (MnT node), dedicated secondary MnT, dedicated pxGrid node and 30 heterogeneous Policy Service node (PSN) platforms, there was no delay observed in consuming session data with the following parameters as shown in the table below:
+
+    +----------------------------------------+------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------+
+    | **RADIUS Traffic**                     | **Total number of sessions in the deployment** | **Number of pxGrid clients (subscribers to the session topic)** | **pxGrid client’s delay in consuming session data** |
+    +----------------------------------------+------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------+
+    | Upto 500 transactions per second (TPS) | ~2 million                                     | 50                                                              | No delay                                            |
+    +----------------------------------------+------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------+
+
+    **Bulk download time taken**
+
+    On a 35 node Cisco ISE deployment with a dedicated primary PAN, dedicated secondary PAN, dedicated primary MnT, dedicated secondary MnT, dedicated pxGrid node and 30 heterogeneous PSN Platforms, the bulk download time for all the pxGrid clients is shown in the table below:
+
+    +------------------------------------------------+-----------------------------------------------------------------+----------------------------------+
+    | **Total number of sessions in the deployment** | **Number of pxGrid clients (subscribers to the session topic)** | **Time taken for bulk download** |
+    +------------------------------------------------+-----------------------------------------------------------------+----------------------------------+
+    | 2 million                                      | 50                                                              | ~17 minutes                      |
+    +------------------------------------------------+-----------------------------------------------------------------+----------------------------------+
+
+    |
+    | \**Note:*\* From Cisco ISE Release 3.1, we can use either pxgridnode or pxgridNode in the URL.
+
     """
 
     def __init__(self, session, object_factory, request_validator):
