@@ -104,7 +104,9 @@ def get_next_page(function, params, access_next_list=["SearchResult", "nextPage"
                                 access_next_list=access_next_list, access_resource_list=access_resource_list,
                                 has_been_found=has_been_found, prev_result=prev_result)
                         except ApiError as e:
-                            if e.status_code != 404:
+                            expected_status_codes = [400, 404]
+                            # If is not a 400 Bad Request and is not a 404 Not Found status code
+                            if e.status_code not in expected_status_codes:
                                 raise e
                 else:
                     yield response
