@@ -11,14 +11,14 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
     from ciscoisesdk.exceptions import ApiError
 
     # Create a IdentityServicesEngineAPI connection object;
-    # it uses ISE custom URL, username, and password, with ISE API version 3.1.0
+    # it uses ISE custom URL, username, and password, with ISE API version 3.1.1
     # and its API Gateway enabled,
     # and verify=True to verify the server's TLS certificate.
     api = IdentityServicesEngineAPI(username='admin',
                                     password='C1sco12345',
                                     uses_api_gateway=True,
                                     base_url='https://198.18.133.27',
-                                    version='3.1.0',
+                                    version='3.1.1',
                                     verify=True)
     # NOTE: This collection assumes that the ERS APIs and OpenAPIs are enabled.
 
@@ -46,17 +46,6 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
                                                       resource_detail.name,
                                                       resource_detail.allowChap))
 
-    # Filter network device
-    device_list_response = api.network_device.get_all(filter='name.EQ.ISE_EST_Local_Host_19')
-    device_responses = device_list_response.response.SearchResult.resources
-    device_response = device_responses[0]
-
-    # Get network device detail
-    device_response_detail = api.network_device.get_by_id(device_response.id).response.NetworkDevice
-
-    # Delete network device
-    delete_device = api.network_device.delete_by_id(device_response.id)
-
     # Create network device
     try:
         network_device_response = api.network_device.create(
@@ -65,6 +54,15 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
         print("Created, new Location {}".format(network_device_response.headers.Location))
     except ApiError as e:
         print(e)
+
+    # Filter network device
+    device_list_response = api.network_device.get_all(filter='name.EQ.ISE_EST_Local_Host_19')
+    device_responses = device_list_response.response.SearchResult.resources
+    if len(device_responses) > 0:
+        device_response = device_responses[0]
+
+        # Get network device detail
+        device_response_detail = api.network_device.get_by_id(device_response.id).response.NetworkDevice
 
     # Advance usage example using Custom Caller functions
     ## Define a Custom caller named function
@@ -90,6 +88,12 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
     created_device_1 = get_created_result(network_device_response.headers.Location)
     created_device_2 = api.custom_caller.get_created_result(network_device_response.headers.Location)
     print(created_device_1.response == created_device_2.response)
+
+    if len(device_responses) > 0:
+        device_response = device_responses[0]
+
+        # Delete network device
+        delete_device = api.network_device.delete_by_id(device_response.id)
 
 
 
