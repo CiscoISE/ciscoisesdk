@@ -6,6 +6,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2022-02-21
+
+### Changed
+
+- Incremented `IdentityServicesEngineAPI` and `RestSession` constructor parameter count.
+- Changed access method an imports used for environment variables and default values in api/__init__.py.
+- `RestSession` to request for a refreshed CSRF token if `uses_csrf_token` is enabled.
+- Replaced the name of headers checked for ERS methods from "X-CSRF-TOKEN" to "X-CSRF-Token".
+
+### Added
+
+- Support for "CSRF Check for Enhanced Security" for the ISE ERS API.
+- New `uses_csrf_token` parameter for `IdentityServicesEngineAPI` constructor.
+- New `get_csrf_token` function for `IdentityServicesEngineAPI`.
+- New `uses_csrf_token` and `get_csrf_token` parameters for `RestSession` constructor.
+- New `DEFAULT_USES_CSRF_TOKEN` value in config.py. 
+- New `IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN` environment variable in environment.py.
+
+### Fixed
+
+- The process that gets the environment variables now can access the variables set after the module is imported, and not only before it.
+
 ## [1.4.2] - 2022-02-18
 
 ### Fixed
@@ -186,4 +208,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.4.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0
 [1.4.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.0...v1.4.1
 [1.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.1...v1.4.2
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...main
+[1.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...main
