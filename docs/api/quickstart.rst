@@ -37,6 +37,8 @@ By default, ciscoisesdk will look for the following environment variables to cre
     * ``IDENTITY_SERVICES_ENGINE_PASSWORD`` - HTTP Basic Auth password.
 
     * ``IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY`` - Enables or disables the usage of the API Gateway. Defaults to True.
+
+    * ``IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN`` - Enables or disables the usage of X-CSRF-Token. Defaults to False.
     
     * ``IDENTITY_SERVICES_ENGINE_BASE_URL`` - The base URL to be prefixed to the individual API endpoint suffixes. It is used if the IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY is True. Defaults to 'https://dcloud-dna-ise-rtp.cisco.com'.
 
@@ -160,13 +162,15 @@ when creating a new :class:`IdentityServicesEngineAPI` connection object.
     >>> api = IdentityServicesEngineAPI(encoded_auth='YWRtaW46QzFzY28xMjM0NQo=',
     ...                                 base_url="https://dcloud-dna-ise-rtp.cisco.com",
     ...                                 version='3.1.1',
-    ...                                 uses_api_gateway=True)
+    ...                                 uses_api_gateway=True,
+    ...                                 uses_csrf_token=True)
     >>> # Create a IdentityServicesEngineAPI connection object;
     >>> # Using username, and password, with ISE API version 3.1.1
     >>> api = IdentityServicesEngineAPI(username='admin', password='C1sco12345',
     ...                                 uses_api_gateway=True,
     ...                                 base_url="https://dcloud-dna-ise-rtp.cisco.com",
-    ...                                 version='3.1.1')
+    ...                                 version='3.1.1',
+    ...                                 uses_csrf_token=True)
 
 
 Use the arguments to provide the URLs required depending on the uses_api_gateway value.
@@ -174,20 +178,29 @@ Use the arguments to provide the URLs required depending on the uses_api_gateway
 .. note::
     If uses_api_gateway is True, the ciscoisesdk assumes that your ISE API Gateway is enabled.
 
+.. note::
+    If uses_csrf_token is True, the ciscoisesdk assumes that your ISE CSRF Check is enabled.
+    Moreover, it assumes you need the ciscoisesdk to manage the CSRF token automatically for you.
+
+
 .. code-block:: python
 
     >>> from ciscoisesdk import IdentityServicesEngineAPI
     >>> # Create a IdentityServicesEngineAPI connection object; 
     >>> # Using API Gateway (since it was enabled on ISE)
+    >>> # Using CSRF Token (since the CSRF Check was enabled on ISE)
     >>> api = IdentityServicesEngineAPI(username='admin',
     ...                                 password='C1sco12345',
     ...                                 uses_api_gateway=True,
+    ...                                 uses_csrf_token=True,
     ...                                 base_url='https://dcloud-dna-ise-rtp.cisco.com',
     ...                                 version='3.1.1',
     ...                                 verify=True)
     >>> # Not using API Gateway
+    >>> # Not using CSRF Token
     >>> api = IdentityServicesEngineAPI(username='devnetuser', password='Cisco123!',
     ...                                 uses_api_gateway=False,
+    ...                                 uses_csrf_token=False,
     ...                                 ers_base_url="https://dcloud-dna-ise-rtp.cisco.com:9060",
     ...                                 ui_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
     ...                                 mnt_base_url="https://dcloud-dna-ise-rtp.cisco.com:443",
@@ -206,6 +219,24 @@ from a file or database and/or when you want to create more than one connection 
     >>> kingston_api = IdentityServicesEngineAPI(encoded_auth=kingston_auth, base_url="https://dcloud-dna-ise-rtp.cisco.com", version='3.1.1')
     >>> london_api = IdentityServicesEngineAPI(*london_auth, base_url="https://128.107.71.199:443",
     ...                                        version='3.1.1', uses_api_gateway=True)  # * Unpacks tuple
+
+
+CSRF Token Check
+----------------
+
+If `uses_csrf_token` is True, the ciscoisesdk assumes that your ISE CSRF Check is enabled.
+Moreover, it assumes you need the ciscoisesdk to manage the CSRF token **automatically** for you.
+
+If `uses_csrf_token` is False, the ciscoisesdk assumes that your ISE CSRF Check is disabled.
+Moreover, it assumes you do not need the ciscoisesdk to send CSRF token for POST/PUT/DELETE operations.
+In this case, you could still do it manually like in the following code fragment:
+
+.. code-block:: python
+
+    >>> endpoint_id_to_delete = "be46f4f0-932f-11ec-aa4c-8e0da8a23ad8"
+    >>> get_request = api.endpoint.get_version(headers={"X-CSRF-TOKEN": "fetch"})
+    >>> r2 = api.endpoint.delete_by_id(id=endpoint_id_to_delete,
+    ...                                headers={"X-CSRF-TOKEN": get_request.headers["X-CSRF-Token"]})
 
 
 API Gateway
