@@ -86,7 +86,7 @@ class AncEndpoint(object):
 
     | On a 5 node Cisco ISE deployment with 60k sessions or on a 9 node Cisco ISE deployment with 200k/500k sessions, 250 transactions per second (TPS) is supported for any ANC API.
     | **Supported ANC APIs**
-    | \* applyEndpointByMacAddress \* clearEndpointByMacaddress \* applyEndpointByIpAddress \* applyEndpointPolicy \* clearEndpointPolicy
+    | * applyEndpointByMacAddress * clearEndpointByMacaddress * applyEndpointByIpAddress * applyEndpointPolicy * clearEndpointPolicy
 
     ============== ====================== ==========================
     **Deployment** **Number of Sessions** **Supported ANC APIs TPS**
