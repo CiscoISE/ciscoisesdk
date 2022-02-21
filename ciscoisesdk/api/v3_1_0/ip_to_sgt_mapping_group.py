@@ -150,8 +150,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -222,8 +222,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -292,8 +292,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -362,8 +362,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -466,8 +466,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -594,8 +594,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -726,8 +726,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -970,8 +970,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
