@@ -24,22 +24,17 @@ SOFTWARE.
 
 from past.types import basestring
 
-from ciscoisesdk.environment import (
-    IDENTITY_SERVICES_ENGINE_USERNAME,
-    IDENTITY_SERVICES_ENGINE_PASSWORD,
-    IDENTITY_SERVICES_ENGINE_ENCODED_AUTH,
-    IDENTITY_SERVICES_ENGINE_DEBUG,
-    IDENTITY_SERVICES_ENGINE_VERSION,
-    IDENTITY_SERVICES_ENGINE_BASE_URL,
-    IDENTITY_SERVICES_ENGINE_SINGLE_REQUEST_TIMEOUT,
-    IDENTITY_SERVICES_ENGINE_WAIT_ON_RATE_LIMIT,
-    IDENTITY_SERVICES_ENGINE_VERIFY,
-    IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY,
-    IDENTITY_SERVICES_ENGINE_UI_BASE_URL,
-    IDENTITY_SERVICES_ENGINE_ERS_BASE_URL,
-    IDENTITY_SERVICES_ENGINE_MNT_BASE_URL,
-    IDENTITY_SERVICES_ENGINE_PX_GRID_BASE_URL,
+from ciscoisesdk.config import (
+    DEFAULT_DEBUG,
+    DEFAULT_VERSION,
+    DEFAULT_BASE_URL,
+    DEFAULT_SINGLE_REQUEST_TIMEOUT,
+    DEFAULT_WAIT_ON_RATE_LIMIT,
+    DEFAULT_VERIFY,
+    DEFAULT_USES_API_GATEWAY,
+    DEFAULT_USES_CSRF_TOKEN,
 )
+import ciscoisesdk.environment as ciscoise_environment
 from ciscoisesdk.exceptions import AccessTokenError, VersionError
 from ciscoisesdk.models.mydict import mydict_data_factory
 from ciscoisesdk.models.schema_validator import SchemaValidator
@@ -774,20 +769,21 @@ class IdentityServicesEngineAPI(object):
     them in a simple hierarchical structure.
     """
 
-    def __init__(self, username=IDENTITY_SERVICES_ENGINE_USERNAME,
-                 password=IDENTITY_SERVICES_ENGINE_PASSWORD,
-                 encoded_auth=IDENTITY_SERVICES_ENGINE_ENCODED_AUTH,
-                 uses_api_gateway=IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY,
-                 base_url=IDENTITY_SERVICES_ENGINE_BASE_URL,
-                 ui_base_url=IDENTITY_SERVICES_ENGINE_UI_BASE_URL,
-                 ers_base_url=IDENTITY_SERVICES_ENGINE_ERS_BASE_URL,
-                 mnt_base_url=IDENTITY_SERVICES_ENGINE_MNT_BASE_URL,
-                 px_grid_base_url=IDENTITY_SERVICES_ENGINE_PX_GRID_BASE_URL,
-                 single_request_timeout=IDENTITY_SERVICES_ENGINE_SINGLE_REQUEST_TIMEOUT,
-                 wait_on_rate_limit=IDENTITY_SERVICES_ENGINE_WAIT_ON_RATE_LIMIT,
-                 verify=IDENTITY_SERVICES_ENGINE_VERIFY,
-                 version=IDENTITY_SERVICES_ENGINE_VERSION,
-                 debug=IDENTITY_SERVICES_ENGINE_DEBUG,
+    def __init__(self, username=None,
+                 password=None,
+                 encoded_auth=None,
+                 uses_api_gateway=None,
+                 base_url=None,
+                 ui_base_url=None,
+                 ers_base_url=None,
+                 mnt_base_url=None,
+                 px_grid_base_url=None,
+                 single_request_timeout=None,
+                 wait_on_rate_limit=None,
+                 verify=None,
+                 version=None,
+                 debug=None,
+                 uses_csrf_token=None,
                  object_factory=mydict_data_factory,
                  validator=SchemaValidator):
         """Create a new IdentityServicesEngineAPI object.
@@ -863,6 +859,11 @@ class IdentityServicesEngineAPI(object):
                 Identity Services Engine APIs' request and response process.
                 Defaults to the IDENTITY_SERVICES_ENGINE_DEBUG environment variable or False
                 if the environment variable is not set.
+            uses_csrf_token(bool,basestring): Controls whether we send the CSRF token to ISE's ERS APIs.
+                Defaults to the
+                IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN environment variable or
+                ciscoisesdk.config.DEFAULT_USES_CSRF_TOKEN if the environment
+                variables are not set.
             object_factory(callable): The factory function to use to create
                 Python objects from the returned Identity Services Engine JSON data objects.
             validator(callable): The factory class with function
@@ -883,9 +884,50 @@ class IdentityServicesEngineAPI(object):
                 ['3.0.0', '3.1.0', '3.1.1'].
 
         """
+        username = username or ciscoise_environment.get_env_username()
+        password = password or ciscoise_environment.get_env_password()
+        encoded_auth = encoded_auth or ciscoise_environment.get_env_encoded_auth()
+        version = version or ciscoise_environment.get_env_version() or DEFAULT_VERSION
+        base_url = base_url or ciscoise_environment.get_env_base_url() or DEFAULT_BASE_URL
+        ui_base_url = ui_base_url or ciscoise_environment.get_env_ui_base_url()
+        ers_base_url = ers_base_url or ciscoise_environment.get_env_ers_base_url()
+        mnt_base_url = mnt_base_url or ciscoise_environment.get_env_mnt_base_url()
+        px_grid_base_url = px_grid_base_url or ciscoise_environment.get_env_px_grid_base_url()
+
+        if uses_api_gateway is None:
+            uses_api_gateway = ciscoise_environment.get_env_uses_api_gateway()
+            if uses_api_gateway is None:
+                uses_api_gateway = DEFAULT_USES_API_GATEWAY
+
+        if uses_csrf_token is None:
+            uses_csrf_token = ciscoise_environment.get_env_uses_csrf_token()
+            if uses_csrf_token is None:
+                uses_csrf_token = DEFAULT_USES_CSRF_TOKEN
+
+        if single_request_timeout is None:
+            single_request_timeout = ciscoise_environment.get_env_single_request_timeout()
+            if single_request_timeout is None:
+                single_request_timeout = DEFAULT_SINGLE_REQUEST_TIMEOUT
+
+        if wait_on_rate_limit is None:
+            wait_on_rate_limit = ciscoise_environment.get_env_wait_on_rate_limit()
+            if wait_on_rate_limit is None:
+                wait_on_rate_limit = DEFAULT_WAIT_ON_RATE_LIMIT
+
+        if verify is None:
+            verify = ciscoise_environment.get_env_verify()
+            if verify is None:
+                verify = DEFAULT_VERIFY
+
+        if debug is None:
+            debug = ciscoise_environment.get_env_debug()
+            if debug is None:
+                debug = DEFAULT_DEBUG
+
         check_type(single_request_timeout, int)
         check_type(wait_on_rate_limit, bool)
         check_type(uses_api_gateway, (bool, basestring), may_be_none=False)
+        check_type(uses_csrf_token, (bool, basestring), may_be_none=False)
         check_type(debug, (bool, basestring), may_be_none=True)
         check_type(username, basestring, may_be_none=True)
         check_type(password, basestring, may_be_none=True)
@@ -895,6 +937,9 @@ class IdentityServicesEngineAPI(object):
 
         if isinstance(uses_api_gateway, str):
             uses_api_gateway = 'true' in uses_api_gateway.lower()
+
+        if isinstance(uses_csrf_token, str):
+            uses_csrf_token = 'true' in uses_csrf_token.lower()
 
         if uses_api_gateway:
             check_type(base_url, basestring, may_be_none=False)
@@ -937,13 +982,14 @@ class IdentityServicesEngineAPI(object):
             verify=verify,
         )
 
+        self._uses_api_gateway = uses_api_gateway
+        self._uses_csrf_token = uses_csrf_token
+
         def get_access_token():
             return self.authentication.authentication_api(
                 username=username,
                 password=password,
                 encoded_auth=encoded_auth).Token
-
-        self._uses_api_gateway = uses_api_gateway
 
         # Create the API session
         # All of the API calls associated with a IdentityServicesEngineAPI object will
@@ -964,6 +1010,8 @@ class IdentityServicesEngineAPI(object):
                 verify=verify,
                 version=version,
                 debug=debug,
+                uses_csrf_token=self.uses_csrf_token,
+                get_csrf_token=self.get_csrf_token,
             )
             self._session_ers = RestSession(
                 get_access_token=get_access_token,
@@ -974,6 +1022,8 @@ class IdentityServicesEngineAPI(object):
                 verify=verify,
                 version=version,
                 debug=debug,
+                uses_csrf_token=self.uses_csrf_token,
+                get_csrf_token=self.get_csrf_token,
             )
             self._session = self._session_ers
             self._session_mnt = RestSession(
@@ -987,6 +1037,8 @@ class IdentityServicesEngineAPI(object):
                 headers={'Content-type': 'application/xml;charset=utf-8',
                          'Accept': 'application/xml'},
                 debug=debug,
+                uses_csrf_token=self.uses_csrf_token,
+                get_csrf_token=self.get_csrf_token,
             )
             self._session_px_grid = RestSession(
                 get_access_token=get_access_token,
@@ -997,6 +1049,8 @@ class IdentityServicesEngineAPI(object):
                 verify=verify,
                 version=version,
                 debug=debug,
+                uses_csrf_token=self.uses_csrf_token,
+                get_csrf_token=self.get_csrf_token,
             )
         else:
             self._session_ui = RestSession(
@@ -1008,6 +1062,8 @@ class IdentityServicesEngineAPI(object):
                 verify=verify,
                 version=version,
                 debug=debug,
+                uses_csrf_token=self.uses_csrf_token,
+                get_csrf_token=self.get_csrf_token,
             )
             self._session_ers = RestSession(
                 get_access_token=get_access_token,
@@ -1018,6 +1074,8 @@ class IdentityServicesEngineAPI(object):
                 verify=verify,
                 version=version,
                 debug=debug,
+                uses_csrf_token=self.uses_csrf_token,
+                get_csrf_token=self.get_csrf_token,
             )
             self._session = self._session_ers
             self._session_mnt = RestSession(
@@ -1031,6 +1089,8 @@ class IdentityServicesEngineAPI(object):
                 headers={'Content-type': 'application/xml;charset=utf-8',
                          'Accept': 'application/xml'},
                 debug=debug,
+                uses_csrf_token=self.uses_csrf_token,
+                get_csrf_token=self.get_csrf_token,
             )
             self._session_px_grid = RestSession(
                 get_access_token=get_access_token,
@@ -1041,6 +1101,8 @@ class IdentityServicesEngineAPI(object):
                 verify=verify,
                 version=version,
                 debug=debug,
+                uses_csrf_token=self.uses_csrf_token,
+                get_csrf_token=self.get_csrf_token,
             )
 
         _validator = validator(version).json_schema_validate
@@ -2482,6 +2544,11 @@ class IdentityServicesEngineAPI(object):
         return self._uses_api_gateway
 
     @property
+    def uses_csrf_token(self):
+        """If the Identity Services Engine ERS API requires the X-CSRF-Token to be sent."""
+        return self._uses_csrf_token
+
+    @property
     def session(self):
         """The Identity Services Engine API session."""
         return self._session
@@ -2603,3 +2670,24 @@ class IdentityServicesEngineAPI(object):
     def px_grid_base_url(self, value):
         """The px_grid base URL prefixed to the individual API endpoint suffixes for PxGrid operations."""
         self._session_px_grid.base_url = value
+
+    def get_csrf_token(self):
+        csrf_token = None
+        if not self._uses_csrf_token:
+            return csrf_token
+
+        family = "endpoint"
+        function = 'get_version'
+        if not hasattr(self, family):
+            return csrf_token
+        if not hasattr(self.endpoint, function):
+            return csrf_token
+        get_request = self.endpoint.get_version(headers={"X-CSRF-Token": "fetch"})
+        if get_request is None:
+            return csrf_token
+        if get_request.headers is None:
+            return csrf_token
+        if get_request.headers.get("X-CSRF-Token") is None:
+            return csrf_token
+        csrf_token = get_request.headers["X-CSRF-Token"]
+        return csrf_token

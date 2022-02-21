@@ -45,53 +45,10 @@ DEFAULT_WAIT_ON_RATE_LIMIT = True
 #: Controls whether to verify the server's TLS certificate or not.
 DEFAULT_VERIFY = True
 
-#: name of the environment debug variable
-DEBUG_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_DEBUG'
-
-# Identity Services Engine API version. Format: MAJOR.MINOR.PATCH
-#: name of the environment version variable
-VERSION_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_VERSION'
-
-#: name of the environment username variable
-USERNAME_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_USERNAME'
-
-#: name of the environment password variable
-PASSWORD_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_PASSWORD'
-
-#: name of the environment encoded_auth variable
-ENCODED_AUTH_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_ENCODED_AUTH'
-
-#: name of the environment base_url variable
-BASE_URL_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_BASE_URL'
-
-#: name of the environment single_request_timeout variable
-SINGLE_REQUEST_TIMEOUT_ENVIRONMENT_VARIABLE = \
-    'IDENTITY_SERVICES_ENGINE_SINGLE_REQUEST_TIMEOUT'
-
-#: name of the environment wait_on_rate_limit variable
-WAIT_ON_RATE_LIMIT_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_WAIT_ON_RATE_LIMIT'
-
-#: name of the environment verify variable
-VERIFY_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_VERIFY'
-
-#: name of the environment verify variable
-VERIFY_STRING_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_VERIFY_STRING'
-
 #: **uses_api_gateway** default value.
 #: Controls whether ISE use the gateway or not.
 DEFAULT_USES_API_GATEWAY = True
 
-#: name of the environment uses_api_gateway variable
-USES_API_GATEWAY_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY'
-
-#: name of the environment ui_base_url variable
-UI_BASE_URL_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_UI_BASE_URL'
-
-#: name of the environment ers_base_url variable
-ERS_BASE_URL_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_ERS_BASE_URL'
-
-#: name of the environment mnt_base_url variable
-MNT_BASE_URL_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_MNT_BASE_URL'
-
-#: name of the environment px_grid_base_url variable
-PX_GRID_BASE_URL_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_PX_GRID_BASE_URL'
+#: **uses_csrf_token** default value.
+#: Controls wheter we send the X-CSRF-Token to ISE' ERS APIs.
+DEFAULT_USES_CSRF_TOKEN = False

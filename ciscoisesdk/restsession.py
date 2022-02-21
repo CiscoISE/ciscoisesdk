@@ -80,7 +80,9 @@ class RestSession(object):
                  version=None,
                  headers={'Content-type': 'application/json;charset=utf-8',
                           'Accept': 'application/json'},
-                 debug=False):
+                 debug=False,
+                 uses_csrf_token=None,
+                 get_csrf_token=None):
         """Initialize a new RestSession object.
 
         Args:
@@ -104,6 +106,9 @@ class RestSession(object):
                 Identity Services Engine APIs' request and response process.
                 Defaults to the DEBUG environment variable or False
                 if the environment variable is not set.
+            uses_csrf_token(bool): Controls whether we send the CSRF token to ISE's ERS APIs.
+            get_csrf_token(callable):  The Identity Services Engine method to get a new
+                CSRF token.
 
         Raises:
             TypeError: If the parameter types are incorrect.
@@ -116,12 +121,16 @@ class RestSession(object):
         check_type(verify, (bool, basestring), may_be_none=False)
         check_type(version, basestring, may_be_none=False)
         check_type(debug, (bool), may_be_none=False)
+        check_type(uses_csrf_token, (bool), may_be_none=False)
 
         super(RestSession, self).__init__()
 
         # Initialize attributes and properties
         self._base_url = str(validate_base_url(base_url))
         self._get_access_token = get_access_token
+        self._get_csrf_token = get_csrf_token
+        self._csrf_token = None
+        self._uses_csrf_token = uses_csrf_token
         self._access_token = str(access_token)
         self._single_request_timeout = single_request_timeout
         self._wait_on_rate_limit = wait_on_rate_limit
@@ -240,6 +249,20 @@ class RestSession(object):
         self._access_token = self._get_access_token()
         self.update_headers({'authorization': 'Basic {}'.format(self.access_token)})
 
+    def set_csrf_token(self):
+        """Call the get_csrf_token method and update the session's
+        X-CSRF-Token header with the new token.
+        """
+        if self._get_csrf_token is not None and callable(self._get_csrf_token):
+            if self._csrf_token is None and self._uses_csrf_token:
+                logger.debug('Refreshing CSRF token')
+                self._csrf_token = self._get_csrf_token()
+                logger.debug('Refreshed CSRF token.')
+                self.update_headers({'X-CSRF-Token': self._csrf_token})
+
+    def reset_csrf_token(self):
+        self._csrf_token = None
+
     def abs_url(self, url):
         """Given a relative or absolute URL; return an absolute URL.
 
@@ -324,6 +347,10 @@ class RestSession(object):
         if not kwargs.get('data'):
             kwargs.pop('data', None)
 
+        requires_csrf = method in ['POST', 'PUT', 'DELETE']
+        if requires_csrf:
+            self.set_csrf_token()
+
         c = custom_refresh
         while True:
             c += 1
@@ -336,6 +363,7 @@ class RestSession(object):
                 response = self._req_session.request(method, abs_url, **kwargs)
             except socket.error:
                 # A socket error
+                self.reset_csrf_token()
                 try:
                     c += 1
                     logger.debug('Attempt {}'.format(c))
@@ -344,6 +372,7 @@ class RestSession(object):
                 except Exception as e:
                     raise ciscoisesdkException('Socket error {}'.format(e))
             except IOError as e:
+                self.reset_csrf_token()
                 if e.errno == errno.EPIPE:
                     # EPIPE error
                     try:
@@ -359,6 +388,7 @@ class RestSession(object):
                 # Check the response code for error conditions
                 check_response_code(response, erc)
             except RateLimitError as e:
+                self.reset_csrf_token()
                 # Catch rate-limit errors
                 # Wait and retry if automatic rate-limit handling is enabled
                 if self.wait_on_rate_limit:
@@ -369,11 +399,15 @@ class RestSession(object):
                     # Re-raise the RateLimitError
                     raise
             except ApiError as e:
+                self.reset_csrf_token()
                 if e.status_code == 401 and custom_refresh < 1:
                     logger.debug(pprint_response_info(response))
                     logger.debug('Refreshing access token')
                     self.refresh_token()
                     logger.debug('Refreshed token.')
+                    return self.request(method, url, erc, 1, **kwargs)
+                elif e.status_code == 403 and custom_refresh < 1:
+                    logger.debug(pprint_response_info(response))
                     return self.request(method, url, erc, 1, **kwargs)
                 else:
                     # Re-raise the ApiError
