@@ -51,10 +51,9 @@ class SupportBundleDownload(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Support Bundle Download API allows client to download support bundles provided those are generated and available in the default location.
+    | Support Bundle Download API allows client to download support bundles provided those are generated and available in the default location.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |   |
@@ -64,8 +63,7 @@ class SupportBundleDownload(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+------------------------------------------------------------------+--------------------+
     | **Attribute** | **Type** | **Required** | **Description**                                                  | **Example Values** |

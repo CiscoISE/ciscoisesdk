@@ -51,69 +51,23 @@ class InternalUser(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Internal User API allows the client to add, delete, update and search internal users.
+    | Internal User API allows the client to add, delete, update and search internal users.
 
-    Revision History
-    ----------------
+    **Revision History**
 
-    **Revision #**
-
-    **Resource Version**
-
-    **Cisco ISE Version**
-
-    **Description**
-
-    **Revision Modification**
-
-    **Attribute**
-
-    **Description**
-
-    0
-
-    1.0
-
-    1.2
-
-    Initial Cisco ISE Version
-
-    1
-
-    1.1
-
-    2.0
-
-    Cisco ISE 2.0 model changes
-
-    enablePassword
-
-    Added Attribute 'enablePassword' for TACACS
-
-    2
-
-    1.2
-
-    2.1
-
-    Cisco ISE 2.1 model changes
-
-    passwordIDStore
-
-    Added Attribute 'passwordIDStore' for choosing where passwords are stored. default value:'Internal Users'
-
-    expiryDateEnabled
-
-    Added Attribute 'expiryDateEnabled' for choosing whether ExpiryDate enabled or not . default value:'false'
-
-    expiryDate
-
-    Added Attribute 'expiryDate' to know the Expiry Date. Format is = YYYY-MM-DD
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
+    | Revision # | Resource   Version | Cisco ISE Version | Description                              | Revision Modification | Revision Modification                |
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
+    |            |                    |                   |                                          | Attribute             | Description                          |
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
+    | 0          | 1.0                | 2.3               | Initial Cisco ISE Version                |                       |                                      |
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
+    | 1          | 1.1                | 2.6               | Support new attribute Proxy Dead Timeout | proxyTimeout          | Added   int Attribute 'proxyTimeout' |
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +-------------------+----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | **Attribute**     | **Type** | **Required** | **Description**                                                                                                                                                                                 | **Default Values** | **Example Values**                   |

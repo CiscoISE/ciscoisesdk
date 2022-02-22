@@ -51,10 +51,9 @@ class SxpVpns(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    SXP VPNs API allows clients to add, get and delete SXP VPNs (SXP Domains).
+    | SXP VPNs API allows clients to add, get and delete SXP VPNs (SXP Domains).
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |   |
@@ -64,8 +63,7 @@ class SxpVpns(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+---------------------+--------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**     | **Example Values**                   |

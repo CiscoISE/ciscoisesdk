@@ -51,10 +51,9 @@ class SystemCertificate(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    System Certificate API provides the ability to create certificates like SAML, pxGrid.
+    | System Certificate API provides the ability to create certificates like SAML, pxGrid.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |   |
@@ -64,8 +63,7 @@ class SystemCertificate(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +-----------------------------+----------+--------------+-------------------------------------+----------------------------------+
     | **Attribute**               | **Type** | **Required** | **Description**                     | **Example Values**               |

@@ -51,85 +51,34 @@ class AllowedProtocols(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Allowed Protocols API allows the client to add, delete, update, search and perform actions on allowed protocols.
+    | Allowed Protocols API allows the client to add, delete, update, search and perform actions on allowed protocols.
 
-    Revision History
-    ----------------
+    **Revision History**
 
-    **Revision #**
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    | Revision # | Resource   Version | Cisco ISE Version | Description               | Revision Modification                | Revision Modification                                       |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    |            |                    |                   |                           | Attribute                            | Description                                                 |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    | 0          | 1.0                | 2.3               | Initial Cisco ISE Version |                                      |                                                             |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    | 1          | 1.1                | 2.7               | Added support for TEAP    | preferredEapProtocol                 | Added   value 'TEAP' to enum attribute preferredEapProtocol |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    |            |                    |                   |                           | allowTeap                            | Added   boolean attribute allowTeap                         |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    |            |                    |                   |                           | allowTeapEapMsChapV2                 | Added   boolean attribute allowTeapEapMsChapV2              |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    |            |                    |                   |                           | allowTeapEapMsChapV2PwdChange        | Added   boolean attribute allowTeap                         |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    |            |                    |                   |                           | allowTeapEapMsChapV2PwdChangeRetries | Added   int attribute allowTeapEapMsChapV2PwdChangeRetries  |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
+    |            |                    |                   |                           | allowTeapEapTls                      | Added   boolean attribute allowTeapEapTls                   |
+    +------------+--------------------+-------------------+---------------------------+--------------------------------------+-------------------------------------------------------------+
 
-    **Resource Version**
-
-    **Cisco ISE Version**
-
-    **Description**
-
-    **Revision Modification**
-
-    **Attribute**
-
-    **Description**
-
-    0
-
-    1.0
-
-    2.3
-
-    Initial Cisco ISE Version
-
-    1
-
-    1.1
-
-    2.7
-
-    Added support for TEAP
-
-    preferredEapProtocol
-
-    Added value 'TEAP' to enum attribute preferredEapProtocol
-
-    allowTeap
-
-    Added boolean attribute allowTeap
-
-    allowTeapEapMsChapV2
-
-    Added boolean attribute allowTeapEapMsChapV2
-
-    allowTeapEapMsChapV2PwdChange
-
-    Added boolean attribute allowTeap
-
-    allowTeapEapMsChapV2PwdChangeRetries
-
-    Added int attribute allowTeapEapMsChapV2PwdChangeRetries
-
-    allowTeapEapTls
-
-    Added boolean attribute allowTeapEapTls
-
-    allowTeapEapTlsAuthOfExpiredCerts
-
-    Added boolean attribute allowTeapEapTlsAuthOfExpiredCerts
-
-    acceptClientCertDuringTunnelEst
-
-    Added boolean attribute acceptClientCertDuringTunnelEst
-
-    enableEapChaining
-
-    Added boolean attribute enableEapChaining
-
-    allowDowngradeMsk
-
-    Added boolean attribute allowDowngradeMsk
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | **Attribute**                                   | **Type**    | **Required** | **Description**                                                                                                                                                        | **Example Values**                            |
@@ -172,14 +121,7 @@ class AllowedProtocols(object):
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | requireMessageAuth                              | Boolean     | Yes          |                                                                                                                                                                        | false                                         |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
-    | preferredEapProtocol                            | Enum        | No           | The preferredEapProtocol is required only if allowPreferredEapProtocol is true, otherwise it must be ignored. Allowed Values:                                          | PEAP                                          |
-    |                                                 |             |              | - EAP_FAST,                                                                                                                                                            |                                               |
-    |                                                 |             |              | - PEAP,                                                                                                                                                                |                                               |
-    |                                                 |             |              | - LEAP,                                                                                                                                                                |                                               |
-    |                                                 |             |              | - EAP_MD5,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - EAP_TLS,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - EAP_TTLS,                                                                                                                                                            |                                               |
-    |                                                 |             |              | - TEAP                                                                                                                                                                 |                                               |
+    | preferredEapProtocol                            | Enum        | No           | The preferredEapProtocol is required only if allowPreferredEapProtocol is true, otherwise it must be ignored.                                                          | PEAP                                          |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | eapTls                                          | List        | No           | The eapTls is required only if allowEapTls is true, otherwise it must be ignored. The object eapTls contains the settings for EAP TLS protocol                         |                                               |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
@@ -189,12 +131,7 @@ class AllowedProtocols(object):
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | - eapTlsSessionTicketTtl                        | Integer     | No           | Time to live. The eapTlsSessionTicketTtl is required only if eapTlsEnableStatelessSessionResume is true, otherwise it must be ignored                                  | 1                                             |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
-    | - eapTlsSessionTicketTtlUnits                   | Enum        | No           | Time to live time units. The eapTlsSessionTicketTtlUnits is required only if eapTlsEnableStatelessSessionResume is true, otherwise it must be ignored. Allowed Values: | SECONDS                                       |
-    |                                                 |             |              | - SECONDS,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - MINUTES,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - HOURS,                                                                                                                                                               |                                               |
-    |                                                 |             |              | - DAYS,                                                                                                                                                                |                                               |
-    |                                                 |             |              | - WEEKS                                                                                                                                                                |                                               |
+    | - eapTlsSessionTicketTtlUnits                   | Enum        | No           | Time to live time units. The eapTlsSessionTicketTtlUnits is required only if eapTlsEnableStatelessSessionResume is true, otherwise it must be ignored.                 | SECONDS                                       |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | - eapTlsSessionTicketPrecentage                 | Integer     | No           | The eapTlsSessionTicketPrecentage is required only if eapTlsEnableStatelessSessionResume is true, otherwise it must be ignored                                         | 1                                             |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
@@ -262,12 +199,7 @@ class AllowedProtocols(object):
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | - eapFastUsePacsTunnelPacTtl                    | Integer     | No           | The eapFastUsePacsTunnelPacTtl is required only if eapFastUsePacs is true, otherwise it must be ignored                                                                | 7776000                                       |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
-    | - eapFastUsePacsTunnelPacTtlUnits               | Enum        | No           | The eapFastUsePacsTunnelPacTtlUnits is required only if eapFastUsePacs is true, otherwise it must be ignored. Allowed Values:                                          | SECONDS                                       |
-    |                                                 |             |              | - SECONDS,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - MINUTES,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - HOURS,                                                                                                                                                               |                                               |
-    |                                                 |             |              | - DAYS,                                                                                                                                                                |                                               |
-    |                                                 |             |              | - WEEKS                                                                                                                                                                |                                               |
+    | - eapFastUsePacsTunnelPacTtlUnits               | Enum        | No           | The eapFastUsePacsTunnelPacTtlUnits is required only if eapFastUsePacs is true, otherwise it must be ignored.                                                          | SECONDS                                       |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | - eapFastUsePacsUseProactivePacUpdatePrecentage | Integer     | No           | The eapFastUsePacsUseProactivePacUpdatePrecentage is required only if eapFastUsePacs is true, otherwise it must be ignored                                             | 10                                            |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
@@ -284,23 +216,13 @@ class AllowedProtocols(object):
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | - eapFastUsePacsMachinePacTtl                   | Integer     | No           | The eapFastUsePacsMachinePacTtl is required only if eapFastUsePacsAllowMachineAuthentication is true, otherwise it must be ignored                                     | 1                                             |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
-    | - eapFastUsePacsMachinePacTtlUnits              | Enum        | No           | The eapFastUsePacsMachinePacTtlUnits is required only if eapFastUsePacsAllowMachineAuthentication is true, otherwise it must be ignored. Allowed Values:               | SECONDS                                       |
-    |                                                 |             |              | - SECONDS,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - MINUTES,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - HOURS,                                                                                                                                                               |                                               |
-    |                                                 |             |              | - DAYS,                                                                                                                                                                |                                               |
-    |                                                 |             |              | - WEEKS                                                                                                                                                                |                                               |
+    | - eapFastUsePacsMachinePacTtlUnits              | Enum        | No           | The eapFastUsePacsMachinePacTtlUnits is required only if eapFastUsePacsAllowMachineAuthentication is true, otherwise it must be ignored.                               | SECONDS                                       |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | - eapFastUsePacsStatelessSessionResume          | Boolean     | No           | The eapFastUsePacsStatelessSessionResume is required only if eapFastUsePacs is true, otherwise it must be ignored                                                      | false                                         |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | - eapFastUsePacsAuthorizationPacTtl             | Integer     | No           | The eapFastUsePacsAuthorizationPacTtl is required only if eapFastUsePacsStatelessSessionResume is true, otherwise it must be ignored                                   | 1                                             |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
-    | - eapFastUsePacsAuthorizationPacTtlUnits        | Enum        | No           | The eapFastUsePacsAuthorizationPacTtlUnits is required only if eapFastUsePacsStatelessSessionResume is true, otherwise it must be ignored. Allowed Values:             | SECONDS                                       |
-    |                                                 |             |              | - SECONDS,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - MINUTES,                                                                                                                                                             |                                               |
-    |                                                 |             |              | - HOURS,                                                                                                                                                               |                                               |
-    |                                                 |             |              | - DAYS,                                                                                                                                                                |                                               |
-    |                                                 |             |              | - WEEKS                                                                                                                                                                |                                               |
+    | - eapFastUsePacsAuthorizationPacTtlUnits        | Enum        | No           | The eapFastUsePacsAuthorizationPacTtlUnits is required only if eapFastUsePacsStatelessSessionResume is true, otherwise it must be ignored.                             | SECONDS                                       |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
     | - eapFastDontUsePacsAcceptClientCert            | Boolean     | No           | The eapFastDontUsePacsAcceptClientCert is required only if eapFastUsePacs is FALSE, otherwise it must be ignored                                                       | false                                         |
     +-------------------------------------------------+-------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+

@@ -51,10 +51,9 @@ class SupportBundleStatus(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Support Bundle Status API allows clients to query status of a triggered support bundle.
+    | Support Bundle Status API allows clients to query status of a triggered support bundle.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |   |
@@ -64,8 +63,7 @@ class SupportBundleStatus(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+-------------------------------------+---------------------------------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**                     | **Example Values**                                            |

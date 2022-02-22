@@ -51,161 +51,33 @@ class AuthorizationProfile(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Authorization Profile API allows the client to add, delete, update, search and perform actions on authorization profiles.
-
-    Revision History
-    ----------------
-
-    **Revision #**
-
-    **Resource Version**
-
-    **Cisco ISE Version**
-
-    **Description**
-
-    **Revision Modification**
-
-    **Attribute**
-
-    **Description**
-
-    0
-
-    1.0
-
-    2.2
-
-    Initial Cisco ISE Version
-
-    1
-
-    1.1
-
-    2.3
-
-    Support new attributes under common tasks
-
-    accessType
-
-    Added Attribute 'accessType'. Default value:'ACCESS_ACCEPT', additional values: 'ACCESS_REJECT'
-
-    authzProfileType
-
-    Added Attribute 'authzProfileType' to differentiate between types of authorization profiles. Default value:'SWITCH' (used for Standard Authorization Profiles) , additional values:'TACACS', 'TRUSTSEC'
-
-    reauth
-
-    Added Attribute 'reauth' to determine reauthentication policy
-
-    webRedirection
-
-    Added Attribute 'webRedirection' to support selection of portal redirection
-
-    acl
-
-    Added String Attribute 'acl'
-
-    trackMovement
-
-    Added Boolean Attribute 'trackMovement'
-
-    serviceTemplate
-
-    Added Boolean Attribute 'serviceTemplate'
-
-    easywiredSessionCandidate
-
-    Added Boolean Attribute 'easywiredSessionCandidate'
-
-    daclName
-
-    Added String Attribute 'daclName'
-
-    voiceDomainPermission
-
-    Added Boolean Attribute 'voiceDomainPermission'
-
-    neat
-
-    Added Boolean Attribute 'neat'
-
-    webAuth
-
-    Added Boolean Attribute 'webAuth'
-
-    autoSmartPort
-
-    Added String Attribute 'autoSmartPort'
-
-    interfaceTemplate
-
-    Added String Attribute 'interfaceTemplate'
-
-    avcProfile
-
-    Added String Attribute 'avcProfile'
-
-    macSecPolicy
-
-    Added Attribute 'macSecPolicy'. Possible values:'MUST_SECURE', 'MUST_NOT_SECURE', 'SHOULD_SECURE'
-
-    asaVpn
-
-    Added String Attribute 'asaVpn'. String represent a RADIUS dictionary attribute
-
-    2
-
-    1.2
-
-    2.4
-
-    Support Advanced Attributes
-
-    advancedAttributes
-
-    Added Attribute 'advancedAttributes' to support advanced attributes configuration
-
-    profileName
-
-    Added Attribute 'profileName' to support Network Device Profiles
-
-    3
-
-    1.3
-
-    2.6
-
-    Support new attributes under common tasks
-
-    ipv6DaclName
-
-    Added String Attribute 'ipv6DaclName'
-
-    airespaceIPv6ACL
-
-    Added String Attribute 'airespaceIPv6ACL'
-
-    ipv6ACLFilter
-
-    Added String Attribute 'ipv6ACLFilter'
-
-    4
-
-    1.4
-
-    3.1
-
-    Support new attributes under Common Tasks
-
-    uniqueIdentifier
-
-    Added String Attribute 'uniqueIdentifier'. String represent a RADIUS dictionary attribute
+    | Authorization Profile API allows the client to add, delete, update, search and perform actions on authorization profiles.
+
+    **Revision History**
+
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Revision # | Resource   Version | Cisco ISE Version | Description                                 | Revision Modification | Revision Modification                                                                                                                                                                                         |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    |            |                    |                   |                                             | Attribute             | Description                                                                                                                                                                                                   |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | 0          | 1.0                | 2.2               | Initial Cisco ISE Version                   |                       |                                                                                                                                                                                                               |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | 1          | 1.1                | 2.3               | Support new attributes under common   tasks | accessType            | Added Attribute 'accessType'. Default value:'ACCESS_ACCEPT',   additional values: 'ACCESS_REJECT'                                                                                                             |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    |            |                    |                   |                                             | authzProfileType      | Added   Attribute 'authzProfileType' to differentiate between types of authorization   profiles. Default value:'SWITCH' (used for Standard Authorization Profiles)   , additional values:'TACACS', 'TRUSTSEC' |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    |            |                    |                   |                                             | reauth                | Added   Attribute 'reauth' to determine reauthentication policy                                                                                                                                               |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    |            |                    |                   |                                             | webRedirection        | Added   Attribute 'webRedirection' to support selection of portal redirection                                                                                                                                 |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    |            |                    |                   |                                             | acl                   | Added String Attribute 'acl'                                                                                                                                                                                  |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    |            |                    |                   |                                             | trackMovement         | Added Boolean Attribute   'trackMovement'                                                                                                                                                                     |
+    +------------+--------------------+-------------------+---------------------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
     | **Attribute**                        | **Type**  | **Required** | **Description**                                                                                                                                                                                                | **Default Values** | **Example Values**               |
@@ -236,14 +108,10 @@ class AuthorizationProfile(object):
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
     | - displayCertificatesRenewalMessages | Boolean   | No           | The displayCertificatesRenewalMessages is mandatory when 'WebRedirectionType' value is 'CentralizedWebAuth'. For all other 'WebRedirectionType' values the field must be ignored                               | true               |                                  |
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
-    | accessType                           | Enum      | No           | Allowed Values:                                                                                                                                                                                                | ACCESS_ACCEPT      |                                  |
-    |                                      |           |              | - ACCESS_ACCEPT,                                                                                                                                                                                               |                    |                                  |
-    |                                      |           |              | - ACCESS_REJECT                                                                                                                                                                                                |                    |                                  |
+    | accessType                           | Enum      | No           | Allowed Values: ACCESS_ACCEPT, ACCESS_REJECT                                                                                                                                                                   | ACCESS_ACCEPT      |                                  |
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
-    | authzProfileType                     | Enum      | No           | Allowed Values:                                                                                                                                                                                                | SWITCH             |                                  |
-    |                                      |           |              | - SWITCH,                                                                                                                                                                                                      |                    |                                  |
-    |                                      |           |              | - TRUSTSEC,                                                                                                                                                                                                    |                    |                                  |
-    |                                      |           |              | - TACACS                                                                                                                                                                                                       |                    |                                  |
+    | authzProfileType                     | Enum      | No           | Allowed Values: SWITCH, TRUSTSEC, TACACS                                                                                                                                                                       | SWITCH             |                                  |
+    +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
     |                                      |           |              | SWITCH is used for Standard Authorization Profiles                                                                                                                                                             |                    |                                  |
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
     | profileName                          | String    | No           |                                                                                                                                                                                                                | Cisco              |                                  |
@@ -274,16 +142,11 @@ class AuthorizationProfile(object):
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
     | webAuth                              | Boolean   | No           |                                                                                                                                                                                                                | false              |                                  |
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
-    | macSecPolicy                         | Enum      | No           | Allowed Values:                                                                                                                                                                                                |                    | MUST_SECURE                      |
-    |                                      |           |              | - MUST_SECURE,                                                                                                                                                                                                 |                    |                                  |
-    |                                      |           |              | - MUST_NOT_SECURE,                                                                                                                                                                                             |                    |                                  |
-    |                                      |           |              | - SHOULD_SECURE                                                                                                                                                                                                |                    |                                  |
+    | macSecPolicy                         | Enum      | No           | Allowed Values: MUST_SECURE, MUST_NOT_SECURE, SHOULD_SECURE                                                                                                                                                    |                    | MUST_SECURE                      |
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
     | reauth                               | List      | No           |                                                                                                                                                                                                                |                    |                                  |
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
-    | - connectivity                       | Enum      | Yes          | Allowed Values:                                                                                                                                                                                                |                    | RADIUS_REQUEST                   |
-    |                                      |           |              | - DEFAULT,                                                                                                                                                                                                     |                    |                                  |
-    |                                      |           |              | - RADIUS_REQUEST                                                                                                                                                                                               |                    |                                  |
+    | - connectivity                       | Enum      | Yes          | Allowed Values: DEFAULT, RADIUS_REQUEST                                                                                                                                                                        |                    | RADIUS_REQUEST                   |
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+
     | - timer                              | Integer   | Yes          | Valid range is 1-65535                                                                                                                                                                                         |                    | 1800                             |
     +--------------------------------------+-----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------------------+

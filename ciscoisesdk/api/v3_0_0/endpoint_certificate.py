@@ -51,10 +51,9 @@ class EndpointCertificate(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Endpoint Certificate API allows the client to create endpoint certificates signed by the Cisco ISE Internal CA. This API can takes in certificate request details, create a RSA key pair, create a certificate and return the resulting key pair and certificate as a ZIP file. ZIP files are returned as an octet stream.
+    | Endpoint Certificate API allows the client to create endpoint certificates signed by the Cisco ISE Internal CA. This API can takes in certificate request details, create a RSA key pair, create a certificate and return the resulting key pair and certificate as a ZIP file. ZIP files are returned as an octet stream.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class EndpointCertificate(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +--------------------+-------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
     | **Attribute**      | **Type**    | **Required** | **Description**                                                                                                                                                                                                 | **Example Values**        |
@@ -78,11 +76,7 @@ class EndpointCertificate(object):
     +--------------------+-------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
     | certTemplateName   | String      | Yes          | Name of an Internal CA template                                                                                                                                                                                 | Certificate_Template_Name |
     +--------------------+-------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
-    | format             | Enum        | Yes          | Allowed values:                                                                                                                                                                                                 | PKCS8                     |
-    |                    |             |              | - PKCS12,                                                                                                                                                                                                       |                           |
-    |                    |             |              | - PKCS12_CHAIN,                                                                                                                                                                                                 |                           |
-    |                    |             |              | - PKCS8,                                                                                                                                                                                                        |                           |
-    |                    |             |              | - PKCS8_CHAIN                                                                                                                                                                                                   |                           |
+    | format             | Enum        | Yes          | Allowed values: PKCS12, PKCS12_CHAIN, PKCS8, PKCS8_CHAIN                                                                                                                                                        | PKCS8                     |
     +--------------------+-------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
     | password           | String      | Yes          | Protects the private key. Must have more than 8 characters, less than 15 characters, at least one upper case letter, at least one lower case letter, at least one digit, and can only contain [A-Z][a-z][0-9]_# | Password_123              |
     +--------------------+-------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+

@@ -51,13 +51,12 @@ class SecurityGroups(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    SGT API allows the client to search SGTs.
+    | SGT API allows the client to search SGTs.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+-----------------------------+---------------------------+-------------------------------------------------------------------------------+
-    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**             | **Revision Modification** |                                                                               |
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**             | **Revision Modification** | **Revision Modification**                                                     |
     +----------------+----------------------+-----------------------+-----------------------------+---------------------------+-------------------------------------------------------------------------------+
     |                |                      |                       |                             | **Attribute**             | **Description**                                                               |
     +----------------+----------------------+-----------------------+-----------------------------+---------------------------+-------------------------------------------------------------------------------+
@@ -74,8 +73,7 @@ class SecurityGroups(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +-----------------+----------+--------------+------------------------------------------------+--------------------+--------------------------------------+
     | **Attribute**   | **Type** | **Required** | **Description**                                | **Default Values** | **Example Values**                   |

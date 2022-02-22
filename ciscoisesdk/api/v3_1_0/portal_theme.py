@@ -51,10 +51,9 @@ class PortalTheme(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Portal Theme API allows the client to add, delete, update and search Portal Theme among other operations which are available from all the portals.
+    | Portal Theme API allows the client to add, delete, update and search Portal Theme among other operations which are available from all the portals.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class PortalTheme(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+-------------------------------------+--------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**                     | **Example Values**                   |

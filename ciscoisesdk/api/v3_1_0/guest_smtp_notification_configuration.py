@@ -51,10 +51,9 @@ class GuestSmtpNotificationConfiguration(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Guest SMTP notification configuration API is a global setting for enabling email notifications within guest application. These APIs allow to create, update and retrieve the notification settings. The create API may not be required to be used as of Cisco ISE Release 2.2 because the single SMTP notification configuration is the only one used and it always gets created during the Cisco ISE application initialization period.
+    | Guest SMTP notification configuration API is a global setting for enabling email notifications within guest application. These APIs allow to create, update and retrieve the notification settings. The create API may not be required to be used as of Cisco ISE Release 2.2 because the single SMTP notification configuration is the only one used and it always gets created during the Cisco ISE application initialization period.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class GuestSmtpNotificationConfiguration(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------------------+----------+--------------+-------------------------------------------------------------------------------------------+------------------------+--------------------------------------+
     | **Attribute**             | **Type** | **Required** | **Description**                                                                           | **Default Values**     | **Example Values**                   |

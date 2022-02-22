@@ -51,13 +51,12 @@ class SxpConnections(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    SXP Connections API allows clients to add, get, update and delete the Security Group Tag (SGT) Exchange Protocol (SXP) connections.
+    | SXP Connections API allows clients to add, get, update and delete the Security Group Tag (SGT) Exchange Protocol (SXP) connections.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+-----------------------------+---------------------------+----------------------------------------------------+
-    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**             | **Revision Modification** |                                                    |
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**             | **Revision Modification** | **Revision Modification**                          |
     +----------------+----------------------+-----------------------+-----------------------------+---------------------------+----------------------------------------------------+
     |                |                      |                       |                             | **Attribute**             | **Description**                                    |
     +----------------+----------------------+-----------------------+-----------------------------+---------------------------+----------------------------------------------------+
@@ -68,8 +67,7 @@ class SxpConnections(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+---------------------+--------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**     | **Example Values**                   |

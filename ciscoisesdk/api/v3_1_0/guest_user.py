@@ -51,10 +51,9 @@ class GuestUser(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Guest User API allows the client to add, delete, update and search guest users among other operations which are available from the sponsor portal. Please note that each API description shows whether the API is supported in bulk operation. The bulk section is showing only 'create' bulk operation. However, all other operation which are bulk supported can be used in the same way.
+    | Guest User API allows the client to add, delete, update and search guest users among other operations which are available from the sponsor portal. Please note that each API description shows whether the API is supported in bulk operation. The bulk section is showing only 'create' bulk operation. However, all other operation which are bulk supported can be used in the same way.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+-----------------------------------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**                                     |
@@ -66,8 +65,7 @@ class GuestUser(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +------------------------+----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | **Attribute**          | **Type** | **Required** | **Description**                                                                                                                                     | **Default Values** | **Example Values**                   |

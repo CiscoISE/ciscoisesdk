@@ -51,10 +51,9 @@ class IdentityGroups(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Identity Groups API allows the client to search identity groups.
+    | Identity Groups API allows the client to search identity groups.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**                       |
@@ -66,8 +65,7 @@ class IdentityGroups(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+-------------------------------------+---------------------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**                     | **Example Values**                                |

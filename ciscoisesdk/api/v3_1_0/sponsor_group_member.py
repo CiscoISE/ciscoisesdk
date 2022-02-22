@@ -51,10 +51,9 @@ class SponsorGroupMember(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Sponsor Group API allows the client to search the group members from different identity stores configured in the GUI.
+    | Sponsor Group API allows the client to search the group members from different identity stores configured in the GUI.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |   |
@@ -64,8 +63,7 @@ class SponsorGroupMember(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+---------------------+--------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**     | **Example Values**                   |

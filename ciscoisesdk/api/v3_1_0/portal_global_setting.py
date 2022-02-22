@@ -51,10 +51,9 @@ class PortalGlobalSetting(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    The Portal Global Setting API allows the user to customize the text that is displayed in the Cisco ISE portals. This global setting controls whether HTML alone or both HTML and Javascript are permitted to be used in customized text.
+    | The Portal Global Setting API allows the user to customize the text that is displayed in the Cisco ISE portals. This global setting controls whether HTML alone or both HTML and Javascript are permitted to be used in customized text.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,18 +63,15 @@ class PortalGlobalSetting(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
-    +---------------+-------------+--------------+---------------------+--------------------------------------+
-    | **Attribute** | **Type**    | **Required** | **Description**     | **Example Values**                   |
-    +---------------+-------------+--------------+---------------------+--------------------------------------+
-    | id            | String      | Yes          | Resource UUID value | 21013cb2-d030-4fb1-9ba2-35757634d770 |
-    +---------------+-------------+--------------+---------------------+--------------------------------------+
-    | customization | Enum        | Yes          | Allowed values:     | HTML                                 |
-    |               |             |              | - HTML,             |                                      |
-    |               |             |              | - HTMLANDJAVASCRIPT |                                      |
-    +---------------+-------------+--------------+---------------------+--------------------------------------+
+    +---------------+-------------+--------------+--------------------------------------------+--------------------------------------+
+    | **Attribute** | **Type**    | **Required** | **Description**                            | **Example Values**                   |
+    +---------------+-------------+--------------+--------------------------------------------+--------------------------------------+
+    | id            | String      | Yes          | Resource UUID value                        | 21013cb2-d030-4fb1-9ba2-35757634d770 |
+    +---------------+-------------+--------------+--------------------------------------------+--------------------------------------+
+    | customization | Enum        | Yes          | Allowed values: HTML, HTMLANDJAVASCRIPT    | HTML                                 |
+    +---------------+-------------+--------------+--------------------------------------------+--------------------------------------+
 
     """
 

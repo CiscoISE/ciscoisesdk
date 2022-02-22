@@ -51,10 +51,9 @@ class GuestType(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Guest Type API allows the client to add, delete, update and search guest types.
+    | Guest Type API allows the client to add, delete, update and search guest types.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class GuestType(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +----------------------------------+-----------+--------------+-------------------------------------------------------------------------------+------------------------------+----------------------------------------------------------------------------------+
     | **Attribute**                    | **Type**  | **Required** | **Description**                                                               | **Default Values**           | **Example Values**                                                               |

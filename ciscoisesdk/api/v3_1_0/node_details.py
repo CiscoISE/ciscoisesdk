@@ -51,13 +51,12 @@ class NodeDetails(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Node Details API allows the client to get deployment node details, get all nodes and filter nodes based on NodeServiceTypes.
+    | Node Details API allows the client to get deployment node details, get all nodes and filter nodes based on NodeServiceTypes.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
-    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**                                   | **Revision Modification** |                                                                                        |
+    | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**                                   | **Revision Modification** | **Revision Modification**                                                              |
     +----------------+----------------------+-----------------------+---------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
     |                |                      |                       |                                                   | **Attribute**             | **Description**                                                                        |
     +----------------+----------------------+-----------------------+---------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
@@ -72,8 +71,7 @@ class NodeDetails(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +------------------+----------+--------------+-------------------------------------+--------------------------------------+
     | **Attribute**    | **Type** | **Required** | **Description**                     | **Example Values**                   |

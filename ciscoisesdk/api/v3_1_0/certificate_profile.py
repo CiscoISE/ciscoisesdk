@@ -51,10 +51,9 @@ class CertificateProfile(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    The certificate profile API allows the client to add, search and perform actions on the certificate profiles.
+    | The certificate profile API allows the client to add, search and perform actions on the certificate profiles.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |
@@ -64,8 +63,7 @@ class CertificateProfile(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
     | **Attribute**             | **Type**  | **Required** | **Description**                                                                                                   | **Default Values**  | **Example Values**                   |
@@ -90,14 +88,9 @@ class CertificateProfile(object):
     |                           |           |              | - SUBJECT_ALTERNATIVE_NAME_DNS.                                                                                   |                     |                                      |
     |                           |           |              | - Additional internal value ALL_SUBJECT_AND_ALTERNATIVE_NAMES is used automatically when usernameFrom=UPN         |                     |                                      |
     +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
-    | matchMode                 | ENUM      | No           | Match mode of the Certificate Profile. Allowed values:                                                            | NEVER               |                                      |
-    |                           |           |              | - NEVER                                                                                                           |                     |                                      |
-    |                           |           |              | - RESOLVE_IDENTITY_AMBIGUITY                                                                                      |                     |                                      |
-    |                           |           |              | - BINARY_COMPARISON                                                                                               |                     |                                      |
+    | matchMode                 | ENUM      | No           | Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY,  BINARY_COMPARISON      | NEVER               |                                      |
     +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
-    | usernameFrom              | ENUM      | No           | The attribute in the certificate where the user name should be taken from. Allowed values:                        | CERTIFICATE         |                                      |
-    |                           |           |              | - CERTIFICATE (for a specific attribute as defined in certificateAttributeName)                                   |                     |                                      |
-    |                           |           |              | - UPN (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)            |                     |                                      |
+    | usernameFrom              | ENUM      | No           | The attribute in the certificate where the user name should be taken from.                                        | CERTIFICATE         |                                      |
     +---------------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------+
 
     """

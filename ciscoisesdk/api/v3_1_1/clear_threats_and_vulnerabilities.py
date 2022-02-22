@@ -51,10 +51,9 @@ class ClearThreatsAndVulnerabilities(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Clear Threats and Vulnerabilities API allows the user to delete the ThreatContext and Threat events that are associated with the given MAC Address.
+    | Clear Threats and Vulnerabilities API allows the user to delete the ThreatContext and Threat events that are associated with the given MAC Address.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class ClearThreatsAndVulnerabilities(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+------------------------------------+----------------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**                    | **Example Values**                           |

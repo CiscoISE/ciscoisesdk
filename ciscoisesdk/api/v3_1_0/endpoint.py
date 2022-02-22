@@ -51,65 +51,27 @@ class Endpoint(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Endpoint API allows the client to add, delete, update, search, register and de-register endpoints. Please note that each API description shows whether the API is supported in bulk operation. The Bulk section is showing only 'create' bulk operation however, all other operation which are bulk supported can be used in same way.
+    | Endpoint API allows the client to add, delete, update, search, register and de-register endpoints. Please note that each API description shows whether the API is supported in bulk operation. The Bulk section is showing only 'create' bulk operation however, all other operation which are bulk supported can be used in same way.
 
-    Revision History
-    ----------------
+    **Revision History**
 
-    **Revision #**
-
-    **Resource Version**
-
-    **Cisco ISE Version**
-
-    **Description**
-
-    **Revision Modification**
-
-    **Attribute**
-
-    **Description**
-
-    0
-
-    1.0
-
-    1.3
-
-    Initial Cisco ISE Version
-
-    1
-
-    1.1
-
-    2.1
-
-    Cisco ISE 2.1 model changes
-
-    customAttributes
-
-    Added custom attibutes for the user to include custom attributes when adding endpoints to Cisco ISE
-
-    2
-
-    1.2
-
-    2.2
-
-    Cisco ISE 2.2 model changes
-
-    apiAdded
-
-    Added custom operation to get list of rejected endpoints: '/getrejectedendpoints'
-
-    apiAdded
-
-    Added custom operation to release rejected endpoint: '{id}/releaserejectedendpoint'
+    +------------+------------------+---------------------+-------------------------------+-------------------------+-------------------------------------------------------------------------------------------------------+
+    | Revision # | Resource Version | Cisco   ISE Version | Description                   | Revision   Modification |                                                                                                       |
+    +------------+------------------+---------------------+-------------------------------+-------------------------+-------------------------------------------------------------------------------------------------------+
+    |            |                  |                     |                               | Attribute               | Description                                                                                           |
+    +------------+------------------+---------------------+-------------------------------+-------------------------+-------------------------------------------------------------------------------------------------------+
+    | 0          | 1.0              | 1.3                 | Initial Cisco ISE Version     |                         |                                                                                                       |
+    +------------+------------------+---------------------+-------------------------------+-------------------------+-------------------------------------------------------------------------------------------------------+
+    | 1          | 1.1              | 2.1                 | Cisco ISE 2.1   model changes | customAttributes        | Added custom attibutes for the   user to include custom attributes when adding endpoints to Cisco ISE |
+    +------------+------------------+---------------------+-------------------------------+-------------------------+-------------------------------------------------------------------------------------------------------+
+    | 2          | 1.2              | 2.2                 | Cisco ISE 2.2 model changes   | apiAdded                | Added custom   operation to get list of rejected endpoints: '/getrejectedendpoints'                   |
+    +------------+------------------+---------------------+-------------------------------+-------------------------+-------------------------------------------------------------------------------------------------------+
+    |            |                  |                     |                               | apiAdded                | Added custom   operation to release rejected endpoint: '{id}/releaserejectedendpoint'                 |
+    +------------+------------------+---------------------+-------------------------------+-------------------------+-------------------------------------------------------------------------------------------------------+
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +-------------------------+----------+--------------+-------------------------------------+--------------------------------------+
     | **Attribute**           | **Type** | **Required** | **Description**                     | **Example Values**                   |
