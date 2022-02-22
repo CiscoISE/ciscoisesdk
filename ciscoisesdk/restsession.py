@@ -138,7 +138,7 @@ class RestSession(object):
         self._version = version
         self._debug = debug
 
-        if debug:
+        if self._debug:
             logger.setLevel(logging.DEBUG)
             logger.propagate = True
         else:
@@ -183,11 +183,6 @@ class RestSession(object):
         self._base_url = str(validate_base_url(value))
 
     @property
-    def access_token(self):
-        """The Identity Services Engine access token used for this session."""
-        return self._access_token
-
-    @property
     def single_request_timeout(self):
         """The timeout (seconds) for a single HTTP REST API request."""
         return self._single_request_timeout
@@ -224,8 +219,31 @@ class RestSession(object):
 
     @property
     def debug(self):
-        """The Identity Services Engine access token used for this session."""
+        """If log information about this REST session of the Identity Services Engine API's request and response process is shown."""
         return self._debug
+
+    @debug.setter
+    def debug(self, value):
+        """If log information about this REST session of the Identity Services Engine API's request and response process is shown."""
+        self._debug = value
+        if self._debug:
+            logger.setLevel(logging.DEBUG)
+            logger.propagate = True
+        else:
+            logger.setLevel(logging.INFO)
+
+    @property
+    def uses_csrf_token(self):
+        """If this RestSession requires the X-CSRF-Token to be sent."""
+        return self._uses_csrf_token
+
+    @uses_csrf_token.setter
+    def uses_csrf_token(self, value):
+        """If this RestSession requires the X-CSRF-Token to be sent."""
+        check_type(value, (bool, basestring), may_be_none=False)
+        self._uses_csrf_token = value
+        if isinstance(self._uses_csrf_token, str):
+            self._uses_csrf_token = 'true' in self._uses_csrf_token.lower()
 
     def update_headers(self, headers):
         """Update the HTTP headers used for requests in this session.
@@ -247,7 +265,7 @@ class RestSession(object):
         auth header with the new token.
         """
         self._access_token = self._get_access_token()
-        self.update_headers({'authorization': 'Basic {}'.format(self.access_token)})
+        self.update_headers({'authorization': 'Basic {}'.format(self._access_token)})
 
     def set_csrf_token(self):
         """Call the get_csrf_token method and update the session's
