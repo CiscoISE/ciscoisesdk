@@ -234,9 +234,9 @@ In this case, you could still do it manually like in the following code fragment
 .. code-block:: python
 
     >>> endpoint_id_to_delete = "be46f4f0-932f-11ec-aa4c-8e0da8a23ad8"
-    >>> get_request = api.endpoint.get_version(headers={"X-CSRF-TOKEN": "fetch"})
+    >>> get_request = api.endpoint.get_version(headers={"X-CSRF-Token": "fetch"})
     >>> r2 = api.endpoint.delete_by_id(id=endpoint_id_to_delete,
-    ...                                headers={"X-CSRF-TOKEN": get_request.headers["X-CSRF-Token"]})
+    ...                                headers={"X-CSRF-Token": get_request.headers["X-CSRF-Token"]})
 
 
 API Gateway
