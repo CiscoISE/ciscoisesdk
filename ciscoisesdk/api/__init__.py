@@ -2860,6 +2860,13 @@ class IdentityServicesEngineAPI(object):
         """The Identity Services Engine PxGrid API session."""
         return self._session_px_grid
 
+    @property
+    def access_token(self):
+        """DEPRECATED: The access token used for API calls to the Identity Services Engine service. Property will be removed soon."""
+        warnings.warn("Property will be removed soon in favor of ciscoisesdk.api.username, ciscoisesdk.api.is_password and ciscoisesdk.api.is_encoded_auth",
+                      FutureWarning)
+        return self._session.access_token
+
     @username.setter
     def username(self, value):
         """HTTP Basic Auth username.

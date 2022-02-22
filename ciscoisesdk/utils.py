@@ -43,6 +43,8 @@ import urllib.parse
 from builtins import *
 from collections import OrderedDict, namedtuple
 from datetime import datetime, timedelta, tzinfo
+from base64 import b64decode
+
 from past.builtins import basestring
 
 EncodableFile = namedtuple('EncodableFile',
@@ -399,3 +401,39 @@ def walk_through_dict(resp, access_next_list, omit_first_single_key=False):
 def get_err_message(err_response, access_next_list):
     (found, value) = walk_through_dict(err_response, access_next_list, omit_first_single_key=True)
     return value if found else None
+
+
+def extract_authorization_data(authorization_header):
+    authorization_data = ""
+    authorization_header_ = bytes(authorization_header.replace('Basic ', ''), 'utf-8')
+    authorization_header_ = b64decode(authorization_header_)
+    authorization_header_str = authorization_header_.decode('utf-8')
+    elements = authorization_header_str.split(':')
+    if len(elements) == 2:
+        (username, password) = elements
+        authorization_data = "\nUsername: {username}\nPassword: {password}\n".format(
+            username=username,
+            password=password)
+    return authorization_data
+
+
+def get_exception_additional_data(**kwargs):
+    additional_data = ""
+    headers = kwargs.get('headers')
+    response = kwargs.get('response')
+    _headers = {}
+    status_code_to_give_credentials = [401, 403]
+    headers_with_credentials = ['Authorization', 'X-CSRF-Token']
+
+    if hasattr(response, 'status_code'):
+        if response.status_code in status_code_to_give_credentials:
+            if headers:
+                for sensitive_header in headers_with_credentials:
+                    if headers.get(sensitive_header):
+                        _headers[sensitive_header] = headers[sensitive_header]
+                additional_data += '\n'.join(['{}: {}'.format(a, b) for a, b in _headers.items()])
+
+    authorization_header = _headers.get('authorization') or _headers.get('Authorization') or ''
+    if authorization_header:
+        additional_data += extract_authorization_data(authorization_header)
+    return additional_data

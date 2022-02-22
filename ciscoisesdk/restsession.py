@@ -54,6 +54,7 @@ from .response_codes import EXPECTED_RESPONSE_CODE
 from .utils import (
     check_type, validate_base_url,
     pprint_request_info, pprint_response_info,
+    get_exception_additional_data,
 )
 from .misc import (
     check_response_code
@@ -181,6 +182,13 @@ class RestSession(object):
         """The base URL for the API endpoints."""
         check_type(value, basestring, may_be_none=False)
         self._base_url = str(validate_base_url(value))
+
+    @property
+    def access_token(self):
+        """DEPRECATED: The access token used for API calls to the Identity Services Engine service. Property will be removed soon."""
+        warnings.warn("Property will be removed soon in favor of ciscoisesdk.api.username, ciscoisesdk.api.is_password and ciscoisesdk.api.is_encoded_auth",
+                      FutureWarning)
+        return self._access_token
 
     @property
     def single_request_timeout(self):
@@ -404,7 +412,8 @@ class RestSession(object):
                     raise ciscoisesdkException('IOError {}'.format(e))
             try:
                 # Check the response code for error conditions
-                check_response_code(response, erc)
+                check_response_code(response, erc,
+                                    additional_data=get_exception_additional_data(headers=self.headers, response=response))
             except RateLimitError as e:
                 self.reset_csrf_token()
                 # Catch rate-limit errors

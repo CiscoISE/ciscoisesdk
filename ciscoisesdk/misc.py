@@ -40,7 +40,7 @@ from .exceptions import (
 from .response_codes import RATE_LIMIT_RESPONSE_CODE
 
 
-def check_response_code(response, expected_response_code):
+def check_response_code(response, expected_response_code, **kwargs):
     """Check response code against the expected code; raise ApiError.
 
     Checks the requests.response.status_code against the provided expected
@@ -60,6 +60,6 @@ def check_response_code(response, expected_response_code):
     if response.status_code in expected_response_code:
         pass
     elif response.status_code == RATE_LIMIT_RESPONSE_CODE:
-        raise RateLimitError(response)
+        raise RateLimitError(response, **kwargs)
     else:
-        raise ApiError(response)
+        raise ApiError(response, **kwargs)
