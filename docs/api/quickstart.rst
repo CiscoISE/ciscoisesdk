@@ -180,7 +180,7 @@ Use the arguments to provide the URLs required depending on the uses_api_gateway
 
 .. note::
     If uses_csrf_token is True, the ciscoisesdk assumes that your ISE CSRF Check is enabled.
-    Moreover, it assumes you need the ciscoisesdk to manage the CSRF token automatically for you.
+    Furthermore, it assumes you need the ciscoisesdk to manage the CSRF token automatically for you.
 
 
 .. code-block:: python
@@ -225,10 +225,10 @@ CSRF Token Check
 ----------------
 
 If `uses_csrf_token` is True, the ciscoisesdk assumes that your ISE CSRF Check is enabled.
-Moreover, it assumes you need the ciscoisesdk to manage the CSRF token **automatically** for you.
+Furthermore, it presumes you need the ciscoisesdk to manage the CSRF token **automatically** for you.
 
 If `uses_csrf_token` is False, the ciscoisesdk assumes that your ISE CSRF Check is disabled.
-Moreover, it assumes you do not need the ciscoisesdk to send CSRF token for POST/PUT/DELETE operations.
+Additionally, it supposes you do not need the ciscoisesdk to send CSRF token for POST/PUT/DELETE operations.
 In this case, you could still do it manually like in the following code fragment:
 
 .. code-block:: python
