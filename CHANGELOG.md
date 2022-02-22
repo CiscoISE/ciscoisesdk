@@ -8,22 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.5.0] - 2022-02-21
 
-### Removed
-
-- Removed `access_token` property from `IdentityServicesEngineAPI` and `RestSession`.
-
 ### Changed
 
+- Marked `access_token` property to be removed in `IdentityServicesEngineAPI` and `RestSession`.
 - Changed the way of notifying Deprecation of version 3.0.0 of ISE from print to warning.
 - Incremented `IdentityServicesEngineAPI` and `RestSession` constructor parameter count.
 - Changed access method an imports used for environment variables and default values in api/__init__.py.
 - Changed `IdentityServicesEngineAPI`'s inner properties, getters, and setters to handle only the class itself.
 - `RestSession` to request for a refreshed CSRF token if `uses_csrf_token` is enabled.
 - Replaced the name of headers checked for ERS methods from "X-CSRF-TOKEN" to "X-CSRF-Token".
+- Changed `ApiError` message when status_code is 401 or 403 to include reference to `additional_data` property.
 
 ### Added
 
 - Support for "CSRF Check for Enhanced Security" for the ISE ERS API.
+
+- Support to have additional_data for `ApiError` when HTTP status code are 401 or 403. The additional_data returns a string with:
+  + Authorization header used.
+  + X-CSRF-Token header used if it was found.
+  + Username used.
+  + Password used.
 
 - Support for managing changes of the `IdentityServicesEngineAPI`'s properties:
   + `initialize_authentication` function.
@@ -76,6 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New `change_encoded_auth` function for `IdentityServicesEngineAPI`.
 - New `debug` setter funtion for `RestSession`.
 - New `uses_csrf_token` getter and setter funtions for `RestSession`.
+- New `additional_data` property in `ApiError`.
 
 ### Fixed
 
