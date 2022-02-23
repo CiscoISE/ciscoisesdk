@@ -96,23 +96,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.1] - 2022-01-20
 
 ### Changed
+
 - Update module inner documentation.
 - Downgrade requirements file to use poetry versions.
 ## [1.4.0] - 2022-01-19
 
 ### Changed
+
 - Update requirements
+
 ### Fixed
+
 - Update pagination, get_next_page inner logic and location from utils to pagination.
 
 ## [1.3.1] - 2021-12-13
 
 ### Changed
+
 - Fixes utils.get_next_page generator starting default page
 
 ## [1.3.0] - 2021-12-13
 
 ### Added
+
 - Adds licensing module
 - Adds node_services module
 - Adds patching module
@@ -128,6 +134,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adds pan_ha.update_pan_ha function
 
 ### Removed
+
 - Removes pan_ha.disable_pan_ha function
 - Removes pan_ha.enable_pan_ha function
 - Removes replication_status module
@@ -136,38 +143,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.0] - 2021-11-24
 
 ### Added
+
 - Adds notice for 3.0.0 (soon to be deprecated)
 - Adds Trust Sec endpoints to ISE version 3.1.0
 
 ### Changed
+
 - Fixes paths for Policy endpoints (get_device_admin_profiles, get_network_access_profiles)
 - Updates ISE version 3.1.0 as separate version
+
 ### Removed
+
 - Removes link of 3.1.0 modules to 3.0.0 version
 
 ## [1.1.0] - 2021-10-22
 
 ### Added
+
 - Link of 3.1.0 modules to 3.0.0 version
 
 ### Changed
+
 - Default ISE DEFAULT_VERSION to 3.1.0
 - Update documentation to use ISE v3.1.0
 
-### Removed
-
-
 ## [1.0.1] - 2021-09-14
 
-### Added
-
 ### Changed
+
 - Disabled warnings of urllib3 if verify is False
 
-### Removed
-
 ## [1.0.0] - 2021-07-21
+
 ### Added
+
 - Missing parameters for functions
 - `get_version` functions for ERS wrapper classes.
 - Missing functions:
@@ -190,6 +199,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Aliases for functions (eg. `get_all`, `get_by_id`, `get_by_name`, `update_by_id`, `delete_by_id`, `create`, and others)
 
 ### Changed
+
 - Rename module names
   + `deployment` to `pull_deployment_info`
   + `threat` to `clear_threats_and_vulnerabilities`
@@ -252,6 +262,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   + (Repository) `update_repository_by_name` to `update_repository`
 
 ### Removed
+
 - Removed module
   + `service`
 - Removed unknown functions for the API
