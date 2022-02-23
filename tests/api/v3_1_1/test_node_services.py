@@ -37,6 +37,7 @@ def is_valid_get_interfaces(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f6f429e124ea58ba85f0b34296d61300_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_get_sxp_interface(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_86620252ba4b550caf3845b4cbe1074d_v3_1_1').validate(obj.response)
     return True
 
@@ -137,6 +139,7 @@ def is_valid_set_sxp_interface(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_6c6d188a13915253869849c4b0be7759_v3_1_1').validate(obj.response)
     return True
 
@@ -193,6 +196,7 @@ def is_valid_get_profiler_probe_config(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_94bfa308ed7b5fb6acde734f6267b4e3_v3_1_1').validate(obj.response)
     return True
 
@@ -243,6 +247,7 @@ def is_valid_set_profiler_probe_config(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bba25b96ab6c5a99a7e7933a1ef71977_v3_1_1').validate(obj.response)
     return True
 

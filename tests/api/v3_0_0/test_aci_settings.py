@@ -37,6 +37,7 @@ def is_valid_get_aci_settings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2ea5c865993b56f48f7f43475294a20c_v3_0_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_test_aci_connectivity(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1b155c91eec153338302d492db1afb80_v3_0_0').validate(obj.response)
     return True
 
@@ -139,6 +141,7 @@ def is_valid_update_aci_settings_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_56cea2e785ee57908a9ee3b118e49cfa_v3_0_0').validate(obj.response)
     return True
 
@@ -237,6 +240,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_462410ea47f65521bcf0ab949b5d72b5_v3_0_0').validate(obj.response)
     return True
 

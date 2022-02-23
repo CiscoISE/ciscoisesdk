@@ -37,6 +37,7 @@ def is_valid_get_network_access_authentication_rules(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_794bee301e7f5ccfa2e788dcafbf92cc_v3_1_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_create_network_access_authentication_rule(json_schema_validate, obj
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0017f2fcf04554db9ea4cdc3a7024322_v3_1_0').validate(obj.response)
     return True
 
@@ -153,6 +155,7 @@ def is_valid_reset_hit_counts_network_access_authentication_rules(json_schema_va
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3944cd727fc45ccf8607a744aa71df66_v3_1_0').validate(obj.response)
     return True
 
@@ -207,6 +210,7 @@ def is_valid_get_network_access_authentication_rule_by_id(json_schema_validate, 
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_57a588d29d5a527388ee8498f746d1f5_v3_1_0').validate(obj.response)
     return True
 
@@ -259,6 +263,7 @@ def is_valid_update_network_access_authentication_rule_by_id(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_aa4daefaa3b95ecca521188a43eacbd9_v3_1_0').validate(obj.response)
     return True
 
@@ -327,6 +332,7 @@ def is_valid_delete_network_access_authentication_rule_by_id(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8af104d12b5c5e668af1504feca5c9b1_v3_1_0').validate(obj.response)
     return True
 

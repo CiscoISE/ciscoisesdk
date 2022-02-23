@@ -37,6 +37,7 @@ def is_valid_get_security_groups(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_9b5b0eb1671a51758acf5ec364d80738_v3_1_0').validate(obj.response)
     return True
 
@@ -89,6 +90,7 @@ def is_valid_get_security_group_acls(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_02b4aa5797455ee4a27390b77262992d_v3_1_0').validate(obj.response)
     return True
 
@@ -141,6 +143,7 @@ def is_valid_get_egress_policies(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3da8b5be1a475510a5aa1593d625ffbb_v3_1_0').validate(obj.response)
     return True
 
@@ -193,6 +196,7 @@ def is_valid_get_egress_matrices(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3f9e6e1c33155fdd9a88f48d093f375b_v3_1_0').validate(obj.response)
     return True
 

@@ -37,6 +37,7 @@ def is_valid_get_sxp_vpn_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_cd59f40aa9305587b69944a9c819f7a9_v3_0_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_delete_sxp_vpn_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8a0501930cc9517ea1cb4103db6e0af7_v3_0_0').validate(obj.response)
     return True
 
@@ -137,6 +139,7 @@ def is_valid_get_sxp_vpns(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2a93d058764b51dc922e41bbe4ff7cd6_v3_0_0').validate(obj.response)
     return True
 
@@ -197,6 +200,7 @@ def is_valid_create_sxp_vpn(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1a693347bdd15bb19d69a75f088498ce_v3_0_0').validate(obj.response)
     return True
 
@@ -251,6 +255,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_36ca67bf525555b086ecee4cb93e9aee_v3_0_0').validate(obj.response)
     return True
 
@@ -301,6 +306,7 @@ def is_valid_bulk_request_for_sxp_vpns(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2549a746755c588c928d15a59f8a693d_v3_0_0').validate(obj.response)
     return True
 
@@ -357,6 +363,7 @@ def is_valid_monitor_bulk_status_sxp_vpns(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_ba771c958ccc5f499c3a819fb2c67f57_v3_0_0').validate(obj.response)
     return True
 

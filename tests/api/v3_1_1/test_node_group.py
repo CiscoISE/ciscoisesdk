@@ -37,6 +37,7 @@ def is_valid_get_node_groups(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_a0824f9a589c58cd8df522524cb550ad_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_create_node_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1d5efe180ef459b1a1d9f651e7c1eb92_v3_1_1').validate(obj.response)
     return True
 
@@ -145,6 +147,7 @@ def is_valid_get_node_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c9d1b776015057a59e659c8327ea91a1_v3_1_1').validate(obj.response)
     return True
 
@@ -195,6 +198,7 @@ def is_valid_update_node_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_fbd772420b8851349aa58fb4a9b006b8_v3_1_1').validate(obj.response)
     return True
 
@@ -255,6 +259,7 @@ def is_valid_delete_node_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b2eacaba249e5762874a801f71631ae8_v3_1_1').validate(obj.response)
     return True
 
@@ -307,6 +312,7 @@ def is_valid_add_node(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_fc44ec6afaf95ea9b51dd404abf46e4e_v3_1_1').validate(obj.response)
     return True
 
@@ -363,6 +369,7 @@ def is_valid_get_nodes(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8fe420544d425d3d873632dbb6c1b8c2_v3_1_1').validate(obj.response)
     return True
 
@@ -413,6 +420,7 @@ def is_valid_remove_node(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_19b1a343c45952a79d0bbfbadb02002b_v3_1_1').validate(obj.response)
     return True
 

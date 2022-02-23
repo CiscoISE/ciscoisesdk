@@ -37,6 +37,7 @@ def is_valid_get_certificate_profile_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_337e7884eb9c548698cdc54e033f35f4_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_get_certificate_profile_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d24a3f485ff758d099b1e4713f18f1c1_v3_1_1').validate(obj.response)
     return True
 
@@ -137,6 +139,7 @@ def is_valid_update_certificate_profile_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e09287aba99c56a6a9171b7e3a635a43_v3_1_1').validate(obj.response)
     return True
 
@@ -205,6 +208,7 @@ def is_valid_get_certificate_profile(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3be38700993b5f70acfdc8e44f5558d8_v3_1_1').validate(obj.response)
     return True
 
@@ -257,6 +261,7 @@ def is_valid_create_certificate_profile(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_776141419f955525b0b38a57a3bed311_v3_1_1').validate(obj.response)
     return True
 
@@ -325,6 +330,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8e00be3b97b85829bef60c09eaa922ac_v3_1_1').validate(obj.response)
     return True
 

@@ -37,6 +37,7 @@ def is_valid_get_security_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_ea658190e73c5ce1b27e7def4aea28e3_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_security_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_42ce666e64a958229cfd8da70945935e_v3_1_1').validate(obj.response)
     return True
 
@@ -155,6 +157,7 @@ def is_valid_delete_security_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_ed2c0f81f4ea5299840089761bfd4f62_v3_1_1').validate(obj.response)
     return True
 
@@ -205,6 +208,7 @@ def is_valid_get_security_groups(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b3c356cfc48a5da4b13b8ecbae5748b7_v3_1_1').validate(obj.response)
     return True
 
@@ -265,6 +269,7 @@ def is_valid_create_security_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1d0290eb241f5bd79221afc8d6cb32da_v3_1_1').validate(obj.response)
     return True
 
@@ -331,6 +336,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_ad87f41ef4845f19a19bfadac0928ae6_v3_1_1').validate(obj.response)
     return True
 
@@ -381,6 +387,7 @@ def is_valid_bulk_request_for_security_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_742f7bd03a835c95b7a759b39ce7f680_v3_1_1').validate(obj.response)
     return True
 
@@ -437,6 +444,7 @@ def is_valid_monitor_bulk_status_security_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_a3148b789a935070b99caed1e99592cf_v3_1_1').validate(obj.response)
     return True
 

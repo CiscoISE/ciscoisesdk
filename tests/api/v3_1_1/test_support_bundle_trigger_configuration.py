@@ -37,6 +37,7 @@ def is_valid_create_support_bundle(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_492171fac48e5c63abfe2feec6fd1903_v3_1_1').validate(obj.response)
     return True
 
@@ -97,6 +98,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_a2b17c3c4eab52caa2fc7c811965c79d_v3_1_1').validate(obj.response)
     return True
 

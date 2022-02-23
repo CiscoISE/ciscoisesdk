@@ -37,6 +37,7 @@ def is_valid_get_transport_gateway(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_5f8b7d18b20e59428e711c8c762216ab_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_transport_gateway(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b5d7c38199c9502f9f4233d5002cb7f6_v3_1_1').validate(obj.response)
     return True
 

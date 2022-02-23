@@ -37,6 +37,7 @@ def is_valid_get_network_access_profiles(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b227e1b5bbac556a9f577d3a3ea407af_v3_0_0').validate(obj.response)
     return True
 

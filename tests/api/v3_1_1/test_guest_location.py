@@ -37,6 +37,7 @@ def is_valid_get_guest_location_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_ca2e75fbf5b45ba3b399e5616458b855_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_get_guest_location(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_13ea10f18c3655db84657ad855bf6972_v3_1_1').validate(obj.response)
     return True
 
@@ -147,6 +149,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_fdfe562af248561f981549b96f8ed397_v3_1_1').validate(obj.response)
     return True
 

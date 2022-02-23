@@ -37,6 +37,7 @@ def is_valid_create_system_certificate(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_dd469dcee9445c72a3861ef94fb3b096_v3_0_0').validate(obj.response)
     return True
 
@@ -93,6 +94,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3512a19fb8fe5fe9b069aa19d2dd74d5_v3_0_0').validate(obj.response)
     return True
 

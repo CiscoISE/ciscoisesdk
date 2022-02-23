@@ -37,6 +37,7 @@ def is_valid_list_installed_hotpatches(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_20505f21b6f9513bb973027ba49f7c0d_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_install_hotpatch(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_a59ee76eaca6561888e738155395eaeb_v3_1_1').validate(obj.response)
     return True
 
@@ -143,6 +145,7 @@ def is_valid_rollback_hotpatch(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f65b1178749c5f2399a9d2395591dade_v3_1_1').validate(obj.response)
     return True
 
@@ -199,6 +202,7 @@ def is_valid_list_installed_patches(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_df2031d0bbb75aa0898d8b2ee2635fae_v3_1_1').validate(obj.response)
     return True
 
@@ -249,6 +253,7 @@ def is_valid_install_patch(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c6c3a7326c6a542899be49cb9289e1ae_v3_1_1').validate(obj.response)
     return True
 
@@ -305,6 +310,7 @@ def is_valid_rollback_patch(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_207bbf4f0a09516dbb4d0c7d7416fb20_v3_1_1').validate(obj.response)
     return True
 

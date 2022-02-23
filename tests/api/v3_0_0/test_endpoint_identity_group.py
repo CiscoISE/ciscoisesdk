@@ -37,6 +37,7 @@ def is_valid_get_endpoint_group_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2590f64c3c08518e9eef83a92d69cde3_v3_0_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_get_endpoint_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_5e4bfa620f76545d9887045cd24d99a2_v3_0_0').validate(obj.response)
     return True
 
@@ -137,6 +139,7 @@ def is_valid_update_endpoint_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_189979b4e8d45639975c226dacd53e7b_v3_0_0').validate(obj.response)
     return True
 
@@ -197,6 +200,7 @@ def is_valid_delete_endpoint_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f7b0aab2a65652feae637779bfb20d2d_v3_0_0').validate(obj.response)
     return True
 
@@ -247,6 +251,7 @@ def is_valid_get_endpoint_groups(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_cd429bb8ff3556a796570480f742028b_v3_0_0').validate(obj.response)
     return True
 
@@ -307,6 +312,7 @@ def is_valid_create_endpoint_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b14d63c641e95ac0a8c2da2fb65909c7_v3_0_0').validate(obj.response)
     return True
 
@@ -365,6 +371,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1d553cc3b48d5689ac45a582a5d98f9b_v3_0_0').validate(obj.response)
     return True
 

@@ -37,6 +37,7 @@ def is_valid_get_radius_server_sequence_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0d1df0e230765104863b8d63d5beb68e_v3_1_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_radius_server_sequence_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_df9ab8ff636353279d5c787585dcb6af_v3_1_0').validate(obj.response)
     return True
 
@@ -169,6 +171,7 @@ def is_valid_delete_radius_server_sequence_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_815b13838fa75d6e8d970f6eeb6a4510_v3_1_0').validate(obj.response)
     return True
 
@@ -219,6 +222,7 @@ def is_valid_get_radius_server_sequence(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c6c330dace185a548f70f4e5d67776ea_v3_1_0').validate(obj.response)
     return True
 
@@ -271,6 +275,7 @@ def is_valid_create_radius_server_sequence(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_83ad6ca0642c5750af6ca9905721a9d7_v3_1_0').validate(obj.response)
     return True
 
@@ -351,6 +356,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8fb1a72ded19590fa0aa85fc59ea8cfc_v3_1_0').validate(obj.response)
     return True
 

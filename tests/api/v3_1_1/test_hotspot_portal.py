@@ -37,6 +37,7 @@ def is_valid_get_hotspot_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_6cbcecf65a0155fcad602d3ac16531a7_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_hotspot_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0ae4af25df565334b20a24c4878b68e4_v3_1_1').validate(obj.response)
     return True
 
@@ -153,6 +155,7 @@ def is_valid_delete_hotspot_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1a344d1c6f535789b7badbaa502e8d3b_v3_1_1').validate(obj.response)
     return True
 
@@ -203,6 +206,7 @@ def is_valid_get_hotspot_portal(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d912b1c21e2b5dca8b56332d3a8ad13d_v3_1_1').validate(obj.response)
     return True
 
@@ -263,6 +267,7 @@ def is_valid_create_hotspot_portal(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0df78c9a3f72584dbd1c7b667b0e312f_v3_1_1').validate(obj.response)
     return True
 
@@ -327,6 +332,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_91257d81be4f5a0486cc085499c19b1c_v3_1_1').validate(obj.response)
     return True
 

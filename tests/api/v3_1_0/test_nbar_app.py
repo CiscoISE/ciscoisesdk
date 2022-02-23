@@ -37,6 +37,7 @@ def is_valid_get_nbar_apps(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1e8a476ad8455fdebad0d8973c810495_v3_1_0').validate(obj.response)
     return True
 
@@ -97,6 +98,7 @@ def is_valid_create_nbar_app(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_ccc30178afce5e51a65e96cd95ca1773_v3_1_0').validate(obj.response)
     return True
 
@@ -157,6 +159,7 @@ def is_valid_get_nbar_app_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_61e99726f3745554a07ee102f74fe3bd_v3_1_0').validate(obj.response)
     return True
 
@@ -207,6 +210,7 @@ def is_valid_update_nbar_app_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b55622f1671359919573b261ba16ea71_v3_1_0').validate(obj.response)
     return True
 
@@ -267,6 +271,7 @@ def is_valid_delete_nbar_app_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_44d289d5685350f5b00f130db0a45142_v3_1_0').validate(obj.response)
     return True
 

@@ -37,6 +37,7 @@ def is_valid_approve_px_grid_node(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f47d656ed0805859a85e5cc082c78dcf_v3_1_1').validate(obj.response)
     return True
 
@@ -91,6 +92,7 @@ def is_valid_get_px_grid_node_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_111a9d109aac585a89bdd3fae400064b_v3_1_1').validate(obj.response)
     return True
 
@@ -141,6 +143,7 @@ def is_valid_delete_px_grid_node_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_849e718d5054593b94a2fef39461c24a_v3_1_1').validate(obj.response)
     return True
 
@@ -191,6 +194,7 @@ def is_valid_get_px_grid_node_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d24ade0b53405fbc898cb0cc1ea57fb8_v3_1_1').validate(obj.response)
     return True
 
@@ -241,6 +245,7 @@ def is_valid_get_px_grid_node(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_52661028d97156379640002f79b2007c_v3_1_1').validate(obj.response)
     return True
 
@@ -293,6 +298,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_73c2962d70ef5964be55cfeae68e5ba6_v3_1_1').validate(obj.response)
     return True
 

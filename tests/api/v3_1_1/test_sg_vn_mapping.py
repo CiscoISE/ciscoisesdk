@@ -37,6 +37,7 @@ def is_valid_get_sg_vn_mappings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e69e3338166d5c1887e5fa82efb72a11_v3_1_1').validate(obj.response)
     return True
 
@@ -97,6 +98,7 @@ def is_valid_create_sg_vn_mapping(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_018b050fff6a5302ace3e16674c8b19a_v3_1_1').validate(obj.response)
     return True
 
@@ -161,6 +163,7 @@ def is_valid_bulk_create_sg_vn_mappings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3e81b5f00f35577dbad11186f70f25be_v3_1_1').validate(obj.response)
     return True
 
@@ -213,6 +216,7 @@ def is_valid_bulk_delete_sg_vn_mappings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3c5cad090a875d9d8bd87e59654c9d75_v3_1_1').validate(obj.response)
     return True
 
@@ -265,6 +269,7 @@ def is_valid_bulk_update_sg_vn_mappings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_80c9c798a8ce58b88b3231575f5b8c98_v3_1_1').validate(obj.response)
     return True
 
@@ -317,6 +322,7 @@ def is_valid_get_sg_vn_mapping_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8fceb2944abb59e2a748b970ee79fbb7_v3_1_1').validate(obj.response)
     return True
 
@@ -367,6 +373,7 @@ def is_valid_update_sg_vn_mapping_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_147075a66f9651fca28e85b97cf1b968_v3_1_1').validate(obj.response)
     return True
 
@@ -431,6 +438,7 @@ def is_valid_delete_sg_vn_mapping_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0718cb6b83a55dfb8f3536b43cfaf081_v3_1_1').validate(obj.response)
     return True
 

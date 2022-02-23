@@ -37,6 +37,7 @@ def is_valid_get_sponsored_guest_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_56d1132a216d54d091022aec0ad018f8_v3_0_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_sponsored_guest_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0d39172f68fd5cbd897f03f1440f98a4_v3_0_0').validate(obj.response)
     return True
 
@@ -153,6 +155,7 @@ def is_valid_delete_sponsored_guest_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_9218749931f05e2ebc796f080892085f_v3_0_0').validate(obj.response)
     return True
 
@@ -203,6 +206,7 @@ def is_valid_get_sponsored_guest_portals(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_97886854bdae59219027b4d40b94fa3d_v3_0_0').validate(obj.response)
     return True
 
@@ -263,6 +267,7 @@ def is_valid_create_sponsored_guest_portal(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_ca78559d8a9f559c87f53ea85169a2c7_v3_0_0').validate(obj.response)
     return True
 
@@ -327,6 +332,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2f1aacc5c48654cebbc4d075dc7dde80_v3_0_0').validate(obj.response)
     return True
 

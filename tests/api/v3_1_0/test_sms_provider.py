@@ -37,6 +37,7 @@ def is_valid_get_sms_provider(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_17daac88943a5cd2bd745c483448e231_v3_1_0').validate(obj.response)
     return True
 
@@ -97,6 +98,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_37250017e20e5400a53280d52487ecd6_v3_1_0').validate(obj.response)
     return True
 

@@ -37,6 +37,7 @@ def is_valid_deploy_ip_to_sgt_mapping_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bd7f3fb27d71596ebafecca578c85bc7_v3_0_0').validate(obj.response)
     return True
 
@@ -91,6 +92,7 @@ def is_valid_deploy_all_ip_to_sgt_mapping_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0b8ef94d6d5554a4b57d37c52612ad7d_v3_0_0').validate(obj.response)
     return True
 
@@ -143,6 +145,7 @@ def is_valid_get_deploy_status_ip_to_sgt_mapping_group(json_schema_validate, obj
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d6c25690e3a854c5be7763a4106e379e_v3_0_0').validate(obj.response)
     return True
 
@@ -195,6 +198,7 @@ def is_valid_get_ip_to_sgt_mapping_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e56b94dafa5652228fd71abd2b4d6df3_v3_0_0').validate(obj.response)
     return True
 
@@ -245,6 +249,7 @@ def is_valid_update_ip_to_sgt_mapping_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_02a5a26c964e53b3be3f9f0c103f304c_v3_0_0').validate(obj.response)
     return True
 
@@ -307,6 +312,7 @@ def is_valid_delete_ip_to_sgt_mapping_group_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_73ebc15160cf5c0184d3eaff3be14508_v3_0_0').validate(obj.response)
     return True
 
@@ -357,6 +363,7 @@ def is_valid_get_ip_to_sgt_mapping_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_680a1544a7125003b7803c0ed383f4bf_v3_0_0').validate(obj.response)
     return True
 
@@ -417,6 +424,7 @@ def is_valid_create_ip_to_sgt_mapping_group(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_55c2e3af6da356009f6499f00a4115e9_v3_0_0').validate(obj.response)
     return True
 
@@ -477,6 +485,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_14c9a2546739540eb2c1cb7c411836cb_v3_0_0').validate(obj.response)
     return True
 
@@ -527,6 +536,7 @@ def is_valid_bulk_request_for_ip_to_sgt_mapping_group(json_schema_validate, obj)
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_a39fa17ffcd45736aa221dd27916e843_v3_0_0').validate(obj.response)
     return True
 
@@ -583,6 +593,7 @@ def is_valid_monitor_bulk_status_ip_to_sgt_mapping_group(json_schema_validate, o
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bb5f9095ca7953d3bdb16155e263f25a_v3_0_0').validate(obj.response)
     return True
 

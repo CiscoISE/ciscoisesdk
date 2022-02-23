@@ -37,6 +37,7 @@ def is_valid_get_endpoints(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3f66874f1141550da6104eff5428d37a_v3_1_1').validate(obj.response)
     return True
 
@@ -89,6 +90,7 @@ def is_valid_get_endpoint_by_mac_address(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_6419150c239256209b64afc9e5522e11_v3_1_1').validate(obj.response)
     return True
 
@@ -141,6 +143,7 @@ def is_valid_get_endpoints_by_type(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0239282311e55709895e677699dfc3f7_v3_1_1').validate(obj.response)
     return True
 
@@ -193,6 +196,7 @@ def is_valid_get_endpoints_by_os_type(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_339bf2a72bc05f5aabd3a79a5188d86a_v3_1_1').validate(obj.response)
     return True
 

@@ -37,6 +37,7 @@ def is_valid_get_sponsor_group_member(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_020659d6b1385f4cb9381c13a1fa4356_v3_0_0').validate(obj.response)
     return True
 
@@ -97,6 +98,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0f7c916a2e265c11b8b8535e8f88c7d1_v3_0_0').validate(obj.response)
     return True
 

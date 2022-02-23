@@ -37,6 +37,7 @@ def is_valid_get_network_device_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_54d8610d4a355b63aaaa364447d5fa00_v3_1_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_network_device_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2ea2c4586b845888b2a9375126f70de2_v3_1_0').validate(obj.response)
     return True
 
@@ -167,6 +169,7 @@ def is_valid_delete_network_device_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_116eafaf2e785c6898fb982dbe4462e7_v3_1_0').validate(obj.response)
     return True
 
@@ -217,6 +220,7 @@ def is_valid_get_network_device_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_a4ab683ce53052e089626a096abaf451_v3_1_0').validate(obj.response)
     return True
 
@@ -267,6 +271,7 @@ def is_valid_update_network_device_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b1edfeb182025176bb250633937177ae_v3_1_0').validate(obj.response)
     return True
 
@@ -347,6 +352,7 @@ def is_valid_delete_network_device_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_9f2fd3c6324b581ca0f3f9eadede1cdc_v3_1_0').validate(obj.response)
     return True
 
@@ -397,6 +403,7 @@ def is_valid_get_network_device(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_48b986fa0f0d54ef98eb135eeb88808a_v3_1_0').validate(obj.response)
     return True
 
@@ -457,6 +464,7 @@ def is_valid_create_network_device(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_574ca6ab8ec556c3bc9531dc380b230a_v3_1_0').validate(obj.response)
     return True
 
@@ -535,6 +543,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_682601e571185718b6ef6e78bfbfdf68_v3_1_0').validate(obj.response)
     return True
 
@@ -585,6 +594,7 @@ def is_valid_bulk_request_for_network_device(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_63b2eebd5c245e58a503aa53115eec53_v3_1_0').validate(obj.response)
     return True
 
@@ -641,6 +651,7 @@ def is_valid_monitor_bulk_status_network_device(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1bf96800cc265b5e9e1566ec7088619c_v3_1_0').validate(obj.response)
     return True
 

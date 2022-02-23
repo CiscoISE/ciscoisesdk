@@ -37,6 +37,7 @@ def is_valid_get_portal_theme_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_6e58eabefef15feb880ecfe2906d805f_v3_0_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_portal_theme_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c82dcf6f2c3d5d399045050b02208db2_v3_0_0').validate(obj.response)
     return True
 
@@ -147,6 +149,7 @@ def is_valid_delete_portal_theme_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8567c39e537955888cc23e4f90e6449b_v3_0_0').validate(obj.response)
     return True
 
@@ -197,6 +200,7 @@ def is_valid_get_portal_themes(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_5ad233598ed75e0c97ddd3c3f1af50e4_v3_0_0').validate(obj.response)
     return True
 
@@ -257,6 +261,7 @@ def is_valid_create_portal_theme(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_91eb833980f55025bfacbfcb8de814c8_v3_0_0').validate(obj.response)
     return True
 
@@ -315,6 +320,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b6bf4f02759a5e7f968896a30575e4c6_v3_0_0').validate(obj.response)
     return True
 

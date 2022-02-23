@@ -37,6 +37,7 @@ def is_valid_get_anc_endpoint_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_5ffbc09a97795b8d872a943895c00345_v3_0_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_clear_anc_endpoint(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2131fc6670fd50dfb04b1f6b16981256_v3_0_0').validate(obj.response)
     return True
 
@@ -141,6 +143,7 @@ def is_valid_get_anc_endpoint(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_502e681462295b8b8faea9ce6099ff0c_v3_0_0').validate(obj.response)
     return True
 
@@ -201,6 +204,7 @@ def is_valid_apply_anc_endpoint(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_136bc936bcb25464b9f3f227647b0443_v3_0_0').validate(obj.response)
     return True
 
@@ -255,6 +259,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d5eb6cea45635ef58f5bc624de004f16_v3_0_0').validate(obj.response)
     return True
 
@@ -305,6 +310,7 @@ def is_valid_bulk_request_for_anc_endpoint(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_5e6167fc5cb6593b8b48429187a26a67_v3_0_0').validate(obj.response)
     return True
 
@@ -361,6 +367,7 @@ def is_valid_monitor_bulk_status_anc_endpoint(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0a1c6b9323e55505830673a1819840f3_v3_0_0').validate(obj.response)
     return True
 

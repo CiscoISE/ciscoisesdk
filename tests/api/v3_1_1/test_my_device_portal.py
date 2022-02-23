@@ -37,6 +37,7 @@ def is_valid_get_my_device_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_4bb3528d280652678f8e211b9e418e66_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_my_device_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_83079c64b769537ea7c586565f6ed2a2_v3_1_1').validate(obj.response)
     return True
 
@@ -153,6 +155,7 @@ def is_valid_delete_my_device_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c04f18d6afee5f649a5700bf3074adb9_v3_1_1').validate(obj.response)
     return True
 
@@ -203,6 +206,7 @@ def is_valid_get_my_device_portal(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_90a71ccf29f05ee29af909b07bb9c754_v3_1_1').validate(obj.response)
     return True
 
@@ -263,6 +267,7 @@ def is_valid_create_my_device_portal(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e643a5ac8bca55f58ea8d6260c57eafe_v3_1_1').validate(obj.response)
     return True
 
@@ -327,6 +332,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_5e356376df735e72aa55332951806f42_v3_1_1').validate(obj.response)
     return True
 

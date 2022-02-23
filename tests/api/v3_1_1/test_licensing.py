@@ -37,6 +37,7 @@ def is_valid_get_connection_type(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_10deae9edd2c53f39c64695de70e8120_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_get_eval_license_info(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d7f0e3aa9642540cb8c9c31f95f6c317_v3_1_1').validate(obj.response)
     return True
 
@@ -137,6 +139,7 @@ def is_valid_get_feature_to_tier_mapping(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d73e6ed50d6d5f10b75c773a1df2fcfd_v3_1_1').validate(obj.response)
     return True
 
@@ -187,6 +190,7 @@ def is_valid_get_registration_info(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_fb4dcfcdb3e3528380bcc644fa9656b5_v3_1_1').validate(obj.response)
     return True
 
@@ -237,6 +241,7 @@ def is_valid_create_registration_info(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8ef3dd04312255cc9b5605141bf8fd03_v3_1_1').validate(obj.response)
     return True
 
@@ -299,6 +304,7 @@ def is_valid_get_smart_state(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_53c3b7a2b80553559ed00849b25715c5_v3_1_1').validate(obj.response)
     return True
 
@@ -349,6 +355,7 @@ def is_valid_configure_smart_state(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_82bb02a9d24c5cda91845fec33541553_v3_1_1').validate(obj.response)
     return True
 
@@ -401,6 +408,7 @@ def is_valid_get_tier_state_info(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3249312d398d5702ab68df0bbca8520f_v3_1_1').validate(obj.response)
     return True
 
@@ -451,6 +459,7 @@ def is_valid_update_tier_state_info(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_98d89f61af725550ba6291585d77463b_v3_1_1').validate(obj.response)
     return True
 

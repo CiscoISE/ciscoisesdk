@@ -37,6 +37,7 @@ def is_valid_approve_guest_user_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c67b4dcffba052ae8ece775bc61a1c21_v3_1_0').validate(obj.response)
     return True
 
@@ -91,6 +92,7 @@ def is_valid_change_sponsor_password(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2eb3472c4de150828b2dae61e2285313_v3_1_0').validate(obj.response)
     return True
 
@@ -147,6 +149,7 @@ def is_valid_suspend_guest_user_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_83983afcc8fe53b4824ae744a2ff3848_v3_1_0').validate(obj.response)
     return True
 
@@ -201,6 +204,7 @@ def is_valid_reinstate_guest_user_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_18b21045846d5097a82cd61cb3c7eaf1_v3_1_0').validate(obj.response)
     return True
 
@@ -255,6 +259,7 @@ def is_valid_get_guest_user_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bcb7ec29968e5d5899df4a90d94ed659_v3_1_0').validate(obj.response)
     return True
 
@@ -305,6 +310,7 @@ def is_valid_update_guest_user_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f24049df29d059c48eef86d381ffad5d_v3_1_0').validate(obj.response)
     return True
 
@@ -383,6 +389,7 @@ def is_valid_delete_guest_user_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_76ef15d7c6b259f5859ee9675c38887c_v3_1_0').validate(obj.response)
     return True
 
@@ -433,6 +440,7 @@ def is_valid_reset_guest_user_password_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_7ea6ea4e41d85f83b6f6c10ce38bb9ed_v3_1_0').validate(obj.response)
     return True
 
@@ -487,6 +495,7 @@ def is_valid_reinstate_guest_user_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_4dfcba4a0f685c168bdf2b5b2be317ac_v3_1_0').validate(obj.response)
     return True
 
@@ -541,6 +550,7 @@ def is_valid_update_guest_user_email(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_9a9fa9cbccbe50fcb1cd6a63fed47578_v3_1_0').validate(obj.response)
     return True
 
@@ -599,6 +609,7 @@ def is_valid_update_guest_user_sms(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_290601ba14b751f98206ca2e19cff3fe_v3_1_0').validate(obj.response)
     return True
 
@@ -655,6 +666,7 @@ def is_valid_deny_guest_user_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3c1e5e2a187652018c59b10155ac973d_v3_1_0').validate(obj.response)
     return True
 
@@ -709,6 +721,7 @@ def is_valid_get_guest_user_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2645275c3c7d5a3a83d9f7441972d399_v3_1_0').validate(obj.response)
     return True
 
@@ -759,6 +772,7 @@ def is_valid_update_guest_user_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8754551b9c7c5847b17684c49399ff95_v3_1_0').validate(obj.response)
     return True
 
@@ -837,6 +851,7 @@ def is_valid_delete_guest_user_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1030e251b39f55d3ac2570a963a3ee9c_v3_1_0').validate(obj.response)
     return True
 
@@ -887,6 +902,7 @@ def is_valid_get_guest_users(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1a5abd33eeaa52e39e926472751ef79e_v3_1_0').validate(obj.response)
     return True
 
@@ -947,6 +963,7 @@ def is_valid_create_guest_user(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_89f7cf06a1655d6da606ace9b0950bcf_v3_1_0').validate(obj.response)
     return True
 
@@ -1023,6 +1040,7 @@ def is_valid_suspend_guest_user_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_08be5b1e320e55f4a181370417471d9e_v3_1_0').validate(obj.response)
     return True
 
@@ -1079,6 +1097,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_76abe22ea0c45f619731bd568c9f57f4_v3_1_0').validate(obj.response)
     return True
 
@@ -1129,6 +1148,7 @@ def is_valid_bulk_request_for_guest_user(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_37edfca30e8e514d9bab840c3c2d4c0f_v3_1_0').validate(obj.response)
     return True
 
@@ -1185,6 +1205,7 @@ def is_valid_monitor_bulk_status_guest_user(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e38a1af3ad835636a11375363528fa2e_v3_1_0').validate(obj.response)
     return True
 

@@ -37,6 +37,7 @@ def is_valid_sync_node(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_582ad69fa1d850f4993bbfc888749fa0_v3_1_0').validate(obj.response)
     return True
 

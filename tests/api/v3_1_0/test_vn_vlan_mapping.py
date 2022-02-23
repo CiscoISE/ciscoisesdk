@@ -37,6 +37,7 @@ def is_valid_get_vn_vlan_mappings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d2274589b635566d9762368adf0e841a_v3_1_0').validate(obj.response)
     return True
 
@@ -97,6 +98,7 @@ def is_valid_create_vn_vlan_mapping(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_6b06fcd396bc5494be66e198df78e1b2_v3_1_0').validate(obj.response)
     return True
 
@@ -165,6 +167,7 @@ def is_valid_bulk_create_vn_vlan_mappings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_539fd28158d85d37ab1a1d616c56448c_v3_1_0').validate(obj.response)
     return True
 
@@ -217,6 +220,7 @@ def is_valid_bulk_delete_vn_vlan_mappings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_67dcb60f20b95a999fa1f4918ad1a9e3_v3_1_0').validate(obj.response)
     return True
 
@@ -269,6 +273,7 @@ def is_valid_bulk_update_vn_vlan_mappings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bc2c834bbed356fcafd18fd78d900c0b_v3_1_0').validate(obj.response)
     return True
 
@@ -321,6 +326,7 @@ def is_valid_get_vn_vlan_mapping_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bad1af5249925176a0694e6e9f170ffb_v3_1_0').validate(obj.response)
     return True
 
@@ -371,6 +377,7 @@ def is_valid_update_vn_vlan_mapping_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c3d67df26a4d58f5a5efc6083ba187eb_v3_1_0').validate(obj.response)
     return True
 
@@ -439,6 +446,7 @@ def is_valid_delete_vn_vlan_mapping_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_97fae20bb0ed56cd9a07518b06fdf67f_v3_1_0').validate(obj.response)
     return True
 

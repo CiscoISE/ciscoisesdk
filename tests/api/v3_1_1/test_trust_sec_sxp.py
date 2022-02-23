@@ -37,6 +37,7 @@ def is_valid_get_bindings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_900a7bddaf5159e68b2caeb19b9979c4_v3_1_1').validate(obj.response)
     return True
 

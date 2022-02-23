@@ -37,6 +37,7 @@ def is_valid_get_proxy_connection(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d788d0c12f7956f0b7e37810d21f10f1_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_proxy_connection(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_6903ddc568fc56f7b6310160e3fb3b2f_v3_1_1').validate(obj.response)
     return True
 
