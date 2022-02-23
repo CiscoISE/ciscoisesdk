@@ -34,7 +34,7 @@ jobs:
           python -m pip install --upgrade pipenv wheel
       - name: Setup
         run: script/setup
-      - name: Build
-        run: pipenv run script/build package
+      - name: Install ciscoisesdk
+        run: pipenv run python setup.py install -f
       - name: Test
         run: pipenv run script/test
