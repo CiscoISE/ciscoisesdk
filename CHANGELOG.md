@@ -19,15 +19,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Support for "CSRF Check for Enhanced Security" for the ISE ERS API.
-- Added `status_code` to `RestResponse`.
-- Support to have additional_data for `ApiError` when HTTP status code are 401 or 403. The additional_data returns a string with:
+- Support for "CSRF Check for Enhanced Security" for the ISE ERS API ([#20](https://github.com/CiscoISE/ciscoisesdk/issues/20)).
+- Added `status_code` to `RestResponse` ([#22](https://github.com/CiscoISE/ciscoisesdk/issues/22)).
+- Support to have additional_data for `ApiError` when HTTP status code are 401 or 403 ([#21](https://github.com/CiscoISE/ciscoisesdk/issues/21)). The additional_data returns a string with:
   + Authorization header used.
   + X-CSRF-Token header used if it was found.
   + Username used.
   + Password used.
 
-- Support for managing changes of the `IdentityServicesEngineAPI`'s properties:
+- Support for managing changes of the `IdentityServicesEngineAPI`'s properties ([#21](https://github.com/CiscoISE/ciscoisesdk/issues/21)):
   + `initialize_authentication` function.
   + `initialize_sessions` function.
   + `initialize_api_wrappers` function.

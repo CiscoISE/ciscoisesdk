@@ -23,16 +23,16 @@ Changed
 Added
 ~~~~~
 
--  Support for “CSRF Check for Enhanced Security” for the ISE ERS API.
-
--  Support to have additional_data for ``ApiError`` when HTTP status code are 401 or 403. The additional_data returns a string with:
+-  Support for “CSRF Check for Enhanced Security” for the ISE ERS API (`#20 <https://github.com/CiscoISE/ciscoisesdk/issues/20>`__).
+-  Added ``status_code`` to ``RestResponse`` (`#22 <https://github.com/CiscoISE/ciscoisesdk/issues/22>`__).
+-  Support to have additional_data for ``ApiError`` when HTTP status code are 401 or 403 (`#21 <https://github.com/CiscoISE/ciscoisesdk/issues/21>`__). The additional_data returns a string with:
 
    -  Authorization header used.
    -  X-CSRF-Token header used if it was found.
    -  Username used.
    -  Password used.
 
--  Support for managing changes of the ``IdentityServicesEngineAPI``\ ’s properties:
+-  Support for managing changes of the ``IdentityServicesEngineAPI``\ ’s properties (`#21 <https://github.com/CiscoISE/ciscoisesdk/issues/21>`__):
 
    -  ``initialize_authentication`` function.
    -  ``initialize_sessions`` function.
@@ -67,41 +67,23 @@ Added
    -  ``change_encoded_auth`` utility setter function.
 
 -  Added warnings for changes of the ``IdentityServicesEngineAPI``\ ’s properties.
-
 -  Added a test importsdk to verify the behavior between environment variables and module import order.
-
 -  New ``perform_initialize`` parameter for ``IdentityServicesEngineAPI`` constructor.
-
 -  New ``uses_csrf_token`` parameter for ``IdentityServicesEngineAPI`` constructor.
-
 -  New ``get_csrf_token`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``uses_csrf_token`` and ``get_csrf_token`` parameters for ``RestSession`` constructor.
-
 -  New ``DEFAULT_USES_CSRF_TOKEN`` value in config.py.
-
 -  New ``IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN`` environment variable in environment.py.
-
 -  New ``initialize_authentication`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``initialize_sessions`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``initialize_api_wrappers`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``reinitialize`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``is_password`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``is_encoded_auth`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``change_password`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``change_encoded_auth`` function for ``IdentityServicesEngineAPI``.
-
 -  New ``debug`` setter funtion for ``RestSession``.
-
 -  New ``uses_csrf_token`` getter and setter funtions for ``RestSession``.
-
 -  New ``additional_data`` property in ``ApiError``.
 
 Fixed
