@@ -8,8 +8,14 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 `Unreleased <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...develop>`__
 ---------------------------------------------------------------------------------
 
-`1.5.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0>`__
----------------------------------------------------------------------------
+Removed
+~~~~~~~
+
+-  Removed ``access_token`` property of ``IdentityServicesEngineAPI`` and ``RestSession``.
+-  Removed ISE version 3.0.0.
+
+`1.5.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0>`__ - 2022-02-23
+----------------------------------------------------------------------------------------
 
 Changed
 ~~~~~~~
@@ -175,6 +181,8 @@ Added
 -  Adds node_group.remove_node function
 -  Adds pan_ha.update_pan_ha function
 
+.. _removed-1:
+
 Removed
 ~~~~~~~
 
@@ -204,7 +212,7 @@ Changed
 -  Fixes paths for Policy endpoints (get_device_admin_profiles, get_network_access_profiles)
 -  Updates ISE version 3.1.0 as separate version
 
-.. _removed-1:
+.. _removed-2:
 
 Removed
 ~~~~~~~
@@ -345,7 +353,7 @@ Changed
    -  (Repository) ``get_repository_by_name`` to ``get_repository``
    -  (Repository) ``update_repository_by_name`` to ``update_repository``
 
-.. _removed-2:
+.. _removed-3:
 
 Removed
 ~~~~~~~
