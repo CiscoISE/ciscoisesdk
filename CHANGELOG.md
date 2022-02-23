@@ -6,8 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.5.0] - 2022-02-21
-
 ### Changed
 
 - Marked `access_token` property to be removed in `IdentityServicesEngineAPI` and `RestSession`.
@@ -278,5 +276,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.4.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0
 [1.4.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.0...v1.4.1
 [1.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.1...v1.4.2
-[1.5.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...main
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...develop
