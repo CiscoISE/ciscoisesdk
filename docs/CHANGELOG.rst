@@ -131,7 +131,12 @@ Changed
 ~~~~~~~
 
 -  Update module inner documentation.
--  Downgrade requirements file to use poetry versions. ## `1.4.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0>`__ - 2022-01-19
+-  Downgrade requirements file to use poetry versions.
+
+.. _section-2:
+
+`1.4.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0>`__ - 2022-01-19
+----------------------------------------------------------------------------------------
 
 .. _changed-2:
 
@@ -147,7 +152,7 @@ Fixed
 
 -  Update pagination, get_next_page inner logic and location from utils to pagination.
 
-.. _section-2:
+.. _section-3:
 
 `1.3.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.0...v1.3.1>`__ - 2021-12-13
 ----------------------------------------------------------------------------------------
@@ -159,7 +164,7 @@ Changed
 
 -  Fixes utils.get_next_page generator starting default page
 
-.. _section-3:
+.. _section-4:
 
 `1.3.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.2.0...v1.3.0>`__ - 2021-12-13
 ----------------------------------------------------------------------------------------
@@ -191,7 +196,7 @@ Removed
 -  Removes replication_status module
 -  Removes sync_ise_node module
 
-.. _section-4:
+.. _section-5:
 
 `1.2.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...v1.2.0>`__ - 2021-11-24
 ----------------------------------------------------------------------------------------
@@ -219,7 +224,7 @@ Removed
 
 -  Removes link of 3.1.0 modules to 3.0.0 version
 
-.. _section-5:
+.. _section-6:
 
 `1.1.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.1...v1.1.0>`__ - 2021-10-22
 ----------------------------------------------------------------------------------------
@@ -239,7 +244,7 @@ Changed
 -  Default ISE DEFAULT_VERSION to 3.1.0
 -  Update documentation to use ISE v3.1.0
 
-.. _section-6:
+.. _section-7:
 
 `1.0.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...v1.0.1>`__ - 2021-09-14
 ----------------------------------------------------------------------------------------
@@ -251,7 +256,7 @@ Changed
 
 -  Disabled warnings of urllib3 if verify is False
 
-.. _section-7:
+.. _section-8:
 
 `1.0.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v0.5.1...v1.0.0>`__ - 2021-07-21
 ----------------------------------------------------------------------------------------

@@ -97,6 +97,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update module inner documentation.
 - Downgrade requirements file to use poetry versions.
+
 ## [1.4.0] - 2022-01-19
 
 ### Changed
