@@ -61,6 +61,7 @@ class RestResponse(object):
         self._content = bytes(response.content)
         self._text = str(response.text)
         self._response = extract_and_parse(response)
+        self._status_code = response.status_code
 
     @property
     def headers(self):
@@ -81,6 +82,11 @@ class RestResponse(object):
     def response(self):
         """The response (MyDict) of the RestResponse."""
         return self._response
+
+    @property
+    def status_code(self):
+        """The HTTP status code from the RestResponse."""
+        return self._status_code
 
     @response.setter
     def response(self, value):

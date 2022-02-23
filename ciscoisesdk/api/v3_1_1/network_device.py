@@ -51,81 +51,35 @@ class NetworkDevice(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Network Device API allows the client to add, delete, update, and search network devices. Please note that each API description shows whether the API is supported in bulk operation. The bulk section is showing only 'create' bulk operation however, all other operation which are bulk supported can be used in same way.
+    | Network Device API allows the client to add, delete, update, and search network devices. Please note that each API description shows whether the API is supported in bulk operation. The bulk section is showing only 'create' bulk operation however, all other operation which are bulk supported can be used in same way.
 
-    Revision History
-    ----------------
+    **Revision History**
 
-    **Revision #**
-
-    **Resource Version**
-
-    **Cisco ISE Version**
-
-    **Description**
-
-    **Revision Modification**
-
-    **Attribute**
-
-    **Description**
-
-    0
-
-    1.0
-
-    1.2
-
-    Initial Cisco ISE Version
-
-    1
-
-    1.1
-
-    2.0
-
-    Cisco ISE 2.0 model changes for TACACS+ and 3rd-Party support
-
-    tacacsSettings:sharedSecret
-
-    Added Attribute 'sharedSecret' for Tacacs+ support
-
-    tacacsSettings:connectModeOptions
-
-    Added Attribute 'connectModeOptions' for Tacacs+ support
-
-    profileName
-
-    Added Attribute 'profileName' for 3rd-Party support support
-
-    coaPort
-
-    Added Attribute 'coaPort' for 3rd-Party support support
-
-    2
-
-    1.2
-
-    2.4
-
-    Cisco ISE 2.4 model changes for Multi shared secret and DTLS Requierd support
-
-    authenticationsettings:enableMultiSecret
-
-    Added Attribute 'enableMultiSecret' for mulitple shared secret
-
-    authenticationsettings:secondRadiusSharedSecret
-
-    Added Attribute 'secondRadiusSharedSecret' for mulitple shared secret
-
-    authenticationsettings:dtlsRequired
-
-    Added Attribute 'dtlsRequired' for dtls settings
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    | Revision # | Resource Version | Cisco   ISE Version | Description                                                                     | Revision   Modification                         | Revision   Modification                                                 |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    |            |                  |                     |                                                                                 | Attribute                                       | Description                                                             |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    | 0          | 1.0              | 1.2                 | Initial Cisco ISE Version                                                       |                                                 |                                                                         |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    | 1          | 1.1              | 2.0                 | Cisco ISE 2.0 model changes for TACACS+   and 3rd-Party support                 | tacacsSettings:sharedSecret                     | Added Attribute   'sharedSecret' for Tacacs+ support                    |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    |            |                  |                     |                                                                                 | tacacsSettings:connectModeOptions               | Added   Attribute 'connectModeOptions' for Tacacs+ support              |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    |            |                  |                     |                                                                                 | profileName                                     | Added   Attribute 'profileName' for 3rd-Party support support           |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    |            |                  |                     |                                                                                 | coaPort                                         | Added   Attribute 'coaPort' for 3rd-Party support support               |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    | 2          | 1.2              | 2.4                 | Cisco ISE 2.4 model changes for Multi shared secret   and DTLS Requierd support | authenticationsettings:enableMultiSecret        | Added   Attribute 'enableMultiSecret' for mulitple shared secret        |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    |            |                  |                     |                                                                                 | authenticationsettings:secondRadiusSharedSecret | Added   Attribute 'secondRadiusSharedSecret' for mulitple shared secret |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
+    |            |                  |                     |                                                                                 | authenticationsettings:dtlsRequired             | Added   Attribute 'dtlsRequired' for dtls settings                      |
+    +------------+------------------+---------------------+---------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------------------------+
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
     | **Attribute**                                    | **Type**  | **Required** | **Description**                                                                                        | **Default Values** | **Example Values**                                           |
@@ -144,15 +98,11 @@ class NetworkDevice(object):
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
     | - keyEncryptionKey                               | String    | Yes          |                                                                                                        |                    | 1234567890123456                                             |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
-    | - keyInputFormat                                 | Enum      | Yes          | Allowed values:                                                                                        | ASCII              |                                                              |
-    |                                                  |           |              | - ASCII,                                                                                               |                    |                                                              |
-    |                                                  |           |              | - HEXADECIMAL                                                                                          |                    |                                                              |
+    | - keyInputFormat                                 | Enum      | Yes          | Allowed values: ASCII, HEXADECIMAL                                                                     | ASCII              |                                                              |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
     | - messageAuthenticatorCodeKey                    | String    | No           |                                                                                                        |                    | 12345678901234567890                                         |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
-    | - networkProtocol                                | Enum      | No           | Allowed values:                                                                                        | RADIUS             |                                                              |
-    |                                                  |           |              | - RADIUS,                                                                                              |                    |                                                              |
-    |                                                  |           |              | - TACACS_PLUS                                                                                          |                    |                                                              |
+    | - networkProtocol                                | Enum      | No           | Allowed values: RADIUS, TACACS_PLUS                                                                    | RADIUS             |                                                              |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
     | - radiusSharedSecret                             | String    | No           |                                                                                                        |                    | VHEGKOCCUHYB                                                 |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
@@ -194,17 +144,11 @@ class NetworkDevice(object):
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
     | - roCommunity                                    | String    | No           | SNMP RO Community                                                                                      |                    | aaa                                                          |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
-    | - version                                        | Enum      | No           | Allowed values:                                                                                        |                    | ONE                                                          |
-    |                                                  |           |              | - ONE,                                                                                                 |                    |                                                              |
-    |                                                  |           |              | - TWO_C,                                                                                               |                    |                                                              |
-    |                                                  |           |              | - THREE                                                                                                |                    |                                                              |
+    | - version                                        | Enum      | No           | Allowed values: ONE, TWO_C, THREE                                                                      |                    | ONE                                                          |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
     | tacacsSettings                                   | List      | Yes          | Since 2.0 (for Tacacs+)                                                                                |                    |                                                              |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
-    | - connectModeOptions                             | Enum      | No           | Allowed values:                                                                                        |                    | ON_LEGACY                                                    |
-    |                                                  |           |              | - OFF,                                                                                                 |                    |                                                              |
-    |                                                  |           |              | - ON_LEGACY,                                                                                           |                    |                                                              |
-    |                                                  |           |              | - ON_DRAFT_COMPLIANT                                                                                   |                    |                                                              |
+    | - connectModeOptions                             | Enum      | No           | Allowed values: OFF, ON_LEGACY, ON_DRAFT_COMPLIANT                                                     |                    | ON_LEGACY                                                    |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
     | - sharedSecret                                   | String    | Yes          | Since 2.0                                                                                              |                    | aaa                                                          |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
@@ -240,10 +184,7 @@ class NetworkDevice(object):
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
     |   - sendConfigurationToDevice                    | Boolean   | No           |                                                                                                        | false              |                                                              |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
-    |   - sendConfigurationToDeviceUsing               | Enum      | No           | Allowed values:                                                                                        | ENABLE_USING_COA   |                                                              |
-    |                                                  |           |              | - ENABLE_USING_COA,                                                                                    |                    |                                                              |
-    |                                                  |           |              | - ENABLE_USING_CLI,                                                                                    |                    |                                                              |
-    |                                                  |           |              | - DISABLE_ALL                                                                                          |                    |                                                              |
+    |   - sendConfigurationToDeviceUsing               | Enum      | No           | Allowed values: ENABLE_USING_COA, ENABLE_USING_CLI, DISABLE_ALL                                        | ENABLE_USING_COA   |                                                              |
     +--------------------------------------------------+-----------+--------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------+
 
     """
@@ -308,8 +249,8 @@ class NetworkDevice(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -442,8 +383,8 @@ class NetworkDevice(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -608,8 +549,8 @@ class NetworkDevice(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -693,8 +634,8 @@ class NetworkDevice(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -827,8 +768,8 @@ class NetworkDevice(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -993,8 +934,8 @@ class NetworkDevice(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -1126,8 +1067,8 @@ class NetworkDevice(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -1401,8 +1342,8 @@ class NetworkDevice(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

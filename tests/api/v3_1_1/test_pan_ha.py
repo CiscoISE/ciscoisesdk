@@ -37,6 +37,7 @@ def is_valid_get_pan_ha_status(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_02daa171ab765a02a714c48376b3790d_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_pan_ha(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_beae5f8477835ee9b8407a50fcfebd2e_v3_1_1').validate(obj.response)
     return True
 

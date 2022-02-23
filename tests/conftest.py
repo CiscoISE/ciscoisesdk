@@ -25,6 +25,7 @@ SOFTWARE.
 import pytest
 
 pytest_plugins = [
+    'tests.test_importsdk',
     'tests.test_ciscoisesdk',
     'tests.api',
     'tests.api.v3_0_0',

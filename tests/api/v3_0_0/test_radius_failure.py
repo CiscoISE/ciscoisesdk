@@ -37,6 +37,7 @@ def is_valid_get_failures(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_13a3d2bc1bed5e90b1056649e7703d77_v3_0_0').validate(obj.response)
     return True
 

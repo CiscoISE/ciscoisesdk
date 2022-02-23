@@ -6,6 +6,87 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0]
+
+### Changed
+
+- Marked `access_token` property to be removed in `IdentityServicesEngineAPI` and `RestSession`.
+- Changed the way of notifying Deprecation of version 3.0.0 of ISE from print to warning.
+- Incremented `IdentityServicesEngineAPI` and `RestSession` constructor parameter count.
+- Changed access method an imports used for environment variables and default values in api/__init__.py.
+- Changed `IdentityServicesEngineAPI`'s inner properties, getters, and setters to handle only the class itself.
+- `RestSession` to request for a refreshed CSRF token if `uses_csrf_token` is enabled.
+- Replaced the name of headers checked for ERS methods from "X-CSRF-TOKEN" to "X-CSRF-Token".
+- Changed `ApiError` message when status_code is 401 or 403 to include reference to `additional_data` property.
+
+### Added
+
+- Support for "CSRF Check for Enhanced Security" for the ISE ERS API ([#20](https://github.com/CiscoISE/ciscoisesdk/issues/20)).
+- Added `status_code` to `RestResponse` ([#22](https://github.com/CiscoISE/ciscoisesdk/issues/22)).
+- Support to have additional_data for `ApiError` when HTTP status code are 401 or 403 ([#21](https://github.com/CiscoISE/ciscoisesdk/issues/21)). The additional_data returns a string with:
+  + Authorization header used.
+  + X-CSRF-Token header used if it was found.
+  + Username used.
+  + Password used.
+
+- Support for managing changes of the `IdentityServicesEngineAPI`'s properties ([#21](https://github.com/CiscoISE/ciscoisesdk/issues/21)):
+  + `initialize_authentication` function.
+  + `initialize_sessions` function.
+  + `initialize_api_wrappers` function.
+  + `reinitialize` function.
+  + `authentication` getter function.
+  + `perform_initialize` getter function.
+  + `username` getter and setter functions.
+  + `is_password` utility function.
+  + `is_encoded_auth` utility function.
+  + `uses_api_gateway` getter and setter functions.
+  + `base_url` getter and setter functions.
+  + `ui_base_url` getter and setter functions.
+  + `ers_base_url` getter and setter functions.
+  + `mnt_base_url` getter and setter functions.
+  + `px_grid_base_url` getter and setter functions.
+  + `single_request_timeout` getter and setter functions.
+  + `wait_on_rate_limit` getter and setter functions.
+  + `verify` getter and setter functions.
+  + `version` getter and setter functions.
+  + `debug` getter and setter functions.
+  + `uses_csrf_token` getter and setter functions.
+  + `object_factory` getter and setter functions.
+  + `validator` getter and setter functions.
+  + `session` getter function.
+  + `session_ui` getter function.
+  + `session_ers` getter function.
+  + `session_mnt` getter function.
+  + `session_px_grid` getter function.
+  + `username` getter function.
+  + `change_password` utility setter function.
+  + `change_encoded_auth` utility setter function.
+
+- Added warnings for changes of the `IdentityServicesEngineAPI`'s properties.
+- Added a test importsdk to verify the behavior between environment variables and module import order.
+- New `perform_initialize` parameter for `IdentityServicesEngineAPI` constructor.
+- New `uses_csrf_token` parameter for `IdentityServicesEngineAPI` constructor.
+- New `get_csrf_token` function for `IdentityServicesEngineAPI`.
+- New `uses_csrf_token` and `get_csrf_token` parameters for `RestSession` constructor.
+- New `DEFAULT_USES_CSRF_TOKEN` value in config.py. 
+- New `IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN` environment variable in environment.py.
+- New `initialize_authentication` function for `IdentityServicesEngineAPI`.
+- New `initialize_sessions` function for `IdentityServicesEngineAPI`.
+- New `initialize_api_wrappers` function for `IdentityServicesEngineAPI`.
+- New `reinitialize` function for `IdentityServicesEngineAPI`.
+- New `is_password` function for `IdentityServicesEngineAPI`.
+- New `is_encoded_auth` function for `IdentityServicesEngineAPI`.
+- New `change_password` function for `IdentityServicesEngineAPI`.
+- New `change_encoded_auth` function for `IdentityServicesEngineAPI`.
+- New `debug` setter funtion for `RestSession`.
+- New `uses_csrf_token` getter and setter funtions for `RestSession`.
+- New `additional_data` property in `ApiError`.
+
+### Fixed
+
+- The process that gets the environment variables now can access the variables set after the module is imported, and not only before it.
+- Fixed the docstring tables of the API modules.
+
 ## [1.4.2] - 2022-02-18
 
 ### Fixed
@@ -15,23 +96,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.1] - 2022-01-20
 
 ### Changed
+
 - Update module inner documentation.
 - Downgrade requirements file to use poetry versions.
+
 ## [1.4.0] - 2022-01-19
 
 ### Changed
+
 - Update requirements
+
 ### Fixed
+
 - Update pagination, get_next_page inner logic and location from utils to pagination.
 
 ## [1.3.1] - 2021-12-13
 
 ### Changed
+
 - Fixes utils.get_next_page generator starting default page
 
 ## [1.3.0] - 2021-12-13
 
 ### Added
+
 - Adds licensing module
 - Adds node_services module
 - Adds patching module
@@ -47,6 +135,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adds pan_ha.update_pan_ha function
 
 ### Removed
+
 - Removes pan_ha.disable_pan_ha function
 - Removes pan_ha.enable_pan_ha function
 - Removes replication_status module
@@ -55,38 +144,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.0] - 2021-11-24
 
 ### Added
+
 - Adds notice for 3.0.0 (soon to be deprecated)
 - Adds Trust Sec endpoints to ISE version 3.1.0
 
 ### Changed
+
 - Fixes paths for Policy endpoints (get_device_admin_profiles, get_network_access_profiles)
 - Updates ISE version 3.1.0 as separate version
+
 ### Removed
+
 - Removes link of 3.1.0 modules to 3.0.0 version
 
 ## [1.1.0] - 2021-10-22
 
 ### Added
+
 - Link of 3.1.0 modules to 3.0.0 version
 
 ### Changed
+
 - Default ISE DEFAULT_VERSION to 3.1.0
 - Update documentation to use ISE v3.1.0
 
-### Removed
-
-
 ## [1.0.1] - 2021-09-14
 
-### Added
-
 ### Changed
+
 - Disabled warnings of urllib3 if verify is False
 
-### Removed
-
 ## [1.0.0] - 2021-07-21
+
 ### Added
+
 - Missing parameters for functions
 - `get_version` functions for ERS wrapper classes.
 - Missing functions:
@@ -109,6 +200,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Aliases for functions (eg. `get_all`, `get_by_id`, `get_by_name`, `update_by_id`, `delete_by_id`, `create`, and others)
 
 ### Changed
+
 - Rename module names
   + `deployment` to `pull_deployment_info`
   + `threat` to `clear_threats_and_vulnerabilities`
@@ -171,6 +263,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   + (Repository) `update_repository_by_name` to `update_repository`
 
 ### Removed
+
 - Removed module
   + `service`
 - Removed unknown functions for the API
@@ -186,4 +279,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.4.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0
 [1.4.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.0...v1.4.1
 [1.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.1...v1.4.2
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...main
+[1.5.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...develop

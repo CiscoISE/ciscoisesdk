@@ -51,10 +51,9 @@ class TacacsServerSequence(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    TACACS Server Sequence API aallows the client to add, delete, update, search and perform actions on TACACS server sequence.
+    | TACACS Server Sequence API aallows the client to add, delete, update, search and perform actions on TACACS server sequence.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class TacacsServerSequence(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +------------------+----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------+
     | **Attribute**    | **Type** | **Required** | **Description**                                                                                                                                                | **Default Values** | **Example Values**                          |
@@ -86,7 +84,7 @@ class TacacsServerSequence(object):
     +------------------+----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------+
     | suffixStrip      | Boolean  | No           | Define if a delimiter will be used for suffix strip                                                                                                            | false              |                                             |
     +------------------+----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------+
-    | prefixDelimiter  | String   | No           | The delimiter that will be used for prefix strip                                                                                                               | \\                 |                                             |
+    | prefixDelimiter  | String   | No           | The delimiter that will be used for prefix strip                                                                                                               | \\                  |                                             |
     +------------------+----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------+
     | suffixDelimiter  | String   | No           | The delimiter that will be used for suffix strip                                                                                                               | @                  |                                             |
     +------------------+----------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------+
@@ -154,8 +152,8 @@ class TacacsServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -240,8 +238,8 @@ class TacacsServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -366,8 +364,8 @@ class TacacsServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -516,8 +514,8 @@ class TacacsServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -605,8 +603,8 @@ class TacacsServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -796,8 +794,8 @@ class TacacsServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

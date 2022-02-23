@@ -37,6 +37,7 @@ def is_valid_get_node_replication_status(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_7ae615b5e28c54639f44bd10e5b36601_v3_1_0').validate(obj.response)
     return True
 

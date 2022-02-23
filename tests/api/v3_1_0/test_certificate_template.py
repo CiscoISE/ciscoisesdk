@@ -37,6 +37,7 @@ def is_valid_get_certificate_template_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_40ef36cc17a55cb38bf1fe2973dcc312_v3_1_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_get_certificate_template_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e9e38cdf5bcb5c018b7f10f1d0864215_v3_1_0').validate(obj.response)
     return True
 
@@ -137,6 +139,7 @@ def is_valid_get_certificate_template(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_dc1da5c3912a5117878160e27f6b533a_v3_1_0').validate(obj.response)
     return True
 
@@ -189,6 +192,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3f126f916efd575dbc9acae4ab2a1e4e_v3_1_0').validate(obj.response)
     return True
 

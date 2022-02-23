@@ -51,10 +51,9 @@ class NetworkDeviceGroup(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Network Device Group API allows the client to search network device groups.
+    | Network Device Group API allows the client to search network device groups.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -66,8 +65,7 @@ class NetworkDeviceGroup(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+-------------------------------------+--------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**                     | **Example Values**                   |
@@ -148,8 +146,8 @@ class NetworkDeviceGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -233,8 +231,8 @@ class NetworkDeviceGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -333,8 +331,8 @@ class NetworkDeviceGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -459,8 +457,8 @@ class NetworkDeviceGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -591,8 +589,8 @@ class NetworkDeviceGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -831,8 +829,8 @@ class NetworkDeviceGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

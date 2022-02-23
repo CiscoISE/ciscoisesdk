@@ -57,7 +57,9 @@ With ciscoisesdk, the above Python code can be consolidated to the following:
                                          uses_api_gateway=True,
                                          base_url='https://dcloud-dna-ise-rtp.cisco.com',
                                          version='3.1.1',
-                                         verify=True)
+                                         verify=True,
+                                         debug=False,
+                                         uses_csrf_token=False)
     # Or even just api_ = api.IdentityServicesEngineAPI(username='admin', password='C1sco12345') as others have those values by default.
     try:
         device_response = api_.network_device.get_network_device(filter='name.EQ.Test').response
@@ -99,6 +101,8 @@ With ciscoisesdk, the above Python code can be consolidated to the following:
   Just know that if you are are sending a lot of requests, your script might
   take longer to run if your requests are getting rate limited.
 
++ **Automatic CSRF token management** Identity Services Engine will send a get request to fetch the X-CSRF-Token for you before performing a POST/PUT/DELETE operation, and it will update the X-CSRF-Token of that operation with the new token. It will try to be smart about it and not perform the fetch operation if one is already present and valid.
+
 
 All of this, combined, lets you do powerful things simply:
 
@@ -106,6 +110,8 @@ All of this, combined, lets you do powerful things simply:
 
     from ciscoisesdk import IdentityServicesEngineAPI
     from ciscoisesdk.exceptions import ApiError
+
+    api_ = IdentityServicesEngineAPI(username='admin', password='C1sco12345')
 
     # Get allowed protocols
     search_result = api_.allowed_protocols.get_all().response.SearchResult

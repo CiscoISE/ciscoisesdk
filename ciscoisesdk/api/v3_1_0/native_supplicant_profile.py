@@ -51,10 +51,9 @@ class NativeSupplicantProfile(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Native supplicant profile API provides the ability to update, delete and search native supplicant profiles.
+    | Native supplicant profile API provides the ability to update, delete and search native supplicant profiles.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class NativeSupplicantProfile(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +-------------------------+-------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
     | **Attribute**           | **Type**    | **Required** | **Description**                                                                | **Example Values**                                                                                 |
@@ -80,18 +78,11 @@ class NativeSupplicantProfile(object):
     +-------------------------+-------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
     | - ssid                  | String      | Yes          | SSID for the wireless profile                                                  | ISE                                                                                                |
     +-------------------------+-------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
-    | - allowedProtocol       | Enum        | Yes          | Allowed protocol for the wireless profile. Allowed values:                     | TLS                                                                                                |
-    |                         |             |              | - PEAP,                                                                        |                                                                                                    |
-    |                         |             |              | - TLS,                                                                         |                                                                                                    |
-    |                         |             |              | - EAP-FAST                                                                     |                                                                                                    |
+    | - allowedProtocol       | Enum        | Yes          | Allowed protocol for the wireless profile.                                     | TLS                                                                                                |
     +-------------------------+-------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
     | - certificateTemplateId | String      | No           | Certificate template ID                                                        | 0ca8f1b6-500d-560b-e053-75189a0ab0d1                                                               |
     +-------------------------+-------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
-    | - actionType            | Enum        | Yes          | Action type for WifiProfile. Allowed values:                                   | UPDATE                                                                                             |
-    |                         |             |              | - ADD,                                                                         |                                                                                                    |
-    |                         |             |              | - UPDATE,                                                                      |                                                                                                    |
-    |                         |             |              | - DELETE                                                                       |                                                                                                    |
-    |                         |             |              | (required for updating existing WirelessProfile)                               |                                                                                                    |
+    | - actionType            | Enum        | Yes          | Action type for WifiProfile.                                                   | UPDATE                                                                                             |
     +-------------------------+-------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
     | - previousSsid          | String      | Yes          | Previous ssid for WifiProfile (required for updating existing WirelessProfile) | ssid1                                                                                              |
     +-------------------------+-------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
@@ -159,8 +150,8 @@ class NativeSupplicantProfile(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -260,8 +251,8 @@ class NativeSupplicantProfile(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -386,8 +377,8 @@ class NativeSupplicantProfile(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -475,8 +466,8 @@ class NativeSupplicantProfile(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

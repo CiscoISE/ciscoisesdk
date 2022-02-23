@@ -37,6 +37,7 @@ def is_valid_get_self_registered_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f9c9a5e917af53dbbb91733e82e72ebe_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_update_self_registered_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_400c4fada6c558d9aba09cc373d5b266_v3_1_1').validate(obj.response)
     return True
 
@@ -153,6 +155,7 @@ def is_valid_delete_self_registered_portal_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_673f9ada2e275fa2934fdb4825266a2c_v3_1_1').validate(obj.response)
     return True
 
@@ -203,6 +206,7 @@ def is_valid_get_self_registered_portals(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bb165bd00a6653ac9da440f23ee62ecc_v3_1_1').validate(obj.response)
     return True
 
@@ -263,6 +267,7 @@ def is_valid_create_self_registered_portal(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d524614e122d53d68324daf1681eb753_v3_1_1').validate(obj.response)
     return True
 
@@ -327,6 +332,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_3d8cc0e6962558c58d263f53b857cff0_v3_1_1').validate(obj.response)
     return True
 

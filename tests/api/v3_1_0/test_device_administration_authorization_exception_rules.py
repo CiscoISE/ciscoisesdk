@@ -37,6 +37,7 @@ def is_valid_get_device_admin_local_exception_rules(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bba3187f0be4563aa8b6ff5931a123e7_v3_1_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_create_device_admin_local_exception_rule(json_schema_validate, obj)
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_12905ebcdc835e9b8d6844c1da6cf252_v3_1_0').validate(obj.response)
     return True
 
@@ -149,6 +151,7 @@ def is_valid_reset_hit_counts_device_admin_local_exceptions(json_schema_validate
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f9452f1ecd64528ba7a4a99295bb715c_v3_1_0').validate(obj.response)
     return True
 
@@ -203,6 +206,7 @@ def is_valid_get_device_admin_local_exception_rule_by_id(json_schema_validate, o
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d8e470a4ef6a58b3b21f9adbbdcc7a46_v3_1_0').validate(obj.response)
     return True
 
@@ -255,6 +259,7 @@ def is_valid_update_device_admin_local_exception_rule_by_id(json_schema_validate
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_a87d60d590485830aed781bfb15b5c95_v3_1_0').validate(obj.response)
     return True
 
@@ -319,6 +324,7 @@ def is_valid_delete_device_admin_local_exception_rule_by_id(json_schema_validate
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_20c7d6bb4abf53f6aa2f40b6986f58a9_v3_1_0').validate(obj.response)
     return True
 

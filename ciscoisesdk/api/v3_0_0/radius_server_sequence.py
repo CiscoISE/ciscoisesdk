@@ -51,10 +51,9 @@ class RadiusServerSequence(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    RADIUS Server Sequence API allows the client to add, delete, update, search and perform actions on RADIUS server sequence.
+    | RADIUS Server Sequence API allows the client to add, delete, update, search and perform actions on RADIUS server sequence.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class RadiusServerSequence(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
     | **Attribute**                | **Type**  | **Required** | **Description**                                                                                                                               | **Default Values** | **Example Values**                                   |
@@ -80,7 +78,7 @@ class RadiusServerSequence(object):
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
     | stripSuffix                  | Boolean   | No           |                                                                                                                                               | false              |                                                      |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
-    | prefixSeparator              | String    | No           | The prefixSeparator is required only if stripPrefix is true. The maximum length is 1 character                                                | \\                 |                                                      |
+    | prefixSeparator              | String    | No           | The prefixSeparator is required only if stripPrefix is true. The maximum length is 1 character                                                | \\                  |                                                      |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
     | suffixSeparator              | String    | No           | The suffixSeparator is required only if stripSuffix is true. The maximum length is 1 character                                                | @                  |                                                      |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
@@ -100,11 +98,7 @@ class RadiusServerSequence(object):
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
     | - AttributeManipulator       | List      | No           |                                                                                                                                               |                    |                                                      |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
-    |   - action                   | Enum      | Yes          | Allowed Values:                                                                                                                               |                    | ADD                                                  |
-    |                              |           |              | - ADD,                                                                                                                                        |                    |                                                      |
-    |                              |           |              | - UPDATE,                                                                                                                                     |                    |                                                      |
-    |                              |           |              | - REMOVE,                                                                                                                                     |                    |                                                      |
-    |                              |           |              | - REMOVEANY                                                                                                                                   |                    |                                                      |
+    |   - action                   | Enum      | Yes          | Allowed Values: ADD, UPDATE, REMOVE, REMOVEANY                                                                                                |                    | ADD                                                  |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
     |   - dictionaryName           | String    | Yes          |                                                                                                                                               |                    | Cisco                                                |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
@@ -118,11 +112,7 @@ class RadiusServerSequence(object):
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
     | - AttributeManipulator       | List      | No           |                                                                                                                                               |                    |                                                      |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
-    |   - action                   | Enum      | Yes          | Allowed Values:                                                                                                                               |                    | ADD                                                  |
-    |                              |           |              | - ADD,                                                                                                                                        |                    |                                                      |
-    |                              |           |              | - UPDATE,                                                                                                                                     |                    |                                                      |
-    |                              |           |              | - REMOVE,                                                                                                                                     |                    |                                                      |
-    |                              |           |              | - REMOVEANY                                                                                                                                   |                    |                                                      |
+    |   - action                   | Enum      | Yes          | Allowed Values: ADD, UPDATE, REMOVE, REMOVEANY                                                                                                |                    | ADD                                                  |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
     |   - dictionaryName           | String    | Yes          |                                                                                                                                               |                    | Cisco                                                |
     +------------------------------+-----------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------+
@@ -196,8 +186,8 @@ class RadiusServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -339,8 +329,8 @@ class RadiusServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -509,8 +499,8 @@ class RadiusServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -598,8 +588,8 @@ class RadiusServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -806,8 +796,8 @@ class RadiusServerSequence(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

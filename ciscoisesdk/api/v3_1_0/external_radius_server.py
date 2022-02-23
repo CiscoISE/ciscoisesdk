@@ -51,54 +51,28 @@ class ExternalRadiusServer(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    External RADIUS Server API allows the client to add, delete, update, search and perform actions on external RADIUS server.
+    | External RADIUS Server API allows the client to add, delete, update, search and perform actions on external RADIUS server.
 
-    Revision History
-    ----------------
+    **Revision History**
 
-    **Revision #**
-
-    **Resource Version**
-
-    **Cisco ISE Version**
-
-    **Description**
-
-    **Revision Modification**
-
-    **Attribute**
-
-    **Description**
-
-    0
-
-    1.0
-
-    2.3
-
-    Initial Cisco ISE Version
-
-    1
-
-    1.1
-
-    2.6
-
-    Support new attribute Proxy Dead Timeout
-
-    proxyTimeout
-
-    Added int Attribute 'proxyTimeout'
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
+    | Revision # | Resource   Version | Cisco ISE Version | Description                              | Revision Modification | Revision Modification                |
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
+    |            |                    |                   |                                          | Attribute             | Description                          |
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
+    | 0          | 1.0                | 2.3               | Initial Cisco ISE Version                |                       |                                      |
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
+    | 1          | 1.1                | 2.6               | Support new attribute Proxy Dead Timeout | proxyTimeout          | Added   int Attribute 'proxyTimeout' |
+    +------------+--------------------+-------------------+------------------------------------------+-----------------------+--------------------------------------+
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +--------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | **Attribute**      | **Type**  | **Required** | **Description**                                                                                                                                                                                                               | **Default Values** | **Example Values**                   |
     +--------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
-    | name               | String    | Yes          | Resource Name. Allowed charactera are alphanumeric and \_ (underscore).                                                                                                                                                       |                    | externalRadiusServer1                |
+    | name               | String    | Yes          | Resource Name. Allowed charactera are alphanumeric and _ (underscore).                                                                                                                                                        |                    | externalRadiusServer1                |
     +--------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | id                 | String    | No           | Resource UUID, mandatory for update                                                                                                                                                                                           |                    | da095377-dce8-486e-933a-6ea788bbf51a |
     +--------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
@@ -114,9 +88,7 @@ class ExternalRadiusServer(object):
     +--------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | authenticatorKey   | String    | No           | The authenticatorKey is required only if enableKeyWrap is true, otherwise it must be ignored or empty. The maximum length is 20 ASCII characters or 40 HEXADECIMAL characters (depend on selection in field 'keyInputFormat') |                    | 20202020202020202020                 |
     +--------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
-    | keyInputFormat     | Enum      | Yes          | Specifies the format of the input for fields 'encryptionKey' and 'authenticatorKey'. Allowed Values:                                                                                                                          |                    | ASCII                                |
-    |                    |           |              | - ASCII,                                                                                                                                                                                                                      |                    |                                      |
-    |                    |           |              | - HEXADECIMAL                                                                                                                                                                                                                 |                    |                                      |
+    | keyInputFormat     | Enum      | Yes          | Specifies the format of the input for fields 'encryptionKey' and 'authenticatorKey'. Allowed Values: ASCII, HEXADECIMAL                                                                                                       |                    | ASCII                                |
     +--------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | authenticationPort | Integer   | Yes          | Valid Range 1 to 65535                                                                                                                                                                                                        |                    | 1812                                 |
     +--------------------+-----------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------+
@@ -192,8 +164,8 @@ class ExternalRadiusServer(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -278,8 +250,8 @@ class ExternalRadiusServer(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -428,8 +400,8 @@ class ExternalRadiusServer(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -594,8 +566,8 @@ class ExternalRadiusServer(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -683,8 +655,8 @@ class ExternalRadiusServer(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -898,8 +870,8 @@ class ExternalRadiusServer(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

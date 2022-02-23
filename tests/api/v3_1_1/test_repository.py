@@ -37,6 +37,7 @@ def is_valid_get_repositories(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8f9081a48e3c5f4fae5aa00f889216dd_v3_1_1').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_create_repository(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_9a207a157244508c99bf3e9abb26aab8_v3_1_1').validate(obj.response)
     return True
 
@@ -153,6 +155,7 @@ def is_valid_get_repository(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e4fd4586ad825f69843d9213e956cf81_v3_1_1').validate(obj.response)
     return True
 
@@ -203,6 +206,7 @@ def is_valid_update_repository(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f757b04825bb5c29a1b3475aae870d04_v3_1_1').validate(obj.response)
     return True
 
@@ -271,6 +275,7 @@ def is_valid_delete_repository(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_12e3bcabbd0e5e899945592039694139_v3_1_1').validate(obj.response)
     return True
 
@@ -321,6 +326,7 @@ def is_valid_get_repository_files(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_4c6f272fde105e50a210f88a9e3f032c_v3_1_1').validate(obj.response)
     return True
 

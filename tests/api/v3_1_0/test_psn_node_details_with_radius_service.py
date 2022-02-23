@@ -37,6 +37,7 @@ def is_valid_get_session_service_node_by_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_ab225d0b2a6c52a99df1f1d8fb6a4dac_v3_1_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_get_session_service_node_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c988bb742d055294b74b4d6916ca1ada_v3_1_0').validate(obj.response)
     return True
 
@@ -137,6 +139,7 @@ def is_valid_get_session_service_node(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_66dccbf248575cbeb3cd3dda5cdbcf20_v3_1_0').validate(obj.response)
     return True
 
@@ -189,6 +192,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_05c0bfee23f95034842993a83d77c4e4_v3_1_0').validate(obj.response)
     return True
 

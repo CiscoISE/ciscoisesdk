@@ -37,6 +37,7 @@ def is_valid_get_ise_version_and_patch(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_edea91f35e90539f87a80eb107e02fff_v3_0_0').validate(obj.response)
     return True
 

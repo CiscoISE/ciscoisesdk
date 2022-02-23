@@ -112,7 +112,7 @@ class ApiError(ciscoisesdkException):
     Several data attributes are available for inspection.
     """
 
-    def __init__(self, response):
+    def __init__(self, response, **kwargs):
         assert isinstance(response, requests.Response)
 
         # Extended exception attributes
@@ -158,20 +158,25 @@ class ApiError(ciscoisesdkException):
         self.description = RESPONSE_CODES.get(self.status_code)
         """A description of the HTTP Response Code from the API docs."""
 
+        self.additional_data = kwargs.get("additional_data") or ""
+        """Additional data describing the issue"""
+
         super(ApiError, self).__init__(
-            "[{status_code}]{status} - {message}{details}".format(
+            "[{status_code}]{status} - {message}{details}{additional_data}".format(
                 status_code=self.status_code,
                 status=" " + self.status if self.status else "",
                 message=self.message or self.description or "Unknown Error",
                 details="\n" + self.details_str if self.details_str else "",
+                additional_data="\nCheck ApiError.additional_data for more info.\n" if self.additional_data else "",
             )
         )
 
     def __repr__(self):
-        return "<{exception_name} [{status_code}]>{details}".format(
+        return "<{exception_name} [{status_code}]>{details}{additional_data}".format(
             exception_name=self.__class__.__name__,
             status_code=self.status_code,
             details="\n" + self.details_str if self.details_str else "",
+            additional_data="\nCheck ApiError.additional_data for more info.\n" if self.additional_data else "",
         )
 
 
@@ -182,7 +187,7 @@ class RateLimitError(ApiError):
     **will not** be retried.
     """
 
-    def __init__(self, response):
+    def __init__(self, response, **kwargs):
         assert isinstance(response, requests.Response)
 
         # Extended exception attributes

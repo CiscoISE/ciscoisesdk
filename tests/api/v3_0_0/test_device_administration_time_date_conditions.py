@@ -37,6 +37,7 @@ def is_valid_get_device_admin_time_conditions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f79ab23563d857e58e01a74e37333572_v3_0_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_create_device_admin_time_condition(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_26a4d5b5da6a50bfaaecc180543fd952_v3_0_0').validate(obj.response)
     return True
 
@@ -177,6 +179,7 @@ def is_valid_get_device_admin_time_condition_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_4709e603092f597ab6c25381e59c4a70_v3_0_0').validate(obj.response)
     return True
 
@@ -227,6 +230,7 @@ def is_valid_update_device_admin_time_condition_by_id(json_schema_validate, obj)
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_6ee1780a38a85d1ba57c9a38e1093721_v3_0_0').validate(obj.response)
     return True
 
@@ -317,6 +321,7 @@ def is_valid_delete_device_admin_time_condition_by_id(json_schema_validate, obj)
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c1052ac49dd35088a9874a4350182015_v3_0_0').validate(obj.response)
     return True
 

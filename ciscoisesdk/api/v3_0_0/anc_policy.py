@@ -51,10 +51,9 @@ class AncPolicy(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Adaptive Network Control (ANC) provides the ability to create network endpoint authorization controls based on ANC policies.
+    | Adaptive Network Control (ANC) provides the ability to create network endpoint authorization controls based on ANC policies.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |
@@ -64,8 +63,7 @@ class AncPolicy(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+-------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------+
     | **Attribute** | **Type**    | **Required** | **Description**                                                                                                                 | **Example Values** |
@@ -144,8 +142,8 @@ class AncPolicy(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -229,8 +227,8 @@ class AncPolicy(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -337,8 +335,8 @@ class AncPolicy(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -459,8 +457,8 @@ class AncPolicy(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -591,8 +589,8 @@ class AncPolicy(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -839,8 +837,8 @@ class AncPolicy(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

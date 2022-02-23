@@ -51,10 +51,9 @@ class EgressMatrixCell(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Egress Policy Matrix Cell API allows the client to add, update, delete and search egress matrix cells among other operations.
+    | Egress Policy Matrix Cell API allows the client to add, update, delete and search egress matrix cells among other operations.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+-----------------------------+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**             |   |
@@ -66,34 +65,27 @@ class EgressMatrixCell(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | **Attribute**    | **Type**  | **Required** | **Description**                     | **Default Values** | **Example Values**                       |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | name             | String    | Yes          | Resource Name                       |                    | ANY-ANY                                  |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | id               | String    | No           | Resource UUID, mandatory for update |                    | f92c1a900-8c01-11e6-996c-525400b48521    |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | description      | String    | No           |                                     |                    | Default egress rule                      |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | defaultRule      | Enum      | Yes          | Allowed values:                     | NONE               | PERMIT_IP                                |
-    |                  |           |              | - NONE,                             |                    |                                          |
-    |                  |           |              | - DENY_IP,                          |                    |                                          |
-    |                  |           |              | - PERMIT_IP                         |                    |                                          |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | destinationSgtId | String    | Yes          |                                     |                    | 92bb1950-8c01-11e6-996c-525400b48521     |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | matrixCellStatus | Enum      | Yes          | Allowed values:                     | DISABLED           | ENABLED                                  |
-    |                  |           |              | - DISABLED,                         |                    |                                          |
-    |                  |           |              | - ENABLED,                          |                    |                                          |
-    |                  |           |              | - MONITOR                           |                    |                                          |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | sgACLs           | List      | Yes          |                                     |                    | ["92951ac0-8c01-11e6-996c-525400b48521"] |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
-    | sourceSgtId      | String    | Yes          |                                     |                    | 92bb1950-8c01-11e6-996c-525400b48521     |
-    +------------------+-----------+--------------+-------------------------------------+--------------------+------------------------------------------+
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | **Attribute**    | **Type**  | **Required** | **Description**                            | **Default Values** | **Example Values**                       |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | name             | String    | Yes          | Resource Name                              |                    | ANY-ANY                                  |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | id               | String    | No           | Resource UUID, mandatory for update        |                    | f92c1a900-8c01-11e6-996c-525400b48521    |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | description      | String    | No           |                                            |                    | Default egress rule                      |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | defaultRule      | Enum      | Yes          | Allowed values: NONE, DENY_IP, PERMIT_IP   | NONE               | PERMIT_IP                                |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | destinationSgtId | String    | Yes          |                                            |                    | 92bb1950-8c01-11e6-996c-525400b48521     |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | matrixCellStatus | Enum      | Yes          | Allowed values: DISABLED, ENABLED, MONITOR | DISABLED           | ENABLED                                  |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | sgACLs           | List      | Yes          |                                            |                    | ["92951ac0-8c01-11e6-996c-525400b48521"] |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
+    | sourceSgtId      | String    | Yes          |                                            |                    | 92bb1950-8c01-11e6-996c-525400b48521     |
+    +------------------+-----------+--------------+--------------------------------------------+--------------------+------------------------------------------+
 
     """
 
@@ -155,8 +147,8 @@ class EgressMatrixCell(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -231,8 +223,8 @@ class EgressMatrixCell(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -321,8 +313,8 @@ class EgressMatrixCell(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -418,8 +410,8 @@ class EgressMatrixCell(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -531,8 +523,8 @@ class EgressMatrixCell(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -673,8 +665,8 @@ class EgressMatrixCell(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -807,8 +799,8 @@ class EgressMatrixCell(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -1062,8 +1054,8 @@ class EgressMatrixCell(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

@@ -37,6 +37,7 @@ def is_valid_get_network_access_dictionary_attributes_by_dictionary_name(json_sc
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d83302be1f7c528e8211524aeaacd66d_v3_1_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_create_network_access_dictionary_attribute(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_706f4508bb3352ff920dbdc229e0fc50_v3_1_0').validate(obj.response)
     return True
 
@@ -155,6 +157,7 @@ def is_valid_get_network_access_dictionary_attribute_by_name(json_schema_validat
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_c77600d349fc5c259dbd22d65b3ffa1d_v3_1_0').validate(obj.response)
     return True
 
@@ -207,6 +210,7 @@ def is_valid_update_network_access_dictionary_attribute_by_name(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_a60b29bfe2b055299e4360d84380ddd4_v3_1_0').validate(obj.response)
     return True
 
@@ -275,6 +279,7 @@ def is_valid_delete_network_access_dictionary_attribute_by_name(json_schema_vali
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_dd6c2553ae0053c1bbbdbd46c1df0ef9_v3_1_0').validate(obj.response)
     return True
 

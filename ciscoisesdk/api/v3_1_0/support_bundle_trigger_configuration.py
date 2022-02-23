@@ -51,10 +51,9 @@ class SupportBundleTriggerConfiguration(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Support Bundle Trigger API allows clients to trigger support bundle provided the log settings are given using which the support needs to be generated.
+    | Support Bundle Trigger API allows clients to trigger support bundle provided the log settings are given using which the support needs to be generated.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |   |
@@ -64,154 +63,39 @@ class SupportBundleTriggerConfiguration(object):
 
     |
 
-    Resource Definition
-    -------------------
-
-    **Attribute**
-
-    **Type**
-
-    **Required**
-
-    **Description**
-
-    **Default Values**
-
-    **Example Values**
-
-    name
-
-    String
-
-    Yes
-
-    Resource Name
-
-    supportBundle
-
-    id
-
-    String
-
-    No
-
-    Resource UUID, mandatory for update
-
-    1af3d6e2-cc3b-4603-b80f-6827768335ab
-
-    description
-
-    String
-
-    No
-
-    Support Bundle Generation
-
-    hostName
-
-    String
-
-    Yes
-
-    This parameter is hostName only, xxxx of xxxx.yyy.zz
-
-    sampleHost
-
-    supportBundleOptions
-
-    List
-
-    Yes
-
-    - includeConfigDB
-
-    Boolean
-
-    Yes
-
-    Set to include Config DB in Support Bundle
-
-    false
-
-    - includeDebugLogs
-
-    Boolean
-
-    Yes
-
-    Set to include Debug logs in Support Bundle
-
-    false
-
-    - includeLocalLogs
-
-    Boolean
-
-    Yes
-
-    Set to include Local logs in Support Bundle
-
-    false
-
-    - includeCoreFiles
-
-    Boolean
-
-    Yes
-
-    Set to include Core files in Support Bundle
-
-    false
-
-    - includeSystemLogs
-
-    Boolean
-
-    Yes
-
-    Set to include System logs in Support Bundle
-
-    false
-
-    - mntLogs
-
-    Boolean
-
-    Yes
-
-    Set to include Monitoring and troublshooting logs in Support Bundle
-
-    false
-
-    - policyXml
-
-    Boolean
-
-    Yes
-
-    Set to include Policy XML in Support Bundle
-
-    false
-
-    - fromDate
-
-    Date
-
-    No
-
-    Date from where support bundle should include the logs
-
-    04/21/2019
-
-    - toDate
-
-    Date
-
-    No
-
-    Date upto where support bundle should include the logs
-
-    04/22/2019
+    **Resource Definition**
+
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | Attribute            | Type    | Required | Description                                                              | Default      Values                  |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | name                 | String  | Yes      | Resource      Name                                                       | supportBundle                        |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | id                   | String  | No       | Resource      UUID, mandatory for update                                 | 1af3d6e2-cc3b-4603-b80f-6827768335ab |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | description          | String  | No       | Support      Bundle Generation                                           |                                      |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | hostName             | String  | Yes      | This      parameter is hostName only, xxxx of xxxx.yyy.zz                | sampleHost                           |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | supportBundleOptions | List    | Yes      |                                                                          |                                      |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - includeConfigDB    | Boolean | Yes      | Set      to include Config DB in Support Bundle                          | false                                |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - includeDebugLogs   | Boolean | Yes      | Set      to include Debug logs in Support Bundle                         | false                                |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - includeLocalLogs   | Boolean | Yes      | Set      to include Local logs in Support Bundle                         | false                                |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - includeCoreFiles   | Boolean | Yes      | Set      to include Core files in Support Bundle                         | false                                |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - includeSystemLogs  | Boolean | Yes      | Set      to include System logs in Support Bundle                        | false                                |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - mntLogs            | Boolean | Yes      | Set      to include Monitoring and troublshooting logs in Support Bundle | false                                |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - policyXml          | Boolean | Yes      | Set      to include Policy XML in Support Bundle                         | false                                |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - fromDate           | Date    | No       | Date      from where support bundle should include the logs              | 04/21/2019                           |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
+    | - toDate             | Date    | No       | Date      upto where support bundle should include the logs              | 04/22/2019                           |
+    +----------------------+---------+----------+--------------------------------------------------------------------------+--------------------------------------+
 
     """
 
@@ -294,8 +178,8 @@ class SupportBundleTriggerConfiguration(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

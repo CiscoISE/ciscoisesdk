@@ -37,6 +37,7 @@ def is_valid_clear_threats_and_vulnerabilities(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e3110fc63ecb5428a075a8af8497fb35_v3_1_1').validate(obj.response)
     return True
 
@@ -91,6 +92,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_83379c74d24e5ae9bb90f798a190cca3_v3_1_1').validate(obj.response)
     return True
 

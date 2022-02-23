@@ -37,6 +37,7 @@ def is_valid_get_sessions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_9a86b36d56165904911f133e10d4f955_v3_1_0').validate(obj.response)
     return True
 
@@ -89,6 +90,7 @@ def is_valid_get_sessions_for_recovery(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_12d6da2024445b2cb8a146fe19889e71_v3_1_0').validate(obj.response)
     return True
 
@@ -141,6 +143,7 @@ def is_valid_get_session_by_ip_address(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2515a470322e5500949321c2cbc1b9c9_v3_1_0').validate(obj.response)
     return True
 
@@ -193,6 +196,7 @@ def is_valid_get_session_by_mac_address(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e564f3d00647543db29d1ca6865bc8d0_v3_1_0').validate(obj.response)
     return True
 
@@ -245,6 +249,7 @@ def is_valid_get_user_groups(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f8021c1d176c5de9b8b41dcde0f0268e_v3_1_0').validate(obj.response)
     return True
 
@@ -297,6 +302,7 @@ def is_valid_get_user_group_by_user_name(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_1f674031faf65cac8e2f5581bdef4788_v3_1_0').validate(obj.response)
     return True
 

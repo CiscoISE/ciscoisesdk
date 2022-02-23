@@ -51,10 +51,9 @@ class AciBindings(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    The ACI Bindings API allows clients to retrieve bindings that were sent to Cisco ISE by ACI or received on ACI from Cisco ISE. The binding information will be identical to the information on the ACI bindings page in the Cisco ISE UI. Filtering will be based on one attribute only, such as ip, sgt, vn, psn, learnedFrom, or learnedBy with CONTAINS mode of search.
+    | The ACI Bindings API allows clients to retrieve bindings that were sent to Cisco ISE by ACI or received on ACI from Cisco ISE. The binding information will be identical to the information on the ACI bindings page in the Cisco ISE UI. Filtering will be based on one attribute only, such as ip, sgt, vn, psn, learnedFrom, or learnedBy with CONTAINS mode of search.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class AciBindings(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+-------------+--------------+---------------------------------------------------------------------------------------------------------+--------------------------------------+
     | **Attribute** | **Type**    | **Required** | **Description**                                                                                         | **Example Values**                   |
@@ -176,8 +174,8 @@ class AciBindings(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

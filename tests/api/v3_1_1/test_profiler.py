@@ -37,6 +37,7 @@ def is_valid_get_profiles(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_dac693445cb95c6996cf6c7d85dece35_v3_1_1').validate(obj.response)
     return True
 

@@ -51,10 +51,9 @@ class AncEndpoint(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Adaptive Network Control (ANC) provides the ability to create network endpoint authorization controls based on ANC policies.
+    | Adaptive Network Control (ANC) provides the ability to create network endpoint authorization controls based on ANC policies.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+---+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |   |
@@ -64,8 +63,7 @@ class AncEndpoint(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+----------+--------------+-------------------------------------------+--------------------------------------+
     | **Attribute** | **Type** | **Required** | **Description**                           | **Example Values**                   |
@@ -81,12 +79,13 @@ class AncEndpoint(object):
     | policyName    | String   | Yes          | Policy name to be applied to the endpoint | policy1                              |
     +---------------+----------+--------------+-------------------------------------------+--------------------------------------+
 
-    Supported ANC API transactions per second
-    -----------------------------------------
+    |
+
+    **Supported ANC API transactions per second**
 
     | On a 5 node Cisco ISE deployment with 60k sessions or on a 9 node Cisco ISE deployment with 200k/500k sessions, 250 transactions per second (TPS) is supported for any ANC API.
     | **Supported ANC APIs**
-    | \* applyEndpointByMacAddress \* clearEndpointByMacaddress \* applyEndpointByIpAddress \* applyEndpointPolicy \* clearEndpointPolicy
+    | * applyEndpointByMacAddress * clearEndpointByMacaddress * applyEndpointByIpAddress * applyEndpointPolicy * clearEndpointPolicy
 
     ============== ====================== ==========================
     **Deployment** **Number of Sessions** **Supported ANC APIs TPS**
@@ -157,8 +156,8 @@ class AncEndpoint(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -249,8 +248,8 @@ class AncEndpoint(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -407,8 +406,8 @@ class AncEndpoint(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -642,8 +641,8 @@ class AncEndpoint(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

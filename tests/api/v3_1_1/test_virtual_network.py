@@ -37,6 +37,7 @@ def is_valid_get_virtual_networks(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_2199bd42dc595dd68ab56120039f89f1_v3_1_1').validate(obj.response)
     return True
 
@@ -97,6 +98,7 @@ def is_valid_create_virtual_network(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_fe478ea1775758638d714efe1b67eec2_v3_1_1').validate(obj.response)
     return True
 
@@ -157,6 +159,7 @@ def is_valid_bulk_create_virtual_networks(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f7253733d7025c8b8459478b159e84fc_v3_1_1').validate(obj.response)
     return True
 
@@ -209,6 +212,7 @@ def is_valid_bulk_delete_virtual_networks(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_b6cdd5dd57b95d8bac87ce9600a84b5d_v3_1_1').validate(obj.response)
     return True
 
@@ -261,6 +265,7 @@ def is_valid_bulk_update_virtual_networks(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_e3c62bba9f9e5344a38479f6437cf8b4_v3_1_1').validate(obj.response)
     return True
 
@@ -313,6 +318,7 @@ def is_valid_get_virtual_network_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d89686dd9cb05c02833cdefc5d3ba9f2_v3_1_1').validate(obj.response)
     return True
 
@@ -363,6 +369,7 @@ def is_valid_update_virtual_network_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_6d02f9a7ed46581b8baf07e182f80695_v3_1_1').validate(obj.response)
     return True
 
@@ -423,6 +430,7 @@ def is_valid_delete_virtual_network_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_30f7fda88868581085da6ac8c0e04b5c_v3_1_1').validate(obj.response)
     return True
 

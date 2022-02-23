@@ -37,6 +37,7 @@ def is_valid_get_telemetry_info_by_id(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_13891f52605b5f6481f6a99ec8a7e8e6_v3_1_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_get_telemetry_information(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_8f1a8ae602c95ac08676391c374274f2_v3_1_0').validate(obj.response)
     return True
 
@@ -143,6 +145,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_86338cd5bfb6540cb70f4bc100a96aed_v3_1_0').validate(obj.response)
     return True
 

@@ -47,16 +47,18 @@ def rate_limit_detected(w):
 @pytest.mark.ratelimit
 def test_rate_limit_retry(api):
     # Save state and initialize test setup
-    original_wait_on_rate_limit = api._session.wait_on_rate_limit
-    api._session.wait_on_rate_limit = True
+    original_wait_on_rate_limit = api.wait_on_rate_limit
+    api.wait_on_rate_limit = True
+    api.reinitialize()
 
     with warnings.catch_warnings(record=True) as w:
-        devices = api.devices.get_device_list()
+        authorization_profiles = api.authorization_profile.get_all()
         i = 0
-        while i < len(devices.response):
+        while i < len(authorization_profiles.response.SearchResult.resources):
             # Try and trigger a rate-limit
-            api.devices.get_device_config_by_id(path_network_device_id=devices.response[i].id)
+            api.authorization_profile.get_by_id(authorization_profiles.response.SearchResult.resources[i].id)
             i += 1
             if rate_limit_detected(w):
                 break
-    api._session.wait_on_rate_limit = original_wait_on_rate_limit
+    api.wait_on_rate_limit = original_wait_on_rate_limit
+    api.reinitialize()

@@ -92,6 +92,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_25c57752629f546fb86e84c59285350f_v3_1_1').validate(obj.response)
     return True
 

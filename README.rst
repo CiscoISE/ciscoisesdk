@@ -13,13 +13,17 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
     # Create a IdentityServicesEngineAPI connection object;
     # it uses ISE custom URL, username, and password, with ISE API version 3.1.1
     # and its API Gateway enabled,
-    # and verify=True to verify the server's TLS certificate.
+    # verify=True to verify the server's TLS certificate
+    # with debug logs disabled
+    # and without using the CSRF token
     api = IdentityServicesEngineAPI(username='admin',
                                     password='C1sco12345',
                                     uses_api_gateway=True,
                                     base_url='https://198.18.133.27',
                                     version='3.1.1',
-                                    verify=True)
+                                    verify=True,
+                                    debug=False,
+                                    uses_csrf_token=False)
     # NOTE: This collection assumes that the ERS APIs and OpenAPIs are enabled.
 
     # Get allowed protocols (first page)

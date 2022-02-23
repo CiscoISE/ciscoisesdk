@@ -37,6 +37,7 @@ def is_valid_get_device_admin_identity_stores(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_22ce65f2bd375be1ba41a7d6f02ad7b6_v3_1_0').validate(obj.response)
     return True
 

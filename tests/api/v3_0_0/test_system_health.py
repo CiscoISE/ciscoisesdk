@@ -37,6 +37,7 @@ def is_valid_get_healths(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0f67f5c0641d55708b20ffc56f374854_v3_0_0').validate(obj.response)
     return True
 
@@ -89,6 +90,7 @@ def is_valid_get_performances(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_048aadb0c21d5146a207994d493fe9a5_v3_0_0').validate(obj.response)
     return True
 

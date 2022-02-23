@@ -37,6 +37,7 @@ def is_valid_get_network_access_network_conditions(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_d43fec9e7dc556cbb9bf0ebd1dcd6aad_v3_0_0').validate(obj.response)
     return True
 
@@ -87,6 +88,7 @@ def is_valid_create_network_access_network_condition(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_f4dbfb874b3b56d7a651d6732f1bd55e_v3_0_0').validate(obj.response)
     return True
 
@@ -151,6 +153,7 @@ def is_valid_get_network_access_network_condition_by_id(json_schema_validate, ob
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_0ab015a9eb6d5f2b91002af068cb4ce2_v3_0_0').validate(obj.response)
     return True
 
@@ -201,6 +204,7 @@ def is_valid_update_network_access_network_condition_by_id(json_schema_validate,
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_49780cf65cd559628b26f6eb5ea20f14_v3_0_0').validate(obj.response)
     return True
 
@@ -265,6 +269,7 @@ def is_valid_delete_network_access_network_condition_by_id(json_schema_validate,
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_95e92c6e47625711b9ce06f92bd4d219_v3_0_0').validate(obj.response)
     return True
 

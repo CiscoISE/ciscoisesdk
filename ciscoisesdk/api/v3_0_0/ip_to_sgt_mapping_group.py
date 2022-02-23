@@ -51,10 +51,9 @@ class IpToSgtMappingGroup(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    IP To SGT Mapping Group API allows the client to add, delete, update, search and deploy IP to SGT mapping groups.
+    | IP To SGT Mapping Group API allows the client to add, delete, update, search and deploy IP to SGT mapping groups.
 
-    Revision History
-    ----------------
+    **Revision History**
 
     +----------------+----------------------+-----------------------+---------------------------+
     | **Revision #** | **Resource Version** | **Cisco ISE Version** | **Description**           |
@@ -64,8 +63,7 @@ class IpToSgtMappingGroup(object):
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+-----------+---------------------------------------------------------------+-------------------------------------+--------------------+--------------------+
     | **Attribute** | **Type**  | **Required**                                                  | **Description**                     | **Default Values** | **Example Values** |
@@ -78,10 +76,7 @@ class IpToSgtMappingGroup(object):
     +---------------+-----------+---------------------------------------------------------------+-------------------------------------+--------------------+--------------------+
     | deployTo      | String    | Mandatory unless mappingGroup is set or unless deployType=ALL |                                     |                    | network_device_id  |
     +---------------+-----------+---------------------------------------------------------------+-------------------------------------+--------------------+--------------------+
-    | deployType    | Enum      | Yes                                                           | Allowed values:                     | ALL                |                    |
-    |               |           |                                                               | - ALL,                              |                    |                    |
-    |               |           |                                                               | - ND,                               |                    |                    |
-    |               |           |                                                               | - NDG                               |                    |                    |
+    | deployType    | Enum      | Yes                                                           | Allowed values: ALL, ND, NDG        | ALL                |                    |
     +---------------+-----------+---------------------------------------------------------------+-------------------------------------+--------------------+--------------------+
     | sgt           | String    | Mandatory unless mappingGroup is set                          |                                     |                    | sgt_id             |
     +---------------+-----------+---------------------------------------------------------------+-------------------------------------+--------------------+--------------------+
@@ -150,8 +145,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -222,8 +217,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -292,8 +287,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -362,8 +357,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -466,8 +461,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -594,8 +589,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -726,8 +721,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -970,8 +965,8 @@ class IpToSgtMappingGroup(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

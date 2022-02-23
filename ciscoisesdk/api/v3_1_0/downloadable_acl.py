@@ -51,49 +51,23 @@ class DownloadableAcl(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
-    Downloadable ACL API allows the client to add, delete, update, search and perform actions on downloadable ACL.
+    | Downloadable ACL API allows the client to add, delete, update, search and perform actions on downloadable ACL.
 
-    Revision History
-    ----------------
+    **Revision History**
 
-    **Revision #**
-
-    **Resource Version**
-
-    **Cisco ISE Version**
-
-    **Description**
-
-    **Revision Modification**
-
-    **Attribute**
-
-    **Description**
-
-    0
-
-    1.0
-
-    2.3
-
-    Initial Cisco ISE Version
-
-    1
-
-    1.1
-
-    2.6
-
-    Support new attribute IP version in 2.6
-
-    daclType
-
-    Added Enum Attribute 'daclType'
+    +------------+--------------------+-------------------+-----------------------------------------+-----------------------+-----------------------------------+
+    | Revision # | Resource   Version | Cisco ISE Version | Description                             | Revision Modification | Revision Modification             |
+    +------------+--------------------+-------------------+-----------------------------------------+-----------------------+-----------------------------------+
+    |            |                    |                   |                                         | Attribute             | Description                       |
+    +------------+--------------------+-------------------+-----------------------------------------+-----------------------+-----------------------------------+
+    | 0          | 1.0                | 2.3               | Initial Cisco ISE Version               |                       |                                   |
+    +------------+--------------------+-------------------+-----------------------------------------+-----------------------+-----------------------------------+
+    | 1          | 1.1                | 2.6               | Support new attribute IP version in 2.6 | daclType              | Added Enum   Attribute 'daclType' |
+    +------------+--------------------+-------------------+-----------------------------------------+-----------------------+-----------------------------------+
 
     |
 
-    Resource Definition
-    -------------------
+    **Resource Definition**
 
     +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | **Attribute** | **Type**  | **Required** | **Description**                                                                       | **Default Values** | **Example Values**                   |
@@ -102,9 +76,9 @@ class DownloadableAcl(object):
     +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | id            | String    | Yes          | Resource UUID                                                                         |                    | c1e0e9e0-717f-11eb-9fb2-b6cb23d38630 |
     +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
-    | description   | String    | No           | Use the string \\n for a newline                                                      |                    | description                          |
+    | description   | String    | No           | Use the string \\n for a newline                                                       |                    | description                          |
     +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
-    | dacl          | String    | Yes          | The DACL Content. Use the string \\n for a newline                                    |                    | permit ip any any                    |
+    | dacl          | String    | Yes          | The DACL Content. Use the string \\n for a newline                                     |                    | permit ip any any                    |
     +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | daclType      | Enum      | No           | Allowed values:                                                                       | IPV4               |                                      |
     |               |           |              | - IPV4,                                                                               |                    |                                      |
@@ -174,8 +148,8 @@ class DownloadableAcl(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -237,7 +211,7 @@ class DownloadableAcl(object):
             dacl_type(string): Allowed values: IPV4, IPV6,
                 IP_AGNOSTIC, property of the request
                 body.
-            description(string): Use the string \\n for a newline,
+            description(string): Use the string \\n for a newline ,
                 property of the request body.
             id(string): id, property of the request body.
             name(string): Resource Name. Name may contain
@@ -281,8 +255,8 @@ class DownloadableAcl(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -411,8 +385,8 @@ class DownloadableAcl(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -499,8 +473,8 @@ class DownloadableAcl(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False
@@ -628,7 +602,7 @@ class DownloadableAcl(object):
             dacl_type(string): Allowed values: IPV4, IPV6,
                 IP_AGNOSTIC, property of the request
                 body.
-            description(string): Use the string \\n for a newline,
+            description(string): Use the string \\n for a newline ,
                 property of the request body.
             name(string): Resource Name. Name may contain
                 alphanumeric or any of the following
@@ -670,8 +644,8 @@ class DownloadableAcl(object):
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
                            basestring)
-            if 'X-CSRF-TOKEN' in headers:
-                check_type(headers.get('X-CSRF-TOKEN'),
+            if 'X-CSRF-Token' in headers:
+                check_type(headers.get('X-CSRF-Token'),
                            basestring)
 
         with_custom_headers = False

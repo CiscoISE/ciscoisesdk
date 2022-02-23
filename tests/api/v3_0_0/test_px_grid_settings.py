@@ -37,6 +37,7 @@ def is_valid_autoapprove_px_grid_settings(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_787126e5dd9b5979a409b9f456265db0_v3_0_0').validate(obj.response)
     return True
 
@@ -93,6 +94,7 @@ def is_valid_get_version(json_schema_validate, obj):
     assert hasattr(obj, 'content')
     assert hasattr(obj, 'text')
     assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
     json_schema_validate('jsd_bea00c7a4f9b5e1798ea078e123ff016_v3_0_0').validate(obj.response)
     return True
 
