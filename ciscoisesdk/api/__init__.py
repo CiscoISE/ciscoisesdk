@@ -876,7 +876,7 @@ class IdentityServicesEngineAPI(object):
                 the related objects to manage information from Identity Services Engine, like the
                 authentication, the sessions (requests library), and the API wrappers (for each ISE API family).
                 Defaults to True.
-                You can initialize/reinitialize later with `reinitialize <#ciscoisesdk.api.reinitialize>`_.
+                You can initialize/reinitialize later with `reinitialize <#ciscoisesdk.IdentityServicesEngineAPI.reinitialize>`_.
                 The original value will not change.
 
         Returns:

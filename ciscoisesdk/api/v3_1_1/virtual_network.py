@@ -52,7 +52,6 @@ class VirtualNetwork(object):
     methods that return native Python objects.
 
 
-
     """
 
     def __init__(self, session, object_factory, request_validator):

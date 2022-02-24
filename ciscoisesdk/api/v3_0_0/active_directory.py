@@ -435,7 +435,7 @@ class ActiveDirectory(object):
                 body.
             name(string): Resource Name. Maximum 32 characters
                 allowed. Allowed characters are
-                alphanumeric and .-_/\\ characters ,
+                alphanumeric and .-_/\\ characters,
                 property of the request body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1621,7 +1621,7 @@ class ActiveDirectory(object):
                 body.
             name(string): Resource Name. Maximum 32 characters
                 allowed. Allowed characters are
-                alphanumeric and .-_/\\ characters ,
+                alphanumeric and .-_/\\ characters,
                 property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
