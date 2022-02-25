@@ -14,8 +14,8 @@ Removed
 -  Removed ``access_token`` property of ``IdentityServicesEngineAPI`` and ``RestSession``.
 -  Removed ISE version 3.0.0.
 
-[1.5.1] - 2022-02-25
---------------------
+`1.5.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...v1.5.1>`__ - 2022-02-25
+----------------------------------------------------------------------------------------
 
 Changed
 -------
