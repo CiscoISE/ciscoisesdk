@@ -2,7 +2,6 @@ import socket
 from http.server import HTTPServer
 from threading import Thread
 
-from tests.mock.server.v3_0_0 import MockServerRequestHandler_v3_0_0
 from tests.mock.server.v3_1_0 import MockServerRequestHandler_v3_1_0
 from tests.mock.server.v3_1_1 import MockServerRequestHandler_v3_1_1
 
@@ -25,8 +24,6 @@ def get_mock_url(free_port):
 def start_mock_server(port, version):
     mockServerHandler = None
 
-    if version == '3.0.0':
-        mockServerHandler = MockServerRequestHandler_v3_0_0
     if version == '3.1.0':
         mockServerHandler = MockServerRequestHandler_v3_1_0
     if version == '3.1.1':
