@@ -6,10 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [2.0.0] - 2022-03-01
+
 ### Removed
 
 - Removed `access_token` property of `IdentityServicesEngineAPI` and `RestSession`.
-- Removed ISE version 3.0.0.
+- Drop ISE version 3.0.0 support.
 
 ## [1.5.1] - 2022-02-25
 
@@ -292,4 +295,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.1...v1.4.2
 [1.5.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0
 [1.5.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...v1.5.1
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...develop
+[2.0.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.1...v2.0.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...develop
