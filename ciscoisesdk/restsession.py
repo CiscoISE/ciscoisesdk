@@ -184,13 +184,6 @@ class RestSession(object):
         self._base_url = str(validate_base_url(value))
 
     @property
-    def access_token(self):
-        """DEPRECATED: The access token used for API calls to the Identity Services Engine service. Property will be removed soon."""
-        warnings.warn("Property will be removed soon in favor of ciscoisesdk.api.username, ciscoisesdk.api.is_password and ciscoisesdk.api.is_encoded_auth",
-                      FutureWarning)
-        return self._access_token
-
-    @property
     def single_request_timeout(self):
         """The timeout (seconds) for a single HTTP REST API request."""
         return self._single_request_timeout
