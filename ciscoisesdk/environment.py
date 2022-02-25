@@ -174,7 +174,7 @@ def get_env_px_grid_base_url():
 
 
 def get_env_uses_csrf_token():
-    IDENTITY_SERVICES_USES_CSRF_TOKEN = _get_env_value(
+    IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN = _get_env_value(
         USES_CSRF_TOKEN_ENVIRONMENT_VARIABLE,
         bool, is_bool)
-    return IDENTITY_SERVICES_USES_CSRF_TOKEN
+    return IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN

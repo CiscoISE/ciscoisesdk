@@ -80,10 +80,7 @@ class DownloadableAcl(object):
     +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
     | dacl          | String    | Yes          | The DACL Content. Use the string \\n for a newline                                     |                    | permit ip any any                    |
     +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
-    | daclType      | Enum      | No           | Allowed values:                                                                       | IPV4               |                                      |
-    |               |           |              | - IPV4,                                                                               |                    |                                      |
-    |               |           |              | - IPV6,                                                                               |                    |                                      |
-    |               |           |              | - IP_AGNOSTIC                                                                         |                    |                                      |
+    | daclType      | Enum      | No           | Allowed values: IPV4, IPV6, IP_AGNOSTIC                                               | IPV4               |                                      |
     +---------------+-----------+--------------+---------------------------------------------------------------------------------------+--------------------+--------------------------------------+
 
     """
@@ -211,7 +208,7 @@ class DownloadableAcl(object):
             dacl_type(string): Allowed values: IPV4, IPV6,
                 IP_AGNOSTIC, property of the request
                 body.
-            description(string): Use the string \\n for a newline ,
+            description(string): Use the string \\n for a newline,
                 property of the request body.
             id(string): id, property of the request body.
             name(string): Resource Name. Name may contain
@@ -602,7 +599,7 @@ class DownloadableAcl(object):
             dacl_type(string): Allowed values: IPV4, IPV6,
                 IP_AGNOSTIC, property of the request
                 body.
-            description(string): Use the string \\n for a newline ,
+            description(string): Use the string \\n for a newline,
                 property of the request body.
             name(string): Resource Name. Name may contain
                 alphanumeric or any of the following
