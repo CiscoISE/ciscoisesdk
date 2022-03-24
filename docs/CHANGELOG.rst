@@ -5,10 +5,56 @@ All notable changes to this project will be documented in this file.
 
 The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`__, and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`__.
 
-`Unreleased <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...develop>`__
+`Unreleased <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...develop>`__
 ---------------------------------------------------------------------------------
 
-`2.0.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.1...v2.0.0>`__ - 2022-03-01
+`2.0.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...v2.0.1>`__ - 2022-03-24
+----------------------------------------------------------------------------------------
+
+Added
+~~~~~
+
+-  Add ``DownloadResponse`` class that wraps the ``urllib3.response.HTTPResponse``.
+-  Add ``filename`` optional parameter to the following functions:
+
+   -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_csr
+   -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_system_certificate
+   -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_trusted_certificate
+   -  ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate.create_endpoint_certificate
+   -  ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate.create
+   -  ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload.download_support_bundle
+   -  ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload.download
+   -  ciscoisesdk.api.v3_1_1.certificates.Certificates.export_csr
+   -  ciscoisesdk.api.v3_1_1.certificates.Certificates.export_system_certificate
+   -  ciscoisesdk.api.v3_1_1.certificates.Certificates.export_trusted_certificate
+   -  ciscoisesdk.api.v3_1_1.endpoint_certificate.EndpointCertificate.create_endpoint_certificate
+   -  ciscoisesdk.api.v3_1_1.endpoint_certificate.EndpointCertificate.create
+   -  ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download_support_bundle
+   -  ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download
+
+Changed
+~~~~~~~
+
+-  Change the response of the following funtions from ``urllib3.response.HTTPResponse`` to a wrapper ``DownloadResponse``.
+
+   -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_csr
+   -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_system_certificate
+   -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_trusted_certificate
+   -  ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate.create_endpoint_certificate
+   -  ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate.create
+   -  ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload.download_support_bundle
+   -  ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload.download
+   -  ciscoisesdk.api.v3_1_1.certificates.Certificates.export_csr
+   -  ciscoisesdk.api.v3_1_1.certificates.Certificates.export_system_certificate
+   -  ciscoisesdk.api.v3_1_1.certificates.Certificates.export_trusted_certificate
+   -  ciscoisesdk.api.v3_1_1.endpoint_certificate.EndpointCertificate.create_endpoint_certificate
+   -  ciscoisesdk.api.v3_1_1.endpoint_certificate.EndpointCertificate.create
+   -  ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download_support_bundle
+   -  ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download
+
+.. _section-1:
+
+`2.0.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.1...v2.0.0>`__ - 2022-03-24
 ----------------------------------------------------------------------------------------
 
 Removed
@@ -17,22 +63,24 @@ Removed
 -  Removed ``access_token`` property of ``IdentityServicesEngineAPI`` and ``RestSession``.
 -  Drop ISE version 3.0.0 support.
 
-.. _section-1:
+.. _section-2:
 
 `1.5.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...v1.5.1>`__ - 2022-02-25
 ----------------------------------------------------------------------------------------
+
+.. _changed-1:
 
 Changed
 -------
 
 -  Update docstring documentation of modules and functions.
 
-.. _section-2:
+.. _section-3:
 
 `1.5.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0>`__ - 2022-02-23
 ----------------------------------------------------------------------------------------
 
-.. _changed-1:
+.. _changed-2:
 
 Changed
 ~~~~~~~
@@ -45,6 +93,8 @@ Changed
 -  ``RestSession`` to request for a refreshed CSRF token if ``uses_csrf_token`` is enabled.
 -  Replaced the name of headers checked for ERS methods from “X-CSRF-TOKEN” to “X-CSRF-Token”.
 -  Changed ``ApiError`` message when status_code is 401 or 403 to include reference to ``additional_data`` property.
+
+.. _added-1:
 
 Added
 ~~~~~
@@ -118,7 +168,7 @@ Fixed
 -  The process that gets the environment variables now can access the variables set after the module is imported, and not only before it.
 -  Fixed the docstring tables of the API modules.
 
-.. _section-3:
+.. _section-4:
 
 `1.4.2 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.1...v1.4.2>`__ - 2022-02-18
 ----------------------------------------------------------------------------------------
@@ -130,12 +180,12 @@ Fixed
 
 -  Update pagination to capture and ignore 400 Bad Request in generators when they attempt to get_next_page. Previous version only captured and ignored 404 Not Found.
 
-.. _section-4:
+.. _section-5:
 
 `1.4.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.0...v1.4.1>`__ - 2022-01-20
 ----------------------------------------------------------------------------------------
 
-.. _changed-2:
+.. _changed-3:
 
 Changed
 ~~~~~~~
@@ -143,12 +193,12 @@ Changed
 -  Update module inner documentation.
 -  Downgrade requirements file to use poetry versions.
 
-.. _section-5:
+.. _section-6:
 
 `1.4.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0>`__ - 2022-01-19
 ----------------------------------------------------------------------------------------
 
-.. _changed-3:
+.. _changed-4:
 
 Changed
 ~~~~~~~
@@ -162,24 +212,24 @@ Fixed
 
 -  Update pagination, get_next_page inner logic and location from utils to pagination.
 
-.. _section-6:
+.. _section-7:
 
 `1.3.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.0...v1.3.1>`__ - 2021-12-13
 ----------------------------------------------------------------------------------------
 
-.. _changed-4:
+.. _changed-5:
 
 Changed
 ~~~~~~~
 
 -  Fixes utils.get_next_page generator starting default page
 
-.. _section-7:
+.. _section-8:
 
 `1.3.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.2.0...v1.3.0>`__ - 2021-12-13
 ----------------------------------------------------------------------------------------
 
-.. _added-1:
+.. _added-2:
 
 Added
 ~~~~~
@@ -208,12 +258,12 @@ Removed
 -  Removes replication_status module
 -  Removes sync_ise_node module
 
-.. _section-8:
+.. _section-9:
 
 `1.2.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...v1.2.0>`__ - 2021-11-24
 ----------------------------------------------------------------------------------------
 
-.. _added-2:
+.. _added-3:
 
 Added
 ~~~~~
@@ -221,7 +271,7 @@ Added
 -  Adds notice for 3.0.0 (soon to be deprecated)
 -  Adds Trust Sec endpoints to ISE version 3.1.0
 
-.. _changed-5:
+.. _changed-6:
 
 Changed
 ~~~~~~~
@@ -236,19 +286,19 @@ Removed
 
 -  Removes link of 3.1.0 modules to 3.0.0 version
 
-.. _section-9:
+.. _section-10:
 
 `1.1.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.1...v1.1.0>`__ - 2021-10-22
 ----------------------------------------------------------------------------------------
 
-.. _added-3:
+.. _added-4:
 
 Added
 ~~~~~
 
 -  Link of 3.1.0 modules to 3.0.0 version
 
-.. _changed-6:
+.. _changed-7:
 
 Changed
 ~~~~~~~
@@ -256,24 +306,24 @@ Changed
 -  Default ISE DEFAULT_VERSION to 3.1.0
 -  Update documentation to use ISE v3.1.0
 
-.. _section-10:
+.. _section-11:
 
 `1.0.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...v1.0.1>`__ - 2021-09-14
 ----------------------------------------------------------------------------------------
 
-.. _changed-7:
+.. _changed-8:
 
 Changed
 ~~~~~~~
 
 -  Disabled warnings of urllib3 if verify is False
 
-.. _section-11:
+.. _section-12:
 
 `1.0.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v0.5.1...v1.0.0>`__ - 2021-07-21
 ----------------------------------------------------------------------------------------
 
-.. _added-4:
+.. _added-5:
 
 Added
 ~~~~~
@@ -301,7 +351,7 @@ Added
 
 -  Aliases for functions (eg. ``get_all``, ``get_by_id``, ``get_by_name``, ``update_by_id``, ``delete_by_id``, ``create``, and others)
 
-.. _changed-8:
+.. _changed-9:
 
 Changed
 ~~~~~~~

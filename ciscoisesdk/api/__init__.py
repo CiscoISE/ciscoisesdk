@@ -22,511 +22,470 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from past.types import basestring
+import copy
 import warnings
 
+import ciscoisesdk.environment as ciscoise_environment
 from ciscoisesdk.config import (
-    DEFAULT_DEBUG,
-    DEFAULT_VERSION,
     DEFAULT_BASE_URL,
+    DEFAULT_DEBUG,
     DEFAULT_SINGLE_REQUEST_TIMEOUT,
-    DEFAULT_WAIT_ON_RATE_LIMIT,
-    DEFAULT_VERIFY,
     DEFAULT_USES_API_GATEWAY,
     DEFAULT_USES_CSRF_TOKEN,
+    DEFAULT_VERIFY,
+    DEFAULT_VERSION,
+    DEFAULT_WAIT_ON_RATE_LIMIT,
 )
-import ciscoisesdk.environment as ciscoise_environment
 from ciscoisesdk.exceptions import AccessTokenError, VersionError
 from ciscoisesdk.models.mydict import mydict_data_factory
 from ciscoisesdk.models.schema_validator import SchemaValidator
 from ciscoisesdk.restsession import RestSession
 from ciscoisesdk.utils import check_type
+from past.types import basestring
 
 from .authentication import Authentication
-from .v3_1_0.aci_bindings import \
-    AciBindings as AciBindings_v3_1_0
-from .v3_1_0.aci_settings import \
-    AciSettings as AciSettings_v3_1_0
-from .v3_1_0.anc_endpoint import \
-    AncEndpoint as AncEndpoint_v3_1_0
-from .v3_1_0.active_directory import \
-    ActiveDirectory as ActiveDirectory_v3_1_0
-from .v3_1_0.admin_user import \
-    AdminUser as AdminUser_v3_1_0
-from .v3_1_0.allowed_protocols import \
-    AllowedProtocols as AllowedProtocols_v3_1_0
-from .v3_1_0.anc_policy import \
-    AncPolicy as AncPolicy_v3_1_0
-from .v3_1_0.authorization_profile import \
-    AuthorizationProfile as AuthorizationProfile_v3_1_0
-from .v3_1_0.byod_portal import \
-    ByodPortal as ByodPortal_v3_1_0
-from .v3_1_0.backup_and_restore import \
-    BackupAndRestore as BackupAndRestore_v3_1_0
-from .v3_1_0.certificate_profile import \
-    CertificateProfile as CertificateProfile_v3_1_0
-from .v3_1_0.certificate_template import \
-    CertificateTemplate as CertificateTemplate_v3_1_0
-from .v3_1_0.certificates import \
-    Certificates as Certificates_v3_1_0
-from .v3_1_0.clear_threats_and_vulnerabilities import \
-    ClearThreatsAndVulnerabilities as ClearThreatsAndVulnerabilities_v3_1_0
-from .v3_1_0.consumer import \
-    Consumer as Consumer_v3_1_0
-from .v3_1_0.device_administration_authentication_rules import \
-    DeviceAdministrationAuthenticationRules as DeviceAdministrationAuthenticationRules_v3_1_0
-from .v3_1_0.device_administration_authorization_exception_rules import \
-    DeviceAdministrationAuthorizationExceptionRules as DeviceAdministrationAuthorizationExceptionRules_v3_1_0
-from .v3_1_0.device_administration_authorization_global_exception_rules import \
-    DeviceAdministrationAuthorizationGlobalExceptionRules as DeviceAdministrationAuthorizationGlobalExceptionRules_v3_1_0
-from .v3_1_0.device_administration_authorization_rules import \
-    DeviceAdministrationAuthorizationRules as DeviceAdministrationAuthorizationRules_v3_1_0
-from .v3_1_0.device_administration_command_set import \
-    DeviceAdministrationCommandSet as DeviceAdministrationCommandSet_v3_1_0
-from .v3_1_0.device_administration_conditions import \
-    DeviceAdministrationConditions as DeviceAdministrationConditions_v3_1_0
-from .v3_1_0.device_administration_dictionary_attributes_list import \
-    DeviceAdministrationDictionaryAttributesList as DeviceAdministrationDictionaryAttributesList_v3_1_0
-from .v3_1_0.device_administration_identity_stores import \
-    DeviceAdministrationIdentityStores as DeviceAdministrationIdentityStores_v3_1_0
-from .v3_1_0.device_administration_network_conditions import \
-    DeviceAdministrationNetworkConditions as DeviceAdministrationNetworkConditions_v3_1_0
-from .v3_1_0.device_administration_policy_set import \
-    DeviceAdministrationPolicySet as DeviceAdministrationPolicySet_v3_1_0
-from .v3_1_0.device_administration_profiles import \
-    DeviceAdministrationProfiles as DeviceAdministrationProfiles_v3_1_0
-from .v3_1_0.device_administration_service_names import \
-    DeviceAdministrationServiceNames as DeviceAdministrationServiceNames_v3_1_0
-from .v3_1_0.device_administration_time_date_conditions import \
-    DeviceAdministrationTimeDateConditions as DeviceAdministrationTimeDateConditions_v3_1_0
-from .v3_1_0.downloadable_acl import \
-    DownloadableAcl as DownloadableAcl_v3_1_0
-from .v3_1_0.egress_matrix_cell import \
-    EgressMatrixCell as EgressMatrixCell_v3_1_0
-from .v3_1_0.endpoint_certificate import \
-    EndpointCertificate as EndpointCertificate_v3_1_0
-from .v3_1_0.endpoint_identity_group import \
-    EndpointIdentityGroup as EndpointIdentityGroup_v3_1_0
-from .v3_1_0.external_radius_server import \
-    ExternalRadiusServer as ExternalRadiusServer_v3_1_0
-from .v3_1_0.filter_policy import \
-    FilterPolicy as FilterPolicy_v3_1_0
-from .v3_1_0.guest_location import \
-    GuestLocation as GuestLocation_v3_1_0
-from .v3_1_0.guest_smtp_notification_configuration import \
-    GuestSmtpNotificationConfiguration as GuestSmtpNotificationConfiguration_v3_1_0
-from .v3_1_0.guest_ssid import \
-    GuestSsid as GuestSsid_v3_1_0
-from .v3_1_0.guest_type import \
-    GuestType as GuestType_v3_1_0
-from .v3_1_0.guest_user import \
-    GuestUser as GuestUser_v3_1_0
-from .v3_1_0.hotspot_portal import \
-    HotspotPortal as HotspotPortal_v3_1_0
-from .v3_1_0.ip_to_sgt_mapping import \
-    IpToSgtMapping as IpToSgtMapping_v3_1_0
-from .v3_1_0.ip_to_sgt_mapping_group import \
-    IpToSgtMappingGroup as IpToSgtMappingGroup_v3_1_0
-from .v3_1_0.identity_groups import \
-    IdentityGroups as IdentityGroups_v3_1_0
-from .v3_1_0.identity_sequence import \
-    IdentitySequence as IdentitySequence_v3_1_0
-from .v3_1_0.internal_user import \
-    InternalUser as InternalUser_v3_1_0
-from .v3_1_0.mdm import \
-    Mdm as Mdm_v3_1_0
-from .v3_1_0.misc import \
-    Misc as Misc_v3_1_0
-from .v3_1_0.my_device_portal import \
-    MyDevicePortal as MyDevicePortal_v3_1_0
-from .v3_1_0.native_supplicant_profile import \
-    NativeSupplicantProfile as NativeSupplicantProfile_v3_1_0
-from .v3_1_0.network_access_authentication_rules import \
-    NetworkAccessAuthenticationRules as NetworkAccessAuthenticationRules_v3_1_0
-from .v3_1_0.network_access_authorization_exception_rules import \
-    NetworkAccessAuthorizationExceptionRules as NetworkAccessAuthorizationExceptionRules_v3_1_0
-from .v3_1_0.network_access_authorization_global_exception_rules import \
-    NetworkAccessAuthorizationGlobalExceptionRules as NetworkAccessAuthorizationGlobalExceptionRules_v3_1_0
-from .v3_1_0.network_access_authorization_rules import \
-    NetworkAccessAuthorizationRules as NetworkAccessAuthorizationRules_v3_1_0
-from .v3_1_0.network_access_conditions import \
-    NetworkAccessConditions as NetworkAccessConditions_v3_1_0
-from .v3_1_0.network_access_dictionary import \
-    NetworkAccessDictionary as NetworkAccessDictionary_v3_1_0
-from .v3_1_0.network_access_dictionary_attribute import \
-    NetworkAccessDictionaryAttribute as NetworkAccessDictionaryAttribute_v3_1_0
-from .v3_1_0.network_access_dictionary_attributes_list import \
-    NetworkAccessDictionaryAttributesList as NetworkAccessDictionaryAttributesList_v3_1_0
-from .v3_1_0.network_access_identity_stores import \
-    NetworkAccessIdentityStores as NetworkAccessIdentityStores_v3_1_0
-from .v3_1_0.network_access_network_conditions import \
-    NetworkAccessNetworkConditions as NetworkAccessNetworkConditions_v3_1_0
-from .v3_1_0.network_access_policy_set import \
-    NetworkAccessPolicySet as NetworkAccessPolicySet_v3_1_0
-from .v3_1_0.network_access_profiles import \
-    NetworkAccessProfiles as NetworkAccessProfiles_v3_1_0
-from .v3_1_0.network_access_security_groups import \
-    NetworkAccessSecurityGroups as NetworkAccessSecurityGroups_v3_1_0
-from .v3_1_0.network_access_service_names import \
-    NetworkAccessServiceNames as NetworkAccessServiceNames_v3_1_0
-from .v3_1_0.network_access_time_date_conditions import \
-    NetworkAccessTimeDateConditions as NetworkAccessTimeDateConditions_v3_1_0
-from .v3_1_0.network_device import \
-    NetworkDevice as NetworkDevice_v3_1_0
-from .v3_1_0.network_device_group import \
-    NetworkDeviceGroup as NetworkDeviceGroup_v3_1_0
-from .v3_1_0.node_deployment import \
-    NodeDeployment as NodeDeployment_v3_1_0
-from .v3_1_0.node_group import \
-    NodeGroup as NodeGroup_v3_1_0
-from .v3_1_0.node_details import \
-    NodeDetails as NodeDetails_v3_1_0
-from .v3_1_0.pan_ha import \
-    PanHa as PanHa_v3_1_0
-from .v3_1_0.portal_global_setting import \
-    PortalGlobalSetting as PortalGlobalSetting_v3_1_0
-from .v3_1_0.portal_theme import \
-    PortalTheme as PortalTheme_v3_1_0
-from .v3_1_0.profiler import \
-    Profiler as Profiler_v3_1_0
-from .v3_1_0.profiler_profile import \
-    ProfilerProfile as ProfilerProfile_v3_1_0
-from .v3_1_0.provider import \
-    Provider as Provider_v3_1_0
-from .v3_1_0.psn_node_details_with_radius_service import \
-    PsnNodeDetailsWithRadiusService as PsnNodeDetailsWithRadiusService_v3_1_0
-from .v3_1_0.pull_deployment_info import \
-    PullDeploymentInfo as PullDeploymentInfo_v3_1_0
-from .v3_1_0.px_grid_settings import \
-    PxGridSettings as PxGridSettings_v3_1_0
-from .v3_1_0.radius_failure import \
-    RadiusFailure as RadiusFailure_v3_1_0
-from .v3_1_0.radius_server_sequence import \
-    RadiusServerSequence as RadiusServerSequence_v3_1_0
-from .v3_1_0.restid_store import \
-    RestidStore as RestidStore_v3_1_0
-from .v3_1_0.replication_status import \
-    ReplicationStatus as ReplicationStatus_v3_1_0
-from .v3_1_0.repository import \
-    Repository as Repository_v3_1_0
-from .v3_1_0.sms_provider import \
-    SmsProvider as SmsProvider_v3_1_0
-from .v3_1_0.sxp_connections import \
-    SxpConnections as SxpConnections_v3_1_0
-from .v3_1_0.sxp_local_bindings import \
-    SxpLocalBindings as SxpLocalBindings_v3_1_0
-from .v3_1_0.sxp_vpns import \
-    SxpVpns as SxpVpns_v3_1_0
-from .v3_1_0.security_group_to_virtual_network import \
-    SecurityGroupToVirtualNetwork as SecurityGroupToVirtualNetwork_v3_1_0
-from .v3_1_0.security_groups import \
-    SecurityGroups as SecurityGroups_v3_1_0
-from .v3_1_0.security_groups_acls import \
-    SecurityGroupsAcls as SecurityGroupsAcls_v3_1_0
-from .v3_1_0.self_registered_portal import \
-    SelfRegisteredPortal as SelfRegisteredPortal_v3_1_0
-from .v3_1_0.session_directory import \
-    SessionDirectory as SessionDirectory_v3_1_0
-from .v3_1_0.sponsor_group import \
-    SponsorGroup as SponsorGroup_v3_1_0
-from .v3_1_0.sponsor_group_member import \
-    SponsorGroupMember as SponsorGroupMember_v3_1_0
-from .v3_1_0.sponsor_portal import \
-    SponsorPortal as SponsorPortal_v3_1_0
-from .v3_1_0.sponsored_guest_portal import \
-    SponsoredGuestPortal as SponsoredGuestPortal_v3_1_0
-from .v3_1_0.support_bundle_download import \
-    SupportBundleDownload as SupportBundleDownload_v3_1_0
-from .v3_1_0.support_bundle_status import \
-    SupportBundleStatus as SupportBundleStatus_v3_1_0
-from .v3_1_0.support_bundle_trigger_configuration import \
-    SupportBundleTriggerConfiguration as SupportBundleTriggerConfiguration_v3_1_0
-from .v3_1_0.sync_ise_node import \
-    SyncIseNode as SyncIseNode_v3_1_0
-from .v3_1_0.system_health import \
-    SystemHealth as SystemHealth_v3_1_0
-from .v3_1_0.system_certificate import \
-    SystemCertificate as SystemCertificate_v3_1_0
-from .v3_1_0.tacacs_command_sets import \
-    TacacsCommandSets as TacacsCommandSets_v3_1_0
-from .v3_1_0.tacacs_external_servers import \
-    TacacsExternalServers as TacacsExternalServers_v3_1_0
-from .v3_1_0.tacacs_profile import \
-    TacacsProfile as TacacsProfile_v3_1_0
-from .v3_1_0.tacacs_server_sequence import \
-    TacacsServerSequence as TacacsServerSequence_v3_1_0
-from .v3_1_0.telemetry_information import \
-    TelemetryInformation as TelemetryInformation_v3_1_0
-from .v3_1_0.trust_sec_configuration import \
-    TrustSecConfiguration as TrustSecConfiguration_v3_1_0
-from .v3_1_0.trust_sec_sxp import \
-    TrustSecSxp as TrustSecSxp_v3_1_0
-from .v3_1_0.version_and_patch import \
-    VersionAndPatch as VersionAndPatch_v3_1_0
-from .v3_1_0.version_info import \
-    VersionInfo as VersionInfo_v3_1_0
-from .v3_1_0.endpoint import \
-    Endpoint as Endpoint_v3_1_0
-from .v3_1_0.nbar_app import \
-    NbarApp as NbarApp_v3_1_0
-from .v3_1_0.portal import \
-    Portal as Portal_v3_1_0
-from .v3_1_0.px_grid_node import \
-    PxGridNode as PxGridNode_v3_1_0
-from .v3_1_0.sg_vn_mapping import \
-    SgVnMapping as SgVnMapping_v3_1_0
-from .v3_1_0.tasks import \
-    Tasks as Tasks_v3_1_0
-from .v3_1_0.virtual_network import \
-    VirtualNetwork as VirtualNetwork_v3_1_0
-from .v3_1_0.vn_vlan_mapping import \
-    VnVlanMapping as VnVlanMapping_v3_1_0
-from .v3_1_1.aci_bindings import \
-    AciBindings as AciBindings_v3_1_1
-from .v3_1_1.aci_settings import \
-    AciSettings as AciSettings_v3_1_1
-from .v3_1_1.anc_endpoint import \
-    AncEndpoint as AncEndpoint_v3_1_1
-from .v3_1_1.active_directory import \
-    ActiveDirectory as ActiveDirectory_v3_1_1
-from .v3_1_1.admin_user import \
-    AdminUser as AdminUser_v3_1_1
-from .v3_1_1.allowed_protocols import \
-    AllowedProtocols as AllowedProtocols_v3_1_1
-from .v3_1_1.anc_policy import \
-    AncPolicy as AncPolicy_v3_1_1
-from .v3_1_1.authorization_profile import \
-    AuthorizationProfile as AuthorizationProfile_v3_1_1
-from .v3_1_1.byod_portal import \
-    ByodPortal as ByodPortal_v3_1_1
-from .v3_1_1.backup_and_restore import \
-    BackupAndRestore as BackupAndRestore_v3_1_1
-from .v3_1_1.certificate_profile import \
-    CertificateProfile as CertificateProfile_v3_1_1
-from .v3_1_1.certificate_template import \
-    CertificateTemplate as CertificateTemplate_v3_1_1
-from .v3_1_1.certificates import \
-    Certificates as Certificates_v3_1_1
-from .v3_1_1.clear_threats_and_vulnerabilities import \
-    ClearThreatsAndVulnerabilities as ClearThreatsAndVulnerabilities_v3_1_1
-from .v3_1_1.consumer import \
-    Consumer as Consumer_v3_1_1
-from .v3_1_1.device_administration_authentication_rules import \
-    DeviceAdministrationAuthenticationRules as DeviceAdministrationAuthenticationRules_v3_1_1
-from .v3_1_1.device_administration_authorization_exception_rules import \
-    DeviceAdministrationAuthorizationExceptionRules as DeviceAdministrationAuthorizationExceptionRules_v3_1_1
-from .v3_1_1.device_administration_authorization_global_exception_rules import \
-    DeviceAdministrationAuthorizationGlobalExceptionRules as DeviceAdministrationAuthorizationGlobalExceptionRules_v3_1_1
-from .v3_1_1.device_administration_authorization_rules import \
-    DeviceAdministrationAuthorizationRules as DeviceAdministrationAuthorizationRules_v3_1_1
-from .v3_1_1.device_administration_command_set import \
-    DeviceAdministrationCommandSet as DeviceAdministrationCommandSet_v3_1_1
-from .v3_1_1.device_administration_conditions import \
-    DeviceAdministrationConditions as DeviceAdministrationConditions_v3_1_1
-from .v3_1_1.device_administration_dictionary_attributes_list import \
-    DeviceAdministrationDictionaryAttributesList as DeviceAdministrationDictionaryAttributesList_v3_1_1
-from .v3_1_1.device_administration_identity_stores import \
-    DeviceAdministrationIdentityStores as DeviceAdministrationIdentityStores_v3_1_1
-from .v3_1_1.device_administration_network_conditions import \
-    DeviceAdministrationNetworkConditions as DeviceAdministrationNetworkConditions_v3_1_1
-from .v3_1_1.device_administration_policy_set import \
-    DeviceAdministrationPolicySet as DeviceAdministrationPolicySet_v3_1_1
-from .v3_1_1.device_administration_profiles import \
-    DeviceAdministrationProfiles as DeviceAdministrationProfiles_v3_1_1
-from .v3_1_1.device_administration_service_names import \
-    DeviceAdministrationServiceNames as DeviceAdministrationServiceNames_v3_1_1
-from .v3_1_1.device_administration_time_date_conditions import \
-    DeviceAdministrationTimeDateConditions as DeviceAdministrationTimeDateConditions_v3_1_1
-from .v3_1_1.downloadable_acl import \
-    DownloadableAcl as DownloadableAcl_v3_1_1
-from .v3_1_1.egress_matrix_cell import \
-    EgressMatrixCell as EgressMatrixCell_v3_1_1
-from .v3_1_1.endpoint_certificate import \
-    EndpointCertificate as EndpointCertificate_v3_1_1
-from .v3_1_1.endpoint_identity_group import \
-    EndpointIdentityGroup as EndpointIdentityGroup_v3_1_1
-from .v3_1_1.external_radius_server import \
-    ExternalRadiusServer as ExternalRadiusServer_v3_1_1
-from .v3_1_1.filter_policy import \
-    FilterPolicy as FilterPolicy_v3_1_1
-from .v3_1_1.guest_location import \
-    GuestLocation as GuestLocation_v3_1_1
-from .v3_1_1.guest_smtp_notification_configuration import \
-    GuestSmtpNotificationConfiguration as GuestSmtpNotificationConfiguration_v3_1_1
-from .v3_1_1.guest_ssid import \
-    GuestSsid as GuestSsid_v3_1_1
-from .v3_1_1.guest_type import \
-    GuestType as GuestType_v3_1_1
-from .v3_1_1.guest_user import \
-    GuestUser as GuestUser_v3_1_1
-from .v3_1_1.hotspot_portal import \
-    HotspotPortal as HotspotPortal_v3_1_1
-from .v3_1_1.ip_to_sgt_mapping import \
-    IpToSgtMapping as IpToSgtMapping_v3_1_1
-from .v3_1_1.ip_to_sgt_mapping_group import \
-    IpToSgtMappingGroup as IpToSgtMappingGroup_v3_1_1
-from .v3_1_1.identity_groups import \
-    IdentityGroups as IdentityGroups_v3_1_1
-from .v3_1_1.identity_sequence import \
-    IdentitySequence as IdentitySequence_v3_1_1
-from .v3_1_1.internal_user import \
-    InternalUser as InternalUser_v3_1_1
-from .v3_1_1.licensing import \
-    Licensing as Licensing_v3_1_1
-from .v3_1_1.mdm import \
-    Mdm as Mdm_v3_1_1
-from .v3_1_1.misc import \
-    Misc as Misc_v3_1_1
-from .v3_1_1.my_device_portal import \
-    MyDevicePortal as MyDevicePortal_v3_1_1
-from .v3_1_1.native_supplicant_profile import \
-    NativeSupplicantProfile as NativeSupplicantProfile_v3_1_1
-from .v3_1_1.network_access_authentication_rules import \
-    NetworkAccessAuthenticationRules as NetworkAccessAuthenticationRules_v3_1_1
-from .v3_1_1.network_access_authorization_exception_rules import \
-    NetworkAccessAuthorizationExceptionRules as NetworkAccessAuthorizationExceptionRules_v3_1_1
-from .v3_1_1.network_access_authorization_global_exception_rules import \
-    NetworkAccessAuthorizationGlobalExceptionRules as NetworkAccessAuthorizationGlobalExceptionRules_v3_1_1
-from .v3_1_1.network_access_authorization_rules import \
-    NetworkAccessAuthorizationRules as NetworkAccessAuthorizationRules_v3_1_1
-from .v3_1_1.network_access_conditions import \
-    NetworkAccessConditions as NetworkAccessConditions_v3_1_1
-from .v3_1_1.network_access_dictionary import \
-    NetworkAccessDictionary as NetworkAccessDictionary_v3_1_1
-from .v3_1_1.network_access_dictionary_attribute import \
-    NetworkAccessDictionaryAttribute as NetworkAccessDictionaryAttribute_v3_1_1
-from .v3_1_1.network_access_dictionary_attributes_list import \
-    NetworkAccessDictionaryAttributesList as NetworkAccessDictionaryAttributesList_v3_1_1
-from .v3_1_1.network_access_identity_stores import \
-    NetworkAccessIdentityStores as NetworkAccessIdentityStores_v3_1_1
-from .v3_1_1.network_access_network_conditions import \
-    NetworkAccessNetworkConditions as NetworkAccessNetworkConditions_v3_1_1
-from .v3_1_1.network_access_policy_set import \
-    NetworkAccessPolicySet as NetworkAccessPolicySet_v3_1_1
-from .v3_1_1.network_access_profiles import \
-    NetworkAccessProfiles as NetworkAccessProfiles_v3_1_1
-from .v3_1_1.network_access_security_groups import \
-    NetworkAccessSecurityGroups as NetworkAccessSecurityGroups_v3_1_1
-from .v3_1_1.network_access_service_names import \
-    NetworkAccessServiceNames as NetworkAccessServiceNames_v3_1_1
-from .v3_1_1.network_access_time_date_conditions import \
-    NetworkAccessTimeDateConditions as NetworkAccessTimeDateConditions_v3_1_1
-from .v3_1_1.network_device import \
-    NetworkDevice as NetworkDevice_v3_1_1
-from .v3_1_1.network_device_group import \
-    NetworkDeviceGroup as NetworkDeviceGroup_v3_1_1
-from .v3_1_1.node_deployment import \
-    NodeDeployment as NodeDeployment_v3_1_1
-from .v3_1_1.node_group import \
-    NodeGroup as NodeGroup_v3_1_1
-from .v3_1_1.node_services import \
-    NodeServices as NodeServices_v3_1_1
-from .v3_1_1.node_details import \
-    NodeDetails as NodeDetails_v3_1_1
-from .v3_1_1.pan_ha import \
-    PanHa as PanHa_v3_1_1
-from .v3_1_1.patching import \
-    Patching as Patching_v3_1_1
-from .v3_1_1.portal_global_setting import \
-    PortalGlobalSetting as PortalGlobalSetting_v3_1_1
-from .v3_1_1.portal_theme import \
-    PortalTheme as PortalTheme_v3_1_1
-from .v3_1_1.profiler import \
-    Profiler as Profiler_v3_1_1
-from .v3_1_1.profiler_profile import \
-    ProfilerProfile as ProfilerProfile_v3_1_1
-from .v3_1_1.provider import \
-    Provider as Provider_v3_1_1
-from .v3_1_1.psn_node_details_with_radius_service import \
-    PsnNodeDetailsWithRadiusService as PsnNodeDetailsWithRadiusService_v3_1_1
-from .v3_1_1.pull_deployment_info import \
-    PullDeploymentInfo as PullDeploymentInfo_v3_1_1
-from .v3_1_1.px_grid_settings import \
-    PxGridSettings as PxGridSettings_v3_1_1
-from .v3_1_1.radius_failure import \
-    RadiusFailure as RadiusFailure_v3_1_1
-from .v3_1_1.radius_server_sequence import \
-    RadiusServerSequence as RadiusServerSequence_v3_1_1
-from .v3_1_1.restid_store import \
-    RestidStore as RestidStore_v3_1_1
-from .v3_1_1.repository import \
-    Repository as Repository_v3_1_1
-from .v3_1_1.sms_provider import \
-    SmsProvider as SmsProvider_v3_1_1
-from .v3_1_1.sxp_connections import \
-    SxpConnections as SxpConnections_v3_1_1
-from .v3_1_1.sxp_local_bindings import \
-    SxpLocalBindings as SxpLocalBindings_v3_1_1
-from .v3_1_1.sxp_vpns import \
-    SxpVpns as SxpVpns_v3_1_1
-from .v3_1_1.security_group_to_virtual_network import \
-    SecurityGroupToVirtualNetwork as SecurityGroupToVirtualNetwork_v3_1_1
-from .v3_1_1.security_groups import \
-    SecurityGroups as SecurityGroups_v3_1_1
-from .v3_1_1.security_groups_acls import \
-    SecurityGroupsAcls as SecurityGroupsAcls_v3_1_1
-from .v3_1_1.self_registered_portal import \
-    SelfRegisteredPortal as SelfRegisteredPortal_v3_1_1
-from .v3_1_1.session_directory import \
-    SessionDirectory as SessionDirectory_v3_1_1
-from .v3_1_1.sponsor_group import \
-    SponsorGroup as SponsorGroup_v3_1_1
-from .v3_1_1.sponsor_group_member import \
-    SponsorGroupMember as SponsorGroupMember_v3_1_1
-from .v3_1_1.sponsor_portal import \
-    SponsorPortal as SponsorPortal_v3_1_1
-from .v3_1_1.sponsored_guest_portal import \
-    SponsoredGuestPortal as SponsoredGuestPortal_v3_1_1
-from .v3_1_1.support_bundle_download import \
-    SupportBundleDownload as SupportBundleDownload_v3_1_1
-from .v3_1_1.support_bundle_status import \
-    SupportBundleStatus as SupportBundleStatus_v3_1_1
-from .v3_1_1.support_bundle_trigger_configuration import \
-    SupportBundleTriggerConfiguration as SupportBundleTriggerConfiguration_v3_1_1
-from .v3_1_1.system_health import \
-    SystemHealth as SystemHealth_v3_1_1
-from .v3_1_1.system_certificate import \
-    SystemCertificate as SystemCertificate_v3_1_1
-from .v3_1_1.tacacs_command_sets import \
-    TacacsCommandSets as TacacsCommandSets_v3_1_1
-from .v3_1_1.tacacs_external_servers import \
-    TacacsExternalServers as TacacsExternalServers_v3_1_1
-from .v3_1_1.tacacs_profile import \
-    TacacsProfile as TacacsProfile_v3_1_1
-from .v3_1_1.tacacs_server_sequence import \
-    TacacsServerSequence as TacacsServerSequence_v3_1_1
-from .v3_1_1.telemetry_information import \
-    TelemetryInformation as TelemetryInformation_v3_1_1
-from .v3_1_1.trust_sec_configuration import \
-    TrustSecConfiguration as TrustSecConfiguration_v3_1_1
-from .v3_1_1.trust_sec_sxp import \
-    TrustSecSxp as TrustSecSxp_v3_1_1
-from .v3_1_1.version_and_patch import \
-    VersionAndPatch as VersionAndPatch_v3_1_1
-from .v3_1_1.version_info import \
-    VersionInfo as VersionInfo_v3_1_1
-from .v3_1_1.endpoint import \
-    Endpoint as Endpoint_v3_1_1
-from .v3_1_1.nbar_app import \
-    NbarApp as NbarApp_v3_1_1
-from .v3_1_1.portal import \
-    Portal as Portal_v3_1_1
-from .v3_1_1.proxy import \
-    Proxy as Proxy_v3_1_1
-from .v3_1_1.px_grid_node import \
-    PxGridNode as PxGridNode_v3_1_1
-from .v3_1_1.sg_vn_mapping import \
-    SgVnMapping as SgVnMapping_v3_1_1
-from .v3_1_1.tasks import \
-    Tasks as Tasks_v3_1_1
-from .v3_1_1.telemetry import \
-    Telemetry as Telemetry_v3_1_1
-from .v3_1_1.virtual_network import \
-    VirtualNetwork as VirtualNetwork_v3_1_1
-from .v3_1_1.vn_vlan_mapping import \
-    VnVlanMapping as VnVlanMapping_v3_1_1
 from .custom_caller import CustomCaller
-import copy
+from .v3_1_0.aci_bindings import AciBindings as AciBindings_v3_1_0
+from .v3_1_0.aci_settings import AciSettings as AciSettings_v3_1_0
+from .v3_1_0.active_directory import ActiveDirectory as ActiveDirectory_v3_1_0
+from .v3_1_0.admin_user import AdminUser as AdminUser_v3_1_0
+from .v3_1_0.allowed_protocols import AllowedProtocols as AllowedProtocols_v3_1_0
+from .v3_1_0.anc_endpoint import AncEndpoint as AncEndpoint_v3_1_0
+from .v3_1_0.anc_policy import AncPolicy as AncPolicy_v3_1_0
+from .v3_1_0.authorization_profile import (
+    AuthorizationProfile as AuthorizationProfile_v3_1_0,
+)
+from .v3_1_0.backup_and_restore import BackupAndRestore as BackupAndRestore_v3_1_0
+from .v3_1_0.byod_portal import ByodPortal as ByodPortal_v3_1_0
+from .v3_1_0.certificate_profile import CertificateProfile as CertificateProfile_v3_1_0
+from .v3_1_0.certificate_template import (
+    CertificateTemplate as CertificateTemplate_v3_1_0,
+)
+from .v3_1_0.certificates import Certificates as Certificates_v3_1_0
+from .v3_1_0.clear_threats_and_vulnerabilities import (
+    ClearThreatsAndVulnerabilities as ClearThreatsAndVulnerabilities_v3_1_0,
+)
+from .v3_1_0.consumer import Consumer as Consumer_v3_1_0
+from .v3_1_0.device_administration_authentication_rules import (
+    DeviceAdministrationAuthenticationRules as DeviceAdministrationAuthenticationRules_v3_1_0,
+)
+from .v3_1_0.device_administration_authorization_exception_rules import (
+    DeviceAdministrationAuthorizationExceptionRules as DeviceAdministrationAuthorizationExceptionRules_v3_1_0,
+)
+from .v3_1_0.device_administration_authorization_global_exception_rules import (
+    DeviceAdministrationAuthorizationGlobalExceptionRules as DeviceAdministrationAuthorizationGlobalExceptionRules_v3_1_0,
+)
+from .v3_1_0.device_administration_authorization_rules import (
+    DeviceAdministrationAuthorizationRules as DeviceAdministrationAuthorizationRules_v3_1_0,
+)
+from .v3_1_0.device_administration_command_set import (
+    DeviceAdministrationCommandSet as DeviceAdministrationCommandSet_v3_1_0,
+)
+from .v3_1_0.device_administration_conditions import (
+    DeviceAdministrationConditions as DeviceAdministrationConditions_v3_1_0,
+)
+from .v3_1_0.device_administration_dictionary_attributes_list import (
+    DeviceAdministrationDictionaryAttributesList as DeviceAdministrationDictionaryAttributesList_v3_1_0,
+)
+from .v3_1_0.device_administration_identity_stores import (
+    DeviceAdministrationIdentityStores as DeviceAdministrationIdentityStores_v3_1_0,
+)
+from .v3_1_0.device_administration_network_conditions import (
+    DeviceAdministrationNetworkConditions as DeviceAdministrationNetworkConditions_v3_1_0,
+)
+from .v3_1_0.device_administration_policy_set import (
+    DeviceAdministrationPolicySet as DeviceAdministrationPolicySet_v3_1_0,
+)
+from .v3_1_0.device_administration_profiles import (
+    DeviceAdministrationProfiles as DeviceAdministrationProfiles_v3_1_0,
+)
+from .v3_1_0.device_administration_service_names import (
+    DeviceAdministrationServiceNames as DeviceAdministrationServiceNames_v3_1_0,
+)
+from .v3_1_0.device_administration_time_date_conditions import (
+    DeviceAdministrationTimeDateConditions as DeviceAdministrationTimeDateConditions_v3_1_0,
+)
+from .v3_1_0.downloadable_acl import DownloadableAcl as DownloadableAcl_v3_1_0
+from .v3_1_0.egress_matrix_cell import EgressMatrixCell as EgressMatrixCell_v3_1_0
+from .v3_1_0.endpoint import Endpoint as Endpoint_v3_1_0
+from .v3_1_0.endpoint_certificate import (
+    EndpointCertificate as EndpointCertificate_v3_1_0,
+)
+from .v3_1_0.endpoint_identity_group import (
+    EndpointIdentityGroup as EndpointIdentityGroup_v3_1_0,
+)
+from .v3_1_0.external_radius_server import (
+    ExternalRadiusServer as ExternalRadiusServer_v3_1_0,
+)
+from .v3_1_0.filter_policy import FilterPolicy as FilterPolicy_v3_1_0
+from .v3_1_0.guest_location import GuestLocation as GuestLocation_v3_1_0
+from .v3_1_0.guest_smtp_notification_configuration import (
+    GuestSmtpNotificationConfiguration as GuestSmtpNotificationConfiguration_v3_1_0,
+)
+from .v3_1_0.guest_ssid import GuestSsid as GuestSsid_v3_1_0
+from .v3_1_0.guest_type import GuestType as GuestType_v3_1_0
+from .v3_1_0.guest_user import GuestUser as GuestUser_v3_1_0
+from .v3_1_0.hotspot_portal import HotspotPortal as HotspotPortal_v3_1_0
+from .v3_1_0.identity_groups import IdentityGroups as IdentityGroups_v3_1_0
+from .v3_1_0.identity_sequence import IdentitySequence as IdentitySequence_v3_1_0
+from .v3_1_0.internal_user import InternalUser as InternalUser_v3_1_0
+from .v3_1_0.ip_to_sgt_mapping import IpToSgtMapping as IpToSgtMapping_v3_1_0
+from .v3_1_0.ip_to_sgt_mapping_group import (
+    IpToSgtMappingGroup as IpToSgtMappingGroup_v3_1_0,
+)
+from .v3_1_0.mdm import Mdm as Mdm_v3_1_0
+from .v3_1_0.misc import Misc as Misc_v3_1_0
+from .v3_1_0.my_device_portal import MyDevicePortal as MyDevicePortal_v3_1_0
+from .v3_1_0.native_supplicant_profile import (
+    NativeSupplicantProfile as NativeSupplicantProfile_v3_1_0,
+)
+from .v3_1_0.nbar_app import NbarApp as NbarApp_v3_1_0
+from .v3_1_0.network_access_authentication_rules import (
+    NetworkAccessAuthenticationRules as NetworkAccessAuthenticationRules_v3_1_0,
+)
+from .v3_1_0.network_access_authorization_exception_rules import (
+    NetworkAccessAuthorizationExceptionRules as NetworkAccessAuthorizationExceptionRules_v3_1_0,
+)
+from .v3_1_0.network_access_authorization_global_exception_rules import (
+    NetworkAccessAuthorizationGlobalExceptionRules as NetworkAccessAuthorizationGlobalExceptionRules_v3_1_0,
+)
+from .v3_1_0.network_access_authorization_rules import (
+    NetworkAccessAuthorizationRules as NetworkAccessAuthorizationRules_v3_1_0,
+)
+from .v3_1_0.network_access_conditions import (
+    NetworkAccessConditions as NetworkAccessConditions_v3_1_0,
+)
+from .v3_1_0.network_access_dictionary import (
+    NetworkAccessDictionary as NetworkAccessDictionary_v3_1_0,
+)
+from .v3_1_0.network_access_dictionary_attribute import (
+    NetworkAccessDictionaryAttribute as NetworkAccessDictionaryAttribute_v3_1_0,
+)
+from .v3_1_0.network_access_dictionary_attributes_list import (
+    NetworkAccessDictionaryAttributesList as NetworkAccessDictionaryAttributesList_v3_1_0,
+)
+from .v3_1_0.network_access_identity_stores import (
+    NetworkAccessIdentityStores as NetworkAccessIdentityStores_v3_1_0,
+)
+from .v3_1_0.network_access_network_conditions import (
+    NetworkAccessNetworkConditions as NetworkAccessNetworkConditions_v3_1_0,
+)
+from .v3_1_0.network_access_policy_set import (
+    NetworkAccessPolicySet as NetworkAccessPolicySet_v3_1_0,
+)
+from .v3_1_0.network_access_profiles import (
+    NetworkAccessProfiles as NetworkAccessProfiles_v3_1_0,
+)
+from .v3_1_0.network_access_security_groups import (
+    NetworkAccessSecurityGroups as NetworkAccessSecurityGroups_v3_1_0,
+)
+from .v3_1_0.network_access_service_names import (
+    NetworkAccessServiceNames as NetworkAccessServiceNames_v3_1_0,
+)
+from .v3_1_0.network_access_time_date_conditions import (
+    NetworkAccessTimeDateConditions as NetworkAccessTimeDateConditions_v3_1_0,
+)
+from .v3_1_0.network_device import NetworkDevice as NetworkDevice_v3_1_0
+from .v3_1_0.network_device_group import NetworkDeviceGroup as NetworkDeviceGroup_v3_1_0
+from .v3_1_0.node_deployment import NodeDeployment as NodeDeployment_v3_1_0
+from .v3_1_0.node_details import NodeDetails as NodeDetails_v3_1_0
+from .v3_1_0.node_group import NodeGroup as NodeGroup_v3_1_0
+from .v3_1_0.pan_ha import PanHa as PanHa_v3_1_0
+from .v3_1_0.portal import Portal as Portal_v3_1_0
+from .v3_1_0.portal_global_setting import (
+    PortalGlobalSetting as PortalGlobalSetting_v3_1_0,
+)
+from .v3_1_0.portal_theme import PortalTheme as PortalTheme_v3_1_0
+from .v3_1_0.profiler import Profiler as Profiler_v3_1_0
+from .v3_1_0.profiler_profile import ProfilerProfile as ProfilerProfile_v3_1_0
+from .v3_1_0.provider import Provider as Provider_v3_1_0
+from .v3_1_0.psn_node_details_with_radius_service import (
+    PsnNodeDetailsWithRadiusService as PsnNodeDetailsWithRadiusService_v3_1_0,
+)
+from .v3_1_0.pull_deployment_info import PullDeploymentInfo as PullDeploymentInfo_v3_1_0
+from .v3_1_0.px_grid_node import PxGridNode as PxGridNode_v3_1_0
+from .v3_1_0.px_grid_settings import PxGridSettings as PxGridSettings_v3_1_0
+from .v3_1_0.radius_failure import RadiusFailure as RadiusFailure_v3_1_0
+from .v3_1_0.radius_server_sequence import (
+    RadiusServerSequence as RadiusServerSequence_v3_1_0,
+)
+from .v3_1_0.replication_status import ReplicationStatus as ReplicationStatus_v3_1_0
+from .v3_1_0.repository import Repository as Repository_v3_1_0
+from .v3_1_0.restid_store import RestidStore as RestidStore_v3_1_0
+from .v3_1_0.security_group_to_virtual_network import (
+    SecurityGroupToVirtualNetwork as SecurityGroupToVirtualNetwork_v3_1_0,
+)
+from .v3_1_0.security_groups import SecurityGroups as SecurityGroups_v3_1_0
+from .v3_1_0.security_groups_acls import SecurityGroupsAcls as SecurityGroupsAcls_v3_1_0
+from .v3_1_0.self_registered_portal import (
+    SelfRegisteredPortal as SelfRegisteredPortal_v3_1_0,
+)
+from .v3_1_0.session_directory import SessionDirectory as SessionDirectory_v3_1_0
+from .v3_1_0.sg_vn_mapping import SgVnMapping as SgVnMapping_v3_1_0
+from .v3_1_0.sms_provider import SmsProvider as SmsProvider_v3_1_0
+from .v3_1_0.sponsor_group import SponsorGroup as SponsorGroup_v3_1_0
+from .v3_1_0.sponsor_group_member import SponsorGroupMember as SponsorGroupMember_v3_1_0
+from .v3_1_0.sponsor_portal import SponsorPortal as SponsorPortal_v3_1_0
+from .v3_1_0.sponsored_guest_portal import (
+    SponsoredGuestPortal as SponsoredGuestPortal_v3_1_0,
+)
+from .v3_1_0.support_bundle_download import (
+    SupportBundleDownload as SupportBundleDownload_v3_1_0,
+)
+from .v3_1_0.support_bundle_status import (
+    SupportBundleStatus as SupportBundleStatus_v3_1_0,
+)
+from .v3_1_0.support_bundle_trigger_configuration import (
+    SupportBundleTriggerConfiguration as SupportBundleTriggerConfiguration_v3_1_0,
+)
+from .v3_1_0.sxp_connections import SxpConnections as SxpConnections_v3_1_0
+from .v3_1_0.sxp_local_bindings import SxpLocalBindings as SxpLocalBindings_v3_1_0
+from .v3_1_0.sxp_vpns import SxpVpns as SxpVpns_v3_1_0
+from .v3_1_0.sync_ise_node import SyncIseNode as SyncIseNode_v3_1_0
+from .v3_1_0.system_certificate import SystemCertificate as SystemCertificate_v3_1_0
+from .v3_1_0.system_health import SystemHealth as SystemHealth_v3_1_0
+from .v3_1_0.tacacs_command_sets import TacacsCommandSets as TacacsCommandSets_v3_1_0
+from .v3_1_0.tacacs_external_servers import (
+    TacacsExternalServers as TacacsExternalServers_v3_1_0,
+)
+from .v3_1_0.tacacs_profile import TacacsProfile as TacacsProfile_v3_1_0
+from .v3_1_0.tacacs_server_sequence import (
+    TacacsServerSequence as TacacsServerSequence_v3_1_0,
+)
+from .v3_1_0.tasks import Tasks as Tasks_v3_1_0
+from .v3_1_0.telemetry_information import (
+    TelemetryInformation as TelemetryInformation_v3_1_0,
+)
+from .v3_1_0.trust_sec_configuration import (
+    TrustSecConfiguration as TrustSecConfiguration_v3_1_0,
+)
+from .v3_1_0.trust_sec_sxp import TrustSecSxp as TrustSecSxp_v3_1_0
+from .v3_1_0.version_and_patch import VersionAndPatch as VersionAndPatch_v3_1_0
+from .v3_1_0.version_info import VersionInfo as VersionInfo_v3_1_0
+from .v3_1_0.virtual_network import VirtualNetwork as VirtualNetwork_v3_1_0
+from .v3_1_0.vn_vlan_mapping import VnVlanMapping as VnVlanMapping_v3_1_0
+from .v3_1_1.aci_bindings import AciBindings as AciBindings_v3_1_1
+from .v3_1_1.aci_settings import AciSettings as AciSettings_v3_1_1
+from .v3_1_1.active_directory import ActiveDirectory as ActiveDirectory_v3_1_1
+from .v3_1_1.admin_user import AdminUser as AdminUser_v3_1_1
+from .v3_1_1.allowed_protocols import AllowedProtocols as AllowedProtocols_v3_1_1
+from .v3_1_1.anc_endpoint import AncEndpoint as AncEndpoint_v3_1_1
+from .v3_1_1.anc_policy import AncPolicy as AncPolicy_v3_1_1
+from .v3_1_1.authorization_profile import (
+    AuthorizationProfile as AuthorizationProfile_v3_1_1,
+)
+from .v3_1_1.backup_and_restore import BackupAndRestore as BackupAndRestore_v3_1_1
+from .v3_1_1.byod_portal import ByodPortal as ByodPortal_v3_1_1
+from .v3_1_1.certificate_profile import CertificateProfile as CertificateProfile_v3_1_1
+from .v3_1_1.certificate_template import (
+    CertificateTemplate as CertificateTemplate_v3_1_1,
+)
+from .v3_1_1.certificates import Certificates as Certificates_v3_1_1
+from .v3_1_1.clear_threats_and_vulnerabilities import (
+    ClearThreatsAndVulnerabilities as ClearThreatsAndVulnerabilities_v3_1_1,
+)
+from .v3_1_1.consumer import Consumer as Consumer_v3_1_1
+from .v3_1_1.device_administration_authentication_rules import (
+    DeviceAdministrationAuthenticationRules as DeviceAdministrationAuthenticationRules_v3_1_1,
+)
+from .v3_1_1.device_administration_authorization_exception_rules import (
+    DeviceAdministrationAuthorizationExceptionRules as DeviceAdministrationAuthorizationExceptionRules_v3_1_1,
+)
+from .v3_1_1.device_administration_authorization_global_exception_rules import (
+    DeviceAdministrationAuthorizationGlobalExceptionRules as DeviceAdministrationAuthorizationGlobalExceptionRules_v3_1_1,
+)
+from .v3_1_1.device_administration_authorization_rules import (
+    DeviceAdministrationAuthorizationRules as DeviceAdministrationAuthorizationRules_v3_1_1,
+)
+from .v3_1_1.device_administration_command_set import (
+    DeviceAdministrationCommandSet as DeviceAdministrationCommandSet_v3_1_1,
+)
+from .v3_1_1.device_administration_conditions import (
+    DeviceAdministrationConditions as DeviceAdministrationConditions_v3_1_1,
+)
+from .v3_1_1.device_administration_dictionary_attributes_list import (
+    DeviceAdministrationDictionaryAttributesList as DeviceAdministrationDictionaryAttributesList_v3_1_1,
+)
+from .v3_1_1.device_administration_identity_stores import (
+    DeviceAdministrationIdentityStores as DeviceAdministrationIdentityStores_v3_1_1,
+)
+from .v3_1_1.device_administration_network_conditions import (
+    DeviceAdministrationNetworkConditions as DeviceAdministrationNetworkConditions_v3_1_1,
+)
+from .v3_1_1.device_administration_policy_set import (
+    DeviceAdministrationPolicySet as DeviceAdministrationPolicySet_v3_1_1,
+)
+from .v3_1_1.device_administration_profiles import (
+    DeviceAdministrationProfiles as DeviceAdministrationProfiles_v3_1_1,
+)
+from .v3_1_1.device_administration_service_names import (
+    DeviceAdministrationServiceNames as DeviceAdministrationServiceNames_v3_1_1,
+)
+from .v3_1_1.device_administration_time_date_conditions import (
+    DeviceAdministrationTimeDateConditions as DeviceAdministrationTimeDateConditions_v3_1_1,
+)
+from .v3_1_1.downloadable_acl import DownloadableAcl as DownloadableAcl_v3_1_1
+from .v3_1_1.egress_matrix_cell import EgressMatrixCell as EgressMatrixCell_v3_1_1
+from .v3_1_1.endpoint import Endpoint as Endpoint_v3_1_1
+from .v3_1_1.endpoint_certificate import (
+    EndpointCertificate as EndpointCertificate_v3_1_1,
+)
+from .v3_1_1.endpoint_identity_group import (
+    EndpointIdentityGroup as EndpointIdentityGroup_v3_1_1,
+)
+from .v3_1_1.external_radius_server import (
+    ExternalRadiusServer as ExternalRadiusServer_v3_1_1,
+)
+from .v3_1_1.filter_policy import FilterPolicy as FilterPolicy_v3_1_1
+from .v3_1_1.guest_location import GuestLocation as GuestLocation_v3_1_1
+from .v3_1_1.guest_smtp_notification_configuration import (
+    GuestSmtpNotificationConfiguration as GuestSmtpNotificationConfiguration_v3_1_1,
+)
+from .v3_1_1.guest_ssid import GuestSsid as GuestSsid_v3_1_1
+from .v3_1_1.guest_type import GuestType as GuestType_v3_1_1
+from .v3_1_1.guest_user import GuestUser as GuestUser_v3_1_1
+from .v3_1_1.hotspot_portal import HotspotPortal as HotspotPortal_v3_1_1
+from .v3_1_1.identity_groups import IdentityGroups as IdentityGroups_v3_1_1
+from .v3_1_1.identity_sequence import IdentitySequence as IdentitySequence_v3_1_1
+from .v3_1_1.internal_user import InternalUser as InternalUser_v3_1_1
+from .v3_1_1.ip_to_sgt_mapping import IpToSgtMapping as IpToSgtMapping_v3_1_1
+from .v3_1_1.ip_to_sgt_mapping_group import (
+    IpToSgtMappingGroup as IpToSgtMappingGroup_v3_1_1,
+)
+from .v3_1_1.licensing import Licensing as Licensing_v3_1_1
+from .v3_1_1.mdm import Mdm as Mdm_v3_1_1
+from .v3_1_1.misc import Misc as Misc_v3_1_1
+from .v3_1_1.my_device_portal import MyDevicePortal as MyDevicePortal_v3_1_1
+from .v3_1_1.native_supplicant_profile import (
+    NativeSupplicantProfile as NativeSupplicantProfile_v3_1_1,
+)
+from .v3_1_1.nbar_app import NbarApp as NbarApp_v3_1_1
+from .v3_1_1.network_access_authentication_rules import (
+    NetworkAccessAuthenticationRules as NetworkAccessAuthenticationRules_v3_1_1,
+)
+from .v3_1_1.network_access_authorization_exception_rules import (
+    NetworkAccessAuthorizationExceptionRules as NetworkAccessAuthorizationExceptionRules_v3_1_1,
+)
+from .v3_1_1.network_access_authorization_global_exception_rules import (
+    NetworkAccessAuthorizationGlobalExceptionRules as NetworkAccessAuthorizationGlobalExceptionRules_v3_1_1,
+)
+from .v3_1_1.network_access_authorization_rules import (
+    NetworkAccessAuthorizationRules as NetworkAccessAuthorizationRules_v3_1_1,
+)
+from .v3_1_1.network_access_conditions import (
+    NetworkAccessConditions as NetworkAccessConditions_v3_1_1,
+)
+from .v3_1_1.network_access_dictionary import (
+    NetworkAccessDictionary as NetworkAccessDictionary_v3_1_1,
+)
+from .v3_1_1.network_access_dictionary_attribute import (
+    NetworkAccessDictionaryAttribute as NetworkAccessDictionaryAttribute_v3_1_1,
+)
+from .v3_1_1.network_access_dictionary_attributes_list import (
+    NetworkAccessDictionaryAttributesList as NetworkAccessDictionaryAttributesList_v3_1_1,
+)
+from .v3_1_1.network_access_identity_stores import (
+    NetworkAccessIdentityStores as NetworkAccessIdentityStores_v3_1_1,
+)
+from .v3_1_1.network_access_network_conditions import (
+    NetworkAccessNetworkConditions as NetworkAccessNetworkConditions_v3_1_1,
+)
+from .v3_1_1.network_access_policy_set import (
+    NetworkAccessPolicySet as NetworkAccessPolicySet_v3_1_1,
+)
+from .v3_1_1.network_access_profiles import (
+    NetworkAccessProfiles as NetworkAccessProfiles_v3_1_1,
+)
+from .v3_1_1.network_access_security_groups import (
+    NetworkAccessSecurityGroups as NetworkAccessSecurityGroups_v3_1_1,
+)
+from .v3_1_1.network_access_service_names import (
+    NetworkAccessServiceNames as NetworkAccessServiceNames_v3_1_1,
+)
+from .v3_1_1.network_access_time_date_conditions import (
+    NetworkAccessTimeDateConditions as NetworkAccessTimeDateConditions_v3_1_1,
+)
+from .v3_1_1.network_device import NetworkDevice as NetworkDevice_v3_1_1
+from .v3_1_1.network_device_group import NetworkDeviceGroup as NetworkDeviceGroup_v3_1_1
+from .v3_1_1.node_deployment import NodeDeployment as NodeDeployment_v3_1_1
+from .v3_1_1.node_details import NodeDetails as NodeDetails_v3_1_1
+from .v3_1_1.node_group import NodeGroup as NodeGroup_v3_1_1
+from .v3_1_1.node_services import NodeServices as NodeServices_v3_1_1
+from .v3_1_1.pan_ha import PanHa as PanHa_v3_1_1
+from .v3_1_1.patching import Patching as Patching_v3_1_1
+from .v3_1_1.portal import Portal as Portal_v3_1_1
+from .v3_1_1.portal_global_setting import (
+    PortalGlobalSetting as PortalGlobalSetting_v3_1_1,
+)
+from .v3_1_1.portal_theme import PortalTheme as PortalTheme_v3_1_1
+from .v3_1_1.profiler import Profiler as Profiler_v3_1_1
+from .v3_1_1.profiler_profile import ProfilerProfile as ProfilerProfile_v3_1_1
+from .v3_1_1.provider import Provider as Provider_v3_1_1
+from .v3_1_1.proxy import Proxy as Proxy_v3_1_1
+from .v3_1_1.psn_node_details_with_radius_service import (
+    PsnNodeDetailsWithRadiusService as PsnNodeDetailsWithRadiusService_v3_1_1,
+)
+from .v3_1_1.pull_deployment_info import PullDeploymentInfo as PullDeploymentInfo_v3_1_1
+from .v3_1_1.px_grid_node import PxGridNode as PxGridNode_v3_1_1
+from .v3_1_1.px_grid_settings import PxGridSettings as PxGridSettings_v3_1_1
+from .v3_1_1.radius_failure import RadiusFailure as RadiusFailure_v3_1_1
+from .v3_1_1.radius_server_sequence import (
+    RadiusServerSequence as RadiusServerSequence_v3_1_1,
+)
+from .v3_1_1.repository import Repository as Repository_v3_1_1
+from .v3_1_1.restid_store import RestidStore as RestidStore_v3_1_1
+from .v3_1_1.security_group_to_virtual_network import (
+    SecurityGroupToVirtualNetwork as SecurityGroupToVirtualNetwork_v3_1_1,
+)
+from .v3_1_1.security_groups import SecurityGroups as SecurityGroups_v3_1_1
+from .v3_1_1.security_groups_acls import SecurityGroupsAcls as SecurityGroupsAcls_v3_1_1
+from .v3_1_1.self_registered_portal import (
+    SelfRegisteredPortal as SelfRegisteredPortal_v3_1_1,
+)
+from .v3_1_1.session_directory import SessionDirectory as SessionDirectory_v3_1_1
+from .v3_1_1.sg_vn_mapping import SgVnMapping as SgVnMapping_v3_1_1
+from .v3_1_1.sms_provider import SmsProvider as SmsProvider_v3_1_1
+from .v3_1_1.sponsor_group import SponsorGroup as SponsorGroup_v3_1_1
+from .v3_1_1.sponsor_group_member import SponsorGroupMember as SponsorGroupMember_v3_1_1
+from .v3_1_1.sponsor_portal import SponsorPortal as SponsorPortal_v3_1_1
+from .v3_1_1.sponsored_guest_portal import (
+    SponsoredGuestPortal as SponsoredGuestPortal_v3_1_1,
+)
+from .v3_1_1.support_bundle_download import (
+    SupportBundleDownload as SupportBundleDownload_v3_1_1,
+)
+from .v3_1_1.support_bundle_status import (
+    SupportBundleStatus as SupportBundleStatus_v3_1_1,
+)
+from .v3_1_1.support_bundle_trigger_configuration import (
+    SupportBundleTriggerConfiguration as SupportBundleTriggerConfiguration_v3_1_1,
+)
+from .v3_1_1.sxp_connections import SxpConnections as SxpConnections_v3_1_1
+from .v3_1_1.sxp_local_bindings import SxpLocalBindings as SxpLocalBindings_v3_1_1
+from .v3_1_1.sxp_vpns import SxpVpns as SxpVpns_v3_1_1
+from .v3_1_1.system_certificate import SystemCertificate as SystemCertificate_v3_1_1
+from .v3_1_1.system_health import SystemHealth as SystemHealth_v3_1_1
+from .v3_1_1.tacacs_command_sets import TacacsCommandSets as TacacsCommandSets_v3_1_1
+from .v3_1_1.tacacs_external_servers import (
+    TacacsExternalServers as TacacsExternalServers_v3_1_1,
+)
+from .v3_1_1.tacacs_profile import TacacsProfile as TacacsProfile_v3_1_1
+from .v3_1_1.tacacs_server_sequence import (
+    TacacsServerSequence as TacacsServerSequence_v3_1_1,
+)
+from .v3_1_1.tasks import Tasks as Tasks_v3_1_1
+from .v3_1_1.telemetry import Telemetry as Telemetry_v3_1_1
+from .v3_1_1.telemetry_information import (
+    TelemetryInformation as TelemetryInformation_v3_1_1,
+)
+from .v3_1_1.trust_sec_configuration import (
+    TrustSecConfiguration as TrustSecConfiguration_v3_1_1,
+)
+from .v3_1_1.trust_sec_sxp import TrustSecSxp as TrustSecSxp_v3_1_1
+from .v3_1_1.version_and_patch import VersionAndPatch as VersionAndPatch_v3_1_1
+from .v3_1_1.version_info import VersionInfo as VersionInfo_v3_1_1
+from .v3_1_1.virtual_network import VirtualNetwork as VirtualNetwork_v3_1_1
+from .v3_1_1.vn_vlan_mapping import VnVlanMapping as VnVlanMapping_v3_1_1
 
 
 class IdentityServicesEngineAPI(object):
@@ -1891,131 +1850,131 @@ class IdentityServicesEngineAPI(object):
     def _not_initialize_api_wrappers(self):
         """Function used when perform_initialize is False in class init.
         Defines the top-level properties as None."""
-        self.aci_bindings =  None
-        self.aci_settings =  None
-        self.active_directory =  None
-        self.admin_user =  None
-        self.allowed_protocols =  None
-        self.anc_endpoint =  None
-        self.anc_policy =  None
-        self.authorization_profile =  None
-        self.backup_and_restore =  None
-        self.byod_portal =  None
-        self.certificate_profile =  None
-        self.certificates =  None
-        self.certificate_template =  None
-        self.clear_threats_and_vulnerabilities =  None
-        self.consumer =  None
-        self.custom_caller =  None
-        self.device_administration_authentication_rules =  None
-        self.device_administration_authorization_exception_rules =  None
-        self.device_administration_authorization_global_exception_rules =  None
-        self.device_administration_authorization_rules =  None
-        self.device_administration_command_set =  None
-        self.device_administration_conditions =  None
-        self.device_administration_dictionary_attributes_list =  None
-        self.device_administration_identity_stores =  None
-        self.device_administration_network_conditions =  None
-        self.device_administration_policy_set =  None
-        self.device_administration_profiles =  None
-        self.device_administration_service_names =  None
-        self.device_administration_time_date_conditions =  None
-        self.downloadable_acl =  None
-        self.egress_matrix_cell =  None
-        self.endpoint =  None
-        self.endpoint_certificate =  None
-        self.endpoint_identity_group =  None
-        self.external_radius_server =  None
-        self.filter_policy =  None
-        self.guest_location =  None
-        self.guest_smtp_notification_configuration =  None
-        self.guest_ssid =  None
-        self.guest_type =  None
-        self.guest_user =  None
-        self.hotspot_portal =  None
-        self.identity_groups =  None
-        self.identity_sequence =  None
-        self.internal_user =  None
-        self.ip_to_sgt_mapping =  None
-        self.ip_to_sgt_mapping_group =  None
-        self.licensing =  None
-        self.mdm =  None
-        self.misc =  None
-        self.my_device_portal =  None
-        self.native_supplicant_profile =  None
-        self.nbar_app =  None
-        self.network_access_authentication_rules =  None
-        self.network_access_authorization_exception_rules =  None
-        self.network_access_authorization_global_exception_rules =  None
-        self.network_access_authorization_rules =  None
-        self.network_access_conditions =  None
-        self.network_access_dictionary =  None
-        self.network_access_dictionary_attribute =  None
-        self.network_access_dictionary_attributes_list =  None
-        self.network_access_identity_stores =  None
-        self.network_access_network_conditions =  None
-        self.network_access_policy_set =  None
-        self.network_access_profiles =  None
-        self.network_access_security_groups =  None
-        self.network_access_service_names =  None
-        self.network_access_time_date_conditions =  None
-        self.network_device =  None
-        self.network_device_group =  None
-        self.node_deployment =  None
-        self.node_group =  None
-        self.node_services =  None
-        self.node_details =  None
-        self.pan_ha =  None
-        self.patching =  None
-        self.portal =  None
-        self.portal_global_setting =  None
-        self.portal_theme =  None
-        self.profiler =  None
-        self.profiler_profile =  None
-        self.provider =  None
-        self.proxy =  None
-        self.psn_node_details_with_radius_service =  None
-        self.pull_deployment_info =  None
-        self.px_grid_node =  None
-        self.px_grid_settings =  None
-        self.radius_failure =  None
-        self.radius_server_sequence =  None
-        self.replication_status =  None
-        self.repository =  None
-        self.restid_store =  None
-        self.security_groups =  None
-        self.security_groups_acls =  None
-        self.security_group_to_virtual_network =  None
-        self.self_registered_portal =  None
-        self.session_directory =  None
-        self.sg_vn_mapping =  None
-        self.sms_provider =  None
-        self.sponsored_guest_portal =  None
-        self.sponsor_group =  None
-        self.sponsor_group_member =  None
-        self.sponsor_portal =  None
-        self.support_bundle_download =  None
-        self.support_bundle_status =  None
-        self.support_bundle_trigger_configuration =  None
-        self.sxp_connections =  None
-        self.sxp_local_bindings =  None
-        self.sxp_vpns =  None
-        self.sync_ise_node =  None
-        self.system_health =  None
-        self.system_certificate =  None
-        self.tacacs_command_sets =  None
-        self.tacacs_external_servers =  None
-        self.tacacs_profile =  None
-        self.tacacs_server_sequence =  None
-        self.tasks =  None
-        self.telemetry =  None
-        self.telemetry_information =  None
-        self.trust_sec_configuration =  None
-        self.trust_sec_sxp =  None
-        self.version_and_patch =  None
-        self.version_info =  None
-        self.virtual_network =  None
-        self.vn_vlan_mapping =  None
+        self.aci_bindings = None
+        self.aci_settings = None
+        self.active_directory = None
+        self.admin_user = None
+        self.allowed_protocols = None
+        self.anc_endpoint = None
+        self.anc_policy = None
+        self.authorization_profile = None
+        self.backup_and_restore = None
+        self.byod_portal = None
+        self.certificate_profile = None
+        self.certificates = None
+        self.certificate_template = None
+        self.clear_threats_and_vulnerabilities = None
+        self.consumer = None
+        self.custom_caller = None
+        self.device_administration_authentication_rules = None
+        self.device_administration_authorization_exception_rules = None
+        self.device_administration_authorization_global_exception_rules = None
+        self.device_administration_authorization_rules = None
+        self.device_administration_command_set = None
+        self.device_administration_conditions = None
+        self.device_administration_dictionary_attributes_list = None
+        self.device_administration_identity_stores = None
+        self.device_administration_network_conditions = None
+        self.device_administration_policy_set = None
+        self.device_administration_profiles = None
+        self.device_administration_service_names = None
+        self.device_administration_time_date_conditions = None
+        self.downloadable_acl = None
+        self.egress_matrix_cell = None
+        self.endpoint = None
+        self.endpoint_certificate = None
+        self.endpoint_identity_group = None
+        self.external_radius_server = None
+        self.filter_policy = None
+        self.guest_location = None
+        self.guest_smtp_notification_configuration = None
+        self.guest_ssid = None
+        self.guest_type = None
+        self.guest_user = None
+        self.hotspot_portal = None
+        self.identity_groups = None
+        self.identity_sequence = None
+        self.internal_user = None
+        self.ip_to_sgt_mapping = None
+        self.ip_to_sgt_mapping_group = None
+        self.licensing = None
+        self.mdm = None
+        self.misc = None
+        self.my_device_portal = None
+        self.native_supplicant_profile = None
+        self.nbar_app = None
+        self.network_access_authentication_rules = None
+        self.network_access_authorization_exception_rules = None
+        self.network_access_authorization_global_exception_rules = None
+        self.network_access_authorization_rules = None
+        self.network_access_conditions = None
+        self.network_access_dictionary = None
+        self.network_access_dictionary_attribute = None
+        self.network_access_dictionary_attributes_list = None
+        self.network_access_identity_stores = None
+        self.network_access_network_conditions = None
+        self.network_access_policy_set = None
+        self.network_access_profiles = None
+        self.network_access_security_groups = None
+        self.network_access_service_names = None
+        self.network_access_time_date_conditions = None
+        self.network_device = None
+        self.network_device_group = None
+        self.node_deployment = None
+        self.node_group = None
+        self.node_services = None
+        self.node_details = None
+        self.pan_ha = None
+        self.patching = None
+        self.portal = None
+        self.portal_global_setting = None
+        self.portal_theme = None
+        self.profiler = None
+        self.profiler_profile = None
+        self.provider = None
+        self.proxy = None
+        self.psn_node_details_with_radius_service = None
+        self.pull_deployment_info = None
+        self.px_grid_node = None
+        self.px_grid_settings = None
+        self.radius_failure = None
+        self.radius_server_sequence = None
+        self.replication_status = None
+        self.repository = None
+        self.restid_store = None
+        self.security_groups = None
+        self.security_groups_acls = None
+        self.security_group_to_virtual_network = None
+        self.self_registered_portal = None
+        self.session_directory = None
+        self.sg_vn_mapping = None
+        self.sms_provider = None
+        self.sponsored_guest_portal = None
+        self.sponsor_group = None
+        self.sponsor_group_member = None
+        self.sponsor_portal = None
+        self.support_bundle_download = None
+        self.support_bundle_status = None
+        self.support_bundle_trigger_configuration = None
+        self.sxp_connections = None
+        self.sxp_local_bindings = None
+        self.sxp_vpns = None
+        self.sync_ise_node = None
+        self.system_health = None
+        self.system_certificate = None
+        self.tacacs_command_sets = None
+        self.tacacs_external_servers = None
+        self.tacacs_profile = None
+        self.tacacs_server_sequence = None
+        self.tasks = None
+        self.telemetry = None
+        self.telemetry_information = None
+        self.trust_sec_configuration = None
+        self.trust_sec_sxp = None
+        self.version_and_patch = None
+        self.version_info = None
+        self.virtual_network = None
+        self.vn_vlan_mapping = None
 
     def initialize_authentication(self):
         """

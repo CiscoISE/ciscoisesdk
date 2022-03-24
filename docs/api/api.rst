@@ -2252,6 +2252,15 @@ MyDict
     :exclude-members: get_dict, clear, fromkeys, pop, popitem, setdefault, update, values
 
 
+.. _DownloadResponse:
+
+DownloadResponse
+----------------
+
+.. autoclass:: ciscoisesdk.restsession.DownloadResponse()
+    :members:
+
+
 .. _RestResponse:
 
 RestResponse

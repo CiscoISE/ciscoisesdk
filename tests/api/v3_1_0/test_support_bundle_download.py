@@ -42,6 +42,7 @@ def download_support_bundle(api):
     endpoint_result = api.support_bundle_download.download_support_bundle(
         dirpath=None,
         save_file=None,
+        filename=None,
         active_validation=False,
         file_name='string',
         payload=None
@@ -66,6 +67,7 @@ def download_support_bundle_default(api):
     endpoint_result = api.support_bundle_download.download_support_bundle(
         dirpath=None,
         save_file=None,
+        filename=None,
         active_validation=False,
         file_name=None,
         payload=None

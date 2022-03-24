@@ -6,8 +6,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2022-03-24
 
-## [2.0.0] - 2022-03-01
+### Added
+- Add `DownloadResponse` class that wraps the `urllib3.response.HTTPResponse`.
+- Add `filename` optional parameter to the following functions:
+  + ciscoisesdk.api.v3_1_0.certificates.Certificates.export_csr
+  + ciscoisesdk.api.v3_1_0.certificates.Certificates.export_system_certificate
+  + ciscoisesdk.api.v3_1_0.certificates.Certificates.export_trusted_certificate
+  + ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate.create_endpoint_certificate
+  + ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate.create
+  + ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload.download_support_bundle
+  + ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload.download
+  + ciscoisesdk.api.v3_1_1.certificates.Certificates.export_csr
+  + ciscoisesdk.api.v3_1_1.certificates.Certificates.export_system_certificate
+  + ciscoisesdk.api.v3_1_1.certificates.Certificates.export_trusted_certificate
+  + ciscoisesdk.api.v3_1_1.endpoint_certificate.EndpointCertificate.create_endpoint_certificate
+  + ciscoisesdk.api.v3_1_1.endpoint_certificate.EndpointCertificate.create
+  + ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download_support_bundle
+  + ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download
+
+### Changed
+- Change the response of the following funtions from `urllib3.response.HTTPResponse` to a wrapper `DownloadResponse`.
+  + ciscoisesdk.api.v3_1_0.certificates.Certificates.export_csr
+  + ciscoisesdk.api.v3_1_0.certificates.Certificates.export_system_certificate
+  + ciscoisesdk.api.v3_1_0.certificates.Certificates.export_trusted_certificate
+  + ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate.create_endpoint_certificate
+  + ciscoisesdk.api.v3_1_0.endpoint_certificate.EndpointCertificate.create
+  + ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload.download_support_bundle
+  + ciscoisesdk.api.v3_1_0.support_bundle_download.SupportBundleDownload.download
+  + ciscoisesdk.api.v3_1_1.certificates.Certificates.export_csr
+  + ciscoisesdk.api.v3_1_1.certificates.Certificates.export_system_certificate
+  + ciscoisesdk.api.v3_1_1.certificates.Certificates.export_trusted_certificate
+  + ciscoisesdk.api.v3_1_1.endpoint_certificate.EndpointCertificate.create_endpoint_certificate
+  + ciscoisesdk.api.v3_1_1.endpoint_certificate.EndpointCertificate.create
+  + ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download_support_bundle
+  + ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download
+
+## [2.0.0] - 2022-03-24
 
 ### Removed
 
@@ -296,4 +332,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.5.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0
 [1.5.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...v1.5.1
 [2.0.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.1...v2.0.0
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...develop
+[2.0.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...v2.0.1
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...develop

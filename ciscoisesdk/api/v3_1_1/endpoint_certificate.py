@@ -116,6 +116,7 @@ class EndpointCertificate(object):
                                     password=None,
                                     dirpath=None,
                                     save_file=None,
+                                    filename=None,
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
@@ -142,6 +143,8 @@ class EndpointCertificate(object):
                 os.getcwd().
             save_file(bool): Enable or disable automatic file creation of
                 raw response.
+            filename(basestring): The filename used to save the download
+                file.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -152,7 +155,7 @@ class EndpointCertificate(object):
                 support for parameters that may be added in the future).
 
         Returns:
-            urllib3.response.HTTPResponse: HTTP Response container. For more
+            DownloadResponse: The DownloadResponse wrapper. Wraps the urllib3.response.HTTPResponse. For more
             information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
@@ -225,12 +228,12 @@ class EndpointCertificate(object):
         if with_custom_headers:
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               headers=_headers,
-                                              stream=True, dirpath=dirpath, save_file=save_file,
+                                              stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
                                               **request_params)
 
         else:
             _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              stream=True, dirpath=dirpath, save_file=save_file,
+                                              stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
                                               **request_params)
 
         return self._object_factory('bpm_e27d5df9cbe5b29a7e16bb7c877a4ce_v3_1_1', _api_response)
@@ -242,6 +245,7 @@ class EndpointCertificate(object):
                password=None,
                dirpath=None,
                save_file=None,
+               filename=None,
                headers=None,
                payload=None,
                active_validation=True,
@@ -257,6 +261,7 @@ class EndpointCertificate(object):
             password=password,
             dirpath=dirpath,
             save_file=save_file,
+            filename=filename,
             payload=payload,
             active_validation=active_validation,
             headers=headers,

@@ -192,6 +192,7 @@ def export_csr(api):
     endpoint_result = api.certificates.export_csr(
         dirpath=None,
         save_file=None,
+        filename=None,
         hostname='string',
         id='string'
     )
@@ -215,6 +216,7 @@ def export_csr_default(api):
     endpoint_result = api.certificates.export_csr(
         dirpath=None,
         save_file=None,
+        filename=None,
         hostname='string',
         id='string'
     )
@@ -601,6 +603,7 @@ def export_system_certificate(api):
     endpoint_result = api.certificates.export_system_certificate(
         dirpath=None,
         save_file=None,
+        filename=None,
         active_validation=False,
         export='string',
         id='string',
@@ -627,6 +630,7 @@ def export_system_certificate_default(api):
     endpoint_result = api.certificates.export_system_certificate(
         dirpath=None,
         save_file=None,
+        filename=None,
         active_validation=False,
         export=None,
         id=None,
@@ -1074,6 +1078,7 @@ def export_trusted_certificate(api):
     endpoint_result = api.certificates.export_trusted_certificate(
         dirpath=None,
         save_file=None,
+        filename=None,
         id='string'
     )
     return endpoint_result
@@ -1096,6 +1101,7 @@ def export_trusted_certificate_default(api):
     endpoint_result = api.certificates.export_trusted_certificate(
         dirpath=None,
         save_file=None,
+        filename=None,
         id='string'
     )
     return endpoint_result

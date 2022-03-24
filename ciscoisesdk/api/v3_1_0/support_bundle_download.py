@@ -103,6 +103,7 @@ class SupportBundleDownload(object):
                                 file_name=None,
                                 dirpath=None,
                                 save_file=None,
+                                filename=None,
                                 headers=None,
                                 payload=None,
                                 active_validation=True,
@@ -116,6 +117,8 @@ class SupportBundleDownload(object):
                 os.getcwd().
             save_file(bool): Enable or disable automatic file creation of
                 raw response.
+            filename(basestring): The filename used to save the download
+                file.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -126,7 +129,7 @@ class SupportBundleDownload(object):
                 support for parameters that may be added in the future).
 
         Returns:
-            urllib3.response.HTTPResponse: HTTP Response container. For more
+            DownloadResponse: The DownloadResponse wrapper. Wraps the urllib3.response.HTTPResponse. For more
             information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
@@ -193,12 +196,12 @@ class SupportBundleDownload(object):
         if with_custom_headers:
             _api_response = self._session.put(endpoint_full_url, params=_params,
                                               headers=_headers,
-                                              stream=True, dirpath=dirpath, save_file=save_file,
+                                              stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
                                               **request_params)
 
         else:
             _api_response = self._session.put(endpoint_full_url, params=_params,
-                                              stream=True, dirpath=dirpath, save_file=save_file,
+                                              stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
                                               **request_params)
 
         return self._object_factory('bpm_6d125b968b9d362a3458621d_v3_1_0', _api_response)
@@ -207,6 +210,7 @@ class SupportBundleDownload(object):
                  file_name=None,
                  dirpath=None,
                  save_file=None,
+                 filename=None,
                  headers=None,
                  payload=None,
                  active_validation=True,
@@ -219,6 +223,7 @@ class SupportBundleDownload(object):
             file_name=file_name,
             dirpath=dirpath,
             save_file=save_file,
+            filename=filename,
             payload=payload,
             active_validation=active_validation,
             headers=headers,

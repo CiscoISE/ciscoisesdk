@@ -42,6 +42,7 @@ def create_endpoint_certificate(api):
     endpoint_result = api.endpoint_certificate.create_endpoint_certificate(
         dirpath=None,
         save_file=None,
+        filename=None,
         active_validation=False,
         cert_template_name='string',
         certificate_request={'san': 'string', 'cn': 'string'},
@@ -69,6 +70,7 @@ def create_endpoint_certificate_default(api):
     endpoint_result = api.endpoint_certificate.create_endpoint_certificate(
         dirpath=None,
         save_file=None,
+        filename=None,
         active_validation=False,
         cert_template_name=None,
         certificate_request=None,

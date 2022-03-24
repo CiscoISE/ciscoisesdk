@@ -494,6 +494,7 @@ class Certificates(object):
                    id,
                    dirpath=None,
                    save_file=None,
+                   filename=None,
                    headers=None,
                    **query_parameters):
         """Response of this API carries a CSR corresponding to the
@@ -508,13 +509,15 @@ class Certificates(object):
                 os.getcwd().
             save_file(bool): Enable or disable automatic file creation of
                 raw response.
+            filename(basestring): The filename used to save the download
+                file.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
-            urllib3.response.HTTPResponse: HTTP Response container. For more
+            DownloadResponse: The DownloadResponse wrapper. Wraps the urllib3.response.HTTPResponse. For more
             information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
@@ -555,10 +558,10 @@ class Certificates(object):
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
                                               headers=_headers,
-                                              stream=True, dirpath=dirpath, save_file=save_file)
+                                              stream=True, dirpath=dirpath, save_file=save_file, filename=filename)
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              stream=True, dirpath=dirpath, save_file=save_file)
+                                              stream=True, dirpath=dirpath, save_file=save_file, filename=filename)
 
         return self._object_factory('bpm_ec26ec11d92356a594a6efa55ccb9be7_v3_1_1', _api_response)
 
@@ -1181,6 +1184,7 @@ class Certificates(object):
                                   password=None,
                                   dirpath=None,
                                   save_file=None,
+                                  filename=None,
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
@@ -1218,6 +1222,8 @@ class Certificates(object):
                 os.getcwd().
             save_file(bool): Enable or disable automatic file creation of
                 raw response.
+            filename(basestring): The filename used to save the download
+                file.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -1228,7 +1234,7 @@ class Certificates(object):
                 support for parameters that may be added in the future).
 
         Returns:
-            urllib3.response.HTTPResponse: HTTP Response container. For more
+            DownloadResponse: The DownloadResponse wrapper. Wraps the urllib3.response.HTTPResponse. For more
             information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
@@ -1285,11 +1291,11 @@ class Certificates(object):
         if with_custom_headers:
             _api_response = self._session.post(endpoint_full_url, params=_params,
                                                headers=_headers,
-                                               stream=True, dirpath=dirpath, save_file=save_file,
+                                               stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
                                                **request_params)
         else:
             _api_response = self._session.post(endpoint_full_url, params=_params,
-                                               stream=True, dirpath=dirpath, save_file=save_file,
+                                               stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
                                                **request_params)
 
         return self._object_factory('bpm_dbe47028859573988880de76fec0936_v3_1_1', _api_response)
@@ -2755,6 +2761,7 @@ class Certificates(object):
                                    id,
                                    dirpath=None,
                                    save_file=None,
+                                   filename=None,
                                    headers=None,
                                    **query_parameters):
         """The response of this API carries a trusted certificate file
@@ -2767,13 +2774,15 @@ class Certificates(object):
                 os.getcwd().
             save_file(bool): Enable or disable automatic file creation of
                 raw response.
+            filename(basestring): The filename used to save the download
+                file.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
-            urllib3.response.HTTPResponse: HTTP Response container. For more
+            DownloadResponse: The DownloadResponse wrapper. Wraps the urllib3.response.HTTPResponse. For more
             information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
@@ -2810,10 +2819,10 @@ class Certificates(object):
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
                                               headers=_headers,
-                                              stream=True, dirpath=dirpath, save_file=save_file)
+                                              stream=True, dirpath=dirpath, save_file=save_file, filename=filename)
         else:
             _api_response = self._session.get(endpoint_full_url, params=_params,
-                                              stream=True, dirpath=dirpath, save_file=save_file)
+                                              stream=True, dirpath=dirpath, save_file=save_file, filename=filename)
 
         return self._object_factory('bpm_b62a711ce705542b5d1d92b7d3ca431_v3_1_1', _api_response)
 
