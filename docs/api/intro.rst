@@ -74,7 +74,7 @@ With ciscoisesdk, the above Python code can be consolidated to the following:
 
 + Reads your Identity Services Engine credentials from environment variables (IDENTITY_SERVICES_ENGINE_ENCODED_AUTH, IDENTITY_SERVICES_ENGINE_USERNAME, IDENTITY_SERVICES_ENGINE_PASSWORD)
 
-+ Reads your Identity Services Engine API version from environment variable IDENTITY_SERVICES_ENGINE_VERSION. Supported versions: 3.0.0, 3.1.0 and 3.1.1. Now with version and base_url, you have more control.
++ Reads your Identity Services Engine API version from environment variable IDENTITY_SERVICES_ENGINE_VERSION. Supported versions: 3.1.0 and 3.1.1. Now with version and base_url, you have more control.
 
 + Controls whether to verify the server's TLS certificate or not according to the verify parameter.
 

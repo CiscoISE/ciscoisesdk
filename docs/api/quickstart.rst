@@ -148,7 +148,7 @@ If you don't provide a known version and try to create a new :class:`IdentitySer
       File "<stdin>", line 1, in <module>
       File "ciscoisesdk/api/__init__.py", line 344, in __init__
         raise VersionError(error_message)
-    VersionError: Unknown API version, known versions are 3.0.0, 3.1.0 and 3.1.1.
+    VersionError: Unknown API version, known versions are 3.1.0 and 3.1.1.
 
 
 Use the arguments to manually provide enough information for the HTTP Basic Auth process, 
@@ -394,9 +394,6 @@ A full list of the available API methods, with their descriptions and
 parameters, is available in the :ref:`User API Doc`. 
 
 A summary of the structure is available for each version supported
-
-
-+ :ref:`v3.0.0 <v3_0_0 summary>`
 
 
 + :ref:`v3.1.0 <v3_1_0 summary>`

@@ -8,7 +8,7 @@ ciscoisesdk
 
 -------------------------------------------------------------------------------
 
-Welcome to the docs!  ciscoisesdk is a *community developed* Pythonic wrapping of the Identity Services Engine APIs (for API versions: 3.0.0, 3.1.0 and 3.1.1).
+Welcome to the docs!  ciscoisesdk is a *community developed* Pythonic wrapping of the Identity Services Engine APIs (for API versions: 3.1.0 and 3.1.1).
 The package represents all of the Cisco Identity Services Engine API interactions via native Python tools.
 Making working with the Cisco Identity Services Engine APIs in Python a *native* and *natural* experience.
 
@@ -24,10 +24,6 @@ With ciscoisesdk, you can easily:
 
 To *dive in* and see how ciscoisesdk makes your life better, check out the
 :ref:`Quickstart`!
-
-
-.. warning::
-    The minimum supported version is ISE 3.1. Future releases may drop the ISE version 3.0.0.
 
 
 The User Guide

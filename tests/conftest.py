@@ -28,7 +28,6 @@ pytest_plugins = [
     'tests.test_importsdk',
     'tests.test_ciscoisesdk',
     'tests.api',
-    'tests.api.v3_0_0',
     'tests.api.v3_1_0',
     'tests.api.v3_1_1',
 ]
