@@ -23,18 +23,13 @@ SOFTWARE.
 """
 
 
-from __future__ import (
-    absolute_import,
-    division,
-    print_function,
-    unicode_literals,
-)
+from __future__ import absolute_import, division, print_function, unicode_literals
+
+import json
+from builtins import *
 
 import fastjsonschema
-import json
 from ciscoisesdk.exceptions import MalformedRequest
-
-from builtins import *
 
 
 class JSONSchemaValidatorAfe1108B1A59539EBe3DE3E5652C9653(object):

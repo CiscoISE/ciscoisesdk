@@ -23,25 +23,20 @@ SOFTWARE.
 """
 
 
-from __future__ import (
-    absolute_import,
-    division,
-    print_function,
-    unicode_literals,
-)
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 from builtins import *
 
 from past.builtins import basestring
 
+from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
+    apply_path_params,
     check_type,
     dict_from_items_with_values,
-    apply_path_params,
     dict_of_str,
 )
-from ...pagination import get_next_page
 
 
 class NetworkAccessIdentityStores(object):

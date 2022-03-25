@@ -26,10 +26,8 @@ SOFTWARE.
 import logging
 import warnings
 
-import pytest
-
 import ciscoisesdk
-
+import pytest
 
 logging.captureWarnings(True)
 

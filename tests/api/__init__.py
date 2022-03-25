@@ -23,22 +23,19 @@ SOFTWARE.
 """
 
 import pytest
-
 from ciscoisesdk import IdentityServicesEngineAPI
-from tests.environment import (
-    IDENTITY_SERVICES_ENGINE_USERNAME, IDENTITY_SERVICES_ENGINE_PASSWORD,
-    IDENTITY_SERVICES_ENGINE_ENCODED_AUTH, IDENTITY_SERVICES_ENGINE_VERSION,
-)
 from tests.config import (
-    DEFAULT_VERIFY,
     DEFAULT_SINGLE_REQUEST_TIMEOUT,
+    DEFAULT_VERIFY,
     DEFAULT_WAIT_ON_RATE_LIMIT
 )
-from tests.mock.mock import (
-    get_free_port,
-    get_mock_url,
-    start_mock_server
+from tests.environment import (
+    IDENTITY_SERVICES_ENGINE_ENCODED_AUTH,
+    IDENTITY_SERVICES_ENGINE_PASSWORD,
+    IDENTITY_SERVICES_ENGINE_USERNAME,
+    IDENTITY_SERVICES_ENGINE_VERSION,
 )
+from tests.mock.mock import get_free_port, get_mock_url, start_mock_server
 from tests.models.schema_validator import SchemaValidator
 
 

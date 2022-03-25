@@ -1,6 +1,7 @@
-from http.server import BaseHTTPRequestHandler
-import re
 import json
+import re
+from http.server import BaseHTTPRequestHandler
+
 import requests
 
 
