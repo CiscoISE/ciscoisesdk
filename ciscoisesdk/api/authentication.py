@@ -23,33 +23,18 @@ SOFTWARE.
 """
 
 
-from __future__ import (
-    absolute_import,
-    division,
-    print_function,
-    unicode_literals,
-)
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 from future import standard_library
+
 standard_library.install_aliases()
 
+from base64 import b64encode
 from builtins import *
-import urllib.parse
 
 from past.builtins import basestring
-import requests
 
-from ..response_codes import EXPECTED_RESPONSE_CODE
-from ..utils import (
-    check_type,
-    dict_from_items_with_values,
-    extract_and_parse_json,
-    validate_base_url,
-)
-from ..misc import (
-    check_response_code,
-)
-from base64 import b64encode
+from ..utils import check_type, validate_base_url
 
 
 class Authentication(object):

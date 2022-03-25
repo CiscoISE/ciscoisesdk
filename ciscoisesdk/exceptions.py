@@ -23,23 +23,15 @@ SOFTWARE.
 """
 
 
-from __future__ import (
-    absolute_import,
-    division,
-    print_function,
-    unicode_literals,
-)
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 import logging
 from builtins import *
-from .utils import (
-    extract_and_parse,
-    get_err_message,
-)
+
 import requests
 
 from .response_codes import RESPONSE_CODES
-
+from .utils import extract_and_parse, get_err_message
 
 logger = logging.getLogger(__name__)
 

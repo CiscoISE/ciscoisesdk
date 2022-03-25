@@ -23,28 +23,24 @@ SOFTWARE.
 """
 
 
-from __future__ import (
-    absolute_import,
-    division,
-    print_function,
-    unicode_literals,
-)
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 from future import standard_library
+
 standard_library.install_aliases()
 native_str = str
 
 import json
-import xmltodict
 import mimetypes
 import os
 import sys
 import urllib.parse
+from base64 import b64decode
 from builtins import *
 from collections import OrderedDict, namedtuple
 from datetime import datetime, timedelta, tzinfo
-from base64 import b64decode
 
+import xmltodict
 from past.builtins import basestring
 
 EncodableFile = namedtuple('EncodableFile',

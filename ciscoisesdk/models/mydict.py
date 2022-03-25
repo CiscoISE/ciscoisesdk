@@ -26,6 +26,7 @@ SOFTWARE.
 """
 
 import json
+
 from ..restresponse import RestResponse
 
 

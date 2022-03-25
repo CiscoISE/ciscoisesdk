@@ -21,22 +21,19 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-from __future__ import (
-    absolute_import,
-    division,
-    print_function,
-    unicode_literals,
-)
+
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 from future import standard_library
+
 standard_library.install_aliases()
 native_str = str
 
 from builtins import *
+
 from past.builtins import basestring
 
-from .exceptions import (
-    ApiError, RateLimitError,
-)
+from .exceptions import ApiError, RateLimitError
 from .response_codes import RATE_LIMIT_RESPONSE_CODE
 
 

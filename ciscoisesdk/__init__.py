@@ -23,12 +23,7 @@ SOFTWARE.
 """
 
 
-from __future__ import (
-    absolute_import,
-    division,
-    print_function,
-    unicode_literals,
-)
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 import logging
 
@@ -37,15 +32,14 @@ from .api import IdentityServicesEngineAPI
 from .exceptions import (
     AccessTokenError,
     ApiError,
-    ciscoisesdkException,
     DownloadFailure,
     MalformedRequest,
     RateLimitError,
     RateLimitWarning,
     VersionError,
+    ciscoisesdkException,
 )
 from .models.mydict import mydict_data_factory
-
 
 # Initialize Package Logging
 logging.getLogger(__name__).addHandler(logging.NullHandler())
@@ -53,5 +47,6 @@ logger = logging.getLogger(__name__)
 
 
 from pkg_resources import get_distribution
+
 release = get_distribution('ciscoisesdk').version
 __version__ = '.'.join(release.split('.')[:3])

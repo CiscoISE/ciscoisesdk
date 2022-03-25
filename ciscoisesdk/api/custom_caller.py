@@ -23,29 +23,22 @@ SOFTWARE.
 """
 
 
-from __future__ import (
-    absolute_import,
-    division,
-    print_function,
-    unicode_literals,
-)
+from __future__ import absolute_import, division, print_function, unicode_literals
 
+import logging
 from builtins import *
 
 from past.builtins import basestring
+from requests.exceptions import HTTPError
 
-from ..restsession import RestSession
 from ..restresponse import RestResponse
+from ..restsession import RestSession
 from ..utils import (
-    check_type,
     apply_path_params,
-    extract_and_parse,
+    check_type,
     pprint_request_info,
     pprint_response_info,
 )
-import logging
-from requests.exceptions import HTTPError
-
 
 logger = logging.getLogger(__name__)
 
