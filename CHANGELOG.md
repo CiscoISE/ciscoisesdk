@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.2] - 2022-05-02
+
+### Fixed
+
+- Update pagination to capture and ignore 500 Internal server error when they attempt to get_next_page. Previous version only captured and ignored 404 Not Found and 400 Bad Request.
+
 ## [2.0.1] - 2022-03-24
 
 ### Added
@@ -333,4 +339,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.5.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...v1.5.1
 [2.0.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.1...v2.0.0
 [2.0.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...v2.0.1
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...develop
+[2.0.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...v2.0.2
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.2...develop
