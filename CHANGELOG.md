@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.3] - 2021-06-07
+
+### Changed
+
+- Default ISE DEFAULT_VERSION to 3.1_Patch_1
+- Update documentation to use ISE v3.1_Patch_1
+
 ## [2.0.2] - 2022-05-02
 
 ### Fixed
