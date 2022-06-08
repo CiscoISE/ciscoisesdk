@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.3] - 2021-06-07
+
+### Changed
+
+- Default ISE DEFAULT_VERSION to 3.1_Patch_1
+- Update documentation to use ISE v3.1_Patch_1
+
 ## [2.0.2] - 2022-05-02
 
 ### Fixed
@@ -340,4 +347,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.0.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.1...v2.0.0
 [2.0.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...v2.0.1
 [2.0.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...v2.0.2
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.2...develop
+[2.0.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.2...v2.0.3
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.3...develop
