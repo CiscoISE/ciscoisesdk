@@ -141,6 +141,23 @@ def check_type(o, acceptable_types, may_be_none=True):
     elif isinstance(o, acceptable_types):
         # Object is an instance of an acceptable type.
         pass
+    elif isinstance(o, list):
+        # Object is an instance of an list.
+        if len(o)>0 and len(o)<2:
+            pass
+        else:
+            # Object is something else.
+            error_message = (
+                "We were expecting to receive an instance of one of the following "
+                "types: {types}{none}; but instead we received {o} which is a "
+                "{o_type}.".format(
+                    types=", ".join([repr(t.__name__) for t in acceptable_types]),
+                    none="or 'None'" if may_be_none else "",
+                    o=o,
+                    o_type=repr(type(o).__name__)
+                )
+            )
+            raise TypeError(error_message)
     else:
         # Object is something else.
         error_message = (
