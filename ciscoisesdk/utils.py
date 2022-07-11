@@ -143,7 +143,7 @@ def check_type(o, acceptable_types, may_be_none=True):
         pass
     elif isinstance(o, list):
         # Object is an instance of an list.
-        if len(o)>0 and len(o)<2:
+        if len(o)>0 and len(o)<2 and isinstance(o[0], acceptable_types):
             pass
         else:
             # Object is something else.
