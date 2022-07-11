@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.4] - 2021-07-11
+
+### Fixed
+
+- Update check_type to pass an instance of a list.
+
 ## [2.0.3] - 2021-06-07
 
 ### Changed
@@ -348,4 +354,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.0.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...v2.0.1
 [2.0.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...v2.0.2
 [2.0.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.2...v2.0.3
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.3...develop
+[2.0.4]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.3...v2.0.4
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.4...develop
