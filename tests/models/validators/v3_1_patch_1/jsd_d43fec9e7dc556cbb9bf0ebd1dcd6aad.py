@@ -51,32 +51,9 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 ],
                 "type": "string"
                 },
-                "conditions": {
-                "items": {
-                "properties": {
-                "cliDnisList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "conditionType": {
-                "enum": [
-                "DeviceCondition",
-                "DevicePortCondition",
-                "EndstationCondition"
-                ],
-                "type": "string"
-                },
                 "description":
                  {
                 "type": "string"
-                },
-                "deviceGroupList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
                 },
                 "deviceList": {
                 "items": {
@@ -85,7 +62,6 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "type": "array"
                 },
                 "id": {
-                "readOnly": true,
                 "type": "string"
                 },
                 "ipAddrList": {
@@ -112,6 +88,9 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "href"
+                ],
                 "type": "object"
                 },
                 "macAddrList": {
@@ -119,44 +98,6 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "type": "string"
                 },
                 "type": "array"
-                },
-                "name": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
-                "id": {
-                "type": "string"
-                },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "enum": [
-                "next",
-                "previous",
-                "self",
-                "status"
-                ],
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "href"
-                ],
-                "type": "object"
                 },
                 "name": {
                 "type": "string"

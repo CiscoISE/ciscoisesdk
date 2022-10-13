@@ -46,6 +46,7 @@ class NetworkAccessNetworkConditions(object):
     API and exposes the API as native Python
     methods that return native Python objects.
 
+    Policy APIs for manage Policy Sets, authorization policies, authentication policies, and policy elements.
 
     """
 
@@ -140,10 +141,12 @@ class NetworkAccessNetworkConditions(object):
 
     def create_network_access_network_condition(self,
                                                 condition_type=None,
-                                                conditions=None,
                                                 description=None,
+                                                device_list=None,
                                                 id=None,
+                                                ip_addr_list=None,
                                                 link=None,
+                                                mac_addr_list=None,
                                                 name=None,
                                                 headers=None,
                                                 payload=None,
@@ -158,12 +161,33 @@ class NetworkAccessNetworkConditions(object):
                 values are 'DeviceCondition',
                 'DevicePortCondition' and
                 'EndstationCondition'.
-            conditions(list): conditions, property of the request
-                body (list of objects).
             description(string): description, property of the
                 request body.
+            device_list(list): This field should contain Device
+                Name. The device name must be the same
+                as the name field in a Network Device
+                object. Line format Device Name,
+                property of the request body (list of
+                strings).
             id(string): id, property of the request body.
+            ip_addr_list(list): This field should contain IP address
+                or subnet.  IP address can be IPV4
+                format (n.n.n.n) or IPV6 format
+                (n:n:n:n:n:n:n:n).  IP subnet can be
+                IPV4 format (n.n.n.n/m) or IPV6 format
+                (n:n:n:n:n:n:n:n/m).  Line format IP
+                Address or subnet, property of the
+                request body (list of strings).
             link(object): link, property of the request body.
+            mac_addr_list(list): This field should contain
+                Endstation MAC address, comma, and
+                Destination MAC addresses.  Each Max
+                address must include twelve hexadecimal
+                digits using formats nn:nn:nn:nn:nn:nn
+                or nn-nn-nn-nn-nn-nn or nnnn.nnnn.nnnn
+                or nnnnnnnnnnnn.  Line format Endstation
+                MAC,Destination MAC , property of the
+                request body (list of strings).
             name(string): Network Condition name, property of the
                 request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -229,8 +253,12 @@ class NetworkAccessNetworkConditions(object):
                     link,
                 'name':
                     name,
-                'conditions':
-                    conditions,
+                'deviceList':
+                    device_list,
+                'ipAddrList':
+                    ip_addr_list,
+                'macAddrList':
+                    mac_addr_list,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -254,10 +282,12 @@ class NetworkAccessNetworkConditions(object):
 
     def create(self,
                condition_type=None,
-               conditions=None,
                description=None,
+               device_list=None,
                id=None,
+               ip_addr_list=None,
                link=None,
+               mac_addr_list=None,
                name=None,
                headers=None,
                payload=None,
@@ -269,10 +299,12 @@ class NetworkAccessNetworkConditions(object):
         """
         return self.create_network_access_network_condition(
             condition_type=condition_type,
-            conditions=conditions,
             description=description,
+            device_list=device_list,
             id=id,
+            ip_addr_list=ip_addr_list,
             link=link,
+            mac_addr_list=mac_addr_list,
             name=name,
             payload=payload,
             active_validation=active_validation,
@@ -359,9 +391,11 @@ class NetworkAccessNetworkConditions(object):
     def update_network_access_network_condition_by_id(self,
                                                       id,
                                                       condition_type=None,
-                                                      conditions=None,
                                                       description=None,
+                                                      device_list=None,
+                                                      ip_addr_list=None,
                                                       link=None,
+                                                      mac_addr_list=None,
                                                       name=None,
                                                       headers=None,
                                                       payload=None,
@@ -376,12 +410,33 @@ class NetworkAccessNetworkConditions(object):
                 values are 'DeviceCondition',
                 'DevicePortCondition' and
                 'EndstationCondition'.
-            conditions(list): conditions, property of the request
-                body (list of objects).
             description(string): description, property of the
                 request body.
+            device_list(list): This field should contain Device
+                Name. The device name must be the same
+                as the name field in a Network Device
+                object. Line format Device Name,
+                property of the request body (list of
+                strings).
             id(string): id, property of the request body.
+            ip_addr_list(list): This field should contain IP address
+                or subnet.  IP address can be IPV4
+                format (n.n.n.n) or IPV6 format
+                (n:n:n:n:n:n:n:n).  IP subnet can be
+                IPV4 format (n.n.n.n/m) or IPV6 format
+                (n:n:n:n:n:n:n:n/m).  Line format IP
+                Address or subnet, property of the
+                request body (list of strings).
             link(object): link, property of the request body.
+            mac_addr_list(list): This field should contain
+                Endstation MAC address, comma, and
+                Destination MAC addresses.  Each Max
+                address must include twelve hexadecimal
+                digits using formats nn:nn:nn:nn:nn:nn
+                or nn-nn-nn-nn-nn-nn or nnnn.nnnn.nnnn
+                or nnnnnnnnnnnn.  Line format Endstation
+                MAC,Destination MAC , property of the
+                request body (list of strings).
             name(string): Network Condition name, property of the
                 request body.
             id(basestring): id path parameter. Condition id.
@@ -451,8 +506,12 @@ class NetworkAccessNetworkConditions(object):
                     link,
                 'name':
                     name,
-                'conditions':
-                    conditions,
+                'deviceList':
+                    device_list,
+                'ipAddrList':
+                    ip_addr_list,
+                'macAddrList':
+                    mac_addr_list,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -478,9 +537,11 @@ class NetworkAccessNetworkConditions(object):
     def update_by_id(self,
                      id,
                      condition_type=None,
-                     conditions=None,
                      description=None,
+                     device_list=None,
+                     ip_addr_list=None,
                      link=None,
+                     mac_addr_list=None,
                      name=None,
                      headers=None,
                      payload=None,
@@ -493,9 +554,11 @@ class NetworkAccessNetworkConditions(object):
         return self.update_network_access_network_condition_by_id(
             id=id,
             condition_type=condition_type,
-            conditions=conditions,
             description=description,
+            device_list=device_list,
+            ip_addr_list=ip_addr_list,
             link=link,
+            mac_addr_list=mac_addr_list,
             name=name,
             payload=payload,
             active_validation=active_validation,
