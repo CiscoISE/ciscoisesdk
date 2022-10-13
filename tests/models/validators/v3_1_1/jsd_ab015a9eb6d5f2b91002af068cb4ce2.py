@@ -42,6 +42,12 @@ class JSONSchemaValidatorAb015A9Eb6D5F2B91002Af068Cb4Ce2(object):
                 "properties": {
                 "response": {
                 "properties": {
+                "cliDnisList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                },
                 "conditionType": {
                 "enum": [
                 "DeviceCondition",
@@ -53,6 +59,12 @@ class JSONSchemaValidatorAb015A9Eb6D5F2B91002Af068Cb4Ce2(object):
                 "description":
                  {
                 "type": "string"
+                },
+                "deviceGroupList": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
                 },
                 "deviceList": {
                 "items": {

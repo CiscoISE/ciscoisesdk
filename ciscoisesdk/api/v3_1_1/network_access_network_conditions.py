@@ -140,8 +140,10 @@ class NetworkAccessNetworkConditions(object):
         )
 
     def create_network_access_network_condition(self,
+                                                cli_dnis_list=None,
                                                 condition_type=None,
                                                 description=None,
+                                                device_group_list=None,
                                                 device_list=None,
                                                 id=None,
                                                 ip_addr_list=None,
@@ -155,6 +157,11 @@ class NetworkAccessNetworkConditions(object):
         """Network Access Creates network condition.
 
         Args:
+            cli_dnis_list(list): This field should contain a Caller
+                ID (CLI), comma, and Called ID (DNIS).
+                Line format  Caller ID (CLI), Called ID
+                (DNIS), property of the request body
+                (list of strings).
             condition_type(string): This field determines the
                 content of the conditions field,
                 property of the request body. Available
@@ -163,6 +170,11 @@ class NetworkAccessNetworkConditions(object):
                 'EndstationCondition'.
             description(string): description, property of the
                 request body.
+            device_group_list(list): This field should contain a
+                tuple with NDG Root, comma, and an NDG
+                (that it under the root).  Line format
+                NDG Root Name, NDG, Port, property of
+                the request body (list of strings).
             device_list(list): This field should contain Device
                 Name. The device name must be the same
                 as the name field in a Network Device
@@ -255,10 +267,14 @@ class NetworkAccessNetworkConditions(object):
                     name,
                 'deviceList':
                     device_list,
+                'cliDnisList':
+                    cli_dnis_list,
                 'ipAddrList':
                     ip_addr_list,
                 'macAddrList':
                     mac_addr_list,
+                'deviceGroupList':
+                    device_group_list,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -281,8 +297,10 @@ class NetworkAccessNetworkConditions(object):
         return self._object_factory('bpm_f4dbfb874b3b56d7a651d6732f1bd55e_v3_1_1', _api_response)
 
     def create(self,
+               cli_dnis_list=None,
                condition_type=None,
                description=None,
+               device_group_list=None,
                device_list=None,
                id=None,
                ip_addr_list=None,
@@ -298,8 +316,10 @@ class NetworkAccessNetworkConditions(object):
         NetworkAccessNetworkConditions.create_network_access_network_condition>`_
         """
         return self.create_network_access_network_condition(
+            cli_dnis_list=cli_dnis_list,
             condition_type=condition_type,
             description=description,
+            device_group_list=device_group_list,
             device_list=device_list,
             id=id,
             ip_addr_list=ip_addr_list,
@@ -390,8 +410,10 @@ class NetworkAccessNetworkConditions(object):
 
     def update_network_access_network_condition_by_id(self,
                                                       id,
+                                                      cli_dnis_list=None,
                                                       condition_type=None,
                                                       description=None,
+                                                      device_group_list=None,
                                                       device_list=None,
                                                       ip_addr_list=None,
                                                       link=None,
@@ -404,6 +426,11 @@ class NetworkAccessNetworkConditions(object):
         """Network Access Update network condition.
 
         Args:
+            cli_dnis_list(list): This field should contain a Caller
+                ID (CLI), comma, and Called ID (DNIS).
+                Line format  Caller ID (CLI), Called ID
+                (DNIS), property of the request body
+                (list of strings).
             condition_type(string): This field determines the
                 content of the conditions field,
                 property of the request body. Available
@@ -412,6 +439,11 @@ class NetworkAccessNetworkConditions(object):
                 'EndstationCondition'.
             description(string): description, property of the
                 request body.
+            device_group_list(list): This field should contain a
+                tuple with NDG Root, comma, and an NDG
+                (that it under the root).  Line format
+                NDG Root Name, NDG, Port, property of
+                the request body (list of strings).
             device_list(list): This field should contain Device
                 Name. The device name must be the same
                 as the name field in a Network Device
@@ -508,10 +540,14 @@ class NetworkAccessNetworkConditions(object):
                     name,
                 'deviceList':
                     device_list,
+                'cliDnisList':
+                    cli_dnis_list,
                 'ipAddrList':
                     ip_addr_list,
                 'macAddrList':
                     mac_addr_list,
+                'deviceGroupList':
+                    device_group_list,
             }
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
@@ -536,8 +572,10 @@ class NetworkAccessNetworkConditions(object):
 
     def update_by_id(self,
                      id,
+                     cli_dnis_list=None,
                      condition_type=None,
                      description=None,
+                     device_group_list=None,
                      device_list=None,
                      ip_addr_list=None,
                      link=None,
@@ -553,8 +591,10 @@ class NetworkAccessNetworkConditions(object):
         """
         return self.update_network_access_network_condition_by_id(
             id=id,
+            cli_dnis_list=cli_dnis_list,
             condition_type=condition_type,
             description=description,
+            device_group_list=device_group_list,
             device_list=device_list,
             ip_addr_list=ip_addr_list,
             link=link,
