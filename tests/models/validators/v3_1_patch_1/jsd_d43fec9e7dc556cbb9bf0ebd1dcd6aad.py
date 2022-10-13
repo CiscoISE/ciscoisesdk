@@ -43,17 +43,6 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "response": {
                 "items": {
                 "properties": {
-                "conditionType": {
-                "enum": [
-                "DeviceCondition",
-                "DevicePortCondition",
-                "EndstationCondition"
-                ],
-                "type": "string"
-                },
-                "conditions": {
-                "items": {
-                "properties": {
                 "cliDnisList": {
                 "items": {
                 "type": "string"
@@ -85,7 +74,6 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "type": "array"
                 },
                 "id": {
-                "readOnly": true,
                 "type": "string"
                 },
                 "ipAddrList": {
@@ -112,6 +100,9 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "type": "string"
                 }
                 },
+                "required": [
+                "href"
+                ],
                 "type": "object"
                 },
                 "macAddrList": {
@@ -119,44 +110,6 @@ class JSONSchemaValidatorD43Fec9E7Dc556CbB9Bf0Ebd1Dcd6Aad(object):
                 "type": "string"
                 },
                 "type": "array"
-                },
-                "name": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
-                "id": {
-                "type": "string"
-                },
-                "link": {
-                "properties": {
-                "href": {
-                "type": "string"
-                },
-                "rel": {
-                "enum": [
-                "next",
-                "previous",
-                "self",
-                "status"
-                ],
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "href"
-                ],
-                "type": "object"
                 },
                 "name": {
                 "type": "string"

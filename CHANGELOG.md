@@ -6,13 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.0.4] - 2021-07-11
+## [2.0.5] - 2022-12-10
+
+### Fixed
+
+- Repaired the request body of the network_access_network_conditions.create_network_access_network_condition request 3.1_patch_1 and 3.1.1
+- Repaired the request body of the network_access_network_conditions.update_network_access_network_condition_by_id request 3.1_patch_1 and 3.1.1
+
+
+## [2.0.4] - 2022-07-11
 
 ### Fixed
 
 - Update check_type to pass an instance of a list.
 
-## [2.0.3] - 2021-06-07
+## [2.0.3] - 2022-06-07
 
 ### Changed
 
@@ -355,4 +363,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.0.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...v2.0.2
 [2.0.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.2...v2.0.3
 [2.0.4]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.3...v2.0.4
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.4...develop
+[2.0.5]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.4...v2.0.5
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.5...develop

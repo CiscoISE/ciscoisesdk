@@ -3,12 +3,42 @@ Changelog
 
 All notable changes to this project will be documented in this file.
 
-The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`__, and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`__.
+The format is based on `Keep a
+Changelog <https://keepachangelog.com/en/1.0.0/>`__, and this project
+adheres to `Semantic
+Versioning <https://semver.org/spec/v2.0.0.html>`__.
 
-`Unreleased <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.3...develop>`__
+`Unreleased <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.5...develop>`__
 ---------------------------------------------------------------------------------
 
-`2.0.3 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.2...v2.0.3>`__ - 2021-06-07
+`2.0.5 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.4...v2.0.5>`__ - 2022-12-10
+----------------------------------------------------------------------------------------
+
+Fixed
+~~~~~
+
+-  Repaired the request body of the
+   network_access_network_conditions.create_network_access_network_condition
+   request 3.1_patch_1 and 3.1.1
+-  Repaired the request body of the
+   network_access_network_conditions.update_network_access_network_condition_by_id
+   request 3.1_patch_1 and 3.1.1
+
+.. _section-1:
+
+`2.0.4 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.3...v2.0.4>`__ - 2022-07-11
+----------------------------------------------------------------------------------------
+
+.. _fixed-1:
+
+Fixed
+~~~~~
+
+-  Update check_type to pass an instance of a list.
+
+.. _section-2:
+
+`2.0.3 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.2...v2.0.3>`__ - 2022-06-07
 ----------------------------------------------------------------------------------------
 
 Changed
@@ -17,17 +47,21 @@ Changed
 -  Default ISE DEFAULT_VERSION to 3.1_Patch_1
 -  Update documentation to use ISE v3.1_Patch_1
 
-.. _section-1:
+.. _section-3:
 
 `2.0.2 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...v2.0.2>`__ - 2022-05-02
 ----------------------------------------------------------------------------------------
 
+.. _fixed-2:
+
 Fixed
 ~~~~~
 
--  Update pagination to capture and ignore 500 Internal server error when they attempt to get_next_page. Previous version only captured and ignored 404 Not Found and 400 Bad Request.
+-  Update pagination to capture and ignore 500 Internal server error
+   when they attempt to get_next_page. Previous version only captured
+   and ignored 404 Not Found and 400 Bad Request.
 
-.. _section-2:
+.. _section-4:
 
 `2.0.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...v2.0.1>`__ - 2022-03-24
 ----------------------------------------------------------------------------------------
@@ -35,7 +69,8 @@ Fixed
 Added
 ~~~~~
 
--  Add ``DownloadResponse`` class that wraps the ``urllib3.response.HTTPResponse``.
+-  Add ``DownloadResponse`` class that wraps the
+   ``urllib3.response.HTTPResponse``.
 -  Add ``filename`` optional parameter to the following functions:
 
    -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_csr
@@ -58,7 +93,8 @@ Added
 Changed
 ~~~~~~~
 
--  Change the response of the following funtions from ``urllib3.response.HTTPResponse`` to a wrapper ``DownloadResponse``.
+-  Change the response of the following funtions from
+   ``urllib3.response.HTTPResponse`` to a wrapper ``DownloadResponse``.
 
    -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_csr
    -  ciscoisesdk.api.v3_1_0.certificates.Certificates.export_system_certificate
@@ -75,7 +111,7 @@ Changed
    -  ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download_support_bundle
    -  ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download
 
-.. _section-3:
+.. _section-5:
 
 `2.0.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.1...v2.0.0>`__ - 2022-03-24
 ----------------------------------------------------------------------------------------
@@ -83,10 +119,11 @@ Changed
 Removed
 ~~~~~~~
 
--  Removed ``access_token`` property of ``IdentityServicesEngineAPI`` and ``RestSession``.
+-  Removed ``access_token`` property of ``IdentityServicesEngineAPI``
+   and ``RestSession``.
 -  Drop ISE version 3.0.0 support.
 
-.. _section-4:
+.. _section-6:
 
 `1.5.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...v1.5.1>`__ - 2022-02-25
 ----------------------------------------------------------------------------------------
@@ -98,7 +135,7 @@ Changed
 
 -  Update docstring documentation of modules and functions.
 
-.. _section-5:
+.. _section-7:
 
 `1.5.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0>`__ - 2022-02-23
 ----------------------------------------------------------------------------------------
@@ -108,30 +145,45 @@ Changed
 Changed
 ~~~~~~~
 
--  Marked ``access_token`` property to be removed in ``IdentityServicesEngineAPI`` and ``RestSession``.
--  Changed the way of notifying Deprecation of version 3.0.0 of ISE from print to warning.
--  Incremented ``IdentityServicesEngineAPI`` and ``RestSession`` constructor parameter count.
--  Changed access method an imports used for environment variables and default values in api/**init**.py.
--  Changed ``IdentityServicesEngineAPI``\ ’s inner properties, getters, and setters to handle only the class itself.
--  ``RestSession`` to request for a refreshed CSRF token if ``uses_csrf_token`` is enabled.
--  Replaced the name of headers checked for ERS methods from “X-CSRF-TOKEN” to “X-CSRF-Token”.
--  Changed ``ApiError`` message when status_code is 401 or 403 to include reference to ``additional_data`` property.
+-  Marked ``access_token`` property to be removed in
+   ``IdentityServicesEngineAPI`` and ``RestSession``.
+-  Changed the way of notifying Deprecation of version 3.0.0 of ISE from
+   print to warning.
+-  Incremented ``IdentityServicesEngineAPI`` and ``RestSession``
+   constructor parameter count.
+-  Changed access method an imports used for environment variables and
+   default values in api/**init**.py.
+-  Changed ``IdentityServicesEngineAPI``\ ’s inner properties, getters,
+   and setters to handle only the class itself.
+-  ``RestSession`` to request for a refreshed CSRF token if
+   ``uses_csrf_token`` is enabled.
+-  Replaced the name of headers checked for ERS methods from
+   “X-CSRF-TOKEN” to “X-CSRF-Token”.
+-  Changed ``ApiError`` message when status_code is 401 or 403 to
+   include reference to ``additional_data`` property.
 
 .. _added-1:
 
 Added
 ~~~~~
 
--  Support for “CSRF Check for Enhanced Security” for the ISE ERS API (`#20 <https://github.com/CiscoISE/ciscoisesdk/issues/20>`__).
--  Added ``status_code`` to ``RestResponse`` (`#22 <https://github.com/CiscoISE/ciscoisesdk/issues/22>`__).
--  Support to have additional_data for ``ApiError`` when HTTP status code are 401 or 403 (`#21 <https://github.com/CiscoISE/ciscoisesdk/issues/21>`__). The additional_data returns a string with:
+-  Support for “CSRF Check for Enhanced Security” for the ISE ERS API
+   (`#20 <https://github.com/CiscoISE/ciscoisesdk/issues/20>`__).
+-  Added ``status_code`` to ``RestResponse``
+   (`#22 <https://github.com/CiscoISE/ciscoisesdk/issues/22>`__).
+-  Support to have additional_data for ``ApiError`` when HTTP status
+   code are 401 or 403
+   (`#21 <https://github.com/CiscoISE/ciscoisesdk/issues/21>`__). The
+   additional_data returns a string with:
 
    -  Authorization header used.
    -  X-CSRF-Token header used if it was found.
    -  Username used.
    -  Password used.
 
--  Support for managing changes of the ``IdentityServicesEngineAPI``\ ’s properties (`#21 <https://github.com/CiscoISE/ciscoisesdk/issues/21>`__):
+-  Support for managing changes of the ``IdentityServicesEngineAPI``\ ’s
+   properties
+   (`#21 <https://github.com/CiscoISE/ciscoisesdk/issues/21>`__):
 
    -  ``initialize_authentication`` function.
    -  ``initialize_sessions`` function.
@@ -165,47 +217,61 @@ Added
    -  ``change_password`` utility setter function.
    -  ``change_encoded_auth`` utility setter function.
 
--  Added warnings for changes of the ``IdentityServicesEngineAPI``\ ’s properties.
--  Added a test importsdk to verify the behavior between environment variables and module import order.
--  New ``perform_initialize`` parameter for ``IdentityServicesEngineAPI`` constructor.
--  New ``uses_csrf_token`` parameter for ``IdentityServicesEngineAPI`` constructor.
+-  Added warnings for changes of the ``IdentityServicesEngineAPI``\ ’s
+   properties.
+-  Added a test importsdk to verify the behavior between environment
+   variables and module import order.
+-  New ``perform_initialize`` parameter for
+   ``IdentityServicesEngineAPI`` constructor.
+-  New ``uses_csrf_token`` parameter for ``IdentityServicesEngineAPI``
+   constructor.
 -  New ``get_csrf_token`` function for ``IdentityServicesEngineAPI``.
--  New ``uses_csrf_token`` and ``get_csrf_token`` parameters for ``RestSession`` constructor.
+-  New ``uses_csrf_token`` and ``get_csrf_token`` parameters for
+   ``RestSession`` constructor.
 -  New ``DEFAULT_USES_CSRF_TOKEN`` value in config.py.
--  New ``IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN`` environment variable in environment.py.
--  New ``initialize_authentication`` function for ``IdentityServicesEngineAPI``.
--  New ``initialize_sessions`` function for ``IdentityServicesEngineAPI``.
--  New ``initialize_api_wrappers`` function for ``IdentityServicesEngineAPI``.
+-  New ``IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN`` environment variable
+   in environment.py.
+-  New ``initialize_authentication`` function for
+   ``IdentityServicesEngineAPI``.
+-  New ``initialize_sessions`` function for
+   ``IdentityServicesEngineAPI``.
+-  New ``initialize_api_wrappers`` function for
+   ``IdentityServicesEngineAPI``.
 -  New ``reinitialize`` function for ``IdentityServicesEngineAPI``.
 -  New ``is_password`` function for ``IdentityServicesEngineAPI``.
 -  New ``is_encoded_auth`` function for ``IdentityServicesEngineAPI``.
 -  New ``change_password`` function for ``IdentityServicesEngineAPI``.
--  New ``change_encoded_auth`` function for ``IdentityServicesEngineAPI``.
+-  New ``change_encoded_auth`` function for
+   ``IdentityServicesEngineAPI``.
 -  New ``debug`` setter funtion for ``RestSession``.
--  New ``uses_csrf_token`` getter and setter funtions for ``RestSession``.
+-  New ``uses_csrf_token`` getter and setter funtions for
+   ``RestSession``.
 -  New ``additional_data`` property in ``ApiError``.
 
-.. _fixed-1:
+.. _fixed-3:
 
 Fixed
 ~~~~~
 
--  The process that gets the environment variables now can access the variables set after the module is imported, and not only before it.
+-  The process that gets the environment variables now can access the
+   variables set after the module is imported, and not only before it.
 -  Fixed the docstring tables of the API modules.
 
-.. _section-6:
+.. _section-8:
 
 `1.4.2 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.1...v1.4.2>`__ - 2022-02-18
 ----------------------------------------------------------------------------------------
 
-.. _fixed-2:
+.. _fixed-4:
 
 Fixed
 ~~~~~
 
--  Update pagination to capture and ignore 400 Bad Request in generators when they attempt to get_next_page. Previous version only captured and ignored 404 Not Found.
+-  Update pagination to capture and ignore 400 Bad Request in generators
+   when they attempt to get_next_page. Previous version only captured
+   and ignored 404 Not Found.
 
-.. _section-7:
+.. _section-9:
 
 `1.4.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.0...v1.4.1>`__ - 2022-01-20
 ----------------------------------------------------------------------------------------
@@ -218,7 +284,7 @@ Changed
 -  Update module inner documentation.
 -  Downgrade requirements file to use poetry versions.
 
-.. _section-8:
+.. _section-10:
 
 `1.4.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0>`__ - 2022-01-19
 ----------------------------------------------------------------------------------------
@@ -230,14 +296,15 @@ Changed
 
 -  Update requirements
 
-.. _fixed-3:
+.. _fixed-5:
 
 Fixed
 ~~~~~
 
--  Update pagination, get_next_page inner logic and location from utils to pagination.
+-  Update pagination, get_next_page inner logic and location from utils
+   to pagination.
 
-.. _section-9:
+.. _section-11:
 
 `1.3.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.0...v1.3.1>`__ - 2021-12-13
 ----------------------------------------------------------------------------------------
@@ -249,7 +316,7 @@ Changed
 
 -  Fixes utils.get_next_page generator starting default page
 
-.. _section-10:
+.. _section-12:
 
 `1.3.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.2.0...v1.3.0>`__ - 2021-12-13
 ----------------------------------------------------------------------------------------
@@ -283,7 +350,7 @@ Removed
 -  Removes replication_status module
 -  Removes sync_ise_node module
 
-.. _section-11:
+.. _section-13:
 
 `1.2.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...v1.2.0>`__ - 2021-11-24
 ----------------------------------------------------------------------------------------
@@ -301,7 +368,8 @@ Added
 Changed
 ~~~~~~~
 
--  Fixes paths for Policy endpoints (get_device_admin_profiles, get_network_access_profiles)
+-  Fixes paths for Policy endpoints (get_device_admin_profiles,
+   get_network_access_profiles)
 -  Updates ISE version 3.1.0 as separate version
 
 .. _removed-2:
@@ -311,7 +379,7 @@ Removed
 
 -  Removes link of 3.1.0 modules to 3.0.0 version
 
-.. _section-12:
+.. _section-14:
 
 `1.1.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.1...v1.1.0>`__ - 2021-10-22
 ----------------------------------------------------------------------------------------
@@ -331,7 +399,7 @@ Changed
 -  Default ISE DEFAULT_VERSION to 3.1.0
 -  Update documentation to use ISE v3.1.0
 
-.. _section-13:
+.. _section-15:
 
 `1.0.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...v1.0.1>`__ - 2021-09-14
 ----------------------------------------------------------------------------------------
@@ -343,7 +411,7 @@ Changed
 
 -  Disabled warnings of urllib3 if verify is False
 
-.. _section-14:
+.. _section-16:
 
 `1.0.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v0.5.1...v1.0.0>`__ - 2021-07-21
 ----------------------------------------------------------------------------------------
@@ -374,7 +442,9 @@ Added
    -  SupportBundleStatus.get_support_bundle_status_generator
    -  TacacsCommandSets.get_tacacs_command_sets_generator
 
--  Aliases for functions (eg. ``get_all``, ``get_by_id``, ``get_by_name``, ``update_by_id``, ``delete_by_id``, ``create``, and others)
+-  Aliases for functions (eg. ``get_all``, ``get_by_id``,
+   ``get_by_name``, ``update_by_id``, ``delete_by_id``, ``create``, and
+   others)
 
 .. _changed-10:
 
@@ -390,60 +460,119 @@ Changed
    -  ``identity_store_sequence`` to ``identity_sequence``
    -  ``node`` to ``node_details``
    -  ``endpoint_cert`` to ``endpoint_certificate``
-   -  ``guest_smtp_notifications`` to ``guest_smtp_notification_configuration``
-   -  ``session_service_node`` to ``psn_node_details_with_radius_service``
+   -  ``guest_smtp_notifications`` to
+      ``guest_smtp_notification_configuration``
+   -  ``session_service_node`` to
+      ``psn_node_details_with_radius_service``
    -  ``sg_acl`` to ``security_groups_acls``
    -  ``sg_mapping_group`` to ``ip_to_sgt_mapping_group``
    -  ``sg_mapping`` to ``ip_to_sgt_mapping``
    -  ``sgt_vn_vlan`` to ``security_group_to_virtual_network``
    -  ``sgt`` to ``security_groups``
-   -  ``support_bundle`` to ``support_bundle_download``, ``support_bundle_status`` & ``support_bundle_trigger_configuration``
+   -  ``support_bundle`` to ``support_bundle_download``,
+      ``support_bundle_status`` &
+      ``support_bundle_trigger_configuration``
    -  ``version_`` to ``version_and_patch``
 
 -  Rename function names
 
-   -  (BackupAndRestore) ``schedule_config_backup`` to ``create_scheduled_config_backup``
+   -  (BackupAndRestore) ``schedule_config_backup`` to
+      ``create_scheduled_config_backup``
    -  (Certificates) ``get_csr`` to ``get_csrs``
    -  (Certificates) ``get_csr_generator`` to ``get_csrs_generator``
    -  (Certificates) ``renew_certificate`` to ``renew_certificates``
-   -  (Certificates) ``export_system_cert`` to ``export_system_certificate``
-   -  (Certificates) ``export_trusted_cert`` to ``export_trusted_certificate``
-   -  (DeviceAdministrationAuthenticationRules) ``create_device_admin_authentication_rules`` to ``create_device_admin_authentication_rule``
-   -  (DeviceAdministrationAuthorizationExceptionRules) ``delete_device_admin_policyset_global_exception_by_id`` to ``delete_device_admin_policy_set_global_exception_by_rule_id``
-   -  (DeviceAdministrationAuthorizationExceptionRules) ``get_device_admin_policy_set_global_exception`` to ``get_device_admin_policy_set_global_exception_rules``
-   -  (DeviceAdministrationAuthorizationExceptionRules) ``get_device_admin_policy_set_global_exception_by_id`` to ``get_device_admin_policy_set_global_exception_by_rule_id``
-   -  (DeviceAdministrationAuthorizationExceptionRules) ``update_device_admin_policyset_global_exception_by_id`` to ``update_device_admin_policy_set_global_exception_by_rule_id``
-   -  (DeviceAdministrationDictionaryAttributesList) ``get_device_admin_dictionaries_policyset`` to ``get_device_admin_dictionaries_policy_set``
-   -  (GuestType) ``update_guesttype_by_id`` to ``update_guest_type_by_id``
-   -  (IdentityStoreSequence) ``create_identity_store_sequence`` to ``create_identity_sequence``
-   -  (IdentityStoreSequence) ``delete_identity_store_sequence_by_id`` to ``delete_identity_sequence_by_id``
-   -  (IdentityStoreSequence) ``get_identity_store_sequence`` to ``get_identity_sequence``
-   -  (IdentityStoreSequence) ``get_identity_store_sequence_by_id`` to ``get_identity_sequence_by_id``
-   -  (IdentityStoreSequence) ``get_identity_store_sequence_by_name`` to ``get_identity_sequence_by_name``
-   -  (IdentityStoreSequence) ``get_identity_store_sequence_generator`` to ``get_identity_sequence_generator``
-   -  (IdentityStoreSequence) ``update_identity_store_sequence_by_id`` to ``update_identity_sequence_by_id``
-   -  (InternalUser) ``internaluser_by_id`` to ``get_internal_user_by_id``
-   -  (NetworkAccessAuthorizationGlobalExceptionRules) ``create_network_access_global_exception_rule`` to ``create_network_access_policy_set_global_exception_rule``
-   -  (NetworkAccessAuthorizationGlobalExceptionRules) ``delete_network_access_global_exception_rule_by_id`` to ``delete_network_access_policy_set_global_exception_rule_by_id``
-   -  (NetworkAccessAuthorizationGlobalExceptionRules) ``get_network_access_global_exception_rule_by_id`` to ``get_network_access_policy_set_global_exception_rule_by_id``
-   -  (NetworkAccessAuthorizationGlobalExceptionRules) ``get_network_access_global_exception_rules`` to ``get_network_access_policy_set_global_exception_rules``
-   -  (NetworkAccessAuthorizationGlobalExceptionRules) ``update_network_access_global_exception_rule_by_id`` to ``update_network_access_policy_set_global_exception_rule_by_id``
-   -  (DeviceAdministrationConditions) ``get_device_admin_conditions_for_authentication_rule`` to ``get_device_admin_conditions_for_authentication_rules``
-   -  (DeviceAdministrationConditions) ``get_device_admin_conditions_for_authorization_rule`` to ``get_device_admin_conditions_for_authorization_rules``
-   -  (DeviceAdministrationConditions) ``get_device_admin_conditions_for_policy_set`` to ``get_device_admin_conditions_for_policy_sets``
-   -  (NetworkAccessConditions) ``get_network_access_conditions_for_authorization_rule`` to ``get_network_access_conditions_for_authorization_rules``
-   -  (NetworkAccessConditions) ``get_network_access_conditions_for_policy_set`` to ``get_network_access_conditions_for_policy_sets``
-   -  (NetworkAccessDictionary) ``delete_network_access_dictionaries_by_name`` to ``delete_network_access_dictionary_by_name``
-   -  (NetworkAccessDictionary) ``update_network_access_dictionaries_by_name`` to ``update_network_access_dictionary_by_name``
-   -  (NetworkAccessDictionary) ``create_network_access_dictionary_attribute_for_dictionary`` to ``create_network_access_dictionary_attribute``
-   -  (NetworkAccessDictionaryAttributesList) ``get_network_access_dictionaries_policyset`` to ``get_network_access_dictionaries_policy_set``
+   -  (Certificates) ``export_system_cert`` to
+      ``export_system_certificate``
+   -  (Certificates) ``export_trusted_cert`` to
+      ``export_trusted_certificate``
+   -  (DeviceAdministrationAuthenticationRules)
+      ``create_device_admin_authentication_rules`` to
+      ``create_device_admin_authentication_rule``
+   -  (DeviceAdministrationAuthorizationExceptionRules)
+      ``delete_device_admin_policyset_global_exception_by_id`` to
+      ``delete_device_admin_policy_set_global_exception_by_rule_id``
+   -  (DeviceAdministrationAuthorizationExceptionRules)
+      ``get_device_admin_policy_set_global_exception`` to
+      ``get_device_admin_policy_set_global_exception_rules``
+   -  (DeviceAdministrationAuthorizationExceptionRules)
+      ``get_device_admin_policy_set_global_exception_by_id`` to
+      ``get_device_admin_policy_set_global_exception_by_rule_id``
+   -  (DeviceAdministrationAuthorizationExceptionRules)
+      ``update_device_admin_policyset_global_exception_by_id`` to
+      ``update_device_admin_policy_set_global_exception_by_rule_id``
+   -  (DeviceAdministrationDictionaryAttributesList)
+      ``get_device_admin_dictionaries_policyset`` to
+      ``get_device_admin_dictionaries_policy_set``
+   -  (GuestType) ``update_guesttype_by_id`` to
+      ``update_guest_type_by_id``
+   -  (IdentityStoreSequence) ``create_identity_store_sequence`` to
+      ``create_identity_sequence``
+   -  (IdentityStoreSequence) ``delete_identity_store_sequence_by_id``
+      to ``delete_identity_sequence_by_id``
+   -  (IdentityStoreSequence) ``get_identity_store_sequence`` to
+      ``get_identity_sequence``
+   -  (IdentityStoreSequence) ``get_identity_store_sequence_by_id`` to
+      ``get_identity_sequence_by_id``
+   -  (IdentityStoreSequence) ``get_identity_store_sequence_by_name`` to
+      ``get_identity_sequence_by_name``
+   -  (IdentityStoreSequence) ``get_identity_store_sequence_generator``
+      to ``get_identity_sequence_generator``
+   -  (IdentityStoreSequence) ``update_identity_store_sequence_by_id``
+      to ``update_identity_sequence_by_id``
+   -  (InternalUser) ``internaluser_by_id`` to
+      ``get_internal_user_by_id``
+   -  (NetworkAccessAuthorizationGlobalExceptionRules)
+      ``create_network_access_global_exception_rule`` to
+      ``create_network_access_policy_set_global_exception_rule``
+   -  (NetworkAccessAuthorizationGlobalExceptionRules)
+      ``delete_network_access_global_exception_rule_by_id`` to
+      ``delete_network_access_policy_set_global_exception_rule_by_id``
+   -  (NetworkAccessAuthorizationGlobalExceptionRules)
+      ``get_network_access_global_exception_rule_by_id`` to
+      ``get_network_access_policy_set_global_exception_rule_by_id``
+   -  (NetworkAccessAuthorizationGlobalExceptionRules)
+      ``get_network_access_global_exception_rules`` to
+      ``get_network_access_policy_set_global_exception_rules``
+   -  (NetworkAccessAuthorizationGlobalExceptionRules)
+      ``update_network_access_global_exception_rule_by_id`` to
+      ``update_network_access_policy_set_global_exception_rule_by_id``
+   -  (DeviceAdministrationConditions)
+      ``get_device_admin_conditions_for_authentication_rule`` to
+      ``get_device_admin_conditions_for_authentication_rules``
+   -  (DeviceAdministrationConditions)
+      ``get_device_admin_conditions_for_authorization_rule`` to
+      ``get_device_admin_conditions_for_authorization_rules``
+   -  (DeviceAdministrationConditions)
+      ``get_device_admin_conditions_for_policy_set`` to
+      ``get_device_admin_conditions_for_policy_sets``
+   -  (NetworkAccessConditions)
+      ``get_network_access_conditions_for_authorization_rule`` to
+      ``get_network_access_conditions_for_authorization_rules``
+   -  (NetworkAccessConditions)
+      ``get_network_access_conditions_for_policy_set`` to
+      ``get_network_access_conditions_for_policy_sets``
+   -  (NetworkAccessDictionary)
+      ``delete_network_access_dictionaries_by_name`` to
+      ``delete_network_access_dictionary_by_name``
+   -  (NetworkAccessDictionary)
+      ``update_network_access_dictionaries_by_name`` to
+      ``update_network_access_dictionary_by_name``
+   -  (NetworkAccessDictionary)
+      ``create_network_access_dictionary_attribute_for_dictionary`` to
+      ``create_network_access_dictionary_attribute``
+   -  (NetworkAccessDictionaryAttributesList)
+      ``get_network_access_dictionaries_policyset`` to
+      ``get_network_access_dictionaries_policy_set``
    -  (Node) ``get_node_by_id`` to ``get_node_detail_by_id``
    -  (Node) ``get_node_by_name`` to ``get_node_detail_by_name``
    -  (Node) ``get_nodes`` to ``get_node_details``
-   -  (PxGridSettings) ``autoapprove_px_grid_node`` to ``autoapprove_px_grid_settings``
-   -  (Repository) ``delete_repository_by_name`` to ``delete_repository``
+   -  (PxGridSettings) ``autoapprove_px_grid_node`` to
+      ``autoapprove_px_grid_settings``
+   -  (Repository) ``delete_repository_by_name`` to
+      ``delete_repository``
    -  (Repository) ``get_repository_by_name`` to ``get_repository``
-   -  (Repository) ``update_repository_by_name`` to ``update_repository``
+   -  (Repository) ``update_repository_by_name`` to
+      ``update_repository``
 
 .. _removed-3:
 
