@@ -859,16 +859,16 @@ class Misc(object):
 
     def get_authentication_status_by_mac(self,
                                          mac,
-                                         rec_ord_s,
-                                         sec_ond_s,
+                                         records,
+                                         seconds,
                                          headers=None,
                                          **query_parameters):
         """AuthenticationStatus by MAC.
 
         Args:
             mac(basestring): MAC path parameter.
-            sec_ond_s(basestring): SECONDS path parameter.
-            rec_ord_s(basestring): RECORDS path parameter.
+            seconds(basestring): SECONDS path parameter.
+            records(basestring): RECORDS path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -903,9 +903,9 @@ class Misc(object):
             with_custom_headers = True
         check_type(mac, basestring,
                    may_be_none=False)
-        check_type(sec_ond_s, basestring,
+        check_type(seconds, basestring,
                    may_be_none=False)
-        check_type(rec_ord_s, basestring,
+        check_type(records, basestring,
                    may_be_none=False)
 
         _params = {
@@ -915,8 +915,8 @@ class Misc(object):
 
         path_params = {
             'MAC': mac,
-            'SECONDS': sec_ond_s,
-            'RECORDS': rec_ord_s,
+            'SECONDS': seconds,
+            'RECORDS': records,
         }
 
         e_url = ('/admin/API/mnt/AuthStatus/MACAddress/{MAC}/{SECONDS}/{RE'
@@ -931,17 +931,17 @@ class Misc(object):
         return self._object_factory('bpm_b26746235997bc32ace7d67d6987_v3_1_0', _api_response)
 
     def session_reauthentication_by_mac(self,
-                                        end_poi_ntm_ac,
-                                        psn_nam_e,
-                                        rea_uth_typ_e,
+                                        endpoint_mac,
+                                        psn_name,
+                                        reauth_type,
                                         headers=None,
                                         **query_parameters):
         """Session Reauthentication by MAC.
 
         Args:
-            psn_nam_e(basestring): PSN_NAME path parameter.
-            end_poi_ntm_ac(basestring): ENDPOINT_MAC path parameter.
-            rea_uth_typ_e(basestring): REAUTH_TYPE path parameter.
+            psn_name(basestring): PSN_NAME path parameter.
+            endpoint_mac(basestring): ENDPOINT_MAC path parameter.
+            reauth_type(basestring): REAUTH_TYPE path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -974,11 +974,11 @@ class Misc(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(psn_nam_e, basestring,
+        check_type(psn_name, basestring,
                    may_be_none=False)
-        check_type(end_poi_ntm_ac, basestring,
+        check_type(endpoint_mac, basestring,
                    may_be_none=False)
-        check_type(rea_uth_typ_e, basestring,
+        check_type(reauth_type, basestring,
                    may_be_none=False)
 
         _params = {
@@ -987,9 +987,9 @@ class Misc(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'PSN_NAME': psn_nam_e,
-            'ENDPOINT_MAC': end_poi_ntm_ac,
-            'REAUTH_TYPE': rea_uth_typ_e,
+            'PSN_NAME': psn_name,
+            'ENDPOINT_MAC': endpoint_mac,
+            'REAUTH_TYPE': reauth_type,
         }
 
         e_url = ('/admin/API/mnt/CoA/Reauth/{PSN_NAME}/{ENDPOINT_MAC}/{REA'
@@ -1004,20 +1004,20 @@ class Misc(object):
         return self._object_factory('bpm_f73477346fb5e7097d915c7f0a99659_v3_1_0', _api_response)
 
     def session_disconnect(self,
-                           dis_con_nec_tty_pe,
-                           end_poi_nti_p,
+                           disconnect_type ,
+                           endpoint_ip,
                            mac,
                            nas_ipv4,
-                           psn_nam_e,
+                           psn_name,
                            headers=None,
                            **query_parameters):
         """Session Disconnect.
 
         Args:
-            end_poi_nti_p(basestring): ENDPOINT_IP path parameter.
-            psn_nam_e(basestring): PSN_NAME path parameter.
+            endpoint_ip(basestring): ENDPOINT_IP path parameter.
+            psn_name(basestring): PSN_NAME path parameter.
             mac(basestring): MAC path parameter.
-            dis_con_nec_tty_pe(basestring): DISCONNECT_TYPE path
+            disconnect_type (basestring): DISCONNECT_TYPE path
                 parameter.
             nas_ipv4(basestring): NAS_IPV4 path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1052,13 +1052,13 @@ class Misc(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(end_poi_nti_p, basestring,
+        check_type(endpoint_ip, basestring,
                    may_be_none=False)
-        check_type(psn_nam_e, basestring,
+        check_type(psn_name, basestring,
                    may_be_none=False)
         check_type(mac, basestring,
                    may_be_none=False)
-        check_type(dis_con_nec_tty_pe, basestring,
+        check_type(disconnect_type , basestring,
                    may_be_none=False)
         check_type(nas_ipv4, basestring,
                    may_be_none=False)
@@ -1069,14 +1069,14 @@ class Misc(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'ENDPOINT_IP': end_poi_nti_p,
-            'PSN_NAME': psn_nam_e,
+            'ENDPOINT_IP': endpoint_ip,
+            'PSN_NAME': psn_name,
             'MAC': mac,
-            'DISCONNECT_TYPE': dis_con_nec_tty_pe,
+            'DISCONNECT_TYPE': disconnect_type ,
             'NAS_IPV4': nas_ipv4,
         }
 
-        e_url = ('/admin/API/mnt/CoA/Disconnect>/{PSN_NAME}/{MAC}/{DISCONN'
+        e_url = ('/admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONN'
                  + 'ECT_TYPE}/{NAS_IPV4}/{{ENDPOINT_IP}}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:

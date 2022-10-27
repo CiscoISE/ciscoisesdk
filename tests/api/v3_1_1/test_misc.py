@@ -708,8 +708,8 @@ def is_valid_get_authentication_status_by_mac(json_schema_validate, obj):
 def get_authentication_status_by_mac(api):
     endpoint_result = api.misc.get_authentication_status_by_mac(
         mac='string',
-        rec_ord_s='string',
-        sec_ond_s='string'
+        sseconds='string',
+        seconds='string'
     )
     return endpoint_result
 
@@ -730,8 +730,8 @@ def test_get_authentication_status_by_mac(api, validator):
 def get_authentication_status_by_mac_default(api):
     endpoint_result = api.misc.get_authentication_status_by_mac(
         mac='string',
-        rec_ord_s='string',
-        sec_ond_s='string'
+        sseconds='string',
+        seconds='string'
     )
     return endpoint_result
 
@@ -762,9 +762,9 @@ def is_valid_session_reauthentication_by_mac(json_schema_validate, obj):
 
 def session_reauthentication_by_mac(api):
     endpoint_result = api.misc.session_reauthentication_by_mac(
-        end_poi_ntm_ac='string',
-        psn_nam_e='string',
-        rea_uth_typ_e='string'
+        endpoint_mac='string',
+        psn_name='string',
+        reauth_type='string'
     )
     return endpoint_result
 
@@ -784,9 +784,9 @@ def test_session_reauthentication_by_mac(api, validator):
 
 def session_reauthentication_by_mac_default(api):
     endpoint_result = api.misc.session_reauthentication_by_mac(
-        end_poi_ntm_ac='string',
-        psn_nam_e='string',
-        rea_uth_typ_e='string'
+        endpoint_mac='string',
+        psn_name='string',
+        reauth_type='string'
     )
     return endpoint_result
 
@@ -817,11 +817,11 @@ def is_valid_session_disconnect(json_schema_validate, obj):
 
 def session_disconnect(api):
     endpoint_result = api.misc.session_disconnect(
-        dis_con_nec_tty_pe='string',
-        end_poi_nti_p='string',
+        disconnect_type='string',
+        endpoint_ip='string',
         mac='string',
         nas_ipv4='string',
-        psn_nam_e='string'
+        psn_name='string'
     )
     return endpoint_result
 
@@ -841,11 +841,11 @@ def test_session_disconnect(api, validator):
 
 def session_disconnect_default(api):
     endpoint_result = api.misc.session_disconnect(
-        dis_con_nec_tty_pe='string',
-        end_poi_nti_p='string',
+        disconnect_type='string',
+        endpoint_ip='string',
         mac='string',
         nas_ipv4='string',
-        psn_nam_e='string'
+        psn_name='string'
     )
     return endpoint_result
 
