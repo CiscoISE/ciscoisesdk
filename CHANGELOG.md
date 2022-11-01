@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.7] - 2022-01-11
+
+### Fixed
+- The following url have been repaired in v3_1_0.mics.session_disconnect, v3_1_1.mics.session_disconnect and v3_1_patch_1.mics.session_disconnect
+  + From /admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONNECT_TYPE}/{NAS_IPV4}/{{ENDPOINT_IP}}
+    to /admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONNECT_TYPE}/{NAS_IPV4}/{ENDPOINT_IP}
+
 ## [2.0.6] - 2022-27-10
 
 ### Fixed
@@ -381,4 +388,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.0.4]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.3...v2.0.4
 [2.0.5]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.4...v2.0.5
 [2.0.6]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.5...v2.0.6
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.6...develop
+[2.0.7]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.6...v2.0.7
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.7...develop
