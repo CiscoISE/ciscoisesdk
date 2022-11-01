@@ -1077,7 +1077,7 @@ class Misc(object):
         }
 
         e_url = ('/admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONN'
-                 + 'ECT_TYPE}/{NAS_IPV4}/{{ENDPOINT_IP}}')
+                 + 'ECT_TYPE}/{NAS_IPV4}/{ENDPOINT_IP}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
