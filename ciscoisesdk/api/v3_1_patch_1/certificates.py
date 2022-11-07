@@ -2479,12 +2479,20 @@ class Certificates(object):
     def delete_system_certificate_by_id(self,
                                         host_name,
                                         id,
+                                        allow_wildcard_delete=None,
                                         headers=None,
+                                        payload=None,
+                                        active_validation=True,
                                         **query_parameters):
         """This API deletes a System Certificate of a particular node based
         on given HostName and ID.
 
         Args:
+            allow_wildcard_delete(boolean): If the given certificate
+                to be deleted is a wildcard certificate,
+                corresponding certificate gets deleted
+                on rest of the nodes in the deployment
+                as well., property of the request body.
             host_name(basestring): hostName path parameter. Name of
                 the host from which System Certificate
                 needs to be deleted.
@@ -2492,6 +2500,10 @@ class Certificates(object):
                 Certificate to be deleted.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -2520,6 +2532,11 @@ class Certificates(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, basestring)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
         check_type(host_name, basestring,
                    may_be_none=False)
         check_type(id, basestring,
@@ -2534,14 +2551,28 @@ class Certificates(object):
             'hostName': host_name,
             'id': id,
         }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _payload = {
+                'allowWildcardDelete':
+                    allow_wildcard_delete,
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_dc2eec65ad680a3c5de47cd87c8_v3_1_patch_1')\
+                .validate(_payload)
 
         e_url = ('/api/v1/certs/system-certificate/{hostName}/{id}')
         endpoint_full_url = apply_path_params(e_url, path_params)
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
+                                                 headers=_headers, **request_params)
         else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 **request_params)
 
         return self._object_factory('bpm_dc2eec65ad680a3c5de47cd87c8_v3_1_patch_1', _api_response)
 
