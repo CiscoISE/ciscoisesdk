@@ -797,6 +797,9 @@ from .validators.v3_1_1.jsd_b94d7d3f0ed5d0b938151ae2cae9fa4 import (
 from .validators.v3_1_1.jsd_b994e6c8b8d53f29230686824c9fafa import (
     JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa as JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa_v3_1_1
 )
+from .validators.v3_1_1.jsd_dc2eec65ad680a3c5de47cd87c8 import (
+    JSONSchemaValidatorDc2Eec65Ad680A3C5De47Cd87C8 as JSONSchemaValidatorDc2Eec65Ad680A3C5De47Cd87C8_v3_1_1
+)
 from .validators.v3_1_1.jsd_d8c7ba0cb8f56d99135e16d2d973d11 import (
     JSONSchemaValidatorD8C7Ba0Cb8F56D99135E16D2D973D11 as JSONSchemaValidatorD8C7Ba0Cb8F56D99135E16D2D973D11_v3_1_1
 )
@@ -1450,6 +1453,9 @@ from .validators.v3_1_patch_1.jsd_b94d7d3f0ed5d0b938151ae2cae9fa4 import (
 )
 from .validators.v3_1_patch_1.jsd_b994e6c8b8d53f29230686824c9fafa import (
     JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa as JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa_v3_1_patch_1
+)
+from .validators.v3_1_patch_1.jsd_dc2eec65ad680a3c5de47cd87c8 import (
+    JSONSchemaValidatorDc2Eec65Ad680A3C5De47Cd87C8 as JSONSchemaValidatorDc2Eec65Ad680A3C5De47Cd87C8_v3_1_patch_1
 )
 from .validators.v3_1_patch_1.jsd_d8c7ba0cb8f56d99135e16d2d973d11 import (
     JSONSchemaValidatorD8C7Ba0Cb8F56D99135E16D2D973D11 as JSONSchemaValidatorD8C7Ba0Cb8F56D99135E16D2D973D11_v3_1_patch_1
@@ -2498,6 +2504,8 @@ class SchemaValidator:
                 JSONSchemaValidatorB94D7D3F0Ed5D0B938151Ae2Cae9Fa4_v3_1_1()
             self.json_schema_validators['jsd_b994e6c8b8d53f29230686824c9fafa_v3_1_1'] =\
                 JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa_v3_1_1()
+            self.json_schema_validators['jsd_dc2eec65ad680a3c5de47cd87c8_v3_1_1'] =\
+                JSONSchemaValidatorDc2Eec65Ad680A3C5De47Cd87C8_v3_1_1()
             self.json_schema_validators['jsd_d8c7ba0cb8f56d99135e16d2d973d11_v3_1_1'] =\
                 JSONSchemaValidatorD8C7Ba0Cb8F56D99135E16D2D973D11_v3_1_1()
             self.json_schema_validators['jsd_ea2c4586b845888b2a9375126f70de2_v3_1_1'] =\
@@ -2935,6 +2943,8 @@ class SchemaValidator:
                 JSONSchemaValidatorB94D7D3F0Ed5D0B938151Ae2Cae9Fa4_v3_1_patch_1()
             self.json_schema_validators['jsd_b994e6c8b8d53f29230686824c9fafa_v3_1_patch_1'] =\
                 JSONSchemaValidatorB994E6C8B8D53F29230686824C9Fafa_v3_1_patch_1()
+            self.json_schema_validators['jsd_dc2eec65ad680a3c5de47cd87c8_v3_1_patch_1'] =\
+                JSONSchemaValidatorDc2Eec65Ad680A3C5De47Cd87C8_v3_1_patch_1()
             self.json_schema_validators['jsd_d8c7ba0cb8f56d99135e16d2d973d11_v3_1_patch_1'] =\
                 JSONSchemaValidatorD8C7Ba0Cb8F56D99135E16D2D973D11_v3_1_patch_1()
             self.json_schema_validators['jsd_ea2c4586b845888b2a9375126f70de2_v3_1_patch_1'] =\
