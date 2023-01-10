@@ -122,6 +122,23 @@ Installing and upgrading ciscoisesdk is easy:
     $ pip install ciscoisesdk --upgrade
 
 
+Compatibility matrix
+-------------
+The following table shows the supported versions.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Cisco ISE version
+     - Python "ciscoisesdk" version
+   * - 3.1.0
+     - 1.2.0
+   * - 3.1_Patch_1
+     - 2.0.8
+
+If your SDK is older please consider updating it first.
+
 Documentation
 -------------
 
