@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.0.9] - 2023-19-04
+
+### Changed
+- Updating request-toolbelt from 0.9.1 to 0.10.1
 
 ## [2.0.8] - 2022-07-11
 
