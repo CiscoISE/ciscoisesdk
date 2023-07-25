@@ -1011,6 +1011,7 @@ class RestidStore(object):
     def create_rest_id_store(self,
                              description=None,
                              ers_rest_idstore_attributes=None,
+                             ers_rest_idstore_user_attributes=None,
                              name=None,
                              headers=None,
                              payload=None,
@@ -1024,6 +1025,9 @@ class RestidStore(object):
             ers_rest_idstore_attributes(object):
                 ersRestIDStoreAttributes, property of
                 the request body.
+            ers_rest_idstore_user_attributes(object):
+                ersRestIDStoreUserAttributes, property
+                of the request body.
             name(string): name, property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1093,6 +1097,8 @@ class RestidStore(object):
                     description,
                 'ersRestIDStoreAttributes':
                     ers_rest_idstore_attributes,
+                'ersRestIDStoreUserAttributes':
+                    ers_rest_idstore_user_attributes,
             }
             _payload = {
                 'ERSRestIDStore': dict_from_items_with_values(_tmp_payload)
@@ -1120,6 +1126,7 @@ class RestidStore(object):
     def create(self,
                description=None,
                ers_rest_idstore_attributes=None,
+               ers_rest_idstore_user_attributes=None,
                name=None,
                headers=None,
                payload=None,
@@ -1132,6 +1139,7 @@ class RestidStore(object):
         return self.create_rest_id_store(
             description=description,
             ers_rest_idstore_attributes=ers_rest_idstore_attributes,
+            ers_rest_idstore_user_attributes=ers_rest_idstore_user_attributes,
             name=name,
             payload=payload,
             active_validation=active_validation,
