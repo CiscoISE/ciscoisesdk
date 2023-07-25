@@ -74,6 +74,17 @@ class JSONSchemaValidatorC23243C950F29B51F502C03D7058(object):
                 },
                 "type": "object"
                 },
+                "ersRestIDStoreUserAttributes": {
+                "properties": {
+                "attributes": {
+                "items": {
+                "type": "string"
+                },
+                "type": "array"
+                }
+                },
+                "type": "object"
+                },
                 "name": {
                 "type": "string"
                 }
