@@ -16,7 +16,7 @@ python = "^3.6"
 requests = "^2.25.1"
 fastjsonschema = "^2.14.5"
 future = "^0.18.2"
-requests-toolbelt = "^0.10.1"
+requests-toolbelt = "^1.0.0"
 xmltodict = "0.12.0"
 
 [tool.poetry.dev-dependencies]
