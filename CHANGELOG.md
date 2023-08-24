@@ -5,7 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.0.11] - 2023-24-08
+
+### Changed
+- Update requirements
+
 ## [2.0.10] - 2023-25-07
+
+### Added
 - Adding new param `ersRestIDStoreUserAttributes` on restid_store create function.
 
 ## [2.0.9] - 2023-19-04
@@ -405,4 +412,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.0.7]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.6...v2.0.7
 [2.0.8]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.7...v2.0.8
 [2.0.9]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.8...v2.0.9
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.09...develop
+[2.0.10]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.9...v2.0.10
+[2.0.11]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.10...v2.0.11
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.11...develop
