@@ -73,7 +73,7 @@ Identity Services Engine for Developers
 Leveraging the Identity Services Engine APIs and developing on top of the Identity Services Engine cloud is easy.  Signup for a `free account`_ and then head over to the `Identity Services Engine for Developers`_ website to learn more.
 
 
-*Copyright (c) 2021 Cisco and/or its affiliates.*
+*Copyright (c) 2023 Cisco and/or its affiliates.*
 
 
 .. _Identity Services Engine: https://www.cisco.com/c/en/us/products/security/identity-services-engine/index.html

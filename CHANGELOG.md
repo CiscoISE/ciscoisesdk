@@ -5,36 +5,40 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## [2.0.11] - 2023-24-08
+
+## [2.0.12] - 2023-08-25
+- Update requirements and readthedocs settings
+
+## [2.0.11] - 2023-08-24
 
 ### Changed
 - Update requirements
 
-## [2.0.10] - 2023-25-07
+## [2.0.10] - 2023-07-25
 
 ### Added
 - Adding new param `ersRestIDStoreUserAttributes` on restid_store create function.
 
-## [2.0.9] - 2023-19-04
+## [2.0.9] - 2023-04-19
 
 ### Changed
 - Updating request-toolbelt from 0.9.1 to 0.10.1
 
-## [2.0.8] - 2022-07-11
+## [2.0.8] - 2022-11-07
 
 ### Fixed
 - Added a missing parameter allow_wildcard_delete
   + ciscoisesdk.api.v3_1_1.certificates.delete_system_certificate_by_id
   + ciscoisesdk.api.v3_1_patch_1.certificates.delete_system_certificate_by_id
 
-## [2.0.7] - 2022-01-11
+## [2.0.7] - 2022-11-01
 
 ### Fixed
 - The following url have been repaired in v3_1_0.mics.session_disconnect, v3_1_1.mics.session_disconnect and v3_1_patch_1.mics.session_disconnect
   + From /admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONNECT_TYPE}/{NAS_IPV4}/{{ENDPOINT_IP}}
     to /admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONNECT_TYPE}/{NAS_IPV4}/{ENDPOINT_IP}
 
-## [2.0.6] - 2022-27-10
+## [2.0.6] - 2022-10-27
 
 ### Fixed
 
@@ -50,7 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   + From /admin/API/mnt/CoA/Disconnect>/{PSN_NAME}/{MAC}/{DISCONNECT_TYPE}/{NAS_IPV4}/{{ENDPOINT_IP}}
     to /admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONNECT_TYPE}/{NAS_IPV4}/{{ENDPOINT_IP}}
 
-## [2.0.5] - 2022-12-10
+## [2.0.5] - 2022-10-13
 
 ### Fixed
 
@@ -414,4 +418,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.0.9]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.8...v2.0.9
 [2.0.10]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.9...v2.0.10
 [2.0.11]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.10...v2.0.11
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.11...develop
+[2.0.12]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.11...v2.0.12
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.12...develop

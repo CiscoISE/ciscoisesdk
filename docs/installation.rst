@@ -58,7 +58,7 @@ command:
     $ python setup.py install
 
 
-*Copyright (c) 2021 Cisco and/or its affiliates.*
+*Copyright (c) 2023 Cisco and/or its affiliates.*
 
 
 .. _Python Package Index (PyPI): https://pypi.python.org/pypi/ciscoisesdk
