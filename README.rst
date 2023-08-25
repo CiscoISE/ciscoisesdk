@@ -123,7 +123,7 @@ Installing and upgrading ciscoisesdk is easy:
 
 
 Compatibility matrix
--------------
+--------------------
 The following table shows the supported versions.
 
 .. list-table::
