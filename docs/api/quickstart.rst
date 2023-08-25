@@ -794,6 +794,6 @@ Check out the `Custom Caller`_ documentation to begin using it.
 .. _Custom Caller: https://ciscoisesdk.readthedocs.io/en/latest/api/api.html#custom-caller
 
 
-*Copyright (c) 2021 Cisco and/or its affiliates.*
+*Copyright (c) 2023 Cisco and/or its affiliates.*
 
 .. _PEP 20: https://www.python.org/dev/peps/pep-0020/
