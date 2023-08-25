@@ -43,11 +43,11 @@ PACKAGE_CLASSIFIERS = [
 ]
 
 INSTALLATION_REQUIREMENTS = [
-    'future',
-    'requests>=2.4.2',
-    'xmltodict>=0.12.0',
-    'fastjsonschema>=2.12',
-    'requests-toolbelt>=0.9.1',
+    'future>=0.18.3',
+    'requests>=2.27.1,<=2.28',
+    'xmltodict==0.12.0',
+    'fastjsonschema>=2.16.2',
+    'requests-toolbelt>=1.0.0',
 ]
 
 
