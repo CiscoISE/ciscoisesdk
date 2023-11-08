@@ -31,6 +31,7 @@ pytest_plugins = [
     'tests.api.v3_1_0',
     'tests.api.v3_1_1',
     'tests.api.v3_1_patch_1',
+    'tests.api.v3_2_beta',
 ]
 
 
@@ -90,10 +91,16 @@ def pytest_configure(config):
         "markers", "clear_threats_and_vulnerabilities: clear_threats_and_vulnerabilities wrapper test"
     )
     config.addinivalue_line(
+        "markers", "configuration: configuration wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "consumer: consumer wrapper test"
     )
     config.addinivalue_line(
         "markers", "custom_caller: custom_caller wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "dataconnect_services: dataconnect_services wrapper test"
     )
     config.addinivalue_line(
         "markers", "device_administration_authentication_rules: device_administration_authentication_rules wrapper test"
@@ -136,6 +143,9 @@ def pytest_configure(config):
     )
     config.addinivalue_line(
         "markers", "downloadable_acl: downloadable_acl wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "edda: edda wrapper test"
     )
     config.addinivalue_line(
         "markers", "egress_matrix_cell: egress_matrix_cell wrapper test"
@@ -346,6 +356,9 @@ def pytest_configure(config):
     )
     config.addinivalue_line(
         "markers", "sponsored_guest_portal: sponsored_guest_portal wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "subscriber: subscriber wrapper test"
     )
     config.addinivalue_line(
         "markers", "support_bundle_download: support_bundle_download wrapper test"

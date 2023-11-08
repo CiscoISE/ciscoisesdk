@@ -28,6 +28,6 @@ __description__ = 'Community-developed Python SDK for the Identity Services Engi
 __url__ = 'https://github.com/CiscoISE/ciscoisesdk'
 __download_url__ = 'https://pypi.python.org/pypi/ciscoisesdk'
 __author__ = 'Jose Bogarín'
-__author_email__ = 'jbogarin@altus.cr'
+__author_email__ = 'jbogarin@cloverhound.com'
 __copyright__ = "Copyright (c) 2021 Cisco Systems, Inc."
 __license__ = "MIT"

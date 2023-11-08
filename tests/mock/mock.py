@@ -5,6 +5,7 @@ from threading import Thread
 from tests.mock.server.v3_1_0 import MockServerRequestHandler_v3_1_0
 from tests.mock.server.v3_1_1 import MockServerRequestHandler_v3_1_1
 from tests.mock.server.v3_1_patch_1 import MockServerRequestHandler_v3_1_patch_1
+from tests.mock.server.v3_2_beta import MockServerRequestHandler_v3_2_beta
 
 HOST = 'localhost'
 
@@ -31,6 +32,8 @@ def start_mock_server(port, version):
         mockServerHandler = MockServerRequestHandler_v3_1_1
     if version == '3.1_Patch_1':
         mockServerHandler = MockServerRequestHandler_v3_1_patch_1
+    if version == '3.2_beta':
+        mockServerHandler = MockServerRequestHandler_v3_2_beta
 
     if mockServerHandler is None:
         raise Exception('Could not create MockServer for version {}'.format(version))

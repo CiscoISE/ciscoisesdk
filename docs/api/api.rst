@@ -41,6 +41,13 @@ v3.1_Patch_1 summary
 
 .. include:: api_structure_table_v3_1_patch_1.rst
 
+.. _v3_2_beta summary:
+
+v3.2_beta summary
+-----------------
+
+.. include:: api_structure_table_v3_2_beta.rst
+
 
 IdentityServicesEngineAPI Class
 ===============================
@@ -3344,6 +3351,1142 @@ vn_vlan_mapping
 ---------------
 
 .. autoclass:: ciscoisesdk.api.v3_1_patch_1.vn_vlan_mapping.VnVlanMapping()
+
+
+IdentityServicesEngineAPI v3.2_beta
+===================================
+
+.. _aci_bindings_3_2_beta:
+
+aci_bindings
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.aci_bindings.AciBindings()
+
+
+
+.. _aci_settings_3_2_beta:
+
+aci_settings
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.aci_settings.AciSettings()
+
+
+
+.. _anc_endpoint_3_2_beta:
+
+anc_endpoint
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.anc_endpoint.AncEndpoint()
+
+
+
+.. _active_directory_3_2_beta:
+
+active_directory
+----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.active_directory.ActiveDirectory()
+
+
+
+.. _admin_user_3_2_beta:
+
+admin_user
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.admin_user.AdminUser()
+
+
+
+.. _allowed_protocols_3_2_beta:
+
+allowed_protocols
+-----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.allowed_protocols.AllowedProtocols()
+
+
+
+.. _anc_policy_3_2_beta:
+
+anc_policy
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.anc_policy.AncPolicy()
+
+
+
+.. _authorization_profile_3_2_beta:
+
+authorization_profile
+---------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.authorization_profile.AuthorizationProfile()
+
+
+
+.. _byod_portal_3_2_beta:
+
+byod_portal
+-----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.byod_portal.ByodPortal()
+
+
+
+.. _backup_and_restore_3_2_beta:
+
+backup_and_restore
+------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.backup_and_restore.BackupAndRestore()
+
+
+
+.. _certificate_profile_3_2_beta:
+
+certificate_profile
+-------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.certificate_profile.CertificateProfile()
+
+
+
+.. _certificate_template_3_2_beta:
+
+certificate_template
+--------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.certificate_template.CertificateTemplate()
+
+
+
+.. _certificates_3_2_beta:
+
+certificates
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.certificates.Certificates()
+
+
+
+.. _clear_threats_and_vulnerabilities_3_2_beta:
+
+clear_threats_and_vulnerabilities
+---------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.clear_threats_and_vulnerabilities.ClearThreatsAndVulnerabilities()
+
+
+
+.. _configuration_3_2_beta:
+
+configuration
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.configuration.Configuration()
+
+
+
+.. _consumer_3_2_beta:
+
+consumer
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.consumer.Consumer()
+
+
+
+.. _dataconnect_services_3_2_beta:
+
+dataconnect_services
+--------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.dataconnect_services.DataconnectServices()
+
+
+
+.. _device_administration_authentication_rules_3_2_beta:
+
+device_administration_authentication_rules
+------------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_authentication_rules.DeviceAdministrationAuthenticationRules()
+
+
+
+.. _device_administration_authorization_exception_rules_3_2_beta:
+
+device_administration_authorization_exception_rules
+---------------------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_authorization_exception_rules.DeviceAdministrationAuthorizationExceptionRules()
+
+
+
+.. _device_administration_authorization_global_exception_rules_3_2_beta:
+
+device_administration_authorization_global_exception_rules
+----------------------------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_authorization_global_exception_rules.DeviceAdministrationAuthorizationGlobalExceptionRules()
+
+
+
+.. _device_administration_authorization_rules_3_2_beta:
+
+device_administration_authorization_rules
+-----------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_authorization_rules.DeviceAdministrationAuthorizationRules()
+
+
+
+.. _device_administration_command_set_3_2_beta:
+
+device_administration_command_set
+---------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_command_set.DeviceAdministrationCommandSet()
+
+
+
+.. _device_administration_conditions_3_2_beta:
+
+device_administration_conditions
+--------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_conditions.DeviceAdministrationConditions()
+
+
+
+.. _device_administration_dictionary_attributes_list_3_2_beta:
+
+device_administration_dictionary_attributes_list
+------------------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_dictionary_attributes_list.DeviceAdministrationDictionaryAttributesList()
+
+
+
+.. _device_administration_identity_stores_3_2_beta:
+
+device_administration_identity_stores
+-------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_identity_stores.DeviceAdministrationIdentityStores()
+
+
+
+.. _device_administration_network_conditions_3_2_beta:
+
+device_administration_network_conditions
+----------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_network_conditions.DeviceAdministrationNetworkConditions()
+
+
+
+.. _device_administration_policy_set_3_2_beta:
+
+device_administration_policy_set
+--------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_policy_set.DeviceAdministrationPolicySet()
+
+
+
+.. _device_administration_profiles_3_2_beta:
+
+device_administration_profiles
+------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_profiles.DeviceAdministrationProfiles()
+
+
+
+.. _device_administration_service_names_3_2_beta:
+
+device_administration_service_names
+-----------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_service_names.DeviceAdministrationServiceNames()
+
+
+
+.. _device_administration_time_date_conditions_3_2_beta:
+
+device_administration_time_date_conditions
+------------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.device_administration_time_date_conditions.DeviceAdministrationTimeDateConditions()
+
+
+
+.. _downloadable_acl_3_2_beta:
+
+downloadable_acl
+----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.downloadable_acl.DownloadableAcl()
+
+
+
+.. _edda_3_2_beta:
+
+edda
+----
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.edda.Edda()
+
+
+
+.. _egress_matrix_cell_3_2_beta:
+
+egress_matrix_cell
+------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.egress_matrix_cell.EgressMatrixCell()
+
+
+
+.. _endpoint_certificate_3_2_beta:
+
+endpoint_certificate
+--------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.endpoint_certificate.EndpointCertificate()
+
+
+
+.. _endpoint_identity_group_3_2_beta:
+
+endpoint_identity_group
+-----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.endpoint_identity_group.EndpointIdentityGroup()
+
+
+
+.. _external_radius_server_3_2_beta:
+
+external_radius_server
+----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.external_radius_server.ExternalRadiusServer()
+
+
+
+.. _filter_policy_3_2_beta:
+
+filter_policy
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.filter_policy.FilterPolicy()
+
+
+
+.. _guest_location_3_2_beta:
+
+guest_location
+--------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.guest_location.GuestLocation()
+
+
+
+.. _guest_smtp_notification_configuration_3_2_beta:
+
+guest_smtp_notification_configuration
+-------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.guest_smtp_notification_configuration.GuestSmtpNotificationConfiguration()
+
+
+
+.. _guest_ssid_3_2_beta:
+
+guest_ssid
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.guest_ssid.GuestSsid()
+
+
+
+.. _guest_type_3_2_beta:
+
+guest_type
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.guest_type.GuestType()
+
+
+
+.. _guest_user_3_2_beta:
+
+guest_user
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.guest_user.GuestUser()
+
+
+
+.. _hotspot_portal_3_2_beta:
+
+hotspot_portal
+--------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.hotspot_portal.HotspotPortal()
+
+
+
+.. _ip_to_sgt_mapping_3_2_beta:
+
+ip_to_sgt_mapping
+-----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.ip_to_sgt_mapping.IpToSgtMapping()
+
+
+
+.. _ip_to_sgt_mapping_group_3_2_beta:
+
+ip_to_sgt_mapping_group
+-----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.ip_to_sgt_mapping_group.IpToSgtMappingGroup()
+
+
+
+.. _identity_groups_3_2_beta:
+
+identity_groups
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.identity_groups.IdentityGroups()
+
+
+
+.. _identity_sequence_3_2_beta:
+
+identity_sequence
+-----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.identity_sequence.IdentitySequence()
+
+
+
+.. _internal_user_3_2_beta:
+
+internal_user
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.internal_user.InternalUser()
+
+
+
+.. _licensing_3_2_beta:
+
+licensing
+---------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.licensing.Licensing()
+
+
+
+.. _mdm_3_2_beta:
+
+mdm
+---
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.mdm.Mdm()
+
+
+
+.. _misc_3_2_beta:
+
+misc
+----
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.misc.Misc()
+
+
+
+.. _my_device_portal_3_2_beta:
+
+my_device_portal
+----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.my_device_portal.MyDevicePortal()
+
+
+
+.. _native_supplicant_profile_3_2_beta:
+
+native_supplicant_profile
+-------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.native_supplicant_profile.NativeSupplicantProfile()
+
+
+
+.. _network_access_authentication_rules_3_2_beta:
+
+network_access_authentication_rules
+-----------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_authentication_rules.NetworkAccessAuthenticationRules()
+
+
+
+.. _network_access_authorization_exception_rules_3_2_beta:
+
+network_access_authorization_exception_rules
+--------------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_authorization_exception_rules.NetworkAccessAuthorizationExceptionRules()
+
+
+
+.. _network_access_authorization_global_exception_rules_3_2_beta:
+
+network_access_authorization_global_exception_rules
+---------------------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_authorization_global_exception_rules.NetworkAccessAuthorizationGlobalExceptionRules()
+
+
+
+.. _network_access_authorization_rules_3_2_beta:
+
+network_access_authorization_rules
+----------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_authorization_rules.NetworkAccessAuthorizationRules()
+
+
+
+.. _network_access_conditions_3_2_beta:
+
+network_access_conditions
+-------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_conditions.NetworkAccessConditions()
+
+
+
+.. _network_access_dictionary_3_2_beta:
+
+network_access_dictionary
+-------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_dictionary.NetworkAccessDictionary()
+
+
+
+.. _network_access_dictionary_attribute_3_2_beta:
+
+network_access_dictionary_attribute
+-----------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_dictionary_attribute.NetworkAccessDictionaryAttribute()
+
+
+
+.. _network_access_dictionary_attributes_list_3_2_beta:
+
+network_access_dictionary_attributes_list
+-----------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_dictionary_attributes_list.NetworkAccessDictionaryAttributesList()
+
+
+
+.. _network_access_identity_stores_3_2_beta:
+
+network_access_identity_stores
+------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_identity_stores.NetworkAccessIdentityStores()
+
+
+
+.. _network_access_network_conditions_3_2_beta:
+
+network_access_network_conditions
+---------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_network_conditions.NetworkAccessNetworkConditions()
+
+
+
+.. _network_access_policy_set_3_2_beta:
+
+network_access_policy_set
+-------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_policy_set.NetworkAccessPolicySet()
+
+
+
+.. _network_access_profiles_3_2_beta:
+
+network_access_profiles
+-----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_profiles.NetworkAccessProfiles()
+
+
+
+.. _network_access_security_groups_3_2_beta:
+
+network_access_security_groups
+------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_security_groups.NetworkAccessSecurityGroups()
+
+
+
+.. _network_access_service_names_3_2_beta:
+
+network_access_service_names
+----------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_service_names.NetworkAccessServiceNames()
+
+
+
+.. _network_access_time_date_conditions_3_2_beta:
+
+network_access_time_date_conditions
+-----------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_access_time_date_conditions.NetworkAccessTimeDateConditions()
+
+
+
+.. _network_device_3_2_beta:
+
+network_device
+--------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_device.NetworkDevice()
+
+
+
+.. _network_device_group_3_2_beta:
+
+network_device_group
+--------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.network_device_group.NetworkDeviceGroup()
+
+
+
+.. _node_deployment_3_2_beta:
+
+node_deployment
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.node_deployment.NodeDeployment()
+
+
+
+.. _node_group_3_2_beta:
+
+node_group
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.node_group.NodeGroup()
+
+
+
+.. _node_services_3_2_beta:
+
+node_services
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.node_services.NodeServices()
+
+
+
+.. _node_details_3_2_beta:
+
+node_details
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.node_details.NodeDetails()
+
+
+
+.. _pan_ha_3_2_beta:
+
+pan_ha
+------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.pan_ha.PanHa()
+
+
+
+.. _patching_3_2_beta:
+
+patching
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.patching.Patching()
+
+
+
+.. _portal_global_setting_3_2_beta:
+
+portal_global_setting
+---------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.portal_global_setting.PortalGlobalSetting()
+
+
+
+.. _portal_theme_3_2_beta:
+
+portal_theme
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.portal_theme.PortalTheme()
+
+
+
+.. _profiler_3_2_beta:
+
+profiler
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.profiler.Profiler()
+
+
+
+.. _profiler_profile_3_2_beta:
+
+profiler_profile
+----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.profiler_profile.ProfilerProfile()
+
+
+
+.. _provider_3_2_beta:
+
+provider
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.provider.Provider()
+
+
+
+.. _psn_node_details_with_radius_service_3_2_beta:
+
+psn_node_details_with_radius_service
+------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.psn_node_details_with_radius_service.PsnNodeDetailsWithRadiusService()
+
+
+
+.. _pull_deployment_info_3_2_beta:
+
+pull_deployment_info
+--------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.pull_deployment_info.PullDeploymentInfo()
+
+
+
+.. _px_grid_settings_3_2_beta:
+
+px_grid_settings
+----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.px_grid_settings.PxGridSettings()
+
+
+
+.. _radius_failure_3_2_beta:
+
+radius_failure
+--------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.radius_failure.RadiusFailure()
+
+
+
+.. _radius_server_sequence_3_2_beta:
+
+radius_server_sequence
+----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.radius_server_sequence.RadiusServerSequence()
+
+
+
+.. _restid_store_3_2_beta:
+
+restid_store
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.restid_store.RestidStore()
+
+
+
+.. _repository_3_2_beta:
+
+repository
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.repository.Repository()
+
+
+
+.. _sms_provider_3_2_beta:
+
+sms_provider
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sms_provider.SmsProvider()
+
+
+
+.. _sxp_connections_3_2_beta:
+
+sxp_connections
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sxp_connections.SxpConnections()
+
+
+
+.. _sxp_local_bindings_3_2_beta:
+
+sxp_local_bindings
+------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sxp_local_bindings.SxpLocalBindings()
+
+
+
+.. _sxp_vpns_3_2_beta:
+
+sxp_vpns
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sxp_vpns.SxpVpns()
+
+
+
+.. _security_group_to_virtual_network_3_2_beta:
+
+security_group_to_virtual_network
+---------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.security_group_to_virtual_network.SecurityGroupToVirtualNetwork()
+
+
+
+.. _security_groups_3_2_beta:
+
+security_groups
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.security_groups.SecurityGroups()
+
+
+
+.. _security_groups_acls_3_2_beta:
+
+security_groups_acls
+--------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.security_groups_acls.SecurityGroupsAcls()
+
+
+
+.. _self_registered_portal_3_2_beta:
+
+self_registered_portal
+----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.self_registered_portal.SelfRegisteredPortal()
+
+
+
+.. _session_directory_3_2_beta:
+
+session_directory
+-----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.session_directory.SessionDirectory()
+
+
+
+.. _sponsor_group_3_2_beta:
+
+sponsor_group
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sponsor_group.SponsorGroup()
+
+
+
+.. _sponsor_group_member_3_2_beta:
+
+sponsor_group_member
+--------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sponsor_group_member.SponsorGroupMember()
+
+
+
+.. _sponsor_portal_3_2_beta:
+
+sponsor_portal
+--------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sponsor_portal.SponsorPortal()
+
+
+
+.. _sponsored_guest_portal_3_2_beta:
+
+sponsored_guest_portal
+----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sponsored_guest_portal.SponsoredGuestPortal()
+
+
+
+.. _subscriber_3_2_beta:
+
+subscriber
+----------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.subscriber.Subscriber()
+
+
+
+.. _support_bundle_download_3_2_beta:
+
+support_bundle_download
+-----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.support_bundle_download.SupportBundleDownload()
+
+
+
+.. _support_bundle_status_3_2_beta:
+
+support_bundle_status
+---------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.support_bundle_status.SupportBundleStatus()
+
+
+
+.. _support_bundle_trigger_configuration_3_2_beta:
+
+support_bundle_trigger_configuration
+------------------------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.support_bundle_trigger_configuration.SupportBundleTriggerConfiguration()
+
+
+
+.. _system_health_3_2_beta:
+
+system_health
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.system_health.SystemHealth()
+
+
+
+.. _system_certificate_3_2_beta:
+
+system_certificate
+------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.system_certificate.SystemCertificate()
+
+
+
+.. _tacacs_command_sets_3_2_beta:
+
+tacacs_command_sets
+-------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.tacacs_command_sets.TacacsCommandSets()
+
+
+
+.. _tacacs_external_servers_3_2_beta:
+
+tacacs_external_servers
+-----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.tacacs_external_servers.TacacsExternalServers()
+
+
+
+.. _tacacs_profile_3_2_beta:
+
+tacacs_profile
+--------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.tacacs_profile.TacacsProfile()
+
+
+
+.. _tacacs_server_sequence_3_2_beta:
+
+tacacs_server_sequence
+----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.tacacs_server_sequence.TacacsServerSequence()
+
+
+
+.. _telemetry_information_3_2_beta:
+
+telemetry_information
+---------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.telemetry_information.TelemetryInformation()
+
+
+
+.. _trust_sec_configuration_3_2_beta:
+
+trust_sec_configuration
+-----------------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.trust_sec_configuration.TrustSecConfiguration()
+
+
+
+.. _trust_sec_sxp_3_2_beta:
+
+trust_sec_sxp
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.trust_sec_sxp.TrustSecSxp()
+
+
+
+.. _version_and_patch_3_2_beta:
+
+version_and_patch
+-----------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.version_and_patch.VersionAndPatch()
+
+
+
+.. _version_info_3_2_beta:
+
+version_info
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.version_info.VersionInfo()
+
+
+
+.. _endpoint_3_2_beta:
+
+endpoint
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.endpoint.Endpoint()
+    
+
+
+.. _nbar_app_3_2_beta:
+
+nbar_app
+--------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.nbar_app.NbarApp()
+
+
+
+.. _portal_3_2_beta:
+
+portal
+------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.portal.Portal()
+
+
+
+.. _proxy_3_2_beta:
+
+proxy
+-----
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.proxy.Proxy()
+
+
+
+.. _px_grid_node_3_2_beta:
+
+px_grid_node
+------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.px_grid_node.PxGridNode()
+    
+
+
+.. _sg_vn_mapping_3_2_beta:
+
+sg_vn_mapping
+-------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.sg_vn_mapping.SgVnMapping()
+
+
+
+.. _tasks_3_2_beta:
+
+tasks
+-----
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.tasks.Tasks()
+
+
+
+.. _telemetry_3_2_beta:
+
+telemetry
+---------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.telemetry.Telemetry()
+    
+
+
+.. _virtual_network_3_2_beta:
+
+virtual_network
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.virtual_network.VirtualNetwork()
+
+
+
+.. _vn_vlan_mapping_3_2_beta:
+
+vn_vlan_mapping
+---------------
+
+.. autoclass:: ciscoisesdk.api.v3_2_beta.vn_vlan_mapping.VnVlanMapping()
 
 
 .. _Identity Services Engine Data Object:
