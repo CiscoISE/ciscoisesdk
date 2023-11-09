@@ -4406,15 +4406,6 @@ endpoint
 --------
 
 .. autoclass:: ciscoisesdk.api.v3_2_beta.endpoint.Endpoint()
-    
-
-
-.. _nbar_app_3_2_beta:
-
-nbar_app
---------
-
-.. autoclass:: ciscoisesdk.api.v3_2_beta.nbar_app.NbarApp()
 
 
 
@@ -4445,15 +4436,6 @@ px_grid_node
     
 
 
-.. _sg_vn_mapping_3_2_beta:
-
-sg_vn_mapping
--------------
-
-.. autoclass:: ciscoisesdk.api.v3_2_beta.sg_vn_mapping.SgVnMapping()
-
-
-
 .. _tasks_3_2_beta:
 
 tasks
@@ -4469,24 +4451,6 @@ telemetry
 ---------
 
 .. autoclass:: ciscoisesdk.api.v3_2_beta.telemetry.Telemetry()
-    
-
-
-.. _virtual_network_3_2_beta:
-
-virtual_network
----------------
-
-.. autoclass:: ciscoisesdk.api.v3_2_beta.virtual_network.VirtualNetwork()
-
-
-
-.. _vn_vlan_mapping_3_2_beta:
-
-vn_vlan_mapping
----------------
-
-.. autoclass:: ciscoisesdk.api.v3_2_beta.vn_vlan_mapping.VnVlanMapping()
 
 
 .. _Identity Services Engine Data Object:
