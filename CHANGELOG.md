@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.1] - 2023-11-09
+### Fixed
+- some imports that caused problems were removed
+
 ## [2.1.0] - 2023-11-07
 ### Added
 - `ciscoisesdk` now supports ISE 3.2-Beta API services included: `configuration, edda, dataconnect_services, subscriber`
@@ -424,4 +428,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.0.11]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.10...v2.0.11
 [2.0.12]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.11...v2.0.12
 [2.1.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.12...v2.1.0
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.0...develop
+[2.1.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.0...v2.1.1
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.1...develop

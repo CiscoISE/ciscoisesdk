@@ -137,7 +137,7 @@ The following table shows the supported versions.
    * - 3.1_Patch_1
      - 2.0.12
    * - 3.2_beta
-     - 2.1.0
+     - 2.1.1
 
 If your SDK is older please consider updating it first.
 
