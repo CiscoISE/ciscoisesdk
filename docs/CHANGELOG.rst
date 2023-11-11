@@ -8,18 +8,30 @@ Changelog <https://keepachangelog.com/en/1.0.0/>`__, and this project
 adheres to `Semantic
 Versioning <https://semver.org/spec/v2.0.0.html>`__.
 
-`Unreleased <https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.1...develop>`__
+`Unreleased <https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.2...develop>`__
 ---------------------------------------------------------------------------------
+
+`2.1.2 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.1...v2.1.2>`__ - 2023-11-10
+----------------------------------------------------------------------------------------
+
+Fixed
+~~~~~
+
+-  Fix configuration import
+
+.. _section-1:
 
 `2.1.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.0...v2.1.1>`__ - 2023-11-09
 ----------------------------------------------------------------------------------------
+
+.. _fixed-1:
 
 Fixed
 ~~~~~
 
 -  some imports that caused problems were removed
 
-.. _section-1:
+.. _section-2:
 
 `2.1.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.12...v2.1.0>`__ - 2023-11-07
 -----------------------------------------------------------------------------------------
@@ -30,14 +42,14 @@ Added
 -  ``ciscoisesdk`` now supports ISE 3.2-Beta API services included:
    ``configuration, edda, dataconnect_services, subscriber``
 
-.. _section-2:
+.. _section-3:
 
 `2.0.12 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.11...v2.0.12>`__ - 2023-08-25
 -------------------------------------------------------------------------------------------
 
 -  Update requirements and readthedocs settings
 
-.. _section-3:
+.. _section-4:
 
 `2.0.11 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.10...v2.0.11>`__ - 2023-08-24
 -------------------------------------------------------------------------------------------
@@ -47,7 +59,7 @@ Changed
 
 -  Update requirements
 
-.. _section-4:
+.. _section-5:
 
 `2.0.10 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.9...v2.0.10>`__ - 2023-07-25
 ------------------------------------------------------------------------------------------
@@ -60,7 +72,7 @@ Added
 -  Adding new param ``ersRestIDStoreUserAttributes`` on restid_store
    create function.
 
-.. _section-5:
+.. _section-6:
 
 `2.0.9 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.8...v2.0.9>`__ - 2023-04-19
 ----------------------------------------------------------------------------------------
@@ -72,12 +84,12 @@ Changed
 
 -  Updating request-toolbelt from 0.9.1 to 0.10.1
 
-.. _section-6:
+.. _section-7:
 
 `2.0.8 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.7...v2.0.8>`__ - 2022-11-07
 ----------------------------------------------------------------------------------------
 
-.. _fixed-1:
+.. _fixed-2:
 
 Fixed
 ~~~~~
@@ -87,12 +99,12 @@ Fixed
    -  ciscoisesdk.api.v3_1_1.certificates.delete_system_certificate_by_id
    -  ciscoisesdk.api.v3_1_patch_1.certificates.delete_system_certificate_by_id
 
-.. _section-7:
+.. _section-8:
 
 `2.0.7 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.6...v2.0.7>`__ - 2022-11-01
 ----------------------------------------------------------------------------------------
 
-.. _fixed-2:
+.. _fixed-3:
 
 Fixed
 ~~~~~
@@ -106,12 +118,12 @@ Fixed
       to
       /admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONNECT_TYPE}/{NAS_IPV4}/{ENDPOINT_IP}
 
-.. _section-8:
+.. _section-9:
 
 `2.0.6 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.5...v2.0.6>`__ - 2022-10-27
 ----------------------------------------------------------------------------------------
 
-.. _fixed-3:
+.. _fixed-4:
 
 Fixed
 ~~~~~
@@ -140,12 +152,12 @@ Fixed
       to
       /admin/API/mnt/CoA/Disconnect/{PSN_NAME}/{MAC}/{DISCONNECT_TYPE}/{NAS_IPV4}/{{ENDPOINT_IP}}
 
-.. _section-9:
+.. _section-10:
 
 `2.0.5 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.4...v2.0.5>`__ - 2022-10-13
 ----------------------------------------------------------------------------------------
 
-.. _fixed-4:
+.. _fixed-5:
 
 Fixed
 ~~~~~
@@ -157,19 +169,19 @@ Fixed
    network_access_network_conditions.update_network_access_network_condition_by_id
    request 3.1_patch_1 and 3.1.1
 
-.. _section-10:
+.. _section-11:
 
 `2.0.4 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.3...v2.0.4>`__ - 2022-07-11
 ----------------------------------------------------------------------------------------
 
-.. _fixed-5:
+.. _fixed-6:
 
 Fixed
 ~~~~~
 
 -  Update check_type to pass an instance of a list.
 
-.. _section-11:
+.. _section-12:
 
 `2.0.3 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.2...v2.0.3>`__ - 2022-06-07
 ----------------------------------------------------------------------------------------
@@ -182,12 +194,12 @@ Changed
 -  Default ISE DEFAULT_VERSION to 3.1_Patch_1
 -  Update documentation to use ISE v3.1_Patch_1
 
-.. _section-12:
+.. _section-13:
 
 `2.0.2 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.1...v2.0.2>`__ - 2022-05-02
 ----------------------------------------------------------------------------------------
 
-.. _fixed-6:
+.. _fixed-7:
 
 Fixed
 ~~~~~
@@ -196,7 +208,7 @@ Fixed
    when they attempt to get_next_page. Previous version only captured
    and ignored 404 Not Found and 400 Bad Request.
 
-.. _section-13:
+.. _section-14:
 
 `2.0.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.0.0...v2.0.1>`__ - 2022-03-24
 ----------------------------------------------------------------------------------------
@@ -248,7 +260,7 @@ Changed
    -  ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download_support_bundle
    -  ciscoisesdk.api.v3_1_1.support_bundle_download.SupportBundleDownload.download
 
-.. _section-14:
+.. _section-15:
 
 `2.0.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.1...v2.0.0>`__ - 2022-03-24
 ----------------------------------------------------------------------------------------
@@ -260,7 +272,7 @@ Removed
    and ``RestSession``.
 -  Drop ISE version 3.0.0 support.
 
-.. _section-15:
+.. _section-16:
 
 `1.5.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.5.0...v1.5.1>`__ - 2022-02-25
 ----------------------------------------------------------------------------------------
@@ -272,7 +284,7 @@ Changed
 
 -  Update docstring documentation of modules and functions.
 
-.. _section-16:
+.. _section-17:
 
 `1.5.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.2...v1.5.0>`__ - 2022-02-23
 ----------------------------------------------------------------------------------------
@@ -385,7 +397,7 @@ Added
    ``RestSession``.
 -  New ``additional_data`` property in ``ApiError``.
 
-.. _fixed-7:
+.. _fixed-8:
 
 Fixed
 ~~~~~
@@ -394,12 +406,12 @@ Fixed
    variables set after the module is imported, and not only before it.
 -  Fixed the docstring tables of the API modules.
 
-.. _section-17:
+.. _section-18:
 
 `1.4.2 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.1...v1.4.2>`__ - 2022-02-18
 ----------------------------------------------------------------------------------------
 
-.. _fixed-8:
+.. _fixed-9:
 
 Fixed
 ~~~~~
@@ -408,7 +420,7 @@ Fixed
    when they attempt to get_next_page. Previous version only captured
    and ignored 404 Not Found.
 
-.. _section-18:
+.. _section-19:
 
 `1.4.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.4.0...v1.4.1>`__ - 2022-01-20
 ----------------------------------------------------------------------------------------
@@ -421,7 +433,7 @@ Changed
 -  Update module inner documentation.
 -  Downgrade requirements file to use poetry versions.
 
-.. _section-19:
+.. _section-20:
 
 `1.4.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.1...v1.4.0>`__ - 2022-01-19
 ----------------------------------------------------------------------------------------
@@ -433,7 +445,7 @@ Changed
 
 -  Update requirements
 
-.. _fixed-9:
+.. _fixed-10:
 
 Fixed
 ~~~~~
@@ -441,7 +453,7 @@ Fixed
 -  Update pagination, get_next_page inner logic and location from utils
    to pagination.
 
-.. _section-20:
+.. _section-21:
 
 `1.3.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.3.0...v1.3.1>`__ - 2021-12-13
 ----------------------------------------------------------------------------------------
@@ -453,7 +465,7 @@ Changed
 
 -  Fixes utils.get_next_page generator starting default page
 
-.. _section-21:
+.. _section-22:
 
 `1.3.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.2.0...v1.3.0>`__ - 2021-12-13
 ----------------------------------------------------------------------------------------
@@ -487,7 +499,7 @@ Removed
 -  Removes replication_status module
 -  Removes sync_ise_node module
 
-.. _section-22:
+.. _section-23:
 
 `1.2.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.1.0...v1.2.0>`__ - 2021-11-24
 ----------------------------------------------------------------------------------------
@@ -516,7 +528,7 @@ Removed
 
 -  Removes link of 3.1.0 modules to 3.0.0 version
 
-.. _section-23:
+.. _section-24:
 
 `1.1.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.1...v1.1.0>`__ - 2021-10-22
 ----------------------------------------------------------------------------------------
@@ -536,7 +548,7 @@ Changed
 -  Default ISE DEFAULT_VERSION to 3.1.0
 -  Update documentation to use ISE v3.1.0
 
-.. _section-24:
+.. _section-25:
 
 `1.0.1 <https://github.com/CiscoISE/ciscoisesdk/compare/v1.0.0...v1.0.1>`__ - 2021-09-14
 ----------------------------------------------------------------------------------------
@@ -548,7 +560,7 @@ Changed
 
 -  Disabled warnings of urllib3 if verify is False
 
-.. _section-25:
+.. _section-26:
 
 `1.0.0 <https://github.com/CiscoISE/ciscoisesdk/compare/v0.5.1...v1.0.0>`__ - 2021-07-21
 ----------------------------------------------------------------------------------------

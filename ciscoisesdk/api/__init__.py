@@ -1484,9 +1484,6 @@ from .v3_2_beta.version_info import (
 from .v3_2_beta.endpoint import (
     Endpoint as Endpoint_v3_2_beta
 )
-from .v3_2_beta.nbar_app import (
-    NbarApp as NbarApp_v3_2_beta
-)
 from .v3_2_beta.portal import (
     Portal as Portal_v3_2_beta
 )
@@ -1496,20 +1493,11 @@ from .v3_2_beta.proxy import (
 from .v3_2_beta.px_grid_node import (
     PxGridNode as PxGridNode_v3_2_beta
 )
-from .v3_2_beta.sg_vn_mapping import (
-    SgVnMapping as SgVnMapping_v3_2_beta
-)
 from .v3_2_beta.tasks import (
     Tasks as Tasks_v3_2_beta
 )
 from .v3_2_beta.telemetry import (
     Telemetry as Telemetry_v3_2_beta
-)
-from .v3_2_beta.virtual_network import (
-    VirtualNetwork as VirtualNetwork_v3_2_beta
-)
-from .v3_2_beta.vn_vlan_mapping import (
-    VnVlanMapping as VnVlanMapping_v3_2_beta
 )
 
 
@@ -3420,7 +3408,7 @@ class IdentityServicesEngineAPI(object):
                 )
             self.configuration = \
                 Configuration_v3_2_beta(
-                    self._session_main, self.object_factory, self._validator
+                    self._session, self.object_factory, self._validator
                 )
             self.consumer = \
                 Consumer_v3_2_beta(
@@ -3830,10 +3818,6 @@ class IdentityServicesEngineAPI(object):
                 Endpoint_v3_2_beta(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.nbar_app = \
-                NbarApp_v3_2_beta(
-                    self._session_ui, self.object_factory, self._validator
-                )
             self.portal = \
                 Portal_v3_2_beta(
                     self._session_ers, self.object_factory, self._validator
@@ -3846,24 +3830,12 @@ class IdentityServicesEngineAPI(object):
                 PxGridNode_v3_2_beta(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.sg_vn_mapping = \
-                SgVnMapping_v3_2_beta(
-                    self._session_ui, self.object_factory, self._validator
-                )
             self.tasks = \
                 Tasks_v3_2_beta(
                     self._session_ui, self.object_factory, self._validator
                 )
             self.telemetry = \
                 Telemetry_v3_2_beta(
-                    self._session_ui, self.object_factory, self._validator
-                )
-            self.virtual_network = \
-                VirtualNetwork_v3_2_beta(
-                    self._session_ui, self.object_factory, self._validator
-                )
-            self.vn_vlan_mapping = \
-                VnVlanMapping_v3_2_beta(
                     self._session_ui, self.object_factory, self._validator
                 )
         self.custom_caller = \
