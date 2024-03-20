@@ -14999,7 +14999,6 @@ class MockServerRequestHandler_v3_2_beta(BaseHTTPRequestHandler):
             self.telemetry_update_transport_gateway_response()
             return
 
-
         if self.matches_VN_VLAN_MAPPING_c3d67df26a4d58f5a5efc6083ba187eb():
             self.vn_vlan_mapping_update_vn_vlan_mapping_by_id_response()
             return

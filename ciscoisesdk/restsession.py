@@ -416,7 +416,7 @@ class RestSession(object):
         filepath = None
         collected_data = bytes()
 
-        if not(dirpath) or not(os.path.isdir(dirpath)):
+        if not (dirpath) or not (os.path.isdir(dirpath)):
             dirpath = os.getcwd()
 
         with self.request(method, url, erc, 0, **kwargs) as resp:
