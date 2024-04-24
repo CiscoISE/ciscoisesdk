@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2024-04-24
+### Added
+- `ciscoisesdk` now supports ISE 3.3 patch 1 API services included: `active_directories, ad_groups, custom_attributes, duo_identity_sync, duo_mfa, enable_mfa, endpoint_stop_replication_service, endpoints, full_upgrade, is_mfa_enabled, native_ipsec, px_grid_direct, sgt_range_reservation, user_equipment`
+
 ## [2.1.2] - 2023-11-10
 ### Fixed
 - Fix configuration import

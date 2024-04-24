@@ -1004,7 +1004,7 @@ class Misc(object):
         return self._object_factory('bpm_f73477346fb5e7097d915c7f0a99659_v3_1_0', _api_response)
 
     def session_disconnect(self,
-                           disconnect_type ,
+                           disconnect_type,
                            endpoint_ip,
                            mac,
                            nas_ipv4,
@@ -1058,7 +1058,7 @@ class Misc(object):
                    may_be_none=False)
         check_type(mac, basestring,
                    may_be_none=False)
-        check_type(disconnect_type , basestring,
+        check_type(disconnect_type, basestring,
                    may_be_none=False)
         check_type(nas_ipv4, basestring,
                    may_be_none=False)
@@ -1072,7 +1072,7 @@ class Misc(object):
             'ENDPOINT_IP': endpoint_ip,
             'PSN_NAME': psn_name,
             'MAC': mac,
-            'DISCONNECT_TYPE': disconnect_type ,
+            'DISCONNECT_TYPE': disconnect_type,
             'NAS_IPV4': nas_ipv4,
         }
 

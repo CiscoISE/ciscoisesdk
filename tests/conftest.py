@@ -32,6 +32,7 @@ pytest_plugins = [
     'tests.api.v3_1_1',
     'tests.api.v3_1_patch_1',
     'tests.api.v3_2_beta',
+    'tests.api.v3_3_patch_1',
 ]
 
 
@@ -52,7 +53,13 @@ def pytest_configure(config):
         "markers", "aci_settings: aci_settings wrapper test"
     )
     config.addinivalue_line(
+        "markers", "ad_groups: ad_groups wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "anc_endpoint: anc_endpoint wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "active_directories: active_directories wrapper test"
     )
     config.addinivalue_line(
         "markers", "active_directory: active_directory wrapper test"
@@ -145,10 +152,19 @@ def pytest_configure(config):
         "markers", "downloadable_acl: downloadable_acl wrapper test"
     )
     config.addinivalue_line(
+        "markers", "duo_identity_sync: duo_identity_sync wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "duo_mfa: duo_mfa wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "edda: edda wrapper test"
     )
     config.addinivalue_line(
         "markers", "egress_matrix_cell: egress_matrix_cell wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "endpoint_stop_replication_service: endpoint_stop_replication_service wrapper test"
     )
     config.addinivalue_line(
         "markers", "endpoint_certificate: endpoint_certificate wrapper test"
@@ -206,6 +222,9 @@ def pytest_configure(config):
     )
     config.addinivalue_line(
         "markers", "my_device_portal: my_device_portal wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "native_ipsec: native_ipsec wrapper test"
     )
     config.addinivalue_line(
         "markers", "native_supplicant_profile: native_supplicant_profile wrapper test"
@@ -346,6 +365,9 @@ def pytest_configure(config):
         "markers", "session_directory: session_directory wrapper test"
     )
     config.addinivalue_line(
+        "markers", "sgt_range_reservation: sgt_range_reservation wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "sponsor_group: sponsor_group wrapper test"
     )
     config.addinivalue_line(
@@ -400,13 +422,31 @@ def pytest_configure(config):
         "markers", "trust_sec_sxp: trust_sec_sxp wrapper test"
     )
     config.addinivalue_line(
+        "markers", "user_equipment: user_equipment wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "version_and_patch: version_and_patch wrapper test"
     )
     config.addinivalue_line(
         "markers", "version_info: version_info wrapper test"
     )
     config.addinivalue_line(
+        "markers", "custom_attributes: custom_attributes wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "enable_mfa: enable_mfa wrapper test"
+    )
+    config.addinivalue_line(
         "markers", "endpoint: endpoint wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "endpoints: endpoints wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "full_upgrade: full_upgrade wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "is_mfa_enabled: is_mfa_enabled wrapper test"
     )
     config.addinivalue_line(
         "markers", "nbar_app: nbar_app wrapper test"
@@ -416,6 +456,9 @@ def pytest_configure(config):
     )
     config.addinivalue_line(
         "markers", "proxy: proxy wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "px_grid_direct: px_grid_direct wrapper test"
     )
     config.addinivalue_line(
         "markers", "px_grid_node: px_grid_node wrapper test"
