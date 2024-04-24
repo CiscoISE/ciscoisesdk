@@ -11,7 +11,7 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
     from ciscoisesdk.exceptions import ApiError
 
     # Create a IdentityServicesEngineAPI connection object;
-    # it uses ISE custom URL, username, and password, with ISE API version 3.2_beta
+    # it uses ISE custom URL, username, and password, with ISE API version 3.3_patch_1
     # and its API Gateway enabled,
     # verify=True to verify the server's TLS certificate
     # with debug logs disabled
@@ -20,7 +20,7 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
                                     password='C1sco12345',
                                     uses_api_gateway=True,
                                     base_url='https://198.18.133.27',
-                                    version='3.2_beta',
+                                    version='3.3_patch_1',
                                     verify=True,
                                     debug=False,
                                     uses_csrf_token=False)
@@ -138,6 +138,8 @@ The following table shows the supported versions.
      - 2.0.12
    * - 3.2_beta
      - 2.1.2
+   * - 3.3_patch_1
+     - 2.2.0
 
 If your SDK is older please consider updating it first.
 
