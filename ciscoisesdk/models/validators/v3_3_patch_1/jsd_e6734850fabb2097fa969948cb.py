@@ -52,7 +52,7 @@ class JSONSchemaValidatorE6734850FaBb2097Fa969948Cb(object):
                 "name": {
                 "type": "string"
                 },
-                "ndgtype": {
+                "othername": {
                 "type": "string"
                 }
                 },
