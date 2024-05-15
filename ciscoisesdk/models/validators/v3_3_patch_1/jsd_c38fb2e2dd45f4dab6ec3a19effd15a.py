@@ -49,7 +49,7 @@ class JSONSchemaValidatorC38Fb2E2Dd45F4DAb6EC3A19Effd15A(object):
                 "name": {
                 "type": "string"
                 },
-                "ndgtype": {
+                "othername": {
                 "type": "string"
                 }
                 },

@@ -150,7 +150,7 @@ def update_network_device_group_by_id(api):
         description='string',
         id='string',
         name='string',
-        ndgtype='string',
+        othername='string',
         payload=None
     )
     return endpoint_result
@@ -175,7 +175,7 @@ def update_network_device_group_by_id_default(api):
         id='string',
         description=None,
         name=None,
-        ndgtype=None,
+        othername=None,
         payload=None
     )
     return endpoint_result
@@ -322,7 +322,7 @@ def create_network_device_group(api):
         active_validation=False,
         description='string',
         name='string',
-        ndgtype='string',
+        othername='string',
         payload=None
     )
     return endpoint_result
@@ -346,7 +346,7 @@ def create_network_device_group_default(api):
         active_validation=False,
         description=None,
         name=None,
-        ndgtype=None,
+        othername=None,
         payload=None
     )
     return endpoint_result

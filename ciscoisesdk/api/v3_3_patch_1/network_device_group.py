@@ -275,7 +275,7 @@ class NetworkDeviceGroup(object):
                                           id,
                                           description=None,
                                           name=None,
-                                          ndgtype=None,
+                                          othername=None,
                                           headers=None,
                                           payload=None,
                                           active_validation=True,
@@ -287,7 +287,8 @@ class NetworkDeviceGroup(object):
                 request body.
             id(string): id, property of the request body.
             name(string): name, property of the request body.
-            ndgtype(string): ndgtype, property of the request body.
+            othername(string): othername, property of the request
+                body.
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -360,8 +361,8 @@ class NetworkDeviceGroup(object):
                     name,
                 'description':
                     description,
-                'ndgtype':
-                    ndgtype,
+                'othername':
+                    othername,
             }
             _payload = {
                 'NetworkDeviceGroup': dict_from_items_with_values(_tmp_payload)
@@ -391,7 +392,7 @@ class NetworkDeviceGroup(object):
                      id,
                      description=None,
                      name=None,
-                     ndgtype=None,
+                     othername=None,
                      headers=None,
                      payload=None,
                      active_validation=True,
@@ -404,7 +405,7 @@ class NetworkDeviceGroup(object):
             id=id,
             description=description,
             name=name,
-            ndgtype=ndgtype,
+            othername=othername,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
@@ -774,7 +775,7 @@ class NetworkDeviceGroup(object):
     def create_network_device_group(self,
                                     description=None,
                                     name=None,
-                                    ndgtype=None,
+                                    othername=None,
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
@@ -785,7 +786,8 @@ class NetworkDeviceGroup(object):
             description(string): description, property of the
                 request body.
             name(string): name, property of the request body.
-            ndgtype(string): ndgtype, property of the request body.
+            othername(string): othername, property of the request
+                body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -852,8 +854,8 @@ class NetworkDeviceGroup(object):
                     name,
                 'description':
                     description,
-                'ndgtype':
-                    ndgtype,
+                'othername':
+                    othername,
             }
             _payload = {
                 'NetworkDeviceGroup': dict_from_items_with_values(_tmp_payload)
@@ -881,7 +883,7 @@ class NetworkDeviceGroup(object):
     def create(self,
                description=None,
                name=None,
-               ndgtype=None,
+               othername=None,
                headers=None,
                payload=None,
                active_validation=True,
@@ -893,7 +895,7 @@ class NetworkDeviceGroup(object):
         return self.create_network_device_group(
             description=description,
             name=name,
-            ndgtype=ndgtype,
+            othername=othername,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
