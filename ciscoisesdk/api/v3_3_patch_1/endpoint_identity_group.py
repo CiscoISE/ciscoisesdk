@@ -273,6 +273,7 @@ class EndpointIdentityGroup(object):
                                     description=None,
                                     name=None,
                                     system_defined=None,
+                                    parent_id=None,
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
@@ -289,6 +290,7 @@ class EndpointIdentityGroup(object):
             id(basestring): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            parent_id(string): parentId, property of the request
             payload(dict): A JSON serializable Python object to send in the
                 body of the Request.
             active_validation(bool): Enable/Disable payload validation.
@@ -360,6 +362,8 @@ class EndpointIdentityGroup(object):
                     description,
                 'systemDefined':
                     system_defined,
+                'parentId':
+                    parent_id,
             }
             _payload = {
                 'EndPointGroup': dict_from_items_with_values(_tmp_payload)
@@ -773,6 +777,7 @@ class EndpointIdentityGroup(object):
                               description=None,
                               name=None,
                               system_defined=None,
+                              parent_id=None,
                               headers=None,
                               payload=None,
                               active_validation=True,
@@ -785,6 +790,7 @@ class EndpointIdentityGroup(object):
             name(string): name, property of the request body.
             system_defined(boolean): systemDefined, property of the
                 request body.
+            parent_id(string): parentId, property of the request
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -853,6 +859,8 @@ class EndpointIdentityGroup(object):
                     description,
                 'systemDefined':
                     system_defined,
+                'parentId':
+                    parent_id,
             }
             _payload = {
                 'EndPointGroup': dict_from_items_with_values(_tmp_payload)

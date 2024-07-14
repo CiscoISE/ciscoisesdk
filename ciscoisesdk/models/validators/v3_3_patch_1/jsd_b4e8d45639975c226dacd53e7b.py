@@ -42,8 +42,12 @@ class JSONSchemaValidatorB4E8D45639975C226Dacd53E7B(object):
                 "properties": {
                 "EndPointGroup": {
                 "properties": {
+                "parentId":
+                {
+                "type": "string"
+                },
                 "description":
-                 {
+                {
                 "type": "string"
                 },
                 "id": {
