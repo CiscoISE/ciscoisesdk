@@ -23,8 +23,6 @@ SOFTWARE.
 """
 
 
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 import json
 from builtins import *
 
@@ -42,8 +40,12 @@ class JSONSchemaValidatorF64C3C08518E9Eef83A92D69Cde3(object):
                 "properties": {
                 "EndPointGroup": {
                 "properties": {
+                "parentId":
+                {
+                "type": "string"
+                },
                 "description":
-                 {
+                {
                 "type": "string"
                 },
                 "id": {

@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.2] - 2024-07-16
+### Fixed 
+- Update EndpointIdentityGroup API to include `parent_id` parameters
+- Update requirements
+
+
 ## [2.2.1] - 2024-05-15
 ### Fixed
 - Update NetworkDeviceGroup API parameter name from `ndgtype` to `othername` in 3.3 patch 1.
@@ -444,4 +450,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.1.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.1...v2.1.2
 [2.2.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.2...v2.2.0
 [2.2.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.0...v2.2.1
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.1...develop
+[2.2.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.1...v2.2.2
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.2...develop

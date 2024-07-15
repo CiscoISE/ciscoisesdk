@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -211,7 +205,7 @@ class Repository(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -299,7 +293,7 @@ class Repository(object):
         URL. .
 
         Args:
-            repository_name(basestring): repositoryName path
+            repository_name(str): repositoryName path
                 parameter. Unique name for a repository.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -331,7 +325,7 @@ class Repository(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(repository_name, basestring,
+        check_type(repository_name, str,
                    may_be_none=False)
 
         _params = {
@@ -406,7 +400,7 @@ class Repository(object):
             user_name(string): Username may contain alphanumeric and
                 _-./@\\$ characters., property of the
                 request body.
-            repository_name(basestring): repositoryName path
+            repository_name(str): repositoryName path
                 parameter. Unique name for a repository.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -444,10 +438,10 @@ class Repository(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(repository_name, basestring,
+        check_type(repository_name, str,
                    may_be_none=False)
 
         _params = {
@@ -537,7 +531,7 @@ class Repository(object):
         """Long description TBD .
 
         Args:
-            repository_name(basestring): repositoryName path
+            repository_name(str): repositoryName path
                 parameter. Unique name for a repository.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -569,7 +563,7 @@ class Repository(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(repository_name, basestring,
+        check_type(repository_name, str,
                    may_be_none=False)
 
         _params = {
@@ -613,7 +607,7 @@ class Repository(object):
         repository. .
 
         Args:
-            repository_name(basestring): repositoryName path
+            repository_name(str): repositoryName path
                 parameter. Unique name for a repository.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -645,7 +639,7 @@ class Repository(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(repository_name, basestring,
+        check_type(repository_name, str,
                    may_be_none=False)
 
         _params = {

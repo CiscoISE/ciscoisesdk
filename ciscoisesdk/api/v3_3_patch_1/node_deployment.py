@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -197,7 +191,7 @@ class NodeDeployment(object):
         address, roles, services and node status. .
 
         Args:
-            filter(basestring, list, set, tuple): filter query
+            filter(str, list, set, tuple): filter query
                 parameter.        Simple filtering  is
                 available through the filter query
                 string parameter. The structure of a
@@ -217,7 +211,7 @@ class NodeDeployment(object):
                 NENDSW   Not Ends With       CONTAINS
                 Contains       NCONTAINS   Not Contains
                 .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to all filter
                 criteria is AND by default, and can be
                 changed by using this parameter.
@@ -251,8 +245,8 @@ class NodeDeployment(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(filter, (basestring, list, set, tuple))
-        check_type(filter_type, basestring)
+        check_type(filter, (str, list, set, tuple))
+        check_type(filter_type, str)
 
         _params = {
             'filter':
@@ -350,7 +344,7 @@ class NodeDeployment(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -405,7 +399,7 @@ class NodeDeployment(object):
         """This API retrieves detailed information of the deployed node. .
 
         Args:
-            hostname(basestring): hostname path parameter. Hostname
+            hostname(str): hostname path parameter. Hostname
                 of the deployed node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -437,7 +431,7 @@ class NodeDeployment(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {
@@ -498,7 +492,7 @@ class NodeDeployment(object):
                 'Session', 'Profiler', 'TC-NAC', 'SXP',
                 'DeviceAdmin', 'PassiveIdentity',
                 'pxGrid' and 'pxGridCloud').
-            hostname(basestring): hostname path parameter. Hostname
+            hostname(str): hostname path parameter. Hostname
                 of the deployed node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -536,10 +530,10 @@ class NodeDeployment(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {
@@ -590,7 +584,7 @@ class NodeDeployment(object):
         of a standalone node. .
 
         Args:
-            hostname(basestring): hostname path parameter. The
+            hostname(str): hostname path parameter. The
                 hostname of the node in the deployment
                 to be deregistered.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -623,7 +617,7 @@ class NodeDeployment(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {
@@ -653,7 +647,7 @@ class NodeDeployment(object):
         target node, but not the primary PAN.
 
         Args:
-            hostname(basestring): hostname path parameter. Hostname
+            hostname(str): hostname path parameter. Hostname
                 of the node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -685,7 +679,7 @@ class NodeDeployment(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {

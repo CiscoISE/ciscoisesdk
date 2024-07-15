@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -105,15 +99,15 @@ class SgtRangeReservation(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
+        check_type(page, (int, str, list))
+        check_type(size, (int, str, list))
 
         _params = {
             'page':
@@ -225,7 +219,7 @@ class SgtRangeReservation(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -234,7 +228,7 @@ class SgtRangeReservation(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -282,7 +276,7 @@ class SgtRangeReservation(object):
         passed in the URL.
 
         Args:
-            client_id(basestring): clientID path parameter. Unique
+            client_id(str): clientID path parameter. Unique
                 name for a Client.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -309,14 +303,14 @@ class SgtRangeReservation(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(client_id, basestring,
+        check_type(client_id, str,
                    may_be_none=False)
 
         _params = {
@@ -356,7 +350,7 @@ class SgtRangeReservation(object):
                 property of the request body.
             start_index(integer): Start index of the reserved range,
                 property of the request body.
-            client_id(basestring): clientID path parameter. Unique
+            client_id(str): clientID path parameter. Unique
                 name for a Client.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -387,7 +381,7 @@ class SgtRangeReservation(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -396,10 +390,10 @@ class SgtRangeReservation(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(client_id, basestring,
+        check_type(client_id, str,
                    may_be_none=False)
 
         _params = {
@@ -449,7 +443,7 @@ class SgtRangeReservation(object):
         """Delete the reserved range of SGT for the given Client.
 
         Args:
-            client_id(basestring): clientID path parameter. Unique
+            client_id(str): clientID path parameter. Unique
                 name for a Client.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -476,14 +470,14 @@ class SgtRangeReservation(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(client_id, basestring,
+        check_type(client_id, str,
                    may_be_none=False)
 
         _params = {

@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -166,16 +160,16 @@ class SupportBundleTriggerConfiguration(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -184,7 +178,7 @@ class SupportBundleTriggerConfiguration(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -287,10 +281,10 @@ class SupportBundleTriggerConfiguration(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}

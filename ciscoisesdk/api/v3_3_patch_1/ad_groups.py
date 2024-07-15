@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -77,7 +71,7 @@ class ADGroups(object):
         specified Active Directory.
 
         Args:
-            active_directory(basestring): activeDirectory path
+            active_directory(str): activeDirectory path
                 parameter. List of AD groups for the
                 specified Active Directory.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -105,14 +99,14 @@ class ADGroups(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(active_directory, basestring,
+        check_type(active_directory, str,
                    may_be_none=False)
 
         _params = {

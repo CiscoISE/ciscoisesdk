@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -176,7 +170,7 @@ class CustomAttributes(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -265,7 +259,7 @@ class CustomAttributes(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -312,7 +306,7 @@ class CustomAttributes(object):
         """Get custom attribute by name.
 
         Args:
-            name(basestring): name path parameter. Name of the
+            name(str): name path parameter. Name of the
                 custom attribute.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -344,7 +338,7 @@ class CustomAttributes(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(name, basestring,
+        check_type(name, str,
                    may_be_none=False)
 
         _params = {
@@ -373,7 +367,7 @@ class CustomAttributes(object):
         """Delete custom attribute by name.
 
         Args:
-            name(basestring): name path parameter. The name of the
+            name(str): name path parameter. The name of the
                 custom attribute.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -405,7 +399,7 @@ class CustomAttributes(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(name, basestring,
+        check_type(name, str,
                    may_be_none=False)
 
         _params = {

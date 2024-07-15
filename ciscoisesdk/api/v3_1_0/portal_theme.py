@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -101,7 +95,7 @@ class PortalTheme(object):
         """This API allows the client to get a portal theme by ID.
 
         Args:
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -127,23 +121,23 @@ class PortalTheme(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -197,7 +191,7 @@ class PortalTheme(object):
             name(string): name, property of the request body.
             theme_data(string): Portal Theme for all portals,
                 property of the request body.
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -227,16 +221,16 @@ class PortalTheme(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -245,10 +239,10 @@ class PortalTheme(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -327,7 +321,7 @@ class PortalTheme(object):
         """This API deletes a portal theme by ID.
 
         Args:
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -353,23 +347,23 @@ class PortalTheme(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -429,9 +423,9 @@ class PortalTheme(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sortasc(basestring): sortasc query parameter. sort asc.
-            sortdsc(basestring): sortdsc query parameter. sort desc.
-            filter(basestring, list, set, tuple): filter query
+            sortasc(str): sortasc query parameter. sort asc.
+            sortdsc(str): sortdsc query parameter. sort desc.
+            filter(str, list, set, tuple): filter query
                 parameter.               **Simple
                 filtering** should be available through
                 the filter query string parameter. The
@@ -456,7 +450,7 @@ class PortalTheme(object):
                 (CONTAINS: Contains),
                 (NCONTAINS: Not Contains),
                 .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
@@ -485,28 +479,28 @@ class PortalTheme(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(sortasc, basestring)
-        check_type(sortdsc, basestring)
-        check_type(filter, (basestring, list, set, tuple))
-        check_type(filter_type, basestring)
+        check_type(page, (int, str, list))
+        check_type(size, (int, str, list))
+        check_type(sortasc, str)
+        check_type(sortdsc, str)
+        check_type(filter, (str, list, set, tuple))
+        check_type(filter_type, str)
 
         _params = {
             'page':
@@ -586,9 +580,9 @@ class PortalTheme(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sortasc(basestring): sortasc query parameter. sort asc.
-            sortdsc(basestring): sortdsc query parameter. sort desc.
-            filter(basestring, list, set, tuple): filter query
+            sortasc(str): sortasc query parameter. sort asc.
+            sortdsc(str): sortdsc query parameter. sort desc.
+            filter(str, list, set, tuple): filter query
                 parameter.               **Simple
                 filtering** should be available through
                 the filter query string parameter. The
@@ -613,7 +607,7 @@ class PortalTheme(object):
                 (CONTAINS: Contains),
                 (NCONTAINS: Not Contains),
                 .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
@@ -725,16 +719,16 @@ class PortalTheme(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -743,7 +737,7 @@ class PortalTheme(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -842,10 +836,10 @@ class PortalTheme(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}

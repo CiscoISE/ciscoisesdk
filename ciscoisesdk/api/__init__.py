@@ -40,8 +40,6 @@ from ciscoisesdk.models.mydict import mydict_data_factory
 from ciscoisesdk.models.schema_validator import SchemaValidator
 from ciscoisesdk.restsession import RestSession
 from ciscoisesdk.utils import check_type
-from past.types import basestring
-
 from .authentication import Authentication
 from .custom_caller import CustomCaller
 from .v3_1_0.aci_bindings import (
@@ -1970,32 +1968,32 @@ class IdentityServicesEngineAPI(object):
         When not given enough parameters an AccessTokenError is raised.
 
         Args:
-            uses_api_gateway(bool,basestring): Controls whether we use the ISE's API
+            uses_api_gateway(bool,str): Controls whether we use the ISE's API
                 Gateway to make the request. Defaults to the
                 IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY
                 (or IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY_STRING) environment variable or
                 ciscoisesdk.config.DEFAULT_USES_API_GATEWAY if the environment
                 variables are not set.
-            base_url(basestring): The base URL to be prefixed to the
+            base_url(str): The base URL to be prefixed to the
                 individual API endpoint suffixes, used when uses_api_gateway is True.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable or
                 ciscoisesdk.config.DEFAULT_BASE_URL
                 if the environment variable is not set.
-            ui_base_url(basestring): The UI base URL to be prefixed to the
+            ui_base_url(str): The UI base URL to be prefixed to the
                 individual ISE UI API endpoint suffixes, used when uses_api_gateway is False.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable if set.
-            ers_base_url(basestring): The ERS base URL to be prefixed to the
+            ers_base_url(str): The ERS base URL to be prefixed to the
                 individual ISE ERS API endpoint suffixes, used when uses_api_gateway is False.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable if set.
-            mnt_base_url(basestring): The MNT base URL to be prefixed to the
+            mnt_base_url(str): The MNT base URL to be prefixed to the
                 individual ISE MNT API endpoint suffixes, used when uses_api_gateway is False.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable if set.
-            px_grid_base_url(basestring): The PxGrid base URL to be prefixed to the
+            px_grid_base_url(str): The PxGrid base URL to be prefixed to the
                 individual ISE PxGrid API endpoint suffixes, used when uses_api_gateway is False.
                 Defaults to the IDENTITY_SERVICES_ENGINE_BASE_URL environment variable if set.
-            username(basestring): HTTP Basic Auth username.
-            password(basestring): HTTP Basic Auth password.
-            encoded_auth(basestring): HTTP Basic Auth base64 encoded string.
+            username(str): HTTP Basic Auth username.
+            password(str): HTTP Basic Auth password.
+            encoded_auth(str): HTTP Basic Auth base64 encoded string.
             single_request_timeout(int): Timeout (in seconds) for RESTful HTTP
                 requests. Defaults to the IDENTITY_SERVICES_ENGINE_SINGLE_REQUEST_TIMEOUT
                 environment variable or
@@ -2006,21 +2004,21 @@ class IdentityServicesEngineAPI(object):
                 environment variable or
                 ciscoisesdk.config.DEFAULT_WAIT_ON_RATE_LIMIT
                 if the environment variable is not set.
-            verify(bool,basestring): Controls whether we verify the server's
+            verify(bool,str): Controls whether we verify the server's
                 TLS certificate, or a string, in which case it must be a path
                 to a CA bundle to use. Defaults to the IDENTITY_SERVICES_ENGINE_VERIFY
                 (or IDENTITY_SERVICES_ENGINE_VERIFY_STRING) environment variable or
                 ciscoisesdk.config.DEFAULT_VERIFY if the environment
                 variables are not set.
-            version(basestring): Controls which version of IDENTITY_SERVICES_ENGINE to use.
+            version(str): Controls which version of IDENTITY_SERVICES_ENGINE to use.
                 Defaults to the IDENTITY_SERVICES_ENGINE_VERSION environment variable or
                 ciscoisesdk.config.DEFAULT_VERSION
                 if the environment variable is not set.
-            debug(bool,basestring): Controls whether to log information about
+            debug(bool,str): Controls whether to log information about
                 Identity Services Engine APIs' request and response process.
                 Defaults to the IDENTITY_SERVICES_ENGINE_DEBUG environment variable or False
                 if the environment variable is not set.
-            uses_csrf_token(bool,basestring): Controls whether we send the CSRF token to ISE's ERS APIs.
+            uses_csrf_token(bool,str): Controls whether we send the CSRF token to ISE's ERS APIs.
                 Defaults to the
                 IDENTITY_SERVICES_ENGINE_USES_CSRF_TOKEN environment variable or
                 ciscoisesdk.config.DEFAULT_USES_CSRF_TOKEN if the environment
@@ -2101,14 +2099,14 @@ class IdentityServicesEngineAPI(object):
 
         check_type(self._single_request_timeout, int)
         check_type(self._wait_on_rate_limit, bool)
-        check_type(self._uses_api_gateway, (bool, basestring), may_be_none=False)
-        check_type(self._uses_csrf_token, (bool, basestring), may_be_none=False)
-        check_type(self._debug, (bool, basestring), may_be_none=True)
-        check_type(self._username, basestring, may_be_none=True)
-        check_type(self._password, basestring, may_be_none=True)
-        check_type(self._encoded_auth, basestring, may_be_none=True)
-        check_type(self._verify, (bool, basestring), may_be_none=False)
-        check_type(self._version, basestring, may_be_none=False)
+        check_type(self._uses_api_gateway, (bool, str), may_be_none=False)
+        check_type(self._uses_csrf_token, (bool, str), may_be_none=False)
+        check_type(self._debug, (bool, str), may_be_none=True)
+        check_type(self._username, str, may_be_none=True)
+        check_type(self._password, str, may_be_none=True)
+        check_type(self._encoded_auth, str, may_be_none=True)
+        check_type(self._verify, (bool, str), may_be_none=False)
+        check_type(self._version, str, may_be_none=False)
 
         if isinstance(self._uses_api_gateway, str):
             self._uses_api_gateway = 'true' in self._uses_api_gateway.lower()
@@ -2117,12 +2115,12 @@ class IdentityServicesEngineAPI(object):
             self._uses_csrf_token = 'true' in self._uses_csrf_token.lower()
 
         if self._uses_api_gateway:
-            check_type(self._base_url, basestring, may_be_none=False)
+            check_type(self._base_url, str, may_be_none=False)
         else:
-            check_type(self._ui_base_url, basestring, may_be_none=False)
-            check_type(self._ers_base_url, basestring, may_be_none=False)
-            check_type(self._mnt_base_url, basestring, may_be_none=False)
-            check_type(self._px_grid_base_url, basestring, may_be_none=False)
+            check_type(self._ui_base_url, str, may_be_none=False)
+            check_type(self._ers_base_url, str, may_be_none=False)
+            check_type(self._mnt_base_url, str, may_be_none=False)
+            check_type(self._px_grid_base_url, str, may_be_none=False)
 
         if self._version not in ['3.1.0', '3.1.1', '3.1_Patch_1', '3.2_beta', '3.3_patch_1']:
             raise VersionError(
@@ -5141,7 +5139,7 @@ class IdentityServicesEngineAPI(object):
         """HTTP Basic Auth username.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, basestring, may_be_none=True)
+        check_type(value, str, may_be_none=True)
         self._username = value
         warnings.warn("Changed username. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5149,7 +5147,7 @@ class IdentityServicesEngineAPI(object):
         """HTTP Basic Auth password.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(password, basestring, may_be_none=True)
+        check_type(password, str, may_be_none=True)
         self._password = password
         warnings.warn("Changed password. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5157,7 +5155,7 @@ class IdentityServicesEngineAPI(object):
         """HTTP Basic Auth base64 encoded string.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(encoded_auth, basestring, may_be_none=True)
+        check_type(encoded_auth, str, may_be_none=True)
         self._encoded_auth = encoded_auth
         warnings.warn("Changed encoded_auth. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5166,7 +5164,7 @@ class IdentityServicesEngineAPI(object):
         """If the Identity Services Engine API uses an API Gateway.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, (bool, basestring), may_be_none=False)
+        check_type(value, (bool, str), may_be_none=False)
         self._uses_api_gateway = value
         if isinstance(self._uses_api_gateway, str):
             self._uses_api_gateway = 'true' in self._uses_api_gateway.lower()
@@ -5177,7 +5175,7 @@ class IdentityServicesEngineAPI(object):
         """The base URL prefixed to the individual API endpoint suffixes for ERS and Custom Caller operations.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, basestring, may_be_none=not self._uses_api_gateway)
+        check_type(value, str, may_be_none=not self._uses_api_gateway)
         self.base_url = value
         warnings.warn("Changed base_url. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5186,7 +5184,7 @@ class IdentityServicesEngineAPI(object):
         """The ui base URL prefixed to the individual API endpoint suffixes for UI operations.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, basestring, may_be_none=self._uses_api_gateway)
+        check_type(value, str, may_be_none=self._uses_api_gateway)
         self._ui_base_url = value
         warnings.warn("Changed ui_base_url. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5195,7 +5193,7 @@ class IdentityServicesEngineAPI(object):
         """The ers base URL prefixed to the individual API endpoint suffixes for ERS operations.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, basestring, may_be_none=self._uses_api_gateway)
+        check_type(value, str, may_be_none=self._uses_api_gateway)
         self._ers_base_url = value
         warnings.warn("Changed ers_base_url. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5204,7 +5202,7 @@ class IdentityServicesEngineAPI(object):
         """The mnt base URL prefixed to the individual API endpoint suffixes for MNT operations.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, basestring, may_be_none=self._uses_api_gateway)
+        check_type(value, str, may_be_none=self._uses_api_gateway)
         self._mnt_base_url = value
         warnings.warn("Changed mnt_base_url. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5213,7 +5211,7 @@ class IdentityServicesEngineAPI(object):
         """The px_grid base URL prefixed to the individual API endpoint suffixes for PxGrid operations
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, basestring, may_be_none=self._uses_api_gateway)
+        check_type(value, str, may_be_none=self._uses_api_gateway)
         self._px_grid_base_url = value
         warnings.warn("Changed px_grid_base_url. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5241,7 +5239,7 @@ class IdentityServicesEngineAPI(object):
         """The verify (TLS Certificate) for the API endpoints.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, (bool, basestring), may_be_none=False)
+        check_type(value, (bool, str), may_be_none=False)
         self._verify = value
         warnings.warn("Changed verify. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
@@ -5250,7 +5248,7 @@ class IdentityServicesEngineAPI(object):
         """The API version of Identity Services Engine.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, basestring, may_be_none=False)
+        check_type(value, str, may_be_none=False)
         if value not in ['3.1.0', '3.1.1', '3.1_Patch_1', '3.2_beta', '3.3_patch_1']:
             raise VersionError(
                 'Unknown API version, '
@@ -5269,7 +5267,7 @@ class IdentityServicesEngineAPI(object):
         """If log information about Identity Services Engine APIs' request and response process is shown.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, (bool, basestring), may_be_none=False)
+        check_type(value, (bool, str), may_be_none=False)
         self._debug = value
         if isinstance(self._debug, str):
             self._debug = 'true' in self._debug.lower()
@@ -5280,7 +5278,7 @@ class IdentityServicesEngineAPI(object):
         """If the Identity Services Engine ERS API requires the X-CSRF-Token to be sent.
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
-        check_type(value, (bool, basestring), may_be_none=False)
+        check_type(value, (bool, str), may_be_none=False)
         self._uses_csrf_token = value
         if isinstance(self._uses_csrf_token, str):
             self._uses_csrf_token = 'true' in self._uses_csrf_token.lower()

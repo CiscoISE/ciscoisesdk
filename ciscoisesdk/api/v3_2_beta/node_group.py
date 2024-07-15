@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -136,7 +130,7 @@ class NodeGroup(object):
                           payload=None,
                           active_validation=True,
                           **query_parameters):
-        """    This API creates a node group in the cluster.  A node group
+        """This API creates a node group in the cluster.  A node group
         is a group of PSNs, where the PSNs maintain a heartbeat
         with each other. It is used primarily to terminate or
         transfer posture-pending sessions when a PSN in a local
@@ -165,7 +159,7 @@ class NodeGroup(object):
         "site6","marCache": {"replication-timeout": 5}}
         NOTE 1:  : Node group name and description cannot
         contain any of the following characters: ! % ^ : ; , . ~
-        @ # & [ { ( | ) } ] ` > <  / \ " + = ?  NOTE 2:  :
+        @ # & [ { ( | ) } ] ` > <  / '\' " + = ?  NOTE 2:  :
         Parameter marCache stands for Machine Access Restriction
         (MAR) cache that provides an additional means of
         controlling authorization for Active Directory-
@@ -220,7 +214,7 @@ class NodeGroup(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -270,7 +264,7 @@ class NodeGroup(object):
         using a node group name.
 
         Args:
-            node_group_name(basestring): nodeGroupName path
+            node_group_name(str): nodeGroupName path
                 parameter. Name of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -303,7 +297,7 @@ class NodeGroup(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {
@@ -334,7 +328,7 @@ class NodeGroup(object):
                           payload=None,
                           active_validation=True,
                           **query_parameters):
-        """    Purpose of this API is to update an existing node group.
+        """Purpose of this API is to update an existing node group.
         The following parameters are used in the request body of
         the API:         PARAMETER   DESCRIPTION   EXAMPLE
         name * required    Name of the node group existing in
@@ -362,7 +356,7 @@ class NodeGroup(object):
         "site6","marCache": {"replication-timeout": 5}}
         NOTE 1:   Node group name and description cannot contain
         any of the following characters: ! % ^ : ; , . ~ @ # & [
-        { ( | ) } ] ` > <  / \ " + = ?  NOTE 2:   Parameter
+        { ( | ) } ] ` > <  / '\' " + = ?  NOTE 2:   Parameter
         marCache stands for Machine Access Restriction (MAR)
         cache that provides an additional means of controlling
         authorization for Active Directory-authentication users.
@@ -381,7 +375,7 @@ class NodeGroup(object):
             mar_cache(object): marCache, property of the request
                 body.
             name(string): name, property of the request body.
-            node_group_name(basestring): nodeGroupName path
+            node_group_name(str): nodeGroupName path
                 parameter. Name of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -420,10 +414,10 @@ class NodeGroup(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {
@@ -476,7 +470,7 @@ class NodeGroup(object):
         longer carried out among the nodes.
 
         Args:
-            node_group_name(basestring): nodeGroupName path
+            node_group_name(str): nodeGroupName path
                 parameter. Name of the existing node
                 group.
             force_delete(bool): forceDelete query parameter. Force
@@ -514,7 +508,7 @@ class NodeGroup(object):
             with_custom_headers = True
         check_type(force_delete, bool,
                    may_be_none=False)
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {
@@ -557,7 +551,7 @@ class NodeGroup(object):
         Args:
             hostname(string): hostname, property of the request
                 body.
-            node_group_name(basestring): nodeGroupName path
+            node_group_name(str): nodeGroupName path
                 parameter. Name of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -596,10 +590,10 @@ class NodeGroup(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {
@@ -645,7 +639,7 @@ class NodeGroup(object):
         group in the cluster with a given node group name.
 
         Args:
-            node_group_name(basestring): nodeGroupName path
+            node_group_name(str): nodeGroupName path
                 parameter. Name of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -678,7 +672,7 @@ class NodeGroup(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {
@@ -719,7 +713,7 @@ class NodeGroup(object):
         Args:
             hostname(string): hostname, property of the request
                 body.
-            node_group_name(basestring): nodeGroupName path
+            node_group_name(str): nodeGroupName path
                 parameter. Name of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -758,10 +752,10 @@ class NodeGroup(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {

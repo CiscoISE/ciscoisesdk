@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -100,7 +94,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -199,7 +193,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -208,7 +202,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -307,7 +301,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -354,7 +348,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         """Device Admin Get global exception rule attribute.
 
         Args:
-            id(basestring): id path parameter. Rule id.
+            id(str): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -380,14 +374,14 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -449,7 +443,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             rule(object): Common attributes in rule
                 authentication/authorization, property
                 of the request body.
-            id(basestring): id path parameter. Rule id.
+            id(str): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -479,7 +473,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -488,10 +482,10 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -570,7 +564,7 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         """Device Admin Delete global exception authorization rule.
 
         Args:
-            id(basestring): id path parameter. Rule id.
+            id(str): id path parameter. Rule id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -596,14 +590,14 @@ class DeviceAdministrationAuthorizationGlobalExceptionRules(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {

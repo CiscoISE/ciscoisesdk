@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -107,7 +101,7 @@ class DownloadableAcl(object):
         """This API allows the client to get a downloadable ACL by ID.
 
         Args:
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -133,23 +127,23 @@ class DownloadableAcl(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -210,7 +204,7 @@ class DownloadableAcl(object):
                 alphanumeric or any of the following
                 characters [_.-], property of the
                 request body.
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -240,16 +234,16 @@ class DownloadableAcl(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -258,10 +252,10 @@ class DownloadableAcl(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -344,7 +338,7 @@ class DownloadableAcl(object):
         """This API deletes a downloadable ACL.
 
         Args:
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -370,23 +364,23 @@ class DownloadableAcl(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -458,24 +452,24 @@ class DownloadableAcl(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
+        check_type(page, (int, str, list))
+        check_type(size, (int, str, list))
 
         _params = {
             'page':
@@ -629,16 +623,16 @@ class DownloadableAcl(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -647,7 +641,7 @@ class DownloadableAcl(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -750,10 +744,10 @@ class DownloadableAcl(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}

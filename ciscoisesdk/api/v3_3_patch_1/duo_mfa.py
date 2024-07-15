@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -100,7 +94,7 @@ class DuoMfa(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -181,7 +175,7 @@ class DuoMfa(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -190,7 +184,7 @@ class DuoMfa(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -257,7 +251,7 @@ class DuoMfa(object):
                 request body.
             authentication_api(object): API type, property of the
                 request body.
-            connection_name(basestring): connectionName path
+            connection_name(str): connectionName path
                 parameter. This name is used to retrieve
                 secret keys for testing connection of
                 the specified Duo-MFA configuration in
@@ -291,7 +285,7 @@ class DuoMfa(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -300,10 +294,10 @@ class DuoMfa(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(connection_name, basestring,
+        check_type(connection_name, str,
                    may_be_none=False)
 
         _params = {
@@ -353,7 +347,7 @@ class DuoMfa(object):
         connectionName.
 
         Args:
-            connection_name(basestring): connectionName path
+            connection_name(str): connectionName path
                 parameter. This name is used to update,
                 delete or retrieve the specific Duo-MFA
                 configuration.
@@ -382,14 +376,14 @@ class DuoMfa(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(connection_name, basestring,
+        check_type(connection_name, str,
                    may_be_none=False)
 
         _params = {
@@ -438,7 +432,7 @@ class DuoMfa(object):
                 body.
             type(string): Protocol type for which this Duo-MFA can
                 be used, property of the request body.
-            connection_name(basestring): connectionName path
+            connection_name(str): connectionName path
                 parameter. This name is used to update,
                 delete or retrieve the specific Duo-MFA
                 configuration.
@@ -471,7 +465,7 @@ class DuoMfa(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -480,10 +474,10 @@ class DuoMfa(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(connection_name, basestring,
+        check_type(connection_name, str,
                    may_be_none=False)
 
         _params = {
@@ -541,7 +535,7 @@ class DuoMfa(object):
         connectionName.
 
         Args:
-            connection_name(basestring): connectionName path
+            connection_name(str): connectionName path
                 parameter. This name is used to update,
                 delete or retrieve the specific Duo-MFA
                 configuration.
@@ -570,14 +564,14 @@ class DuoMfa(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(connection_name, basestring,
+        check_type(connection_name, str,
                    may_be_none=False)
 
         _params = {

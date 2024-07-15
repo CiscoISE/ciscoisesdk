@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -100,7 +94,7 @@ class NetworkAccessTimeDateConditions(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -290,7 +284,7 @@ class NetworkAccessTimeDateConditions(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -299,7 +293,7 @@ class NetworkAccessTimeDateConditions(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -430,7 +424,7 @@ class NetworkAccessTimeDateConditions(object):
         """Network Access returns a network condition.
 
         Args:
-            id(basestring): id path parameter. Condition id.
+            id(str): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -456,14 +450,14 @@ class NetworkAccessTimeDateConditions(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -622,7 +616,7 @@ class NetworkAccessTimeDateConditions(object):
                 are 'Friday', 'Monday', 'Saturday',
                 'Sunday', 'Thursday', 'Tuesday' and
                 'Wednesday').
-            id(basestring): id path parameter. Condition id.
+            id(str): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -652,7 +646,7 @@ class NetworkAccessTimeDateConditions(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -661,10 +655,10 @@ class NetworkAccessTimeDateConditions(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -796,7 +790,7 @@ class NetworkAccessTimeDateConditions(object):
         """Network Access Delete Time/Date condition.
 
         Args:
-            id(basestring): id path parameter. Condition id.
+            id(str): id path parameter. Condition id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -822,14 +816,14 @@ class NetworkAccessTimeDateConditions(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {

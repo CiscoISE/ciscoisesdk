@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -129,13 +123,13 @@ class AciBindings(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type asc or
+            sort(str): sort query parameter. sort type asc or
                 desc.
-            sort_by(basestring): sortBy query parameter. sort column
+            sort_by(str): sortBy query parameter. sort column
                 by which objects needs to be sorted.
-            filter_by(basestring, list, set, tuple): filterBy query
+            filter_by(str, list, set, tuple): filterBy query
                 parameter.
-            filter_value(basestring, list, set, tuple): filterValue
+            filter_value(str, list, set, tuple): filterValue
                 query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -162,28 +156,28 @@ class AciBindings(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'ERS-Media-Type' in headers:
                 check_type(headers.get('ERS-Media-Type'),
-                           basestring)
+                           str)
             if 'X-CSRF-Token' in headers:
                 check_type(headers.get('X-CSRF-Token'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(sort, basestring)
-        check_type(sort_by, basestring)
-        check_type(filter_by, (basestring, list, set, tuple))
-        check_type(filter_value, (basestring, list, set, tuple))
+        check_type(page, (int, str, list))
+        check_type(size, (int, str, list))
+        check_type(sort, str)
+        check_type(sort_by, str)
+        check_type(filter_by, (str, list, set, tuple))
+        check_type(filter_value, (str, list, set, tuple))
 
         _params = {
             'page':
@@ -260,13 +254,13 @@ class AciBindings(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type asc or
+            sort(str): sort query parameter. sort type asc or
                 desc.
-            sort_by(basestring): sortBy query parameter. sort column
+            sort_by(str): sortBy query parameter. sort column
                 by which objects needs to be sorted.
-            filter_by(basestring, list, set, tuple): filterBy query
+            filter_by(str, list, set, tuple): filterBy query
                 parameter.
-            filter_value(basestring, list, set, tuple): filterValue
+            filter_value(str, list, set, tuple): filterValue
                 query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -363,10 +357,10 @@ class AciBindings(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}

@@ -23,8 +23,6 @@ SOFTWARE.
 """
 
 
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 import logging
 
 from ._metadata import *
@@ -46,7 +44,7 @@ logging.getLogger(__name__).addHandler(logging.NullHandler())
 logger = logging.getLogger(__name__)
 
 
-from pkg_resources import get_distribution
+from importlib.metadata import version
 
-release = get_distribution('ciscoisesdk').version
+release = version('ciscoisesdk')
 __version__ = '.'.join(release.split('.')[:3])

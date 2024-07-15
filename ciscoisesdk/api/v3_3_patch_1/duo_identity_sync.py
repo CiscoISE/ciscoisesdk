@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -101,7 +95,7 @@ class DuoIdentitySync(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -185,7 +179,7 @@ class DuoIdentitySync(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -194,7 +188,7 @@ class DuoIdentitySync(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -260,7 +254,7 @@ class DuoIdentitySync(object):
                 body (list of objects).
             status(string): status of sync, property of the request
                 body.
-            sync_name(basestring): syncName path parameter. Sync
+            sync_name(str): syncName path parameter. Sync
                 connection to be updated.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -298,10 +292,10 @@ class DuoIdentitySync(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(sync_name, basestring,
+        check_type(sync_name, str,
                    may_be_none=False)
 
         _params = {
@@ -351,7 +345,7 @@ class DuoIdentitySync(object):
         Identitysync config.
 
         Args:
-            sync_name(basestring): syncName path parameter. Name of
+            sync_name(str): syncName path parameter. Name of
                 the Identitysync configuration used to
                 cancel sync.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -379,14 +373,14 @@ class DuoIdentitySync(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(sync_name, basestring,
+        check_type(sync_name, str,
                    may_be_none=False)
 
         _params = {
@@ -418,7 +412,7 @@ class DuoIdentitySync(object):
         Identitysync config.
 
         Args:
-            sync_name(basestring): syncName path parameter. Name of
+            sync_name(str): syncName path parameter. Name of
                 the Identitysync configuration used to
                 initiate sync.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -446,14 +440,14 @@ class DuoIdentitySync(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(sync_name, basestring,
+        check_type(sync_name, str,
                    may_be_none=False)
 
         _params = {
@@ -483,7 +477,7 @@ class DuoIdentitySync(object):
         syncName.
 
         Args:
-            sync_name(basestring): syncName path parameter. This
+            sync_name(str): syncName path parameter. This
                 name is used to update, delete or
                 retrieve the specific Identitysync
                 config.
@@ -512,14 +506,14 @@ class DuoIdentitySync(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(sync_name, basestring,
+        check_type(sync_name, str,
                    may_be_none=False)
 
         _params = {
@@ -571,7 +565,7 @@ class DuoIdentitySync(object):
                 body. Available values are 'Cancelled',
                 'Failed', 'Pending', 'Pending
                 Cancellation' and 'Success'.
-            sync_name(basestring): syncName path parameter. This
+            sync_name(str): syncName path parameter. This
                 name is used to update, delete or
                 retrieve the specific Identitysync
                 config.
@@ -604,7 +598,7 @@ class DuoIdentitySync(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -613,10 +607,10 @@ class DuoIdentitySync(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(sync_name, basestring,
+        check_type(sync_name, str,
                    may_be_none=False)
 
         _params = {
@@ -676,7 +670,7 @@ class DuoIdentitySync(object):
         in the syncName.
 
         Args:
-            sync_name(basestring): syncName path parameter. This
+            sync_name(str): syncName path parameter. This
                 name is used to update, delete or
                 retrieve the specific Identitysync
                 config.
@@ -705,14 +699,14 @@ class DuoIdentitySync(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(sync_name, basestring,
+        check_type(sync_name, str,
                    may_be_none=False)
 
         _params = {

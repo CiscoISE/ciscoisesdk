@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -122,7 +116,7 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -179,7 +173,7 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -236,7 +230,7 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -293,7 +287,7 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -350,7 +344,7 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -383,7 +377,7 @@ class Misc(object):
         """Sessions by MAC.
 
         Args:
-            mac(basestring): mac path parameter.
+            mac(str): mac path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -409,14 +403,14 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(mac, basestring,
+        check_type(mac, str,
                    may_be_none=False)
 
         _params = {
@@ -445,7 +439,7 @@ class Misc(object):
         """Sessions by Username.
 
         Args:
-            username(basestring): username path parameter.
+            username(str): username path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -471,14 +465,14 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(username, basestring,
+        check_type(username, str,
                    may_be_none=False)
 
         _params = {
@@ -507,7 +501,7 @@ class Misc(object):
         """Sessions by NAS IP.
 
         Args:
-            nas_ipv4(basestring): nas_ipv4 path parameter.
+            nas_ipv4(str): nas_ipv4 path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -533,14 +527,14 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(nas_ipv4, basestring,
+        check_type(nas_ipv4, str,
                    may_be_none=False)
 
         _params = {
@@ -569,7 +563,7 @@ class Misc(object):
         """Sessions by Endpoint IP.
 
         Args:
-            endpoint_ipv4(basestring): endpoint_ipv4 path parameter.
+            endpoint_ipv4(str): endpoint_ipv4 path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -595,14 +589,14 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(endpoint_ipv4, basestring,
+        check_type(endpoint_ipv4, str,
                    may_be_none=False)
 
         _params = {
@@ -631,7 +625,7 @@ class Misc(object):
         """Sessions by SessionID.
 
         Args:
-            session_id(basestring): session_id path parameter.
+            session_id(str): session_id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -657,14 +651,14 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(session_id, basestring,
+        check_type(session_id, str,
                    may_be_none=False)
 
         _params = {
@@ -717,7 +711,7 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -774,7 +768,7 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -831,7 +825,7 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -866,9 +860,9 @@ class Misc(object):
         """AuthenticationStatus by MAC.
 
         Args:
-            mac(basestring): MAC path parameter.
-            seconds(basestring): SECONDS path parameter.
-            records(basestring): RECORDS path parameter.
+            mac(str): MAC path parameter.
+            seconds(str): SECONDS path parameter.
+            records(str): RECORDS path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -894,18 +888,18 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(mac, basestring,
+        check_type(mac, str,
                    may_be_none=False)
-        check_type(seconds, basestring,
+        check_type(seconds, str,
                    may_be_none=False)
-        check_type(records, basestring,
+        check_type(records, str,
                    may_be_none=False)
 
         _params = {
@@ -939,9 +933,9 @@ class Misc(object):
         """Session Reauthentication by MAC.
 
         Args:
-            psn_name(basestring): PSN_NAME path parameter.
-            endpoint_mac(basestring): ENDPOINT_MAC path parameter.
-            reauth_type(basestring): REAUTH_TYPE path parameter.
+            psn_name(str): PSN_NAME path parameter.
+            endpoint_mac(str): ENDPOINT_MAC path parameter.
+            reauth_type(str): REAUTH_TYPE path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -967,18 +961,18 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(psn_name, basestring,
+        check_type(psn_name, str,
                    may_be_none=False)
-        check_type(endpoint_mac, basestring,
+        check_type(endpoint_mac, str,
                    may_be_none=False)
-        check_type(reauth_type, basestring,
+        check_type(reauth_type, str,
                    may_be_none=False)
 
         _params = {
@@ -1014,12 +1008,12 @@ class Misc(object):
         """Session Disconnect.
 
         Args:
-            endpoint_ip(basestring): ENDPOINT_IP path parameter.
-            psn_name(basestring): PSN_NAME path parameter.
-            mac(basestring): MAC path parameter.
-            disconnect_type (basestring): DISCONNECT_TYPE path
+            endpoint_ip(str): ENDPOINT_IP path parameter.
+            psn_name(str): PSN_NAME path parameter.
+            mac(str): MAC path parameter.
+            disconnect_type (str): DISCONNECT_TYPE path
                 parameter.
-            nas_ipv4(basestring): NAS_IPV4 path parameter.
+            nas_ipv4(str): NAS_IPV4 path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -1045,22 +1039,22 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(endpoint_ip, basestring,
+        check_type(endpoint_ip, str,
                    may_be_none=False)
-        check_type(psn_name, basestring,
+        check_type(psn_name, str,
                    may_be_none=False)
-        check_type(mac, basestring,
+        check_type(mac, str,
                    may_be_none=False)
-        check_type(disconnect_type, basestring,
+        check_type(disconnect_type, str,
                    may_be_none=False)
-        check_type(nas_ipv4, basestring,
+        check_type(nas_ipv4, str,
                    may_be_none=False)
 
         _params = {
@@ -1095,8 +1089,8 @@ class Misc(object):
         """AccountStatus by MAC.
 
         Args:
-            mac(basestring): mac path parameter.
-            duration(basestring): duration path parameter.
+            mac(str): mac path parameter.
+            duration(str): duration path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -1122,16 +1116,16 @@ class Misc(object):
         if headers is not None:
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(mac, basestring,
+        check_type(mac, str,
                    may_be_none=False)
-        check_type(duration, basestring,
+        check_type(duration, str,
                    may_be_none=False)
 
         _params = {
