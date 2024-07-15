@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -77,9 +71,9 @@ class FullUpgrade(object):
         """get the latest precheck report .
 
         Args:
-            pre_check_report_id(basestring): preCheckReportID query
+            pre_check_report_id(str): preCheckReportID query
                 parameter.
-            pre_check_id(basestring): preCheckID query parameter.
+            pre_check_id(str): preCheckID query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -105,15 +99,15 @@ class FullUpgrade(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(pre_check_report_id, basestring)
-        check_type(pre_check_id, basestring)
+        check_type(pre_check_report_id, str)
+        check_type(pre_check_id, str)
 
         _params = {
             'preCheckReportID':
@@ -198,7 +192,7 @@ class FullUpgrade(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -207,7 +201,7 @@ class FullUpgrade(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -266,7 +260,7 @@ class FullUpgrade(object):
         """get the status of upgrade process for the requested nodes .
 
         Args:
-            pre_check_report_id(basestring): preCheckReportID query
+            pre_check_report_id(str): preCheckReportID query
                 parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -293,14 +287,14 @@ class FullUpgrade(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(pre_check_report_id, basestring)
+        check_type(pre_check_report_id, str)
 
         _params = {
             'preCheckReportID':
@@ -369,7 +363,7 @@ class FullUpgrade(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -378,7 +372,7 @@ class FullUpgrade(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -466,7 +460,7 @@ class FullUpgrade(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -475,7 +469,7 @@ class FullUpgrade(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -525,7 +519,7 @@ class FullUpgrade(object):
         .
 
         Args:
-            pre_check_report_id(basestring): preCheckReportID query
+            pre_check_report_id(str): preCheckReportID query
                 parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -552,14 +546,14 @@ class FullUpgrade(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(pre_check_report_id, basestring)
+        check_type(pre_check_report_id, str)
 
         _params = {
             'preCheckReportID':
@@ -630,7 +624,7 @@ class FullUpgrade(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -639,7 +633,7 @@ class FullUpgrade(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -714,7 +708,7 @@ class FullUpgrade(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}

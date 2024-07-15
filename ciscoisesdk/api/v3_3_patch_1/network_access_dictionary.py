@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -101,7 +95,7 @@ class NetworkAccessDictionary(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -195,7 +189,7 @@ class NetworkAccessDictionary(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -204,7 +198,7 @@ class NetworkAccessDictionary(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -287,7 +281,7 @@ class NetworkAccessDictionary(object):
         """GET a dictionary by name.
 
         Args:
-            name(basestring): name path parameter. the dictionary
+            name(str): name path parameter. the dictionary
                 name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -314,20 +308,20 @@ class NetworkAccessDictionary(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(name, basestring,
+        check_type(name, str,
                    may_be_none=False)
 
         _params = {
@@ -390,7 +384,7 @@ class NetworkAccessDictionary(object):
                 request body.
             version(string): The dictionary version, property of the
                 request body.
-            name(basestring): name path parameter. the dictionary
+            name(str): name path parameter. the dictionary
                 name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -421,13 +415,13 @@ class NetworkAccessDictionary(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -436,10 +430,10 @@ class NetworkAccessDictionary(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(name, basestring,
+        check_type(name, str,
                    may_be_none=False)
 
         _params = {
@@ -523,7 +517,7 @@ class NetworkAccessDictionary(object):
         """Network Access Delete a Dictionary.
 
         Args:
-            name(basestring): name path parameter. the dictionary
+            name(str): name path parameter. the dictionary
                 name.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -550,20 +544,20 @@ class NetworkAccessDictionary(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(name, basestring,
+        check_type(name, str,
                    may_be_none=False)
 
         _params = {

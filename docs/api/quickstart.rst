@@ -273,7 +273,7 @@ If you don't provide the URLs necessary and try to create a new :class:`Identity
       File "ciscoisesdk/api/__init__.py", line 336, in __init__
       File "ciscoisesdk/utils.py", line 165, in check_type
     TypeError: We were expecting to receive an instance of one of the following types: 
-    'basestring'; but instead we received None which is a 'NoneType'.
+    'str'; but instead we received None which is a 'NoneType'.
 
 
 .. code-block:: python
@@ -292,7 +292,7 @@ If you don't provide the URLs necessary and try to create a new :class:`Identity
       File "ciscoisesdk/api/__init__.py", line 341, in __init__
       File "ciscoisesdk/utils.py", line 165, in check_type
     TypeError: We were expecting to receive an instance of one of the following types: 
-    'basestring'; but instead we received None which is a 'NoneType'.
+    'str'; but instead we received None which is a 'NoneType'.
 
 
 Certificates

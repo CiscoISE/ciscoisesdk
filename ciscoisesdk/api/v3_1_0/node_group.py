@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -138,7 +132,7 @@ class NodeGroup(object):
         """Get details of a node group in the cluster.
 
         Args:
-            node_group_name(basestring): node-group-name path
+            node_group_name(str): node-group-name path
                 parameter. ID of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -171,7 +165,7 @@ class NodeGroup(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {
@@ -212,7 +206,7 @@ class NodeGroup(object):
                 to 256 and minLength set to 1.
             mar_cache(object): mar-cache, property of the request
                 body.
-            node_group_name(basestring): node-group-name path
+            node_group_name(str): node-group-name path
                 parameter. ID of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -251,10 +245,10 @@ class NodeGroup(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {
@@ -310,7 +304,7 @@ class NodeGroup(object):
                 to 256 and minLength set to 1.
             mar_cache(object): mar-cache, property of the request
                 body.
-            node_group_name(basestring): node-group-name path
+            node_group_name(str): node-group-name path
                 parameter. ID of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -349,10 +343,10 @@ class NodeGroup(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {
@@ -400,7 +394,7 @@ class NodeGroup(object):
         """Developers need to delete node group in the system.
 
         Args:
-            node_group_name(basestring): node-group-name path
+            node_group_name(str): node-group-name path
                 parameter. ID of the existing node
                 group.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -433,7 +427,7 @@ class NodeGroup(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(node_group_name, basestring,
+        check_type(node_group_name, str,
                    may_be_none=False)
 
         _params = {

@@ -22,17 +22,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from __future__ import absolute_import, division, print_function, unicode_literals
-
-from future import standard_library
-
-standard_library.install_aliases()
 
 from base64 import b64encode
 from builtins import *
-
-from past.builtins import basestring
-
 from ..utils import check_type, validate_base_url
 
 
@@ -50,13 +42,13 @@ class Authentication(object):
         object with the provided RestSession.
 
         Args:
-            base_url(basestring): The base URL to be prefixed to the
+            base_url(str): The base URL to be prefixed to the
                 individual API endpoint suffixes.
             object_factory(callable): The factory function to use to create
                 Python objects from the returned Identity Services Engine JSON data objects.
             single_request_timeout(int): Timeout in seconds for the API
                 requests.
-            verify(bool,basestring): Controls whether we verify the server's
+            verify(bool,str): Controls whether we verify the server's
                 TLS certificate, or a string, in which case it must be a path
                 to a CA bundle to use.
 
@@ -64,9 +56,9 @@ class Authentication(object):
             TypeError: If the parameter types are incorrect.
 
         """
-        check_type(base_url, basestring, may_be_none=False)
+        check_type(base_url, str, may_be_none=False)
         check_type(single_request_timeout, int)
-        check_type(verify, (bool, basestring), may_be_none=False)
+        check_type(verify, (bool, str), may_be_none=False)
 
         super(Authentication, self).__init__()
 
@@ -95,7 +87,7 @@ class Authentication(object):
     @verify.setter
     def verify(self, value):
         """The verify (TLS Certificate) for the API endpoints."""
-        check_type(value, (bool, basestring), may_be_none=False)
+        check_type(value, (bool, str), may_be_none=False)
         self._verify = value
         self._request_kwargs = {"timeout": self._single_request_timeout,
                                 "verify": self._verify}
@@ -103,7 +95,7 @@ class Authentication(object):
     @base_url.setter
     def base_url(self, value):
         """The base URL for the API endpoints."""
-        check_type(value, basestring, may_be_none=False)
+        check_type(value, str, may_be_none=False)
         self._base_url = str(validate_base_url(value))
 
     @single_request_timeout.setter
@@ -120,9 +112,9 @@ class Authentication(object):
         that can be used to invoke the APIs.
 
         Args:
-            username(basestring): HTTP Basic Auth username.
-            password(basestring): HTTP Basic Auth password.
-            encoded_auth(basestring): HTTP Basic Auth base64 encoded string.
+            username(str): HTTP Basic Auth username.
+            password(str): HTTP Basic Auth password.
+            encoded_auth(str): HTTP Basic Auth base64 encoded string.
 
         Returns:
             AccessToken: An AccessToken object with the access token provided
@@ -133,12 +125,12 @@ class Authentication(object):
 
         """
         if encoded_auth is not None:
-            check_type(encoded_auth, basestring, may_be_none=False)
+            check_type(encoded_auth, str, may_be_none=False)
             if isinstance(encoded_auth, str):
                 encoded_auth = bytes(encoded_auth, 'utf-8')
         else:
-            check_type(username, basestring, may_be_none=False)
-            check_type(password, basestring, may_be_none=False)
+            check_type(username, str, may_be_none=False)
+            check_type(password, str, may_be_none=False)
             encoded_auth = b64encode(bytes(username + ':' + password, "utf-8"))
 
         if isinstance(encoded_auth, bytes):

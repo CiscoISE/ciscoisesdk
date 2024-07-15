@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -77,7 +71,7 @@ class ReplicationStatus(object):
         """Retrives replication status of a node.
 
         Args:
-            node(basestring): node path parameter. ID of the
+            node(str): node path parameter. ID of the
                 existing node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -109,7 +103,7 @@ class ReplicationStatus(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(node, basestring,
+        check_type(node, str,
                    may_be_none=False)
 
         _params = {

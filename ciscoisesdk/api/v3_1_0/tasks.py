@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -131,7 +125,7 @@ class Tasks(object):
         """Monitor task status.
 
         Args:
-            task_id(basestring): taskId path parameter. The id of
+            task_id(str): taskId path parameter. The id of
                 the task executed before.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -163,7 +157,7 @@ class Tasks(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(task_id, basestring,
+        check_type(task_id, str,
                    may_be_none=False)
 
         _params = {

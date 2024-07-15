@@ -13,9 +13,8 @@ readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.6"
-requests = ">=2.27.1"
+requests = "^2.27.1"
 fastjsonschema = "^2.16.2"
-future = ">=0.18.3"
 requests-toolbelt = "^1.0.0"
 xmltodict = "0.12.0"
 

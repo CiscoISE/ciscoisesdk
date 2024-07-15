@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -100,7 +94,7 @@ class Edda(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -196,7 +190,7 @@ class Edda(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -205,7 +199,7 @@ class Edda(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -273,7 +267,7 @@ class Edda(object):
         """EDDA Get connectorConfig information based on ConnectorName.
 
         Args:
-            connector_name(basestring): connectorName path
+            connector_name(str): connectorName path
                 parameter. update or delete or retrieve
                 the connector config.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -301,14 +295,14 @@ class Edda(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(connector_name, basestring,
+        check_type(connector_name, str,
                    may_be_none=False)
 
         _params = {
@@ -372,7 +366,7 @@ class Edda(object):
                 skipCertificateValidations, property of
                 the request body.
             url(object): url, property of the request body.
-            connector_name(basestring): connectorName path
+            connector_name(str): connectorName path
                 parameter. update or delete or retrieve
                 the connector config.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -404,7 +398,7 @@ class Edda(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -413,10 +407,10 @@ class Edda(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(connector_name, basestring,
+        check_type(connector_name, str,
                    may_be_none=False)
 
         _params = {
@@ -486,7 +480,7 @@ class Edda(object):
         ConnectorName.
 
         Args:
-            connector_name(basestring): connectorName path
+            connector_name(str): connectorName path
                 parameter. update or delete or retrieve
                 the connector config.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -514,14 +508,14 @@ class Edda(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(connector_name, basestring,
+        check_type(connector_name, str,
                    may_be_none=False)
 
         _params = {
@@ -574,7 +568,7 @@ class Edda(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -655,7 +649,7 @@ class Edda(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -664,7 +658,7 @@ class Edda(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 

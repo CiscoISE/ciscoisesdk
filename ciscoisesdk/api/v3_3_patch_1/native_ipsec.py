@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -88,7 +82,7 @@ class NativeIpsec(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            filter(basestring): filter query parameter.
+            filter(str): filter query parameter.
                 Simple filtering  should be available
                 through the filter query string
                 parameter. The structure of a filter is
@@ -109,13 +103,13 @@ class NativeIpsec(object):
                 NEQ   Not Equals   nadIp       EQ
                 Equals   status       NEQ   Not Equals
                 status         .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
-            sort(basestring): sort query parameter. sort type asc or
+            sort(str): sort query parameter. sort type asc or
                 desc.
-            sort_by(basestring): sortBy query parameter. Sort column
+            sort_by(str): sortBy query parameter. Sort column
                 The IPsec enabled nodes are sorted based
                 on the columns. This is applicable for
                 the field hostName.
@@ -149,12 +143,12 @@ class NativeIpsec(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(filter, basestring)
-        check_type(filter_type, basestring)
-        check_type(sort, basestring)
-        check_type(sort_by, basestring)
+        check_type(page, (int, str, list))
+        check_type(size, (int, str, list))
+        check_type(filter, str)
+        check_type(filter_type, str)
+        check_type(sort, str)
+        check_type(sort_by, str)
 
         _params = {
             'page':
@@ -205,7 +199,7 @@ class NativeIpsec(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            filter(basestring): filter query parameter.
+            filter(str): filter query parameter.
                 Simple filtering  should be available
                 through the filter query string
                 parameter. The structure of a filter is
@@ -226,13 +220,13 @@ class NativeIpsec(object):
                 NEQ   Not Equals   nadIp       EQ
                 Equals   status       NEQ   Not Equals
                 status         .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
-            sort(basestring): sort query parameter. sort type asc or
+            sort(str): sort query parameter. sort type asc or
                 desc.
-            sort_by(basestring): sortBy query parameter. Sort column
+            sort_by(str): sortBy query parameter. Sort column
                 The IPsec enabled nodes are sorted based
                 on the columns. This is applicable for
                 the field hostName.
@@ -463,7 +457,7 @@ class NativeIpsec(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -733,7 +727,7 @@ class NativeIpsec(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -864,7 +858,7 @@ class NativeIpsec(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -967,9 +961,9 @@ class NativeIpsec(object):
         """Disables an enabled IPsec node connection.
 
         Args:
-            host_name(basestring): hostName path parameter. Hostname
+            host_name(str): hostName path parameter. Hostname
                 of the deployed node.
-            nad_ip(basestring): nadIp path parameter. IP address of
+            nad_ip(str): nadIp path parameter. IP address of
                 the NAD.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1001,9 +995,9 @@ class NativeIpsec(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(host_name, basestring,
+        check_type(host_name, str,
                    may_be_none=False)
-        check_type(nad_ip, basestring,
+        check_type(nad_ip, str,
                    may_be_none=False)
 
         _params = {
@@ -1035,9 +1029,9 @@ class NativeIpsec(object):
         """Enables an disabled IPsec node connection.
 
         Args:
-            host_name(basestring): hostName path parameter. Hostname
+            host_name(str): hostName path parameter. Hostname
                 of the deployed node.
-            nad_ip(basestring): nadIp path parameter. IP address of
+            nad_ip(str): nadIp path parameter. IP address of
                 the NAD.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1069,9 +1063,9 @@ class NativeIpsec(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(host_name, basestring,
+        check_type(host_name, str,
                    may_be_none=False)
-        check_type(nad_ip, basestring,
+        check_type(nad_ip, str,
                    may_be_none=False)
 
         _params = {
@@ -1104,9 +1098,9 @@ class NativeIpsec(object):
         hostname and the NAD IP.
 
         Args:
-            host_name(basestring): hostName path parameter. Hostname
+            host_name(str): hostName path parameter. Hostname
                 of the deployed node.
-            nad_ip(basestring): nadIp path parameter. IP address of
+            nad_ip(str): nadIp path parameter. IP address of
                 the NAD.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1138,9 +1132,9 @@ class NativeIpsec(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(host_name, basestring,
+        check_type(host_name, str,
                    may_be_none=False)
-        check_type(nad_ip, basestring,
+        check_type(nad_ip, str,
                    may_be_none=False)
 
         _params = {
@@ -1171,9 +1165,9 @@ class NativeIpsec(object):
         """Removes an enabled IPsec node connection.
 
         Args:
-            host_name(basestring): hostName path parameter. Hostname
+            host_name(str): hostName path parameter. Hostname
                 of the deployed node.
-            nad_ip(basestring): nadIp path parameter. IP address of
+            nad_ip(str): nadIp path parameter. IP address of
                 the NAD.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1205,9 +1199,9 @@ class NativeIpsec(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(host_name, basestring,
+        check_type(host_name, str,
                    may_be_none=False)
-        check_type(nad_ip, basestring,
+        check_type(nad_ip, str,
                    may_be_none=False)
 
         _params = {

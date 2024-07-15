@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -84,7 +78,7 @@ class Subscriber(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            filter(basestring): filter query parameter.
+            filter(str): filter query parameter.
                 Simple filtering  should be available
                 through the filter query string
                 parameter. The structure of a filter is
@@ -105,13 +99,13 @@ class Subscriber(object):
                 NENDSW   Not Ends With       CONTAINS
                 Contains       NCONTAINS   Not Contains
                 .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
-            sort(basestring): sort query parameter. sort type asc or
+            sort(str): sort query parameter. sort type asc or
                 desc.
-            sort_by(basestring): sortBy query parameter. sort column
+            sort_by(str): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -138,19 +132,19 @@ class Subscriber(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(filter, basestring)
-        check_type(filter_type, basestring)
-        check_type(sort, basestring)
-        check_type(sort_by, basestring)
+        check_type(page, (int, str, list))
+        check_type(size, (int, str, list))
+        check_type(filter, str)
+        check_type(filter_type, str)
+        check_type(sort, str)
+        check_type(sort_by, str)
 
         _params = {
             'page':
@@ -197,7 +191,7 @@ class Subscriber(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            filter(basestring): filter query parameter.
+            filter(str): filter query parameter.
                 Simple filtering  should be available
                 through the filter query string
                 parameter. The structure of a filter is
@@ -218,13 +212,13 @@ class Subscriber(object):
                 NENDSW   Not Ends With       CONTAINS
                 Contains       NCONTAINS   Not Contains
                 .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
-            sort(basestring): sort query parameter. sort type asc or
+            sort(str): sort query parameter. sort type asc or
                 desc.
-            sort_by(basestring): sortBy query parameter. sort column
+            sort_by(str): sortBy query parameter. sort column
                 by which objects needs to be sorted.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -320,7 +314,7 @@ class Subscriber(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -329,7 +323,7 @@ class Subscriber(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -386,7 +380,7 @@ class Subscriber(object):
         """Get the subscriber for a given ID.
 
         Args:
-            subscriber_id(basestring): subscriberId path parameter.
+            subscriber_id(str): subscriberId path parameter.
                 Unique ID for a subscriber object.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -413,14 +407,14 @@ class Subscriber(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(subscriber_id, basestring,
+        check_type(subscriber_id, str,
                    may_be_none=False)
 
         _params = {
@@ -469,7 +463,7 @@ class Subscriber(object):
                 property of the request body.
             ki(string): KI, property of the request body.
             opc(string): OPC, property of the request body.
-            subscriber_id(basestring): subscriberId path parameter.
+            subscriber_id(str): subscriberId path parameter.
                 Unique ID for a subscriber object.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -500,7 +494,7 @@ class Subscriber(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -509,10 +503,10 @@ class Subscriber(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(subscriber_id, basestring,
+        check_type(subscriber_id, str,
                    may_be_none=False)
 
         _params = {
@@ -568,7 +562,7 @@ class Subscriber(object):
         """Delete the subscriber for a given ID.
 
         Args:
-            subscriber_id(basestring): subscriberId path parameter.
+            subscriber_id(str): subscriberId path parameter.
                 Unique ID for a subscriber object.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -595,14 +589,14 @@ class Subscriber(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(subscriber_id, basestring,
+        check_type(subscriber_id, str,
                    may_be_none=False)
 
         _params = {
@@ -631,7 +625,7 @@ class Subscriber(object):
         """Get a subscriber by IMSI.
 
         Args:
-            imsi(basestring): imsi path parameter. IMSI parameter.
+            imsi(str): imsi path parameter. IMSI parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -657,14 +651,14 @@ class Subscriber(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(imsi, basestring,
+        check_type(imsi, str,
                    may_be_none=False)
 
         _params = {
@@ -730,7 +724,7 @@ class Subscriber(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -739,7 +733,7 @@ class Subscriber(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 

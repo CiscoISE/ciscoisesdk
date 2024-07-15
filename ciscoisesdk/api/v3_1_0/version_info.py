@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -77,7 +71,7 @@ class VersionInfo(object):
         """Get all VersionInfo.
 
         Args:
-            resource(basestring): resource path parameter.
+            resource(str): resource path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -103,17 +97,17 @@ class VersionInfo(object):
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
             if 'Accept' in headers:
                 check_type(headers.get('Accept'),
-                           basestring, may_be_none=False)
+                           str, may_be_none=False)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(resource, basestring,
+        check_type(resource, str,
                    may_be_none=False)
 
         _params = {

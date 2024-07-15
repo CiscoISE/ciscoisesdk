@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -77,7 +71,7 @@ class NetworkAccessDictionaryAttribute(object):
         Dictionary.
 
         Args:
-            dictionary_name(basestring): dictionaryName path
+            dictionary_name(str): dictionaryName path
                 parameter. the name of the dictionary
                 the dictionary attribute belongs to.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -105,14 +99,14 @@ class NetworkAccessDictionaryAttribute(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(dictionary_name, basestring,
+        check_type(dictionary_name, str,
                    may_be_none=False)
 
         _params = {
@@ -191,7 +185,7 @@ class NetworkAccessDictionaryAttribute(object):
                 request body.
             name(string): The dictionary attribute's name, property
                 of the request body.
-            dictionary_name(basestring): dictionaryName path
+            dictionary_name(str): dictionaryName path
                 parameter. the name of the dictionary
                 the dictionary attribute belongs to.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -223,7 +217,7 @@ class NetworkAccessDictionaryAttribute(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -232,10 +226,10 @@ class NetworkAccessDictionaryAttribute(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(dictionary_name, basestring,
+        check_type(dictionary_name, str,
                    may_be_none=False)
 
         _params = {
@@ -328,9 +322,9 @@ class NetworkAccessDictionaryAttribute(object):
         """Get a Dictionary Attribute.
 
         Args:
-            name(basestring): name path parameter. the dictionary
+            name(str): name path parameter. the dictionary
                 attribute name.
-            dictionary_name(basestring): dictionaryName path
+            dictionary_name(str): dictionaryName path
                 parameter. the name of the dictionary
                 the dictionary attribute belongs to.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -358,16 +352,16 @@ class NetworkAccessDictionaryAttribute(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(name, basestring,
+        check_type(name, str,
                    may_be_none=False)
-        check_type(dictionary_name, basestring,
+        check_type(dictionary_name, str,
                    may_be_none=False)
 
         _params = {
@@ -449,9 +443,9 @@ class NetworkAccessDictionaryAttribute(object):
                 request body.
             name(string): The dictionary attribute's name, property
                 of the request body.
-            name(basestring): name path parameter. the dictionary
+            name(str): name path parameter. the dictionary
                 attribute name.
-            dictionary_name(basestring): dictionaryName path
+            dictionary_name(str): dictionaryName path
                 parameter. the name of the dictionary
                 the dictionary attribute belongs to.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -483,7 +477,7 @@ class NetworkAccessDictionaryAttribute(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -492,12 +486,12 @@ class NetworkAccessDictionaryAttribute(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(name, basestring,
+        check_type(name, str,
                    may_be_none=False)
-        check_type(dictionary_name, basestring,
+        check_type(dictionary_name, str,
                    may_be_none=False)
 
         _params = {
@@ -592,9 +586,9 @@ class NetworkAccessDictionaryAttribute(object):
         """Delete a Dictionary Attribute.
 
         Args:
-            name(basestring): name path parameter. the dictionary
+            name(str): name path parameter. the dictionary
                 attribute name.
-            dictionary_name(basestring): dictionaryName path
+            dictionary_name(str): dictionaryName path
                 parameter. the name of the dictionary
                 the dictionary attribute belongs to.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -622,16 +616,16 @@ class NetworkAccessDictionaryAttribute(object):
         if headers is not None:
             if 'X-Request-ID' in headers:
                 check_type(headers.get('X-Request-ID'),
-                           basestring)
+                           str)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(name, basestring,
+        check_type(name, str,
                    may_be_none=False)
-        check_type(dictionary_name, basestring,
+        check_type(dictionary_name, str,
                    may_be_none=False)
 
         _params = {

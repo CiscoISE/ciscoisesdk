@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -78,7 +72,7 @@ class NodeServices(object):
         cluster. .
 
         Args:
-            hostname(basestring): hostname path parameter. Hostname
+            hostname(str): hostname path parameter. Hostname
                 of the node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -110,7 +104,7 @@ class NodeServices(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {
@@ -139,7 +133,7 @@ class NodeServices(object):
         """This API retrieves the SXP interface. .
 
         Args:
-            hostname(basestring): hostname path parameter. Hostname
+            hostname(str): hostname path parameter. Hostname
                 of the node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -171,7 +165,7 @@ class NodeServices(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {
@@ -205,7 +199,7 @@ class NodeServices(object):
         Args:
             interface(string): interface, property of the request
                 body.
-            hostname(basestring): hostname path parameter. Hostname
+            hostname(str): hostname path parameter. Hostname
                 of the node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -243,10 +237,10 @@ class NodeServices(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {
@@ -292,7 +286,7 @@ class NodeServices(object):
         """This API retrieves the profiler probe configuration of a PSN. .
 
         Args:
-            hostname(basestring): hostname path parameter. Hostname
+            hostname(str): hostname path parameter. Hostname
                 of the node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -324,7 +318,7 @@ class NodeServices(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {
@@ -415,7 +409,7 @@ class NodeServices(object):
                 linkdown, and MAC notification traps
                 from network devices., property of the
                 request body.
-            hostname(basestring): hostname path parameter. Hostname
+            hostname(str): hostname path parameter. Hostname
                 of the node.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -453,10 +447,10 @@ class NodeServices(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(hostname, basestring,
+        check_type(hostname, str,
                    may_be_none=False)
 
         _params = {

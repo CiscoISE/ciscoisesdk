@@ -22,13 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from __future__ import absolute_import, division, print_function, unicode_literals
-
 from builtins import *
-
-from past.builtins import basestring
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -85,11 +79,11 @@ class VnVlanMapping(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type asc or
+            sort(str): sort query parameter. sort type asc or
                 desc.
-            sort_by(basestring): sortBy query parameter. sort column
+            sort_by(str): sortBy query parameter. sort column
                 by which objects needs to be sorted.
-            filter(basestring): filter query parameter.
+            filter(str): filter query parameter.
                 Simple filtering  should be available
                 through the filter query string
                 parameter. The structure of a filter is
@@ -110,7 +104,7 @@ class VnVlanMapping(object):
                 NENDSW   Not Ends With       CONTAINS
                 Contains       NCONTAINS   Not Contains
                 .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
@@ -144,12 +138,12 @@ class VnVlanMapping(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(page, (int, basestring, list))
-        check_type(size, (int, basestring, list))
-        check_type(sort, basestring)
-        check_type(sort_by, basestring)
-        check_type(filter, basestring)
-        check_type(filter_type, basestring)
+        check_type(page, (int, str, list))
+        check_type(size, (int, str, list))
+        check_type(sort, str)
+        check_type(sort_by, str)
+        check_type(filter, str)
+        check_type(filter_type, str)
 
         _params = {
             'page':
@@ -196,11 +190,11 @@ class VnVlanMapping(object):
             page(int): page query parameter. Page number.
             size(int): size query parameter. Number of objects
                 returned per page.
-            sort(basestring): sort query parameter. sort type asc or
+            sort(str): sort query parameter. sort type asc or
                 desc.
-            sort_by(basestring): sortBy query parameter. sort column
+            sort_by(str): sortBy query parameter. sort column
                 by which objects needs to be sorted.
-            filter(basestring): filter query parameter.
+            filter(str): filter query parameter.
                 Simple filtering  should be available
                 through the filter query string
                 parameter. The structure of a filter is
@@ -221,7 +215,7 @@ class VnVlanMapping(object):
                 NENDSW   Not Ends With       CONTAINS
                 Contains       NCONTAINS   Not Contains
                 .
-            filter_type(basestring): filterType query parameter. The
+            filter_type(str): filterType query parameter. The
                 logical operator common to ALL filter
                 criteria will be by default AND, and can
                 be changed by using the parameter.
@@ -335,7 +329,7 @@ class VnVlanMapping(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
 
@@ -463,7 +457,7 @@ class VnVlanMapping(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, list)
 
@@ -553,7 +547,7 @@ class VnVlanMapping(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, list)
 
@@ -643,7 +637,7 @@ class VnVlanMapping(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, list)
 
@@ -696,7 +690,7 @@ class VnVlanMapping(object):
         """Get VN-Vlan Mapping by id.
 
         Args:
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -727,7 +721,7 @@ class VnVlanMapping(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -801,7 +795,7 @@ class VnVlanMapping(object):
             vn_name(string): Name of the associated Virtual Network
                 to be used for identity if id is not
                 provided, property of the request body.
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -838,10 +832,10 @@ class VnVlanMapping(object):
             with_custom_headers = True
         is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
         if active_validation and is_xml_payload:
-            check_type(payload, basestring)
+            check_type(payload, str)
         if active_validation and not is_xml_payload:
             check_type(payload, dict)
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
@@ -933,7 +927,7 @@ class VnVlanMapping(object):
         """Delete VN-Vlan Mapping.
 
         Args:
-            id(basestring): id path parameter.
+            id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **query_parameters: Additional query parameters (provides
@@ -964,7 +958,7 @@ class VnVlanMapping(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
-        check_type(id, basestring,
+        check_type(id, str,
                    may_be_none=False)
 
         _params = {
