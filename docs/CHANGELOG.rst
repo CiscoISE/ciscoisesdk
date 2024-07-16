@@ -11,6 +11,12 @@ Versioning <https://semver.org/spec/v2.0.0.html>`__.
 `Unreleased <https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.2...develop>`__
 ---------------------------------------------------------------------------------
 
+-  Update requirements:
+
+   -  python = “^3.8”
+   -  requests = “^2.32.0”
+   -  readthedocs-sphinx-search = “^0.3.2”
+
 `2.2.2 <https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.1...v2.2.2>`__ - 2024-07-16
 ----------------------------------------------------------------------------------------
 
