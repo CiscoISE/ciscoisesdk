@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ciscoisesdk"
-version = "2.2.2"
+version = "2.2.3"
 description = "Cisco Identity Services Engine Platform SDK"
 authors = ["Jose Bogarin Solano <jbogarin@cloverhound.com>", "William Astorga <wastorga@cloverhound.com>", "Bryan Vargas <bvargas@cloverhound.com>", "Francisco Muñoz <fmunoz@cloverhound.com>"]
 license = "MIT"

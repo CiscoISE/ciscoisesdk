@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.2.3] - 2024-08-05
+- Update `endpoint.get_endpoints` in 3.3 patch 1 change `filterType` to `filtertype` json request 
+- Update `SupportBundleDownload` API to remove unused parameters
+- Update User-Agent header in RestSession
 - Update requirements:
   + python = "^3.8"
   + requests = "^2.32.0"
@@ -454,4 +459,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.2.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.1.2...v2.2.0
 [2.2.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.0...v2.2.1
 [2.2.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.1...v2.2.2
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.2...develop
+[2.2.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.2...v2.2.3
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.3...develop
