@@ -1145,7 +1145,7 @@ class Endpoint(object):
                 sortdsc,
             'filter':
                 filter,
-            'filterType':
+            'filtertype': ## Issue #116 ansible-ise
                 filter_type,
         }
         _params.update(query_parameters)

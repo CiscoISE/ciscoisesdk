@@ -211,6 +211,7 @@ class RestSession(object):
 
         # Update the headers of the `requests` session
         self.update_headers({'authorization': 'Basic ' + access_token})
+        self.update_headers({'User-Agent': f'python-cisco-ise/{version}'})
         if headers and isinstance(headers, dict):
             self.update_headers(headers)
 
