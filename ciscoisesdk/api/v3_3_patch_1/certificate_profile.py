@@ -870,3 +870,153 @@ class CertificateProfile(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e00be3b97b85829bef60c09eaa922ac_v3_3_patch_1', _api_response)
+
+    def patch_certificate_profile_id(self,
+                                     id,
+                                     allowed_as_user_name=None,
+                                     certificate_attribute_name=None,
+                                     description=None,
+                                     external_identity_store_name=None,
+                                     match_mode=None,
+                                     name=None,
+                                     username_from=None,
+                                     headers=None,
+                                     payload=None,
+                                     active_validation=True,
+                                     **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            allowed_as_user_name(boolean): To be set true or false,
+                property of the request body.
+            certificate_attribute_name(object): Attribute name of
+                the Certificate Profile used only when
+                CERTIFICATE is chosen in usernameFrom.
+                Allowed values: SUBJECT_COMMON_NAME,
+                SUBJECT_ALTERNATIVE_NAME,
+                SUBJECT_SERIAL_NUMBER, SUBJECT,
+                SUBJECT_ALTERNATIVE_NAME_OTHER_NAME,
+                SUBJECT_ALTERNATIVE_NAME_EMAIL,
+                SUBJECT_ALTERNATIVE_NAME_DNS. Additional
+                internal value
+                ALL_SUBJECT_AND_ALTERNATIVE_NAMES is
+                used automatically when
+                usernameFrom=UPN, property of the
+                request body.
+            description(string): Description, property of the
+                request body.
+            external_identity_store_name(string): referred IDStore
+                name for the Certificate Profile or [not
+                applicable] in case no identity store is
+                chosen, property of the request body.
+            id(string): Id, property of the request body.
+            match_mode(object): Match mode of the Certificate
+                Profile. Allowed values: NEVER,
+                RESOLVE_IDENTITY_AMBIGUITY,
+                BINARY_COMPARISON, property of the
+                request body.
+            name(string): name, property of the request body.
+            username_from(object): The attribute in the certificate
+                where the user name should be taken
+                from. Allowed values: CERTIFICATE (for a
+                specific attribute as defined in
+                certificateAttributeName), UPN (for
+                using any Subject or Alternative Name
+                Attributes in the Certificate an option
+                only in AD), property of the request
+                body.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'allowedAsUserName':
+                    allowed_as_user_name,
+                'externalIdentityStoreName':
+                    external_identity_store_name,
+                'certificateAttributeName':
+                    certificate_attribute_name,
+                'matchMode':
+                    match_mode,
+                'usernameFrom':
+                    username_from,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'CertificateProfile': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_c6bb957970e589b98010d3ad8dbbfa3_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/certificateprofile/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_c6bb957970e589b98010d3ad8dbbfa3_v3_3_patch_1', _api_response)

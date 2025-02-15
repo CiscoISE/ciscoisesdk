@@ -1707,3 +1707,323 @@ class NetworkDevice(object):
             headers=headers,
             **query_parameters
         )
+
+    def patch_network_device_name_name(self,
+                                       name,
+                                       authentication_settings=None,
+                                       coa_port=None,
+                                       description=None,
+                                       dtls_dns_name=None,
+                                       id=None,
+                                       model_name=None,
+                                       network_device_group_list=None,
+                                       network_device_iplist=None,
+                                       profile_name=None,
+                                       snmpsettings=None,
+                                       software_version=None,
+                                       tacacs_settings=None,
+                                       trustsecsettings=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            network_device_group_list(list): List of NDG names for
+                this node, property of the request body
+                (list of strings).
+            network_device_iplist(list): List of IPSubnets for this
+                node, property of the request body (list
+                of any objects).
+            authentication_settings(): authenticationSettings,
+                property of the request body.
+            coa_port(number): since 2.0 (for 3rd party), property of
+                the request body.
+            description(string): Description, property of the
+                request body.
+            dtls_dns_name(string): This value is used to verify the
+                client identity contained in the X.509
+                RADIUS/DTLS client certificate, property
+                of the request body.
+            id(string): Id, property of the request body.
+            model_name(string): modelName, property of the request
+                body.
+            name(string): name, property of the request body.
+            profile_name(string): since 2.0 (for 3rd party),
+                property of the request body.
+            snmpsettings(): snmpsettings, property of the request
+                body.
+            software_version(string): softwareVersion, property of
+                the request body.
+            tacacs_settings(): tacacsSettings, property of the
+                request body.
+            trustsecsettings(): trustsecsettings, property of the
+                request body.
+            name(str): name path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(name, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'name': name,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'authenticationSettings':
+                    authentication_settings,
+                'coaPort':
+                    coa_port,
+                'dtlsDnsName':
+                    dtls_dns_name,
+                'NetworkDeviceIPList':
+                    network_device_iplist,
+                'NetworkDeviceGroupList':
+                    network_device_group_list,
+                'modelName':
+                    model_name,
+                'softwareVersion':
+                    software_version,
+                'profileName':
+                    profile_name,
+                'snmpsettings':
+                    snmpsettings,
+                'tacacsSettings':
+                    tacacs_settings,
+                'trustsecsettings':
+                    trustsecsettings,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'NetworkDevice': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_f3d98c9771c557b881dfc1d45516ea23_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/networkdevice/name/{name}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_f3d98c9771c557b881dfc1d45516ea23_v3_3_patch_1', _api_response)
+
+    def patch_network_device_id(self,
+                                id,
+                                authentication_settings=None,
+                                coa_port=None,
+                                description=None,
+                                dtls_dns_name=None,
+                                model_name=None,
+                                name=None,
+                                network_device_group_list=None,
+                                network_device_iplist=None,
+                                profile_name=None,
+                                snmpsettings=None,
+                                software_version=None,
+                                tacacs_settings=None,
+                                trustsecsettings=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            network_device_group_list(list): List of NDG names for
+                this node, property of the request body
+                (list of strings).
+            network_device_iplist(list): List of IPSubnets for this
+                node, property of the request body (list
+                of any objects).
+            authentication_settings(): authenticationSettings,
+                property of the request body.
+            coa_port(number): since 2.0 (for 3rd party), property of
+                the request body.
+            description(string): Description, property of the
+                request body.
+            dtls_dns_name(string): This value is used to verify the
+                client identity contained in the X.509
+                RADIUS/DTLS client certificate, property
+                of the request body.
+            id(string): Id, property of the request body.
+            model_name(string): modelName, property of the request
+                body.
+            name(string): name, property of the request body.
+            profile_name(string): since 2.0 (for 3rd party),
+                property of the request body.
+            snmpsettings(): snmpsettings, property of the request
+                body.
+            software_version(string): softwareVersion, property of
+                the request body.
+            tacacs_settings(): tacacsSettings, property of the
+                request body.
+            trustsecsettings(): trustsecsettings, property of the
+                request body.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'authenticationSettings':
+                    authentication_settings,
+                'coaPort':
+                    coa_port,
+                'dtlsDnsName':
+                    dtls_dns_name,
+                'NetworkDeviceIPList':
+                    network_device_iplist,
+                'NetworkDeviceGroupList':
+                    network_device_group_list,
+                'modelName':
+                    model_name,
+                'softwareVersion':
+                    software_version,
+                'profileName':
+                    profile_name,
+                'snmpsettings':
+                    snmpsettings,
+                'tacacsSettings':
+                    tacacs_settings,
+                'trustsecsettings':
+                    trustsecsettings,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'NetworkDevice': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_f3ef592da51cbb2ba2e239065d509_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/networkdevice/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_f3ef592da51cbb2ba2e239065d509_v3_3_patch_1', _api_response)
