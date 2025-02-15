@@ -3376,6 +3376,87 @@ from .validators.v3_3_patch_1.jsd_fe478ea1775758638d714efe1b67eec2 import (
 from .validators.v3_3_patch_1.jsd_ff0055f9ef115a42bea6ffdd8e57d41b import (
     JSONSchemaValidatorFf0055F9Ef115A42Bea6Ffdd8E57D41B as JSONSchemaValidatorFf0055F9Ef115A42Bea6Ffdd8E57D41B_v3_3_patch_1
 )
+from .validators.v3_3_patch_1.jsd_da4eb995ac152158f324dfdef5e73d6 import (
+    JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6 as JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_cf54bcfca54ff8300d01df5f56daf import (
+    JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf as JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_c6bb957970e589b98010d3ad8dbbfa3 import (
+    JSONSchemaValidatorC6Bb957970E589B98010D3Ad8Dbbfa3 as JSONSchemaValidatorC6Bb957970E589B98010D3Ad8Dbbfa3_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_b0514ee0516d57978711c201ba54dcd9 import (
+    JSONSchemaValidatorB0514Ee0516D57978711C201Ba54Dcd9 as JSONSchemaValidatorB0514Ee0516D57978711C201Ba54Dcd9_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_aa2f78896596894e1bdceee801e7e import (
+    JSONSchemaValidatorAa2F78896596894E1Bdceee801E7E as JSONSchemaValidatorAa2F78896596894E1Bdceee801E7E_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_a107646bee520ba8247b06bf23311c import (
+    JSONSchemaValidatorA107646Bee520BA8247B06Bf23311C as JSONSchemaValidatorA107646Bee520Ba8247B06Bf23311C_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_d7468254be85e97a56521bff13da212 import (
+    JSONSchemaValidatorD7468254Be85E97A56521Bff13Da212 as JSONSchemaValidatorD7468254Be85E97A56521Bff13Da212_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_d1f85d51e0255c6bb9e89d0617d3434 import (
+    JSONSchemaValidatorD1F85D51E0255C6Bb9E89D0617D3434 as JSONSchemaValidatorD1F85D51E0255C6Bb9E89D0617D3434_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_b567b3c2e23f5ad6bff0528becdf8f4e import (
+    JSONSchemaValidatorB567B3C2E23F5Ad6Bff0528Becdf8F4E as JSONSchemaValidatorB567B3C2E23F5Ad6Bff0528Becdf8F4E_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_ea76f9eda505e9b76f9db632c28e7 import (
+    JSONSchemaValidatorEa76F9Eda505E9B76F9Db632C28E7 as JSONSchemaValidatorEa76F9Eda505E9B76F9Db632C28E7_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_cfa8d603cadc58d59aa71f70fbb8aafd import (
+    JSONSchemaValidatorCfa8D603Cadc58D59Aa71F70Fbb8Aafd as JSONSchemaValidatorCfa8D603Cadc58D59Aa71F70Fbb8Aafd_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_ae06d30a95a53acbde70ac0a09f0bd2 import (
+    JSONSchemaValidatorAe06D30A95A53AcBde70Ac0A09F0Bd2 as JSONSchemaValidatorAe06D30A95A53AcBde70Ac0A09F0Bd2_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_f1fccad4645cbb8961c7d0a5408247 import (
+    JSONSchemaValidatorF1FccaD4645Cbb8961C7D0A5408247 as JSONSchemaValidatorF1Fccad4645Cbb8961C7D0A5408247_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_b243462eb0589d866791af0b0d700d import (
+    JSONSchemaValidatorB243462Eb0589D866791Af0B0D700D as JSONSchemaValidatorB243462Eb0589D866791Af0B0D700D_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_cd1bba62cec58edb1b2511ec2b15f00 import (
+    JSONSchemaValidatorCd1Bba62Cec58EdB1B2511Ec2B15F00 as JSONSchemaValidatorCd1Bba62Cec58Edb1B2511Ec2B15F00_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_d06a54c39df0d047ac567529 import (
+    JSONSchemaValidatorD06A54C39Df0D047Ac567529 as JSONSchemaValidatorD06A54C39Df0D047Ac567529_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_f3d98c9771c557b881dfc1d45516ea23 import (
+    JSONSchemaValidatorF3D98C9771C557B881DfC1D45516Ea23 as JSONSchemaValidatorF3D98C9771C557B881Dfc1D45516Ea23_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_f3ef592da51cbb2ba2e239065d509 import (
+    JSONSchemaValidatorF3Ef592Da51CbB2Ba2E239065D509 as JSONSchemaValidatorF3Ef592Da51Cbb2Ba2E239065D509_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_b891cec4b78f54afa4a5fd1d8f74e712 import (
+    JSONSchemaValidatorB891Cec4B78F54AfA4A5Fd1D8F74E712 as JSONSchemaValidatorB891Cec4B78F54AfA4A5Fd1D8F74E712_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_b2399e6734a154e6a636d53148a249f8 import (
+    JSONSchemaValidatorB2399E6734A154E6A636D53148A249F8 as JSONSchemaValidatorB2399E6734A154E6A636D53148A249F8_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_fced674832255f00b1d01cd38d378bf1 import (
+    JSONSchemaValidatorFced674832255F00B1D01Cd38D378Bf1 as JSONSchemaValidatorFced674832255F00B1D01Cd38D378Bf1_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_fe2adcd154a1862a3400b89a52b7 import (
+    JSONSchemaValidatorFe2ADcd154A1862A3400B89A52B7 as JSONSchemaValidatorFe2Adcd154A1862A3400B89A52B7_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_c17abc3935da0be0bfeb440189fa5 import (
+    JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5 as JSONSchemaValidatorC17Abc3935Da0Be0Bfeb440189Fa5_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_b79b6f2b5b95a8c90d81302c90c296e import (
+    JSONSchemaValidatorB79B6F2B5B95A8C90D81302C90C296E as JSONSchemaValidatorB79B6F2B5B95A8C90D81302C90C296E_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_da64546331b051f984efb97c89c20400 import (
+    JSONSchemaValidatorDa64546331B051F984EfB97C89C20400 as JSONSchemaValidatorDa64546331B051F984Efb97C89C20400_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_f78c0526a8165eddab02c9783 import (
+    JSONSchemaValidatorF78C0526A8165Eddab02C9783 as JSONSchemaValidatorF78C0526A8165Eddab02C9783_v3_3_patch_1
+)
+from .validators.v3_3_patch_1.jsd_a9a1ce0f5d935704a56b49e69140c547 import (
+    JSONSchemaValidatorA9A1Ce0F5D935704A56B49E69140C547 as JSONSchemaValidatorA9A1Ce0F5D935704A56B49E69140C547_v3_3_patch_1
+)
 
 
 class JSONSchemaValidator(object):
@@ -5633,6 +5714,61 @@ class SchemaValidator:
                 JSONSchemaValidatorFe478Ea1775758638D714Efe1B67Eec2_v3_3_patch_1()
             self.json_schema_validators['jsd_ff0055f9ef115a42bea6ffdd8e57d41b_v3_3_patch_1'] =\
                 JSONSchemaValidatorFf0055F9Ef115A42Bea6Ffdd8E57D41B_v3_3_patch_1()
+            self.json_schema_validators['jsd_da4eb995ac152158f324dfdef5e73d6_v3_3_patch_1'] =\
+                JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6_v3_3_patch_1()
+            self.json_schema_validators['jsd_cf54bcfca54ff8300d01df5f56daf_v3_3_patch_1'] =\
+                JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf_v3_3_patch_1()
+            self.json_schema_validators['jsd_c6bb957970e589b98010d3ad8dbbfa3_v3_3_patch_1'] =\
+                JSONSchemaValidatorC6Bb957970E589B98010D3Ad8Dbbfa3_v3_3_patch_1()
+            self.json_schema_validators['jsd_b0514ee0516d57978711c201ba54dcd9_v3_3_patch_1'] =\
+                JSONSchemaValidatorB0514Ee0516D57978711C201Ba54Dcd9_v3_3_patch_1()
+            self.json_schema_validators['jsd_aa2f78896596894e1bdceee801e7e_v3_3_patch_1'] =\
+                JSONSchemaValidatorAa2F78896596894E1Bdceee801E7E_v3_3_patch_1()
+            self.json_schema_validators['jsd_a107646bee520ba8247b06bf23311c_v3_3_patch_1'] =\
+                JSONSchemaValidatorA107646Bee520Ba8247B06Bf23311C_v3_3_patch_1()
+            self.json_schema_validators['jsd_d7468254be85e97a56521bff13da212_v3_3_patch_1'] =\
+                JSONSchemaValidatorD7468254Be85E97A56521Bff13Da212_v3_3_patch_1()
+            self.json_schema_validators['jsd_d1f85d51e0255c6bb9e89d0617d3434_v3_3_patch_1'] =\
+                JSONSchemaValidatorD1F85D51E0255C6Bb9E89D0617D3434_v3_3_patch_1()
+            self.json_schema_validators['jsd_b567b3c2e23f5ad6bff0528becdf8f4e_v3_3_patch_1'] =\
+                JSONSchemaValidatorB567B3C2E23F5Ad6Bff0528Becdf8F4E_v3_3_patch_1()
+            self.json_schema_validators['jsd_ea76f9eda505e9b76f9db632c28e7_v3_3_patch_1'] =\
+                JSONSchemaValidatorEa76F9Eda505E9B76F9Db632C28E7_v3_3_patch_1()
+            self.json_schema_validators['jsd_cfa8d603cadc58d59aa71f70fbb8aafd_v3_3_patch_1'] =\
+                JSONSchemaValidatorCfa8D603Cadc58D59Aa71F70Fbb8Aafd_v3_3_patch_1()
+            self.json_schema_validators['jsd_ae06d30a95a53acbde70ac0a09f0bd2_v3_3_patch_1'] =\
+                JSONSchemaValidatorAe06D30A95A53AcBde70Ac0A09F0Bd2_v3_3_patch_1()
+            self.json_schema_validators['jsd_f1fccad4645cbb8961c7d0a5408247_v3_3_patch_1'] =\
+                JSONSchemaValidatorF1Fccad4645Cbb8961C7D0A5408247_v3_3_patch_1()
+            self.json_schema_validators['jsd_b243462eb0589d866791af0b0d700d_v3_3_patch_1'] =\
+                JSONSchemaValidatorB243462Eb0589D866791Af0B0D700D_v3_3_patch_1()
+            self.json_schema_validators['jsd_cd1bba62cec58edb1b2511ec2b15f00_v3_3_patch_1'] =\
+                JSONSchemaValidatorCd1Bba62Cec58Edb1B2511Ec2B15F00_v3_3_patch_1()
+            self.json_schema_validators['jsd_d06a54c39df0d047ac567529_v3_3_patch_1'] =\
+                JSONSchemaValidatorD06A54C39Df0D047Ac567529_v3_3_patch_1()
+            self.json_schema_validators['jsd_f3d98c9771c557b881dfc1d45516ea23_v3_3_patch_1'] =\
+                JSONSchemaValidatorF3D98C9771C557B881Dfc1D45516Ea23_v3_3_patch_1()
+            self.json_schema_validators['jsd_f3ef592da51cbb2ba2e239065d509_v3_3_patch_1'] =\
+                JSONSchemaValidatorF3Ef592Da51Cbb2Ba2E239065D509_v3_3_patch_1()
+            self.json_schema_validators['jsd_b891cec4b78f54afa4a5fd1d8f74e712_v3_3_patch_1'] =\
+                JSONSchemaValidatorB891Cec4B78F54AfA4A5Fd1D8F74E712_v3_3_patch_1()
+            self.json_schema_validators['jsd_b2399e6734a154e6a636d53148a249f8_v3_3_patch_1'] =\
+                JSONSchemaValidatorB2399E6734A154E6A636D53148A249F8_v3_3_patch_1()
+            self.json_schema_validators['jsd_fced674832255f00b1d01cd38d378bf1_v3_3_patch_1'] =\
+                JSONSchemaValidatorFced674832255F00B1D01Cd38D378Bf1_v3_3_patch_1()
+            self.json_schema_validators['jsd_fe2adcd154a1862a3400b89a52b7_v3_3_patch_1'] =\
+                JSONSchemaValidatorFe2Adcd154A1862A3400B89A52B7_v3_3_patch_1()
+            self.json_schema_validators['jsd_c17abc3935da0be0bfeb440189fa5_v3_3_patch_1'] =\
+                JSONSchemaValidatorC17Abc3935Da0Be0Bfeb440189Fa5_v3_3_patch_1()
+            self.json_schema_validators['jsd_b79b6f2b5b95a8c90d81302c90c296e_v3_3_patch_1'] =\
+                JSONSchemaValidatorB79B6F2B5B95A8C90D81302C90C296E_v3_3_patch_1()
+            self.json_schema_validators['jsd_da64546331b051f984efb97c89c20400_v3_3_patch_1'] =\
+                JSONSchemaValidatorDa64546331B051F984Efb97C89C20400_v3_3_patch_1()
+            self.json_schema_validators['jsd_f78c0526a8165eddab02c9783_v3_3_patch_1'] =\
+                JSONSchemaValidatorF78C0526A8165Eddab02C9783_v3_3_patch_1()
+            self.json_schema_validators['jsd_a9a1ce0f5d935704a56b49e69140c547_v3_3_patch_1'] =\
+                JSONSchemaValidatorA9A1Ce0F5D935704A56B49E69140C547_v3_3_patch_1()
+
 
     def json_schema_validate(self, model):
         """Factory function for creating JSONSchemaValidator objects.
