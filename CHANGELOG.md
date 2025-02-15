@@ -6,6 +6,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.0] - 2025-02-14
+### Added
+- The following functions were added for version 3.3 patch 1:
+  + `patch_allowed_protocols_id`
+  + `patch_authorization_profile_id`
+  + `patch_certificate_profile_id`
+  + `patch_downloadable_acl_id`
+  + `patch_endpoint_group_id`
+  + `patch_endpoint_id`
+  + `patch_external_radius_server_id`
+  + `patch_filter_policy_id`
+  + `patch_guest_smtp_notification_settings_id`
+  + `patch_guest_ssid_id`
+  + `patch_hotspot_portal_portal_id`
+  + `patch_identity_group_id`
+  + `patch_id_store_sequence_id`
+  + `patch_internal_user_name_name`
+  + `patch_internal_user_id`
+  + `patch_network_device_group_id`
+  + `patch_network_device_name_name`
+  + `patch_network_device_id`
+  + `patch_portal_theme_id`
+  + `patch_radius_server_sequence_id`
+  + `patch_restid_store_name_name`
+  + `patch_restid_store_id`
+  + `patch_self_reg_portal_portal_id`
+  + `patch_tacacs_command_sets_id`
+  + `patch_tacacs_external_servers_id`
+  + `patch_tacacs_profile_id`
+  + `patch_tacacs_server_sequence_id`
+
 ## [2.2.3] - 2024-08-05
 - Update `endpoint.get_endpoints` in 3.3 patch 1 change `filterType` to `filtertype` json request 
 - Update `SupportBundleDownload` API to remove unused parameters
@@ -460,4 +491,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.2.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.0...v2.2.1
 [2.2.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.1...v2.2.2
 [2.2.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.2...v2.2.3
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.3...develop
+[2.3.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.3...v2.3.0
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.0...develop
