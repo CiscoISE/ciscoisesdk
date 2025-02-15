@@ -398,3 +398,86 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_radius_server_sequence_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_b2399e6734a154e6a636d53148a249f8_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_radius_server_sequence_id(api):
+    endpoint_result = api.radius_server_sequence.patch_radius_server_sequence_id(
+        active_validation=False,
+        before_accept_attr_manipulators_list=[{'AttributeManipulator': {}}],
+        continue_authorz_policy=True,
+        description='string',
+        id='string',
+        local_accounting=True,
+        name='string',
+        on_request_attr_manipulator_list=[{'AttributeManipulator': {}}],
+        payload=None,
+        prefix_separator='string',
+        radius_server_list=['string'],
+        remote_accounting=True,
+        strip_prefix=True,
+        strip_suffix=True,
+        suffix_separator='string',
+        use_attr_set_before_acc=True,
+        use_attr_set_on_request=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.radius_server_sequence
+def test_patch_radius_server_sequence_id(api, validator):
+    try:
+        assert is_valid_patch_radius_server_sequence_id(
+            validator,
+            patch_radius_server_sequence_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_radius_server_sequence_id_default(api):
+    endpoint_result = api.radius_server_sequence.patch_radius_server_sequence_id(
+        active_validation=False,
+        id='string',
+        before_accept_attr_manipulators_list=None,
+        continue_authorz_policy=None,
+        description=None,
+        local_accounting=None,
+        name=None,
+        on_request_attr_manipulator_list=None,
+        payload=None,
+        prefix_separator=None,
+        radius_server_list=None,
+        remote_accounting=None,
+        strip_prefix=None,
+        strip_suffix=None,
+        suffix_separator=None,
+        use_attr_set_before_acc=None,
+        use_attr_set_on_request=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.radius_server_sequence
+def test_patch_radius_server_sequence_id_default(api, validator):
+    try:
+        assert is_valid_patch_radius_server_sequence_id(
+            validator,
+            patch_radius_server_sequence_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

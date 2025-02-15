@@ -374,3 +374,72 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_hotspot_portal_portal_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_cfa8d603cadc58d59aa71f70fbb8aafd_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_hotspot_portal_portal_id(api):
+    endpoint_result = api.hotspot_portal.patch_hotspot_portal_portal_id(
+        active_validation=False,
+        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'banneColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {}, 'globalCustomizations': {'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string', 'mobileLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        portal_id='string',
+        portal_test_url='string',
+        portal_type='string',
+        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string', 'coaType': 'string'}, 'aupSettings': {'requireAccessCode': True, 'accessCode': 'string', 'includeAup': True, 'requireAupScrolling': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}
+    )
+    return endpoint_result
+
+
+@pytest.mark.hotspot_portal
+def test_patch_hotspot_portal_portal_id(api, validator):
+    try:
+        assert is_valid_patch_hotspot_portal_portal_id(
+            validator,
+            patch_hotspot_portal_portal_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_hotspot_portal_portal_id_default(api):
+    endpoint_result = api.hotspot_portal.patch_hotspot_portal_portal_id(
+        active_validation=False,
+        portal_id='string',
+        customizations=None,
+        description=None,
+        id=None,
+        name=None,
+        payload=None,
+        portal_test_url=None,
+        portal_type=None,
+        settings=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.hotspot_portal
+def test_patch_hotspot_portal_portal_id_default(api, validator):
+    try:
+        assert is_valid_patch_hotspot_portal_portal_id(
+            validator,
+            patch_hotspot_portal_portal_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

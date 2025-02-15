@@ -421,3 +421,72 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_tacacs_external_servers_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_da64546331b051f984efb97c89c20400_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_tacacs_external_servers_id(api):
+    endpoint_result = api.tacacs_external_servers.patch_tacacs_external_servers_id(
+        active_validation=False,
+        connection_port=0,
+        description='string',
+        host_ip='string',
+        id='string',
+        name='string',
+        payload=None,
+        shared_secret='string',
+        single_connect=True,
+        timeout=0
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_external_servers
+def test_patch_tacacs_external_servers_id(api, validator):
+    try:
+        assert is_valid_patch_tacacs_external_servers_id(
+            validator,
+            patch_tacacs_external_servers_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_tacacs_external_servers_id_default(api):
+    endpoint_result = api.tacacs_external_servers.patch_tacacs_external_servers_id(
+        active_validation=False,
+        id='string',
+        connection_port=None,
+        description=None,
+        host_ip=None,
+        name=None,
+        payload=None,
+        shared_secret=None,
+        single_connect=None,
+        timeout=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_external_servers
+def test_patch_tacacs_external_servers_id_default(api, validator):
+    try:
+        assert is_valid_patch_tacacs_external_servers_id(
+            validator,
+            patch_tacacs_external_servers_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

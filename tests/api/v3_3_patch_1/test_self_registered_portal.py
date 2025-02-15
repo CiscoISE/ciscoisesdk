@@ -374,3 +374,72 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_self_reg_portal_portal_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_314c17abc3935da0be0bfeb440189fa5_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_self_reg_portal_portal_id(api):
+    endpoint_result = api.self_registered_portal.patch_self_reg_portal_portal_id(
+        active_validation=False,
+        customizations={'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'banneColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {}, 'globalCustomizations': {'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string', 'mobileLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}},
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        portal_id='string',
+        portal_test_url='string',
+        portal_type='string',
+        settings={'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAccessCode': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'alternateGuestPortal': 'string'}, 'selfRegPageSettings': {'assignGuestsToGuestType': 'string', 'accountValidityDuration': 0, 'accountValidityTimeUnits': 'string', 'requireRegistrationCode': True, 'registrationCode': 'string', 'fieldUserName': {'include': True, 'displayFrequency': True}, 'fieldFirstName': {'include': True, 'displayFrequency': True}, 'fieldLastName': {'include': True, 'displayFrequency': True}, 'fieldEmailAddr': {'include': True, 'displayFrequency': True}, 'fieldPhoneNo': {'include': True, 'displayFrequency': True}, 'fieldCompany': {'include': True, 'displayFrequency': True}, 'fieldLocation': {'include': True, 'displayFrequency': True}, 'selectableLocations': ['string'], 'fieldSmsProvider': {'include': True, 'displayFrequency': True}, 'selectableSmsProviders': ['string'], 'fieldPersonBeingVisited': {'include': True, 'displayFrequency': True}, 'fieldReasonForVisit': {'include': True, 'displayFrequency': True}, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'enableGuestEmailAllowlist': True, 'guestEmailAllowlistDomains': ['string'], 'enableGuestEmailBlocklist': True, 'guestEmailBlocklistDomains': ['string'], 'requireGuestApproval': True, 'autoLoginSelfWait': True, 'autoLoginTimePeriod': {}, 'sendApprovalRequestTo': 'string', 'approvalEmailAddresses': 'string', 'postRegistrationRedirect': 'string', 'postRegistrationRedirectUrl': 'string', 'credentialNotificationUsingEmail': True, 'credentialNotificationUsingSms': True, 'approveDenyLinksValidFor': 0, 'approveDenyLinksTimeUnits': 'string', 'requireApproverToAuthenticate': True, 'sponsorPortalList': ['string']}, 'selfRegSuccessSettings': {'includeUserName': True, 'includePassword': True, 'includeFirstName': True, 'includeLastName': True, 'includeEmailAddr': True, 'includePhoneNo': True, 'includeCompany': True, 'includeLocation': True, 'includeSmsProvider': True, 'includePersonBeingVisited': True, 'includeReasonForVisit': True, 'allowGuestSendSelfUsingPrint': True, 'allowGuestSendSelfUsingEmail': True, 'allowGuestSendSelfUsingSms': True, 'includeAup': True, 'aupOnPage': True, 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestLoginFromSelfregSuccessPage': True}, 'aupSettings': {'displayFrequency': 'string', 'includeAup': True, 'requireAupScrolling': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'displayFrequencyIntervalDays': 0}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}
+    )
+    return endpoint_result
+
+
+@pytest.mark.self_registered_portal
+def test_patch_self_reg_portal_portal_id(api, validator):
+    try:
+        assert is_valid_patch_self_reg_portal_portal_id(
+            validator,
+            patch_self_reg_portal_portal_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_self_reg_portal_portal_id_default(api):
+    endpoint_result = api.self_registered_portal.patch_self_reg_portal_portal_id(
+        active_validation=False,
+        portal_id='string',
+        customizations=None,
+        description=None,
+        id=None,
+        name=None,
+        payload=None,
+        portal_test_url=None,
+        portal_type=None,
+        settings=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.self_registered_portal
+def test_patch_self_reg_portal_portal_id_default(api, validator):
+    try:
+        assert is_valid_patch_self_reg_portal_portal_id(
+            validator,
+            patch_self_reg_portal_portal_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

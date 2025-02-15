@@ -409,3 +409,66 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_tacacs_command_sets_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_1b79b6f2b5b95a8c90d81302c90c296e_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_tacacs_command_sets_id(api):
+    endpoint_result = api.tacacs_command_sets.patch_tacacs_command_sets_id(
+        active_validation=False,
+        commands={'commandList': [{'grant': {}, 'command': 'string', 'arguments': 'string'}]},
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        permit_unmatched=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_command_sets
+def test_patch_tacacs_command_sets_id(api, validator):
+    try:
+        assert is_valid_patch_tacacs_command_sets_id(
+            validator,
+            patch_tacacs_command_sets_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_tacacs_command_sets_id_default(api):
+    endpoint_result = api.tacacs_command_sets.patch_tacacs_command_sets_id(
+        active_validation=False,
+        id='string',
+        commands=None,
+        description=None,
+        name=None,
+        payload=None,
+        permit_unmatched=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_command_sets
+def test_patch_tacacs_command_sets_id_default(api, validator):
+    try:
+        assert is_valid_patch_tacacs_command_sets_id(
+            validator,
+            patch_tacacs_command_sets_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

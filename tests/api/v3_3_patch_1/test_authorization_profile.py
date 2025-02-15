@@ -503,3 +503,114 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_authorization_profile_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_326cf54bcfca54ff8300d01df5f56daf_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_authorization_profile_id(api):
+    endpoint_result = api.authorization_profile.patch_authorization_profile_id(
+        access_type='string',
+        acl='string',
+        active_validation=False,
+        advanced_attributes={'leftHandSideDictionaryAttribue': {'dictionaryName': 'string', 'attributeName': 'string'}, 'rightHandSideAttribueValue': {}},
+        agentless_posture={},
+        airespace_acl='string',
+        airespace_ipv6_acl='string',
+        asa_vpn='string',
+        authz_profile_type='string',
+        auto_smart_port='string',
+        avc_profile='string',
+        dacl_name='string',
+        description='string',
+        easywired_session_candidate={},
+        id='string',
+        interface_template='string',
+        ipv6_acl_filter='string',
+        ipv6_dacl_name='string',
+        mac_sec_policy='string',
+        name='string',
+        neat={},
+        payload=None,
+        profile_name='string',
+        reauth={'connectivity': 'string', 'reauthType': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'timer': {}},
+        service_template={},
+        track_movement={},
+        unique_identifier='string',
+        vlan={'nameID': 'string', 'tagID': 0},
+        voice_domain_permission={},
+        web_auth={},
+        web_redirection={'WebRedirectionType': 'string', 'ACL': 'string', 'portalName': 'string', 'staticIPHostNameFQDN': 'string', 'displayCertificatesRenewalMessages': True}
+    )
+    return endpoint_result
+
+
+@pytest.mark.authorization_profile
+def test_patch_authorization_profile_id(api, validator):
+    try:
+        assert is_valid_patch_authorization_profile_id(
+            validator,
+            patch_authorization_profile_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_authorization_profile_id_default(api):
+    endpoint_result = api.authorization_profile.patch_authorization_profile_id(
+        active_validation=False,
+        id='string',
+        access_type=None,
+        acl=None,
+        advanced_attributes=None,
+        agentless_posture=None,
+        airespace_acl=None,
+        airespace_ipv6_acl=None,
+        asa_vpn=None,
+        authz_profile_type=None,
+        auto_smart_port=None,
+        avc_profile=None,
+        dacl_name=None,
+        description=None,
+        easywired_session_candidate=None,
+        interface_template=None,
+        ipv6_acl_filter=None,
+        ipv6_dacl_name=None,
+        mac_sec_policy=None,
+        name=None,
+        neat=None,
+        payload=None,
+        profile_name=None,
+        reauth=None,
+        service_template=None,
+        track_movement=None,
+        unique_identifier=None,
+        vlan=None,
+        voice_domain_permission=None,
+        web_auth=None,
+        web_redirection=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.authorization_profile
+def test_patch_authorization_profile_id_default(api, validator):
+    try:
+        assert is_valid_patch_authorization_profile_id(
+            validator,
+            patch_authorization_profile_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

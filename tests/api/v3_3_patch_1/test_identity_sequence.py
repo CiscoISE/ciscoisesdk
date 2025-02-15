@@ -417,3 +417,68 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_id_store_sequence_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_08f1fccad4645cbb8961c7d0a5408247_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_id_store_sequence_id(api):
+    endpoint_result = api.identity_sequence.patch_id_store_sequence_id(
+        active_validation=False,
+        break_on_store_fail=True,
+        certificate_authentication_profile='string',
+        description='string',
+        id='string',
+        id_seq_item='string',
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.identity_sequence
+def test_patch_id_store_sequence_id(api, validator):
+    try:
+        assert is_valid_patch_id_store_sequence_id(
+            validator,
+            patch_id_store_sequence_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_id_store_sequence_id_default(api):
+    endpoint_result = api.identity_sequence.patch_id_store_sequence_id(
+        active_validation=False,
+        id='string',
+        break_on_store_fail=None,
+        certificate_authentication_profile=None,
+        description=None,
+        id_seq_item=None,
+        name=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.identity_sequence
+def test_patch_id_store_sequence_id_default(api, validator):
+    try:
+        assert is_valid_patch_id_store_sequence_id(
+            validator,
+            patch_id_store_sequence_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

@@ -591,3 +591,189 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_internal_user_name_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_05b243462eb0589d866791af0b0d700d_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_internal_user_name_name(api):
+    endpoint_result = api.internal_user.patch_internal_user_name_name(
+        account_name_alias='string',
+        active_validation=False,
+        change_password=True,
+        custom_attributes='string',
+        date_created='string',
+        date_modified='string',
+        days_for_password_expiration=0,
+        description='string',
+        email='string',
+        enable_password='string',
+        enabled=True,
+        expiry_date='string',
+        expiry_date_enabled=True,
+        first_name='string',
+        id='string',
+        identity_groups='string',
+        last_name='string',
+        name='string',
+        password='string',
+        password_idstore='string',
+        password_never_expires=True,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.internal_user
+def test_patch_internal_user_name_name(api, validator):
+    try:
+        assert is_valid_patch_internal_user_name_name(
+            validator,
+            patch_internal_user_name_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_internal_user_name_name_default(api):
+    endpoint_result = api.internal_user.patch_internal_user_name_name(
+        active_validation=False,
+        name='string',
+        account_name_alias=None,
+        change_password=None,
+        custom_attributes=None,
+        date_created=None,
+        date_modified=None,
+        days_for_password_expiration=None,
+        description=None,
+        email=None,
+        enable_password=None,
+        enabled=None,
+        expiry_date=None,
+        expiry_date_enabled=None,
+        first_name=None,
+        id=None,
+        identity_groups=None,
+        last_name=None,
+        password=None,
+        password_idstore=None,
+        password_never_expires=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.internal_user
+def test_patch_internal_user_name_name_default(api, validator):
+    try:
+        assert is_valid_patch_internal_user_name_name(
+            validator,
+            patch_internal_user_name_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_patch_internal_user_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_4cd1bba62cec58edb1b2511ec2b15f00_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_internal_user_id(api):
+    endpoint_result = api.internal_user.patch_internal_user_id(
+        account_name_alias='string',
+        active_validation=False,
+        change_password=True,
+        custom_attributes='string',
+        date_created='string',
+        date_modified='string',
+        days_for_password_expiration=0,
+        description='string',
+        email='string',
+        enable_password='string',
+        enabled=True,
+        expiry_date='string',
+        expiry_date_enabled=True,
+        first_name='string',
+        id='string',
+        identity_groups='string',
+        last_name='string',
+        name='string',
+        password='string',
+        password_idstore='string',
+        password_never_expires=True,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.internal_user
+def test_patch_internal_user_id(api, validator):
+    try:
+        assert is_valid_patch_internal_user_id(
+            validator,
+            patch_internal_user_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_internal_user_id_default(api):
+    endpoint_result = api.internal_user.patch_internal_user_id(
+        active_validation=False,
+        id='string',
+        account_name_alias=None,
+        change_password=None,
+        custom_attributes=None,
+        date_created=None,
+        date_modified=None,
+        days_for_password_expiration=None,
+        description=None,
+        email=None,
+        enable_password=None,
+        enabled=None,
+        expiry_date=None,
+        expiry_date_enabled=None,
+        first_name=None,
+        identity_groups=None,
+        last_name=None,
+        name=None,
+        password=None,
+        password_idstore=None,
+        password_never_expires=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.internal_user
+def test_patch_internal_user_id_default(api, validator):
+    try:
+        assert is_valid_patch_internal_user_id(
+            validator,
+            patch_internal_user_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
