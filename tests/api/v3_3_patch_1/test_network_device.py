@@ -693,3 +693,165 @@ def test_monitor_bulk_status_network_device_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_network_device_name_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_f3d98c9771c557b881dfc1d45516ea23_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_network_device_name_name(api):
+    endpoint_result = api.network_device.patch_network_device_name_name(
+        active_validation=False,
+        authentication_settings={'enableKeyWrap': True, 'enabled': True, 'keyEncryptionKey': 'string', 'keyInputFormat': {}, 'messageAuthenticatorCodeKey': 'string', 'networkProtocol': {}, 'radiusSharedSecret': 'string', 'enableMultiSecret': True, 'secondRadiusSharedSecret': 'string', 'dtlsRequired': True},
+        coa_port=0,
+        description='string',
+        dtls_dns_name='string',
+        id='string',
+        model_name='string',
+        name='string',
+        network_device_group_list=['string'],
+        network_device_iplist=[{'ipaddress': 'string', 'ipaddressExclude': 'string', 'mask': {}}],
+        payload=None,
+        profile_name='string',
+        snmpsettings={'linkTrapQuery': True, 'macTrapQuery': True, 'originatingPolicyServicesNode': 'string', 'pollingInterval': {}, 'roCommunity': 'string', 'version': 'string'},
+        software_version='string',
+        tacacs_settings={'connectModeOptions': {}, 'sharedSecret': 'string'},
+        trustsecsettings={'deviceAuthenticationSettings': {'sgaDeviceId': 'string', 'sgaDevicePassword': 'string', 'restApiUsername': 'string', 'restApiPassword': 'string'}, 'deviceConfigurationDeployment': {'enableModePassword': 'string', 'execModePassword': 'string', 'execModeUsername': 'string', 'includeWhenDeployingSGTUpdates': {}}, 'sgaNotificationAndUpdates': {'downlaodEnvironmentDataEveryXSeconds': {}, 'downlaodPeerAuthorizationPolicyEveryXSeconds': {}, 'downloadSGACLListsEveryXSeconds': {}, 'otherSGADevicesToTrustThisDevice': {}, 'reAuthenticationEveryXSeconds': {}, 'sendConfigurationToDevice': {}, 'sendConfigurationToDeviceUsing': 'string', 'coaSourceHost': 'string'}}
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device
+def test_patch_network_device_name_name(api, validator):
+    try:
+        assert is_valid_patch_network_device_name_name(
+            validator,
+            patch_network_device_name_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_network_device_name_name_default(api):
+    endpoint_result = api.network_device.patch_network_device_name_name(
+        active_validation=False,
+        name='string',
+        authentication_settings=None,
+        coa_port=None,
+        description=None,
+        dtls_dns_name=None,
+        id=None,
+        model_name=None,
+        network_device_group_list=None,
+        network_device_iplist=None,
+        payload=None,
+        profile_name=None,
+        snmpsettings=None,
+        software_version=None,
+        tacacs_settings=None,
+        trustsecsettings=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device
+def test_patch_network_device_name_name_default(api, validator):
+    try:
+        assert is_valid_patch_network_device_name_name(
+            validator,
+            patch_network_device_name_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_patch_network_device_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_825f3ef592da51cbb2ba2e239065d509_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_network_device_id(api):
+    endpoint_result = api.network_device.patch_network_device_id(
+        active_validation=False,
+        authentication_settings={'enableKeyWrap': True, 'enabled': True, 'keyEncryptionKey': 'string', 'keyInputFormat': {}, 'messageAuthenticatorCodeKey': 'string', 'networkProtocol': {}, 'radiusSharedSecret': 'string', 'enableMultiSecret': True, 'secondRadiusSharedSecret': 'string', 'dtlsRequired': True},
+        coa_port=0,
+        description='string',
+        dtls_dns_name='string',
+        id='string',
+        model_name='string',
+        name='string',
+        network_device_group_list=['string'],
+        network_device_iplist=[{'ipaddress': 'string', 'ipaddressExclude': 'string', 'mask': {}}],
+        payload=None,
+        profile_name='string',
+        snmpsettings={'linkTrapQuery': True, 'macTrapQuery': True, 'originatingPolicyServicesNode': 'string', 'pollingInterval': {}, 'roCommunity': 'string', 'version': 'string'},
+        software_version='string',
+        tacacs_settings={'connectModeOptions': {}, 'sharedSecret': 'string'},
+        trustsecsettings={'deviceAuthenticationSettings': {'sgaDeviceId': 'string', 'sgaDevicePassword': 'string', 'restApiUsername': 'string', 'restApiPassword': 'string'}, 'deviceConfigurationDeployment': {'enableModePassword': 'string', 'execModePassword': 'string', 'execModeUsername': 'string', 'includeWhenDeployingSGTUpdates': {}}, 'sgaNotificationAndUpdates': {'downlaodEnvironmentDataEveryXSeconds': {}, 'downlaodPeerAuthorizationPolicyEveryXSeconds': {}, 'downloadSGACLListsEveryXSeconds': {}, 'otherSGADevicesToTrustThisDevice': {}, 'reAuthenticationEveryXSeconds': {}, 'sendConfigurationToDevice': {}, 'sendConfigurationToDeviceUsing': 'string', 'coaSourceHost': 'string'}}
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device
+def test_patch_network_device_id(api, validator):
+    try:
+        assert is_valid_patch_network_device_id(
+            validator,
+            patch_network_device_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_network_device_id_default(api):
+    endpoint_result = api.network_device.patch_network_device_id(
+        active_validation=False,
+        id='string',
+        authentication_settings=None,
+        coa_port=None,
+        description=None,
+        dtls_dns_name=None,
+        model_name=None,
+        name=None,
+        network_device_group_list=None,
+        network_device_iplist=None,
+        payload=None,
+        profile_name=None,
+        snmpsettings=None,
+        software_version=None,
+        tacacs_settings=None,
+        trustsecsettings=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device
+def test_patch_network_device_id_default(api, validator):
+    try:
+        assert is_valid_patch_network_device_id(
+            validator,
+            patch_network_device_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

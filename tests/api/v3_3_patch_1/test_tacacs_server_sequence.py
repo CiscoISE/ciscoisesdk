@@ -429,3 +429,76 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_tacacs_server_sequence_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_a9a1ce0f5d935704a56b49e69140c547_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_tacacs_server_sequence_id(api):
+    endpoint_result = api.tacacs_server_sequence.patch_tacacs_server_sequence_id(
+        active_validation=False,
+        description='string',
+        id='string',
+        local_accounting=True,
+        name='string',
+        payload=None,
+        prefix_delimiter='string',
+        prefix_strip=True,
+        remote_accounting=True,
+        server_list='string',
+        suffix_delimiter='string',
+        suffix_strip=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_patch_tacacs_server_sequence_id(api, validator):
+    try:
+        assert is_valid_patch_tacacs_server_sequence_id(
+            validator,
+            patch_tacacs_server_sequence_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_tacacs_server_sequence_id_default(api):
+    endpoint_result = api.tacacs_server_sequence.patch_tacacs_server_sequence_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        local_accounting=None,
+        name=None,
+        payload=None,
+        prefix_delimiter=None,
+        prefix_strip=None,
+        remote_accounting=None,
+        server_list=None,
+        suffix_delimiter=None,
+        suffix_strip=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_server_sequence
+def test_patch_tacacs_server_sequence_id_default(api, validator):
+    try:
+        assert is_valid_patch_tacacs_server_sequence_id(
+            validator,
+            patch_tacacs_server_sequence_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

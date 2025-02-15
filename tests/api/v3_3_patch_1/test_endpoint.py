@@ -797,3 +797,169 @@ def test_monitor_bulk_status_endpoint_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_endpoint_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_00a107646bee520ba8247b06bf23311c_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_endpoint_id(api):
+    endpoint_result = api.endpoint.patch_endpoint_id(
+        active_validation=False,
+        custom_attributes={},
+        description='string',
+        group_id='string',
+        id='string',
+        identity_store='string',
+        identity_store_id='string',
+        mac='string',
+        mdm_attributes={},
+        name='string',
+        payload=None,
+        portal_user='string',
+        profile_id='string',
+        static_group_assignment=True,
+        static_group_assignment_defined=True,
+        static_profile_assignment=True,
+        static_profile_assignment_defined=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.endpoint
+def test_patch_endpoint_id(api, validator):
+    try:
+        assert is_valid_patch_endpoint_id(
+            validator,
+            patch_endpoint_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_endpoint_id_default(api):
+    endpoint_result = api.endpoint.patch_endpoint_id(
+        active_validation=False,
+        id='string',
+        custom_attributes=None,
+        description=None,
+        group_id=None,
+        identity_store=None,
+        identity_store_id=None,
+        mac=None,
+        mdm_attributes=None,
+        name=None,
+        payload=None,
+        portal_user=None,
+        profile_id=None,
+        static_group_assignment=None,
+        static_group_assignment_defined=None,
+        static_profile_assignment=None,
+        static_profile_assignment_defined=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.endpoint
+def test_patch_endpoint_id_default(api, validator):
+    try:
+        assert is_valid_patch_endpoint_id(
+            validator,
+            patch_endpoint_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_register_endpoint(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_dfaeea899c185169ae2a3b70b5491008_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def register_endpoint(api):
+    endpoint_result = api.endpoint.register_endpoint(
+        active_validation=False,
+        custom_attributes={},
+        description='string',
+        group_id='string',
+        id='string',
+        identity_store='string',
+        identity_store_id='string',
+        mac='string',
+        mdm_attributes={},
+        name='string',
+        payload=None,
+        portal_user='string',
+        profile_id='string',
+        static_group_assignment=True,
+        static_group_assignment_defined=True,
+        static_profile_assignment=True,
+        static_profile_assignment_defined=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.endpoint
+def test_register_endpoint(api, validator):
+    try:
+        assert is_valid_register_endpoint(
+            validator,
+            register_endpoint(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def register_endpoint_default(api):
+    endpoint_result = api.endpoint.register_endpoint(
+        active_validation=False,
+        custom_attributes=None,
+        description=None,
+        group_id=None,
+        id=None,
+        identity_store=None,
+        identity_store_id=None,
+        mac=None,
+        mdm_attributes=None,
+        name=None,
+        payload=None,
+        portal_user=None,
+        profile_id=None,
+        static_group_assignment=None,
+        static_group_assignment_defined=None,
+        static_profile_assignment=None,
+        static_profile_assignment_defined=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.endpoint
+def test_register_endpoint_default(api, validator):
+    try:
+        assert is_valid_register_endpoint(
+            validator,
+            register_endpoint_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

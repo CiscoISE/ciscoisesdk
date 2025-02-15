@@ -785,6 +785,33 @@ class MockServerRequestHandler_v3_3_patch_1(BaseHTTPRequestHandler):
     TRUST_SEC_CONFIGURATION_3da8b5be1a475510a5aa1593d625ffbb_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/config/trustsec/getEgressPolicies")
     TRUST_SEC_CONFIGURATION_3f9e6e1c33155fdd9a88f48d093f375b_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/config/trustsec/getEgressMatrices")
     TRUST_SEC_SXP_900a7bddaf5159e68b2caeb19b9979c4_PATTERN = re.compile(r"/pxgrid/ise/radius/ise/sxp/getBindings")
+    ALLOWED_PROTOCOLS_2da4eb995ac152158f324dfdef5e73d6_PATTERN = re.compile(r"/ers/config/allowedprotocols")
+    AUTHORIZATION_PROFILE_326cf54bcfca54ff8300d01df5f56daf_PATTERN = re.compile(r"/ers/config/authorizationprofile")
+    CERTIFICATE_PROFILE_7c6bb957970e589b98010d3ad8dbbfa3_PATTERN = re.compile(r"/ers/config/certificateprofile")
+    DOWNLOADABLE_ACL_b0514ee0516d57978711c201ba54dcd9_PATTERN = re.compile(r"/ers/config/downloadableacl")
+    ENDPOINT_00a107646bee520ba8247b06bf23311c_PATTERN = re.compile(r"/ers/config/endpoint")
+    ENDPOINT_GROUP_072aa2f78896596894e1bdceee801e7e_PATTERN = re.compile(r"/ers/config/endpointgroup")
+    EXTERNAL_RADIUS_SERVER_0d7468254be85e97a56521bff13da212_PATTERN = re.compile(r"/ers/config/externalradiusserver")
+    FILTER_POLICY_1d1f85d51e0255c6bb9e89d0617d3434_PATTERN = re.compile(r"/ers/config/filterpolicy")
+    GUEST_SMTP_NOTIFICATION_SETTINGS_b567b3c2e23f5ad6bff0528becdf8f4e_PATTERN = re.compile(r"/ers/config/guestsmtpnotificationsettings/string")
+    GUEST_SSID_167ea76f9eda505e9b76f9db632c28e7_PATTERN = re.compile(r"/ers/config/guestssid/string")
+    HOTSPOT_PORTAL_cfa8d603cadc58d59aa71f70fbb8aafd_PATTERN = re.compile(r"/ers/config/hotspotportal/string")
+    IDENTITY_GROUP_6ae06d30a95a53acbde70ac0a09f0bd2_PATTERN = re.compile(r"/ers/config/identitygroup/string")
+    ID_STORE_SEQUENCE_08f1fccad4645cbb8961c7d0a5408247_PATTERN = re.compile(r"/ers/config/idstoresequence/string")
+    INTERNAL_USER_05b243462eb0589d866791af0b0d700d_PATTERN = re.compile(r"/ers/config/internaluser/name/string")
+    INTERNAL_USER_4cd1bba62cec58edb1b2511ec2b15f00_PATTERN = re.compile(r"/ers/config/internaluser")
+    NETWORK_DEVICE_f3d98c9771c557b881dfc1d45516ea23_PATTERN = re.compile(r"/ers/config/networkdevice/name/string")
+    NETWORK_DEVICE_825f3ef592da51cbb2ba2e239065d509_PATTERN = re.compile(r"/ers/config/networkdevice")
+    NETWORK_DEVICE_GROUP_62077773d06a54c39df0d047ac567529_PATTERN = re.compile(r"/ers/config/networkdevicegroup")
+    PORTAL_THEME_b891cec4b78f54afa4a5fd1d8f74e712_PATTERN = re.compile(r"/ers/config/portaltheme")
+    RADIUS_SERVER_SEQUENCE_b2399e6734a154e6a636d53148a249f8_PATTERN = re.compile(r"/ers/config/radiusserversequence")
+    REST_ID_STORE_fced674832255f00b1d01cd38d378bf1_PATTERN = re.compile(r"/ers/config/restidstore/name/string")
+    REST_ID_STORE_9043fe2adcd154a1862a3400b89a52b7_PATTERN = re.compile(r"/ers/config/restidstore")
+    SELF_REG_PORTAL_314c17abc3935da0be0bfeb440189fa5_PATTERN = re.compile(r"/ers/config/selfregportal")
+    TACACS_COMMAND_SETS_1b79b6f2b5b95a8c90d81302c90c296e_PATTERN = re.compile(r"/ers/config/tacacscommandsets")
+    TACACS_EXTERNAL_SERVERS_da64546331b051f984efb97c89c20400_PATTERN = re.compile(r"/ers/config/tacacsexternalservers")
+    TACACS_PROFILE_9419137f78c0526a8165eddab02c9783_PATTERN = re.compile(r"/ers/config/tacacsprofile")
+    TACACS_SERVER_SEQUENCE_a9a1ce0f5d935704a56b49e69140c547_PATTERN = re.compile(r"/ers/config/tacacsserversequence")
 
     def matches_SGT_RANGE_RESERVATION_ab239b1cb373585dab8b3d2a1755096a(self):
         return re.search(
@@ -14808,6 +14835,492 @@ class MockServerRequestHandler_v3_3_patch_1(BaseHTTPRequestHandler):
         self.wfile.write(response_content.encode('utf-8'))
         return
 
+    def matches_ALLOWED_PROTOCOLS_2da4eb995ac152158f324dfdef5e73d6(self):
+        return re.search(
+            self.ALLOWEDPROTOCOLS_2da4eb995ac152158f324dfdef5e73d6_PATTERN,
+            self.path
+        )
+
+    def allowed_protocols_patch_allowed_protocols_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'AllowedProtocols': {'processHostLookup': True, 'allowPapAscii': True, 'allowChap': True, 'allowMsChapV1': True, 'allowMsChapV2': True, 'allowEapMd5': True, 'allowLeap': True, 'allowEapTls': True, 'allowEapTtls': True, 'allowEapFast': True, 'allowPeap': True, 'allowTeap': True, 'allowPreferredEapProtocol': True, 'eapTlsLBit': True, 'allowWeakCiphersForEap': True, 'fiveG': True, 'rsaPss': True, 'requireMessageAuth': True, 'preferredEapProtocol': 'string', 'eapTls': {'allowEapTlsAuthOfExpiredCerts': True, 'eapTlsEnableStatelessSessionResume': True, 'eapTlsSessionTicketTtl': {}, 'eapTlsSessionTicketTtlUnits': {}, 'eapTlsSessionTicketPrecentage': {}}, 'peap': {'allowPeapEapMsChapV2': True, 'allowPeapEapMsChapV2PwdChange': True, 'allowPeapEapMsChapV2PwdChangeRetries': {}, 'allowPeapEapGtc': True, 'allowPeapEapGtcPwdChange': True, 'allowPeapEapGtcPwdChangeRetries': {}, 'allowPeapEapTls': True, 'allowPeapEapTlsAuthOfExpiredCerts': True, 'requireCryptobinding': True, 'allowPeapV0': True}, 'eapTtls': {'eapTtlsPapAscii': True, 'eapTtlsChap': True, 'eapTtlsMsChapV1': True, 'eapTtlsMsChapV2': True, 'eapTtlsEapMd5': True, 'eapTtlsEapMsChapV2': True, 'eapTtlsEapMsChapV2PwdChange': True, 'eapTtlsEapMsChapV2PwdChangeRetries': {}}, 'eapFast': {'allowEapFastEapMsChapV2': True, 'allowEapFastEapMsChapV2PwdChange': True, 'allowEapFastEapMsChapV2PwdChangeRetries': {}, 'allowEapFastEapGtc': True, 'allowEapFastEapGtcPwdChange': True, 'allowEapFastEapGtcPwdChangeRetries': {}, 'allowEapFastEapTls': True, 'allowEapFastEapTlsAuthOfExpiredCerts': True, 'eapFastEnableEAPChaining': True, 'eapFastUsePacs': True, 'eapFastUsePacsTunnelPacTtl': {}, 'eapFastUsePacsTunnelPacTtlUnits': 'string', 'eapFastUsePacsUseProactivePacUpdatePrecentage': {}, 'eapFastUsePacsAllowAnonymProvisioning': True, 'eapFastUsePacsAllowAuthenProvisioning': True, 'eapFastUsePacsServerReturns': True, 'eapFastUsePacsAcceptClientCert': True, 'eapFastUsePacsAllowMachineAuthentication': True, 'eapFastUsePacsMachinePacTtl': {}, 'eapFastUsePacsMachinePacTtlUnits': 'string', 'eapFastUsePacsStatelessSessionResume': True, 'eapFastUsePacsAuthorizationPacTtl': {}, 'eapFastUsePacsAuthorizationPacTtlUnits': 'string', 'eapFastDontUsePacsAcceptClientCert': True, 'eapFastDontUsePacsAllowMachineAuthentication': True}, 'teap': {'allowTeapEapMsChapV2': True, 'allowTeapEapMsChapV2PwdChange': True, 'allowTeapEapMsChapV2PwdChangeRetries': {}, 'allowTeapEapTls': True, 'allowTeapEapTlsAuthOfExpiredCerts': True, 'acceptClientCertDuringTunnelEst': True, 'enableEapChaining': True, 'allowDowngradeMsk': True}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+    
+    def matches_AUTHORIZATION_PROFILE_326cf54bcfca54ff8300d01df5f56daf(self):
+        return re.search(
+            self.AUTHORIZATION_PROFILE_326cf54bcfca54ff8300d01df5f56daf_PATTERN,
+            self.path
+        )
+    
+    def authorizationprofile_patch_authorizationprofile_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'AuthorizationProfile': {'vlan': {'nameID': 'string', 'tagID': 0}, 'webRedirection': {'WebRedirectionType': 'string', 'ACL': 'string', 'portalName': 'string', 'staticIPHostNameFQDN': 'string', 'displayCertificatesRenewalMessages': True}, 'accessType': 'string', 'authzProfileType': 'string', 'profileName': 'string', 'airespaceACL': 'string', 'acl': 'string', 'daclName': 'string', 'autoSmartPort': 'string', 'interfaceTemplate': 'string', 'ipv6ACLFilter': 'string', 'avcProfile': 'string', 'asaVpn': 'string', 'uniqueIdentifier': 'string', 'trackMovement': {}, 'serviceTemplate': {}, 'easywiredSessionCandidate': {}, 'voiceDomainPermission': {}, 'neat': {}, 'webAuth': {}, 'macSecPolicy': 'string', 'reauth': {'connectivity': 'string', 'reauthType': 'string', 'dictionaryName': 'string', 'attributeName': 'string', 'timer': {}}, 'advancedAttributes': {'leftHandSideDictionaryAttribue': {'dictionaryName': 'string', 'attributeName': 'string'}, 'rightHandSideAttribueValue': {}}, 'ipv6DaclName': 'string', 'airespaceIPv6ACL': 'string', 'agentlessPosture': {}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_CERTIFICATE_PROFILE_7c6bb957970e589b98010d3ad8dbbfa3(self):
+        return re.search(
+            self.CERTIFICATE_PROFILE_7c6bb957970e589b98010d3ad8dbbfa3_PATTERN,
+            self.path
+        )
+
+    def certificate_profile_patch_certificate_profile_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'CertificateProfile': {'allowedAsUserName': True, 'externalIdentityStoreName': 'string', 'certificateAttributeName': {}, 'matchMode': {}, 'usernameFrom': {}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_DOWNLOADABLE_ACL_b0514ee0516d57978711c201ba54dcd9(self):
+        return re.search(
+            self.DOWNLOADABLE_ACL_b0514ee0516d57978711c201ba54dcd9_PATTERN,
+            self.path
+        )
+
+    def downloadable_acl_patch_downloadable_acl_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'DownloadableAcl': {'dacl': 'string', 'daclType': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_ENDPOINT_00a107646bee520ba8247b06bf23311c(self):
+        return re.search(
+            self.ENDPOINT_00a107646bee520ba8247b06bf23311c_PATTERN,
+            self.path
+        )
+
+    def endpoint_patch_endpoint_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'ERSEndPoint': {'customAttributes': {}, 'groupId': 'string', 'identityStore': 'string', 'identityStoreId': 'string', 'mac': 'string', 'portalUser': 'string', 'profileId': 'string', 'staticGroupAssignment': True, 'staticGroupAssignmentDefined': True, 'staticProfileAssignment': True, 'staticProfileAssignmentDefined': True, 'mdmAttributes': {}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_ENDPOINT_GROUP_072aa2f78896596894e1bdceee801e7e(self):
+        return re.search(
+            self.ENDPOINT_GROUP_072aa2f78896596894e1bdceee801e7e_PATTERN,
+            self.path
+        )
+
+    def endpoint_group_patch_endpoint_group_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'EndPointGroup': {'systemDefined': True, 'parentId': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_EXTERNAL_RADIUS_SERVER_0d7468254be85e97a56521bff13da212(self):
+        return re.search(
+            self.EXTERNAL_RADIUS_SERVER_0d7468254be85e97a56521bff13da212_PATTERN,
+            self.path
+        )
+
+    def external_radius_server_patch_external_radius_server_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'ExternalRadiusServer': {'hostIP': 'string', 'sharedSecret': 'string', 'enableKeyWrap': True, 'encryptionKey': 'string', 'authenticatorKey': 'string', 'keyInputFormat': 'string', 'authenticationPort': {}, 'accountingPort': {}, 'timeout': {}, 'retries': {}, 'proxyTimeout': {}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_FILTER_POLICY_1d1f85d51e0255c6bb9e89d0617d3434(self):
+        return re.search(
+            self.FILTER_POLICY_1d1f85d51e0255c6bb9e89d0617d3434_PATTERN,
+            self.path
+        )
+
+    def filter_policy_patch_filter_policy_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'ERSFilterPolicy': {'subnet': 'string', 'sgt': 'string', 'vn': 'string', 'domains': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_GUEST_SMTP_NOTIFICATION_SETTINGS_b567b3c2e23f5ad6bff0528becdf8f4e(self):
+        return re.search(
+            self.GUEST_SMTP_NOTIFICATION_SETTINGS_b567b3c2e23f5ad6bff0528becdf8f4e_PATTERN,
+            self.path
+        )
+
+    def guest_smtp_notification_settings_patch_guest_smtp_notification_settings_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'ERSGuestSmtpNotificationSettings': {'defaultFromAddress': 'string', 'notificationEnabled': True, 'smtpServer': 'string', 'useDefaultFromAddress': True, 'smtpPort': 'string', 'connectionTimeout': 'string', 'useTLSorSSLEncryption': True, 'usePasswordAuthentication': True, 'userName': 'string', 'password': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_GUEST_SSID_167ea76f9eda505e9b76f9db632c28e7(self):
+        return re.search(
+            self.GUEST_SSID_167ea76f9eda505e9b76f9db632c28e7_PATTERN,
+            self.path
+        )
+
+    def guest_ssid_patch_guest_ssid_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'GuestSSID': {'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_HOTSPOT_PORTAL_cfa8d603cadc58d59aa71f70fbb8aafd(self):
+        return re.search(
+            self.HOTSPOT_PORTAL_cfa8d603cadc58d59aa71f70fbb8aafd_PATTERN,
+            self.path
+        )
+
+    def hotspot_portal_patch_hotspot_portal_portal_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'HotspotPortal': {'portalTestUrl': 'string', 'portalType': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'endpointIdentityGroup': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string', 'coaType': 'string'}, 'aupSettings': {'requireAccessCode': True, 'accessCode': 'string', 'includeAup': True, 'requireAupScrolling': True}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'banneColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {}, 'globalCustomizations': {'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string', 'mobileLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_IDENTITY_GROUP_6ae06d30a95a53acbde70ac0a09f0bd2(self):
+        return re.search(
+            self.IDENTITY_GROUP_6ae06d30a95a53acbde70ac0a09f0bd2_PATTERN,
+            self.path
+        )
+
+    def identity_group_patch_identity_group_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'IdentityGroup': {'parent': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_ID_STORE_SEQUENCE_08f1fccad4645cbb8961c7d0a5408247(self):
+        return re.search(
+            self.ID_STORE_SEQUENCE_08f1fccad4645cbb8961c7d0a5408247_PATTERN,
+            self.path
+        )
+
+    def id_store_sequence_patch_id_store_sequence_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'IdStoreSequence': {'breakOnStoreFail': True, 'certificateAuthenticationProfile': 'string', 'idSeqItem': [{'idstore': 'string', 'order': 'string'}], 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_INTERNAL_USER_05b243462eb0589d866791af0b0d700d(self):
+        return re.search(
+            self.INTERNAL_USER_05b243462eb0589d866791af0b0d700d_PATTERN,
+            self.path
+        )
+
+    def internal_user_patch_internal_user_name_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'InternalUser': {'changePassword': True, 'email': 'string', 'accountNameAlias': 'string', 'enablePassword': 'string', 'enabled': True, 'passwordNeverExpires': True, 'daysForPasswordExpiration': 0, 'customAttributes': 'string', 'firstName': 'string', 'identityGroups': 'string', 'lastName': 'string', 'password': 'string', 'passwordIDStore': 'string', 'expiryDateEnabled': True, 'expiryDate': 'string', 'dateModified': 'string', 'dateCreated': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_INTERNAL_USER_4cd1bba62cec58edb1b2511ec2b15f00(self):
+        return re.search(
+            self.INTERNAL_USER_4cd1bba62cec58edb1b2511ec2b15f00_PATTERN,
+            self.path
+        )
+
+    def internal_user_patch_internal_user_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'InternalUser': {'changePassword': True, 'email': 'string', 'accountNameAlias': 'string', 'enablePassword': 'string', 'enabled': True, 'passwordNeverExpires': True, 'daysForPasswordExpiration': 0, 'customAttributes': 'string', 'firstName': 'string', 'identityGroups': 'string', 'lastName': 'string', 'password': 'string', 'passwordIDStore': 'string', 'expiryDateEnabled': True, 'expiryDate': 'string', 'dateModified': 'string', 'dateCreated': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_DEVICE_f3d98c9771c557b881dfc1d45516ea23(self):
+        return re.search(
+            self.NETWORK_DEVICE_f3d98c9771c557b881dfc1d45516ea23_PATTERN,
+            self.path
+        )
+
+    def network_device_patch_network_device_name_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'NetworkDevice': {'authenticationSettings': {'enableKeyWrap': True, 'enabled': True, 'keyEncryptionKey': 'string', 'keyInputFormat': {}, 'messageAuthenticatorCodeKey': 'string', 'networkProtocol': {}, 'radiusSharedSecret': 'string', 'enableMultiSecret': True, 'secondRadiusSharedSecret': 'string', 'dtlsRequired': True}, 'coaPort': 0, 'dtlsDnsName': 'string', 'NetworkDeviceIPList': [{'ipaddress': 'string', 'ipaddressExclude': 'string', 'mask': {}}], 'NetworkDeviceGroupList': ['string'], 'modelName': 'string', 'softwareVersion': 'string', 'profileName': 'string', 'snmpsettings': {'linkTrapQuery': True, 'macTrapQuery': True, 'originatingPolicyServicesNode': 'string', 'pollingInterval': {}, 'roCommunity': 'string', 'version': 'string'}, 'tacacsSettings': {'connectModeOptions': {}, 'sharedSecret': 'string'}, 'trustsecsettings': {'deviceAuthenticationSettings': {'sgaDeviceId': 'string', 'sgaDevicePassword': 'string', 'restApiUsername': 'string', 'restApiPassword': 'string'}, 'deviceConfigurationDeployment': {'enableModePassword': 'string', 'execModePassword': 'string', 'execModeUsername': 'string', 'includeWhenDeployingSGTUpdates': {}}, 'sgaNotificationAndUpdates': {'downlaodEnvironmentDataEveryXSeconds': {}, 'downlaodPeerAuthorizationPolicyEveryXSeconds': {}, 'downloadSGACLListsEveryXSeconds': {}, 'otherSGADevicesToTrustThisDevice': {}, 'reAuthenticationEveryXSeconds': {}, 'sendConfigurationToDevice': {}, 'sendConfigurationToDeviceUsing': 'string', 'coaSourceHost': 'string'}}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_DEVICE_825f3ef592da51cbb2ba2e239065d509(self):
+        return re.search(
+            self.NETWORK_DEVICE_825f3ef592da51cbb2ba2e239065d509_PATTERN,
+            self.path
+        )
+
+    def network_device_patch_network_device_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'NetworkDevice': {'authenticationSettings': {'enableKeyWrap': True, 'enabled': True, 'keyEncryptionKey': 'string', 'keyInputFormat': {}, 'messageAuthenticatorCodeKey': 'string', 'networkProtocol': {}, 'radiusSharedSecret': 'string', 'enableMultiSecret': True, 'secondRadiusSharedSecret': 'string', 'dtlsRequired': True}, 'coaPort': 0, 'dtlsDnsName': 'string', 'NetworkDeviceIPList': [{'ipaddress': 'string', 'ipaddressExclude': 'string', 'mask': {}}], 'NetworkDeviceGroupList': ['string'], 'modelName': 'string', 'softwareVersion': 'string', 'profileName': 'string', 'snmpsettings': {'linkTrapQuery': True, 'macTrapQuery': True, 'originatingPolicyServicesNode': 'string', 'pollingInterval': {}, 'roCommunity': 'string', 'version': 'string'}, 'tacacsSettings': {'connectModeOptions': {}, 'sharedSecret': 'string'}, 'trustsecsettings': {'deviceAuthenticationSettings': {'sgaDeviceId': 'string', 'sgaDevicePassword': 'string', 'restApiUsername': 'string', 'restApiPassword': 'string'}, 'deviceConfigurationDeployment': {'enableModePassword': 'string', 'execModePassword': 'string', 'execModeUsername': 'string', 'includeWhenDeployingSGTUpdates': {}}, 'sgaNotificationAndUpdates': {'downlaodEnvironmentDataEveryXSeconds': {}, 'downlaodPeerAuthorizationPolicyEveryXSeconds': {}, 'downloadSGACLListsEveryXSeconds': {}, 'otherSGADevicesToTrustThisDevice': {}, 'reAuthenticationEveryXSeconds': {}, 'sendConfigurationToDevice': {}, 'sendConfigurationToDeviceUsing': 'string', 'coaSourceHost': 'string'}}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_NETWORK_DEVICE_GROUP_62077773d06a54c39df0d047ac567529(self):
+        return re.search(
+            self.NETWORK_DEVICE_GROUP_62077773d06a54c39df0d047ac567529_PATTERN,
+            self.path
+        )
+
+    def network_device_group_patch_network_device_group_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'NetworkDeviceGroup': {'othername': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_PORTAL_THEME_b891cec4b78f54afa4a5fd1d8f74e712(self):
+        return re.search(
+            self.PORTAL_THEME_b891cec4b78f54afa4a5fd1d8f74e712_PATTERN,
+            self.path
+        )
+
+    def portal_theme_patch_portal_theme_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'PortalTheme': {'themeData': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_RADIUS_SERVER_SEQUENCE_b2399e6734a154e6a636d53148a249f8(self):
+        return re.search(
+            self.RADIUS_SERVER_SEQUENCE_b2399e6734a154e6a636d53148a249f8_PATTERN,
+            self.path
+        )
+
+    def radius_server_sequence_patch_radius_server_sequence_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'RadiusServerSequence': {'stripPrefix': True, 'stripSuffix': True, 'prefixSeparator': 'string', 'suffixSeparator': 'string', 'remoteAccounting': True, 'localAccounting': True, 'useAttrSetOnRequest': True, 'useAttrSetBeforeAcc': True, 'continueAuthorzPolicy': True, 'RadiusServerList': ['string'], 'OnRequestAttrManipulatorList': [{'AttributeManipulator': {}}], 'BeforeAcceptAttrManipulatorsList': [{'AttributeManipulator': {}}], 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_REST_ID_STORE_fced674832255f00b1d01cd38d378bf1(self):
+        return re.search(
+            self.REST_ID_STORE_fced674832255f00b1d01cd38d378bf1_PATTERN,
+            self.path
+        )
+
+    def rest_id_store_patch_rest_id_store_name_name_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'ERSRestIDStore': {'ersRestIDStoreAttributes': {'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': {}, 'headers': [{'key': 'string', 'value': 'string'}]}, 'ersRestIDStoreUserAttributes': {'name': 'string'}, 'ersRestIDStoreDeviceAttributes': {'name': 'string'}, 'ersRestIDStoreAdvanceSettings': {'deviceQuerySetting': {}, 'identifyDeviceCertificate': {}, 'subjectNameFormat': 'string', 'sanAttribute': {}, 'sanAttributeValue': 'string'}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_REST_ID_STORE_9043fe2adcd154a1862a3400b89a52b7(self):
+        return re.search(
+            self.REST_ID_STORE_9043fe2adcd154a1862a3400b89a52b7_PATTERN,
+            self.path
+        )
+
+    def rest_id_store_patch_rest_id_store_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'ERSRestIDStore': {'ersRestIDStoreAttributes': {'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': {}, 'headers': [{'key': 'string', 'value': 'string'}]}, 'ersRestIDStoreUserAttributes': {'name': 'string'}, 'ersRestIDStoreDeviceAttributes': {'name': 'string'}, 'ersRestIDStoreAdvanceSettings': {'deviceQuerySetting': {}, 'identifyDeviceCertificate': {}, 'subjectNameFormat': 'string', 'sanAttribute': {}, 'sanAttributeValue': 'string'}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_SELF_REG_PORTAL_314c17abc3935da0be0bfeb440189fa5(self):
+        return re.search(
+            self.SELF_REG_PORTAL_314c17abc3935da0be0bfeb440189fa5_PATTERN,
+            self.path
+        )
+
+    def self_reg_portal_patch_self_reg_portal_portal_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'SelfRegPortal': {'portalTestUrl': 'string', 'portalType': 'string', 'settings': {'portalSettings': {'httpsPort': 0, 'allowedInterfaces': 'string', 'certificateGroupTag': 'string', 'authenticationMethod': 'string', 'assignedGuestTypeForEmployee': 'string', 'displayLang': 'string', 'fallbackLanguage': 'string', 'alwaysUsedLanguage': 'string'}, 'loginPageSettings': {'maxFailedAttemptsBeforeRateLimit': 0, 'timeBetweenLoginsDuringRateLimit': 0, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireAccessCode': True, 'accessCode': 'string', 'allowGuestToCreateAccounts': True, 'allowGuestToChangePassword': True, 'allowAlternateGuestPortal': True, 'alternateGuestPortal': 'string'}, 'selfRegPageSettings': {'assignGuestsToGuestType': 'string', 'accountValidityDuration': 0, 'accountValidityTimeUnits': 'string', 'requireRegistrationCode': True, 'registrationCode': 'string', 'fieldUserName': {'include': True, 'displayFrequency': True}, 'fieldFirstName': {'include': True, 'displayFrequency': True}, 'fieldLastName': {'include': True, 'displayFrequency': True}, 'fieldEmailAddr': {'include': True, 'displayFrequency': True}, 'fieldPhoneNo': {'include': True, 'displayFrequency': True}, 'fieldCompany': {'include': True, 'displayFrequency': True}, 'fieldLocation': {'include': True, 'displayFrequency': True}, 'selectableLocations': ['string'], 'fieldSmsProvider': {'include': True, 'displayFrequency': True}, 'selectableSmsProviders': ['string'], 'fieldPersonBeingVisited': {'include': True, 'displayFrequency': True}, 'fieldReasonForVisit': {'include': True, 'displayFrequency': True}, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'enableGuestEmailAllowlist': True, 'guestEmailAllowlistDomains': ['string'], 'enableGuestEmailBlocklist': True, 'guestEmailBlocklistDomains': ['string'], 'requireGuestApproval': True, 'autoLoginSelfWait': True, 'autoLoginTimePeriod': {}, 'sendApprovalRequestTo': 'string', 'approvalEmailAddresses': 'string', 'postRegistrationRedirect': 'string', 'postRegistrationRedirectUrl': 'string', 'credentialNotificationUsingEmail': True, 'credentialNotificationUsingSms': True, 'approveDenyLinksValidFor': 0, 'approveDenyLinksTimeUnits': 'string', 'requireApproverToAuthenticate': True, 'sponsorPortalList': ['string']}, 'selfRegSuccessSettings': {'includeUserName': True, 'includePassword': True, 'includeFirstName': True, 'includeLastName': True, 'includeEmailAddr': True, 'includePhoneNo': True, 'includeCompany': True, 'includeLocation': True, 'includeSmsProvider': True, 'includePersonBeingVisited': True, 'includeReasonForVisit': True, 'allowGuestSendSelfUsingPrint': True, 'allowGuestSendSelfUsingEmail': True, 'allowGuestSendSelfUsingSms': True, 'includeAup': True, 'aupOnPage': True, 'requireAupAcceptance': True, 'requireAupScrolling': True, 'allowGuestLoginFromSelfregSuccessPage': True}, 'aupSettings': {'displayFrequency': 'string', 'includeAup': True, 'requireAupScrolling': True, 'useDiffAupForEmployees': True, 'skipAupForEmployees': True, 'displayFrequencyIntervalDays': 0}, 'guestChangePasswordSettings': {'allowChangePasswdAtFirstLogin': True}, 'guestDeviceRegistrationSettings': {'autoRegisterGuestDevices': True, 'allowGuestsToRegisterDevices': True}, 'byodSettings': {'byodWelcomeSettings': {'enableBYOD': True, 'enableGuestAccess': True, 'requireMDM': True, 'includeAup': True, 'aupDisplay': 'string', 'requireAupAcceptance': True, 'requireScrolling': True}, 'byodRegistrationSettings': {'showDeviceID': True, 'endPointIdentityGroupId': 'string'}, 'byodRegistrationSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}}, 'authSuccessSettings': {'successRedirect': 'string', 'redirectUrl': 'string'}, 'postLoginBannerSettings': {'includePostAccessBanner': True}, 'supportInfoSettings': {'includeSupportInfoPage': True, 'includeMacAddr': True, 'includeIpAddress': True, 'includeBrowserUserAgent': True, 'includePolicyServer': True, 'includeFailureCode': True, 'emptyFieldDisplay': 'string', 'defaultEmptyFieldValue': 'string'}}, 'customizations': {'portalTheme': {'id': 'string', 'name': 'string', 'themeData': 'string'}, 'portalTweakSettings': {'banneColor': 'string', 'bannerTextColor': 'string', 'pageBackgroundColor': 'string', 'pageLabelAndTextColor': 'string'}, 'language': {}, 'globalCustomizations': {'bannerTitle': 'string', 'contactText': 'string', 'footerElement': 'string', 'mobileLogoImage': {'data': 'string'}, 'bannerImage': {'data': 'string'}, 'backgroundImage': {'data': 'string'}}, 'pageCustomizations': {'data': [{'key': 'string', 'value': 'string'}]}}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_TACACS_COMMAND_SETS_1b79b6f2b5b95a8c90d81302c90c296e(self):
+        return re.search(
+            self.TACACS_COMMAND_SETS_1b79b6f2b5b95a8c90d81302c90c296e_PATTERN,
+            self.path
+        )
+
+    def tacacs_command_sets_patch_tacacs_command_sets_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'TacacsCommandSets': {'permitUnmatched': True, 'commands': {'commandList': [{'grant': {}, 'command': 'string', 'arguments': 'string'}]}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_TACACS_EXTERNAL_SERVERS_da64546331b051f984efb97c89c20400(self):
+        return re.search(
+            self.TACACS_EXTERNAL_SERVERS_da64546331b051f984efb97c89c20400_PATTERN,
+            self.path
+        )
+
+    def tacacs_external_servers_patch_tacacs_external_servers_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'TacacsExternalServer': {'hostIP': 'string', 'connectionPort': 0, 'singleConnect': True, 'sharedSecret': 'string', 'timeout': 0, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_TACACS_PROFILE_9419137f78c0526a8165eddab02c9783(self):
+        return re.search(
+            self.TACACS_PROFILE_9419137f78c0526a8165eddab02c9783_PATTERN,
+            self.path
+        )
+
+    def tacacs_profile_patch_tacacs_profile_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'TacacsProfile': {'sessionAttributes': {'sessionAttributeList': [{'type': {}, 'name': 'string', 'value': 'string'}]}, 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
+    def matches_TACACS_SERVER_SEQUENCE_a9a1ce0f5d935704a56b49e69140c547(self):
+        return re.search(
+            self.TACACS_SERVER_SEQUENCE_a9a1ce0f5d935704a56b49e69140c547_PATTERN,
+            self.path
+        )
+
+    def tacacs_server_sequence_patch_tacacs_server_sequence_id_response(self):
+        # Add response status code.
+        self.send_response(requests.codes.ok)
+        # Add response headers.
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Accept', 'application/json')
+        self.end_headers()
+        # Add response content.
+        response_content = json.dumps({'TacacsServerSequence': {'serverList': 'string', 'localAccounting': True, 'remoteAccounting': True, 'prefixStrip': True, 'suffixStrip': True, 'prefixDelimiter': 'string', 'suffixDelimiter': 'string', 'name': 'string', 'id': 'string', 'description': 'string', 'link': {'rel': 'string', 'href': 'string', 'type': 'string'}}})
+        self.wfile.write(response_content.encode('utf-8'))
+        return
+
     def do_GET(self):
 
         if self.matches_SGT_RANGE_RESERVATION_ab239b1cb373585dab8b3d2a1755096a():
@@ -16312,7 +16825,113 @@ class MockServerRequestHandler_v3_3_patch_1(BaseHTTPRequestHandler):
 
     def do_PATCH(self):
 
-        return
+        if self.matches_ALLOWED_PROTOCOLS_2da4eb995ac152158f324dfdef5e73d6():
+            self.allowed_protocols_patch_allowed_protocols_id_response()
+            return
+
+        if self.matches_AUTHORIZATION_PROFILE_326cf54bcfca54ff8300d01df5f56daf():
+            self.authorization_profile_patch_authorization_profile_id_response()
+            return
+
+        if self.matches_CERTIFICATE_PROFILE_7c6bb957970e589b98010d3ad8dbbfa3():
+            self.certificate_profile_patch_certificate_profile_id_response()
+            return
+
+        if self.matches_DOWNLOADABLE_ACL_b0514ee0516d57978711c201ba54dcd9():
+            self.downloadable_acl_patch_downloadable_acl_id_response()
+            return
+
+        if self.matches_ENDPOINT_00a107646bee520ba8247b06bf23311c():
+            self.endpoint_patch_endpoint_id_response()
+            return
+
+        if self.matches_ENDPOINT_GROUP_072aa2f78896596894e1bdceee801e7e():
+            self.endpoint_group_patch_endpoint_group_id_response()
+            return
+
+        if self.matches_EXTERNAL_RADIUS_SERVER_0d7468254be85e97a56521bff13da212():
+            self.external_radius_server_patch_external_radius_server_id_response()
+            return
+
+        if self.matches_FILTER_POLICY_1d1f85d51e0255c6bb9e89d0617d3434():
+            self.filter_policy_patch_filter_policy_id_response()
+            return
+
+        if self.matches_GUEST_SMTP_NOTIFICATION_SETTINGS_b567b3c2e23f5ad6bff0528becdf8f4e():
+            self.guest_smtp_notification_settings_patch_guest_smtp_notification_settings_id_response()
+            return
+
+        if self.matches_GUEST_SSID_167ea76f9eda505e9b76f9db632c28e7():
+            self.guest_ssid_patch_guest_ssid_id_response()
+            return
+
+        if self.matches_HOTSPOT_PORTAL_cfa8d603cadc58d59aa71f70fbb8aafd():
+            self.hotspot_portal_patch_hotspot_portal_portal_id_response()
+            return
+
+        if self.matches_IDENTITY_GROUP_6ae06d30a95a53acbde70ac0a09f0bd2():
+            self.identity_group_patch_identity_group_id_response()
+            return
+
+        if self.matches_ID_STORE_SEQUENCE_08f1fccad4645cbb8961c7d0a5408247():
+            self.id_store_sequence_patch_id_store_sequence_id_response()
+            return
+
+        if self.matches_INTERNAL_USER_05b243462eb0589d866791af0b0d700d():
+            self.internal_user_patch_internal_user_name_name_response()
+            return
+
+        if self.matches_INTERNAL_USER_4cd1bba62cec58edb1b2511ec2b15f00():
+            self.internal_user_patch_internal_user_id_response()
+            return
+
+        if self.matches_NETWORK_DEVICE_f3d98c9771c557b881dfc1d45516ea23():
+            self.network_device_patch_network_device_name_name_response()
+            return
+
+        if self.matches_NETWORK_DEVICE_825f3ef592da51cbb2ba2e239065d509():
+            self.network_device_patch_network_device_id_response()
+            return
+
+        if self.matches_NETWORK_DEVICE_GROUP_62077773d06a54c39df0d047ac567529():
+            self.network_device_group_patch_network_device_group_id_response()
+            return
+
+        if self.matches_PORTAL_THEME_b891cec4b78f54afa4a5fd1d8f74e712():
+            self.portal_theme_patch_portal_theme_id_response()
+            return
+
+        if self.matches_RADIUS_SERVER_SEQUENCE_b2399e6734a154e6a636d53148a249f8():
+            self.radius_server_sequence_patch_radius_server_sequence_id_response()
+            return
+
+        if self.matches_REST_ID_STORE_fced674832255f00b1d01cd38d378bf1():
+            self.rest_id_store_patch_rest_id_store_name_name_response()
+            return
+
+        if self.matches_REST_ID_STORE_9043fe2adcd154a1862a3400b89a52b7():
+            self.rest_id_store_patch_rest_id_store_id_response()
+            return
+
+        if self.matches_SELF_REG_PORTAL_314c17abc3935da0be0bfeb440189fa5():
+            self.self_reg_portal_patch_self_reg_portal_portal_id_response()
+            return
+
+        if self.matches_TACACS_COMMAND_SETS_1b79b6f2b5b95a8c90d81302c90c296e():
+            self.tacacs_command_sets_patch_tacacs_command_sets_id_response()
+            return
+
+        if self.matches_TACACS_EXTERNAL_SERVERS_da64546331b051f984efb97c89c20400():
+            self.tacacs_external_servers_patch_tacacs_external_servers_id_response()
+            return
+
+        if self.matches_TACACS_PROFILE_9419137f78c0526a8165eddab02c9783():
+            self.tacacs_profile_patch_tacacs_profile_id_response()
+            return
+
+        if self.matches_TACACS_SERVER_SEQUENCE_a9a1ce0f5d935704a56b49e69140c547():
+            self.tacacs_server_sequence_patch_tacacs_server_sequence_id_response()
+            return
 
     def do_POST(self):
 

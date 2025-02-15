@@ -1038,3 +1038,177 @@ class ExternalRadiusServer(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a6c3ffe72746500b88be3a5418ead4ba_v3_3_patch_1', _api_response)
+
+    def patch_external_radius_server_id(self,
+                                        id,
+                                        accounting_port=None,
+                                        authentication_port=None,
+                                        authenticator_key=None,
+                                        description=None,
+                                        enable_key_wrap=None,
+                                        encryption_key=None,
+                                        host_ip=None,
+                                        key_input_format=None,
+                                        name=None,
+                                        proxy_timeout=None,
+                                        retries=None,
+                                        shared_secret=None,
+                                        timeout=None,
+                                        headers=None,
+                                        payload=None,
+                                        active_validation=True,
+                                        **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            accounting_port(object): Valid Range 1 to 65535,
+                property of the request body.
+            authentication_port(object): Valid Range 1 to 65535,
+                property of the request body.
+            authenticator_key(string): The authenticatorKey is
+                required only if enableKeyWrap is true,
+                otherwise it must be ignored or empty.
+                The maximum length is 20 ASCII
+                characters or 40 HEXADECIMAL characters
+                (depend on selection in field
+                'keyInputFormat'), property of the
+                request body.
+            description(string): Description, property of the
+                request body.
+            enable_key_wrap(boolean): KeyWrap may only be enabled if
+                it is supported on the device. When
+                running in FIPS mode this option should
+                be enabled for such devices, property of
+                the request body.
+            encryption_key(string): The encryptionKey is required
+                only if enableKeyWrap is true, otherwise
+                it must be ignored or empty. The maximum
+                length is 16 ASCII characters or 32
+                HEXADECIMAL characters (depend on
+                selection in field 'keyInputFormat'),
+                property of the request body.
+            host_ip(string): The IP of the host must be a valid IPV4
+                address, property of the request body.
+            id(string): Id, property of the request body.
+            key_input_format(string): Specifies the format of the
+                input for fields 'encryptionKey' and
+                'authenticatorKey'. Allowed Values:
+                ASCII or HEXADECIMAL, property of the
+                request body.
+            name(string): name, property of the request body.
+            proxy_timeout(object): Valid Range 1 to 600, property of
+                the request body.
+            retries(object): Valid Range 1 to 9, property of the
+                request body.
+            shared_secret(string): Shared secret maximum length is
+                128 characters, property of the request
+                body.
+            timeout(object): Valid Range 1 to 120, property of the
+                request body.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'hostIP':
+                    host_ip,
+                'sharedSecret':
+                    shared_secret,
+                'enableKeyWrap':
+                    enable_key_wrap,
+                'encryptionKey':
+                    encryption_key,
+                'authenticatorKey':
+                    authenticator_key,
+                'keyInputFormat':
+                    key_input_format,
+                'authenticationPort':
+                    authentication_port,
+                'accountingPort':
+                    accounting_port,
+                'timeout':
+                    timeout,
+                'retries':
+                    retries,
+                'proxyTimeout':
+                    proxy_timeout,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'ExternalRadiusServer': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_d7468254be85e97a56521bff13da212_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/externalradiusserver/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_d7468254be85e97a56521bff13da212_v3_3_patch_1', _api_response)

@@ -413,3 +413,64 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_network_device_group_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_62077773d06a54c39df0d047ac567529_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_network_device_group_id(api):
+    endpoint_result = api.network_device_group.patch_network_device_group_id(
+        active_validation=False,
+        description='string',
+        id='string',
+        name='string',
+        othername='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device_group
+def test_patch_network_device_group_id(api, validator):
+    try:
+        assert is_valid_patch_network_device_group_id(
+            validator,
+            patch_network_device_group_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_network_device_group_id_default(api):
+    endpoint_result = api.network_device_group.patch_network_device_group_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        name=None,
+        othername=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.network_device_group
+def test_patch_network_device_group_id_default(api, validator):
+    try:
+        assert is_valid_patch_network_device_group_id(
+            validator,
+            patch_network_device_group_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

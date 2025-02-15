@@ -372,3 +372,72 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_certificate_profile_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_7c6bb957970e589b98010d3ad8dbbfa3_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_certificate_profile_id(api):
+    endpoint_result = api.certificate_profile.patch_certificate_profile_id(
+        active_validation=False,
+        allowed_as_user_name=True,
+        certificate_attribute_name={},
+        description='string',
+        external_identity_store_name='string',
+        id='string',
+        match_mode={},
+        name='string',
+        payload=None,
+        username_from={}
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificate_profile
+def test_patch_certificate_profile_id(api, validator):
+    try:
+        assert is_valid_patch_certificate_profile_id(
+            validator,
+            patch_certificate_profile_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_certificate_profile_id_default(api):
+    endpoint_result = api.certificate_profile.patch_certificate_profile_id(
+        active_validation=False,
+        id='string',
+        allowed_as_user_name=None,
+        certificate_attribute_name=None,
+        description=None,
+        external_identity_store_name=None,
+        match_mode=None,
+        name=None,
+        payload=None,
+        username_from=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.certificate_profile
+def test_patch_certificate_profile_id_default(api, validator):
+    try:
+        assert is_valid_patch_certificate_profile_id(
+            validator,
+            patch_certificate_profile_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

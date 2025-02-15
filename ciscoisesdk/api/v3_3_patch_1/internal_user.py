@@ -1452,3 +1452,403 @@ class InternalUser(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_af99828533e58a2b84996b85bacc9ff_v3_3_patch_1', _api_response)
+
+    def patch_internal_user_name_name(self,
+                                      name,
+                                      account_name_alias=None,
+                                      change_password=None,
+                                      custom_attributes=None,
+                                      date_created=None,
+                                      date_modified=None,
+                                      days_for_password_expiration=None,
+                                      description=None,
+                                      email=None,
+                                      enable_password=None,
+                                      enabled=None,
+                                      expiry_date=None,
+                                      expiry_date_enabled=None,
+                                      first_name=None,
+                                      id=None,
+                                      identity_groups=None,
+                                      last_name=None,
+                                      password=None,
+                                      password_idstore=None,
+                                      password_never_expires=None,
+                                      headers=None,
+                                      payload=None,
+                                      active_validation=True,
+                                      **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            account_name_alias(string): The Account Name Alias will
+                be used to send email notifications
+                about password expiration, property of
+                the request body.
+            change_password(boolean): changePassword, property of
+                the request body.
+            custom_attributes(string): Key value map, property of
+                the request body.
+            date_created(string): The date of the user creation,
+                formatted as 'YYYY-MM-DD'. Read-only.,
+                property of the request body.
+            date_modified(string): The date of the last user
+                modification by admin, formatted as
+                'YYYY-MM-DD'. Read-only., property of
+                the request body.
+            days_for_password_expiration(number): This field is for
+                read only, property of the request body.
+            description(string): Description, property of the
+                request body.
+            email(string): email, property of the request body.
+            enable_password(string): EnablePassword field is added
+                in ISE 2.0 to support T+, property of
+                the request body.
+            enabled(boolean): Whether the user is enabled/disabled.
+                To use it as filter, the values should
+                be 'Enabled' or 'Disabled'. The values
+                are case sensitive. For example, '[ERSOb
+                jectURL]?filter=enabled.EQ.Enabled',
+                property of the request body.
+            expiry_date(string): to store the internal user's expiry
+                date information. It's format is =
+                'YYYY-MM-DD' , property of the request
+                body.
+            expiry_date_enabled(boolean): expiryDateEnabled,
+                property of the request body.
+            first_name(string): firstName, property of the request
+                body.
+            id(string): Id, property of the request body.
+            identity_groups(string): CSV of identity group IDs.,
+                property of the request body.
+            last_name(string): lastName, property of the request
+                body.
+            name(string): name, property of the request body.
+            password(string): password, property of the request
+                body.
+            password_idstore(string): the id store where the
+                internal user's password is kept,
+                property of the request body.
+            password_never_expires(boolean): Set TRUE to indicate
+                the user password never expires. This
+                will not apply to Users who are also ISE
+                Admins, property of the request body.
+            name(str): name path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(name, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'name': name,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'changePassword':
+                    change_password,
+                'email':
+                    email,
+                'accountNameAlias':
+                    account_name_alias,
+                'enablePassword':
+                    enable_password,
+                'enabled':
+                    enabled,
+                'passwordNeverExpires':
+                    password_never_expires,
+                'daysForPasswordExpiration':
+                    days_for_password_expiration,
+                'customAttributes':
+                    custom_attributes,
+                'firstName':
+                    first_name,
+                'identityGroups':
+                    identity_groups,
+                'lastName':
+                    last_name,
+                'password':
+                    password,
+                'passwordIDStore':
+                    password_idstore,
+                'expiryDateEnabled':
+                    expiry_date_enabled,
+                'expiryDate':
+                    expiry_date,
+                'dateModified':
+                    date_modified,
+                'dateCreated':
+                    date_created,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'InternalUser': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_b243462eb0589d866791af0b0d700d_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/internaluser/name/{name}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_b243462eb0589d866791af0b0d700d_v3_3_patch_1', _api_response)
+
+    def patch_internal_user_id(self,
+                               id,
+                               account_name_alias=None,
+                               change_password=None,
+                               custom_attributes=None,
+                               date_created=None,
+                               date_modified=None,
+                               days_for_password_expiration=None,
+                               description=None,
+                               email=None,
+                               enable_password=None,
+                               enabled=None,
+                               expiry_date=None,
+                               expiry_date_enabled=None,
+                               first_name=None,
+                               identity_groups=None,
+                               last_name=None,
+                               name=None,
+                               password=None,
+                               password_idstore=None,
+                               password_never_expires=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            account_name_alias(string): The Account Name Alias will
+                be used to send email notifications
+                about password expiration, property of
+                the request body.
+            change_password(boolean): changePassword, property of
+                the request body.
+            custom_attributes(string): Key value map, property of
+                the request body.
+            date_created(string): The date of the user creation,
+                formatted as 'YYYY-MM-DD'. Read-only.,
+                property of the request body.
+            date_modified(string): The date of the last user
+                modification by admin, formatted as
+                'YYYY-MM-DD'. Read-only., property of
+                the request body.
+            days_for_password_expiration(number): This field is for
+                read only, property of the request body.
+            description(string): Description, property of the
+                request body.
+            email(string): email, property of the request body.
+            enable_password(string): EnablePassword field is added
+                in ISE 2.0 to support T+, property of
+                the request body.
+            enabled(boolean): Whether the user is enabled/disabled.
+                To use it as filter, the values should
+                be 'Enabled' or 'Disabled'. The values
+                are case sensitive. For example, '[ERSOb
+                jectURL]?filter=enabled.EQ.Enabled',
+                property of the request body.
+            expiry_date(string): to store the internal user's expiry
+                date information. It's format is =
+                'YYYY-MM-DD' , property of the request
+                body.
+            expiry_date_enabled(boolean): expiryDateEnabled,
+                property of the request body.
+            first_name(string): firstName, property of the request
+                body.
+            id(string): Id, property of the request body.
+            identity_groups(string): CSV of identity group IDs.,
+                property of the request body.
+            last_name(string): lastName, property of the request
+                body.
+            name(string): name, property of the request body.
+            password(string): password, property of the request
+                body.
+            password_idstore(string): the id store where the
+                internal user's password is kept,
+                property of the request body.
+            password_never_expires(boolean): Set TRUE to indicate
+                the user password never expires. This
+                will not apply to Users who are also ISE
+                Admins, property of the request body.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'changePassword':
+                    change_password,
+                'email':
+                    email,
+                'accountNameAlias':
+                    account_name_alias,
+                'enablePassword':
+                    enable_password,
+                'enabled':
+                    enabled,
+                'passwordNeverExpires':
+                    password_never_expires,
+                'daysForPasswordExpiration':
+                    days_for_password_expiration,
+                'customAttributes':
+                    custom_attributes,
+                'firstName':
+                    first_name,
+                'identityGroups':
+                    identity_groups,
+                'lastName':
+                    last_name,
+                'password':
+                    password,
+                'passwordIDStore':
+                    password_idstore,
+                'expiryDateEnabled':
+                    expiry_date_enabled,
+                'expiryDate':
+                    expiry_date,
+                'dateModified':
+                    date_modified,
+                'dateCreated':
+                    date_created,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'InternalUser': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_cd1bba62cec58edb1b2511ec2b15f00_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/internaluser/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_cd1bba62cec58edb1b2511ec2b15f00_v3_3_patch_1', _api_response)

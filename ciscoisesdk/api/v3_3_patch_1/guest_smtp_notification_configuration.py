@@ -921,3 +921,164 @@ class GuestSmtpNotificationConfiguration(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a0c0e67aead55a2b4db67e9d068351a_v3_3_patch_1', _api_response)
+
+    def patch_guest_smtp_notification_settings_id(self,
+                                                  id,
+                                                  connection_timeout=None,
+                                                  default_from_address=None,
+                                                  description=None,
+                                                  name=None,
+                                                  notification_enabled=None,
+                                                  password=None,
+                                                  smtp_port=None,
+                                                  smtp_server=None,
+                                                  use_default_from_address=None,
+                                                  use_password_authentication=None,
+                                                  use_tlsor_ssl_encryption=None,
+                                                  user_name=None,
+                                                  headers=None,
+                                                  payload=None,
+                                                  active_validation=True,
+                                                  **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            connection_timeout(string): Interval in seconds for all
+                the SMTP client connections, property of
+                the request body.
+            default_from_address(string): the default From email
+                address to be used to send emails from,
+                property of the request body.
+            description(string): Description, property of the
+                request body.
+            id(string): Id, property of the request body.
+            name(string): name, property of the request body.
+            notification_enabled(boolean): indicates if the email
+                notification service is to be enabled,
+                property of the request body.
+            password(string): Password of Secure SMTP server,
+                property of the request body.
+            smtp_port(string): Port at which SMTP Secure Server is
+                listening, property of the request body.
+            smtp_server(string): the SMTP server ip address or fqdn
+                such as outbound.mycompany.com, property
+                of the request body.
+            use_default_from_address(boolean): if the default from
+                address should be used rather than using
+                a sponsor user email address, property
+                of the request body.
+            use_password_authentication(boolean): If configured to
+                true, SMTP server authentication will
+                happen using username/password, property
+                of the request body.
+            use_tlsor_ssl_encryption(boolean): If configured to
+                true, SMTP server authentication will
+                happen using TLS/SSL, property of the
+                request body.
+            user_name(string): Username of Secure SMTP server,
+                property of the request body.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'defaultFromAddress':
+                    default_from_address,
+                'notificationEnabled':
+                    notification_enabled,
+                'smtpServer':
+                    smtp_server,
+                'useDefaultFromAddress':
+                    use_default_from_address,
+                'smtpPort':
+                    smtp_port,
+                'connectionTimeout':
+                    connection_timeout,
+                'useTLSorSSLEncryption':
+                    use_tlsor_ssl_encryption,
+                'usePasswordAuthentication':
+                    use_password_authentication,
+                'userName':
+                    user_name,
+                'password':
+                    password,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'ERSGuestSmtpNotificationSettings': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_b567b3c2e23f5ad6bff0528becdf8f4e_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/guestsmtpnotificationsettings/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_b567b3c2e23f5ad6bff0528becdf8f4e_v3_3_patch_1', _api_response)

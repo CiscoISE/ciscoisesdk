@@ -405,3 +405,64 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_tacacs_profile_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_9419137f78c0526a8165eddab02c9783_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_tacacs_profile_id(api):
+    endpoint_result = api.tacacs_profile.patch_tacacs_profile_id(
+        active_validation=False,
+        description='string',
+        id='string',
+        name='string',
+        payload=None,
+        session_attributes={'sessionAttributeList': [{'type': {}, 'name': 'string', 'value': 'string'}]}
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_profile
+def test_patch_tacacs_profile_id(api, validator):
+    try:
+        assert is_valid_patch_tacacs_profile_id(
+            validator,
+            patch_tacacs_profile_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_tacacs_profile_id_default(api):
+    endpoint_result = api.tacacs_profile.patch_tacacs_profile_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        name=None,
+        payload=None,
+        session_attributes=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.tacacs_profile
+def test_patch_tacacs_profile_id_default(api, validator):
+    try:
+        assert is_valid_patch_tacacs_profile_id(
+            validator,
+            patch_tacacs_profile_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

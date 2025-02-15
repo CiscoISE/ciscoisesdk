@@ -358,3 +358,70 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_filter_policy_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_1d1f85d51e0255c6bb9e89d0617d3434_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_filter_policy_id(api):
+    endpoint_result = api.filter_policy.patch_filter_policy_id(
+        active_validation=False,
+        description='string',
+        domains='string',
+        id='string',
+        name='string',
+        payload=None,
+        sgt='string',
+        subnet='string',
+        vn='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.filter_policy
+def test_patch_filter_policy_id(api, validator):
+    try:
+        assert is_valid_patch_filter_policy_id(
+            validator,
+            patch_filter_policy_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_filter_policy_id_default(api):
+    endpoint_result = api.filterpolicy.patch_filter_policy_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        domains=None,
+        name=None,
+        payload=None,
+        sgt=None,
+        subnet=None,
+        vn=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.filter_policy
+def test_patch_filter_policy_id_default(api, validator):
+    try:
+        assert is_valid_patch_filter_policy_id(
+            validator,
+            patch_filter_policy_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

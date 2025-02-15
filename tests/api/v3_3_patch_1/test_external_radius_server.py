@@ -445,3 +445,84 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_external_radius_server_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_0d7468254be85e97a56521bff13da212_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_external_radius_server_id(api):
+    endpoint_result = api.external_radius_server.patch_external_radius_server_id(
+        accounting_port={},
+        active_validation=False,
+        authentication_port={},
+        authenticator_key='string',
+        description='string',
+        enable_key_wrap=True,
+        encryption_key='string',
+        host_ip='string',
+        id='string',
+        key_input_format='string',
+        name='string',
+        payload=None,
+        proxy_timeout={},
+        retries={},
+        shared_secret='string',
+        timeout={}
+    )
+    return endpoint_result
+
+
+@pytest.mark.external_radius_server
+def test_patch_external_radius_server_id(api, validator):
+    try:
+        assert is_valid_patch_external_radius_server_id(
+            validator,
+            patch_external_radius_server_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_external_radius_server_id_default(api):
+    endpoint_result = api.externalradiusserver.patch_external_radius_server_id(
+        active_validation=False,
+        id='string',
+        accounting_port=None,
+        authentication_port=None,
+        authenticator_key=None,
+        description=None,
+        enable_key_wrap=None,
+        encryption_key=None,
+        host_ip=None,
+        key_input_format=None,
+        name=None,
+        payload=None,
+        proxy_timeout=None,
+        retries=None,
+        shared_secret=None,
+        timeout=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.external_radius_server
+def test_patch_external_radius_server_id_default(api, validator):
+    try:
+        assert is_valid_patch_external_radius_server_id(
+            validator,
+            patch_external_radius_server_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

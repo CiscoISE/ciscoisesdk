@@ -1768,3 +1768,165 @@ class Endpoint(object):
             headers=headers,
             **query_parameters
         )
+
+    def patch_endpoint_id(self,
+                          id,
+                          custom_attributes=None,
+                          description=None,
+                          group_id=None,
+                          identity_store=None,
+                          identity_store_id=None,
+                          mac=None,
+                          mdm_attributes=None,
+                          name=None,
+                          portal_user=None,
+                          profile_id=None,
+                          static_group_assignment=None,
+                          static_group_assignment_defined=None,
+                          static_profile_assignment=None,
+                          static_profile_assignment_defined=None,
+                          headers=None,
+                          payload=None,
+                          active_validation=True,
+                          **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            custom_attributes(object): Key value map, property of
+                the request body.
+            description(string): Description, property of the
+                request body.
+            group_id(string): groupId, property of the request body.
+            id(string): Id, property of the request body.
+            identity_store(string): This field is for read only,
+                property of the request body.
+            identity_store_id(string): This field is for read only,
+                property of the request body.
+            mac(string): mac, property of the request body.
+            mdm_attributes(object): MDM Attributes, property of the
+                request body.
+            name(string): name, property of the request body.
+            portal_user(string): portalUser, property of the request
+                body.
+            profile_id(string): profileId, property of the request
+                body.
+            static_group_assignment(boolean): staticGroupAssignment,
+                property of the request body.
+            static_group_assignment_defined(boolean):
+                staticGroupAssignmentDefined, property
+                of the request body.
+            static_profile_assignment(boolean):
+                staticProfileAssignment, property of the
+                request body.
+            static_profile_assignment_defined(boolean):
+                staticProfileAssignmentDefined, property
+                of the request body.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'customAttributes':
+                    custom_attributes,
+                'groupId':
+                    group_id,
+                'identityStore':
+                    identity_store,
+                'identityStoreId':
+                    identity_store_id,
+                'mac':
+                    mac,
+                'portalUser':
+                    portal_user,
+                'profileId':
+                    profile_id,
+                'staticGroupAssignment':
+                    static_group_assignment,
+                'staticGroupAssignmentDefined':
+                    static_group_assignment_defined,
+                'staticProfileAssignment':
+                    static_profile_assignment,
+                'staticProfileAssignmentDefined':
+                    static_profile_assignment_defined,
+                'mdmAttributes':
+                    mdm_attributes,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'ERSEndPoint': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_a107646bee520ba8247b06bf23311c_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/endpoint/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_a107646bee520ba8247b06bf23311c_v3_3_patch_1', _api_response)

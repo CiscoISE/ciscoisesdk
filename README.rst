@@ -139,7 +139,7 @@ The following table shows the supported versions.
    * - 3.2_beta
      - 2.1.2
    * - 3.3_patch_1
-     - 2.2.3
+     - 2.3.0
 
 If your SDK is older please consider updating it first.
 

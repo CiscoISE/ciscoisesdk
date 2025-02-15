@@ -489,3 +489,110 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_allowed_protocols_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_2da4eb995ac152158f324dfdef5e73d6_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_allowed_protocols_id(api):
+    endpoint_result = api.allowed_protocols.patch_allowed_protocols_id(
+        active_validation=False,
+        allow_chap=True,
+        allow_eap_fast=True,
+        allow_eap_md5=True,
+        allow_eap_tls=True,
+        allow_eap_ttls=True,
+        allow_leap=True,
+        allow_ms_chap_v1=True,
+        allow_ms_chap_v2=True,
+        allow_pap_ascii=True,
+        allow_peap=True,
+        allow_preferred_eap_protocol=True,
+        allow_teap=True,
+        allow_weak_ciphers_for_eap=True,
+        description='string',
+        eap_fast={'allowEapFastEapMsChapV2': True, 'allowEapFastEapMsChapV2PwdChange': True, 'allowEapFastEapMsChapV2PwdChangeRetries': {}, 'allowEapFastEapGtc': True, 'allowEapFastEapGtcPwdChange': True, 'allowEapFastEapGtcPwdChangeRetries': {}, 'allowEapFastEapTls': True, 'allowEapFastEapTlsAuthOfExpiredCerts': True, 'eapFastEnableEAPChaining': True, 'eapFastUsePacs': True, 'eapFastUsePacsTunnelPacTtl': {}, 'eapFastUsePacsTunnelPacTtlUnits': 'string', 'eapFastUsePacsUseProactivePacUpdatePrecentage': {}, 'eapFastUsePacsAllowAnonymProvisioning': True, 'eapFastUsePacsAllowAuthenProvisioning': True, 'eapFastUsePacsServerReturns': True, 'eapFastUsePacsAcceptClientCert': True, 'eapFastUsePacsAllowMachineAuthentication': True, 'eapFastUsePacsMachinePacTtl': {}, 'eapFastUsePacsMachinePacTtlUnits': 'string', 'eapFastUsePacsStatelessSessionResume': True, 'eapFastUsePacsAuthorizationPacTtl': {}, 'eapFastUsePacsAuthorizationPacTtlUnits': 'string', 'eapFastDontUsePacsAcceptClientCert': True, 'eapFastDontUsePacsAllowMachineAuthentication': True},
+        eap_tls={'allowEapTlsAuthOfExpiredCerts': True, 'eapTlsEnableStatelessSessionResume': True, 'eapTlsSessionTicketTtl': {}, 'eapTlsSessionTicketTtlUnits': {}, 'eapTlsSessionTicketPrecentage': {}},
+        eap_tls_l_bit=True,
+        eap_ttls={'eapTtlsPapAscii': True, 'eapTtlsChap': True, 'eapTtlsMsChapV1': True, 'eapTtlsMsChapV2': True, 'eapTtlsEapMd5': True, 'eapTtlsEapMsChapV2': True, 'eapTtlsEapMsChapV2PwdChange': True, 'eapTtlsEapMsChapV2PwdChangeRetries': {}},
+        five_g=True,
+        id='string',
+        name='string',
+        payload=None,
+        peap={'allowPeapEapMsChapV2': True, 'allowPeapEapMsChapV2PwdChange': True, 'allowPeapEapMsChapV2PwdChangeRetries': {}, 'allowPeapEapGtc': True, 'allowPeapEapGtcPwdChange': True, 'allowPeapEapGtcPwdChangeRetries': {}, 'allowPeapEapTls': True, 'allowPeapEapTlsAuthOfExpiredCerts': True, 'requireCryptobinding': True, 'allowPeapV0': True},
+        preferred_eap_protocol='string',
+        process_host_lookup=True,
+        require_message_auth=True,
+        rsa_pss=True,
+        teap={'allowTeapEapMsChapV2': True, 'allowTeapEapMsChapV2PwdChange': True, 'allowTeapEapMsChapV2PwdChangeRetries': {}, 'allowTeapEapTls': True, 'allowTeapEapTlsAuthOfExpiredCerts': True, 'acceptClientCertDuringTunnelEst': True, 'enableEapChaining': True, 'allowDowngradeMsk': True}
+    )
+    return endpoint_result
+
+
+@pytest.mark.allowed_protocols
+def test_patch_allowed_protocols_id(api, validator):
+    try:
+        assert is_valid_patch_allowed_protocols_id(
+            validator,
+            patch_allowed_protocols_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_allowed_protocols_id_default(api):
+    endpoint_result = api.allowed_protocols.patch_allowed_protocols_id(
+        active_validation=False,
+        id='string',
+        allow_chap=None,
+        allow_eap_fast=None,
+        allow_eap_md5=None,
+        allow_eap_tls=None,
+        allow_eap_ttls=None,
+        allow_leap=None,
+        allow_ms_chap_v1=None,
+        allow_ms_chap_v2=None,
+        allow_pap_ascii=None,
+        allow_peap=None,
+        allow_preferred_eap_protocol=None,
+        allow_teap=None,
+        allow_weak_ciphers_for_eap=None,
+        description=None,
+        eap_fast=None,
+        eap_tls=None,
+        eap_tls_l_bit=None,
+        eap_ttls=None,
+        five_g=None,
+        name=None,
+        payload=None,
+        peap=None,
+        preferred_eap_protocol=None,
+        process_host_lookup=None,
+        require_message_auth=None,
+        rsa_pss=None,
+        teap=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.allowed_protocols
+def test_patch_allowed_protocols_id_default(api, validator):
+    try:
+        assert is_valid_patch_allowed_protocols_id(
+            validator,
+            patch_allowed_protocols_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

@@ -525,3 +525,137 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_restid_store_name_name(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_fced674832255f00b1d01cd38d378bf1_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_restid_store_name_name(api):
+    endpoint_result = api.restid_store.patch_restid_store_name_name(
+        active_validation=False,
+        description='string',
+        ers_rest_idstore_advance_settings={'deviceQuerySetting': {}, 'identifyDeviceCertificate': {}, 'subjectNameFormat': 'string', 'sanAttribute': {}, 'sanAttributeValue': 'string'},
+        ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': {}, 'headers': [{'key': 'string', 'value': 'string'}]},
+        ers_rest_idstore_device_attributes={'name': 'string'},
+        ers_rest_idstore_user_attributes={'name': 'string'},
+        id='string',
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_patch_restid_store_name_name(api, validator):
+    try:
+        assert is_valid_patch_restid_store_name_name(
+            validator,
+            patch_restid_store_name_name(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_restid_store_name_name_default(api):
+    endpoint_result = api.restid_store.patch_restid_store_name_name(
+        active_validation=False,
+        name='string',
+        description=None,
+        ers_rest_idstore_advance_settings=None,
+        ers_rest_idstore_attributes=None,
+        ers_rest_idstore_device_attributes=None,
+        ers_rest_idstore_user_attributes=None,
+        id=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_patch_restid_store_name_name_default(api, validator):
+    try:
+        assert is_valid_patch_restid_store_name_name(
+            validator,
+            patch_restid_store_name_name_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
+
+
+def is_valid_patch_restid_store_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_9043fe2adcd154a1862a3400b89a52b7_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_restid_store_id(api):
+    endpoint_result = api.restid_store.patch_restid_store_id(
+        active_validation=False,
+        description='string',
+        ers_rest_idstore_advance_settings={'deviceQuerySetting': {}, 'identifyDeviceCertificate': {}, 'subjectNameFormat': 'string', 'sanAttribute': {}, 'sanAttributeValue': 'string'},
+        ers_rest_idstore_attributes={'usernameSuffix': 'string', 'rootUrl': 'string', 'predefined': {}, 'headers': [{'key': 'string', 'value': 'string'}]},
+        ers_rest_idstore_device_attributes={'name': 'string'},
+        ers_rest_idstore_user_attributes={'name': 'string'},
+        id='string',
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_patch_restid_store_id(api, validator):
+    try:
+        assert is_valid_patch_restid_store_id(
+            validator,
+            patch_restid_store_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_restid_store_id_default(api):
+    endpoint_result = api.restid_store.patch_restid_store_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        ers_rest_idstore_advance_settings=None,
+        ers_rest_idstore_attributes=None,
+        ers_rest_idstore_device_attributes=None,
+        ers_rest_idstore_user_attributes=None,
+        name=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.restid_store
+def test_patch_restid_store_id_default(api, validator):
+    try:
+        assert is_valid_patch_restid_store_id(
+            validator,
+            patch_restid_store_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

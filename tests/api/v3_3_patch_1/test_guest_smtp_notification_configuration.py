@@ -339,3 +339,82 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_guest_smtp_notification_settings_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_b567b3c2e23f5ad6bff0528becdf8f4e_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_guest_smtp_notification_settings_id(api):
+    endpoint_result = api.guest_smtp_notification_configuration.patch_guest_smtp_notification_settings_id(
+        active_validation=False,
+        connection_timeout='string',
+        default_from_address='string',
+        description='string',
+        id='string',
+        name='string',
+        notification_enabled=True,
+        password='string',
+        payload=None,
+        smtp_port='string',
+        smtp_server='string',
+        use_default_from_address=True,
+        use_password_authentication=True,
+        use_tlsor_ssl_encryption=True,
+        user_name='string'
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_smtp_notification_configuration
+def test_patch_guest_smtp_notification_settings_id(api, validator):
+    try:
+        assert is_valid_patch_guest_smtp_notification_settings_id(
+            validator,
+            patch_guest_smtp_notification_settings_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_guest_smtp_notification_settings_id_default(api):
+    endpoint_result = api.guestsmtpnotificationsettings.patch_guest_smtp_notification_settings_id(
+        active_validation=False,
+        id='string',
+        connection_timeout=None,
+        default_from_address=None,
+        description=None,
+        name=None,
+        notification_enabled=None,
+        password=None,
+        payload=None,
+        smtp_port=None,
+        smtp_server=None,
+        use_default_from_address=None,
+        use_password_authentication=None,
+        use_tlsor_ssl_encryption=None,
+        user_name=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_smtp_notification_configuration
+def test_patch_guest_smtp_notification_settings_id_default(api, validator):
+    try:
+        assert is_valid_patch_guest_smtp_notification_settings_id(
+            validator,
+            patch_guest_smtp_notification_settings_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

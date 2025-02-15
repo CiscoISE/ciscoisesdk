@@ -898,3 +898,130 @@ class TacacsExternalServers(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_d3e106d187b35547bf1f0463e4fc832f_v3_3_patch_1', _api_response)
+
+    def patch_tacacs_external_servers_id(self,
+                                         id,
+                                         connection_port=None,
+                                         description=None,
+                                         host_ip=None,
+                                         name=None,
+                                         shared_secret=None,
+                                         single_connect=None,
+                                         timeout=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
+        """Update any attribute subset. Only attributes that sent will be
+        affected.
+
+        Args:
+            connection_port(number): The port to connect the server,
+                property of the request body.
+            description(string): Description, property of the
+                request body.
+            host_ip(string): The server IPV4 address, property of
+                the request body.
+            id(string): Id, property of the request body.
+            name(string): name, property of the request body.
+            shared_secret(string): The server shared secret,
+                property of the request body.
+            single_connect(boolean): define the use of single
+                connection, property of the request
+                body.
+            timeout(number): The server timeout, property of the
+                request body.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **query_parameters: Additional query parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+
+            RestResponse: REST response with following properties:
+
+              - headers(MyDict): response headers.
+              - response(list): A list of MyDict objects. Access the object's properties by using the dot notation
+                or the bracket notation.
+              - content(bytes): representation of the request's response
+              - text(str): representation of the request's response
+
+        Raises:
+            TypeError: If the parameter types are incorrect.
+            MalformedRequest: If the request body created is invalid.
+            ApiError: If the Identity Services Engine cloud returns an error.
+        """
+        check_type(headers, dict)
+
+        if headers is not None:
+            pass
+
+        with_custom_headers = False
+        _headers = self._session.headers or {}
+        if headers:
+            _headers.update(dict_of_str(headers))
+            with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
+        check_type(id, str,
+                   may_be_none=False)
+
+        _params = {
+        }
+        _params.update(query_parameters)
+        _params = dict_from_items_with_values(_params)
+
+        path_params = {
+            'id': id,
+        }
+        if is_xml_payload:
+            _payload = payload
+        else:
+            _tmp_payload = {
+                'hostIP':
+                    host_ip,
+                'connectionPort':
+                    connection_port,
+                'singleConnect':
+                    single_connect,
+                'sharedSecret':
+                    shared_secret,
+                'timeout':
+                    timeout,
+                'name':
+                    name,
+                'id':
+                    id,
+                'description':
+                    description,
+            }
+            _payload = {
+                'TacacsExternalServer': dict_from_items_with_values(_tmp_payload)
+            }
+            _payload.update(payload or {})
+            _payload = dict_from_items_with_values(_payload)
+        if active_validation and not is_xml_payload:
+            self._request_validator('jsd_da64546331b051f984efb97c89c20400_v3_3_patch_1')\
+                .validate(_payload)
+
+        e_url = ('/ers/config/tacacsexternalservers/{id}')
+        endpoint_full_url = apply_path_params(e_url, path_params)
+
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
+        if with_custom_headers:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                headers=_headers,
+                                                **request_params)
+        else:
+            _api_response = self._session.patch(endpoint_full_url, params=_params,
+                                                **request_params)
+
+        return self._object_factory('bpm_da64546331b051f984efb97c89c20400_v3_3_patch_1', _api_response)

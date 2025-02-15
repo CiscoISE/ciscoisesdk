@@ -413,3 +413,66 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_endpoint_group_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_072aa2f78896596894e1bdceee801e7e_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_endpoint_group_id(api):
+    endpoint_result = api.endpoint_identity_group.patch_endpoint_group_id(
+        active_validation=False,
+        description='string',
+        id='string',
+        name='string',
+        parent_id='string',
+        payload=None,
+        system_defined=True
+    )
+    return endpoint_result
+
+
+@pytest.mark.endpoint_identity_group
+def test_patch_endpoint_group_id(api, validator):
+    try:
+        assert is_valid_patch_endpoint_group_id(
+            validator,
+            patch_endpoint_group_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_endpoint_group_id_default(api):
+    endpoint_result = api.endpoint_identity_group.patch_endpoint_group_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        name=None,
+        parent_id=None,
+        payload=None,
+        system_defined=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.endpoint_identity_group
+def test_patch_endpoint_group_id_default(api, validator):
+    try:
+        assert is_valid_patch_endpoint_group_id(
+            validator,
+            patch_endpoint_group_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e

@@ -354,3 +354,62 @@ def test_get_version_default(api, validator):
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
+
+
+def is_valid_patch_guest_ssid_id(json_schema_validate, obj):
+    if not obj:
+        return False
+    assert hasattr(obj, 'headers')
+    assert hasattr(obj, 'content')
+    assert hasattr(obj, 'text')
+    assert hasattr(obj, 'response')
+    assert hasattr(obj, 'status_code')
+    json_schema_validate('jsd_167ea76f9eda505e9b76f9db632c28e7_v3_3_patch_1').validate(obj.response)
+    return True
+
+
+def patch_guest_ssid_id(api):
+    endpoint_result = api.guest_ssid.patch_guest_ssid_id(
+        active_validation=False,
+        description='string',
+        id='string',
+        name='string',
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_ssid
+def test_patch_guest_ssid_id(api, validator):
+    try:
+        assert is_valid_patch_guest_ssid_id(
+            validator,
+            patch_guest_ssid_id(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest)):
+            print("ERROR: {error}".format(error=original_e))
+            raise original_e
+
+
+def patch_guest_ssid_id_default(api):
+    endpoint_result = api.guest_ssid.patch_guest_ssid_id(
+        active_validation=False,
+        id='string',
+        description=None,
+        name=None,
+        payload=None
+    )
+    return endpoint_result
+
+
+@pytest.mark.guest_ssid
+def test_patch_guest_ssid_id_default(api, validator):
+    try:
+        assert is_valid_patch_guest_ssid_id(
+            validator,
+            patch_guest_ssid_id_default(api)
+        )
+    except Exception as original_e:
+        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
+            raise original_e
