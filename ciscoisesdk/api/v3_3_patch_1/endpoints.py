@@ -591,12 +591,18 @@ class Endpoints(object):
 
     def delete_bulk_end_points(self,
                                headers=None,
+                               payload=None,
+                               active_validation=True,
                                **query_parameters):
         """Delete Endpoint in bulk.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **query_parameters: Additional query parameters (provides
                 support for parameters that may be added in the future).
 
@@ -625,6 +631,11 @@ class Endpoints(object):
         if headers:
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
+        is_xml_payload = 'application/xml' in _headers.get('Content-Type', [])
+        if active_validation and is_xml_payload:
+            check_type(payload, str)
+        if active_validation and not is_xml_payload:
+            check_type(payload, dict)
 
         _params = {
         }
@@ -633,14 +644,19 @@ class Endpoints(object):
 
         path_params = {
         }
+        _payload = payload or []
 
         e_url = ('/api/v1/endpoint/bulk')
         endpoint_full_url = apply_path_params(e_url, path_params)
+        
+        request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
-                                                 headers=_headers)
+                                                 headers=_headers,
+                                                 **request_params)
         else:
-            _api_response = self._session.delete(endpoint_full_url, params=_params)
+            _api_response = self._session.delete(endpoint_full_url, params=_params,
+                                                 **request_params)
 
         return self._object_factory('bpm_d43c525d23b5c4bba03a0c774d4d411_v3_3_patch_1', _api_response)
 
