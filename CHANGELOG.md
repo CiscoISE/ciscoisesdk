@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.1] - 2025-03-20
+### Added
+- `delete_bulk_end_points` now supports payload in 3.3 patch 1
+ 
 ## [2.3.0] - 2025-02-14
 ### Added
 - The following functions were added for version 3.3 patch 1:
@@ -492,4 +496,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.2.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.1...v2.2.2
 [2.2.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.2...v2.2.3
 [2.3.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.3...v2.3.0
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.0...develop
+[2.3.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.0...v2.3.1
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.1...develop

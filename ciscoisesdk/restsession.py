@@ -709,11 +709,13 @@ class RestSession(object):
                                     json=json, data=data, **kwargs)
             return RestResponse(response)
 
-    def delete(self, url, params=None, **kwargs):
+    def delete(self, url, params=None, json=None, data=None, **kwargs):
         """Sends a DELETE request.
 
         Args:
             url(str): The URL of the API endpoint.
+            json: Data to be sent in JSON format in the body of the request.
+            data: Data to be sent in the body of the request.
             **kwargs:
                 erc(int): The expected (success) response code for the request.
                 others: Passed on to the requests package.
@@ -729,5 +731,6 @@ class RestSession(object):
         # Expected response code
         erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['DELETE'])
 
-        response = self.request('DELETE', url, erc, 0, params=params, **kwargs)
+        response = self.request('DELETE', url, erc, 0, params=params,
+                                json=json, data=data, **kwargs)
         return RestResponse(response)
