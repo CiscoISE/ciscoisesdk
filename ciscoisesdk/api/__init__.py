@@ -1915,6 +1915,265 @@ from .v3_3_patch_1.vn_vlan_mapping import (
     VnVlanMapping as VnVlanMapping_v3_3_patch_1
 )
 
+from .v3_5_0.misc import (
+    Misc as Misc_v3_5_0
+)
+from .v3_5_0.node_deployment import (
+    NodeDeployment as NodeDeployment_v3_5_0
+)
+from .v3_5_0.node_group import (
+    NodeGroup as NodeGroup_v3_5_0
+)
+from .v3_5_0.nodeservices import (
+    Nodeservices as Nodeservices_v3_5_0
+)
+from .v3_5_0.pan_ha import (
+    PanHa as PanHa_v3_5_0
+)
+from .v3_5_0.patch import (
+    Patch as Patch_v3_5_0
+)
+from .v3_5_0.subscriber import (
+    Subscriber as Subscriber_v3_5_0
+)
+from .v3_5_0.upgrade import (
+    Upgrade as Upgrade_v3_5_0
+)
+from .v3_5_0.user_equipment import (
+    UserEquipment as UserEquipment_v3_5_0
+)
+from .v3_5_0.acibindings import (
+    Acibindings as Acibindings_v3_5_0
+)
+from .v3_5_0.acisettings import (
+    Acisettings as Acisettings_v3_5_0
+)
+from .v3_5_0.activedirectory import (
+    Activedirectory as Activedirectory_v3_5_0
+)
+from .v3_5_0.adminuser import (
+    Adminuser as Adminuser_v3_5_0
+)
+from .v3_5_0.adresourcereservation import (
+    Adresourcereservation as Adresourcereservation_v3_5_0
+)
+from .v3_5_0.allowedprotocols import (
+    Allowedprotocols as Allowedprotocols_v3_5_0
+)
+from .v3_5_0.ancendpoint import (
+    Ancendpoint as Ancendpoint_v3_5_0
+)
+from .v3_5_0.ancpolicy import (
+    Ancpolicy as Ancpolicy_v3_5_0
+)
+from .v3_5_0.authorizationprofile import (
+    Authorizationprofile as Authorizationprofile_v3_5_0
+)
+from .v3_5_0.byodportal import (
+    Byodportal as Byodportal_v3_5_0
+)
+from .v3_5_0.certificateprofile import (
+    Certificateprofile as Certificateprofile_v3_5_0
+)
+from .v3_5_0.certificatetemplate import (
+    Certificatetemplate as Certificatetemplate_v3_5_0
+)
+from .v3_5_0.ctsenvdata import (
+    Ctsenvdata as Ctsenvdata_v3_5_0
+)
+from .v3_5_0.ctsmatrix import (
+    Ctsmatrix as Ctsmatrix_v3_5_0
+)
+from .v3_5_0.deploymentinfo import (
+    Deploymentinfo as Deploymentinfo_v3_5_0
+)
+from .v3_5_0.downloadableacl import (
+    Downloadableacl as Downloadableacl_v3_5_0
+)
+from .v3_5_0.egressmatrixcell import (
+    Egressmatrixcell as Egressmatrixcell_v3_5_0
+)
+from .v3_5_0.endpoint import (
+    Endpoint as Endpoint_v3_5_0
+)
+from .v3_5_0.endpointcert import (
+    Endpointcert as Endpointcert_v3_5_0
+)
+from .v3_5_0.endpointgroup import (
+    Endpointgroup as Endpointgroup_v3_5_0
+)
+from .v3_5_0.externalradiusserver import (
+    Externalradiusserver as Externalradiusserver_v3_5_0
+)
+from .v3_5_0.filterpolicy import (
+    Filterpolicy as Filterpolicy_v3_5_0
+)
+from .v3_5_0.guestlocation import (
+    Guestlocation as Guestlocation_v3_5_0
+)
+from .v3_5_0.guestsmtpnotificationsettings import (
+    Guestsmtpnotificationsettings as Guestsmtpnotificationsettings_v3_5_0
+)
+from .v3_5_0.guestssid import (
+    Guestssid as Guestssid_v3_5_0
+)
+from .v3_5_0.guesttype import (
+    Guesttype as Guesttype_v3_5_0
+)
+from .v3_5_0.guestuser import (
+    Guestuser as Guestuser_v3_5_0
+)
+from .v3_5_0.hotspotportal import (
+    Hotspotportal as Hotspotportal_v3_5_0
+)
+from .v3_5_0.identitygroup import (
+    Identitygroup as Identitygroup_v3_5_0
+)
+from .v3_5_0.idstoresequence import (
+    Idstoresequence as Idstoresequence_v3_5_0
+)
+from .v3_5_0.internaluser import (
+    Internaluser as Internaluser_v3_5_0
+)
+from .v3_5_0.ldap import (
+    Ldap as Ldap_v3_5_0
+)
+from .v3_5_0.mydeviceportal import (
+    Mydeviceportal as Mydeviceportal_v3_5_0
+)
+from .v3_5_0.networkdevice import (
+    Networkdevice as Networkdevice_v3_5_0
+)
+from .v3_5_0.networkdevicegroup import (
+    Networkdevicegroup as Networkdevicegroup_v3_5_0
+)
+from .v3_5_0.node import (
+    Node as Node_v3_5_0
+)
+from .v3_5_0.nspprofile import (
+    Nspprofile as Nspprofile_v3_5_0
+)
+from .v3_5_0.portal import (
+    Portal as Portal_v3_5_0
+)
+from .v3_5_0.portalglobalsetting import (
+    Portalglobalsetting as Portalglobalsetting_v3_5_0
+)
+from .v3_5_0.portaltheme import (
+    Portaltheme as Portaltheme_v3_5_0
+)
+from .v3_5_0.profilerprofile import (
+    Profilerprofile as Profilerprofile_v3_5_0
+)
+
+from .v3_5_0.pxgridnode import (
+    Pxgridnode as Pxgridnode_v3_5_0
+)
+from .v3_5_0.pxgridsettings import (
+    Pxgridsettings as Pxgridsettings_v3_5_0
+)
+from .v3_5_0.radiusserversequence import (
+    Radiusserversequence as Radiusserversequence_v3_5_0
+)
+from .v3_5_0.reportconfig import (
+    Reportconfig as Reportconfig_v3_5_0
+)
+from .v3_5_0.restidstore import (
+    Restidstore as Restidstore_v3_5_0
+)
+from .v3_5_0.restidstoreattribute import (
+    Restidstoreattribute as Restidstoreattribute_v3_5_0
+)
+from .v3_5_0.restidstoredeviceattribute import (
+    Restidstoredeviceattribute as Restidstoredeviceattribute_v3_5_0
+)
+from .v3_5_0.restidstorepredefinedregex import (
+    Restidstorepredefinedregex as Restidstorepredefinedregex_v3_5_0
+)
+from .v3_5_0.restidstoresettings import (
+    Restidstoresettings as Restidstoresettings_v3_5_0
+)
+from .v3_5_0.selfregportal import (
+    Selfregportal as Selfregportal_v3_5_0
+)
+from .v3_5_0.service import (
+    Service as Service_v3_5_0
+)
+from .v3_5_0.sessionservicenode import (
+    Sessionservicenode as Sessionservicenode_v3_5_0
+)
+from .v3_5_0.sgacl import (
+    Sgacl as Sgacl_v3_5_0
+)
+from .v3_5_0.sgacls import (
+    Sgacls as Sgacls_v3_5_0
+)
+from .v3_5_0.sgmapping import (
+    Sgmapping as Sgmapping_v3_5_0
+)
+from .v3_5_0.sgmappinggroup import (
+    Sgmappinggroup as Sgmappinggroup_v3_5_0
+)
+from .v3_5_0.sgt import (
+    Sgt as Sgt_v3_5_0
+)
+from .v3_5_0.sgtvnvlan import (
+    Sgtvnvlan as Sgtvnvlan_v3_5_0
+)
+from .v3_5_0.smsprovider import (
+    Smsprovider as Smsprovider_v3_5_0
+)
+from .v3_5_0.sponsoredguestportal import (
+    Sponsoredguestportal as Sponsoredguestportal_v3_5_0
+)
+from .v3_5_0.sponsorgroup import (
+    Sponsorgroup as Sponsorgroup_v3_5_0
+)
+from .v3_5_0.sponsorgroupmember import (
+    Sponsorgroupmember as Sponsorgroupmember_v3_5_0
+)
+from .v3_5_0.sponsorportal import (
+    Sponsorportal as Sponsorportal_v3_5_0
+)
+from .v3_5_0.supportbundle import (
+    Supportbundle as Supportbundle_v3_5_0
+)
+from .v3_5_0.supportbundledownload import (
+    Supportbundledownload as Supportbundledownload_v3_5_0
+)
+from .v3_5_0.supportbundlestatus import (
+    Supportbundlestatus as Supportbundlestatus_v3_5_0
+)
+from .v3_5_0.sxpconnections import (
+    Sxpconnections as Sxpconnections_v3_5_0
+)
+from .v3_5_0.sxplocalbindings import (
+    Sxplocalbindings as Sxplocalbindings_v3_5_0
+)
+from .v3_5_0.sxpvpns import (
+    Sxpvpns as Sxpvpns_v3_5_0
+)
+from .v3_5_0.systemcertificate import (
+    Systemcertificate as Systemcertificate_v3_5_0
+)
+from .v3_5_0.tacacscommandsets import (
+    Tacacscommandsets as Tacacscommandsets_v3_5_0
+)
+from .v3_5_0.tacacsexternalservers import (
+    Tacacsexternalservers as Tacacsexternalservers_v3_5_0
+)
+from .v3_5_0.tacacsprofile import (
+    Tacacsprofile as Tacacsprofile_v3_5_0
+)
+from .v3_5_0.tacacsserversequence import (
+    Tacacsserversequence as Tacacsserversequence_v3_5_0
+)
+from .v3_5_0.telemetryinfo import (
+    Telemetryinfo as Telemetryinfo_v3_5_0
+)
+from .v3_5_0.threat import (
+    Threat as Threat_v3_5_0
+)
 
 class IdentityServicesEngineAPI(object):
     """Identity Services Engine API wrapper.
@@ -2122,11 +2381,11 @@ class IdentityServicesEngineAPI(object):
             check_type(self._mnt_base_url, str, may_be_none=False)
             check_type(self._px_grid_base_url, str, may_be_none=False)
 
-        if self._version not in ['3.1.0', '3.1.1', '3.1_Patch_1', '3.2_beta', '3.3_patch_1']:
+        if self._version not in ['3.1.0', '3.1.1', '3.1_Patch_1', '3.2_beta', '3.3_patch_1', '3.5.0']:
             raise VersionError(
                 'Unknown API version, '
                 + 'known versions are {0}'.format(
-                    '3.1.0, 3.1.1, 3.1_Patch_1, 3.2_beta, 3.3_patch_1.'
+                    '3.1.0, 3.1.1, 3.1_Patch_1, 3.2_beta, 3.3_patch_1, 3.5.0.'
                 )
             )
 
@@ -4834,6 +5093,359 @@ class IdentityServicesEngineAPI(object):
             self.vn_vlan_mapping = \
                 VnVlanMapping_v3_3_patch_1(
                     self._session_ui, self.object_factory, self._validator
+                )
+        if self._version == '3.5.0':
+            self.misc = \
+                Misc_v3_5_0(
+                    self._session_mnt, self.object_factory, self._validator
+                )
+            self.node_deployment = \
+                NodeDeployment_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.node_group = \
+                NodeGroup_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.nodeservices = \
+                Nodeservices_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.pan_ha = \
+                PanHa_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.patch = \
+                Patch_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.subscriber = \
+                Subscriber_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.upgrade = \
+                Upgrade_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.user_equipment = \
+                UserEquipment_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.acibindings = \
+                Acibindings_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.acisettings = \
+                Acisettings_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.activedirectory = \
+                Activedirectory_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.adminuser = \
+                Adminuser_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.adresourcereservation = \
+                Adresourcereservation_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.allowedprotocols = \
+                Allowedprotocols_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.ancendpoint = \
+                Ancendpoint_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.ancpolicy = \
+                Ancpolicy_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.authorizationprofile = \
+                Authorizationprofile_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.byodportal = \
+                Byodportal_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.certificateprofile = \
+                Certificateprofile_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.certificatetemplate = \
+                Certificatetemplate_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.ctsenvdata = \
+                Ctsenvdata_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.ctsmatrix = \
+                Ctsmatrix_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.deploymentinfo = \
+                Deploymentinfo_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.downloadableacl = \
+                Downloadableacl_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.egressmatrixcell = \
+                Egressmatrixcell_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.endpoint = \
+                Endpoint_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.endpointcert = \
+                Endpointcert_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.endpointgroup = \
+                Endpointgroup_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.externalradiusserver = \
+                Externalradiusserver_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.filterpolicy = \
+                Filterpolicy_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.guestlocation = \
+                Guestlocation_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.guestsmtpnotificationsettings = \
+                Guestsmtpnotificationsettings_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.guestssid = \
+                Guestssid_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.guesttype = \
+                Guesttype_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.guestuser = \
+                Guestuser_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.hotspotportal = \
+                Hotspotportal_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.identitygroup = \
+                Identitygroup_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.idstoresequence = \
+                Idstoresequence_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.internaluser = \
+                Internaluser_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.ldap = \
+                Ldap_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.mydeviceportal = \
+                Mydeviceportal_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.networkdevice = \
+                Networkdevice_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.networkdevicegroup = \
+                Networkdevicegroup_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.node = \
+                Node_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.nspprofile = \
+                Nspprofile_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.portal = \
+                Portal_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.portalglobalsetting = \
+                Portalglobalsetting_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.portaltheme = \
+                Portaltheme_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.profilerprofile = \
+                Profilerprofile_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.pxgridnode = \
+                Pxgridnode_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.pxgridsettings = \
+                Pxgridsettings_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.radiusserversequence = \
+                Radiusserversequence_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            # self.rbac_api_controller = \
+            #     RbacApiController_v3_5_0(
+            #         self._session_ers, self.object_factory, self._validator
+            #     )
+            self.reportconfig = \
+                Reportconfig_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.restidstore = \
+                Restidstore_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.restidstoreattribute = \
+                Restidstoreattribute_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.restidstoredeviceattribute = \
+                Restidstoredeviceattribute_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.restidstorepredefinedregex = \
+                Restidstorepredefinedregex_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.restidstoresettings = \
+                Restidstoresettings_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.selfregportal = \
+                Selfregportal_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.service = \
+                Service_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sessionservicenode = \
+                Sessionservicenode_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sgacl = \
+                Sgacl_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sgacls = \
+                Sgacls_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sgmapping = \
+                Sgmapping_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sgmappinggroup = \
+                Sgmappinggroup_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sgt = \
+                Sgt_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sgtvnvlan = \
+                Sgtvnvlan_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.smsprovider = \
+                Smsprovider_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sponsoredguestportal = \
+                Sponsoredguestportal_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sponsorgroup = \
+                Sponsorgroup_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sponsorgroupmember = \
+                Sponsorgroupmember_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sponsorportal = \
+                Sponsorportal_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            # self.stop_replication_api_controller = \
+            #     StopReplicationApiController_v3_5_0(
+            #         self._session_ers, self.object_factory, self._validator
+            #     )
+            self.supportbundle = \
+                Supportbundle_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.supportbundledownload = \
+                Supportbundledownload_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.supportbundlestatus = \
+                Supportbundlestatus_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sxpconnections = \
+                Sxpconnections_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sxplocalbindings = \
+                Sxplocalbindings_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.sxpvpns = \
+                Sxpvpns_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.systemcertificate = \
+                Systemcertificate_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.tacacscommandsets = \
+                Tacacscommandsets_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.tacacsexternalservers = \
+                Tacacsexternalservers_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.tacacsprofile = \
+                Tacacsprofile_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.tacacsserversequence = \
+                Tacacsserversequence_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.telemetryinfo = \
+                Telemetryinfo_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
+                )
+            self.threat = \
+                Threat_v3_5_0(
+                    self._session_ers, self.object_factory, self._validator
                 )
         self.custom_caller = \
             CustomCaller(self._session, self.object_factory)

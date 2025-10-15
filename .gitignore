@@ -139,3 +139,8 @@ cython_debug/
 
 # DS Store
 .DS_Store
+
+quick_start_v3_5_0.py
+test_v3_5_0_sdk.py
+examples_v3_5_0.py
+TESTING_V3_5_0.md
