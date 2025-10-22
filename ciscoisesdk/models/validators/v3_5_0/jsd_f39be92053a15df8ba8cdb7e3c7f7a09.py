@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createGuestsmtpnotificationsettings data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorF39Be92053A15Df8Ba8CDb7E3C7F7A09(object):
-    """Create request schema definition."""
+    """createGuestsmtpnotificationsettings request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF39Be92053A15Df8Ba8CDb7E3C7F7A09, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

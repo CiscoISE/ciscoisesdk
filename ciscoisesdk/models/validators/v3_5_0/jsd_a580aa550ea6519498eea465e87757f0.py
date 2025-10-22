@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine UpdateById data model.
+"""Identity Services Engine updateMydeviceportalById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
-    """UpdateById request schema definition."""
+    """updateMydeviceportalById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -51,14 +51,16 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 "data": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "bannerImage": {
                 "properties": {
                 "data": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "bannerTitle": {
                 "type": "string"
@@ -74,9 +76,11 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 "data": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "language": {
                 "type": "object"
@@ -96,7 +100,8 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "portalTheme": {
                 "properties": {
@@ -112,7 +117,8 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 },
                 "portalTweakSettings": {
                 "properties": {
@@ -128,9 +134,11 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 "pageLabelAndTextColor": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {
@@ -164,14 +172,16 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 "requireAupScrolling": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "employeeChangePasswordSettings": {
                 "properties": {
                 "allowEmployeeToChangePwd": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "loginPageSettings": {
                 "properties": {
@@ -193,7 +203,8 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 "timeBetweenLoginsDuringRateLimit": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "portalSettings": {
                 "properties": {
@@ -224,14 +235,16 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 "certificateGroupTag",
                 "endpointIdentityGroup",
                 "httpsPort"
-                ]
+                ],
+                "type": "object"
                 },
                 "postLoginBannerSettings": {
                 "properties": {
                 "includePostAccessBanner": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "supportInfoSettings": {
                 "properties": {
@@ -259,9 +272,11 @@ class JSONSchemaValidatorA580Aa550Ea6519498EeA465E87757F0(object):
                 "includeSupportInfoPage": {
                 "type": "boolean"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 }
                 },
                 "required": [

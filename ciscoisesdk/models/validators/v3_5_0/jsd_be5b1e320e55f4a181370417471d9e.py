@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine suspendById data model.
+"""Identity Services Engine updateGuestuserSuspendById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorBe5B1E320E55F4A181370417471D9E(object):
-    """suspendById request schema definition."""
+    """updateGuestuserSuspendById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorBe5B1E320E55F4A181370417471D9E, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -55,7 +55,8 @@ class JSONSchemaValidatorBe5B1E320E55F4A181370417471D9E(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 }
                 }
                 }'''.replace("\n" + ' ' * 16, '')

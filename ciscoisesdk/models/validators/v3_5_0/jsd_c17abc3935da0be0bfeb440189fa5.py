@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Patch data model.
+"""Identity Services Engine patchSelfregportalById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
-    """Patch request schema definition."""
+    """patchSelfregportalById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -51,14 +51,16 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "data": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "bannerImage": {
                 "properties": {
                 "data": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "bannerTitle": {
                 "type": "string"
@@ -74,9 +76,11 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "data": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "language": {
                 "type": "object"
@@ -96,7 +100,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "portalTheme": {
                 "properties": {
@@ -112,7 +117,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 },
                 "portalTweakSettings": {
                 "properties": {
@@ -128,9 +134,11 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "pageLabelAndTextColor": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {
@@ -170,7 +178,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "useDiffAupForEmployees": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "authSuccessSettings": {
                 "properties": {
@@ -180,7 +189,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "successRedirect": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "byodSettings": {
                 "properties": {
@@ -192,7 +202,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "showDeviceID": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "byodRegistrationSuccessSettings": {
                 "properties": {
@@ -202,7 +213,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "successRedirect": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "byodWelcomeSettings": {
                 "properties": {
@@ -227,16 +239,19 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "requireScrolling": {
                 "type": "boolean"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "guestChangePasswordSettings": {
                 "properties": {
                 "allowChangePasswdAtFirstLogin": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "guestDeviceRegistrationSettings": {
                 "properties": {
@@ -246,7 +261,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "autoRegisterGuestDevices": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "loginPageSettings": {
                 "properties": {
@@ -283,7 +299,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "timeBetweenLoginsDuringRateLimit": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "portalSettings": {
                 "properties": {
@@ -318,14 +335,16 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "authenticationMethod",
                 "certificateGroupTag",
                 "httpsPort"
-                ]
+                ],
+                "type": "object"
                 },
                 "postLoginBannerSettings": {
                 "properties": {
                 "includePostAccessBanner": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "selfRegPageSettings": {
                 "properties": {
@@ -376,7 +395,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldEmailAddr": {
                 "properties": {
@@ -386,7 +406,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldFirstName": {
                 "properties": {
@@ -396,7 +417,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldLastName": {
                 "properties": {
@@ -406,7 +428,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldLocation": {
                 "properties": {
@@ -416,7 +439,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldPersonBeingVisited": {
                 "properties": {
@@ -426,7 +450,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldPhoneNo": {
                 "properties": {
@@ -436,7 +461,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldReasonForVisit": {
                 "properties": {
@@ -446,7 +472,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldSmsProvider": {
                 "properties": {
@@ -456,7 +483,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "fieldUserName": {
                 "properties": {
@@ -466,7 +494,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "include": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "guestEmailAllowlistDomains": {
                 "items": {
@@ -525,7 +554,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "selfRegSuccessSettings": {
                 "properties": {
@@ -586,7 +616,8 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "requireAupScrolling": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "supportInfoSettings": {
                 "properties": {
@@ -614,9 +645,11 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "includeSupportInfoPage": {
                 "type": "boolean"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 }
                 },
                 "required": [

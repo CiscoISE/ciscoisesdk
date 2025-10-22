@@ -69,14 +69,14 @@ class Sponsorgroup(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_sponsorgroup(self,
+                         filter=None,
+                         page=None,
+                         size=None,
+                         sortasc=None,
+                         sortdsc=None,
+                         headers=None,
+                         **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Sponsorgroup(object):
 
         return self._object_factory('bpm_cd49dc0018158c1936bbd3e5f39c5b9_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_sponsorgroup_generator(self,
+                                   filter=None,
+                                   page=None,
+                                   size=None,
+                                   sortasc=None,
+                                   sortdsc=None,
+                                   headers=None,
+                                   **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Sponsorgroup(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sponsorgroup, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,30 +206,30 @@ class Sponsorgroup(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               auto_notification=None,
-               create_permissions=None,
-               description=None,
-               guest_types=None,
-               id=None,
-               is_default_group=None,
-               is_enabled=None,
-               locations=None,
-               manage_permission=None,
-               member_groups=None,
-               name=None,
-               other_permissions=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_sponsorgroup(self,
+                            auto_notification=None,
+                            create_permissions=None,
+                            description=None,
+                            guest_types=None,
+                            id=None,
+                            is_default_group=None,
+                            is_enabled=None,
+                            locations=None,
+                            manage_permission=None,
+                            member_groups=None,
+                            name=None,
+                            other_permissions=None,
+                            headers=None,
+                            payload=None,
+                            active_validation=True,
+                            **query_parameters):
         """Create.
 
         Args:
             auto_notification(boolean): autoNotification, property
                 of the request body.
-            create_permissions(): createPermissions, property of the
-                request body.
+            create_permissions(object): createPermissions, property
+                of the request body.
             description(string): Description, property of the
                 request body.
             guest_types(list): guestTypes, property of the request
@@ -247,8 +247,8 @@ class Sponsorgroup(object):
             member_groups(list): memberGroups, property of the
                 request body (list of strings).
             name(string): name, property of the request body.
-            other_permissions(): otherPermissions, property of the
-                request body.
+            other_permissions(object): otherPermissions, property of
+                the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -348,10 +348,10 @@ class Sponsorgroup(object):
 
         return self._object_factory('bpm_a5fa00fd63bd531b9c759abbc6b326ca_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_sponsorgroup_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -408,30 +408,30 @@ class Sponsorgroup(object):
 
         return self._object_factory('bpm_eaa0d7c339d152b688876c2e10f51fe7_v3_5_0', _api_response)
 
-    def update_by_id(self,
-                     id,
-                     auto_notification=None,
-                     create_permissions=None,
-                     description=None,
-                     guest_types=None,
-                     is_default_group=None,
-                     is_enabled=None,
-                     locations=None,
-                     manage_permission=None,
-                     member_groups=None,
-                     name=None,
-                     other_permissions=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_sponsorgroup_by_id(self,
+                                  id,
+                                  auto_notification=None,
+                                  create_permissions=None,
+                                  description=None,
+                                  guest_types=None,
+                                  is_default_group=None,
+                                  is_enabled=None,
+                                  locations=None,
+                                  manage_permission=None,
+                                  member_groups=None,
+                                  name=None,
+                                  other_permissions=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """UpdateById.
 
         Args:
             auto_notification(boolean): autoNotification, property
                 of the request body.
-            create_permissions(): createPermissions, property of the
-                request body.
+            create_permissions(object): createPermissions, property
+                of the request body.
             description(string): Description, property of the
                 request body.
             guest_types(list): guestTypes, property of the request
@@ -449,8 +449,8 @@ class Sponsorgroup(object):
             member_groups(list): memberGroups, property of the
                 request body (list of strings).
             name(string): name, property of the request body.
-            other_permissions(): otherPermissions, property of the
-                request body.
+            other_permissions(object): otherPermissions, property of
+                the request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -555,10 +555,10 @@ class Sponsorgroup(object):
 
         return self._object_factory('bpm_dfc44f7f24d153d789efa48e904b3832_v3_5_0', _api_response)
 
-    def delete_by_id(self,
-                     id,
-                     headers=None,
-                     **query_parameters):
+    def delete_sponsorgroup_by_id(self,
+                                  id,
+                                  headers=None,
+                                  **query_parameters):
         """DeleteById.
 
         Args:

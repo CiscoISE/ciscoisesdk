@@ -69,14 +69,14 @@ class Guestsmtpnotificationsettings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_guestsmtpnotificationsettings(self,
+                                          filter=None,
+                                          page=None,
+                                          size=None,
+                                          sortasc=None,
+                                          sortdsc=None,
+                                          headers=None,
+                                          **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Guestsmtpnotificationsettings(object):
 
         return self._object_factory('bpm_d758067dcf5c65a5dd3bc4e014c056_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_guestsmtpnotificationsettings_generator(self,
+                                                    filter=None,
+                                                    page=None,
+                                                    size=None,
+                                                    sortasc=None,
+                                                    sortdsc=None,
+                                                    headers=None,
+                                                    **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Guestsmtpnotificationsettings(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_guestsmtpnotificationsettings, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,24 +206,24 @@ class Guestsmtpnotificationsettings(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               connection_timeout=None,
-               default_from_address=None,
-               description=None,
-               id=None,
-               name=None,
-               notification_enabled=None,
-               password=None,
-               smtp_port=None,
-               smtp_server=None,
-               use_default_from_address=None,
-               use_password_authentication=None,
-               use_tlsor_ssl_encryption=None,
-               user_name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_guestsmtpnotificationsettings(self,
+                                             connection_timeout=None,
+                                             default_from_address=None,
+                                             description=None,
+                                             id=None,
+                                             name=None,
+                                             notification_enabled=None,
+                                             password=None,
+                                             smtp_port=None,
+                                             smtp_server=None,
+                                             use_default_from_address=None,
+                                             use_password_authentication=None,
+                                             use_tlsor_ssl_encryption=None,
+                                             user_name=None,
+                                             headers=None,
+                                             payload=None,
+                                             active_validation=True,
+                                             **query_parameters):
         """Create.
 
         Args:
@@ -362,10 +362,10 @@ class Guestsmtpnotificationsettings(object):
 
         return self._object_factory('bpm_f39be92053a15df8ba8cdb7e3c7f7a09_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_guestsmtpnotificationsettings_by_id(self,
+                                                id,
+                                                headers=None,
+                                                **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -422,24 +422,24 @@ class Guestsmtpnotificationsettings(object):
 
         return self._object_factory('bpm_ca28129793d1569bb50de9f43b0d0ee8_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               connection_timeout=None,
-               default_from_address=None,
-               description=None,
-               name=None,
-               notification_enabled=None,
-               password=None,
-               smtp_port=None,
-               smtp_server=None,
-               use_default_from_address=None,
-               use_password_authentication=None,
-               use_tlsor_ssl_encryption=None,
-               user_name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_guestsmtpnotificationsettings_by_id(self,
+                                                   id,
+                                                   connection_timeout=None,
+                                                   default_from_address=None,
+                                                   description=None,
+                                                   name=None,
+                                                   notification_enabled=None,
+                                                   password=None,
+                                                   smtp_port=None,
+                                                   smtp_server=None,
+                                                   use_default_from_address=None,
+                                                   use_password_authentication=None,
+                                                   use_tlsor_ssl_encryption=None,
+                                                   user_name=None,
+                                                   headers=None,
+                                                   payload=None,
+                                                   active_validation=True,
+                                                   **query_parameters):
         """Update.
 
         Args:
@@ -583,24 +583,24 @@ class Guestsmtpnotificationsettings(object):
 
         return self._object_factory('bpm_a7500f6e473a50e19452683e303dd021_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              connection_timeout=None,
-              default_from_address=None,
-              description=None,
-              name=None,
-              notification_enabled=None,
-              password=None,
-              smtp_port=None,
-              smtp_server=None,
-              use_default_from_address=None,
-              use_password_authentication=None,
-              use_tlsor_ssl_encryption=None,
-              user_name=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_guestsmtpnotificationsettings_by_id(self,
+                                                  id,
+                                                  connection_timeout=None,
+                                                  default_from_address=None,
+                                                  description=None,
+                                                  name=None,
+                                                  notification_enabled=None,
+                                                  password=None,
+                                                  smtp_port=None,
+                                                  smtp_server=None,
+                                                  use_default_from_address=None,
+                                                  use_password_authentication=None,
+                                                  use_tlsor_ssl_encryption=None,
+                                                  user_name=None,
+                                                  headers=None,
+                                                  payload=None,
+                                                  active_validation=True,
+                                                  **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

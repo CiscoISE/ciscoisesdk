@@ -69,14 +69,14 @@ class Sponsorportal(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_sponsorportal(self,
+                          filter=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Sponsorportal(object):
 
         return self._object_factory('bpm_f5a3b8579186cc592d9c1b73aa_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_sponsorportal_generator(self,
+                                    filter=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Sponsorportal(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sponsorportal, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,22 +206,22 @@ class Sponsorportal(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               customizations=None,
-               description=None,
-               id=None,
-               name=None,
-               portal_test_url=None,
-               portal_type=None,
-               settings=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_sponsorportal(self,
+                             customizations=None,
+                             description=None,
+                             id=None,
+                             name=None,
+                             portal_test_url=None,
+                             portal_type=None,
+                             settings=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Create.
 
         Args:
-            customizations(): customizations, property of the
+            customizations(object): customizations, property of the
                 request body.
             description(string): Description, property of the
                 request body.
@@ -234,7 +234,8 @@ class Sponsorportal(object):
                 mydevice, selfRegGuest, sponsor and
                 sponsoredGuest, property of the request
                 body.
-            settings(): settings, property of the request body.
+            settings(object): settings, property of the request
+                body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -324,10 +325,10 @@ class Sponsorportal(object):
 
         return self._object_factory('bpm_db236b205dc85596aa55a5c5c750b373_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  portal_id,
-                  headers=None,
-                  **query_parameters):
+    def get_sponsorportal_by_id(self,
+                                portal_id,
+                                headers=None,
+                                **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -384,23 +385,23 @@ class Sponsorportal(object):
 
         return self._object_factory('bpm_b33a92d2ffe5232955d0392f6fe6a5a_v3_5_0', _api_response)
 
-    def update_by_id(self,
-                     portal_id,
-                     customizations=None,
-                     description=None,
-                     id=None,
-                     name=None,
-                     portal_test_url=None,
-                     portal_type=None,
-                     settings=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_sponsorportal_by_id(self,
+                                   portal_id,
+                                   customizations=None,
+                                   description=None,
+                                   id=None,
+                                   name=None,
+                                   portal_test_url=None,
+                                   portal_type=None,
+                                   settings=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
         """UpdateById.
 
         Args:
-            customizations(): customizations, property of the
+            customizations(object): customizations, property of the
                 request body.
             description(string): Description, property of the
                 request body.
@@ -413,7 +414,8 @@ class Sponsorportal(object):
                 mydevice, selfRegGuest, sponsor and
                 sponsoredGuest, property of the request
                 body.
-            settings(): settings, property of the request body.
+            settings(object): settings, property of the request
+                body.
             portal_id(str): portal-id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -508,10 +510,10 @@ class Sponsorportal(object):
 
         return self._object_factory('bpm_c3149045f085ae180d8262a4d9cc19d_v3_5_0', _api_response)
 
-    def delete_by_id(self,
-                     portal_id,
-                     headers=None,
-                     **query_parameters):
+    def delete_sponsorportal_by_id(self,
+                                   portal_id,
+                                   headers=None,
+                                   **query_parameters):
         """DeleteById.
 
         Args:

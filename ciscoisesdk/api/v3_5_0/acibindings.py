@@ -69,12 +69,12 @@ class Acibindings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_bindings_info(self,
-                              filter=None,
-                              page=None,
-                              size=None,
-                              headers=None,
-                              **query_parameters):
+    def get_acibindings_getall(self,
+                               filter=None,
+                               page=None,
+                               size=None,
+                               headers=None,
+                               **query_parameters):
         """getAllBindingsInfo.
 
         Args:
@@ -141,12 +141,12 @@ class Acibindings(object):
 
         return self._object_factory('bpm_d1448851f0154d0b6e9c856ec6cc6f0_v3_5_0', _api_response)
 
-    def get_all_bindings_info_generator(self,
-                                        filter=None,
-                                        page=None,
-                                        size=None,
-                                        headers=None,
-                                        **query_parameters):
+    def get_acibindings_getall_generator(self,
+                                         filter=None,
+                                         page=None,
+                                         size=None,
+                                         headers=None,
+                                         **query_parameters):
         """getAllBindingsInfo.
 
         Args:
@@ -178,7 +178,7 @@ class Acibindings(object):
         """
 
         yield from get_next_page(
-            self.get_all_bindings_info, dict(
+            self.get_acibindings_getall, dict(
                 filter=filter,
                 page=page,
                 size=size,

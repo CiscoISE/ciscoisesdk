@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createEndpoint data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorAf7DecaA9Bf5E799Adb5D8Bdff495E2(object):
-    """Create request schema definition."""
+    """createEndpoint request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorAf7DecaA9Bf5E799Adb5D8Bdff495E2, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

@@ -69,14 +69,14 @@ class Activedirectory(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def getalljoinpoints(self,
-                         filter=None,
-                         page=None,
-                         size=None,
-                         sortasc=None,
-                         sortdsc=None,
-                         headers=None,
-                         **query_parameters):
+    def get_activedirectory(self,
+                            filter=None,
+                            page=None,
+                            size=None,
+                            sortasc=None,
+                            sortdsc=None,
+                            headers=None,
+                            **query_parameters):
         """Get all join points.
 
         Args:
@@ -152,14 +152,14 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_d4b48930a5a5e8558f659f6cc2f77_v3_5_0', _api_response)
 
-    def getalljoinpoints_generator(self,
-                                   filter=None,
-                                   page=None,
-                                   size=None,
-                                   sortasc=None,
-                                   sortdsc=None,
-                                   headers=None,
-                                   **query_parameters):
+    def get_activedirectory_generator(self,
+                                      filter=None,
+                                      page=None,
+                                      size=None,
+                                      sortasc=None,
+                                      sortdsc=None,
+                                      headers=None,
+                                      **query_parameters):
         """Get all join points.
 
         Args:
@@ -194,7 +194,7 @@ class Activedirectory(object):
         """
 
         yield from get_next_page(
-            self.getalljoinpoints, dict(
+            self.get_activedirectory, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,36 +206,37 @@ class Activedirectory(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def createjoinpoint(self,
-                        ad_attributes=None,
-                        ad_scopes_names=None,
-                        adgroups=None,
-                        advanced_settings=None,
-                        description=None,
-                        domain=None,
-                        enable_domain_allowed_list=None,
-                        ers_active_directory_domains=None,
-                        id=None,
-                        name=None,
-                        headers=None,
-                        payload=None,
-                        active_validation=True,
-                        **query_parameters):
+    def create_activedirectory(self,
+                               ad_attributes=None,
+                               ad_scopes_names=None,
+                               adgroups=None,
+                               advanced_settings=None,
+                               description=None,
+                               domain=None,
+                               enable_domain_allowed_list=None,
+                               ers_active_directory_domains=None,
+                               id=None,
+                               name=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """Create join point.
 
         Args:
-            ers_active_directory_domains():
+            ers_active_directory_domains(object):
                 ERSActiveDirectoryDomains, property of
                 the request body.
-            ad_attributes(): adAttributes, property of the request
-                body.
+            ad_attributes(object): adAttributes, property of the
+                request body.
             ad_scopes_names(string): String that contains the names
                 of the scopes that the active directory
                 belongs to. Names are separated by
                 comma, property of the request body.
-            adgroups(): adgroups, property of the request body.
-            advanced_settings(): advancedSettings, property of the
-                request body.
+            adgroups(object): adgroups, property of the request
+                body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
             description(string): Description, property of the
                 request body.
             domain(string): The AD domain, property of the request
@@ -340,36 +341,37 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_e6326f97d53a58ff0b4a30c1b6423_v3_5_0', _api_response)
 
-    def updatespassive_idsettings(self,
-                                  id,
-                                  ad_attributes=None,
-                                  ad_scopes_names=None,
-                                  adgroups=None,
-                                  advanced_settings=None,
-                                  description=None,
-                                  domain=None,
-                                  enable_domain_allowed_list=None,
-                                  ers_active_directory_domains=None,
-                                  name=None,
-                                  headers=None,
-                                  payload=None,
-                                  active_validation=True,
-                                  **query_parameters):
+    def update_activedirectory_passiveidsettings_by_id(self,
+                                                       id,
+                                                       ad_attributes=None,
+                                                       ad_scopes_names=None,
+                                                       adgroups=None,
+                                                       advanced_settings=None,
+                                                       description=None,
+                                                       domain=None,
+                                                       enable_domain_allowed_list=None,
+                                                       ers_active_directory_domains=None,
+                                                       name=None,
+                                                       headers=None,
+                                                       payload=None,
+                                                       active_validation=True,
+                                                       **query_parameters):
         """Updates passive ID settings.
 
         Args:
-            ers_active_directory_domains():
+            ers_active_directory_domains(object):
                 ERSActiveDirectoryDomains, property of
                 the request body.
-            ad_attributes(): adAttributes, property of the request
-                body.
+            ad_attributes(object): adAttributes, property of the
+                request body.
             ad_scopes_names(string): String that contains the names
                 of the scopes that the active directory
                 belongs to. Names are separated by
                 comma, property of the request body.
-            adgroups(): adgroups, property of the request body.
-            advanced_settings(): advancedSettings, property of the
-                request body.
+            adgroups(object): adgroups, property of the request
+                body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
             description(string): Description, property of the
                 request body.
             domain(string): The AD domain, property of the request
@@ -479,36 +481,37 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_a4f73d4359bd5ea980569899048dfdff_v3_5_0', _api_response)
 
-    def loadgroupsfromdomain(self,
-                             id,
-                             ad_attributes=None,
-                             ad_scopes_names=None,
-                             adgroups=None,
-                             advanced_settings=None,
-                             description=None,
-                             domain=None,
-                             enable_domain_allowed_list=None,
-                             ers_active_directory_domains=None,
-                             name=None,
-                             headers=None,
-                             payload=None,
-                             active_validation=True,
-                             **query_parameters):
+    def update_activedirectory_addgroups_by_id(self,
+                                               id,
+                                               ad_attributes=None,
+                                               ad_scopes_names=None,
+                                               adgroups=None,
+                                               advanced_settings=None,
+                                               description=None,
+                                               domain=None,
+                                               enable_domain_allowed_list=None,
+                                               ers_active_directory_domains=None,
+                                               name=None,
+                                               headers=None,
+                                               payload=None,
+                                               active_validation=True,
+                                               **query_parameters):
         """Load groups from domain.
 
         Args:
-            ers_active_directory_domains():
+            ers_active_directory_domains(object):
                 ERSActiveDirectoryDomains, property of
                 the request body.
-            ad_attributes(): adAttributes, property of the request
-                body.
+            ad_attributes(object): adAttributes, property of the
+                request body.
             ad_scopes_names(string): String that contains the names
                 of the scopes that the active directory
                 belongs to. Names are separated by
                 comma, property of the request body.
-            adgroups(): adgroups, property of the request body.
-            advanced_settings(): advancedSettings, property of the
-                request body.
+            adgroups(object): adgroups, property of the request
+                body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
             description(string): Description, property of the
                 request body.
             domain(string): The AD domain, property of the request
@@ -618,13 +621,13 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_b05e80058df96e685baa727d578_v3_5_0', _api_response)
 
-    def getusergroups(self,
-                      id,
-                      additional_data=None,
-                      headers=None,
-                      payload=None,
-                      active_validation=True,
-                      **query_parameters):
+    def update_activedirectory_getusergroups_by_id(self,
+                                                   id,
+                                                   additional_data=None,
+                                                   headers=None,
+                                                   payload=None,
+                                                   active_validation=True,
+                                                   **query_parameters):
         """Get user groups.
 
         Args:
@@ -701,10 +704,10 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_b839d4dee9b958e48ccef056603e253f_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_activedirectory_name_by_name(self,
+                                         name,
+                                         headers=None,
+                                         **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -761,10 +764,10 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_c6be021c4ca59e48c97afe218219bb1_v3_5_0', _api_response)
 
-    def gettrusteddomains(self,
-                          id,
-                          headers=None,
-                          **query_parameters):
+    def update_activedirectory_gettrusteddomains_by_id(self,
+                                                       id,
+                                                       headers=None,
+                                                       **query_parameters):
         """Get trusted domains.
 
         Args:
@@ -822,36 +825,37 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_d0ed84901325292ad4e2a91a174f6b2_v3_5_0', _api_response)
 
-    def leaveadomainwithallnodes(self,
-                                 id,
-                                 ad_attributes=None,
-                                 ad_scopes_names=None,
-                                 adgroups=None,
-                                 advanced_settings=None,
-                                 description=None,
-                                 domain=None,
-                                 enable_domain_allowed_list=None,
-                                 ers_active_directory_domains=None,
-                                 name=None,
-                                 headers=None,
-                                 payload=None,
-                                 active_validation=True,
-                                 **query_parameters):
+    def update_activedirectory_leaveallnodes_by_id(self,
+                                                   id,
+                                                   ad_attributes=None,
+                                                   ad_scopes_names=None,
+                                                   adgroups=None,
+                                                   advanced_settings=None,
+                                                   description=None,
+                                                   domain=None,
+                                                   enable_domain_allowed_list=None,
+                                                   ers_active_directory_domains=None,
+                                                   name=None,
+                                                   headers=None,
+                                                   payload=None,
+                                                   active_validation=True,
+                                                   **query_parameters):
         """Leave a domain with all nodes.
 
         Args:
-            ers_active_directory_domains():
+            ers_active_directory_domains(object):
                 ERSActiveDirectoryDomains, property of
                 the request body.
-            ad_attributes(): adAttributes, property of the request
-                body.
+            ad_attributes(object): adAttributes, property of the
+                request body.
             ad_scopes_names(string): String that contains the names
                 of the scopes that the active directory
                 belongs to. Names are separated by
                 comma, property of the request body.
-            adgroups(): adgroups, property of the request body.
-            advanced_settings(): advancedSettings, property of the
-                request body.
+            adgroups(object): adgroups, property of the request
+                body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
             description(string): Description, property of the
                 request body.
             domain(string): The AD domain, property of the request
@@ -961,36 +965,37 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_d011417d18d055ccb864c1dc2ae0456d_v3_5_0', _api_response)
 
-    def joinadomain(self,
-                    id,
-                    ad_attributes=None,
-                    ad_scopes_names=None,
-                    adgroups=None,
-                    advanced_settings=None,
-                    description=None,
-                    domain=None,
-                    enable_domain_allowed_list=None,
-                    ers_active_directory_domains=None,
-                    name=None,
-                    headers=None,
-                    payload=None,
-                    active_validation=True,
-                    **query_parameters):
+    def update_activedirectory_join_by_id(self,
+                                          id,
+                                          ad_attributes=None,
+                                          ad_scopes_names=None,
+                                          adgroups=None,
+                                          advanced_settings=None,
+                                          description=None,
+                                          domain=None,
+                                          enable_domain_allowed_list=None,
+                                          ers_active_directory_domains=None,
+                                          name=None,
+                                          headers=None,
+                                          payload=None,
+                                          active_validation=True,
+                                          **query_parameters):
         """Join a domain.
 
         Args:
-            ers_active_directory_domains():
+            ers_active_directory_domains(object):
                 ERSActiveDirectoryDomains, property of
                 the request body.
-            ad_attributes(): adAttributes, property of the request
-                body.
+            ad_attributes(object): adAttributes, property of the
+                request body.
             ad_scopes_names(string): String that contains the names
                 of the scopes that the active directory
                 belongs to. Names are separated by
                 comma, property of the request body.
-            adgroups(): adgroups, property of the request body.
-            advanced_settings(): advancedSettings, property of the
-                request body.
+            adgroups(object): adgroups, property of the request
+                body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
             description(string): Description, property of the
                 request body.
             domain(string): The AD domain, property of the request
@@ -1100,36 +1105,37 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_b3284240745e5b929c51495fe80bc1c4_v3_5_0', _api_response)
 
-    def joinadomainwithallnodes(self,
-                                id,
-                                ad_attributes=None,
-                                ad_scopes_names=None,
-                                adgroups=None,
-                                advanced_settings=None,
-                                description=None,
-                                domain=None,
-                                enable_domain_allowed_list=None,
-                                ers_active_directory_domains=None,
-                                name=None,
-                                headers=None,
-                                payload=None,
-                                active_validation=True,
-                                **query_parameters):
+    def update_activedirectory_joinallnodes_by_id(self,
+                                                  id,
+                                                  ad_attributes=None,
+                                                  ad_scopes_names=None,
+                                                  adgroups=None,
+                                                  advanced_settings=None,
+                                                  description=None,
+                                                  domain=None,
+                                                  enable_domain_allowed_list=None,
+                                                  ers_active_directory_domains=None,
+                                                  name=None,
+                                                  headers=None,
+                                                  payload=None,
+                                                  active_validation=True,
+                                                  **query_parameters):
         """Join a domain with all nodes.
 
         Args:
-            ers_active_directory_domains():
+            ers_active_directory_domains(object):
                 ERSActiveDirectoryDomains, property of
                 the request body.
-            ad_attributes(): adAttributes, property of the request
-                body.
+            ad_attributes(object): adAttributes, property of the
+                request body.
             ad_scopes_names(string): String that contains the names
                 of the scopes that the active directory
                 belongs to. Names are separated by
                 comma, property of the request body.
-            adgroups(): adgroups, property of the request body.
-            advanced_settings(): advancedSettings, property of the
-                request body.
+            adgroups(object): adgroups, property of the request
+                body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
             description(string): Description, property of the
                 request body.
             domain(string): The AD domain, property of the request
@@ -1239,36 +1245,37 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_e84705b918955b53afe61fc37911eb8b_v3_5_0', _api_response)
 
-    def getdomainusers(self,
-                       id,
-                       ad_attributes=None,
-                       ad_scopes_names=None,
-                       adgroups=None,
-                       advanced_settings=None,
-                       description=None,
-                       domain=None,
-                       enable_domain_allowed_list=None,
-                       ers_active_directory_domains=None,
-                       name=None,
-                       headers=None,
-                       payload=None,
-                       active_validation=True,
-                       **query_parameters):
+    def update_activedirectory_getdomainusers_by_id(self,
+                                                    id,
+                                                    ad_attributes=None,
+                                                    ad_scopes_names=None,
+                                                    adgroups=None,
+                                                    advanced_settings=None,
+                                                    description=None,
+                                                    domain=None,
+                                                    enable_domain_allowed_list=None,
+                                                    ers_active_directory_domains=None,
+                                                    name=None,
+                                                    headers=None,
+                                                    payload=None,
+                                                    active_validation=True,
+                                                    **query_parameters):
         """Get domain users.
 
         Args:
-            ers_active_directory_domains():
+            ers_active_directory_domains(object):
                 ERSActiveDirectoryDomains, property of
                 the request body.
-            ad_attributes(): adAttributes, property of the request
-                body.
+            ad_attributes(object): adAttributes, property of the
+                request body.
             ad_scopes_names(string): String that contains the names
                 of the scopes that the active directory
                 belongs to. Names are separated by
                 comma, property of the request body.
-            adgroups(): adgroups, property of the request body.
-            advanced_settings(): advancedSettings, property of the
-                request body.
+            adgroups(object): adgroups, property of the request
+                body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
             description(string): Description, property of the
                 request body.
             domain(string): The AD domain, property of the request
@@ -1378,13 +1385,13 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_f7bf995f35dd5bf5a4bece3d60007fee_v3_5_0', _api_response)
 
-    def isuseramemberofgroups(self,
-                              id,
-                              additional_data=None,
-                              headers=None,
-                              payload=None,
-                              active_validation=True,
-                              **query_parameters):
+    def update_activedirectory_isusermemberof_by_id(self,
+                                                    id,
+                                                    additional_data=None,
+                                                    headers=None,
+                                                    payload=None,
+                                                    active_validation=True,
+                                                    **query_parameters):
         """Is user a member of groups.
 
         Args:
@@ -1461,13 +1468,13 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_eae60ece5110590e97ddd910e8144ed2_v3_5_0', _api_response)
 
-    def getgroupsbydomain(self,
-                          id,
-                          additional_data=None,
-                          headers=None,
-                          payload=None,
-                          active_validation=True,
-                          **query_parameters):
+    def update_activedirectory_getgroupsbydomain_by_id(self,
+                                                       id,
+                                                       additional_data=None,
+                                                       headers=None,
+                                                       payload=None,
+                                                       active_validation=True,
+                                                       **query_parameters):
         """Get groups by domain.
 
         Args:
@@ -1544,10 +1551,10 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_fd729f50e65695966359b589a1606b_v3_5_0', _api_response)
 
-    def getjoinpointdetails(self,
-                            id,
-                            headers=None,
-                            **query_parameters):
+    def get_activedirectory_by_id(self,
+                                  id,
+                                  headers=None,
+                                  **query_parameters):
         """Get join point details.
 
         Args:
@@ -1604,10 +1611,10 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_cfcc7615d0492e2dd1b04dd03a9_v3_5_0', _api_response)
 
-    def deletejoinpoint(self,
-                        id,
-                        headers=None,
-                        **query_parameters):
+    def delete_activedirectory_by_id(self,
+                                     id,
+                                     headers=None,
+                                     **query_parameters):
         """Delete join point.
 
         Args:
@@ -1664,36 +1671,37 @@ class Activedirectory(object):
 
         return self._object_factory('bpm_febbe79ed5bb780d97a98f292b606_v3_5_0', _api_response)
 
-    def leaveadomain(self,
-                     id,
-                     ad_attributes=None,
-                     ad_scopes_names=None,
-                     adgroups=None,
-                     advanced_settings=None,
-                     description=None,
-                     domain=None,
-                     enable_domain_allowed_list=None,
-                     ers_active_directory_domains=None,
-                     name=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_activedirectory_leave_by_id(self,
+                                           id,
+                                           ad_attributes=None,
+                                           ad_scopes_names=None,
+                                           adgroups=None,
+                                           advanced_settings=None,
+                                           description=None,
+                                           domain=None,
+                                           enable_domain_allowed_list=None,
+                                           ers_active_directory_domains=None,
+                                           name=None,
+                                           headers=None,
+                                           payload=None,
+                                           active_validation=True,
+                                           **query_parameters):
         """Leave a domain.
 
         Args:
-            ers_active_directory_domains():
+            ers_active_directory_domains(object):
                 ERSActiveDirectoryDomains, property of
                 the request body.
-            ad_attributes(): adAttributes, property of the request
-                body.
+            ad_attributes(object): adAttributes, property of the
+                request body.
             ad_scopes_names(string): String that contains the names
                 of the scopes that the active directory
                 belongs to. Names are separated by
                 comma, property of the request body.
-            adgroups(): adgroups, property of the request body.
-            advanced_settings(): advancedSettings, property of the
-                request body.
+            adgroups(object): adgroups, property of the request
+                body.
+            advanced_settings(object): advancedSettings, property of
+                the request body.
             description(string): Description, property of the
                 request body.
             domain(string): The AD domain, property of the request

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createSgacl data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorCdf3223C24850C993108Eb55D159Ae5(object):
-    """Create request schema definition."""
+    """createSgacl request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCdf3223C24850C993108Eb55D159Ae5, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

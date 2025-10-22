@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createTacacscommandsets data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorFfe46F1149C58F4B7F4C8F89B1B9D3D(object):
-    """Create request schema definition."""
+    """createTacacscommandsets request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorFfe46F1149C58F4B7F4C8F89B1B9D3D, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -60,7 +60,8 @@ class JSONSchemaValidatorFfe46F1149C58F4B7F4C8F89B1B9D3D(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {

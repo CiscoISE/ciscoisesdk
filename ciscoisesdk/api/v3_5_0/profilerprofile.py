@@ -69,14 +69,14 @@ class Profilerprofile(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_profilerprofile(self,
+                            filter=None,
+                            page=None,
+                            size=None,
+                            sortasc=None,
+                            sortdsc=None,
+                            headers=None,
+                            **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Profilerprofile(object):
 
         return self._object_factory('bpm_ae32dbd3edc9570d9dde3fdeeceadbbc_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_profilerprofile_generator(self,
+                                      filter=None,
+                                      page=None,
+                                      size=None,
+                                      sortasc=None,
+                                      sortdsc=None,
+                                      headers=None,
+                                      **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Profilerprofile(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_profilerprofile, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,10 +206,10 @@ class Profilerprofile(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_profilerprofile_by_id(self,
+                                  id,
+                                  headers=None,
+                                  **query_parameters):
         """Get-By-Id.
 
         Args:

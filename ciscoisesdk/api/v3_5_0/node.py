@@ -69,12 +69,12 @@ class Node(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_node(self,
+                 filter=None,
+                 page=None,
+                 size=None,
+                 headers=None,
+                 **query_parameters):
         """Get-All.
 
         Args:
@@ -140,12 +140,12 @@ class Node(object):
 
         return self._object_factory('bpm_df34769eeb8e5e82b690e2143fb95bc1_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_node_generator(self,
+                           filter=None,
+                           page=None,
+                           size=None,
+                           headers=None,
+                           **query_parameters):
         """Get-All.
 
         Args:
@@ -176,7 +176,7 @@ class Node(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_node, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -186,10 +186,10 @@ class Node(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_node_name_by_name(self,
+                              name,
+                              headers=None,
+                              **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -246,10 +246,10 @@ class Node(object):
 
         return self._object_factory('bpm_ab48268c76aa598788a5ebc370226f3a_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_node_by_id(self,
+                       id,
+                       headers=None,
+                       **query_parameters):
         """Get-By-Id.
 
         Args:

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine clearThreatsAndVulneribilities data model.
+"""Identity Services Engine updateThreatClearthreatsandvulneribilities data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,8 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE3110Fc63Ecb5428A075A8Af8497Fb35(object):
-    """clearThreatsAndVulneribilities request schema definition."""
+    """updateThreatClearthreatsandvulneribilities request schema
+    definition."""
     def __init__(self):
         super(JSONSchemaValidatorE3110Fc63Ecb5428A075A8Af8497Fb35, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

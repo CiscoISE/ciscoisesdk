@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createSponsoredguestportal data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
-    """Create request schema definition."""
+    """createSponsoredguestportal request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -51,14 +51,16 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "data": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "bannerImage": {
                 "properties": {
                 "data": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "bannerTitle": {
                 "type": "string"
@@ -74,9 +76,11 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "data": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "language": {
                 "type": "object"
@@ -96,7 +100,8 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "portalTheme": {
                 "properties": {
@@ -112,7 +117,8 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 },
                 "portalTweakSettings": {
                 "properties": {
@@ -128,9 +134,11 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "pageLabelAndTextColor": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {
@@ -170,7 +178,8 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "useDiffAupForEmployees": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "authSuccessSettings": {
                 "properties": {
@@ -180,7 +189,8 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "successRedirect": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "byodSettings": {
                 "properties": {
@@ -192,7 +202,8 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "showDeviceID": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "byodRegistrationSuccessSettings": {
                 "properties": {
@@ -202,7 +213,8 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "successRedirect": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "byodWelcomeSettings": {
                 "properties": {
@@ -227,16 +239,19 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "requireScrolling": {
                 "type": "boolean"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "guestChangePasswordSettings": {
                 "properties": {
                 "allowChangePasswdAtFirstLogin": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "guestDeviceRegistrationSettings": {
                 "properties": {
@@ -246,7 +261,8 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "autoRegisterGuestDevices": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "loginPageSettings": {
                 "properties": {
@@ -277,7 +293,8 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "timeBetweenLoginsDuringRateLimit": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "portalSettings": {
                 "properties": {
@@ -312,14 +329,16 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "authenticationMethod",
                 "certificateGroupTag",
                 "httpsPort"
-                ]
+                ],
+                "type": "object"
                 },
                 "postLoginBannerSettings": {
                 "properties": {
                 "includePostAccessBanner": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "supportInfoSettings": {
                 "properties": {
@@ -347,9 +366,11 @@ class JSONSchemaValidatorE061C43B14C15D03806717Cb4Db5C944(object):
                 "includeSupportInfoPage": {
                 "type": "boolean"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 }
                 },
                 "required": [

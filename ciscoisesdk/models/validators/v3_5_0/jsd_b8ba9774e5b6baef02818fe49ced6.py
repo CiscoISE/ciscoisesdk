@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createSxplocalbindings data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorB8Ba9774E5B6BAef02818Fe49Ced6(object):
-    """Create request schema definition."""
+    """createSxplocalbindings request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB8Ba9774E5B6BAef02818Fe49Ced6, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

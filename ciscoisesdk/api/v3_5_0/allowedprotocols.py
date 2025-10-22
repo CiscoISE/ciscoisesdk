@@ -69,11 +69,11 @@ class Allowedprotocols(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_allowedprotocols(self,
+                             page=None,
+                             size=None,
+                             headers=None,
+                             **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Allowedprotocols(object):
 
         return self._object_factory('bpm_e1eed4bdb852aba52564401ac296b1_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_allowedprotocols_generator(self,
+                                       page=None,
+                                       size=None,
+                                       headers=None,
+                                       **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Allowedprotocols(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_allowedprotocols, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,39 +176,39 @@ class Allowedprotocols(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               allow_chap=None,
-               allow_eap_fast=None,
-               allow_eap_md5=None,
-               allow_eap_tls=None,
-               allow_eap_ttls=None,
-               allow_leap=None,
-               allow_ms_chap_v1=None,
-               allow_ms_chap_v2=None,
-               allow_pap_ascii=None,
-               allow_peap=None,
-               allow_preferred_eap_protocol=None,
-               allow_teap=None,
-               allow_weak_ciphers_for_eap=None,
-               description=None,
-               display_additional_tls_params=None,
-               eap_fast=None,
-               eap_tls=None,
-               eap_tls_l_bit=None,
-               eap_ttls=None,
-               five_g=None,
-               id=None,
-               name=None,
-               peap=None,
-               preferred_eap_protocol=None,
-               process_host_lookup=None,
-               require_message_auth=None,
-               rsa_pss=None,
-               teap=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_allowedprotocols(self,
+                                allow_chap=None,
+                                allow_eap_fast=None,
+                                allow_eap_md5=None,
+                                allow_eap_tls=None,
+                                allow_eap_ttls=None,
+                                allow_leap=None,
+                                allow_ms_chap_v1=None,
+                                allow_ms_chap_v2=None,
+                                allow_pap_ascii=None,
+                                allow_peap=None,
+                                allow_preferred_eap_protocol=None,
+                                allow_teap=None,
+                                allow_weak_ciphers_for_eap=None,
+                                description=None,
+                                display_additional_tls_params=None,
+                                eap_fast=None,
+                                eap_tls=None,
+                                eap_tls_l_bit=None,
+                                eap_ttls=None,
+                                five_g=None,
+                                id=None,
+                                name=None,
+                                peap=None,
+                                preferred_eap_protocol=None,
+                                process_host_lookup=None,
+                                require_message_auth=None,
+                                rsa_pss=None,
+                                teap=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
         """Create.
 
         Args:
@@ -245,15 +245,15 @@ class Allowedprotocols(object):
             display_additional_tls_params(boolean):
                 displayAdditionalTLSParams, property of
                 the request body.
-            eap_fast(): eapFast, property of the request body.
-            eap_tls(): eapTls, property of the request body.
+            eap_fast(object): eapFast, property of the request body.
+            eap_tls(object): eapTls, property of the request body.
             eap_tls_l_bit(boolean): eapTlsLBit, property of the
                 request body.
-            eap_ttls(): eapTtls, property of the request body.
+            eap_ttls(object): eapTtls, property of the request body.
             five_g(boolean): fiveG, property of the request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
-            peap(): peap, property of the request body.
+            peap(object): peap, property of the request body.
             preferred_eap_protocol(string): The preferredEapProtocol
                 is required only if
                 allowPreferredEapProtocol is true,
@@ -266,7 +266,7 @@ class Allowedprotocols(object):
             require_message_auth(boolean): requireMessageAuth,
                 property of the request body.
             rsa_pss(boolean): rsaPss, property of the request body.
-            teap(): teap, property of the request body.
+            teap(object): teap, property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -398,10 +398,10 @@ class Allowedprotocols(object):
 
         return self._object_factory('bpm_a4b5e3a38d175b5794e3d3f625351fe9_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_allowedprotocols_name_by_name(self,
+                                          name,
+                                          headers=None,
+                                          **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -458,10 +458,10 @@ class Allowedprotocols(object):
 
         return self._object_factory('bpm_ac8c8cb9b5007a1e1a6434a20a881_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_allowedprotocols_by_id(self,
+                                   id,
+                                   headers=None,
+                                   **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -518,39 +518,39 @@ class Allowedprotocols(object):
 
         return self._object_factory('bpm_e3ddfddd45e299f14ed194926f8de_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               allow_chap=None,
-               allow_eap_fast=None,
-               allow_eap_md5=None,
-               allow_eap_tls=None,
-               allow_eap_ttls=None,
-               allow_leap=None,
-               allow_ms_chap_v1=None,
-               allow_ms_chap_v2=None,
-               allow_pap_ascii=None,
-               allow_peap=None,
-               allow_preferred_eap_protocol=None,
-               allow_teap=None,
-               allow_weak_ciphers_for_eap=None,
-               description=None,
-               display_additional_tls_params=None,
-               eap_fast=None,
-               eap_tls=None,
-               eap_tls_l_bit=None,
-               eap_ttls=None,
-               five_g=None,
-               name=None,
-               peap=None,
-               preferred_eap_protocol=None,
-               process_host_lookup=None,
-               require_message_auth=None,
-               rsa_pss=None,
-               teap=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_allowedprotocols_by_id(self,
+                                      id,
+                                      allow_chap=None,
+                                      allow_eap_fast=None,
+                                      allow_eap_md5=None,
+                                      allow_eap_tls=None,
+                                      allow_eap_ttls=None,
+                                      allow_leap=None,
+                                      allow_ms_chap_v1=None,
+                                      allow_ms_chap_v2=None,
+                                      allow_pap_ascii=None,
+                                      allow_peap=None,
+                                      allow_preferred_eap_protocol=None,
+                                      allow_teap=None,
+                                      allow_weak_ciphers_for_eap=None,
+                                      description=None,
+                                      display_additional_tls_params=None,
+                                      eap_fast=None,
+                                      eap_tls=None,
+                                      eap_tls_l_bit=None,
+                                      eap_ttls=None,
+                                      five_g=None,
+                                      name=None,
+                                      peap=None,
+                                      preferred_eap_protocol=None,
+                                      process_host_lookup=None,
+                                      require_message_auth=None,
+                                      rsa_pss=None,
+                                      teap=None,
+                                      headers=None,
+                                      payload=None,
+                                      active_validation=True,
+                                      **query_parameters):
         """Update.
 
         Args:
@@ -587,15 +587,15 @@ class Allowedprotocols(object):
             display_additional_tls_params(boolean):
                 displayAdditionalTLSParams, property of
                 the request body.
-            eap_fast(): eapFast, property of the request body.
-            eap_tls(): eapTls, property of the request body.
+            eap_fast(object): eapFast, property of the request body.
+            eap_tls(object): eapTls, property of the request body.
             eap_tls_l_bit(boolean): eapTlsLBit, property of the
                 request body.
-            eap_ttls(): eapTtls, property of the request body.
+            eap_ttls(object): eapTtls, property of the request body.
             five_g(boolean): fiveG, property of the request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
-            peap(): peap, property of the request body.
+            peap(object): peap, property of the request body.
             preferred_eap_protocol(string): The preferredEapProtocol
                 is required only if
                 allowPreferredEapProtocol is true,
@@ -608,7 +608,7 @@ class Allowedprotocols(object):
             require_message_auth(boolean): requireMessageAuth,
                 property of the request body.
             rsa_pss(boolean): rsaPss, property of the request body.
-            teap(): teap, property of the request body.
+            teap(object): teap, property of the request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -745,10 +745,10 @@ class Allowedprotocols(object):
 
         return self._object_factory('bpm_a0b312f70257b1bfa90d0260f0c971_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_allowedprotocols_by_id(self,
+                                      id,
+                                      headers=None,
+                                      **query_parameters):
         """Delete.
 
         Args:
@@ -805,39 +805,39 @@ class Allowedprotocols(object):
 
         return self._object_factory('bpm_a6cbd2c420785cfcbdecc3495bca8af4_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              allow_chap=None,
-              allow_eap_fast=None,
-              allow_eap_md5=None,
-              allow_eap_tls=None,
-              allow_eap_ttls=None,
-              allow_leap=None,
-              allow_ms_chap_v1=None,
-              allow_ms_chap_v2=None,
-              allow_pap_ascii=None,
-              allow_peap=None,
-              allow_preferred_eap_protocol=None,
-              allow_teap=None,
-              allow_weak_ciphers_for_eap=None,
-              description=None,
-              display_additional_tls_params=None,
-              eap_fast=None,
-              eap_tls=None,
-              eap_tls_l_bit=None,
-              eap_ttls=None,
-              five_g=None,
-              name=None,
-              peap=None,
-              preferred_eap_protocol=None,
-              process_host_lookup=None,
-              require_message_auth=None,
-              rsa_pss=None,
-              teap=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_allowedprotocols_by_id(self,
+                                     id,
+                                     allow_chap=None,
+                                     allow_eap_fast=None,
+                                     allow_eap_md5=None,
+                                     allow_eap_tls=None,
+                                     allow_eap_ttls=None,
+                                     allow_leap=None,
+                                     allow_ms_chap_v1=None,
+                                     allow_ms_chap_v2=None,
+                                     allow_pap_ascii=None,
+                                     allow_peap=None,
+                                     allow_preferred_eap_protocol=None,
+                                     allow_teap=None,
+                                     allow_weak_ciphers_for_eap=None,
+                                     description=None,
+                                     display_additional_tls_params=None,
+                                     eap_fast=None,
+                                     eap_tls=None,
+                                     eap_tls_l_bit=None,
+                                     eap_ttls=None,
+                                     five_g=None,
+                                     name=None,
+                                     peap=None,
+                                     preferred_eap_protocol=None,
+                                     process_host_lookup=None,
+                                     require_message_auth=None,
+                                     rsa_pss=None,
+                                     teap=None,
+                                     headers=None,
+                                     payload=None,
+                                     active_validation=True,
+                                     **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
@@ -875,15 +875,15 @@ class Allowedprotocols(object):
             display_additional_tls_params(boolean):
                 displayAdditionalTLSParams, property of
                 the request body.
-            eap_fast(): eapFast, property of the request body.
-            eap_tls(): eapTls, property of the request body.
+            eap_fast(object): eapFast, property of the request body.
+            eap_tls(object): eapTls, property of the request body.
             eap_tls_l_bit(boolean): eapTlsLBit, property of the
                 request body.
-            eap_ttls(): eapTtls, property of the request body.
+            eap_ttls(object): eapTtls, property of the request body.
             five_g(boolean): fiveG, property of the request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
-            peap(): peap, property of the request body.
+            peap(object): peap, property of the request body.
             preferred_eap_protocol(string): The preferredEapProtocol
                 is required only if
                 allowPreferredEapProtocol is true,
@@ -896,7 +896,7 @@ class Allowedprotocols(object):
             require_message_auth(boolean): requireMessageAuth,
                 property of the request body.
             rsa_pss(boolean): rsaPss, property of the request body.
-            teap(): teap, property of the request body.
+            teap(object): teap, property of the request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

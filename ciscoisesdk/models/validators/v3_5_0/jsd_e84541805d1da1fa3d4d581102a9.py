@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Leave a domain data model.
+"""Identity Services Engine updateActivedirectoryLeaveById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9(object):
-    """Leave a domain request schema definition."""
+    """updateActivedirectoryLeaveById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -60,7 +60,8 @@ class JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adAttributes": {
                 "properties": {
@@ -83,7 +84,8 @@ class JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adScopesNames": {
                 "type": "string"
@@ -106,7 +108,8 @@ class JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "advancedSettings": {
                 "properties": {
@@ -201,7 +204,8 @@ class JSONSchemaValidatorE84541805D1DA1Fa3D4D581102A9(object):
                 "unreachableDomainsBehaviour": {
                 "type": "object"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {

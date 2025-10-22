@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Update data model.
+"""Identity Services Engine updateRestidstoreById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorDed7F8573C255C318Bb1F04Bfdbf01E1(object):
-    """Update request schema definition."""
+    """updateRestidstoreById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDed7F8573C255C318Bb1F04Bfdbf01E1, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -69,7 +69,8 @@ class JSONSchemaValidatorDed7F8573C255C318Bb1F04Bfdbf01E1(object):
                 "subjectNameFormat": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "ersRestIDStoreAttributes": {
                 "properties": {
@@ -98,7 +99,8 @@ class JSONSchemaValidatorDed7F8573C255C318Bb1F04Bfdbf01E1(object):
                 },
                 "required": [
                 "rootUrl"
-                ]
+                ],
+                "type": "object"
                 },
                 "ersRestIDStoreDeviceAttributes": {
                 "properties": {
@@ -108,7 +110,8 @@ class JSONSchemaValidatorDed7F8573C255C318Bb1F04Bfdbf01E1(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 },
                 "ersRestIDStoreUserAttributes": {
                 "properties": {
@@ -118,7 +121,8 @@ class JSONSchemaValidatorDed7F8573C255C318Bb1F04Bfdbf01E1(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 },
                 "id": {
                 "type": "string"

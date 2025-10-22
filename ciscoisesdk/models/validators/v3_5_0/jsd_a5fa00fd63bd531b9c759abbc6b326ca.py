@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createSponsorgroup data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorA5Fa00Fd63Bd531B9C759Abbc6B326Ca(object):
-    """Create request schema definition."""
+    """createSponsorgroup request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA5Fa00Fd63Bd531B9C759Abbc6B326Ca, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -71,7 +71,8 @@ class JSONSchemaValidatorA5Fa00Fd63Bd531B9C759Abbc6B326Ca(object):
                 "startDateFutureLimitDays": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {
@@ -152,7 +153,8 @@ class JSONSchemaValidatorA5Fa00Fd63Bd531B9C759Abbc6B326Ca(object):
                 "required": [
                 "canSuspendGuestAccounts",
                 "limitApprovalToSponsorsGuests"
-                ]
+                ],
+                "type": "object"
                 }
                 },
                 "required": [

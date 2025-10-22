@@ -69,14 +69,14 @@ class Portalglobalsetting(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_portalglobalsetting(self,
+                                filter=None,
+                                page=None,
+                                size=None,
+                                sortasc=None,
+                                sortdsc=None,
+                                headers=None,
+                                **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Portalglobalsetting(object):
 
         return self._object_factory('bpm_ac38ce6693e52d5994e6630b60be837_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_portalglobalsetting_generator(self,
+                                          filter=None,
+                                          page=None,
+                                          size=None,
+                                          sortasc=None,
+                                          sortdsc=None,
+                                          headers=None,
+                                          **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Portalglobalsetting(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_portalglobalsetting, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,10 +206,10 @@ class Portalglobalsetting(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_portalglobalsetting_by_id(self,
+                                      id,
+                                      headers=None,
+                                      **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -266,15 +266,15 @@ class Portalglobalsetting(object):
 
         return self._object_factory('bpm_ac243ecb8c157658a4bcfe77a102c14_v3_5_0', _api_response)
 
-    def update_by_id(self,
-                     id,
-                     customization=None,
-                     description=None,
-                     name=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_portalglobalsetting_by_id(self,
+                                         id,
+                                         customization=None,
+                                         description=None,
+                                         name=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """UpdateById.
 
         Args:

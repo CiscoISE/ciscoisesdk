@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine apply data model.
+"""Identity Services Engine updateAncendpointApply data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorBc936Bcb25464B9F3F227647B0443(object):
-    """apply request schema definition."""
+    """updateAncendpointApply request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorBc936Bcb25464B9F3F227647B0443, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

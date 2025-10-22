@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Update-By-Name data model.
+"""Identity Services Engine updateNetworkdeviceNameByName data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
-    """Update-By-Name request schema definition."""
+    """updateNetworkdeviceNameByName request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -102,7 +102,8 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "enabled",
                 "keyEncryptionKey",
                 "keyInputFormat"
-                ]
+                ],
+                "type": "object"
                 },
                 "coaPort": {
                 "type": "number"
@@ -171,7 +172,8 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "originatingPolicyServicesNode",
                 "pollingInterval",
                 "version"
-                ]
+                ],
+                "type": "object"
                 },
                 "softwareVersion": {
                 "type": "string"
@@ -190,7 +192,8 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "sharedSecret": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "tacacsTlsSettings": {
                 "properties": {
@@ -213,12 +216,14 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "items": {},
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 }
                 },
                 "required": [
                 "enableTls"
-                ]
+                ],
+                "type": "object"
                 },
                 "trustsecsettings": {
                 "properties": {
@@ -236,7 +241,8 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "sgaDevicePassword": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "deviceConfigurationDeployment": {
                 "properties": {
@@ -252,7 +258,8 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "includeWhenDeployingSGTUpdates": {
                 "type": "object"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "sgaNotificationAndUpdates": {
                 "properties": {
@@ -280,9 +287,11 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "sendConfigurationToDeviceUsing": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 }
                 },
                 "required": [

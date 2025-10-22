@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Leave a domain with all nodes data model.
+"""Identity Services Engine updateActivedirectoryLeaveallnodesById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorD011417D18D055CcB864C1Dc2Ae0456D(object):
-    """Leave a domain with all nodes request schema definition."""
+    """updateActivedirectoryLeaveallnodesById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD011417D18D055CcB864C1Dc2Ae0456D, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -60,7 +60,8 @@ class JSONSchemaValidatorD011417D18D055CcB864C1Dc2Ae0456D(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adAttributes": {
                 "properties": {
@@ -83,7 +84,8 @@ class JSONSchemaValidatorD011417D18D055CcB864C1Dc2Ae0456D(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adScopesNames": {
                 "type": "string"
@@ -106,7 +108,8 @@ class JSONSchemaValidatorD011417D18D055CcB864C1Dc2Ae0456D(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "advancedSettings": {
                 "properties": {
@@ -201,7 +204,8 @@ class JSONSchemaValidatorD011417D18D055CcB864C1Dc2Ae0456D(object):
                 "unreachableDomainsBehaviour": {
                 "type": "object"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {

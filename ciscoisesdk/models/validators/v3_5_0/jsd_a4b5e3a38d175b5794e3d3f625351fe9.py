@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createAllowedprotocols data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorA4B5E3A38D175B5794E3D3F625351Fe9(object):
-    """Create request schema definition."""
+    """createAllowedprotocols request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA4B5E3A38D175B5794E3D3F625351Fe9, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -172,7 +172,8 @@ class JSONSchemaValidatorA4B5E3A38D175B5794E3D3F625351Fe9(object):
                 "allowEapFastEapTls",
                 "eapFastEnableEAPChaining",
                 "eapFastUsePacs"
-                ]
+                ],
+                "type": "object"
                 },
                 "eapTls": {
                 "properties": {
@@ -195,7 +196,8 @@ class JSONSchemaValidatorA4B5E3A38D175B5794E3D3F625351Fe9(object):
                 "required": [
                 "allowEapTlsAuthOfExpiredCerts",
                 "eapTlsEnableStatelessSessionResume"
-                ]
+                ],
+                "type": "object"
                 },
                 "eapTlsLBit": {
                 "type": "boolean"
@@ -234,7 +236,8 @@ class JSONSchemaValidatorA4B5E3A38D175B5794E3D3F625351Fe9(object):
                 "eapTtlsMsChapV1",
                 "eapTtlsMsChapV2",
                 "eapTtlsPapAscii"
-                ]
+                ],
+                "type": "object"
                 },
                 "fiveG": {
                 "type": "boolean"
@@ -284,7 +287,8 @@ class JSONSchemaValidatorA4B5E3A38D175B5794E3D3F625351Fe9(object):
                 "allowPeapEapTls",
                 "allowPeapV0",
                 "requireCryptobinding"
-                ]
+                ],
+                "type": "object"
                 },
                 "preferredEapProtocol": {
                 "type": "string"
@@ -331,7 +335,8 @@ class JSONSchemaValidatorA4B5E3A38D175B5794E3D3F625351Fe9(object):
                 "allowTeapEapMsChapV2",
                 "allowTeapEapTls",
                 "enableEapChaining"
-                ]
+                ],
+                "type": "object"
                 }
                 },
                 "required": [

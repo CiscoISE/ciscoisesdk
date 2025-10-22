@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Get domain users data model.
+"""Identity Services Engine updateActivedirectoryGetdomainusersById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
-    """Get domain users request schema definition."""
+    """updateActivedirectoryGetdomainusersById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -60,7 +60,8 @@ class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adAttributes": {
                 "properties": {
@@ -83,7 +84,8 @@ class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adScopesNames": {
                 "type": "string"
@@ -106,7 +108,8 @@ class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "advancedSettings": {
                 "properties": {
@@ -201,7 +204,8 @@ class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
                 "unreachableDomainsBehaviour": {
                 "type": "object"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {

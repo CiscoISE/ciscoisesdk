@@ -69,14 +69,14 @@ class Sxplocalbindings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_sxplocalbindings(self,
+                             filter=None,
+                             page=None,
+                             size=None,
+                             sortasc=None,
+                             sortdsc=None,
+                             headers=None,
+                             **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Sxplocalbindings(object):
 
         return self._object_factory('bpm_ce403a1cd2f75dd8afe3370c7c18044c_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_sxplocalbindings_generator(self,
+                                       filter=None,
+                                       page=None,
+                                       size=None,
+                                       sortasc=None,
+                                       sortdsc=None,
+                                       headers=None,
+                                       **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Sxplocalbindings(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sxplocalbindings, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,19 +206,19 @@ class Sxplocalbindings(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               binding_name=None,
-               description=None,
-               id=None,
-               ip_address_or_host=None,
-               name=None,
-               sgt=None,
-               sxp_vpn=None,
-               vns=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_sxplocalbindings(self,
+                                binding_name=None,
+                                description=None,
+                                id=None,
+                                ip_address_or_host=None,
+                                name=None,
+                                sgt=None,
+                                sxp_vpn=None,
+                                vns=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
         """Create.
 
         Args:
@@ -332,10 +332,10 @@ class Sxplocalbindings(object):
 
         return self._object_factory('bpm_b8ba9774e5b6baef02818fe49ced6_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_sxplocalbindings_by_id(self,
+                                   id,
+                                   headers=None,
+                                   **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -392,19 +392,19 @@ class Sxplocalbindings(object):
 
         return self._object_factory('bpm_e56bea5248a25f799b02fcb6098a7b10_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               binding_name=None,
-               description=None,
-               ip_address_or_host=None,
-               name=None,
-               sgt=None,
-               sxp_vpn=None,
-               vns=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_sxplocalbindings_by_id(self,
+                                      id,
+                                      binding_name=None,
+                                      description=None,
+                                      ip_address_or_host=None,
+                                      name=None,
+                                      sgt=None,
+                                      sxp_vpn=None,
+                                      vns=None,
+                                      headers=None,
+                                      payload=None,
+                                      active_validation=True,
+                                      **query_parameters):
         """Update.
 
         Args:
@@ -523,10 +523,10 @@ class Sxplocalbindings(object):
 
         return self._object_factory('bpm_e07cb8ea65820863cce345c67926b_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_sxplocalbindings_by_id(self,
+                                      id,
+                                      headers=None,
+                                      **query_parameters):
         """Delete.
 
         Args:

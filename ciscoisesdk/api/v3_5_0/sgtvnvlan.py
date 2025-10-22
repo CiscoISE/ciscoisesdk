@@ -69,12 +69,12 @@ class Sgtvnvlan(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_sgtvnvlan(self,
+                      filter=None,
+                      page=None,
+                      size=None,
+                      headers=None,
+                      **query_parameters):
         """Get-All.
 
         Args:
@@ -140,12 +140,12 @@ class Sgtvnvlan(object):
 
         return self._object_factory('bpm_fe2b70075b56fdbc5bf15a9da229c0_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_sgtvnvlan_generator(self,
+                                filter=None,
+                                page=None,
+                                size=None,
+                                headers=None,
+                                **query_parameters):
         """Get-All.
 
         Args:
@@ -176,7 +176,7 @@ class Sgtvnvlan(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sgtvnvlan, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -186,16 +186,16 @@ class Sgtvnvlan(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               id=None,
-               name=None,
-               sgt_id=None,
-               virtualnetworklist=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_sgtvnvlan(self,
+                         description=None,
+                         id=None,
+                         name=None,
+                         sgt_id=None,
+                         virtualnetworklist=None,
+                         headers=None,
+                         payload=None,
+                         active_validation=True,
+                         **query_parameters):
         """Create.
 
         Args:
@@ -292,10 +292,10 @@ class Sgtvnvlan(object):
 
         return self._object_factory('bpm_f57dd9f1f6f454e89956f629db7d02f4_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_sgtvnvlan_by_id(self,
+                            id,
+                            headers=None,
+                            **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -352,16 +352,16 @@ class Sgtvnvlan(object):
 
         return self._object_factory('bpm_ea0a65da3ae0346b912a9efac_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               name=None,
-               sgt_id=None,
-               virtualnetworklist=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_sgtvnvlan_by_id(self,
+                               id,
+                               description=None,
+                               name=None,
+                               sgt_id=None,
+                               virtualnetworklist=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """Update.
 
         Args:
@@ -463,10 +463,10 @@ class Sgtvnvlan(object):
 
         return self._object_factory('bpm_eae98db0c24b5ecca77cce8279e20785_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_sgtvnvlan_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """Delete.
 
         Args:

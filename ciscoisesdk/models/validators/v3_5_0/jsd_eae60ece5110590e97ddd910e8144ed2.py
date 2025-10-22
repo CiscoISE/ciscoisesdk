@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Is user a member of groups data model.
+"""Identity Services Engine updateActivedirectoryIsusermemberofById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorEae60Ece5110590E97DdD910E8144Ed2(object):
-    """Is user a member of groups request schema definition."""
+    """updateActivedirectoryIsusermemberofById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEae60Ece5110590E97DdD910E8144Ed2, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -55,7 +55,8 @@ class JSONSchemaValidatorEae60Ece5110590E97DdD910E8144Ed2(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 }
                 }
                 }'''.replace("\n" + ' ' * 16, '')

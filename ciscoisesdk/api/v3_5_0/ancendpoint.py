@@ -69,14 +69,14 @@ class Ancendpoint(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_ancendpoint(self,
+                        filter=None,
+                        page=None,
+                        size=None,
+                        sortasc=None,
+                        sortdsc=None,
+                        headers=None,
+                        **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Ancendpoint(object):
 
         return self._object_factory('bpm_f312f17965b6294d8eb357f409a14_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_ancendpoint_generator(self,
+                                  filter=None,
+                                  page=None,
+                                  size=None,
+                                  sortasc=None,
+                                  sortdsc=None,
+                                  headers=None,
+                                  **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Ancendpoint(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_ancendpoint, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,16 +206,16 @@ class Ancendpoint(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def apply(self,
-              description=None,
-              id=None,
-              mac_address=None,
-              name=None,
-              policy_name=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def update_ancendpoint_apply(self,
+                                 description=None,
+                                 id=None,
+                                 mac_address=None,
+                                 name=None,
+                                 policy_name=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """apply.
 
         Args:
@@ -313,16 +313,16 @@ class Ancendpoint(object):
 
         return self._object_factory('bpm_bc936bcb25464b9f3f227647b0443_v3_5_0', _api_response)
 
-    def clear(self,
-              description=None,
-              id=None,
-              mac_address=None,
-              name=None,
-              policy_name=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def update_ancendpoint_clear(self,
+                                 description=None,
+                                 id=None,
+                                 mac_address=None,
+                                 name=None,
+                                 policy_name=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """clear.
 
         Args:
@@ -420,10 +420,10 @@ class Ancendpoint(object):
 
         return self._object_factory('bpm_fc6670fd50dfb04b1f6b16981256_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_ancendpoint_by_id(self,
+                              id,
+                              headers=None,
+                              **query_parameters):
         """Get-By-Id.
 
         Args:

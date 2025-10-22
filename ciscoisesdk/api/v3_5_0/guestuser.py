@@ -69,14 +69,14 @@ class Guestuser(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_guestuser(self,
+                      filter=None,
+                      page=None,
+                      size=None,
+                      sortasc=None,
+                      sortdsc=None,
+                      headers=None,
+                      **query_parameters):
         """Get-All.
 
         Args:
@@ -158,14 +158,14 @@ class Guestuser(object):
 
         return self._object_factory('bpm_cc79b953608d2945ac7baff28f_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_guestuser_generator(self,
+                                filter=None,
+                                page=None,
+                                size=None,
+                                sortasc=None,
+                                sortdsc=None,
+                                headers=None,
+                                **query_parameters):
         """Get-All.
 
         Args:
@@ -206,7 +206,7 @@ class Guestuser(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_guestuser, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -218,25 +218,25 @@ class Guestuser(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               custom_fields=None,
-               description=None,
-               guest_access_info=None,
-               guest_info=None,
-               guest_type=None,
-               id=None,
-               name=None,
-               person_being_visited=None,
-               portal_id=None,
-               reason_for_visit=None,
-               sponsor_user_id=None,
-               sponsor_user_name=None,
-               status=None,
-               status_reason=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_guestuser(self,
+                         custom_fields=None,
+                         description=None,
+                         guest_access_info=None,
+                         guest_info=None,
+                         guest_type=None,
+                         id=None,
+                         name=None,
+                         person_being_visited=None,
+                         portal_id=None,
+                         reason_for_visit=None,
+                         sponsor_user_id=None,
+                         sponsor_user_name=None,
+                         status=None,
+                         status_reason=None,
+                         headers=None,
+                         payload=None,
+                         active_validation=True,
+                         **query_parameters):
         """Create.
 
         Args:
@@ -244,9 +244,10 @@ class Guestuser(object):
                 request body.
             description(string): Description, property of the
                 request body.
-            guest_access_info(): guestAccessInfo, property of the
-                request body.
-            guest_info(): guestInfo, property of the request body.
+            guest_access_info(object): guestAccessInfo, property of
+                the request body.
+            guest_info(object): guestInfo, property of the request
+                body.
             guest_type(string): guestType, property of the request
                 body.
             id(string): Id, property of the request body.
@@ -380,10 +381,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_af81d98c8c975c958b50606d164e2f57_v3_5_0', _api_response)
 
-    def deny(self,
-             id,
-             headers=None,
-             **query_parameters):
+    def update_guestuser_deny_by_id(self,
+                                    id,
+                                    headers=None,
+                                    **query_parameters):
         """deny.
 
         Args:
@@ -441,13 +442,13 @@ class Guestuser(object):
 
         return self._object_factory('bpm_c1e5e2a187652018c59b10155ac973d_v3_5_0', _api_response)
 
-    def suspend_by_id(self,
-                      id,
-                      additional_data=None,
-                      headers=None,
-                      payload=None,
-                      active_validation=True,
-                      **query_parameters):
+    def update_guestuser_suspend_by_id(self,
+                                       id,
+                                       additional_data=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **query_parameters):
         """suspendById.
 
         Args:
@@ -524,10 +525,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_be5b1e320e55f4a181370417471d9e_v3_5_0', _api_response)
 
-    def approve(self,
-                id,
-                headers=None,
-                **query_parameters):
+    def update_guestuser_approve_by_id(self,
+                                       id,
+                                       headers=None,
+                                       **query_parameters):
         """approve.
 
         Args:
@@ -585,10 +586,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_c67b4dcffba052ae8ece775bc61a1c21_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_guestuser_name_by_name(self,
+                                   name,
+                                   headers=None,
+                                   **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -645,25 +646,25 @@ class Guestuser(object):
 
         return self._object_factory('bpm_bcb7ec29968e5d5899df4a90d94ed659_v3_5_0', _api_response)
 
-    def update_by_name(self,
-                       name,
-                       custom_fields=None,
-                       description=None,
-                       guest_access_info=None,
-                       guest_info=None,
-                       guest_type=None,
-                       id=None,
-                       person_being_visited=None,
-                       portal_id=None,
-                       reason_for_visit=None,
-                       sponsor_user_id=None,
-                       sponsor_user_name=None,
-                       status=None,
-                       status_reason=None,
-                       headers=None,
-                       payload=None,
-                       active_validation=True,
-                       **query_parameters):
+    def update_guestuser_name_by_name(self,
+                                      name,
+                                      custom_fields=None,
+                                      description=None,
+                                      guest_access_info=None,
+                                      guest_info=None,
+                                      guest_type=None,
+                                      id=None,
+                                      person_being_visited=None,
+                                      portal_id=None,
+                                      reason_for_visit=None,
+                                      sponsor_user_id=None,
+                                      sponsor_user_name=None,
+                                      status=None,
+                                      status_reason=None,
+                                      headers=None,
+                                      payload=None,
+                                      active_validation=True,
+                                      **query_parameters):
         """UpdateByName.
 
         Args:
@@ -671,9 +672,10 @@ class Guestuser(object):
                 request body.
             description(string): Description, property of the
                 request body.
-            guest_access_info(): guestAccessInfo, property of the
-                request body.
-            guest_info(): guestInfo, property of the request body.
+            guest_access_info(object): guestAccessInfo, property of
+                the request body.
+            guest_info(object): guestInfo, property of the request
+                body.
             guest_type(string): guestType, property of the request
                 body.
             id(string): Id, property of the request body.
@@ -812,10 +814,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_f24049df29d059c48eef86d381ffad5d_v3_5_0', _api_response)
 
-    def delete_by_name(self,
-                       name,
-                       headers=None,
-                       **query_parameters):
+    def delete_guestuser_name_by_name(self,
+                                      name,
+                                      headers=None,
+                                      **query_parameters):
         """DeleteByName.
 
         Args:
@@ -872,11 +874,11 @@ class Guestuser(object):
 
         return self._object_factory('bpm_ef15d7c6b259f5859ee9675c38887c_v3_5_0', _api_response)
 
-    def sms(self,
-            id,
-            portal_id,
-            headers=None,
-            **query_parameters):
+    def update_guestuser_sms_portalid_by_id(self,
+                                            id,
+                                            portal_id,
+                                            headers=None,
+                                            **query_parameters):
         """sms.
 
         Args:
@@ -938,13 +940,13 @@ class Guestuser(object):
 
         return self._object_factory('bpm_ba14b751f98206ca2e19cff3fe_v3_5_0', _api_response)
 
-    def change_sponsor_password(self,
-                                portal_id,
-                                additional_data=None,
-                                headers=None,
-                                payload=None,
-                                active_validation=True,
-                                **query_parameters):
+    def update_guestuser_changesponsorpassword(self,
+                                               portal_id,
+                                               additional_data=None,
+                                               headers=None,
+                                               payload=None,
+                                               active_validation=True,
+                                               **query_parameters):
         """changeSponsorPassword.
 
         Args:
@@ -1021,10 +1023,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_eb3472c4de150828b2dae61e2285313_v3_5_0', _api_response)
 
-    def resetpassword(self,
-                      id,
-                      headers=None,
-                      **query_parameters):
+    def update_guestuser_resetpassword_by_id(self,
+                                             id,
+                                             headers=None,
+                                             **query_parameters):
         """resetpassword.
 
         Args:
@@ -1082,25 +1084,25 @@ class Guestuser(object):
 
         return self._object_factory('bpm_ea6ea4e41d85f83b6f6c10ce38bb9ed_v3_5_0', _api_response)
 
-    def email(self,
-              id,
-              portal_id,
-              custom_fields=None,
-              description=None,
-              guest_access_info=None,
-              guest_info=None,
-              guest_type=None,
-              name=None,
-              person_being_visited=None,
-              reason_for_visit=None,
-              sponsor_user_id=None,
-              sponsor_user_name=None,
-              status=None,
-              status_reason=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def update_guestuser_email_portalid_by_id(self,
+                                              id,
+                                              portal_id,
+                                              custom_fields=None,
+                                              description=None,
+                                              guest_access_info=None,
+                                              guest_info=None,
+                                              guest_type=None,
+                                              name=None,
+                                              person_being_visited=None,
+                                              reason_for_visit=None,
+                                              sponsor_user_id=None,
+                                              sponsor_user_name=None,
+                                              status=None,
+                                              status_reason=None,
+                                              headers=None,
+                                              payload=None,
+                                              active_validation=True,
+                                              **query_parameters):
         """email.
 
         Args:
@@ -1108,9 +1110,10 @@ class Guestuser(object):
                 request body.
             description(string): Description, property of the
                 request body.
-            guest_access_info(): guestAccessInfo, property of the
-                request body.
-            guest_info(): guestInfo, property of the request body.
+            guest_access_info(object): guestAccessInfo, property of
+                the request body.
+            guest_info(object): guestInfo, property of the request
+                body.
             guest_type(string): guestType, property of the request
                 body.
             id(string): Id, property of the request body.
@@ -1253,10 +1256,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_a9fa9cbccbe50fcb1cd6a63fed47578_v3_5_0', _api_response)
 
-    def reinstate_by_id(self,
-                        id,
-                        headers=None,
-                        **query_parameters):
+    def update_guestuser_reinstate_by_id(self,
+                                         id,
+                                         headers=None,
+                                         **query_parameters):
         """reinstateById.
 
         Args:
@@ -1314,10 +1317,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_dfcba4a0f685c168bdf2b5b2be317ac_v3_5_0', _api_response)
 
-    def reinstate_by_name(self,
-                          name,
-                          headers=None,
-                          **query_parameters):
+    def update_guestuser_reinstate_name_by_name(self,
+                                                name,
+                                                headers=None,
+                                                **query_parameters):
         """reinstateByName.
 
         Args:
@@ -1375,10 +1378,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_b21045846d5097a82cd61cb3c7eaf1_v3_5_0', _api_response)
 
-    def suspend_by_name(self,
-                        name,
-                        headers=None,
-                        **query_parameters):
+    def update_guestuser_suspend_name_by_name(self,
+                                              name,
+                                              headers=None,
+                                              **query_parameters):
         """suspendByName.
 
         Args:
@@ -1436,10 +1439,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_afcc8fe53b4824ae744a2ff3848_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_guestuser_by_id(self,
+                            id,
+                            headers=None,
+                            **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -1496,25 +1499,25 @@ class Guestuser(object):
 
         return self._object_factory('bpm_c3c7d5a3a83d9f7441972d399_v3_5_0', _api_response)
 
-    def update_by_id(self,
-                     id,
-                     custom_fields=None,
-                     description=None,
-                     guest_access_info=None,
-                     guest_info=None,
-                     guest_type=None,
-                     name=None,
-                     person_being_visited=None,
-                     portal_id=None,
-                     reason_for_visit=None,
-                     sponsor_user_id=None,
-                     sponsor_user_name=None,
-                     status=None,
-                     status_reason=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_guestuser_by_id(self,
+                               id,
+                               custom_fields=None,
+                               description=None,
+                               guest_access_info=None,
+                               guest_info=None,
+                               guest_type=None,
+                               name=None,
+                               person_being_visited=None,
+                               portal_id=None,
+                               reason_for_visit=None,
+                               sponsor_user_id=None,
+                               sponsor_user_name=None,
+                               status=None,
+                               status_reason=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """UpdateById.
 
         Args:
@@ -1522,9 +1525,10 @@ class Guestuser(object):
                 request body.
             description(string): Description, property of the
                 request body.
-            guest_access_info(): guestAccessInfo, property of the
-                request body.
-            guest_info(): guestInfo, property of the request body.
+            guest_access_info(object): guestAccessInfo, property of
+                the request body.
+            guest_info(object): guestInfo, property of the request
+                body.
             guest_type(string): guestType, property of the request
                 body.
             id(string): Id, property of the request body.
@@ -1663,10 +1667,10 @@ class Guestuser(object):
 
         return self._object_factory('bpm_b9c7c5847b17684c49399ff95_v3_5_0', _api_response)
 
-    def delete_by_id(self,
-                     id,
-                     headers=None,
-                     **query_parameters):
+    def delete_guestuser_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """DeleteById.
 
         Args:

@@ -69,11 +69,11 @@ class Pxgridnode(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_pxgridnode(self,
+                       page=None,
+                       size=None,
+                       headers=None,
+                       **query_parameters):
         """Get-All.
 
         Args:
@@ -136,11 +136,11 @@ class Pxgridnode(object):
 
         return self._object_factory('bpm_bc5a9be32e6f552ca93333897db12d16_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_pxgridnode_generator(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
         """Get-All.
 
         Args:
@@ -169,7 +169,7 @@ class Pxgridnode(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_pxgridnode, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -178,10 +178,10 @@ class Pxgridnode(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_pxgridnode_name_by_name(self,
+                                    name,
+                                    headers=None,
+                                    **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -240,10 +240,10 @@ class Pxgridnode(object):
 
         return self._object_factory('bpm_a9d109aac585a89bdd3fae400064b_v3_5_0', _api_response)
 
-    def delete_by_name(self,
-                       name,
-                       headers=None,
-                       **query_parameters):
+    def delete_pxgridnode_name_by_name(self,
+                                       name,
+                                       headers=None,
+                                       **query_parameters):
         """DeleteByName.
 
         Args:
@@ -302,10 +302,10 @@ class Pxgridnode(object):
 
         return self._object_factory('bpm_e718d5054593b94a2fef39461c24a_v3_5_0', _api_response)
 
-    def approve_node(self,
-                     name,
-                     headers=None,
-                     **query_parameters):
+    def update_pxgridnode_name_approve_by_name(self,
+                                               name,
+                                               headers=None,
+                                               **query_parameters):
         """Approve Node.
 
         Args:
@@ -365,10 +365,10 @@ class Pxgridnode(object):
 
         return self._object_factory('bpm_f47d656ed0805859a85e5cc082c78dcf_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_pxgridnode_by_id(self,
+                             id,
+                             headers=None,
+                             **query_parameters):
         """Get-By-Id.
 
         Args:

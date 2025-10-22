@@ -69,14 +69,14 @@ class Restidstore(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_restidstore(self,
+                        filter=None,
+                        page=None,
+                        size=None,
+                        sortasc=None,
+                        sortdsc=None,
+                        headers=None,
+                        **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Restidstore(object):
 
         return self._object_factory('bpm_ec1cd0e95e96ad1204b5b2dfee1a_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_restidstore_generator(self,
+                                  filter=None,
+                                  page=None,
+                                  size=None,
+                                  sortasc=None,
+                                  sortdsc=None,
+                                  headers=None,
+                                  **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Restidstore(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_restidstore, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,32 +206,33 @@ class Restidstore(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               ers_rest_idstore_advance_settings=None,
-               ers_rest_idstore_attributes=None,
-               ers_rest_idstore_device_attributes=None,
-               ers_rest_idstore_user_attributes=None,
-               id=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_restidstore(self,
+                           description=None,
+                           ers_rest_idstore_advance_settings=None,
+                           ers_rest_idstore_attributes=None,
+                           ers_rest_idstore_device_attributes=None,
+                           ers_rest_idstore_user_attributes=None,
+                           id=None,
+                           name=None,
+                           headers=None,
+                           payload=None,
+                           active_validation=True,
+                           **query_parameters):
         """Create.
 
         Args:
             description(string): Description, property of the
                 request body.
-            ers_rest_idstore_advance_settings():
+            ers_rest_idstore_advance_settings(object):
                 ersRestIDStoreAdvanceSettings, property
                 of the request body.
-            ers_rest_idstore_attributes(): ersRestIDStoreAttributes,
-                property of the request body.
-            ers_rest_idstore_device_attributes():
+            ers_rest_idstore_attributes(object):
+                ersRestIDStoreAttributes, property of
+                the request body.
+            ers_rest_idstore_device_attributes(object):
                 ersRestIDStoreDeviceAttributes, property
                 of the request body.
-            ers_rest_idstore_user_attributes():
+            ers_rest_idstore_user_attributes(object):
                 ersRestIDStoreUserAttributes, property
                 of the request body.
             id(string): Id, property of the request body.
@@ -325,10 +326,10 @@ class Restidstore(object):
 
         return self._object_factory('bpm_ccb1fa524db3f37254b3f67c83_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_restidstore_name_by_name(self,
+                                     name,
+                                     headers=None,
+                                     **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -385,32 +386,33 @@ class Restidstore(object):
 
         return self._object_factory('bpm_c47e28f13659658b3e6af9409a1177_v3_5_0', _api_response)
 
-    def update_by_name(self,
-                       name,
-                       description=None,
-                       ers_rest_idstore_advance_settings=None,
-                       ers_rest_idstore_attributes=None,
-                       ers_rest_idstore_device_attributes=None,
-                       ers_rest_idstore_user_attributes=None,
-                       id=None,
-                       headers=None,
-                       payload=None,
-                       active_validation=True,
-                       **query_parameters):
+    def update_restidstore_name_by_name(self,
+                                        name,
+                                        description=None,
+                                        ers_rest_idstore_advance_settings=None,
+                                        ers_rest_idstore_attributes=None,
+                                        ers_rest_idstore_device_attributes=None,
+                                        ers_rest_idstore_user_attributes=None,
+                                        id=None,
+                                        headers=None,
+                                        payload=None,
+                                        active_validation=True,
+                                        **query_parameters):
         """Update-By-Name.
 
         Args:
             description(string): Description, property of the
                 request body.
-            ers_rest_idstore_advance_settings():
+            ers_rest_idstore_advance_settings(object):
                 ersRestIDStoreAdvanceSettings, property
                 of the request body.
-            ers_rest_idstore_attributes(): ersRestIDStoreAttributes,
-                property of the request body.
-            ers_rest_idstore_device_attributes():
+            ers_rest_idstore_attributes(object):
+                ersRestIDStoreAttributes, property of
+                the request body.
+            ers_rest_idstore_device_attributes(object):
                 ersRestIDStoreDeviceAttributes, property
                 of the request body.
-            ers_rest_idstore_user_attributes():
+            ers_rest_idstore_user_attributes(object):
                 ersRestIDStoreUserAttributes, property
                 of the request body.
             id(string): Id, property of the request body.
@@ -509,10 +511,10 @@ class Restidstore(object):
 
         return self._object_factory('bpm_d0e432f52e2a5863858c7dc0c3eda277_v3_5_0', _api_response)
 
-    def delete_by_name(self,
-                       name,
-                       headers=None,
-                       **query_parameters):
+    def delete_restidstore_name_by_name(self,
+                                        name,
+                                        headers=None,
+                                        **query_parameters):
         """Delete-By-Name.
 
         Args:
@@ -569,33 +571,34 @@ class Restidstore(object):
 
         return self._object_factory('bpm_fe53fb8359725e40ac431d41e1487626_v3_5_0', _api_response)
 
-    def patch_by_name(self,
-                      name,
-                      description=None,
-                      ers_rest_idstore_advance_settings=None,
-                      ers_rest_idstore_attributes=None,
-                      ers_rest_idstore_device_attributes=None,
-                      ers_rest_idstore_user_attributes=None,
-                      id=None,
-                      headers=None,
-                      payload=None,
-                      active_validation=True,
-                      **query_parameters):
+    def patch_restidstore_name_by_name(self,
+                                       name,
+                                       description=None,
+                                       ers_rest_idstore_advance_settings=None,
+                                       ers_rest_idstore_attributes=None,
+                                       ers_rest_idstore_device_attributes=None,
+                                       ers_rest_idstore_user_attributes=None,
+                                       id=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
         Args:
             description(string): Description, property of the
                 request body.
-            ers_rest_idstore_advance_settings():
+            ers_rest_idstore_advance_settings(object):
                 ersRestIDStoreAdvanceSettings, property
                 of the request body.
-            ers_rest_idstore_attributes(): ersRestIDStoreAttributes,
-                property of the request body.
-            ers_rest_idstore_device_attributes():
+            ers_rest_idstore_attributes(object):
+                ersRestIDStoreAttributes, property of
+                the request body.
+            ers_rest_idstore_device_attributes(object):
                 ersRestIDStoreDeviceAttributes, property
                 of the request body.
-            ers_rest_idstore_user_attributes():
+            ers_rest_idstore_user_attributes(object):
                 ersRestIDStoreUserAttributes, property
                 of the request body.
             id(string): Id, property of the request body.
@@ -693,10 +696,10 @@ class Restidstore(object):
 
         return self._object_factory('bpm_fced674832255f00b1d01cd38d378bf1_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_restidstore_by_id(self,
+                              id,
+                              headers=None,
+                              **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -753,32 +756,33 @@ class Restidstore(object):
 
         return self._object_factory('bpm_cba3f7ace597da668acfbe00364be_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               ers_rest_idstore_advance_settings=None,
-               ers_rest_idstore_attributes=None,
-               ers_rest_idstore_device_attributes=None,
-               ers_rest_idstore_user_attributes=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_restidstore_by_id(self,
+                                 id,
+                                 description=None,
+                                 ers_rest_idstore_advance_settings=None,
+                                 ers_rest_idstore_attributes=None,
+                                 ers_rest_idstore_device_attributes=None,
+                                 ers_rest_idstore_user_attributes=None,
+                                 name=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """Update.
 
         Args:
             description(string): Description, property of the
                 request body.
-            ers_rest_idstore_advance_settings():
+            ers_rest_idstore_advance_settings(object):
                 ersRestIDStoreAdvanceSettings, property
                 of the request body.
-            ers_rest_idstore_attributes(): ersRestIDStoreAttributes,
-                property of the request body.
-            ers_rest_idstore_device_attributes():
+            ers_rest_idstore_attributes(object):
+                ersRestIDStoreAttributes, property of
+                the request body.
+            ers_rest_idstore_device_attributes(object):
                 ersRestIDStoreDeviceAttributes, property
                 of the request body.
-            ers_rest_idstore_user_attributes():
+            ers_rest_idstore_user_attributes(object):
                 ersRestIDStoreUserAttributes, property
                 of the request body.
             id(string): Id, property of the request body.
@@ -877,10 +881,10 @@ class Restidstore(object):
 
         return self._object_factory('bpm_ded7f8573c255c318bb1f04bfdbf01e1_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_restidstore_by_id(self,
+                                 id,
+                                 headers=None,
+                                 **query_parameters):
         """Delete.
 
         Args:
@@ -937,33 +941,34 @@ class Restidstore(object):
 
         return self._object_factory('bpm_e77a1dd4aa75dcebbc3ee4e94a162b4_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              description=None,
-              ers_rest_idstore_advance_settings=None,
-              ers_rest_idstore_attributes=None,
-              ers_rest_idstore_device_attributes=None,
-              ers_rest_idstore_user_attributes=None,
-              name=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_restidstore_by_id(self,
+                                id,
+                                description=None,
+                                ers_rest_idstore_advance_settings=None,
+                                ers_rest_idstore_attributes=None,
+                                ers_rest_idstore_device_attributes=None,
+                                ers_rest_idstore_user_attributes=None,
+                                name=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
         Args:
             description(string): Description, property of the
                 request body.
-            ers_rest_idstore_advance_settings():
+            ers_rest_idstore_advance_settings(object):
                 ersRestIDStoreAdvanceSettings, property
                 of the request body.
-            ers_rest_idstore_attributes(): ersRestIDStoreAttributes,
-                property of the request body.
-            ers_rest_idstore_device_attributes():
+            ers_rest_idstore_attributes(object):
+                ersRestIDStoreAttributes, property of
+                the request body.
+            ers_rest_idstore_device_attributes(object):
                 ersRestIDStoreDeviceAttributes, property
                 of the request body.
-            ers_rest_idstore_user_attributes():
+            ers_rest_idstore_user_attributes(object):
                 ersRestIDStoreUserAttributes, property
                 of the request body.
             id(string): Id, property of the request body.

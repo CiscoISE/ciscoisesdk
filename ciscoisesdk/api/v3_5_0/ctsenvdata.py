@@ -69,18 +69,18 @@ class Ctsenvdata(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def trust_sec_query(self,
-                        capability=None,
-                        device_name=None,
-                        device_sgt=None,
-                        policy_ver_id=None,
-                        refresh_timer=None,
-                        servers=None,
-                        sgts=None,
-                        headers=None,
-                        payload=None,
-                        active_validation=True,
-                        **query_parameters):
+    def create_ctsenvdata(self,
+                          capability=None,
+                          device_name=None,
+                          device_sgt=None,
+                          policy_ver_id=None,
+                          refresh_timer=None,
+                          servers=None,
+                          sgts=None,
+                          headers=None,
+                          payload=None,
+                          active_validation=True,
+                          **query_parameters):
         """TrustSec-Query.
 
         Args:
@@ -96,8 +96,8 @@ class Ctsenvdata(object):
                 request body.
             refresh_timer(string): refreshTimer, property of the
                 request body.
-            servers(): servers, property of the request body.
-            sgts(): sgts, property of the request body.
+            servers(object): servers, property of the request body.
+            sgts(object): sgts, property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the

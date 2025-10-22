@@ -69,16 +69,16 @@ class Supportbundle(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def create(self,
-               description=None,
-               host_name=None,
-               id=None,
-               name=None,
-               support_bundle_include_options=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_supportbundle(self,
+                             description=None,
+                             host_name=None,
+                             id=None,
+                             name=None,
+                             support_bundle_include_options=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Create.
 
         Args:
@@ -89,7 +89,7 @@ class Supportbundle(object):
                 body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
-            support_bundle_include_options():
+            support_bundle_include_options(object):
                 supportBundleIncludeOptions, property of
                 the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request

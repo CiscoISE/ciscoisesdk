@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Join a domain with all nodes data model.
+"""Identity Services Engine updateActivedirectoryJoinallnodesById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
-    """Join a domain with all nodes request schema definition."""
+    """updateActivedirectoryJoinallnodesById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -60,7 +60,8 @@ class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adAttributes": {
                 "properties": {
@@ -83,7 +84,8 @@ class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adScopesNames": {
                 "type": "string"
@@ -106,7 +108,8 @@ class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "advancedSettings": {
                 "properties": {
@@ -201,7 +204,8 @@ class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
                 "unreachableDomainsBehaviour": {
                 "type": "object"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {

@@ -69,9 +69,9 @@ class Restidstoredeviceattribute(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def fetch_device_attributes(self,
-                                headers=None,
-                                **query_parameters):
+    def get_restidstoredeviceattribute_fetchdeviceattributes(self,
+                                                             headers=None,
+                                                             **query_parameters):
         """fetchDeviceAttributes.
 
         Args:

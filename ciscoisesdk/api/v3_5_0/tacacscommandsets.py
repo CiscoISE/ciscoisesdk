@@ -69,11 +69,11 @@ class Tacacscommandsets(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_tacacscommandsets(self,
+                              page=None,
+                              size=None,
+                              headers=None,
+                              **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Tacacscommandsets(object):
 
         return self._object_factory('bpm_e6c24536c165e07b05c27680d554065_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_tacacscommandsets_generator(self,
+                                        page=None,
+                                        size=None,
+                                        headers=None,
+                                        **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Tacacscommandsets(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_tacacscommandsets, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,20 +176,21 @@ class Tacacscommandsets(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               commands=None,
-               description=None,
-               id=None,
-               name=None,
-               permit_unmatched=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_tacacscommandsets(self,
+                                 commands=None,
+                                 description=None,
+                                 id=None,
+                                 name=None,
+                                 permit_unmatched=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """Create.
 
         Args:
-            commands(): commands, property of the request body.
+            commands(object): commands, property of the request
+                body.
             description(string): Description, property of the
                 request body.
             id(string): Id, property of the request body.
@@ -281,10 +282,10 @@ class Tacacscommandsets(object):
 
         return self._object_factory('bpm_ffe46f1149c58f4b7f4c8f89b1b9d3d_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_tacacscommandsets_name_by_name(self,
+                                           name,
+                                           headers=None,
+                                           **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -341,10 +342,10 @@ class Tacacscommandsets(object):
 
         return self._object_factory('bpm_f8ba0e97135ca6bacff94d5a76df97_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_tacacscommandsets_by_id(self,
+                                    id,
+                                    headers=None,
+                                    **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -401,20 +402,21 @@ class Tacacscommandsets(object):
 
         return self._object_factory('bpm_caefe2cb042513ab4a4a76f227330cb_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               commands=None,
-               description=None,
-               name=None,
-               permit_unmatched=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_tacacscommandsets_by_id(self,
+                                       id,
+                                       commands=None,
+                                       description=None,
+                                       name=None,
+                                       permit_unmatched=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **query_parameters):
         """Update.
 
         Args:
-            commands(): commands, property of the request body.
+            commands(object): commands, property of the request
+                body.
             description(string): Description, property of the
                 request body.
             id(string): Id, property of the request body.
@@ -511,10 +513,10 @@ class Tacacscommandsets(object):
 
         return self._object_factory('bpm_eb6323be425816a4116eea48f16f4b_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_tacacscommandsets_by_id(self,
+                                       id,
+                                       headers=None,
+                                       **query_parameters):
         """Delete.
 
         Args:
@@ -571,21 +573,22 @@ class Tacacscommandsets(object):
 
         return self._object_factory('bpm_a319a83b14252eba0f00bb4c4ab0d7c_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              commands=None,
-              description=None,
-              name=None,
-              permit_unmatched=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_tacacscommandsets_by_id(self,
+                                      id,
+                                      commands=None,
+                                      description=None,
+                                      name=None,
+                                      permit_unmatched=None,
+                                      headers=None,
+                                      payload=None,
+                                      active_validation=True,
+                                      **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
         Args:
-            commands(): commands, property of the request body.
+            commands(object): commands, property of the request
+                body.
             description(string): Description, property of the
                 request body.
             id(string): Id, property of the request body.

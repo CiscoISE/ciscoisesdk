@@ -69,11 +69,11 @@ class Externalradiusserver(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_externalradiusserver(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Externalradiusserver(object):
 
         return self._object_factory('bpm_ea682db0036e5030a5c2f0a4267ab4b8_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_externalradiusserver_generator(self,
+                                           page=None,
+                                           size=None,
+                                           headers=None,
+                                           **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Externalradiusserver(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_externalradiusserver, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,26 +176,26 @@ class Externalradiusserver(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               accounting_port=None,
-               authentication_port=None,
-               authenticator_key=None,
-               description=None,
-               enable_key_wrap=None,
-               encryption_key=None,
-               host_ip=None,
-               id=None,
-               key_input_format=None,
-               msg_auth_is_required_on_response=None,
-               name=None,
-               proxy_timeout=None,
-               retries=None,
-               shared_secret=None,
-               timeout=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_externalradiusserver(self,
+                                    accounting_port=None,
+                                    authentication_port=None,
+                                    authenticator_key=None,
+                                    description=None,
+                                    enable_key_wrap=None,
+                                    encryption_key=None,
+                                    host_ip=None,
+                                    id=None,
+                                    key_input_format=None,
+                                    msg_auth_is_required_on_response=None,
+                                    name=None,
+                                    proxy_timeout=None,
+                                    retries=None,
+                                    shared_secret=None,
+                                    timeout=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
         """Create.
 
         Args:
@@ -353,10 +353,10 @@ class Externalradiusserver(object):
 
         return self._object_factory('bpm_aa9ea10d15964aad77591aacd55d5_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_externalradiusserver_name_by_name(self,
+                                              name,
+                                              headers=None,
+                                              **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -413,10 +413,10 @@ class Externalradiusserver(object):
 
         return self._object_factory('bpm_afa6d7527045ebc928ee7e30ad3092a_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_externalradiusserver_by_id(self,
+                                       id,
+                                       headers=None,
+                                       **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -473,26 +473,26 @@ class Externalradiusserver(object):
 
         return self._object_factory('bpm_af14464cc6a05f6f87bbe7c174b6d5f6_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               accounting_port=None,
-               authentication_port=None,
-               authenticator_key=None,
-               description=None,
-               enable_key_wrap=None,
-               encryption_key=None,
-               host_ip=None,
-               key_input_format=None,
-               msg_auth_is_required_on_response=None,
-               name=None,
-               proxy_timeout=None,
-               retries=None,
-               shared_secret=None,
-               timeout=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_externalradiusserver_by_id(self,
+                                          id,
+                                          accounting_port=None,
+                                          authentication_port=None,
+                                          authenticator_key=None,
+                                          description=None,
+                                          enable_key_wrap=None,
+                                          encryption_key=None,
+                                          host_ip=None,
+                                          key_input_format=None,
+                                          msg_auth_is_required_on_response=None,
+                                          name=None,
+                                          proxy_timeout=None,
+                                          retries=None,
+                                          shared_secret=None,
+                                          timeout=None,
+                                          headers=None,
+                                          payload=None,
+                                          active_validation=True,
+                                          **query_parameters):
         """Update.
 
         Args:
@@ -655,10 +655,10 @@ class Externalradiusserver(object):
 
         return self._object_factory('bpm_c6536d17325c84a54189f46d4bbad2_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_externalradiusserver_by_id(self,
+                                          id,
+                                          headers=None,
+                                          **query_parameters):
         """Delete.
 
         Args:
@@ -715,26 +715,26 @@ class Externalradiusserver(object):
 
         return self._object_factory('bpm_d86e3201f9b0561db13a9eb1b1d59bd5_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              accounting_port=None,
-              authentication_port=None,
-              authenticator_key=None,
-              description=None,
-              enable_key_wrap=None,
-              encryption_key=None,
-              host_ip=None,
-              key_input_format=None,
-              msg_auth_is_required_on_response=None,
-              name=None,
-              proxy_timeout=None,
-              retries=None,
-              shared_secret=None,
-              timeout=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_externalradiusserver_by_id(self,
+                                         id,
+                                         accounting_port=None,
+                                         authentication_port=None,
+                                         authenticator_key=None,
+                                         description=None,
+                                         enable_key_wrap=None,
+                                         encryption_key=None,
+                                         host_ip=None,
+                                         key_input_format=None,
+                                         msg_auth_is_required_on_response=None,
+                                         name=None,
+                                         proxy_timeout=None,
+                                         retries=None,
+                                         shared_secret=None,
+                                         timeout=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

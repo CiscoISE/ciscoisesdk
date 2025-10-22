@@ -69,11 +69,11 @@ class Radiusserversequence(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_radiusserversequence(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Radiusserversequence(object):
 
         return self._object_factory('bpm_de0785ef5c848693d79e61ce895b_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_radiusserversequence_generator(self,
+                                           page=None,
+                                           size=None,
+                                           headers=None,
+                                           **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Radiusserversequence(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_radiusserversequence, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,26 +176,26 @@ class Radiusserversequence(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               before_accept_attr_manipulators_list=None,
-               continue_authorz_policy=None,
-               description=None,
-               id=None,
-               local_accounting=None,
-               name=None,
-               on_request_attr_manipulator_list=None,
-               prefix_separator=None,
-               radius_server_list=None,
-               remote_accounting=None,
-               strip_prefix=None,
-               strip_suffix=None,
-               suffix_separator=None,
-               use_attr_set_before_acc=None,
-               use_attr_set_on_request=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_radiusserversequence(self,
+                                    before_accept_attr_manipulators_list=None,
+                                    continue_authorz_policy=None,
+                                    description=None,
+                                    id=None,
+                                    local_accounting=None,
+                                    name=None,
+                                    on_request_attr_manipulator_list=None,
+                                    prefix_separator=None,
+                                    radius_server_list=None,
+                                    remote_accounting=None,
+                                    strip_prefix=None,
+                                    strip_suffix=None,
+                                    suffix_separator=None,
+                                    use_attr_set_before_acc=None,
+                                    use_attr_set_on_request=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
         """Create.
 
         Args:
@@ -346,10 +346,10 @@ class Radiusserversequence(object):
 
         return self._object_factory('bpm_a6fa0777cffc58e286c1f5e00c2bda2d_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_radiusserversequence_by_id(self,
+                                       id,
+                                       headers=None,
+                                       **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -406,26 +406,26 @@ class Radiusserversequence(object):
 
         return self._object_factory('bpm_d1df0e230765104863b8d63d5beb68e_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               before_accept_attr_manipulators_list=None,
-               continue_authorz_policy=None,
-               description=None,
-               local_accounting=None,
-               name=None,
-               on_request_attr_manipulator_list=None,
-               prefix_separator=None,
-               radius_server_list=None,
-               remote_accounting=None,
-               strip_prefix=None,
-               strip_suffix=None,
-               suffix_separator=None,
-               use_attr_set_before_acc=None,
-               use_attr_set_on_request=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_radiusserversequence_by_id(self,
+                                          id,
+                                          before_accept_attr_manipulators_list=None,
+                                          continue_authorz_policy=None,
+                                          description=None,
+                                          local_accounting=None,
+                                          name=None,
+                                          on_request_attr_manipulator_list=None,
+                                          prefix_separator=None,
+                                          radius_server_list=None,
+                                          remote_accounting=None,
+                                          strip_prefix=None,
+                                          strip_suffix=None,
+                                          suffix_separator=None,
+                                          use_attr_set_before_acc=None,
+                                          use_attr_set_on_request=None,
+                                          headers=None,
+                                          payload=None,
+                                          active_validation=True,
+                                          **query_parameters):
         """Update.
 
         Args:
@@ -581,10 +581,10 @@ class Radiusserversequence(object):
 
         return self._object_factory('bpm_df9ab8ff636353279d5c787585dcb6af_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_radiusserversequence_by_id(self,
+                                          id,
+                                          headers=None,
+                                          **query_parameters):
         """Delete.
 
         Args:
@@ -641,26 +641,26 @@ class Radiusserversequence(object):
 
         return self._object_factory('bpm_b13838fa75d6e8d970f6eeb6a4510_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              before_accept_attr_manipulators_list=None,
-              continue_authorz_policy=None,
-              description=None,
-              local_accounting=None,
-              name=None,
-              on_request_attr_manipulator_list=None,
-              prefix_separator=None,
-              radius_server_list=None,
-              remote_accounting=None,
-              strip_prefix=None,
-              strip_suffix=None,
-              suffix_separator=None,
-              use_attr_set_before_acc=None,
-              use_attr_set_on_request=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_radiusserversequence_by_id(self,
+                                         id,
+                                         before_accept_attr_manipulators_list=None,
+                                         continue_authorz_policy=None,
+                                         description=None,
+                                         local_accounting=None,
+                                         name=None,
+                                         on_request_attr_manipulator_list=None,
+                                         prefix_separator=None,
+                                         radius_server_list=None,
+                                         remote_accounting=None,
+                                         strip_prefix=None,
+                                         strip_suffix=None,
+                                         suffix_separator=None,
+                                         use_attr_set_before_acc=None,
+                                         use_attr_set_on_request=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

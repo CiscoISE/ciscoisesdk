@@ -69,14 +69,14 @@ class Sgmapping(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_sgmapping(self,
+                      filter=None,
+                      page=None,
+                      size=None,
+                      sortasc=None,
+                      sortdsc=None,
+                      headers=None,
+                      **query_parameters):
         """Get-All.
 
         Args:
@@ -155,14 +155,14 @@ class Sgmapping(object):
 
         return self._object_factory('bpm_a765d4f035831a67e23f325a894cd_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_sgmapping_generator(self,
+                                filter=None,
+                                page=None,
+                                size=None,
+                                sortasc=None,
+                                sortdsc=None,
+                                headers=None,
+                                **query_parameters):
         """Get-All.
 
         Args:
@@ -200,7 +200,7 @@ class Sgmapping(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sgmapping, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -212,21 +212,21 @@ class Sgmapping(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               deploy_to=None,
-               deploy_type=None,
-               description=None,
-               host_ip=None,
-               host_name=None,
-               id=None,
-               mapping_group=None,
-               name=None,
-               sgt=None,
-               sgt_domain=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_sgmapping(self,
+                         deploy_to=None,
+                         deploy_type=None,
+                         description=None,
+                         host_ip=None,
+                         host_name=None,
+                         id=None,
+                         mapping_group=None,
+                         name=None,
+                         sgt=None,
+                         sgt_domain=None,
+                         headers=None,
+                         payload=None,
+                         active_validation=True,
+                         **query_parameters):
         """Create.
 
         Args:
@@ -341,9 +341,9 @@ class Sgmapping(object):
 
         return self._object_factory('bpm_b93bf5c6d85606817a7b81a62b3347_v3_5_0', _api_response)
 
-    def deploy_status(self,
-                      headers=None,
-                      **query_parameters):
+    def get_sgmapping_deploy_status(self,
+                                    headers=None,
+                                    **query_parameters):
         """Deploy Status.
 
         Args:
@@ -396,10 +396,10 @@ class Sgmapping(object):
 
         return self._object_factory('bpm_ae0d8fce1e5285af9cfc33229fe5cb_v3_5_0', _api_response)
 
-    def deployby_id(self,
-                    id,
-                    headers=None,
-                    **query_parameters):
+    def update_sgmapping_deploy_by_id(self,
+                                      id,
+                                      headers=None,
+                                      **query_parameters):
         """Deploy by ID.
 
         Args:
@@ -457,9 +457,9 @@ class Sgmapping(object):
 
         return self._object_factory('bpm_b5711af534e557749661afb5b6c90cee_v3_5_0', _api_response)
 
-    def deploy_all(self,
-                   headers=None,
-                   **query_parameters):
+    def update_sgmapping_deployall(self,
+                                   headers=None,
+                                   **query_parameters):
         """Deploy All.
 
         Args:
@@ -513,10 +513,10 @@ class Sgmapping(object):
 
         return self._object_factory('bpm_df7a50feb38d8729b99553e9_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_sgmapping_by_id(self,
+                            id,
+                            headers=None,
+                            **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -573,21 +573,21 @@ class Sgmapping(object):
 
         return self._object_factory('bpm_ddc6729af25f8b8c060b20d09f0057_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               deploy_to=None,
-               deploy_type=None,
-               description=None,
-               host_ip=None,
-               host_name=None,
-               mapping_group=None,
-               name=None,
-               sgt=None,
-               sgt_domain=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_sgmapping_by_id(self,
+                               id,
+                               deploy_to=None,
+                               deploy_type=None,
+                               description=None,
+                               host_ip=None,
+                               host_name=None,
+                               mapping_group=None,
+                               name=None,
+                               sgt=None,
+                               sgt_domain=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """Update.
 
         Args:
@@ -707,10 +707,10 @@ class Sgmapping(object):
 
         return self._object_factory('bpm_de3cecd62e5153881245a8613fbeea_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_sgmapping_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """Delete.
 
         Args:

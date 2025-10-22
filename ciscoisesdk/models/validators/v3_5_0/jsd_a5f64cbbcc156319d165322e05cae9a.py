@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Update data model.
+"""Identity Services Engine updateLdapById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
-    """Update request schema definition."""
+    """updateLdapById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -48,7 +48,8 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "items": {},
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "connectionSettings": {
                 "properties": {
@@ -129,7 +130,8 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "hostName",
                 "port",
                 "trustCertificate"
-                ]
+                ],
+                "type": "object"
                 },
                 "secondaryServer": {
                 "properties": {
@@ -172,12 +174,14 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "useAdminAccess": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "specifyServerForEachISENode": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {
@@ -211,7 +215,8 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "groupDirectorySubtree",
                 "macFormat",
                 "userDirectorySubtree"
-                ]
+                ],
+                "type": "object"
                 },
                 "enablePasswordChangeLDAP": {
                 "type": "boolean"
@@ -274,7 +279,8 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "telephone": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "userNameAttribute": {
                 "type": "string"
@@ -285,7 +291,8 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 },
                 "required": [
                 "schema"
-                ]
+                ],
+                "type": "object"
                 },
                 "groups": {
                 "properties": {
@@ -293,7 +300,8 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "items": {},
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "id": {
                 "type": "string"

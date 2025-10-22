@@ -69,11 +69,11 @@ class Idstoresequence(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_idstoresequence(self,
+                            page=None,
+                            size=None,
+                            headers=None,
+                            **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Idstoresequence(object):
 
         return self._object_factory('bpm_e0f3d45858659c642ef4b1e7bd31_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_idstoresequence_generator(self,
+                                      page=None,
+                                      size=None,
+                                      headers=None,
+                                      **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Idstoresequence(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_idstoresequence, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,17 +176,17 @@ class Idstoresequence(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               break_on_store_fail=None,
-               certificate_authentication_profile=None,
-               description=None,
-               id=None,
-               id_seq_item=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_idstoresequence(self,
+                               break_on_store_fail=None,
+                               certificate_authentication_profile=None,
+                               description=None,
+                               id=None,
+                               id_seq_item=None,
+                               name=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """Create.
 
         Args:
@@ -292,10 +292,10 @@ class Idstoresequence(object):
 
         return self._object_factory('bpm_bc7443c379579a9c6863a68407c69f_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_idstoresequence_name_by_name(self,
+                                         name,
+                                         headers=None,
+                                         **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -352,10 +352,10 @@ class Idstoresequence(object):
 
         return self._object_factory('bpm_db686413cf4558188ea60ccc05c3e920_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_idstoresequence_by_id(self,
+                                  id,
+                                  headers=None,
+                                  **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -412,17 +412,17 @@ class Idstoresequence(object):
 
         return self._object_factory('bpm_cb9345e58f5433ae80f5d8f855978b_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               break_on_store_fail=None,
-               certificate_authentication_profile=None,
-               description=None,
-               id_seq_item=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_idstoresequence_by_id(self,
+                                     id,
+                                     break_on_store_fail=None,
+                                     certificate_authentication_profile=None,
+                                     description=None,
+                                     id_seq_item=None,
+                                     name=None,
+                                     headers=None,
+                                     payload=None,
+                                     active_validation=True,
+                                     **query_parameters):
         """Update.
 
         Args:
@@ -533,10 +533,10 @@ class Idstoresequence(object):
 
         return self._object_factory('bpm_c316d5e2fdd51bdab039ea9e2a417bd_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_idstoresequence_by_id(self,
+                                     id,
+                                     headers=None,
+                                     **query_parameters):
         """Delete.
 
         Args:
@@ -593,17 +593,17 @@ class Idstoresequence(object):
 
         return self._object_factory('bpm_b8258803668534d87781e995c73c23a_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              break_on_store_fail=None,
-              certificate_authentication_profile=None,
-              description=None,
-              id_seq_item=None,
-              name=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_idstoresequence_by_id(self,
+                                    id,
+                                    break_on_store_fail=None,
+                                    certificate_authentication_profile=None,
+                                    description=None,
+                                    id_seq_item=None,
+                                    name=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

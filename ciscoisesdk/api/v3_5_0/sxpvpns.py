@@ -69,14 +69,14 @@ class Sxpvpns(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_sxpvpns(self,
+                    filter=None,
+                    page=None,
+                    size=None,
+                    sortasc=None,
+                    sortdsc=None,
+                    headers=None,
+                    **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Sxpvpns(object):
 
         return self._object_factory('bpm_e388409d07f6560aad011671aef0b09e_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_sxpvpns_generator(self,
+                              filter=None,
+                              page=None,
+                              size=None,
+                              sortasc=None,
+                              sortdsc=None,
+                              headers=None,
+                              **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Sxpvpns(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sxpvpns, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,15 +206,15 @@ class Sxpvpns(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               id=None,
-               name=None,
-               sxp_vpn_name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_sxpvpns(self,
+                       description=None,
+                       id=None,
+                       name=None,
+                       sxp_vpn_name=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **query_parameters):
         """Create.
 
         Args:
@@ -307,10 +307,10 @@ class Sxpvpns(object):
 
         return self._object_factory('bpm_ea22c1f675d3a8912e4e70698e14f_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_sxpvpns_by_id(self,
+                          id,
+                          headers=None,
+                          **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -367,10 +367,10 @@ class Sxpvpns(object):
 
         return self._object_factory('bpm_cd59f40aa9305587b69944a9c819f7a9_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_sxpvpns_by_id(self,
+                             id,
+                             headers=None,
+                             **query_parameters):
         """Delete.
 
         Args:

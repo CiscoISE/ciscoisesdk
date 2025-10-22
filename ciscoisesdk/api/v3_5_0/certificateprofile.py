@@ -69,11 +69,11 @@ class Certificateprofile(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_certificateprofile(self,
+                               page=None,
+                               size=None,
+                               headers=None,
+                               **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Certificateprofile(object):
 
         return self._object_factory('bpm_f056cb13877756d7a9125636f2624275_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_certificateprofile_generator(self,
+                                         page=None,
+                                         size=None,
+                                         headers=None,
+                                         **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Certificateprofile(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_certificateprofile, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,19 +176,19 @@ class Certificateprofile(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               allowed_as_user_name=None,
-               certificate_attribute_name=None,
-               description=None,
-               external_identity_store_name=None,
-               id=None,
-               match_mode=None,
-               name=None,
-               username_from=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_certificateprofile(self,
+                                  allowed_as_user_name=None,
+                                  certificate_attribute_name=None,
+                                  description=None,
+                                  external_identity_store_name=None,
+                                  id=None,
+                                  match_mode=None,
+                                  name=None,
+                                  username_from=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """Create.
 
         Args:
@@ -321,10 +321,10 @@ class Certificateprofile(object):
 
         return self._object_factory('bpm_c9279815447ae49faa98a6d6ba3_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_certificateprofile_name_by_name(self,
+                                            name,
+                                            headers=None,
+                                            **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -381,10 +381,10 @@ class Certificateprofile(object):
 
         return self._object_factory('bpm_e7884eb9c548698cdc54e033f35f4_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_certificateprofile_by_id(self,
+                                     id,
+                                     headers=None,
+                                     **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -441,19 +441,19 @@ class Certificateprofile(object):
 
         return self._object_factory('bpm_d24a3f485ff758d099b1e4713f18f1c1_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               allowed_as_user_name=None,
-               certificate_attribute_name=None,
-               description=None,
-               external_identity_store_name=None,
-               match_mode=None,
-               name=None,
-               username_from=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_certificateprofile_by_id(self,
+                                        id,
+                                        allowed_as_user_name=None,
+                                        certificate_attribute_name=None,
+                                        description=None,
+                                        external_identity_store_name=None,
+                                        match_mode=None,
+                                        name=None,
+                                        username_from=None,
+                                        headers=None,
+                                        payload=None,
+                                        active_validation=True,
+                                        **query_parameters):
         """Update.
 
         Args:
@@ -591,10 +591,10 @@ class Certificateprofile(object):
 
         return self._object_factory('bpm_e09287aba99c56a6a9171b7e3a635a43_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_certificateprofile_by_id(self,
+                                        id,
+                                        headers=None,
+                                        **query_parameters):
         """Delete.
 
         Args:
@@ -651,19 +651,19 @@ class Certificateprofile(object):
 
         return self._object_factory('bpm_ce91d628e18d54e69e39e2676345d321_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              allowed_as_user_name=None,
-              certificate_attribute_name=None,
-              description=None,
-              external_identity_store_name=None,
-              match_mode=None,
-              name=None,
-              username_from=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_certificateprofile_by_id(self,
+                                       id,
+                                       allowed_as_user_name=None,
+                                       certificate_attribute_name=None,
+                                       description=None,
+                                       external_identity_store_name=None,
+                                       match_mode=None,
+                                       name=None,
+                                       username_from=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

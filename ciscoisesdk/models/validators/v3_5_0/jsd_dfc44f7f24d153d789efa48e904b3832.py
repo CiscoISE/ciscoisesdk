@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine UpdateById data model.
+"""Identity Services Engine updateSponsorgroupById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorDfc44F7F24D153D789EfA48E904B3832(object):
-    """UpdateById request schema definition."""
+    """updateSponsorgroupById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDfc44F7F24D153D789EfA48E904B3832, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -71,7 +71,8 @@ class JSONSchemaValidatorDfc44F7F24D153D789EfA48E904B3832(object):
                 "startDateFutureLimitDays": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {
@@ -152,7 +153,8 @@ class JSONSchemaValidatorDfc44F7F24D153D789EfA48E904B3832(object):
                 "required": [
                 "canSuspendGuestAccounts",
                 "limitApprovalToSponsorsGuests"
-                ]
+                ],
+                "type": "object"
                 }
                 },
                 "required": [

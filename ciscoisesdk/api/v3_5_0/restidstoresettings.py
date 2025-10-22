@@ -69,9 +69,9 @@ class Restidstoresettings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_rest_id_store_settings(self,
-                                   headers=None,
-                                   **query_parameters):
+    def get_restidstoresettings(self,
+                                headers=None,
+                                **query_parameters):
         """GetRestIDStoreSettings.
 
         Args:
@@ -124,15 +124,15 @@ class Restidstoresettings(object):
 
         return self._object_factory('bpm_b956e12bfe9574fab13e7a4757b8462_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               enable_rest_id_store=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_restidstoresettings_by_id(self,
+                                         id,
+                                         description=None,
+                                         enable_rest_id_store=None,
+                                         name=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """Update.
 
         Args:

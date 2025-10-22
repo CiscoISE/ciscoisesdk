@@ -69,14 +69,14 @@ class Selfregportal(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_selfregportal(self,
+                          filter=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Selfregportal(object):
 
         return self._object_factory('bpm_fc82982830b58e1af5d2e4a45239f7a_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_selfregportal_generator(self,
+                                    filter=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Selfregportal(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_selfregportal, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,22 +206,22 @@ class Selfregportal(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               customizations=None,
-               description=None,
-               id=None,
-               name=None,
-               portal_test_url=None,
-               portal_type=None,
-               settings=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_selfregportal(self,
+                             customizations=None,
+                             description=None,
+                             id=None,
+                             name=None,
+                             portal_test_url=None,
+                             portal_type=None,
+                             settings=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Create.
 
         Args:
-            customizations(): customizations, property of the
+            customizations(object): customizations, property of the
                 request body.
             description(string): Description, property of the
                 request body.
@@ -234,7 +234,8 @@ class Selfregportal(object):
                 mydevice, selfRegGuest, sponsor and
                 sponsoredGuest, property of the request
                 body.
-            settings(): settings, property of the request body.
+            settings(object): settings, property of the request
+                body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -324,10 +325,10 @@ class Selfregportal(object):
 
         return self._object_factory('bpm_aefc33a1cd9559c9a119fe94346d540a_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  portal_id,
-                  headers=None,
-                  **query_parameters):
+    def get_selfregportal_by_id(self,
+                                portal_id,
+                                headers=None,
+                                **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -384,23 +385,23 @@ class Selfregportal(object):
 
         return self._object_factory('bpm_c96457d657a392ef87b4e3e8a32f_v3_5_0', _api_response)
 
-    def update_by_id(self,
-                     portal_id,
-                     customizations=None,
-                     description=None,
-                     id=None,
-                     name=None,
-                     portal_test_url=None,
-                     portal_type=None,
-                     settings=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_selfregportal_by_id(self,
+                                   portal_id,
+                                   customizations=None,
+                                   description=None,
+                                   id=None,
+                                   name=None,
+                                   portal_test_url=None,
+                                   portal_type=None,
+                                   settings=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
         """UpdateById.
 
         Args:
-            customizations(): customizations, property of the
+            customizations(object): customizations, property of the
                 request body.
             description(string): Description, property of the
                 request body.
@@ -413,7 +414,8 @@ class Selfregportal(object):
                 mydevice, selfRegGuest, sponsor and
                 sponsoredGuest, property of the request
                 body.
-            settings(): settings, property of the request body.
+            settings(object): settings, property of the request
+                body.
             portal_id(str): portal-id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -508,10 +510,10 @@ class Selfregportal(object):
 
         return self._object_factory('bpm_f9de285e53a95f41f889de762b_v3_5_0', _api_response)
 
-    def delete_by_id(self,
-                     portal_id,
-                     headers=None,
-                     **query_parameters):
+    def delete_selfregportal_by_id(self,
+                                   portal_id,
+                                   headers=None,
+                                   **query_parameters):
         """DeleteById.
 
         Args:
@@ -568,19 +570,19 @@ class Selfregportal(object):
 
         return self._object_factory('bpm_dee862e993965ae1a4b36fbbbb20af14_v3_5_0', _api_response)
 
-    def patch(self,
-              portal_id,
-              customizations=None,
-              description=None,
-              id=None,
-              name=None,
-              portal_test_url=None,
-              portal_type=None,
-              settings=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_selfregportal_by_id(self,
+                                  portal_id,
+                                  customizations=None,
+                                  description=None,
+                                  id=None,
+                                  name=None,
+                                  portal_test_url=None,
+                                  portal_type=None,
+                                  settings=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """This API endpoint has the PATCH method enabled. However, only
         set of commonly used attributes has been been validated
         to work correctly with PATCH. The remaining attributes
@@ -589,7 +591,7 @@ class Selfregportal(object):
         a convenience to API developers.
 
         Args:
-            customizations(): customizations, property of the
+            customizations(object): customizations, property of the
                 request body.
             description(string): Description, property of the
                 request body.
@@ -602,7 +604,8 @@ class Selfregportal(object):
                 mydevice, selfRegGuest, sponsor and
                 sponsoredGuest, property of the request
                 body.
-            settings(): settings, property of the request body.
+            settings(object): settings, property of the request
+                body.
             portal_id(str): portal-id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

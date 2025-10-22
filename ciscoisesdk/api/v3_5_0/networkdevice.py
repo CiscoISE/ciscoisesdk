@@ -69,14 +69,14 @@ class Networkdevice(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_networkdevice(self,
+                          filter=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """Get-All.
 
         Args:
@@ -153,14 +153,14 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_a6785492ac651ab88a9ce37ed8e2e36_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_networkdevice_generator(self,
+                                    filter=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """Get-All.
 
         Args:
@@ -196,7 +196,7 @@ class Networkdevice(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_networkdevice, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -208,26 +208,26 @@ class Networkdevice(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               authentication_settings=None,
-               coa_port=None,
-               description=None,
-               dtls_dns_name=None,
-               id=None,
-               model_name=None,
-               name=None,
-               network_device_group_list=None,
-               network_device_iplist=None,
-               profile_name=None,
-               snmpsettings=None,
-               software_version=None,
-               tacacs_settings=None,
-               tacacs_tls_settings=None,
-               trustsecsettings=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_networkdevice(self,
+                             authentication_settings=None,
+                             coa_port=None,
+                             description=None,
+                             dtls_dns_name=None,
+                             id=None,
+                             model_name=None,
+                             name=None,
+                             network_device_group_list=None,
+                             network_device_iplist=None,
+                             profile_name=None,
+                             snmpsettings=None,
+                             software_version=None,
+                             tacacs_settings=None,
+                             tacacs_tls_settings=None,
+                             trustsecsettings=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Create.
 
         Args:
@@ -237,7 +237,7 @@ class Networkdevice(object):
             network_device_iplist(list): List of IPSubnets for this
                 node, property of the request body (list
                 of any objects).
-            authentication_settings(): authenticationSettings,
+            authentication_settings(object): authenticationSettings,
                 property of the request body.
             coa_port(number): since 2.0 (for 3rd party), property of
                 the request body.
@@ -253,16 +253,16 @@ class Networkdevice(object):
             name(string): name, property of the request body.
             profile_name(string): since 2.0 (for 3rd party),
                 property of the request body.
-            snmpsettings(): snmpsettings, property of the request
-                body.
+            snmpsettings(object): snmpsettings, property of the
+                request body.
             software_version(string): softwareVersion, property of
                 the request body.
-            tacacs_settings(): tacacsSettings, property of the
+            tacacs_settings(object): tacacsSettings, property of the
                 request body.
-            tacacs_tls_settings(): tacacsTlsSettings, property of
+            tacacs_tls_settings(object): tacacsTlsSettings, property
+                of the request body.
+            trustsecsettings(object): trustsecsettings, property of
                 the request body.
-            trustsecsettings(): trustsecsettings, property of the
-                request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -368,10 +368,10 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_f9ce55d5dc7f53dfbcccc12e8ae6da63_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_networkdevice_name_by_name(self,
+                                       name,
+                                       headers=None,
+                                       **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -428,26 +428,26 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_d8610d4a355b63aaaa364447d5fa00_v3_5_0', _api_response)
 
-    def update_by_name(self,
-                       name,
-                       authentication_settings=None,
-                       coa_port=None,
-                       description=None,
-                       dtls_dns_name=None,
-                       id=None,
-                       model_name=None,
-                       network_device_group_list=None,
-                       network_device_iplist=None,
-                       profile_name=None,
-                       snmpsettings=None,
-                       software_version=None,
-                       tacacs_settings=None,
-                       tacacs_tls_settings=None,
-                       trustsecsettings=None,
-                       headers=None,
-                       payload=None,
-                       active_validation=True,
-                       **query_parameters):
+    def update_networkdevice_name_by_name(self,
+                                          name,
+                                          authentication_settings=None,
+                                          coa_port=None,
+                                          description=None,
+                                          dtls_dns_name=None,
+                                          id=None,
+                                          model_name=None,
+                                          network_device_group_list=None,
+                                          network_device_iplist=None,
+                                          profile_name=None,
+                                          snmpsettings=None,
+                                          software_version=None,
+                                          tacacs_settings=None,
+                                          tacacs_tls_settings=None,
+                                          trustsecsettings=None,
+                                          headers=None,
+                                          payload=None,
+                                          active_validation=True,
+                                          **query_parameters):
         """Update-By-Name.
 
         Args:
@@ -457,7 +457,7 @@ class Networkdevice(object):
             network_device_iplist(list): List of IPSubnets for this
                 node, property of the request body (list
                 of any objects).
-            authentication_settings(): authenticationSettings,
+            authentication_settings(object): authenticationSettings,
                 property of the request body.
             coa_port(number): since 2.0 (for 3rd party), property of
                 the request body.
@@ -473,16 +473,16 @@ class Networkdevice(object):
             name(string): name, property of the request body.
             profile_name(string): since 2.0 (for 3rd party),
                 property of the request body.
-            snmpsettings(): snmpsettings, property of the request
-                body.
+            snmpsettings(object): snmpsettings, property of the
+                request body.
             software_version(string): softwareVersion, property of
                 the request body.
-            tacacs_settings(): tacacsSettings, property of the
+            tacacs_settings(object): tacacsSettings, property of the
                 request body.
-            tacacs_tls_settings(): tacacsTlsSettings, property of
+            tacacs_tls_settings(object): tacacsTlsSettings, property
+                of the request body.
+            trustsecsettings(object): trustsecsettings, property of
                 the request body.
-            trustsecsettings(): trustsecsettings, property of the
-                request body.
             name(str): name path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -593,10 +593,10 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_ea2c4586b845888b2a9375126f70de2_v3_5_0', _api_response)
 
-    def delete_by_name(self,
-                       name,
-                       headers=None,
-                       **query_parameters):
+    def delete_networkdevice_name_by_name(self,
+                                          name,
+                                          headers=None,
+                                          **query_parameters):
         """Delete-By-Name.
 
         Args:
@@ -653,26 +653,26 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_eafaf2e785c6898fb982dbe4462e7_v3_5_0', _api_response)
 
-    def patch_by_name(self,
-                      name,
-                      authentication_settings=None,
-                      coa_port=None,
-                      description=None,
-                      dtls_dns_name=None,
-                      id=None,
-                      model_name=None,
-                      network_device_group_list=None,
-                      network_device_iplist=None,
-                      profile_name=None,
-                      snmpsettings=None,
-                      software_version=None,
-                      tacacs_settings=None,
-                      tacacs_tls_settings=None,
-                      trustsecsettings=None,
-                      headers=None,
-                      payload=None,
-                      active_validation=True,
-                      **query_parameters):
+    def patch_networkdevice_name_by_name(self,
+                                         name,
+                                         authentication_settings=None,
+                                         coa_port=None,
+                                         description=None,
+                                         dtls_dns_name=None,
+                                         id=None,
+                                         model_name=None,
+                                         network_device_group_list=None,
+                                         network_device_iplist=None,
+                                         profile_name=None,
+                                         snmpsettings=None,
+                                         software_version=None,
+                                         tacacs_settings=None,
+                                         tacacs_tls_settings=None,
+                                         trustsecsettings=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
@@ -683,7 +683,7 @@ class Networkdevice(object):
             network_device_iplist(list): List of IPSubnets for this
                 node, property of the request body (list
                 of any objects).
-            authentication_settings(): authenticationSettings,
+            authentication_settings(object): authenticationSettings,
                 property of the request body.
             coa_port(number): since 2.0 (for 3rd party), property of
                 the request body.
@@ -699,16 +699,16 @@ class Networkdevice(object):
             name(string): name, property of the request body.
             profile_name(string): since 2.0 (for 3rd party),
                 property of the request body.
-            snmpsettings(): snmpsettings, property of the request
-                body.
+            snmpsettings(object): snmpsettings, property of the
+                request body.
             software_version(string): softwareVersion, property of
                 the request body.
-            tacacs_settings(): tacacsSettings, property of the
+            tacacs_settings(object): tacacsSettings, property of the
                 request body.
-            tacacs_tls_settings(): tacacsTlsSettings, property of
+            tacacs_tls_settings(object): tacacsTlsSettings, property
+                of the request body.
+            trustsecsettings(object): trustsecsettings, property of
                 the request body.
-            trustsecsettings(): trustsecsettings, property of the
-                request body.
             name(str): name path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -818,10 +818,10 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_f3d98c9771c557b881dfc1d45516ea23_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_networkdevice_by_id(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -878,26 +878,26 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_a4ab683ce53052e089626a096abaf451_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               authentication_settings=None,
-               coa_port=None,
-               description=None,
-               dtls_dns_name=None,
-               model_name=None,
-               name=None,
-               network_device_group_list=None,
-               network_device_iplist=None,
-               profile_name=None,
-               snmpsettings=None,
-               software_version=None,
-               tacacs_settings=None,
-               tacacs_tls_settings=None,
-               trustsecsettings=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_networkdevice_by_id(self,
+                                   id,
+                                   authentication_settings=None,
+                                   coa_port=None,
+                                   description=None,
+                                   dtls_dns_name=None,
+                                   model_name=None,
+                                   name=None,
+                                   network_device_group_list=None,
+                                   network_device_iplist=None,
+                                   profile_name=None,
+                                   snmpsettings=None,
+                                   software_version=None,
+                                   tacacs_settings=None,
+                                   tacacs_tls_settings=None,
+                                   trustsecsettings=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
         """Update.
 
         Args:
@@ -907,7 +907,7 @@ class Networkdevice(object):
             network_device_iplist(list): List of IPSubnets for this
                 node, property of the request body (list
                 of any objects).
-            authentication_settings(): authenticationSettings,
+            authentication_settings(object): authenticationSettings,
                 property of the request body.
             coa_port(number): since 2.0 (for 3rd party), property of
                 the request body.
@@ -923,16 +923,16 @@ class Networkdevice(object):
             name(string): name, property of the request body.
             profile_name(string): since 2.0 (for 3rd party),
                 property of the request body.
-            snmpsettings(): snmpsettings, property of the request
-                body.
+            snmpsettings(object): snmpsettings, property of the
+                request body.
             software_version(string): softwareVersion, property of
                 the request body.
-            tacacs_settings(): tacacsSettings, property of the
+            tacacs_settings(object): tacacsSettings, property of the
                 request body.
-            tacacs_tls_settings(): tacacsTlsSettings, property of
+            tacacs_tls_settings(object): tacacsTlsSettings, property
+                of the request body.
+            trustsecsettings(object): trustsecsettings, property of
                 the request body.
-            trustsecsettings(): trustsecsettings, property of the
-                request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1043,10 +1043,10 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_b1edfeb182025176bb250633937177ae_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_networkdevice_by_id(self,
+                                   id,
+                                   headers=None,
+                                   **query_parameters):
         """Delete.
 
         Args:
@@ -1103,26 +1103,26 @@ class Networkdevice(object):
 
         return self._object_factory('bpm_f2fd3c6324b581ca0f3f9eadede1cdc_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              authentication_settings=None,
-              coa_port=None,
-              description=None,
-              dtls_dns_name=None,
-              model_name=None,
-              name=None,
-              network_device_group_list=None,
-              network_device_iplist=None,
-              profile_name=None,
-              snmpsettings=None,
-              software_version=None,
-              tacacs_settings=None,
-              tacacs_tls_settings=None,
-              trustsecsettings=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_networkdevice_by_id(self,
+                                  id,
+                                  authentication_settings=None,
+                                  coa_port=None,
+                                  description=None,
+                                  dtls_dns_name=None,
+                                  model_name=None,
+                                  name=None,
+                                  network_device_group_list=None,
+                                  network_device_iplist=None,
+                                  profile_name=None,
+                                  snmpsettings=None,
+                                  software_version=None,
+                                  tacacs_settings=None,
+                                  tacacs_tls_settings=None,
+                                  trustsecsettings=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
@@ -1133,7 +1133,7 @@ class Networkdevice(object):
             network_device_iplist(list): List of IPSubnets for this
                 node, property of the request body (list
                 of any objects).
-            authentication_settings(): authenticationSettings,
+            authentication_settings(object): authenticationSettings,
                 property of the request body.
             coa_port(number): since 2.0 (for 3rd party), property of
                 the request body.
@@ -1149,16 +1149,16 @@ class Networkdevice(object):
             name(string): name, property of the request body.
             profile_name(string): since 2.0 (for 3rd party),
                 property of the request body.
-            snmpsettings(): snmpsettings, property of the request
-                body.
+            snmpsettings(object): snmpsettings, property of the
+                request body.
             software_version(string): softwareVersion, property of
                 the request body.
-            tacacs_settings(): tacacsSettings, property of the
+            tacacs_settings(object): tacacsSettings, property of the
                 request body.
-            tacacs_tls_settings(): tacacsTlsSettings, property of
+            tacacs_tls_settings(object): tacacsTlsSettings, property
+                of the request body.
+            trustsecsettings(object): trustsecsettings, property of
                 the request body.
-            trustsecsettings(): trustsecsettings, property of the
-                request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

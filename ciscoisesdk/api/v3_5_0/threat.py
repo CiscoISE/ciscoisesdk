@@ -69,15 +69,15 @@ class Threat(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def clear_threats_and_vulneribilities(self,
-                                          description=None,
-                                          id=None,
-                                          mac_addresses=None,
-                                          name=None,
-                                          headers=None,
-                                          payload=None,
-                                          active_validation=True,
-                                          **query_parameters):
+    def update_threat_clearthreatsandvulneribilities(self,
+                                                     description=None,
+                                                     id=None,
+                                                     mac_addresses=None,
+                                                     name=None,
+                                                     headers=None,
+                                                     payload=None,
+                                                     active_validation=True,
+                                                     **query_parameters):
         """clearThreatsAndVulneribilities.
 
         Args:

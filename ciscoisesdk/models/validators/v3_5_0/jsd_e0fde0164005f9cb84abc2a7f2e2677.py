@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createSystemcertificate data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE0Fde0164005F9CB84ABc2A7F2E2677(object):
-    """Create request schema definition."""
+    """createSystemcertificate request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE0Fde0164005F9CB84ABc2A7F2E2677, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -107,7 +107,8 @@ class JSONSchemaValidatorE0Fde0164005F9CB84ABc2A7F2E2677(object):
                 "stateOrProvinceName": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "xgridCertificate": {
                 "type": "string"
@@ -119,7 +120,8 @@ class JSONSchemaValidatorE0Fde0164005F9CB84ABc2A7F2E2677(object):
                 "keyLength",
                 "keyType",
                 "selectedExpirationTTLUnit"
-                ]
+                ],
+                "type": "object"
                 },
                 "id": {
                 "type": "string"

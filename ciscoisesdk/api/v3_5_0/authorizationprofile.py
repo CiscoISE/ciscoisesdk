@@ -69,11 +69,11 @@ class Authorizationprofile(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_authorizationprofile(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Authorizationprofile(object):
 
         return self._object_factory('bpm_c5744315a69b55955c54fba3b3c_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_authorizationprofile_generator(self,
+                                           page=None,
+                                           size=None,
+                                           headers=None,
+                                           **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Authorizationprofile(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_authorizationprofile, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,40 +176,40 @@ class Authorizationprofile(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               access_type=None,
-               acl=None,
-               advanced_attributes=None,
-               agentless_posture=None,
-               airespace_acl=None,
-               airespace_ipv6_acl=None,
-               asa_vpn=None,
-               authz_profile_type=None,
-               auto_smart_port=None,
-               avc_profile=None,
-               dacl_name=None,
-               description=None,
-               easywired_session_candidate=None,
-               id=None,
-               interface_template=None,
-               ipv6_acl_filter=None,
-               ipv6_dacl_name=None,
-               mac_sec_policy=None,
-               name=None,
-               neat=None,
-               profile_name=None,
-               reauth=None,
-               service_template=None,
-               track_movement=None,
-               unique_identifier=None,
-               vlan=None,
-               voice_domain_permission=None,
-               web_auth=None,
-               web_redirection=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_authorizationprofile(self,
+                                    access_type=None,
+                                    acl=None,
+                                    advanced_attributes=None,
+                                    agentless_posture=None,
+                                    airespace_acl=None,
+                                    airespace_ipv6_acl=None,
+                                    asa_vpn=None,
+                                    authz_profile_type=None,
+                                    auto_smart_port=None,
+                                    avc_profile=None,
+                                    dacl_name=None,
+                                    description=None,
+                                    easywired_session_candidate=None,
+                                    id=None,
+                                    interface_template=None,
+                                    ipv6_acl_filter=None,
+                                    ipv6_dacl_name=None,
+                                    mac_sec_policy=None,
+                                    name=None,
+                                    neat=None,
+                                    profile_name=None,
+                                    reauth=None,
+                                    service_template=None,
+                                    track_movement=None,
+                                    unique_identifier=None,
+                                    vlan=None,
+                                    voice_domain_permission=None,
+                                    web_auth=None,
+                                    web_redirection=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
         """Create.
 
         Args:
@@ -217,8 +217,8 @@ class Authorizationprofile(object):
                 ACCESS_REJECT, property of the request
                 body.
             acl(string): acl, property of the request body.
-            advanced_attributes(): advancedAttributes, property of
-                the request body.
+            advanced_attributes(object): advancedAttributes,
+                property of the request body.
             agentless_posture(object): agentlessPosture, property of
                 the request body.
             airespace_acl(string): airespaceACL, property of the
@@ -257,18 +257,18 @@ class Authorizationprofile(object):
             profile_name(string): Value needs to be an existing
                 Network Device Profile, property of the
                 request body.
-            reauth(): reauth, property of the request body.
+            reauth(object): reauth, property of the request body.
             service_template(object): serviceTemplate, property of
                 the request body.
             track_movement(object): trackMovement, property of the
                 request body.
             unique_identifier(string): uniqueIdentifier, property of
                 the request body.
-            vlan(): vlan, property of the request body.
+            vlan(object): vlan, property of the request body.
             voice_domain_permission(object): voiceDomainPermission,
                 property of the request body.
             web_auth(object): webAuth, property of the request body.
-            web_redirection(): webRedirection, property of the
+            web_redirection(object): webRedirection, property of the
                 request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -403,10 +403,10 @@ class Authorizationprofile(object):
 
         return self._object_factory('bpm_c15fb26195d4da3e7d4e0d7ead255_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_authorizationprofile_name_by_name(self,
+                                              name,
+                                              headers=None,
+                                              **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -463,10 +463,10 @@ class Authorizationprofile(object):
 
         return self._object_factory('bpm_acf0372068885036baee3c4524638f31_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_authorizationprofile_by_id(self,
+                                       id,
+                                       headers=None,
+                                       **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -523,40 +523,40 @@ class Authorizationprofile(object):
 
         return self._object_factory('bpm_a69c7f1ad54e5e9cae1f871e19eed61b_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               access_type=None,
-               acl=None,
-               advanced_attributes=None,
-               agentless_posture=None,
-               airespace_acl=None,
-               airespace_ipv6_acl=None,
-               asa_vpn=None,
-               authz_profile_type=None,
-               auto_smart_port=None,
-               avc_profile=None,
-               dacl_name=None,
-               description=None,
-               easywired_session_candidate=None,
-               interface_template=None,
-               ipv6_acl_filter=None,
-               ipv6_dacl_name=None,
-               mac_sec_policy=None,
-               name=None,
-               neat=None,
-               profile_name=None,
-               reauth=None,
-               service_template=None,
-               track_movement=None,
-               unique_identifier=None,
-               vlan=None,
-               voice_domain_permission=None,
-               web_auth=None,
-               web_redirection=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_authorizationprofile_by_id(self,
+                                          id,
+                                          access_type=None,
+                                          acl=None,
+                                          advanced_attributes=None,
+                                          agentless_posture=None,
+                                          airespace_acl=None,
+                                          airespace_ipv6_acl=None,
+                                          asa_vpn=None,
+                                          authz_profile_type=None,
+                                          auto_smart_port=None,
+                                          avc_profile=None,
+                                          dacl_name=None,
+                                          description=None,
+                                          easywired_session_candidate=None,
+                                          interface_template=None,
+                                          ipv6_acl_filter=None,
+                                          ipv6_dacl_name=None,
+                                          mac_sec_policy=None,
+                                          name=None,
+                                          neat=None,
+                                          profile_name=None,
+                                          reauth=None,
+                                          service_template=None,
+                                          track_movement=None,
+                                          unique_identifier=None,
+                                          vlan=None,
+                                          voice_domain_permission=None,
+                                          web_auth=None,
+                                          web_redirection=None,
+                                          headers=None,
+                                          payload=None,
+                                          active_validation=True,
+                                          **query_parameters):
         """Update.
 
         Args:
@@ -564,8 +564,8 @@ class Authorizationprofile(object):
                 ACCESS_REJECT, property of the request
                 body.
             acl(string): acl, property of the request body.
-            advanced_attributes(): advancedAttributes, property of
-                the request body.
+            advanced_attributes(object): advancedAttributes,
+                property of the request body.
             agentless_posture(object): agentlessPosture, property of
                 the request body.
             airespace_acl(string): airespaceACL, property of the
@@ -604,18 +604,18 @@ class Authorizationprofile(object):
             profile_name(string): Value needs to be an existing
                 Network Device Profile, property of the
                 request body.
-            reauth(): reauth, property of the request body.
+            reauth(object): reauth, property of the request body.
             service_template(object): serviceTemplate, property of
                 the request body.
             track_movement(object): trackMovement, property of the
                 request body.
             unique_identifier(string): uniqueIdentifier, property of
                 the request body.
-            vlan(): vlan, property of the request body.
+            vlan(object): vlan, property of the request body.
             voice_domain_permission(object): voiceDomainPermission,
                 property of the request body.
             web_auth(object): webAuth, property of the request body.
-            web_redirection(): webRedirection, property of the
+            web_redirection(object): webRedirection, property of the
                 request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -755,10 +755,10 @@ class Authorizationprofile(object):
 
         return self._object_factory('bpm_cb9f26e93655e7d89995b172f6fd97f_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_authorizationprofile_by_id(self,
+                                          id,
+                                          headers=None,
+                                          **query_parameters):
         """Delete.
 
         Args:
@@ -815,40 +815,40 @@ class Authorizationprofile(object):
 
         return self._object_factory('bpm_c3913dfbda305f678ede16f782762ad3_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              access_type=None,
-              acl=None,
-              advanced_attributes=None,
-              agentless_posture=None,
-              airespace_acl=None,
-              airespace_ipv6_acl=None,
-              asa_vpn=None,
-              authz_profile_type=None,
-              auto_smart_port=None,
-              avc_profile=None,
-              dacl_name=None,
-              description=None,
-              easywired_session_candidate=None,
-              interface_template=None,
-              ipv6_acl_filter=None,
-              ipv6_dacl_name=None,
-              mac_sec_policy=None,
-              name=None,
-              neat=None,
-              profile_name=None,
-              reauth=None,
-              service_template=None,
-              track_movement=None,
-              unique_identifier=None,
-              vlan=None,
-              voice_domain_permission=None,
-              web_auth=None,
-              web_redirection=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_authorizationprofile_by_id(self,
+                                         id,
+                                         access_type=None,
+                                         acl=None,
+                                         advanced_attributes=None,
+                                         agentless_posture=None,
+                                         airespace_acl=None,
+                                         airespace_ipv6_acl=None,
+                                         asa_vpn=None,
+                                         authz_profile_type=None,
+                                         auto_smart_port=None,
+                                         avc_profile=None,
+                                         dacl_name=None,
+                                         description=None,
+                                         easywired_session_candidate=None,
+                                         interface_template=None,
+                                         ipv6_acl_filter=None,
+                                         ipv6_dacl_name=None,
+                                         mac_sec_policy=None,
+                                         name=None,
+                                         neat=None,
+                                         profile_name=None,
+                                         reauth=None,
+                                         service_template=None,
+                                         track_movement=None,
+                                         unique_identifier=None,
+                                         vlan=None,
+                                         voice_domain_permission=None,
+                                         web_auth=None,
+                                         web_redirection=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
@@ -857,8 +857,8 @@ class Authorizationprofile(object):
                 ACCESS_REJECT, property of the request
                 body.
             acl(string): acl, property of the request body.
-            advanced_attributes(): advancedAttributes, property of
-                the request body.
+            advanced_attributes(object): advancedAttributes,
+                property of the request body.
             agentless_posture(object): agentlessPosture, property of
                 the request body.
             airespace_acl(string): airespaceACL, property of the
@@ -897,18 +897,18 @@ class Authorizationprofile(object):
             profile_name(string): Value needs to be an existing
                 Network Device Profile, property of the
                 request body.
-            reauth(): reauth, property of the request body.
+            reauth(object): reauth, property of the request body.
             service_template(object): serviceTemplate, property of
                 the request body.
             track_movement(object): trackMovement, property of the
                 request body.
             unique_identifier(string): uniqueIdentifier, property of
                 the request body.
-            vlan(): vlan, property of the request body.
+            vlan(object): vlan, property of the request body.
             voice_domain_permission(object): voiceDomainPermission,
                 property of the request body.
             web_auth(object): webAuth, property of the request body.
-            web_redirection(): webRedirection, property of the
+            web_redirection(object): webRedirection, property of the
                 request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request

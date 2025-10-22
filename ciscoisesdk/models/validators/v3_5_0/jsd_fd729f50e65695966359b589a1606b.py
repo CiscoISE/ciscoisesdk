@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Get groups by domain data model.
+"""Identity Services Engine updateActivedirectoryGetgroupsbydomainById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,8 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
-    """Get groups by domain request schema definition."""
+    """updateActivedirectoryGetgroupsbydomainById request schema
+    definition."""
     def __init__(self):
         super(JSONSchemaValidatorFd729F50E65695966359B589A1606B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -55,7 +56,8 @@ class JSONSchemaValidatorFd729F50E65695966359B589A1606B(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 }
                 }
                 }'''.replace("\n" + ' ' * 16, '')

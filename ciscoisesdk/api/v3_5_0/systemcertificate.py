@@ -69,23 +69,23 @@ class Systemcertificate(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def create(self,
-               description=None,
-               ers_local_cert_stub=None,
-               id=None,
-               name=None,
-               node_id=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_systemcertificate(self,
+                                 description=None,
+                                 ers_local_cert_stub=None,
+                                 id=None,
+                                 name=None,
+                                 node_id=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """Create.
 
         Args:
             description(string): Description, property of the
                 request body.
-            ers_local_cert_stub(): ersLocalCertStub, property of the
-                request body.
+            ers_local_cert_stub(object): ersLocalCertStub, property
+                of the request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
             node_id(string): NodeId of ISE application, property of

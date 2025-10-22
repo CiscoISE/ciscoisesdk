@@ -69,16 +69,16 @@ class Pxgridsettings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def auto_approve(self,
-                     allow_password_based_accounts=None,
-                     auto_approve_cert_based_accounts=None,
-                     description=None,
-                     id=None,
-                     name=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_pxgridsettings_autoapprove(self,
+                                          allow_password_based_accounts=None,
+                                          auto_approve_cert_based_accounts=None,
+                                          description=None,
+                                          id=None,
+                                          name=None,
+                                          headers=None,
+                                          payload=None,
+                                          active_validation=True,
+                                          **query_parameters):
         """AutoApprove.
 
         Args:

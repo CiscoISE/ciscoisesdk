@@ -69,9 +69,9 @@ class Acisettings(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_aci_settings(self,
-                         headers=None,
-                         **query_parameters):
+    def get_acisettings(self,
+                        headers=None,
+                        **query_parameters):
         """GetAciSettings.
 
         Args:
@@ -124,9 +124,9 @@ class Acisettings(object):
 
         return self._object_factory('bpm_d05636b97b452e59dfbdb4d6e7bb075_v3_5_0', _api_response)
 
-    def test_aci_connection(self,
-                            headers=None,
-                            **query_parameters):
+    def update_acisettings_testaciconnectivity(self,
+                                               headers=None,
+                                               **query_parameters):
         """TestACIConnection.
 
         Args:
@@ -180,36 +180,36 @@ class Acisettings(object):
 
         return self._object_factory('bpm_b155c91eec153338302d492db1afb80_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               aci50=None,
-               aci51=None,
-               aciipaddress=None,
-               acipassword=None,
-               aciuser_name=None,
-               admin_name=None,
-               admin_password=None,
-               all_sxp_domain=None,
-               default_sgt_name=None,
-               description=None,
-               enable_aci=None,
-               enable_data_plane=None,
-               enable_elements_limit=None,
-               ip_address_host_name=None,
-               l3_route_network=None,
-               max_num_iepg_from_aci=None,
-               max_num_sgt_to_aci=None,
-               name=None,
-               specific_sxp_domain=None,
-               specifix_sxp_domain_list=None,
-               suffix_to_epg=None,
-               suffix_to_sgt=None,
-               tenant_name=None,
-               untagged_packet_iepg_name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_acisettings_by_id(self,
+                                 id,
+                                 aci50=None,
+                                 aci51=None,
+                                 aciipaddress=None,
+                                 acipassword=None,
+                                 aciuser_name=None,
+                                 admin_name=None,
+                                 admin_password=None,
+                                 all_sxp_domain=None,
+                                 default_sgt_name=None,
+                                 description=None,
+                                 enable_aci=None,
+                                 enable_data_plane=None,
+                                 enable_elements_limit=None,
+                                 ip_address_host_name=None,
+                                 l3_route_network=None,
+                                 max_num_iepg_from_aci=None,
+                                 max_num_sgt_to_aci=None,
+                                 name=None,
+                                 specific_sxp_domain=None,
+                                 specifix_sxp_domain_list=None,
+                                 suffix_to_epg=None,
+                                 suffix_to_sgt=None,
+                                 tenant_name=None,
+                                 untagged_packet_iepg_name=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """Update.
 
         Args:

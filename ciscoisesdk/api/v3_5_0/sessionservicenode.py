@@ -69,11 +69,11 @@ class Sessionservicenode(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_sessionservicenode(self,
+                               page=None,
+                               size=None,
+                               headers=None,
+                               **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Sessionservicenode(object):
 
         return self._object_factory('bpm_5a045fcd9abde2325f3c6073_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_sessionservicenode_generator(self,
+                                         page=None,
+                                         size=None,
+                                         headers=None,
+                                         **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Sessionservicenode(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sessionservicenode, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,10 +176,10 @@ class Sessionservicenode(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_sessionservicenode_name_by_name(self,
+                                            name,
+                                            headers=None,
+                                            **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -236,10 +236,10 @@ class Sessionservicenode(object):
 
         return self._object_factory('bpm_ab225d0b2a6c52a99df1f1d8fb6a4dac_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_sessionservicenode_by_id(self,
+                                     id,
+                                     headers=None,
+                                     **query_parameters):
         """Get-By-Id.
 
         Args:

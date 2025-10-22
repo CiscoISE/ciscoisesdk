@@ -69,14 +69,14 @@ class Sgacl(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_sgacl(self,
+                  filter=None,
+                  page=None,
+                  size=None,
+                  sortasc=None,
+                  sortdsc=None,
+                  headers=None,
+                  **query_parameters):
         """Get-All.
 
         Args:
@@ -155,14 +155,14 @@ class Sgacl(object):
 
         return self._object_factory('bpm_f6e4b32a9cf558098b96224d778f88dd_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_sgacl_generator(self,
+                            filter=None,
+                            page=None,
+                            size=None,
+                            sortasc=None,
+                            sortdsc=None,
+                            headers=None,
+                            **query_parameters):
         """Get-All.
 
         Args:
@@ -200,7 +200,7 @@ class Sgacl(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sgacl, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -212,20 +212,20 @@ class Sgacl(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               aclcontent=None,
-               description=None,
-               generation_id=None,
-               id=None,
-               ip_version=None,
-               modelled_content=None,
-               name=None,
-               read_only=None,
-               sg_acl_type=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_sgacl(self,
+                     aclcontent=None,
+                     description=None,
+                     generation_id=None,
+                     id=None,
+                     ip_version=None,
+                     modelled_content=None,
+                     name=None,
+                     read_only=None,
+                     sg_acl_type=None,
+                     headers=None,
+                     payload=None,
+                     active_validation=True,
+                     **query_parameters):
         """Create.
 
         Args:
@@ -346,10 +346,10 @@ class Sgacl(object):
 
         return self._object_factory('bpm_cdf3223c24850c993108eb55d159ae5_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_sgacl_by_id(self,
+                        id,
+                        headers=None,
+                        **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -406,20 +406,20 @@ class Sgacl(object):
 
         return self._object_factory('bpm_a50d1bd34d5f593aadf8eb02083c67b0_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               aclcontent=None,
-               description=None,
-               generation_id=None,
-               ip_version=None,
-               modelled_content=None,
-               name=None,
-               read_only=None,
-               sg_acl_type=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_sgacl_by_id(self,
+                           id,
+                           aclcontent=None,
+                           description=None,
+                           generation_id=None,
+                           ip_version=None,
+                           modelled_content=None,
+                           name=None,
+                           read_only=None,
+                           sg_acl_type=None,
+                           headers=None,
+                           payload=None,
+                           active_validation=True,
+                           **query_parameters):
         """Update.
 
         Args:
@@ -545,10 +545,10 @@ class Sgacl(object):
 
         return self._object_factory('bpm_afc81cd1e25c50319f75606b97c23b3d_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_sgacl_by_id(self,
+                           id,
+                           headers=None,
+                           **query_parameters):
         """Delete.
 
         Args:

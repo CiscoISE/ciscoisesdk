@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create join point data model.
+"""Identity Services Engine createActivedirectory data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE6326F97D53A58Ff0B4A30C1B6423(object):
-    """Create join point request schema definition."""
+    """createActivedirectory request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE6326F97D53A58Ff0B4A30C1B6423, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -60,7 +60,8 @@ class JSONSchemaValidatorE6326F97D53A58Ff0B4A30C1B6423(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adAttributes": {
                 "properties": {
@@ -83,7 +84,8 @@ class JSONSchemaValidatorE6326F97D53A58Ff0B4A30C1B6423(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adScopesNames": {
                 "type": "string"
@@ -106,7 +108,8 @@ class JSONSchemaValidatorE6326F97D53A58Ff0B4A30C1B6423(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "advancedSettings": {
                 "properties": {
@@ -201,7 +204,8 @@ class JSONSchemaValidatorE6326F97D53A58Ff0B4A30C1B6423(object):
                 "unreachableDomainsBehaviour": {
                 "type": "object"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {

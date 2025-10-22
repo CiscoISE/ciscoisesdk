@@ -69,11 +69,11 @@ class Supportbundlestatus(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_supportbundlestatus(self,
+                                page=None,
+                                size=None,
+                                headers=None,
+                                **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Supportbundlestatus(object):
 
         return self._object_factory('bpm_ec2a5223bc64e8451417ae98_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_supportbundlestatus_generator(self,
+                                          page=None,
+                                          size=None,
+                                          headers=None,
+                                          **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Supportbundlestatus(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_supportbundlestatus, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,10 +176,10 @@ class Supportbundlestatus(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_supportbundlestatus_by_id(self,
+                                      id,
+                                      headers=None,
+                                      **query_parameters):
         """Get-By-Id.
 
         Args:

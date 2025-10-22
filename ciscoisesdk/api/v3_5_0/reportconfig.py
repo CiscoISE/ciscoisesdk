@@ -69,19 +69,19 @@ class Reportconfig(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def trust_sec_query(self,
-                        contains_manual_defs=None,
-                        contains_values=None,
-                        policy_ver_id=None,
-                        policy_ver_id_on_ise=None,
-                        pull_id=None,
-                        report_data=None,
-                        report_type=None,
-                        validation_result=None,
-                        headers=None,
-                        payload=None,
-                        active_validation=True,
-                        **query_parameters):
+    def create_reportconfig(self,
+                            contains_manual_defs=None,
+                            contains_values=None,
+                            policy_ver_id=None,
+                            policy_ver_id_on_ise=None,
+                            pull_id=None,
+                            report_data=None,
+                            report_type=None,
+                            validation_result=None,
+                            headers=None,
+                            payload=None,
+                            active_validation=True,
+                            **query_parameters):
         """TrustSec-Query.
 
         Args:
@@ -94,7 +94,8 @@ class Reportconfig(object):
             policy_ver_id_on_ise(string): policyVerIdOnISE, property
                 of the request body.
             pull_id(string): pullId, property of the request body.
-            report_data(): reportData, property of the request body.
+            report_data(object): reportData, property of the request
+                body.
             report_type(string): allowed values: DISABLED,
                 DELTA_WITH_GEN_ID, DELTA_WITH_VALUES,
                 FULL_WITH_GEN_ID, FULL_WITH_VALUES,

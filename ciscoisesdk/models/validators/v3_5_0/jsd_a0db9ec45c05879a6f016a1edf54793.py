@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Update data model.
+"""Identity Services Engine updateTacacsprofileById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorA0Db9Ec45C05879A6F016A1Edf54793(object):
-    """Update request schema definition."""
+    """updateTacacsprofileById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA0Db9Ec45C05879A6F016A1Edf54793, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -70,7 +70,8 @@ class JSONSchemaValidatorA0Db9Ec45C05879A6F016A1Edf54793(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 }
                 },
                 "required": [

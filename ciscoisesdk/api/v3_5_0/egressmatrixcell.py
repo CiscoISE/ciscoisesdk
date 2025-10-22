@@ -69,14 +69,14 @@ class Egressmatrixcell(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_egressmatrixcell(self,
+                             filter=None,
+                             page=None,
+                             size=None,
+                             sortasc=None,
+                             sortdsc=None,
+                             headers=None,
+                             **query_parameters):
         """Get-All.
 
         Args:
@@ -156,14 +156,14 @@ class Egressmatrixcell(object):
 
         return self._object_factory('bpm_ee335fbe810c5a7b95d569e72218e548_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_egressmatrixcell_generator(self,
+                                       filter=None,
+                                       page=None,
+                                       size=None,
+                                       sortasc=None,
+                                       sortdsc=None,
+                                       headers=None,
+                                       **query_parameters):
         """Get-All.
 
         Args:
@@ -202,7 +202,7 @@ class Egressmatrixcell(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_egressmatrixcell, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -214,20 +214,20 @@ class Egressmatrixcell(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               default_rule=None,
-               description=None,
-               destination_sgt_id=None,
-               id=None,
-               matrix_cell_status=None,
-               matrix_id=None,
-               name=None,
-               sgacls=None,
-               source_sgt_id=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_egressmatrixcell(self,
+                                default_rule=None,
+                                description=None,
+                                destination_sgt_id=None,
+                                id=None,
+                                matrix_cell_status=None,
+                                matrix_id=None,
+                                name=None,
+                                sgacls=None,
+                                source_sgt_id=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
         """Create.
 
         Args:
@@ -349,10 +349,10 @@ class Egressmatrixcell(object):
 
         return self._object_factory('bpm_a99601dbf5354bf841073fef22468d8_v3_5_0', _api_response)
 
-    def set_all_cells_status(self,
-                             status,
-                             headers=None,
-                             **query_parameters):
+    def update_egressmatrixcell_status(self,
+                                       status,
+                                       headers=None,
+                                       **query_parameters):
         """Set All Cells Status.
 
         Args:
@@ -410,12 +410,12 @@ class Egressmatrixcell(object):
 
         return self._object_factory('bpm_f47f525dbd71ef49710ef578_v3_5_0', _api_response)
 
-    def clone_cell(self,
-                   dst_sgt_id,
-                   id,
-                   src_sgt_id,
-                   headers=None,
-                   **query_parameters):
+    def update_egressmatrixcell_clonecell_srcsgt_dstsgt_by_id(self,
+                                                              dst_sgt_id,
+                                                              id,
+                                                              src_sgt_id,
+                                                              headers=None,
+                                                              **query_parameters):
         """Clone Cell.
 
         Args:
@@ -482,9 +482,9 @@ class Egressmatrixcell(object):
 
         return self._object_factory('bpm_a1e6c05d05e67906b3b59bbe6d274_v3_5_0', _api_response)
 
-    def clear_all_matrix_cells(self,
-                               headers=None,
-                               **query_parameters):
+    def update_egressmatrixcell_clearallmatrixcells(self,
+                                                    headers=None,
+                                                    **query_parameters):
         """Clear All Matrix Cells.
 
         Args:
@@ -538,10 +538,10 @@ class Egressmatrixcell(object):
 
         return self._object_factory('bpm_f503ab54e2921d713ed88f51c9_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_egressmatrixcell_by_id(self,
+                                   id,
+                                   headers=None,
+                                   **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -598,20 +598,20 @@ class Egressmatrixcell(object):
 
         return self._object_factory('bpm_cdc971b23285b87945021bd5983d1cd_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               default_rule=None,
-               description=None,
-               destination_sgt_id=None,
-               matrix_cell_status=None,
-               matrix_id=None,
-               name=None,
-               sgacls=None,
-               source_sgt_id=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_egressmatrixcell_by_id(self,
+                                      id,
+                                      default_rule=None,
+                                      description=None,
+                                      destination_sgt_id=None,
+                                      matrix_cell_status=None,
+                                      matrix_id=None,
+                                      name=None,
+                                      sgacls=None,
+                                      source_sgt_id=None,
+                                      headers=None,
+                                      payload=None,
+                                      active_validation=True,
+                                      **query_parameters):
         """Update.
 
         Args:
@@ -738,10 +738,10 @@ class Egressmatrixcell(object):
 
         return self._object_factory('bpm_ce83fba942c25938bae0c7012df68317_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_egressmatrixcell_by_id(self,
+                                      id,
+                                      headers=None,
+                                      **query_parameters):
         """Delete.
 
         Args:

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine TrustSec-Query data model.
+"""Identity Services Engine createSgacls data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorD1E10705386Bedd34469A4Bb8Ba(object):
-    """TrustSec-Query request schema definition."""
+    """createSgacls request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD1E10705386Bedd34469A4Bb8Ba, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -84,7 +84,8 @@ class JSONSchemaValidatorD1E10705386Bedd34469A4Bb8Ba(object):
                 "sgaclGenID": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 }
                 }
                 }

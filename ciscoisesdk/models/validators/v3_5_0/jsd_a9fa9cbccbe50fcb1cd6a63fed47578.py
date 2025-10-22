@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine email data model.
+"""Identity Services Engine updateGuestuserEmailPortalidById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorA9Fa9CbCcbe50FcB1Cd6A63Fed47578(object):
-    """email request schema definition."""
+    """updateGuestuserEmailPortalidById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorA9Fa9CbCcbe50FcB1Cd6A63Fed47578, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -72,7 +72,8 @@ class JSONSchemaValidatorA9Fa9CbCcbe50FcB1Cd6A63Fed47578(object):
                 },
                 "required": [
                 "validDays"
-                ]
+                ],
+                "type": "object"
                 },
                 "guestInfo": {
                 "properties": {
@@ -113,7 +114,8 @@ class JSONSchemaValidatorA9Fa9CbCcbe50FcB1Cd6A63Fed47578(object):
                 "required": [
                 "enabled",
                 "password"
-                ]
+                ],
+                "type": "object"
                 },
                 "guestType": {
                 "type": "string"

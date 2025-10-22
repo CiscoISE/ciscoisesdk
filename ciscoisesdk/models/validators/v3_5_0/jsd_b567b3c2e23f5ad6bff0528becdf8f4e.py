@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Patch data model.
+"""Identity Services Engine patchGuestsmtpnotificationsettingsById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorB567B3C2E23F5Ad6Bff0528Becdf8F4E(object):
-    """Patch request schema definition."""
+    """patchGuestsmtpnotificationsettingsById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB567B3C2E23F5Ad6Bff0528Becdf8F4E, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

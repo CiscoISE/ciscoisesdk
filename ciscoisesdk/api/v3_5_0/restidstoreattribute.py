@@ -69,9 +69,9 @@ class Restidstoreattribute(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def fetch_attributes(self,
-                         headers=None,
-                         **query_parameters):
+    def get_restidstoreattribute_fetchattributes(self,
+                                                 headers=None,
+                                                 **query_parameters):
         """fetchAttributes.
 
         Args:

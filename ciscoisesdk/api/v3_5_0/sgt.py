@@ -69,7 +69,7 @@ class Sgt(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
+    def get_sgt(self,
                 filter=None,
                 page=None,
                 size=None,
@@ -153,7 +153,7 @@ class Sgt(object):
 
         return self._object_factory('bpm_d8c45f648c6537ba40cac65be1a4496_v3_5_0', _api_response)
 
-    def get_all_generator(self,
+    def get_sgt_generator(self,
                           filter=None,
                           page=None,
                           size=None,
@@ -196,7 +196,7 @@ class Sgt(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_sgt, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -208,18 +208,18 @@ class Sgt(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               default_sgacls=None,
-               description=None,
-               id=None,
-               is_read_only=None,
-               name=None,
-               propogate_to_apic=None,
-               value=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_sgt(self,
+                   default_sgacls=None,
+                   description=None,
+                   id=None,
+                   is_read_only=None,
+                   name=None,
+                   propogate_to_apic=None,
+                   value=None,
+                   headers=None,
+                   payload=None,
+                   active_validation=True,
+                   **query_parameters):
         """Create.
 
         Args:
@@ -324,10 +324,10 @@ class Sgt(object):
 
         return self._object_factory('bpm_a947ebeb8d7659c48e98b057e2d37c9f_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_sgt_by_id(self,
+                      id,
+                      headers=None,
+                      **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -384,18 +384,18 @@ class Sgt(object):
 
         return self._object_factory('bpm_ea658190e73c5ce1b27e7def4aea28e3_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               default_sgacls=None,
-               description=None,
-               is_read_only=None,
-               name=None,
-               propogate_to_apic=None,
-               value=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_sgt_by_id(self,
+                         id,
+                         default_sgacls=None,
+                         description=None,
+                         is_read_only=None,
+                         name=None,
+                         propogate_to_apic=None,
+                         value=None,
+                         headers=None,
+                         payload=None,
+                         active_validation=True,
+                         **query_parameters):
         """Update.
 
         Args:
@@ -505,10 +505,10 @@ class Sgt(object):
 
         return self._object_factory('bpm_ce666e64a958229cfd8da70945935e_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_sgt_by_id(self,
+                         id,
+                         headers=None,
+                         **query_parameters):
         """Delete.
 
         Args:

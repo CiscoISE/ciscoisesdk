@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Update data model.
+"""Identity Services Engine updateAuthorizationprofileById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F(object):
-    """Update request schema definition."""
+    """updateAuthorizationprofileById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -62,7 +62,8 @@ class JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F(object):
                 "required": [
                 "attributeName",
                 "dictionaryName"
-                ]
+                ],
+                "type": "object"
                 },
                 "rightHandSideAttribueValue": {
                 "type": "object"
@@ -70,7 +71,8 @@ class JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F(object):
                 },
                 "required": [
                 "rightHandSideAttribueValue"
-                ]
+                ],
+                "type": "object"
                 },
                 "agentlessPosture": {
                 "type": "object"
@@ -149,7 +151,8 @@ class JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F(object):
                 "attributeName",
                 "connectivity",
                 "dictionaryName"
-                ]
+                ],
+                "type": "object"
                 },
                 "serviceTemplate": {
                 "type": "object"
@@ -172,7 +175,8 @@ class JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F(object):
                 "required": [
                 "nameID",
                 "tagID"
-                ]
+                ],
+                "type": "object"
                 },
                 "voiceDomainPermission": {
                 "type": "object"
@@ -202,7 +206,8 @@ class JSONSchemaValidatorCb9F26E93655E7D89995B172F6Fd97F(object):
                 "ACL",
                 "WebRedirectionType",
                 "portalName"
-                ]
+                ],
+                "type": "object"
                 }
                 },
                 "required": [

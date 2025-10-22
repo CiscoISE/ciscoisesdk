@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine AutoApprove data model.
+"""Identity Services Engine updatePxgridsettingsAutoapprove data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE5Dd9B5979A409B9F456265Db0(object):
-    """AutoApprove request schema definition."""
+    """updatePxgridsettingsAutoapprove request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE5Dd9B5979A409B9F456265Db0, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

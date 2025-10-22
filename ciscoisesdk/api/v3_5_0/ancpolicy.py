@@ -69,14 +69,14 @@ class Ancpolicy(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_ancpolicy(self,
+                      filter=None,
+                      page=None,
+                      size=None,
+                      sortasc=None,
+                      sortdsc=None,
+                      headers=None,
+                      **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Ancpolicy(object):
 
         return self._object_factory('bpm_a88bae246e952c99dc4a4a921a19cf9_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_ancpolicy_generator(self,
+                                filter=None,
+                                page=None,
+                                size=None,
+                                sortasc=None,
+                                sortdsc=None,
+                                headers=None,
+                                **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Ancpolicy(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_ancpolicy, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,15 +206,15 @@ class Ancpolicy(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               actions=None,
-               description=None,
-               id=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_ancpolicy(self,
+                         actions=None,
+                         description=None,
+                         id=None,
+                         name=None,
+                         headers=None,
+                         payload=None,
+                         active_validation=True,
+                         **query_parameters):
         """Create.
 
         Args:
@@ -307,10 +307,10 @@ class Ancpolicy(object):
 
         return self._object_factory('bpm_b35ee865ba205a6a958913154bf6d59b_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_ancpolicy_name_by_name(self,
+                                   name,
+                                   headers=None,
+                                   **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -367,10 +367,10 @@ class Ancpolicy(object):
 
         return self._object_factory('bpm_a095b061f564ebba331f66505b0e3_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_ancpolicy_by_id(self,
+                            id,
+                            headers=None,
+                            **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -427,15 +427,15 @@ class Ancpolicy(object):
 
         return self._object_factory('bpm_f41f77362663580d8cc3e6e88623889d_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               actions=None,
-               description=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_ancpolicy_by_id(self,
+                               id,
+                               actions=None,
+                               description=None,
+                               name=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """Update.
 
         Args:
@@ -533,10 +533,10 @@ class Ancpolicy(object):
 
         return self._object_factory('bpm_d79b507bda155c180d42f0a67ef64d5_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_ancpolicy_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """Delete.
 
         Args:

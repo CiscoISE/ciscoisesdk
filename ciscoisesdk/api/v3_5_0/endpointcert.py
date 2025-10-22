@@ -69,18 +69,18 @@ class Endpointcert(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def create_certificate(self,
-                           cert_template_name=None,
-                           certificate_request=None,
-                           description=None,
-                           format=None,
-                           id=None,
-                           name=None,
-                           password=None,
-                           headers=None,
-                           payload=None,
-                           active_validation=True,
-                           **query_parameters):
+    def create_endpointcert_certrequest(self,
+                                        cert_template_name=None,
+                                        certificate_request=None,
+                                        description=None,
+                                        format=None,
+                                        id=None,
+                                        name=None,
+                                        password=None,
+                                        headers=None,
+                                        payload=None,
+                                        active_validation=True,
+                                        **query_parameters):
         """Create Certificate.
 
         Args:

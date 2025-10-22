@@ -69,12 +69,12 @@ class Downloadableacl(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_downloadableacl(self,
+                            filter=None,
+                            page=None,
+                            size=None,
+                            headers=None,
+                            **query_parameters):
         """Get-All.
 
         Args:
@@ -140,12 +140,12 @@ class Downloadableacl(object):
 
         return self._object_factory('bpm_b313f01907f8523c999c68f2116a8d63_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_downloadableacl_generator(self,
+                                      filter=None,
+                                      page=None,
+                                      size=None,
+                                      headers=None,
+                                      **query_parameters):
         """Get-All.
 
         Args:
@@ -176,7 +176,7 @@ class Downloadableacl(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_downloadableacl, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -186,16 +186,16 @@ class Downloadableacl(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               dacl=None,
-               dacl_type=None,
-               description=None,
-               id=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_downloadableacl(self,
+                               dacl=None,
+                               dacl_type=None,
+                               description=None,
+                               id=None,
+                               name=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """Create.
 
         Args:
@@ -293,10 +293,10 @@ class Downloadableacl(object):
 
         return self._object_factory('bpm_caee07e6465c0ca02b465fd1b26db9_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_downloadableacl_by_id(self,
+                                  id,
+                                  headers=None,
+                                  **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -353,16 +353,16 @@ class Downloadableacl(object):
 
         return self._object_factory('bpm_dfa8f48210e85715beebb44e62fac408_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               dacl=None,
-               dacl_type=None,
-               description=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_downloadableacl_by_id(self,
+                                     id,
+                                     dacl=None,
+                                     dacl_type=None,
+                                     description=None,
+                                     name=None,
+                                     headers=None,
+                                     payload=None,
+                                     active_validation=True,
+                                     **query_parameters):
         """Update.
 
         Args:
@@ -465,10 +465,10 @@ class Downloadableacl(object):
 
         return self._object_factory('bpm_d8c7ba0cb8f56d99135e16d2d973d11_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_downloadableacl_by_id(self,
+                                     id,
+                                     headers=None,
+                                     **query_parameters):
         """Delete.
 
         Args:
@@ -525,16 +525,16 @@ class Downloadableacl(object):
 
         return self._object_factory('bpm_b3db444eaa50678218c29f88de60e8_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              dacl=None,
-              dacl_type=None,
-              description=None,
-              name=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_downloadableacl_by_id(self,
+                                    id,
+                                    dacl=None,
+                                    dacl_type=None,
+                                    description=None,
+                                    name=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

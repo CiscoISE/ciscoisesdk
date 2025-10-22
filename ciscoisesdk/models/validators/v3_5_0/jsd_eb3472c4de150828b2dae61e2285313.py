@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine changeSponsorPassword data model.
+"""Identity Services Engine updateGuestuserChangesponsorpassword data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorEb3472C4De150828B2DAe61E2285313(object):
-    """changeSponsorPassword request schema definition."""
+    """updateGuestuserChangesponsorpassword request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorEb3472C4De150828B2DAe61E2285313, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -55,7 +55,8 @@ class JSONSchemaValidatorEb3472C4De150828B2DAe61E2285313(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 }
                 }
                 }'''.replace("\n" + ' ' * 16, '')

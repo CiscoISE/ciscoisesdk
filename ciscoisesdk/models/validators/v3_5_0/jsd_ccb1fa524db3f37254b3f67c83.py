@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createRestidstore data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorCcB1Fa524DB3F37254B3F67C83(object):
-    """Create request schema definition."""
+    """createRestidstore request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCcB1Fa524DB3F37254B3F67C83, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -69,7 +69,8 @@ class JSONSchemaValidatorCcB1Fa524DB3F37254B3F67C83(object):
                 "subjectNameFormat": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "ersRestIDStoreAttributes": {
                 "properties": {
@@ -98,7 +99,8 @@ class JSONSchemaValidatorCcB1Fa524DB3F37254B3F67C83(object):
                 },
                 "required": [
                 "rootUrl"
-                ]
+                ],
+                "type": "object"
                 },
                 "ersRestIDStoreDeviceAttributes": {
                 "properties": {
@@ -108,7 +110,8 @@ class JSONSchemaValidatorCcB1Fa524DB3F37254B3F67C83(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 },
                 "ersRestIDStoreUserAttributes": {
                 "properties": {
@@ -118,7 +121,8 @@ class JSONSchemaValidatorCcB1Fa524DB3F37254B3F67C83(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 },
                 "id": {
                 "type": "string"

@@ -69,11 +69,11 @@ class Filterpolicy(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_filterpolicy(self,
+                         page=None,
+                         size=None,
+                         headers=None,
+                         **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Filterpolicy(object):
 
         return self._object_factory('bpm_ac8248e2a5b5e9b8855551b0dd89111_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_filterpolicy_generator(self,
+                                   page=None,
+                                   size=None,
+                                   headers=None,
+                                   **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Filterpolicy(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_filterpolicy, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,18 +176,18 @@ class Filterpolicy(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               domains=None,
-               id=None,
-               name=None,
-               sgt=None,
-               subnet=None,
-               vn=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_filterpolicy(self,
+                            description=None,
+                            domains=None,
+                            id=None,
+                            name=None,
+                            sgt=None,
+                            subnet=None,
+                            vn=None,
+                            headers=None,
+                            payload=None,
+                            active_validation=True,
+                            **query_parameters):
         """Create.
 
         Args:
@@ -296,10 +296,10 @@ class Filterpolicy(object):
 
         return self._object_factory('bpm_6c4e535e9ec2097039a4dea1_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_filterpolicy_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -356,18 +356,18 @@ class Filterpolicy(object):
 
         return self._object_factory('bpm_f5d5ab6568d8bf5f9932f7ed7f4_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               domains=None,
-               name=None,
-               sgt=None,
-               subnet=None,
-               vn=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_filterpolicy_by_id(self,
+                                  id,
+                                  description=None,
+                                  domains=None,
+                                  name=None,
+                                  sgt=None,
+                                  subnet=None,
+                                  vn=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """Update.
 
         Args:
@@ -481,10 +481,10 @@ class Filterpolicy(object):
 
         return self._object_factory('bpm_d0006cc03d53c89a3593526bf8dc0f_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_filterpolicy_by_id(self,
+                                  id,
+                                  headers=None,
+                                  **query_parameters):
         """Delete.
 
         Args:
@@ -541,18 +541,18 @@ class Filterpolicy(object):
 
         return self._object_factory('bpm_a83e0d4f56a5c06946f685aa46fa3e3_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              description=None,
-              domains=None,
-              name=None,
-              sgt=None,
-              subnet=None,
-              vn=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_filterpolicy_by_id(self,
+                                 id,
+                                 description=None,
+                                 domains=None,
+                                 name=None,
+                                 sgt=None,
+                                 subnet=None,
+                                 vn=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

@@ -69,15 +69,15 @@ class Supportbundledownload(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def download_support_bundle(self,
-                                description=None,
-                                file_name=None,
-                                id=None,
-                                name=None,
-                                headers=None,
-                                payload=None,
-                                active_validation=True,
-                                **query_parameters):
+    def update_supportbundledownload(self,
+                                     description=None,
+                                     file_name=None,
+                                     id=None,
+                                     name=None,
+                                     headers=None,
+                                     payload=None,
+                                     active_validation=True,
+                                     **query_parameters):
         """Download SupportBundle.
 
         Args:

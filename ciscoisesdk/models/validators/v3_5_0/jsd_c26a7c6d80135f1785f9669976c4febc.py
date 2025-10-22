@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine UpdateById data model.
+"""Identity Services Engine updateHotspotportalById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
-    """UpdateById request schema definition."""
+    """updateHotspotportalById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -51,14 +51,16 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 "data": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "bannerImage": {
                 "properties": {
                 "data": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "bannerTitle": {
                 "type": "string"
@@ -74,9 +76,11 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 "data": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "language": {
                 "type": "object"
@@ -96,7 +100,8 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "portalTheme": {
                 "properties": {
@@ -112,7 +117,8 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 },
                 "required": [
                 "name"
-                ]
+                ],
+                "type": "object"
                 },
                 "portalTweakSettings": {
                 "properties": {
@@ -128,9 +134,11 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 "pageLabelAndTextColor": {
                 "type": "string"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {
@@ -164,7 +172,8 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 "requireAupScrolling": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "authSuccessSettings": {
                 "properties": {
@@ -174,7 +183,8 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 "successRedirect": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "portalSettings": {
                 "properties": {
@@ -208,14 +218,16 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 "certificateGroupTag",
                 "endpointIdentityGroup",
                 "httpsPort"
-                ]
+                ],
+                "type": "object"
                 },
                 "postLoginBannerSettings": {
                 "properties": {
                 "includePostAccessBanner": {
                 "type": "boolean"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "supportInfoSettings": {
                 "properties": {
@@ -243,9 +255,11 @@ class JSONSchemaValidatorC26A7C6D80135F1785F9669976C4Febc(object):
                 "includeSupportInfoPage": {
                 "type": "boolean"
                 }
+                },
+                "type": "object"
                 }
-                }
-                }
+                },
+                "type": "object"
                 }
                 },
                 "required": [

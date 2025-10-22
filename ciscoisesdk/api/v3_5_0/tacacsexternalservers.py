@@ -69,11 +69,11 @@ class Tacacsexternalservers(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_tacacsexternalservers(self,
+                                  page=None,
+                                  size=None,
+                                  headers=None,
+                                  **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Tacacsexternalservers(object):
 
         return self._object_factory('bpm_a70502d05e8682736372bb52b0ca_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_tacacsexternalservers_generator(self,
+                                            page=None,
+                                            size=None,
+                                            headers=None,
+                                            **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Tacacsexternalservers(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_tacacsexternalservers, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,19 +176,19 @@ class Tacacsexternalservers(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               connection_port=None,
-               description=None,
-               host_ip=None,
-               id=None,
-               name=None,
-               shared_secret=None,
-               single_connect=None,
-               timeout=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_tacacsexternalservers(self,
+                                     connection_port=None,
+                                     description=None,
+                                     host_ip=None,
+                                     id=None,
+                                     name=None,
+                                     shared_secret=None,
+                                     single_connect=None,
+                                     timeout=None,
+                                     headers=None,
+                                     payload=None,
+                                     active_validation=True,
+                                     **query_parameters):
         """Create.
 
         Args:
@@ -298,10 +298,10 @@ class Tacacsexternalservers(object):
 
         return self._object_factory('bpm_e350672560a565392fbdafefd5f08a8_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_tacacsexternalservers_name_by_name(self,
+                                               name,
+                                               headers=None,
+                                               **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -358,10 +358,10 @@ class Tacacsexternalservers(object):
 
         return self._object_factory('bpm_afe1108b1a59539ebe3de3e5652c9653_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_tacacsexternalservers_by_id(self,
+                                        id,
+                                        headers=None,
+                                        **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -418,19 +418,19 @@ class Tacacsexternalservers(object):
 
         return self._object_factory('bpm_b9eb9547216547cab8b9e686eee674b_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               connection_port=None,
-               description=None,
-               host_ip=None,
-               name=None,
-               shared_secret=None,
-               single_connect=None,
-               timeout=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_tacacsexternalservers_by_id(self,
+                                           id,
+                                           connection_port=None,
+                                           description=None,
+                                           host_ip=None,
+                                           name=None,
+                                           shared_secret=None,
+                                           single_connect=None,
+                                           timeout=None,
+                                           headers=None,
+                                           payload=None,
+                                           active_validation=True,
+                                           **query_parameters):
         """Update.
 
         Args:
@@ -545,10 +545,10 @@ class Tacacsexternalservers(object):
 
         return self._object_factory('bpm_a7cffe3bfae55aa81b7b4447519e4cd_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_tacacsexternalservers_by_id(self,
+                                           id,
+                                           headers=None,
+                                           **query_parameters):
         """Delete.
 
         Args:
@@ -605,19 +605,19 @@ class Tacacsexternalservers(object):
 
         return self._object_factory('bpm_2564523798353b885b115048_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              connection_port=None,
-              description=None,
-              host_ip=None,
-              name=None,
-              shared_secret=None,
-              single_connect=None,
-              timeout=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_tacacsexternalservers_by_id(self,
+                                          id,
+                                          connection_port=None,
+                                          description=None,
+                                          host_ip=None,
+                                          name=None,
+                                          shared_secret=None,
+                                          single_connect=None,
+                                          timeout=None,
+                                          headers=None,
+                                          payload=None,
+                                          active_validation=True,
+                                          **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

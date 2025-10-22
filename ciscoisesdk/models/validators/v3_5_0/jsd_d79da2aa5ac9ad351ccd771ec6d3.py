@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine TrustSec-Query data model.
+"""Identity Services Engine createReportconfig data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorD79DA2Aa5Ac9Ad351Ccd771Ec6D3(object):
-    """TrustSec-Query request schema definition."""
+    """createReportconfig request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorD79DA2Aa5Ac9Ad351Ccd771Ec6D3, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -62,7 +62,8 @@ class JSONSchemaValidatorD79DA2Aa5Ac9Ad351Ccd771Ec6D3(object):
                 "ctsMatrix": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "reportType": {
                 "type": "string"

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine clear data model.
+"""Identity Services Engine updateAncendpointClear data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorFc6670Fd50DfB04B1F6B16981256(object):
-    """clear request schema definition."""
+    """updateAncendpointClear request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorFc6670Fd50DfB04B1F6B16981256, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

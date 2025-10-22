@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Updates passive ID settings data model.
+"""Identity Services Engine updateActivedirectoryPassiveidsettingsById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,8 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorA4F73D4359Bd5Ea980569899048Dfdff(object):
-    """Updates passive ID settings request schema definition."""
+    """updateActivedirectoryPassiveidsettingsById request schema
+    definition."""
     def __init__(self):
         super(JSONSchemaValidatorA4F73D4359Bd5Ea980569899048Dfdff, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -60,7 +61,8 @@ class JSONSchemaValidatorA4F73D4359Bd5Ea980569899048Dfdff(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adAttributes": {
                 "properties": {
@@ -83,7 +85,8 @@ class JSONSchemaValidatorA4F73D4359Bd5Ea980569899048Dfdff(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "adScopesNames": {
                 "type": "string"
@@ -106,7 +109,8 @@ class JSONSchemaValidatorA4F73D4359Bd5Ea980569899048Dfdff(object):
                 },
                 "type": "array"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "advancedSettings": {
                 "properties": {
@@ -201,7 +205,8 @@ class JSONSchemaValidatorA4F73D4359Bd5Ea980569899048Dfdff(object):
                 "unreachableDomainsBehaviour": {
                 "type": "object"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "description":
                  {

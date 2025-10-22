@@ -69,11 +69,11 @@ class Tacacsserversequence(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_tacacsserversequence(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Tacacsserversequence(object):
 
         return self._object_factory('bpm_f9d0dd405fbe5d428378766c2b27fa8d_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_tacacsserversequence_generator(self,
+                                           page=None,
+                                           size=None,
+                                           headers=None,
+                                           **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Tacacsserversequence(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_tacacsserversequence, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,21 +176,21 @@ class Tacacsserversequence(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               id=None,
-               local_accounting=None,
-               name=None,
-               prefix_delimiter=None,
-               prefix_strip=None,
-               remote_accounting=None,
-               server_list=None,
-               suffix_delimiter=None,
-               suffix_strip=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_tacacsserversequence(self,
+                                    description=None,
+                                    id=None,
+                                    local_accounting=None,
+                                    name=None,
+                                    prefix_delimiter=None,
+                                    prefix_strip=None,
+                                    remote_accounting=None,
+                                    server_list=None,
+                                    suffix_delimiter=None,
+                                    suffix_strip=None,
+                                    headers=None,
+                                    payload=None,
+                                    active_validation=True,
+                                    **query_parameters):
         """Create.
 
         Args:
@@ -315,10 +315,10 @@ class Tacacsserversequence(object):
 
         return self._object_factory('bpm_f7a693dd83b7518d9adf5a3f29a0b3fe_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_tacacsserversequence_name_by_name(self,
+                                              name,
+                                              headers=None,
+                                              **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -375,10 +375,10 @@ class Tacacsserversequence(object):
 
         return self._object_factory('bpm_b03900a2e5027b615d9f1bdcf9f63_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_tacacsserversequence_by_id(self,
+                                       id,
+                                       headers=None,
+                                       **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -435,21 +435,21 @@ class Tacacsserversequence(object):
 
         return self._object_factory('bpm_f3b45b8e4089574c9912407f88b1a5d2_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               local_accounting=None,
-               name=None,
-               prefix_delimiter=None,
-               prefix_strip=None,
-               remote_accounting=None,
-               server_list=None,
-               suffix_delimiter=None,
-               suffix_strip=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_tacacsserversequence_by_id(self,
+                                          id,
+                                          description=None,
+                                          local_accounting=None,
+                                          name=None,
+                                          prefix_delimiter=None,
+                                          prefix_strip=None,
+                                          remote_accounting=None,
+                                          server_list=None,
+                                          suffix_delimiter=None,
+                                          suffix_strip=None,
+                                          headers=None,
+                                          payload=None,
+                                          active_validation=True,
+                                          **query_parameters):
         """Update.
 
         Args:
@@ -579,10 +579,10 @@ class Tacacsserversequence(object):
 
         return self._object_factory('bpm_f6de5797735bbd95dc8683c6a7aebf_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_tacacsserversequence_by_id(self,
+                                          id,
+                                          headers=None,
+                                          **query_parameters):
         """Delete.
 
         Args:
@@ -639,21 +639,21 @@ class Tacacsserversequence(object):
 
         return self._object_factory('bpm_a1465b72911359bdbb1430469801d4be_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              description=None,
-              local_accounting=None,
-              name=None,
-              prefix_delimiter=None,
-              prefix_strip=None,
-              remote_accounting=None,
-              server_list=None,
-              suffix_delimiter=None,
-              suffix_strip=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_tacacsserversequence_by_id(self,
+                                         id,
+                                         description=None,
+                                         local_accounting=None,
+                                         name=None,
+                                         prefix_delimiter=None,
+                                         prefix_strip=None,
+                                         remote_accounting=None,
+                                         server_list=None,
+                                         suffix_delimiter=None,
+                                         suffix_strip=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

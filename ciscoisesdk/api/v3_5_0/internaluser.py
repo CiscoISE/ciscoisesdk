@@ -69,14 +69,14 @@ class Internaluser(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_internaluser(self,
+                         filter=None,
+                         page=None,
+                         size=None,
+                         sortasc=None,
+                         sortdsc=None,
+                         headers=None,
+                         **query_parameters):
         """Get-All.
 
         Args:
@@ -158,14 +158,14 @@ class Internaluser(object):
 
         return self._object_factory('bpm_c2892b453a29e791ef44472725b_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_internaluser_generator(self,
+                                   filter=None,
+                                   page=None,
+                                   size=None,
+                                   sortasc=None,
+                                   sortdsc=None,
+                                   headers=None,
+                                   **query_parameters):
         """Get-All.
 
         Args:
@@ -206,7 +206,7 @@ class Internaluser(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_internaluser, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -218,31 +218,31 @@ class Internaluser(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               account_name_alias=None,
-               change_password=None,
-               custom_attributes=None,
-               date_created=None,
-               date_modified=None,
-               days_for_password_expiration=None,
-               description=None,
-               email=None,
-               enable_password=None,
-               enabled=None,
-               expiry_date=None,
-               expiry_date_enabled=None,
-               first_name=None,
-               id=None,
-               identity_groups=None,
-               last_name=None,
-               name=None,
-               password=None,
-               password_idstore=None,
-               password_never_expires=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_internaluser(self,
+                            account_name_alias=None,
+                            change_password=None,
+                            custom_attributes=None,
+                            date_created=None,
+                            date_modified=None,
+                            days_for_password_expiration=None,
+                            description=None,
+                            email=None,
+                            enable_password=None,
+                            enabled=None,
+                            expiry_date=None,
+                            expiry_date_enabled=None,
+                            first_name=None,
+                            id=None,
+                            identity_groups=None,
+                            last_name=None,
+                            name=None,
+                            password=None,
+                            password_idstore=None,
+                            password_never_expires=None,
+                            headers=None,
+                            payload=None,
+                            active_validation=True,
+                            **query_parameters):
         """Create.
 
         Args:
@@ -413,10 +413,10 @@ class Internaluser(object):
 
         return self._object_factory('bpm_d70f5bcf7885af7b2df100e10b4c88e_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_internaluser_name_by_name(self,
+                                      name,
+                                      headers=None,
+                                      **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -473,31 +473,31 @@ class Internaluser(object):
 
         return self._object_factory('bpm_f403dda9440503191536993f569cc6f_v3_5_0', _api_response)
 
-    def update_by_name(self,
-                       name,
-                       account_name_alias=None,
-                       change_password=None,
-                       custom_attributes=None,
-                       date_created=None,
-                       date_modified=None,
-                       days_for_password_expiration=None,
-                       description=None,
-                       email=None,
-                       enable_password=None,
-                       enabled=None,
-                       expiry_date=None,
-                       expiry_date_enabled=None,
-                       first_name=None,
-                       id=None,
-                       identity_groups=None,
-                       last_name=None,
-                       password=None,
-                       password_idstore=None,
-                       password_never_expires=None,
-                       headers=None,
-                       payload=None,
-                       active_validation=True,
-                       **query_parameters):
+    def update_internaluser_name_by_name(self,
+                                         name,
+                                         account_name_alias=None,
+                                         change_password=None,
+                                         custom_attributes=None,
+                                         date_created=None,
+                                         date_modified=None,
+                                         days_for_password_expiration=None,
+                                         description=None,
+                                         email=None,
+                                         enable_password=None,
+                                         enabled=None,
+                                         expiry_date=None,
+                                         expiry_date_enabled=None,
+                                         first_name=None,
+                                         id=None,
+                                         identity_groups=None,
+                                         last_name=None,
+                                         password=None,
+                                         password_idstore=None,
+                                         password_never_expires=None,
+                                         headers=None,
+                                         payload=None,
+                                         active_validation=True,
+                                         **query_parameters):
         """Update-By-Name.
 
         Args:
@@ -673,10 +673,10 @@ class Internaluser(object):
 
         return self._object_factory('bpm_19d9509db339e3b27dc56b37_v3_5_0', _api_response)
 
-    def delete_by_name(self,
-                       name,
-                       headers=None,
-                       **query_parameters):
+    def delete_internaluser_name_by_name(self,
+                                         name,
+                                         headers=None,
+                                         **query_parameters):
         """Delete-By-Name.
 
         Args:
@@ -733,31 +733,31 @@ class Internaluser(object):
 
         return self._object_factory('bpm_b4e2fc3e595aa1be86d6589614b9_v3_5_0', _api_response)
 
-    def patch_by_name(self,
-                      name,
-                      account_name_alias=None,
-                      change_password=None,
-                      custom_attributes=None,
-                      date_created=None,
-                      date_modified=None,
-                      days_for_password_expiration=None,
-                      description=None,
-                      email=None,
-                      enable_password=None,
-                      enabled=None,
-                      expiry_date=None,
-                      expiry_date_enabled=None,
-                      first_name=None,
-                      id=None,
-                      identity_groups=None,
-                      last_name=None,
-                      password=None,
-                      password_idstore=None,
-                      password_never_expires=None,
-                      headers=None,
-                      payload=None,
-                      active_validation=True,
-                      **query_parameters):
+    def patch_internaluser_name_by_name(self,
+                                        name,
+                                        account_name_alias=None,
+                                        change_password=None,
+                                        custom_attributes=None,
+                                        date_created=None,
+                                        date_modified=None,
+                                        days_for_password_expiration=None,
+                                        description=None,
+                                        email=None,
+                                        enable_password=None,
+                                        enabled=None,
+                                        expiry_date=None,
+                                        expiry_date_enabled=None,
+                                        first_name=None,
+                                        id=None,
+                                        identity_groups=None,
+                                        last_name=None,
+                                        password=None,
+                                        password_idstore=None,
+                                        password_never_expires=None,
+                                        headers=None,
+                                        payload=None,
+                                        active_validation=True,
+                                        **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
@@ -933,10 +933,10 @@ class Internaluser(object):
 
         return self._object_factory('bpm_b243462eb0589d866791af0b0d700d_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_internaluser_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -993,31 +993,31 @@ class Internaluser(object):
 
         return self._object_factory('bpm_bacf1abfc35e509183c9a7f055cbbfec_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               account_name_alias=None,
-               change_password=None,
-               custom_attributes=None,
-               date_created=None,
-               date_modified=None,
-               days_for_password_expiration=None,
-               description=None,
-               email=None,
-               enable_password=None,
-               enabled=None,
-               expiry_date=None,
-               expiry_date_enabled=None,
-               first_name=None,
-               identity_groups=None,
-               last_name=None,
-               name=None,
-               password=None,
-               password_idstore=None,
-               password_never_expires=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_internaluser_by_id(self,
+                                  id,
+                                  account_name_alias=None,
+                                  change_password=None,
+                                  custom_attributes=None,
+                                  date_created=None,
+                                  date_modified=None,
+                                  days_for_password_expiration=None,
+                                  description=None,
+                                  email=None,
+                                  enable_password=None,
+                                  enabled=None,
+                                  expiry_date=None,
+                                  expiry_date_enabled=None,
+                                  first_name=None,
+                                  identity_groups=None,
+                                  last_name=None,
+                                  name=None,
+                                  password=None,
+                                  password_idstore=None,
+                                  password_never_expires=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """Update.
 
         Args:
@@ -1193,10 +1193,10 @@ class Internaluser(object):
 
         return self._object_factory('bpm_f7227b280b745b94bb801369b168a529_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_internaluser_by_id(self,
+                                  id,
+                                  headers=None,
+                                  **query_parameters):
         """Delete.
 
         Args:
@@ -1253,31 +1253,31 @@ class Internaluser(object):
 
         return self._object_factory('bpm_dcf28db5184e51139b15f9ffccd10b67_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              account_name_alias=None,
-              change_password=None,
-              custom_attributes=None,
-              date_created=None,
-              date_modified=None,
-              days_for_password_expiration=None,
-              description=None,
-              email=None,
-              enable_password=None,
-              enabled=None,
-              expiry_date=None,
-              expiry_date_enabled=None,
-              first_name=None,
-              identity_groups=None,
-              last_name=None,
-              name=None,
-              password=None,
-              password_idstore=None,
-              password_never_expires=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_internaluser_by_id(self,
+                                 id,
+                                 account_name_alias=None,
+                                 change_password=None,
+                                 custom_attributes=None,
+                                 date_created=None,
+                                 date_modified=None,
+                                 days_for_password_expiration=None,
+                                 description=None,
+                                 email=None,
+                                 enable_password=None,
+                                 enabled=None,
+                                 expiry_date=None,
+                                 expiry_date_enabled=None,
+                                 first_name=None,
+                                 identity_groups=None,
+                                 last_name=None,
+                                 name=None,
+                                 password=None,
+                                 password_idstore=None,
+                                 password_never_expires=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

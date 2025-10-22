@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine TrustSec-Query data model.
+"""Identity Services Engine createCtsenvdata data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE15Cbfdc23795102B4BeE882366701F9(object):
-    """TrustSec-Query request schema definition."""
+    """createCtsenvdata request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE15Cbfdc23795102B4BeE882366701F9, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -80,7 +80,8 @@ class JSONSchemaValidatorE15Cbfdc23795102B4BeE882366701F9(object):
                 "serverType": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "sgts": {
                 "properties": {
@@ -98,12 +99,14 @@ class JSONSchemaValidatorE15Cbfdc23795102B4BeE882366701F9(object):
                 "sgtNumber": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "securityGroupTable": {
                 "type": "string"
                 }
-                }
+                },
+                "type": "object"
                 }
                 }
                 }

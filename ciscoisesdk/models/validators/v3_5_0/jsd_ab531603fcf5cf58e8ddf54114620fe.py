@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Download SupportBundle data model.
+"""Identity Services Engine updateSupportbundledownload data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorAb531603Fcf5Cf58E8DDf54114620Fe(object):
-    """Download SupportBundle request schema definition."""
+    """updateSupportbundledownload request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorAb531603Fcf5Cf58E8DDf54114620Fe, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

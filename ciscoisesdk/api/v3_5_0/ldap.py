@@ -69,9 +69,9 @@ class Ldap(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_rootca_certificates(self,
-                                headers=None,
-                                **query_parameters):
+    def get_ldap_rootcacertificates(self,
+                                    headers=None,
+                                    **query_parameters):
         """get-rootca-certificates.
 
         Args:
@@ -124,11 +124,11 @@ class Ldap(object):
 
         return self._object_factory('bpm_f252d91d460534c8102a84a579592e6_v3_5_0', _api_response)
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_ldap(self,
+                 page=None,
+                 size=None,
+                 headers=None,
+                 **query_parameters):
         """Get-All.
 
         Args:
@@ -189,11 +189,11 @@ class Ldap(object):
 
         return self._object_factory('bpm_c7e6de98b685fbdac4f00620775750a_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_ldap_generator(self,
+                           page=None,
+                           size=None,
+                           headers=None,
+                           **query_parameters):
         """Get-All.
 
         Args:
@@ -222,7 +222,7 @@ class Ldap(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_ldap, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -231,36 +231,37 @@ class Ldap(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               attributes=None,
-               connection_settings=None,
-               description=None,
-               directory_organization=None,
-               enable_password_change_lda_p=None,
-               general_settings=None,
-               groups=None,
-               id=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_ldap(self,
+                    attributes=None,
+                    connection_settings=None,
+                    description=None,
+                    directory_organization=None,
+                    enable_password_change_lda_p=None,
+                    general_settings=None,
+                    groups=None,
+                    id=None,
+                    name=None,
+                    headers=None,
+                    payload=None,
+                    active_validation=True,
+                    **query_parameters):
         """Create.
 
         Args:
-            attributes(): attributes, property of the request body.
-            connection_settings(): connectionSettings, property of
-                the request body.
+            attributes(object): attributes, property of the request
+                body.
+            connection_settings(object): connectionSettings,
+                property of the request body.
             description(string): Description, property of the
                 request body.
-            directory_organization(): directoryOrganization,
+            directory_organization(object): directoryOrganization,
                 property of the request body.
             enable_password_change_lda_p(boolean):
                 enablePasswordChangeLDAP, property of
                 the request body.
-            general_settings(): generalSettings, property of the
-                request body.
-            groups(): groups, property of the request body.
+            general_settings(object): generalSettings, property of
+                the request body.
+            groups(object): groups, property of the request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -356,9 +357,9 @@ class Ldap(object):
 
         return self._object_factory('bpm_c5614142c07c59eaa3cbc297cad57e39_v3_5_0', _api_response)
 
-    def get_hosts(self,
-                  headers=None,
-                  **query_parameters):
+    def get_ldap_hosts(self,
+                       headers=None,
+                       **query_parameters):
         """get-hosts.
 
         Args:
@@ -411,9 +412,9 @@ class Ldap(object):
 
         return self._object_factory('bpm_edb937c33a0c5c20aa656112e60ae143_v3_5_0', _api_response)
 
-    def get_issuerca_certificates(self,
-                                  headers=None,
-                                  **query_parameters):
+    def get_ldapissuercacertificates(self,
+                                     headers=None,
+                                     **query_parameters):
         """get-issuerca-certificates.
 
         Args:
@@ -466,10 +467,10 @@ class Ldap(object):
 
         return self._object_factory('bpm_a53057d92538501ca56de2510a9d17c5_v3_5_0', _api_response)
 
-    def test_bind_primary(self,
-                          id,
-                          headers=None,
-                          **query_parameters):
+    def update_ldap_testbindprimary_by_id(self,
+                                          id,
+                                          headers=None,
+                                          **query_parameters):
         """test-bind-primary.
 
         Args:
@@ -527,10 +528,10 @@ class Ldap(object):
 
         return self._object_factory('bpm_db6bfbb2040854f58d430532f1b31c6e_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_ldap_name_by_name(self,
+                              name,
+                              headers=None,
+                              **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -587,10 +588,10 @@ class Ldap(object):
 
         return self._object_factory('bpm_df6ed3c57c9990460a4754c04ef_v3_5_0', _api_response)
 
-    def test_bind_secondary(self,
-                            id,
-                            headers=None,
-                            **query_parameters):
+    def update_ldap_testbindsecondary_by_id(self,
+                                            id,
+                                            headers=None,
+                                            **query_parameters):
         """test-bind-secondary.
 
         Args:
@@ -648,10 +649,10 @@ class Ldap(object):
 
         return self._object_factory('bpm_ff355b639865be5b7bb62f8ef6ae80a_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_ldap_by_id(self,
+                       id,
+                       headers=None,
+                       **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -708,36 +709,37 @@ class Ldap(object):
 
         return self._object_factory('bpm_c020fabe43515c9fef0524dda6afff_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               attributes=None,
-               connection_settings=None,
-               description=None,
-               directory_organization=None,
-               enable_password_change_lda_p=None,
-               general_settings=None,
-               groups=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_ldap_by_id(self,
+                          id,
+                          attributes=None,
+                          connection_settings=None,
+                          description=None,
+                          directory_organization=None,
+                          enable_password_change_lda_p=None,
+                          general_settings=None,
+                          groups=None,
+                          name=None,
+                          headers=None,
+                          payload=None,
+                          active_validation=True,
+                          **query_parameters):
         """Update.
 
         Args:
-            attributes(): attributes, property of the request body.
-            connection_settings(): connectionSettings, property of
-                the request body.
+            attributes(object): attributes, property of the request
+                body.
+            connection_settings(object): connectionSettings,
+                property of the request body.
             description(string): Description, property of the
                 request body.
-            directory_organization(): directoryOrganization,
+            directory_organization(object): directoryOrganization,
                 property of the request body.
             enable_password_change_lda_p(boolean):
                 enablePasswordChangeLDAP, property of
                 the request body.
-            general_settings(): generalSettings, property of the
-                request body.
-            groups(): groups, property of the request body.
+            general_settings(object): generalSettings, property of
+                the request body.
+            groups(object): groups, property of the request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
             id(str): id path parameter.
@@ -838,10 +840,10 @@ class Ldap(object):
 
         return self._object_factory('bpm_a5f64cbbcc156319d165322e05cae9a_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_ldap_by_id(self,
+                          id,
+                          headers=None,
+                          **query_parameters):
         """Delete.
 
         Args:

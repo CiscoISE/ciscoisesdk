@@ -69,19 +69,19 @@ class Sgacls(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def trust_sec_query(self,
-                        limit=None,
-                        max=None,
-                        names=None,
-                        offset=None,
-                        policy_ver_id=None,
-                        pull_id=None,
-                        push_id=None,
-                        sgacls=None,
-                        headers=None,
-                        payload=None,
-                        active_validation=True,
-                        **query_parameters):
+    def create_sgacls(self,
+                      limit=None,
+                      max=None,
+                      names=None,
+                      offset=None,
+                      policy_ver_id=None,
+                      pull_id=None,
+                      push_id=None,
+                      sgacls=None,
+                      headers=None,
+                      payload=None,
+                      active_validation=True,
+                      **query_parameters):
         """TrustSec-Query.
 
         Args:
@@ -95,7 +95,7 @@ class Sgacls(object):
             pull_id(string): pullId, property of the request body.
             push_id(string): Value range: 2 to 65519 or -1 to auto-
                 generate, property of the request body.
-            sgacls(): sgacls, property of the request body.
+            sgacls(object): sgacls, property of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the

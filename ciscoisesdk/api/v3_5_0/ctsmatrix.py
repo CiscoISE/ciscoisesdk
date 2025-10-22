@@ -69,24 +69,24 @@ class Ctsmatrix(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def trust_sec_query(self,
-                        cells=None,
-                        dst_sgt_arr=None,
-                        global_monitor_mode_enabled=None,
-                        limit=None,
-                        max=None,
-                        offset=None,
-                        policy_ver_id=None,
-                        push_id=None,
-                        src_sgt_arr=None,
-                        headers=None,
-                        payload=None,
-                        active_validation=True,
-                        **query_parameters):
+    def create_ctsmatrix(self,
+                         cells=None,
+                         dst_sgt_arr=None,
+                         global_monitor_mode_enabled=None,
+                         limit=None,
+                         max=None,
+                         offset=None,
+                         policy_ver_id=None,
+                         push_id=None,
+                         src_sgt_arr=None,
+                         headers=None,
+                         payload=None,
+                         active_validation=True,
+                         **query_parameters):
         """TrustSec-Query.
 
         Args:
-            cells(): cells, property of the request body.
+            cells(object): cells, property of the request body.
             dst_sgt_arr(list): dstSgtArr, property of the request
                 body (list of strings).
             global_monitor_mode_enabled(boolean):

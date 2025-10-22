@@ -69,14 +69,14 @@ class Guesttype(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_guesttype(self,
+                      filter=None,
+                      page=None,
+                      size=None,
+                      sortasc=None,
+                      sortdsc=None,
+                      headers=None,
+                      **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Guesttype(object):
 
         return self._object_factory('bpm_f3a337a3c1c5a8689bdc47442cb3357_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_guesttype_generator(self,
+                                filter=None,
+                                page=None,
+                                size=None,
+                                sortasc=None,
+                                sortdsc=None,
+                                headers=None,
+                                **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Guesttype(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_guesttype, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,24 +206,25 @@ class Guesttype(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               access_time=None,
-               allow_dynamic_identity_groups=None,
-               description=None,
-               dynamic_groups=None,
-               expiration_notification=None,
-               id=None,
-               login_options=None,
-               name=None,
-               sponsor_groups=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_guesttype(self,
+                         access_time=None,
+                         allow_dynamic_identity_groups=None,
+                         description=None,
+                         dynamic_groups=None,
+                         expiration_notification=None,
+                         id=None,
+                         login_options=None,
+                         name=None,
+                         sponsor_groups=None,
+                         headers=None,
+                         payload=None,
+                         active_validation=True,
+                         **query_parameters):
         """Create.
 
         Args:
-            access_time(): accessTime, property of the request body.
+            access_time(object): accessTime, property of the request
+                body.
             allow_dynamic_identity_groups(boolean): Enable the
                 DynamicGroups Option, property of the
                 request body.
@@ -232,11 +233,11 @@ class Guesttype(object):
             dynamic_groups(list): List of Dynamic Groups, property
                 of the request body (list of any
                 objects).
-            expiration_notification(): expirationNotification,
+            expiration_notification(object): expirationNotification,
                 property of the request body.
             id(string): Id, property of the request body.
-            login_options(): loginOptions, property of the request
-                body.
+            login_options(object): loginOptions, property of the
+                request body.
             name(string): name, property of the request body.
             sponsor_groups(list): List of Sponsor Groups, property
                 of the request body (list of strings).
@@ -333,24 +334,25 @@ class Guesttype(object):
 
         return self._object_factory('bpm_b9ff772283f758a3ac5321da589017f6_v3_5_0', _api_response)
 
-    def email(self,
-              id,
-              access_time=None,
-              allow_dynamic_identity_groups=None,
-              description=None,
-              dynamic_groups=None,
-              expiration_notification=None,
-              login_options=None,
-              name=None,
-              sponsor_groups=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def update_guesttype_email_by_id(self,
+                                     id,
+                                     access_time=None,
+                                     allow_dynamic_identity_groups=None,
+                                     description=None,
+                                     dynamic_groups=None,
+                                     expiration_notification=None,
+                                     login_options=None,
+                                     name=None,
+                                     sponsor_groups=None,
+                                     headers=None,
+                                     payload=None,
+                                     active_validation=True,
+                                     **query_parameters):
         """email.
 
         Args:
-            access_time(): accessTime, property of the request body.
+            access_time(object): accessTime, property of the request
+                body.
             allow_dynamic_identity_groups(boolean): Enable the
                 DynamicGroups Option, property of the
                 request body.
@@ -359,11 +361,11 @@ class Guesttype(object):
             dynamic_groups(list): List of Dynamic Groups, property
                 of the request body (list of any
                 objects).
-            expiration_notification(): expirationNotification,
+            expiration_notification(object): expirationNotification,
                 property of the request body.
             id(string): Id, property of the request body.
-            login_options(): loginOptions, property of the request
-                body.
+            login_options(object): loginOptions, property of the
+                request body.
             name(string): name, property of the request body.
             sponsor_groups(list): List of Sponsor Groups, property
                 of the request body (list of strings).
@@ -465,24 +467,25 @@ class Guesttype(object):
 
         return self._object_factory('bpm_cf310e621a395bb7bac7b90d7d4c8603_v3_5_0', _api_response)
 
-    def sms(self,
-            id,
-            access_time=None,
-            allow_dynamic_identity_groups=None,
-            description=None,
-            dynamic_groups=None,
-            expiration_notification=None,
-            login_options=None,
-            name=None,
-            sponsor_groups=None,
-            headers=None,
-            payload=None,
-            active_validation=True,
-            **query_parameters):
+    def update_guesttype_sms_by_id(self,
+                                   id,
+                                   access_time=None,
+                                   allow_dynamic_identity_groups=None,
+                                   description=None,
+                                   dynamic_groups=None,
+                                   expiration_notification=None,
+                                   login_options=None,
+                                   name=None,
+                                   sponsor_groups=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
         """sms.
 
         Args:
-            access_time(): accessTime, property of the request body.
+            access_time(object): accessTime, property of the request
+                body.
             allow_dynamic_identity_groups(boolean): Enable the
                 DynamicGroups Option, property of the
                 request body.
@@ -491,11 +494,11 @@ class Guesttype(object):
             dynamic_groups(list): List of Dynamic Groups, property
                 of the request body (list of any
                 objects).
-            expiration_notification(): expirationNotification,
+            expiration_notification(object): expirationNotification,
                 property of the request body.
             id(string): Id, property of the request body.
-            login_options(): loginOptions, property of the request
-                body.
+            login_options(object): loginOptions, property of the
+                request body.
             name(string): name, property of the request body.
             sponsor_groups(list): List of Sponsor Groups, property
                 of the request body (list of strings).
@@ -597,10 +600,10 @@ class Guesttype(object):
 
         return self._object_factory('bpm_eb42e79d5cc38bd1a6eef20613d6_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_guesttype_by_id(self,
+                            id,
+                            headers=None,
+                            **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -657,24 +660,25 @@ class Guesttype(object):
 
         return self._object_factory('bpm_acb5a41fe395b158a3fe1cda996b0cf_v3_5_0', _api_response)
 
-    def update_by_id(self,
-                     id,
-                     access_time=None,
-                     allow_dynamic_identity_groups=None,
-                     description=None,
-                     dynamic_groups=None,
-                     expiration_notification=None,
-                     login_options=None,
-                     name=None,
-                     sponsor_groups=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_guesttype_by_id(self,
+                               id,
+                               access_time=None,
+                               allow_dynamic_identity_groups=None,
+                               description=None,
+                               dynamic_groups=None,
+                               expiration_notification=None,
+                               login_options=None,
+                               name=None,
+                               sponsor_groups=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """UpdateById.
 
         Args:
-            access_time(): accessTime, property of the request body.
+            access_time(object): accessTime, property of the request
+                body.
             allow_dynamic_identity_groups(boolean): Enable the
                 DynamicGroups Option, property of the
                 request body.
@@ -683,11 +687,11 @@ class Guesttype(object):
             dynamic_groups(list): List of Dynamic Groups, property
                 of the request body (list of any
                 objects).
-            expiration_notification(): expirationNotification,
+            expiration_notification(object): expirationNotification,
                 property of the request body.
             id(string): Id, property of the request body.
-            login_options(): loginOptions, property of the request
-                body.
+            login_options(object): loginOptions, property of the
+                request body.
             name(string): name, property of the request body.
             sponsor_groups(list): List of Sponsor Groups, property
                 of the request body (list of strings).
@@ -789,10 +793,10 @@ class Guesttype(object):
 
         return self._object_factory('bpm_bac6d4d95ac45a0a8933b8712dcbe70d_v3_5_0', _api_response)
 
-    def delete_by_id(self,
-                     id,
-                     headers=None,
-                     **query_parameters):
+    def delete_guesttype_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """DeleteById.
 
         Args:

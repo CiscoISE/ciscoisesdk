@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Update data model.
+"""Identity Services Engine updateSxplocalbindingsById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE07Cb8Ea65820863CCe345C67926B(object):
-    """Update request schema definition."""
+    """updateSxplocalbindingsById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE07Cb8Ea65820863CCe345C67926B, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

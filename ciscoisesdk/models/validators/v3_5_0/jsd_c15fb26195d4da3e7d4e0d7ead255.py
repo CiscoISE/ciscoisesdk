@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createAuthorizationprofile data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorC15Fb26195D4DA3E7D4E0D7Ead255(object):
-    """Create request schema definition."""
+    """createAuthorizationprofile request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorC15Fb26195D4DA3E7D4E0D7Ead255, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -62,7 +62,8 @@ class JSONSchemaValidatorC15Fb26195D4DA3E7D4E0D7Ead255(object):
                 "required": [
                 "attributeName",
                 "dictionaryName"
-                ]
+                ],
+                "type": "object"
                 },
                 "rightHandSideAttribueValue": {
                 "type": "object"
@@ -70,7 +71,8 @@ class JSONSchemaValidatorC15Fb26195D4DA3E7D4E0D7Ead255(object):
                 },
                 "required": [
                 "rightHandSideAttribueValue"
-                ]
+                ],
+                "type": "object"
                 },
                 "agentlessPosture": {
                 "type": "object"
@@ -149,7 +151,8 @@ class JSONSchemaValidatorC15Fb26195D4DA3E7D4E0D7Ead255(object):
                 "attributeName",
                 "connectivity",
                 "dictionaryName"
-                ]
+                ],
+                "type": "object"
                 },
                 "serviceTemplate": {
                 "type": "object"
@@ -172,7 +175,8 @@ class JSONSchemaValidatorC15Fb26195D4DA3E7D4E0D7Ead255(object):
                 "required": [
                 "nameID",
                 "tagID"
-                ]
+                ],
+                "type": "object"
                 },
                 "voiceDomainPermission": {
                 "type": "object"
@@ -202,7 +206,8 @@ class JSONSchemaValidatorC15Fb26195D4DA3E7D4E0D7Ead255(object):
                 "ACL",
                 "WebRedirectionType",
                 "portalName"
-                ]
+                ],
+                "type": "object"
                 }
                 },
                 "required": [

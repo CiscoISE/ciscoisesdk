@@ -69,11 +69,11 @@ class Nspprofile(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_nspprofile(self,
+                       page=None,
+                       size=None,
+                       headers=None,
+                       **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Nspprofile(object):
 
         return self._object_factory('bpm_c9b0326affff5ab3b3df6e3fa7d1698a_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_nspprofile_generator(self,
+                                 page=None,
+                                 size=None,
+                                 headers=None,
+                                 **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Nspprofile(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_nspprofile, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,10 +176,10 @@ class Nspprofile(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_nspprofile_by_id(self,
+                             id,
+                             headers=None,
+                             **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -236,15 +236,15 @@ class Nspprofile(object):
 
         return self._object_factory('bpm_d1b9755414c5dcbb61987b2dd06839a_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               name=None,
-               wireless_profiles=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_nspprofile_by_id(self,
+                                id,
+                                description=None,
+                                name=None,
+                                wireless_profiles=None,
+                                headers=None,
+                                payload=None,
+                                active_validation=True,
+                                **query_parameters):
         """Update.
 
         Args:
@@ -343,10 +343,10 @@ class Nspprofile(object):
 
         return self._object_factory('bpm_c54a2ad63f46527dbec140a05f1213b7_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_nspprofile_by_id(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
         """Delete.
 
         Args:

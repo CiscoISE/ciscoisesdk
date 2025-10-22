@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createTacacsexternalservers data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorE350672560A565392FbDafefd5F08A8(object):
-    """Create request schema definition."""
+    """createTacacsexternalservers request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorE350672560A565392FbDafefd5F08A8, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

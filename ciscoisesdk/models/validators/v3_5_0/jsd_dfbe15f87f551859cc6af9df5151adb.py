@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Update data model.
+"""Identity Services Engine updateAdresourcereservationById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorDfbe15F87F551859Cc6Af9Df5151Adb(object):
-    """Update request schema definition."""
+    """updateAdresourcereservationById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorDfbe15F87F551859Cc6Af9Df5151Adb, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(

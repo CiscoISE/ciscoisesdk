@@ -69,11 +69,11 @@ class Deploymentinfo(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_info(self,
-                     page=None,
-                     size=None,
-                     headers=None,
-                     **query_parameters):
+    def get_deploymentinfo_getallinfo(self,
+                                      page=None,
+                                      size=None,
+                                      headers=None,
+                                      **query_parameters):
         """GetAllInfo.
 
         Args:
@@ -134,11 +134,11 @@ class Deploymentinfo(object):
 
         return self._object_factory('bpm_f9159c9f9a1951568daee7080e1dda47_v3_5_0', _api_response)
 
-    def get_all_info_generator(self,
-                               page=None,
-                               size=None,
-                               headers=None,
-                               **query_parameters):
+    def get_deploymentinfo_getallinfo_generator(self,
+                                                page=None,
+                                                size=None,
+                                                headers=None,
+                                                **query_parameters):
         """GetAllInfo.
 
         Args:
@@ -167,7 +167,7 @@ class Deploymentinfo(object):
         """
 
         yield from get_next_page(
-            self.get_all_info, dict(
+            self.get_deploymentinfo_getallinfo, dict(
                 page=page,
                 size=size,
                 headers=headers,

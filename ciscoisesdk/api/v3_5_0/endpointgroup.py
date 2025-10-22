@@ -69,14 +69,14 @@ class Endpointgroup(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_endpointgroup(self,
+                          filter=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Endpointgroup(object):
 
         return self._object_factory('bpm_f87e1b58d1155ed96eeaebddcf5d9c8_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_endpointgroup_generator(self,
+                                    filter=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Endpointgroup(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_endpointgroup, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,16 +206,16 @@ class Endpointgroup(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               id=None,
-               name=None,
-               parent_id=None,
-               system_defined=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_endpointgroup(self,
+                             description=None,
+                             id=None,
+                             name=None,
+                             parent_id=None,
+                             system_defined=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Create.
 
         Args:
@@ -312,10 +312,10 @@ class Endpointgroup(object):
 
         return self._object_factory('bpm_cf308e803cc25fa2b214968e1fb30721_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_endpointgroup_name_by_name(self,
+                                       name,
+                                       headers=None,
+                                       **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -372,10 +372,10 @@ class Endpointgroup(object):
 
         return self._object_factory('bpm_f64c3c08518e9eef83a92d69cde3_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_endpointgroup_by_id(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -432,16 +432,16 @@ class Endpointgroup(object):
 
         return self._object_factory('bpm_e4bfa620f76545d9887045cd24d99a2_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               name=None,
-               parent_id=None,
-               system_defined=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_endpointgroup_by_id(self,
+                                   id,
+                                   description=None,
+                                   name=None,
+                                   parent_id=None,
+                                   system_defined=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
         """Update.
 
         Args:
@@ -543,10 +543,10 @@ class Endpointgroup(object):
 
         return self._object_factory('bpm_b4e8d45639975c226dacd53e7b_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_endpointgroup_by_id(self,
+                                   id,
+                                   headers=None,
+                                   **query_parameters):
         """Delete.
 
         Args:
@@ -603,16 +603,16 @@ class Endpointgroup(object):
 
         return self._object_factory('bpm_f7b0aab2a65652feae637779bfb20d2d_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              description=None,
-              name=None,
-              parent_id=None,
-              system_defined=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_endpointgroup_by_id(self,
+                                  id,
+                                  description=None,
+                                  name=None,
+                                  parent_id=None,
+                                  system_defined=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

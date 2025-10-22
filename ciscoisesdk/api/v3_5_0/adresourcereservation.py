@@ -69,11 +69,11 @@ class Adresourcereservation(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_adresourcereservation(self,
+                                  page=None,
+                                  size=None,
+                                  headers=None,
+                                  **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Adresourcereservation(object):
 
         return self._object_factory('bpm_ed941a352c58538795b423ba8d6531d9_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_adresourcereservation_generator(self,
+                                            page=None,
+                                            size=None,
+                                            headers=None,
+                                            **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Adresourcereservation(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_adresourcereservation, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,10 +176,10 @@ class Adresourcereservation(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_adresourcereservation_name_by_name(self,
+                                               name,
+                                               headers=None,
+                                               **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -236,10 +236,10 @@ class Adresourcereservation(object):
 
         return self._object_factory('bpm_e42fa0a522cd589bb038c2b2f3a321e3_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_adresourcereservation_by_id(self,
+                                        id,
+                                        headers=None,
+                                        **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -296,16 +296,16 @@ class Adresourcereservation(object):
 
         return self._object_factory('bpm_fbe1787e91152989c7862880bbadfc9_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               join_point_names=None,
-               name=None,
-               node=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_adresourcereservation_by_id(self,
+                                           id,
+                                           description=None,
+                                           join_point_names=None,
+                                           name=None,
+                                           node=None,
+                                           headers=None,
+                                           payload=None,
+                                           active_validation=True,
+                                           **query_parameters):
         """Update.
 
         Args:

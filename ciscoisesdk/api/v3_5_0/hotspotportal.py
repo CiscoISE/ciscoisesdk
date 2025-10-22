@@ -69,14 +69,14 @@ class Hotspotportal(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_hotspotportal(self,
+                          filter=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Hotspotportal(object):
 
         return self._object_factory('bpm_abdbdba5af591c60476088ed0c9_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_hotspotportal_generator(self,
+                                    filter=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Hotspotportal(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_hotspotportal, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,22 +206,22 @@ class Hotspotportal(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               customizations=None,
-               description=None,
-               id=None,
-               name=None,
-               portal_test_url=None,
-               portal_type=None,
-               settings=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_hotspotportal(self,
+                             customizations=None,
+                             description=None,
+                             id=None,
+                             name=None,
+                             portal_test_url=None,
+                             portal_type=None,
+                             settings=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Create.
 
         Args:
-            customizations(): customizations, property of the
+            customizations(object): customizations, property of the
                 request body.
             description(string): Description, property of the
                 request body.
@@ -234,7 +234,8 @@ class Hotspotportal(object):
                 mydevice, selfRegGuest, sponsor and
                 sponsoredGuest, property of the request
                 body.
-            settings(): settings, property of the request body.
+            settings(object): settings, property of the request
+                body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -324,10 +325,10 @@ class Hotspotportal(object):
 
         return self._object_factory('bpm_f3c105d7cfb5b449495c7c152da9467_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  portal_id,
-                  headers=None,
-                  **query_parameters):
+    def get_hotspotportal_by_id(self,
+                                portal_id,
+                                headers=None,
+                                **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -384,23 +385,23 @@ class Hotspotportal(object):
 
         return self._object_factory('bpm_db1d5c730583091f32471e3afcb84_v3_5_0', _api_response)
 
-    def update_by_id(self,
-                     portal_id,
-                     customizations=None,
-                     description=None,
-                     id=None,
-                     name=None,
-                     portal_test_url=None,
-                     portal_type=None,
-                     settings=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_hotspotportal_by_id(self,
+                                   portal_id,
+                                   customizations=None,
+                                   description=None,
+                                   id=None,
+                                   name=None,
+                                   portal_test_url=None,
+                                   portal_type=None,
+                                   settings=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
         """UpdateById.
 
         Args:
-            customizations(): customizations, property of the
+            customizations(object): customizations, property of the
                 request body.
             description(string): Description, property of the
                 request body.
@@ -413,7 +414,8 @@ class Hotspotportal(object):
                 mydevice, selfRegGuest, sponsor and
                 sponsoredGuest, property of the request
                 body.
-            settings(): settings, property of the request body.
+            settings(object): settings, property of the request
+                body.
             portal_id(str): portal-id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -508,10 +510,10 @@ class Hotspotportal(object):
 
         return self._object_factory('bpm_c26a7c6d80135f1785f9669976c4febc_v3_5_0', _api_response)
 
-    def delete_by_id(self,
-                     portal_id,
-                     headers=None,
-                     **query_parameters):
+    def delete_hotspotportal_by_id(self,
+                                   portal_id,
+                                   headers=None,
+                                   **query_parameters):
         """DeleteById.
 
         Args:
@@ -568,19 +570,19 @@ class Hotspotportal(object):
 
         return self._object_factory('bpm_f98ea1c60e21513fab2d2cc188c6cd35_v3_5_0', _api_response)
 
-    def patch(self,
-              portal_id,
-              customizations=None,
-              description=None,
-              id=None,
-              name=None,
-              portal_test_url=None,
-              portal_type=None,
-              settings=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_hotspotportal_by_id(self,
+                                  portal_id,
+                                  customizations=None,
+                                  description=None,
+                                  id=None,
+                                  name=None,
+                                  portal_test_url=None,
+                                  portal_type=None,
+                                  settings=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """This API endpoint has the PATCH method enabled. However, only
         set of commonly used attributes has been been validated
         to work correctly with PATCH. The remaining attributes
@@ -589,7 +591,7 @@ class Hotspotportal(object):
         a convenience to API developers.
 
         Args:
-            customizations(): customizations, property of the
+            customizations(object): customizations, property of the
                 request body.
             description(string): Description, property of the
                 request body.
@@ -602,7 +604,8 @@ class Hotspotportal(object):
                 mydevice, selfRegGuest, sponsor and
                 sponsoredGuest, property of the request
                 body.
-            settings(): settings, property of the request body.
+            settings(object): settings, property of the request
+                body.
             portal_id(str): portal-id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

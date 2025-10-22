@@ -69,14 +69,14 @@ class Guestssid(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_guestssid(self,
+                      filter=None,
+                      page=None,
+                      size=None,
+                      sortasc=None,
+                      sortdsc=None,
+                      headers=None,
+                      **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Guestssid(object):
 
         return self._object_factory('bpm_debe3420849568aac6ef47326cbb0b3_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_guestssid_generator(self,
+                                filter=None,
+                                page=None,
+                                size=None,
+                                sortasc=None,
+                                sortdsc=None,
+                                headers=None,
+                                **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Guestssid(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_guestssid, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,14 +206,14 @@ class Guestssid(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               id=None,
-               name=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_guestssid(self,
+                         description=None,
+                         id=None,
+                         name=None,
+                         headers=None,
+                         payload=None,
+                         active_validation=True,
+                         **query_parameters):
         """Create.
 
         Args:
@@ -302,10 +302,10 @@ class Guestssid(object):
 
         return self._object_factory('bpm_b0073dc512d833e4dc593b25e00_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_guestssid_by_id(self,
+                            id,
+                            headers=None,
+                            **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -362,14 +362,14 @@ class Guestssid(object):
 
         return self._object_factory('bpm_d5572c56526151cb8ea42de44b2db52c_v3_5_0', _api_response)
 
-    def update_by_id(self,
-                     id,
-                     description=None,
-                     name=None,
-                     headers=None,
-                     payload=None,
-                     active_validation=True,
-                     **query_parameters):
+    def update_guestssid_by_id(self,
+                               id,
+                               description=None,
+                               name=None,
+                               headers=None,
+                               payload=None,
+                               active_validation=True,
+                               **query_parameters):
         """UpdateById.
 
         Args:
@@ -463,10 +463,10 @@ class Guestssid(object):
 
         return self._object_factory('bpm_e6e4b7d022556a80f1948efb3d5c61_v3_5_0', _api_response)
 
-    def delete_by_id(self,
-                     id,
-                     headers=None,
-                     **query_parameters):
+    def delete_guestssid_by_id(self,
+                               id,
+                               headers=None,
+                               **query_parameters):
         """DeleteById.
 
         Args:
@@ -523,14 +523,14 @@ class Guestssid(object):
 
         return self._object_factory('bpm_df7345f788230a512d6635c25_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              description=None,
-              name=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_guestssid_by_id(self,
+                              id,
+                              description=None,
+                              name=None,
+                              headers=None,
+                              payload=None,
+                              active_validation=True,
+                              **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

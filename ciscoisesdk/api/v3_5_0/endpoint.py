@@ -69,14 +69,14 @@ class Endpoint(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_endpoint(self,
+                     filter=None,
+                     page=None,
+                     size=None,
+                     sortasc=None,
+                     sortdsc=None,
+                     headers=None,
+                     **query_parameters):
         """Get-All.
 
         Args:
@@ -155,14 +155,14 @@ class Endpoint(object):
 
         return self._object_factory('bpm_d8b3fff70235400905c32ae03298dcf_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_endpoint_generator(self,
+                               filter=None,
+                               page=None,
+                               size=None,
+                               sortasc=None,
+                               sortdsc=None,
+                               headers=None,
+                               **query_parameters):
         """Get-All.
 
         Args:
@@ -200,7 +200,7 @@ class Endpoint(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_endpoint, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -212,26 +212,26 @@ class Endpoint(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               custom_attributes=None,
-               description=None,
-               group_id=None,
-               id=None,
-               identity_store=None,
-               identity_store_id=None,
-               mac=None,
-               mdm_attributes=None,
-               name=None,
-               portal_user=None,
-               profile_id=None,
-               static_group_assignment=None,
-               static_group_assignment_defined=None,
-               static_profile_assignment=None,
-               static_profile_assignment_defined=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_endpoint(self,
+                        custom_attributes=None,
+                        description=None,
+                        group_id=None,
+                        id=None,
+                        identity_store=None,
+                        identity_store_id=None,
+                        mac=None,
+                        mdm_attributes=None,
+                        name=None,
+                        portal_user=None,
+                        profile_id=None,
+                        static_group_assignment=None,
+                        static_group_assignment_defined=None,
+                        static_profile_assignment=None,
+                        static_profile_assignment_defined=None,
+                        headers=None,
+                        payload=None,
+                        active_validation=True,
+                        **query_parameters):
         """Create.
 
         Args:
@@ -369,10 +369,10 @@ class Endpoint(object):
 
         return self._object_factory('bpm_af7decaa9bf5e799adb5d8bdff495e2_v3_5_0', _api_response)
 
-    def de_register(self,
-                    id,
-                    headers=None,
-                    **query_parameters):
+    def update_endpoint_deregister_by_id(self,
+                                         id,
+                                         headers=None,
+                                         **query_parameters):
         """DeRegister.
 
         Args:
@@ -430,10 +430,10 @@ class Endpoint(object):
 
         return self._object_factory('bpm_ed121b2686e85bd5b28c068c3c0de220_v3_5_0', _api_response)
 
-    def release_rejected_endpoint(self,
-                                  id,
-                                  headers=None,
-                                  **query_parameters):
+    def update_endpoint_releaserejectedendpoint_by_id(self,
+                                                      id,
+                                                      headers=None,
+                                                      **query_parameters):
         """ReleaseRejectedEndpoint.
 
         Args:
@@ -491,14 +491,14 @@ class Endpoint(object):
 
         return self._object_factory('bpm_f4f97557daacb3dadaced526cc_v3_5_0', _api_response)
 
-    def get_rejected_endpoints(self,
-                               filter=None,
-                               page=None,
-                               size=None,
-                               sortasc=None,
-                               sortdsc=None,
-                               headers=None,
-                               **query_parameters):
+    def get_endpoint_getrejectedendpoints(self,
+                                          filter=None,
+                                          page=None,
+                                          size=None,
+                                          sortasc=None,
+                                          sortdsc=None,
+                                          headers=None,
+                                          **query_parameters):
         """GetRejectedEndpoints.
 
         Args:
@@ -577,14 +577,14 @@ class Endpoint(object):
 
         return self._object_factory('bpm_f8a2f0834e625822bed1cb4cf34fde5e_v3_5_0', _api_response)
 
-    def get_rejected_endpoints_generator(self,
-                                         filter=None,
-                                         page=None,
-                                         size=None,
-                                         sortasc=None,
-                                         sortdsc=None,
-                                         headers=None,
-                                         **query_parameters):
+    def get_endpoint_getrejectedendpoints_generator(self,
+                                                    filter=None,
+                                                    page=None,
+                                                    size=None,
+                                                    sortasc=None,
+                                                    sortdsc=None,
+                                                    headers=None,
+                                                    **query_parameters):
         """GetRejectedEndpoints.
 
         Args:
@@ -622,7 +622,7 @@ class Endpoint(object):
         """
 
         yield from get_next_page(
-            self.get_rejected_endpoints, dict(
+            self.get_endpoint_getrejectedendpoints, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -634,10 +634,10 @@ class Endpoint(object):
             access_next_list=["nextPage", "href"],
             access_resource_list=["response"])
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_endpoint_name_by_name(self,
+                                  name,
+                                  headers=None,
+                                  **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -694,10 +694,10 @@ class Endpoint(object):
 
         return self._object_factory('bpm_d53842e83f0538cab91e097aa6800ce_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_endpoint_by_id(self,
+                           id,
+                           headers=None,
+                           **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -754,26 +754,26 @@ class Endpoint(object):
 
         return self._object_factory('bpm_eb8e0ce63376573995a49178435f7747_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               custom_attributes=None,
-               description=None,
-               group_id=None,
-               identity_store=None,
-               identity_store_id=None,
-               mac=None,
-               mdm_attributes=None,
-               name=None,
-               portal_user=None,
-               profile_id=None,
-               static_group_assignment=None,
-               static_group_assignment_defined=None,
-               static_profile_assignment=None,
-               static_profile_assignment_defined=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_endpoint_by_id(self,
+                              id,
+                              custom_attributes=None,
+                              description=None,
+                              group_id=None,
+                              identity_store=None,
+                              identity_store_id=None,
+                              mac=None,
+                              mdm_attributes=None,
+                              name=None,
+                              portal_user=None,
+                              profile_id=None,
+                              static_group_assignment=None,
+                              static_group_assignment_defined=None,
+                              static_profile_assignment=None,
+                              static_profile_assignment_defined=None,
+                              headers=None,
+                              payload=None,
+                              active_validation=True,
+                              **query_parameters):
         """Update.
 
         Args:
@@ -916,10 +916,10 @@ class Endpoint(object):
 
         return self._object_factory('bpm_c8b30af4b84b5a90be2fc152cf26ad42_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_endpoint_by_id(self,
+                              id,
+                              headers=None,
+                              **query_parameters):
         """Delete.
 
         Args:
@@ -976,26 +976,26 @@ class Endpoint(object):
 
         return self._object_factory('bpm_f1cac5f578ab6509196266ad8e3_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              custom_attributes=None,
-              description=None,
-              group_id=None,
-              identity_store=None,
-              identity_store_id=None,
-              mac=None,
-              mdm_attributes=None,
-              name=None,
-              portal_user=None,
-              profile_id=None,
-              static_group_assignment=None,
-              static_group_assignment_defined=None,
-              static_profile_assignment=None,
-              static_profile_assignment_defined=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_endpoint_by_id(self,
+                             id,
+                             custom_attributes=None,
+                             description=None,
+                             group_id=None,
+                             identity_store=None,
+                             identity_store_id=None,
+                             mac=None,
+                             mdm_attributes=None,
+                             name=None,
+                             portal_user=None,
+                             profile_id=None,
+                             static_group_assignment=None,
+                             static_group_assignment_defined=None,
+                             static_profile_assignment=None,
+                             static_profile_assignment_defined=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
@@ -1138,26 +1138,26 @@ class Endpoint(object):
 
         return self._object_factory('bpm_a107646bee520ba8247b06bf23311c_v3_5_0', _api_response)
 
-    def register(self,
-                 custom_attributes=None,
-                 description=None,
-                 group_id=None,
-                 id=None,
-                 identity_store=None,
-                 identity_store_id=None,
-                 mac=None,
-                 mdm_attributes=None,
-                 name=None,
-                 portal_user=None,
-                 profile_id=None,
-                 static_group_assignment=None,
-                 static_group_assignment_defined=None,
-                 static_profile_assignment=None,
-                 static_profile_assignment_defined=None,
-                 headers=None,
-                 payload=None,
-                 active_validation=True,
-                 **query_parameters):
+    def update_endpoint_register(self,
+                                 custom_attributes=None,
+                                 description=None,
+                                 group_id=None,
+                                 id=None,
+                                 identity_store=None,
+                                 identity_store_id=None,
+                                 mac=None,
+                                 mdm_attributes=None,
+                                 name=None,
+                                 portal_user=None,
+                                 profile_id=None,
+                                 static_group_assignment=None,
+                                 static_group_assignment_defined=None,
+                                 static_profile_assignment=None,
+                                 static_profile_assignment_defined=None,
+                                 headers=None,
+                                 payload=None,
+                                 active_validation=True,
+                                 **query_parameters):
         """Register.
 
         Args:

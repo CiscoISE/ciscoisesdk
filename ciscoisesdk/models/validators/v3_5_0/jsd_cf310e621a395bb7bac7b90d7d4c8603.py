@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine email data model.
+"""Identity Services Engine updateGuesttypeEmailById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorCf310E621A395Bb7Bac7B90D7D4C8603(object):
-    """email request schema definition."""
+    """updateGuesttypeEmailById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCf310E621A395Bb7Bac7B90D7D4C8603, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -69,7 +69,8 @@ class JSONSchemaValidatorCf310E621A395Bb7Bac7B90D7D4C8603(object):
                 "maxAccountDuration": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "allowDynamicIdentityGroups": {
                 "type": "boolean"
@@ -108,7 +109,8 @@ class JSONSchemaValidatorCf310E621A395Bb7Bac7B90D7D4C8603(object):
                 "sendSmsNotification": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "id": {
                 "type": "string"
@@ -136,7 +138,8 @@ class JSONSchemaValidatorCf310E621A395Bb7Bac7B90D7D4C8603(object):
                 },
                 "required": [
                 "identityGroupId"
-                ]
+                ],
+                "type": "object"
                 },
                 "name": {
                 "type": "string"

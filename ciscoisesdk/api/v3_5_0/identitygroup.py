@@ -69,14 +69,14 @@ class Identitygroup(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_identitygroup(self,
+                          filter=None,
+                          page=None,
+                          size=None,
+                          sortasc=None,
+                          sortdsc=None,
+                          headers=None,
+                          **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Identitygroup(object):
 
         return self._object_factory('bpm_fd89a77c6e85345b60333bd34d85951_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_identitygroup_generator(self,
+                                    filter=None,
+                                    page=None,
+                                    size=None,
+                                    sortasc=None,
+                                    sortdsc=None,
+                                    headers=None,
+                                    **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Identitygroup(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_identitygroup, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,15 +206,15 @@ class Identitygroup(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               id=None,
-               name=None,
-               parent=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_identitygroup(self,
+                             description=None,
+                             id=None,
+                             name=None,
+                             parent=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Create.
 
         Args:
@@ -308,10 +308,10 @@ class Identitygroup(object):
 
         return self._object_factory('bpm_d9f9e77d75356d18c6b0372866df436_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_identitygroup_name_by_name(self,
+                                       name,
+                                       headers=None,
+                                       **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -368,10 +368,10 @@ class Identitygroup(object):
 
         return self._object_factory('bpm_f18bdd1938755409bf6db6b29e85d3a_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_identitygroup_by_id(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -428,15 +428,15 @@ class Identitygroup(object):
 
         return self._object_factory('bpm_ca3df31c13b857e6b5dbc8357a8ab010_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               name=None,
-               parent=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_identitygroup_by_id(self,
+                                   id,
+                                   description=None,
+                                   name=None,
+                                   parent=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
         """Update.
 
         Args:
@@ -535,10 +535,10 @@ class Identitygroup(object):
 
         return self._object_factory('bpm_c0689e940ba5526946ad15976cc3365_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_identitygroup_by_id(self,
+                                   id,
+                                   headers=None,
+                                   **query_parameters):
         """Delete.
 
         Args:
@@ -595,15 +595,15 @@ class Identitygroup(object):
 
         return self._object_factory('bpm_a6bb2c6d4551c69919aa599df53832_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              description=None,
-              name=None,
-              parent=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_identitygroup_by_id(self,
+                                  id,
+                                  description=None,
+                                  name=None,
+                                  parent=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

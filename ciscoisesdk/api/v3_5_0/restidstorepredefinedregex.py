@@ -69,9 +69,9 @@ class Restidstorepredefinedregex(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def fetch_san_predefinedregexs(self,
-                                   headers=None,
-                                   **query_parameters):
+    def get_restidstorepredefinedregex_fetchsanpredefinedregexs(self,
+                                                                headers=None,
+                                                                **query_parameters):
         """fetchSanPredefinedregexs.
 
         Args:
@@ -125,9 +125,9 @@ class Restidstorepredefinedregex(object):
 
         return self._object_factory('bpm_c129f8333c5ccfb56f35485043d8f7_v3_5_0', _api_response)
 
-    def fetch_snf_predefinedregexs(self,
-                                   headers=None,
-                                   **query_parameters):
+    def get_restidstorepredefinedregex_fetchsnfpredefinedregexs(self,
+                                                                headers=None,
+                                                                **query_parameters):
         """fetchSnfPredefinedregexs.
 
         Args:

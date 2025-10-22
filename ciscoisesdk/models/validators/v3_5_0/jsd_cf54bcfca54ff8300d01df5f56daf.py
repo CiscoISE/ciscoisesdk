@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Patch data model.
+"""Identity Services Engine patchAuthorizationprofileById data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
-    """Patch request schema definition."""
+    """patchAuthorizationprofileById request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -62,7 +62,8 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "required": [
                 "attributeName",
                 "dictionaryName"
-                ]
+                ],
+                "type": "object"
                 },
                 "rightHandSideAttribueValue": {
                 "type": "object"
@@ -70,7 +71,8 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 },
                 "required": [
                 "rightHandSideAttribueValue"
-                ]
+                ],
+                "type": "object"
                 },
                 "agentlessPosture": {
                 "type": "object"
@@ -149,7 +151,8 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "attributeName",
                 "connectivity",
                 "dictionaryName"
-                ]
+                ],
+                "type": "object"
                 },
                 "serviceTemplate": {
                 "type": "object"
@@ -172,7 +175,8 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "required": [
                 "nameID",
                 "tagID"
-                ]
+                ],
+                "type": "object"
                 },
                 "voiceDomainPermission": {
                 "type": "object"
@@ -202,7 +206,8 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "ACL",
                 "WebRedirectionType",
                 "portalName"
-                ]
+                ],
+                "type": "object"
                 }
                 },
                 "required": [

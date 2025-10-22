@@ -69,14 +69,14 @@ class Networkdevicegroup(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                filter=None,
-                page=None,
-                size=None,
-                sortasc=None,
-                sortdsc=None,
-                headers=None,
-                **query_parameters):
+    def get_networkdevicegroup(self,
+                               filter=None,
+                               page=None,
+                               size=None,
+                               sortasc=None,
+                               sortdsc=None,
+                               headers=None,
+                               **query_parameters):
         """Get-All.
 
         Args:
@@ -152,14 +152,14 @@ class Networkdevicegroup(object):
 
         return self._object_factory('bpm_b36148dd05c52a25d07a145c11e8b_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          filter=None,
-                          page=None,
-                          size=None,
-                          sortasc=None,
-                          sortdsc=None,
-                          headers=None,
-                          **query_parameters):
+    def get_networkdevicegroup_generator(self,
+                                         filter=None,
+                                         page=None,
+                                         size=None,
+                                         sortasc=None,
+                                         sortdsc=None,
+                                         headers=None,
+                                         **query_parameters):
         """Get-All.
 
         Args:
@@ -194,7 +194,7 @@ class Networkdevicegroup(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_networkdevicegroup, dict(
                 filter=filter,
                 page=page,
                 size=size,
@@ -206,15 +206,15 @@ class Networkdevicegroup(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               id=None,
-               name=None,
-               othername=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_networkdevicegroup(self,
+                                  description=None,
+                                  id=None,
+                                  name=None,
+                                  othername=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """Create.
 
         Args:
@@ -308,10 +308,10 @@ class Networkdevicegroup(object):
 
         return self._object_factory('bpm_a8eefb72fd2d5225a4679fd7999a3c6e_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_networkdevicegroup_name_by_name(self,
+                                            name,
+                                            headers=None,
+                                            **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -368,10 +368,10 @@ class Networkdevicegroup(object):
 
         return self._object_factory('bpm_e1d938f110e059a5abcb9cc8fb3cbd7c_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_networkdevicegroup_by_id(self,
+                                     id,
+                                     headers=None,
+                                     **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -428,15 +428,15 @@ class Networkdevicegroup(object):
 
         return self._object_factory('bpm_a0fdb67d95475cd39382171dec96d6c1_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               name=None,
-               othername=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_networkdevicegroup_by_id(self,
+                                        id,
+                                        description=None,
+                                        name=None,
+                                        othername=None,
+                                        headers=None,
+                                        payload=None,
+                                        active_validation=True,
+                                        **query_parameters):
         """Update.
 
         Args:
@@ -535,10 +535,10 @@ class Networkdevicegroup(object):
 
         return self._object_factory('bpm_e6734850fabb2097fa969948cb_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_networkdevicegroup_by_id(self,
+                                        id,
+                                        headers=None,
+                                        **query_parameters):
         """Delete.
 
         Args:
@@ -595,15 +595,15 @@ class Networkdevicegroup(object):
 
         return self._object_factory('bpm_ded6653128f502c97e52cf279_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              description=None,
-              name=None,
-              othername=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_networkdevicegroup_by_id(self,
+                                       id,
+                                       description=None,
+                                       name=None,
+                                       othername=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 

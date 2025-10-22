@@ -69,11 +69,11 @@ class Service(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_service(self,
+                    page=None,
+                    size=None,
+                    headers=None,
+                    **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Service(object):
 
         return self._object_factory('bpm_c9ab53be105f24a96d20bae9ccf9a5_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_service_generator(self,
+                              page=None,
+                              size=None,
+                              headers=None,
+                              **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Service(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_service, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,10 +176,10 @@ class Service(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_service_by_name(self,
+                            name,
+                            headers=None,
+                            **query_parameters):
         """Get-By-Name.
 
         Args:

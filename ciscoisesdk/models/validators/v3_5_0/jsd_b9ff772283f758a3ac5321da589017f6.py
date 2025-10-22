@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Identity Services Engine Create data model.
+"""Identity Services Engine createGuesttype data model.
 
 Copyright (c) 2021 Cisco and/or its affiliates.
 
@@ -33,7 +33,7 @@ from ciscoisesdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorB9Ff772283F758A3Ac5321Da589017F6(object):
-    """Create request schema definition."""
+    """createGuesttype request schema definition."""
     def __init__(self):
         super(JSONSchemaValidatorB9Ff772283F758A3Ac5321Da589017F6, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
@@ -69,7 +69,8 @@ class JSONSchemaValidatorB9Ff772283F758A3Ac5321Da589017F6(object):
                 "maxAccountDuration": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "allowDynamicIdentityGroups": {
                 "type": "boolean"
@@ -108,7 +109,8 @@ class JSONSchemaValidatorB9Ff772283F758A3Ac5321Da589017F6(object):
                 "sendSmsNotification": {
                 "type": "number"
                 }
-                }
+                },
+                "type": "object"
                 },
                 "id": {
                 "type": "string"
@@ -136,7 +138,8 @@ class JSONSchemaValidatorB9Ff772283F758A3Ac5321Da589017F6(object):
                 },
                 "required": [
                 "identityGroupId"
-                ]
+                ],
+                "type": "object"
                 },
                 "name": {
                 "type": "string"

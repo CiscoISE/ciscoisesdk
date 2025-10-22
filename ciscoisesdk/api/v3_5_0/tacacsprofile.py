@@ -69,11 +69,11 @@ class Tacacsprofile(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all(self,
-                page=None,
-                size=None,
-                headers=None,
-                **query_parameters):
+    def get_tacacsprofile(self,
+                          page=None,
+                          size=None,
+                          headers=None,
+                          **query_parameters):
         """Get-All.
 
         Args:
@@ -134,11 +134,11 @@ class Tacacsprofile(object):
 
         return self._object_factory('bpm_e248245e64e5df4a4e3abc17c1f363b_v3_5_0', _api_response)
 
-    def get_all_generator(self,
-                          page=None,
-                          size=None,
-                          headers=None,
-                          **query_parameters):
+    def get_tacacsprofile_generator(self,
+                                    page=None,
+                                    size=None,
+                                    headers=None,
+                                    **query_parameters):
         """Get-All.
 
         Args:
@@ -167,7 +167,7 @@ class Tacacsprofile(object):
         """
 
         yield from get_next_page(
-            self.get_all, dict(
+            self.get_tacacsprofile, dict(
                 page=page,
                 size=size,
                 headers=headers,
@@ -176,15 +176,15 @@ class Tacacsprofile(object):
             access_next_list=["SearchResult", "nextPage", "href"],
             access_resource_list=["SearchResult", "resources"])
 
-    def create(self,
-               description=None,
-               id=None,
-               name=None,
-               session_attributes=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def create_tacacsprofile(self,
+                             description=None,
+                             id=None,
+                             name=None,
+                             session_attributes=None,
+                             headers=None,
+                             payload=None,
+                             active_validation=True,
+                             **query_parameters):
         """Create.
 
         Args:
@@ -192,8 +192,8 @@ class Tacacsprofile(object):
                 request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
-            session_attributes(): sessionAttributes, property of the
-                request body.
+            session_attributes(object): sessionAttributes, property
+                of the request body.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -277,10 +277,10 @@ class Tacacsprofile(object):
 
         return self._object_factory('bpm_d7aa0a3d99355e948504238ad2af7365_v3_5_0', _api_response)
 
-    def get_by_name(self,
-                    name,
-                    headers=None,
-                    **query_parameters):
+    def get_tacacsprofile_name_by_name(self,
+                                       name,
+                                       headers=None,
+                                       **query_parameters):
         """Get-By-Name.
 
         Args:
@@ -337,10 +337,10 @@ class Tacacsprofile(object):
 
         return self._object_factory('bpm_b8696d875b12b0a3ab735b397d7a_v3_5_0', _api_response)
 
-    def get_by_id(self,
-                  id,
-                  headers=None,
-                  **query_parameters):
+    def get_tacacsprofile_by_id(self,
+                                id,
+                                headers=None,
+                                **query_parameters):
         """Get-By-Id.
 
         Args:
@@ -397,15 +397,15 @@ class Tacacsprofile(object):
 
         return self._object_factory('bpm_bdea52558473565c9963ec14c65727b8_v3_5_0', _api_response)
 
-    def update(self,
-               id,
-               description=None,
-               name=None,
-               session_attributes=None,
-               headers=None,
-               payload=None,
-               active_validation=True,
-               **query_parameters):
+    def update_tacacsprofile_by_id(self,
+                                   id,
+                                   description=None,
+                                   name=None,
+                                   session_attributes=None,
+                                   headers=None,
+                                   payload=None,
+                                   active_validation=True,
+                                   **query_parameters):
         """Update.
 
         Args:
@@ -413,8 +413,8 @@ class Tacacsprofile(object):
                 request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
-            session_attributes(): sessionAttributes, property of the
-                request body.
+            session_attributes(object): sessionAttributes, property
+                of the request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -503,10 +503,10 @@ class Tacacsprofile(object):
 
         return self._object_factory('bpm_a0db9ec45c05879a6f016a1edf54793_v3_5_0', _api_response)
 
-    def delete(self,
-               id,
-               headers=None,
-               **query_parameters):
+    def delete_tacacsprofile_by_id(self,
+                                   id,
+                                   headers=None,
+                                   **query_parameters):
         """Delete.
 
         Args:
@@ -563,15 +563,15 @@ class Tacacsprofile(object):
 
         return self._object_factory('bpm_fd38182c505549fbc0d8c1122c1f685_v3_5_0', _api_response)
 
-    def patch(self,
-              id,
-              description=None,
-              name=None,
-              session_attributes=None,
-              headers=None,
-              payload=None,
-              active_validation=True,
-              **query_parameters):
+    def patch_tacacsprofile_by_id(self,
+                                  id,
+                                  description=None,
+                                  name=None,
+                                  session_attributes=None,
+                                  headers=None,
+                                  payload=None,
+                                  active_validation=True,
+                                  **query_parameters):
         """Update any attribute subset. Only attributes that sent will be
         affected.
 
@@ -580,8 +580,8 @@ class Tacacsprofile(object):
                 request body.
             id(string): Id, property of the request body.
             name(string): name, property of the request body.
-            session_attributes(): sessionAttributes, property of the
-                request body.
+            session_attributes(object): sessionAttributes, property
+                of the request body.
             id(str): id path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
