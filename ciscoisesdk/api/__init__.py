@@ -1915,8 +1915,158 @@ from .v3_3_patch_1.vn_vlan_mapping import (
     VnVlanMapping as VnVlanMapping_v3_3_patch_1
 )
 
+from .v3_5_0.aci_connection import (
+    AciConnection as AciConnection_v3_5_0
+)
+from .v3_5_0.aci_data import (
+    AciData as AciData_v3_5_0
+)
+from .v3_5_0.a_d_groups import (
+    ADGroups as ADGroups_v3_5_0
+)
+from .v3_5_0.active_directories import (
+    ActiveDirectories as ActiveDirectories_v3_5_0
+)
+from .v3_5_0.admin_groups import (
+    AdminGroups as AdminGroups_v3_5_0
+)
+from .v3_5_0.admin_users import (
+    AdminUsers as AdminUsers_v3_5_0
+)
+from .v3_5_0.backup_and_restore import (
+    BackupAndRestore as BackupAndRestore_v3_5_0
+)
+from .v3_5_0.certificates import (
+    Certificates as Certificates_v3_5_0
+)
+from .v3_5_0.classificationrule import (
+    Classificationrule as Classificationrule_v3_5_0
+)
+from .v3_5_0.configuration import (
+    Configuration as Configuration_v3_5_0
+)
+from .v3_5_0.data_access import (
+    DataAccess as DataAccess_v3_5_0
+)
+from .v3_5_0.dataconnect_services import (
+    DataconnectServices as DataconnectServices_v3_5_0
+)
+from .v3_5_0.device_admin_m_f_a_rules import (
+    DeviceAdminMFARules as DeviceAdminMFARules_v3_5_0
+)
+from .v3_5_0.device_administration_authentication_rules import (
+    DeviceAdministrationAuthenticationRules as DeviceAdministrationAuthenticationRules_v3_5_0
+)
+from .v3_5_0.device_administration_authorization_exception_rules import (
+    DeviceAdministrationAuthorizationExceptionRules as DeviceAdministrationAuthorizationExceptionRules_v3_5_0
+)
+from .v3_5_0.device_administration_authorization_global_exception_rules import (
+    DeviceAdministrationAuthorizationGlobalExceptionRules as DeviceAdministrationAuthorizationGlobalExceptionRules_v3_5_0
+)
+from .v3_5_0.device_administration_authorization_rules import (
+    DeviceAdministrationAuthorizationRules as DeviceAdministrationAuthorizationRules_v3_5_0
+)
+from .v3_5_0.device_administration_command_sets import (
+    DeviceAdministrationCommandSets as DeviceAdministrationCommandSets_v3_5_0
+)
+from .v3_5_0.device_administration_conditions import (
+    DeviceAdministrationConditions as DeviceAdministrationConditions_v3_5_0
+)
+from .v3_5_0.device_administration_dictionary_attributes_list import (
+    DeviceAdministrationDictionaryAttributesList as DeviceAdministrationDictionaryAttributesList_v3_5_0
+)
+from .v3_5_0.device_administration_identity_stores import (
+    DeviceAdministrationIdentityStores as DeviceAdministrationIdentityStores_v3_5_0
+)
+from .v3_5_0.device_administration_network_conditions import (
+    DeviceAdministrationNetworkConditions as DeviceAdministrationNetworkConditions_v3_5_0
+)
+from .v3_5_0.device_administration_policy_sets import (
+    DeviceAdministrationPolicySets as DeviceAdministrationPolicySets_v3_5_0
+)
+from .v3_5_0.device_administration_service_names import (
+    DeviceAdministrationServiceNames as DeviceAdministrationServiceNames_v3_5_0
+)
+from .v3_5_0.device_administration_shell_profiles import (
+    DeviceAdministrationShellProfiles as DeviceAdministrationShellProfiles_v3_5_0
+)
+from .v3_5_0.device_administration_time_date_conditions import (
+    DeviceAdministrationTimeDateConditions as DeviceAdministrationTimeDateConditions_v3_5_0
+)
+from .v3_5_0.duo_identity_sync import (
+    DuoIdentitySync as DuoIdentitySync_v3_5_0
+)
+from .v3_5_0.duo_mfa import (
+    DuoMfa as DuoMfa_v3_5_0
+)
+from .v3_5_0.endpoint_stop_replication_service import (
+    EndpointStopReplicationService as EndpointStopReplicationService_v3_5_0
+)
+from .v3_5_0.inbound_rule import (
+    InboundRule as InboundRule_v3_5_0
+)
+from .v3_5_0.licensing import (
+    Licensing as Licensing_v3_5_0
+)
+from .v3_5_0.menu_access import (
+    MenuAccess as MenuAccess_v3_5_0
+)
 from .v3_5_0.misc import (
     Misc as Misc_v3_5_0
+)
+from .v3_5_0.n_b_a_r_application_management import (
+    NBARApplicationManagement as NBARApplicationManagement_v3_5_0
+)
+from .v3_5_0.native_ipsec import (
+    NativeIpsec as NativeIpsec_v3_5_0
+)
+from .v3_5_0.network_access_authentication_rules import (
+    NetworkAccessAuthenticationRules as NetworkAccessAuthenticationRules_v3_5_0
+)
+from .v3_5_0.network_access_authorization_exception_rules import (
+    NetworkAccessAuthorizationExceptionRules as NetworkAccessAuthorizationExceptionRules_v3_5_0
+)
+from .v3_5_0.network_access_authorization_global_exception_rules import (
+    NetworkAccessAuthorizationGlobalExceptionRules as NetworkAccessAuthorizationGlobalExceptionRules_v3_5_0
+)
+from .v3_5_0.network_access_authorization_profiles import (
+    NetworkAccessAuthorizationProfiles as NetworkAccessAuthorizationProfiles_v3_5_0
+)
+from .v3_5_0.network_access_authorization_rules import (
+    NetworkAccessAuthorizationRules as NetworkAccessAuthorizationRules_v3_5_0
+)
+from .v3_5_0.network_access_conditions import (
+    NetworkAccessConditions as NetworkAccessConditions_v3_5_0
+)
+from .v3_5_0.network_access_dictionaries import (
+    NetworkAccessDictionaries as NetworkAccessDictionaries_v3_5_0
+)
+from .v3_5_0.network_access_dictionary_attributes import (
+    NetworkAccessDictionaryAttributes as NetworkAccessDictionaryAttributes_v3_5_0
+)
+from .v3_5_0.network_access_dictionary_attributes_list import (
+    NetworkAccessDictionaryAttributesList as NetworkAccessDictionaryAttributesList_v3_5_0
+)
+from .v3_5_0.network_access_identity_stores import (
+    NetworkAccessIdentityStores as NetworkAccessIdentityStores_v3_5_0
+)
+from .v3_5_0.network_access_m_f_a_rules import (
+    NetworkAccessMFARules as NetworkAccessMFARules_v3_5_0
+)
+from .v3_5_0.network_access_network_conditions import (
+    NetworkAccessNetworkConditions as NetworkAccessNetworkConditions_v3_5_0
+)
+from .v3_5_0.network_access_policy_sets import (
+    NetworkAccessPolicySets as NetworkAccessPolicySets_v3_5_0
+)
+from .v3_5_0.network_access_security_groups import (
+    NetworkAccessSecurityGroups as NetworkAccessSecurityGroups_v3_5_0
+)
+from .v3_5_0.network_access_service_names import (
+    NetworkAccessServiceNames as NetworkAccessServiceNames_v3_5_0
+)
+from .v3_5_0.network_access_time_date_conditions import (
+    NetworkAccessTimeDateConditions as NetworkAccessTimeDateConditions_v3_5_0
 )
 from .v3_5_0.node_deployment import (
     NodeDeployment as NodeDeployment_v3_5_0
@@ -1927,20 +2077,77 @@ from .v3_5_0.node_group import (
 from .v3_5_0.nodeservices import (
     Nodeservices as Nodeservices_v3_5_0
 )
+from .v3_5_0.outbound_rule import (
+    OutboundRule as OutboundRule_v3_5_0
+)
 from .v3_5_0.pan_ha import (
     PanHa as PanHa_v3_5_0
 )
 from .v3_5_0.patch import (
     Patch as Patch_v3_5_0
 )
+from .v3_5_0.patching import (
+    Patching as Patching_v3_5_0
+)
+from .v3_5_0.prometheus_alertmanager import (
+    PrometheusAlertmanager as PrometheusAlertmanager_v3_5_0
+)
+from .v3_5_0.r_b_a_c_policy import (
+    RBACPolicy as RBACPolicy_v3_5_0
+)
+from .v3_5_0.repository import (
+    Repository as Repository_v3_5_0
+)
+from .v3_5_0.sxp import (
+    Sxp as Sxp_v3_5_0
+)
+from .v3_5_0.sxp_domainswithmappinganddevicescounts import (
+    SxpDomainswithmappinganddevicescounts as SxpDomainswithmappinganddevicescounts_v3_5_0
+)
+from .v3_5_0.security_group_management import (
+    SecurityGroupManagement as SecurityGroupManagement_v3_5_0
+)
+from .v3_5_0.sgt import (
+    Sgt as Sgt_v3_5_0
+)
+from .v3_5_0.sgt_range_reservation import (
+    SgtRangeReservation as SgtRangeReservation_v3_5_0
+)
 from .v3_5_0.subscriber import (
     Subscriber as Subscriber_v3_5_0
+)
+from .v3_5_0.trust_sec_open_api_view import (
+    TrustSecOpenApiView as TrustSecOpenApiView_v3_5_0
+)
+from .v3_5_0.trustsec_c_o_a_push import (
+    TrustsecCOAPush as TrustsecCOAPush_v3_5_0
+)
+from .v3_5_0.trustsec_http_s_server import (
+    TrustsecHttpSServer as TrustsecHttpSServer_v3_5_0
+)
+from .v3_5_0.trustsec_integration_rule_default_trustsec_integration_ruleset import (
+    TrustsecIntegrationRuleDefaultTrustsecIntegrationRuleset as TrustsecIntegrationRuleDefaultTrustsecIntegrationRuleset_v3_5_0
+)
+from .v3_5_0.trustsec_integration_rule_dictionaries import (
+    TrustsecIntegrationRuleDictionaries as TrustsecIntegrationRuleDictionaries_v3_5_0
+)
+from .v3_5_0.trustsec_integration_rule_dictionary_attributes import (
+    TrustsecIntegrationRuleDictionaryAttributes as TrustsecIntegrationRuleDictionaryAttributes_v3_5_0
+)
+from .v3_5_0.trustsec_settings import (
+    TrustsecSettings as TrustsecSettings_v3_5_0
+)
+from .v3_5_0.trustsecdevicesreport import (
+    Trustsecdevicesreport as Trustsecdevicesreport_v3_5_0
 )
 from .v3_5_0.upgrade import (
     Upgrade as Upgrade_v3_5_0
 )
 from .v3_5_0.user_equipment import (
     UserEquipment as UserEquipment_v3_5_0
+)
+from .v3_5_0.virtual_network_management import (
+    VirtualNetworkManagement as VirtualNetworkManagement_v3_5_0
 )
 from .v3_5_0.acibindings import (
     Acibindings as Acibindings_v3_5_0
@@ -1984,6 +2191,9 @@ from .v3_5_0.ctsenvdata import (
 from .v3_5_0.ctsmatrix import (
     Ctsmatrix as Ctsmatrix_v3_5_0
 )
+from .v3_5_0.customattributes import (
+    Customattributes as Customattributes_v3_5_0
+)
 from .v3_5_0.deploymentinfo import (
     Deploymentinfo as Deploymentinfo_v3_5_0
 )
@@ -1993,6 +2203,9 @@ from .v3_5_0.downloadableacl import (
 from .v3_5_0.egressmatrixcell import (
     Egressmatrixcell as Egressmatrixcell_v3_5_0
 )
+from .v3_5_0.enable_m_f_a import (
+    EnableMFA as EnableMFA_v3_5_0
+)
 from .v3_5_0.endpoint import (
     Endpoint as Endpoint_v3_5_0
 )
@@ -2001,6 +2214,9 @@ from .v3_5_0.endpointcert import (
 )
 from .v3_5_0.endpointgroup import (
     Endpointgroup as Endpointgroup_v3_5_0
+)
+from .v3_5_0.endpoints import (
+    Endpoints as Endpoints_v3_5_0
 )
 from .v3_5_0.externalradiusserver import (
     Externalradiusserver as Externalradiusserver_v3_5_0
@@ -2035,6 +2251,9 @@ from .v3_5_0.idstoresequence import (
 from .v3_5_0.internaluser import (
     Internaluser as Internaluser_v3_5_0
 )
+from .v3_5_0.is_m_f_a_enabled import (
+    IsMFAEnabled as IsMFAEnabled_v3_5_0
+)
 from .v3_5_0.ldap import (
     Ldap as Ldap_v3_5_0
 )
@@ -2065,7 +2284,18 @@ from .v3_5_0.portaltheme import (
 from .v3_5_0.profilerprofile import (
     Profilerprofile as Profilerprofile_v3_5_0
 )
-
+from .v3_5_0.proxy import (
+    Proxy as Proxy_v3_5_0
+)
+from .v3_5_0.px_grid_cloud import (
+    PxGridCloud as PxGridCloud_v3_5_0
+)
+from .v3_5_0.px_grid_direct import (
+    PxGridDirect as PxGridDirect_v3_5_0
+)
+from .v3_5_0.px_grid_direct_push_apis import (
+    PxGridDirectPushApis as PxGridDirectPushApis_v3_5_0
+)
 from .v3_5_0.pxgridnode import (
     Pxgridnode as Pxgridnode_v3_5_0
 )
@@ -2167,6 +2397,12 @@ from .v3_5_0.tacacsprofile import (
 )
 from .v3_5_0.tacacsserversequence import (
     Tacacsserversequence as Tacacsserversequence_v3_5_0
+)
+from .v3_5_0.tasks import (
+    Tasks as Tasks_v3_5_0
+)
+from .v3_5_0.telemetry import (
+    Telemetry as Telemetry_v3_5_0
 )
 from .v3_5_0.telemetryinfo import (
     Telemetryinfo as Telemetryinfo_v3_5_0
@@ -2589,6 +2825,10 @@ class IdentityServicesEngineAPI(object):
                 uses_csrf_token=self._uses_csrf_token,
                 get_csrf_token=self._get_csrf_token,
             )
+
+        # Provide a common session alias used by newer API wrappers
+        # Prefer UI session when available, otherwise fallback to ERS
+        self._session_main = self._session_ui or self._session_ers
 
     def _initialize_api_wrappers(self):
         """Initializes the API wrappers according to the defined version."""
@@ -5095,9 +5335,209 @@ class IdentityServicesEngineAPI(object):
                     self._session_ui, self.object_factory, self._validator
                 )
         if self._version == '3.5.0':
+            self.aci_connection = \
+                AciConnection_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.aci_data = \
+                AciData_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.a_d_groups = \
+                ADGroups_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.active_directories = \
+                ActiveDirectories_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.admin_groups = \
+                AdminGroups_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.admin_users = \
+                AdminUsers_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.backup_and_restore = \
+                BackupAndRestore_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.certificates = \
+                Certificates_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.classificationrule = \
+                Classificationrule_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.configuration = \
+                Configuration_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.data_access = \
+                DataAccess_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.dataconnect_services = \
+                DataconnectServices_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_admin_m_f_a_rules = \
+                DeviceAdminMFARules_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.device_administration_authentication_rules = \
+                DeviceAdministrationAuthenticationRules_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_authorization_exception_rules = \
+                DeviceAdministrationAuthorizationExceptionRules_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_authorization_global_exception_rules = \
+                DeviceAdministrationAuthorizationGlobalExceptionRules_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_authorization_rules = \
+                DeviceAdministrationAuthorizationRules_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_command_sets = \
+                DeviceAdministrationCommandSets_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_conditions = \
+                DeviceAdministrationConditions_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_dictionary_attributes_list = \
+                DeviceAdministrationDictionaryAttributesList_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_identity_stores = \
+                DeviceAdministrationIdentityStores_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_network_conditions = \
+                DeviceAdministrationNetworkConditions_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_policy_sets = \
+                DeviceAdministrationPolicySets_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_service_names = \
+                DeviceAdministrationServiceNames_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_shell_profiles = \
+                DeviceAdministrationShellProfiles_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.device_administration_time_date_conditions = \
+                DeviceAdministrationTimeDateConditions_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.duo_identity_sync = \
+                DuoIdentitySync_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.duo_mfa = \
+                DuoMfa_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.endpoint_stop_replication_service = \
+                EndpointStopReplicationService_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.inbound_rule = \
+                InboundRule_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.licensing = \
+                Licensing_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.menu_access = \
+                MenuAccess_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
             self.misc = \
                 Misc_v3_5_0(
                     self._session_mnt, self.object_factory, self._validator
+                )
+            self.n_b_a_r_application_management = \
+                NBARApplicationManagement_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.native_ipsec = \
+                NativeIpsec_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_authentication_rules = \
+                NetworkAccessAuthenticationRules_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_authorization_exception_rules = \
+                NetworkAccessAuthorizationExceptionRules_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_authorization_global_exception_rules = \
+                NetworkAccessAuthorizationGlobalExceptionRules_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_authorization_profiles = \
+                NetworkAccessAuthorizationProfiles_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_authorization_rules = \
+                NetworkAccessAuthorizationRules_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_conditions = \
+                NetworkAccessConditions_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_dictionaries = \
+                NetworkAccessDictionaries_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_dictionary_attributes = \
+                NetworkAccessDictionaryAttributes_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_dictionary_attributes_list = \
+                NetworkAccessDictionaryAttributesList_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_identity_stores = \
+                NetworkAccessIdentityStores_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_m_f_a_rules = \
+                NetworkAccessMFARules_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.network_access_network_conditions = \
+                NetworkAccessNetworkConditions_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_policy_sets = \
+                NetworkAccessPolicySets_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_security_groups = \
+                NetworkAccessSecurityGroups_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_service_names = \
+                NetworkAccessServiceNames_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.network_access_time_date_conditions = \
+                NetworkAccessTimeDateConditions_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
                 )
             self.node_deployment = \
                 NodeDeployment_v3_5_0(
@@ -5111,25 +5551,101 @@ class IdentityServicesEngineAPI(object):
                 Nodeservices_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
+            self.outbound_rule = \
+                OutboundRule_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
             self.pan_ha = \
                 PanHa_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
             self.patch = \
                 Patch_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.patching = \
+                Patching_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.prometheus_alertmanager = \
+                PrometheusAlertmanager_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.r_b_a_c_policy = \
+                RBACPolicy_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.repository = \
+                Repository_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.sxp = \
+                Sxp_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.sxp_domainswithmappinganddevicescounts = \
+                SxpDomainswithmappinganddevicescounts_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.security_group_management = \
+                SecurityGroupManagement_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.sgt = \
+                Sgt_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.sgt_range_reservation = \
+                SgtRangeReservation_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
             self.subscriber = \
                 Subscriber_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
+            self.trust_sec_open_api_view = \
+                TrustSecOpenApiView_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.trustsec_c_o_a_push = \
+                TrustsecCOAPush_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.trustsec_http_s_server = \
+                TrustsecHttpSServer_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.trustsec_integration_rule_default_trustsec_integration_ruleset = \
+                TrustsecIntegrationRuleDefaultTrustsecIntegrationRuleset_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.trustsec_integration_rule_dictionaries = \
+                TrustsecIntegrationRuleDictionaries_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.trustsec_integration_rule_dictionary_attributes = \
+                TrustsecIntegrationRuleDictionaryAttributes_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.trustsec_settings = \
+                TrustsecSettings_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.trustsecdevicesreport = \
+                Trustsecdevicesreport_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
             self.upgrade = \
                 Upgrade_v3_5_0(
-                    self._session_ui, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
                 )
             self.user_equipment = \
                 UserEquipment_v3_5_0(
-                    self._session_ui, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.virtual_network_management = \
+                VirtualNetworkManagement_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
                 )
             self.acibindings = \
                 Acibindings_v3_5_0(
@@ -5149,7 +5665,7 @@ class IdentityServicesEngineAPI(object):
                 )
             self.adresourcereservation = \
                 Adresourcereservation_v3_5_0(
-                    self._session_ers, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
                 )
             self.allowedprotocols = \
                 Allowedprotocols_v3_5_0(
@@ -5181,11 +5697,15 @@ class IdentityServicesEngineAPI(object):
                 )
             self.ctsenvdata = \
                 Ctsenvdata_v3_5_0(
-                    self._session_ers, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
                 )
             self.ctsmatrix = \
                 Ctsmatrix_v3_5_0(
-                    self._session_ers, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.customattributes = \
+                Customattributes_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
                 )
             self.deploymentinfo = \
                 Deploymentinfo_v3_5_0(
@@ -5199,9 +5719,13 @@ class IdentityServicesEngineAPI(object):
                 Egressmatrixcell_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
+            self.enable_m_f_a = \
+                EnableMFA_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
             self.endpoint = \
                 Endpoint_v3_5_0(
-                    self._session_ers, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
                 )
             self.endpointcert = \
                 Endpointcert_v3_5_0(
@@ -5210,6 +5734,10 @@ class IdentityServicesEngineAPI(object):
             self.endpointgroup = \
                 Endpointgroup_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
+                )
+            self.endpoints = \
+                Endpoints_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
                 )
             self.externalradiusserver = \
                 Externalradiusserver_v3_5_0(
@@ -5255,6 +5783,10 @@ class IdentityServicesEngineAPI(object):
                 Internaluser_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
+            self.is_m_f_a_enabled = \
+                IsMFAEnabled_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
             self.ldap = \
                 Ldap_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
@@ -5281,7 +5813,7 @@ class IdentityServicesEngineAPI(object):
                 )
             self.portal = \
                 Portal_v3_5_0(
-                    self._session_ers, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
                 )
             self.portalglobalsetting = \
                 Portalglobalsetting_v3_5_0(
@@ -5295,6 +5827,22 @@ class IdentityServicesEngineAPI(object):
                 Profilerprofile_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
+            self.proxy = \
+                Proxy_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.px_grid_cloud = \
+                PxGridCloud_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.px_grid_direct = \
+                PxGridDirect_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
+            self.px_grid_direct_push_apis = \
+                PxGridDirectPushApis_v3_5_0(
+                    self._session_main, self.object_factory, self._validator
+                )
             self.pxgridnode = \
                 Pxgridnode_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
@@ -5307,13 +5855,9 @@ class IdentityServicesEngineAPI(object):
                 Radiusserversequence_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            # self.rbac_api_controller = \
-            #     RbacApiController_v3_5_0(
-            #         self._session_ers, self.object_factory, self._validator
-            #     )
             self.reportconfig = \
                 Reportconfig_v3_5_0(
-                    self._session_ers, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
                 )
             self.restidstore = \
                 Restidstore_v3_5_0(
@@ -5329,7 +5873,7 @@ class IdentityServicesEngineAPI(object):
                 )
             self.restidstorepredefinedregex = \
                 Restidstorepredefinedregex_v3_5_0(
-                    self._session_ers, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
                 )
             self.restidstoresettings = \
                 Restidstoresettings_v3_5_0(
@@ -5353,7 +5897,7 @@ class IdentityServicesEngineAPI(object):
                 )
             self.sgacls = \
                 Sgacls_v3_5_0(
-                    self._session_ers, self.object_factory, self._validator
+                    self._session_main, self.object_factory, self._validator
                 )
             self.sgmapping = \
                 Sgmapping_v3_5_0(
@@ -5391,10 +5935,6 @@ class IdentityServicesEngineAPI(object):
                 Sponsorportal_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            # self.stop_replication_api_controller = \
-            #     StopReplicationApiController_v3_5_0(
-            #         self._session_ers, self.object_factory, self._validator
-            #     )
             self.supportbundle = \
                 Supportbundle_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
@@ -5439,6 +5979,14 @@ class IdentityServicesEngineAPI(object):
                 Tacacsserversequence_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
+            self.tasks = \
+                Tasks_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
+            self.telemetry = \
+                Telemetry_v3_5_0(
+                    self._session_ui, self.object_factory, self._validator
+                )
             self.telemetryinfo = \
                 Telemetryinfo_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
@@ -5453,149 +6001,173 @@ class IdentityServicesEngineAPI(object):
     def _not_initialize_api_wrappers(self):
         """Function used when perform_initialize is False in class init.
         Defines the top-level properties as None."""
-        self.aci_bindings = None
-        self.aci_settings = None
+        self.aci_connection = None
+        self.aci_data = None
+        self.acibindings = None
+        self.acisettings = None
         self.active_directories = None
-        self.active_directory = None
-        self.ad_groups = None
-        self.admin_user = None
-        self.allowed_protocols = None
-        self.anc_endpoint = None
-        self.anc_policy = None
-        self.authorization_profile = None
+        self.activedirectory = None
+        self.a_d_groups = None
+        self.admin_groups = None
+        self.admin_users = None
+        self.adminuser = None
+        self.adresourcereservation = None
+        self.allowedprotocols = None
+        self.ancendpoint = None
+        self.ancpolicy = None
+        self.authorizationprofile = None
         self.backup_and_restore = None
-        self.byod_portal = None
-        self.certificate_profile = None
+        self.byodportal = None
+        self.certificateprofile = None
         self.certificates = None
-        self.certificate_template = None
-        self.clear_threats_and_vulnerabilities = None
+        self.certificatetemplate = None
+        self.classificationrule = None
         self.configuration = None
-        self.consumer = None
+        self.ctsenvdata = None
+        self.ctsmatrix = None
         self.custom_caller = None
-        self.custom_attributes = None
+        self.customattributes = None
+        self.data_access = None
         self.dataconnect_services = None
+        self.deploymentinfo = None
+        self.device_admin_m_f_a_rules = None
         self.device_administration_authentication_rules = None
         self.device_administration_authorization_exception_rules = None
         self.device_administration_authorization_global_exception_rules = None
         self.device_administration_authorization_rules = None
-        self.device_administration_command_set = None
+        self.device_administration_command_sets = None
         self.device_administration_conditions = None
         self.device_administration_dictionary_attributes_list = None
         self.device_administration_identity_stores = None
         self.device_administration_network_conditions = None
-        self.device_administration_policy_set = None
-        self.device_administration_profiles = None
+        self.device_administration_policy_sets = None
         self.device_administration_service_names = None
+        self.device_administration_shell_profiles = None
         self.device_administration_time_date_conditions = None
-        self.downloadable_acl = None
+        self.downloadableacl = None
         self.duo_identity_sync = None
         self.duo_mfa = None
-        self.edda = None
-        self.egress_matrix_cell = None
-        self.enable_mfa = None
+        self.egressmatrixcell = None
+        self.enable_m_f_a = None
         self.endpoint = None
         self.endpoint_stop_replication_service = None
-        self.endpoint_certificate = None
-        self.endpoint_identity_group = None
+        self.endpointcert = None
+        self.endpointgroup = None
         self.endpoints = None
-        self.external_radius_server = None
-        self.filter_policy = None
-        self.full_upgrade = None
-        self.guest_location = None
-        self.guest_smtp_notification_configuration = None
-        self.guest_ssid = None
-        self.guest_type = None
-        self.guest_user = None
-        self.hotspot_portal = None
-        self.identity_groups = None
-        self.identity_sequence = None
-        self.internal_user = None
-        self.ip_to_sgt_mapping = None
-        self.ip_to_sgt_mapping_group = None
-        self.is_mfa_enabled = None
+        self.externalradiusserver = None
+        self.filterpolicy = None
+        self.guestlocation = None
+        self.guestsmtpnotificationsettings = None
+        self.guestssid = None
+        self.guesttype = None
+        self.guestuser = None
+        self.hotspotportal = None
+        self.identitygroup = None
+        self.idstoresequence = None
+        self.inbound_rule = None
+        self.internaluser = None
+        self.is_m_f_a_enabled = None
+        self.ldap = None
         self.licensing = None
-        self.mdm = None
+        self.menu_access = None
         self.misc = None
-        self.my_device_portal = None
+        self.mydeviceportal = None
         self.native_ipsec = None
-        self.native_supplicant_profile = None
-        self.nbar_app = None
+        self.n_b_a_r_application_management = None
         self.network_access_authentication_rules = None
         self.network_access_authorization_exception_rules = None
         self.network_access_authorization_global_exception_rules = None
+        self.network_access_authorization_profiles = None
         self.network_access_authorization_rules = None
         self.network_access_conditions = None
-        self.network_access_dictionary = None
-        self.network_access_dictionary_attribute = None
+        self.network_access_dictionaries = None
+        self.network_access_dictionary_attributes = None
         self.network_access_dictionary_attributes_list = None
         self.network_access_identity_stores = None
+        self.network_access_m_f_a_rules = None
         self.network_access_network_conditions = None
-        self.network_access_policy_set = None
-        self.network_access_profiles = None
+        self.network_access_policy_sets = None
         self.network_access_security_groups = None
         self.network_access_service_names = None
         self.network_access_time_date_conditions = None
-        self.network_device = None
-        self.network_device_group = None
+        self.networkdevice = None
+        self.networkdevicegroup = None
+        self.node = None
         self.node_deployment = None
         self.node_group = None
-        self.node_services = None
-        self.node_details = None
+        self.nodeservices = None
+        self.nspprofile = None
+        self.outbound_rule = None
         self.pan_ha = None
+        self.patch = None
         self.patching = None
         self.portal = None
-        self.portal_global_setting = None
-        self.portal_theme = None
-        self.profiler = None
-        self.profiler_profile = None
-        self.provider = None
+        self.portalglobalsetting = None
+        self.portaltheme = None
+        self.profilerprofile = None
+        self.prometheus_alertmanager = None
         self.proxy = None
-        self.psn_node_details_with_radius_service = None
-        self.pull_deployment_info = None
+        self.px_grid_cloud = None
         self.px_grid_direct = None
-        self.px_grid_node = None
-        self.px_grid_settings = None
-        self.radius_failure = None
-        self.radius_server_sequence = None
-        self.replication_status = None
+        self.px_grid_direct_push_apis = None
+        self.pxgridnode = None
+        self.pxgridsettings = None
+        self.radiusserversequence = None
+        self.r_b_a_c_policy = None
+        self.reportconfig = None
         self.repository = None
-        self.restid_store = None
-        self.security_groups = None
-        self.security_groups_acls = None
-        self.security_group_to_virtual_network = None
-        self.self_registered_portal = None
-        self.session_directory = None
+        self.restidstore = None
+        self.restidstoreattribute = None
+        self.restidstoredeviceattribute = None
+        self.restidstorepredefinedregex = None
+        self.restidstoresettings = None
+        self.security_group_management = None
+        self.selfregportal = None
+        self.service = None
+        self.sessionservicenode = None
+        self.sgacl = None
+        self.sgacls = None
+        self.sgmapping = None
+        self.sgmappinggroup = None
+        self.sgt = None
         self.sgt_range_reservation = None
-        self.sg_vn_mapping = None
-        self.sms_provider = None
-        self.sponsored_guest_portal = None
-        self.sponsor_group = None
-        self.sponsor_group_member = None
-        self.sponsor_portal = None
+        self.sgtvnvlan = None
+        self.smsprovider = None
+        self.sponsoredguestportal = None
+        self.sponsorgroup = None
+        self.sponsorgroupmember = None
+        self.sponsorportal = None
         self.subscriber = None
-        self.support_bundle_download = None
-        self.support_bundle_status = None
-        self.support_bundle_trigger_configuration = None
-        self.sxp_connections = None
-        self.sxp_local_bindings = None
-        self.sxp_vpns = None
-        self.sync_ise_node = None
-        self.system_health = None
-        self.system_certificate = None
-        self.tacacs_command_sets = None
-        self.tacacs_external_servers = None
-        self.tacacs_profile = None
-        self.tacacs_server_sequence = None
+        self.supportbundle = None
+        self.supportbundledownload = None
+        self.supportbundlestatus = None
+        self.sxp = None
+        self.sxp_domainswithmappinganddevicescounts = None
+        self.sxpconnections = None
+        self.sxplocalbindings = None
+        self.sxpvpns = None
+        self.systemcertificate = None
+        self.tacacscommandsets = None
+        self.tacacsexternalservers = None
+        self.tacacsprofile = None
+        self.tacacsserversequence = None
         self.tasks = None
         self.telemetry = None
-        self.telemetry_information = None
-        self.trust_sec_configuration = None
-        self.trust_sec_sxp = None
+        self.telemetryinfo = None
+        self.threat = None
+        self.trustsec_c_o_a_push = None
+        self.trustsecdevicesreport = None
+        self.trustsec_http_s_server = None
+        self.trustsec_integration_rule_default_trustsec_integration_ruleset = None
+        self.trustsec_integration_rule_dictionaries = None
+        self.trustsec_integration_rule_dictionary_attributes = None
+        self.trust_sec_open_api_view = None
+        self.trustsec_settings = None
+        self.upgrade = None
         self.user_equipment = None
-        self.version_and_patch = None
-        self.version_info = None
-        self.virtual_network = None
-        self.vn_vlan_mapping = None
+        self.virtual_network_management = None
+
+  
 
     def initialize_authentication(self):
         """
