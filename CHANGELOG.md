@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [2.4.1] - 2025-10-15
+### Changed
+- Updated minimum Python version requirement from 3.8 to 3.9
+- Updated setuptools to >=78.1.1 to address security vulnerabilities
+
 ## [2.4.0] - 2025-10-15
 ### Added
 - `ciscoisesdk` now supports ISE 3.5.0 API services with full endpoint coverage including:
@@ -516,4 +522,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.3.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.2.3...v2.3.0
 [2.3.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.0...v2.3.1
 [2.4.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.1...v2.4.0
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.0...develop
+[2.4.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.0...v2.4.1
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.1...develop
