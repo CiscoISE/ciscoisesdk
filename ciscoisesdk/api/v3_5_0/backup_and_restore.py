@@ -28,7 +28,6 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 from builtins import *
 
 
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -165,7 +164,7 @@ class BackupAndRestore(object):
             self._request_validator('jsd_d36705e4ea10ff389eb4560e8_v3_5_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/api/v1/backup-restore/config/backup')
+        e_url = ('/api/v1/backup-restore/config/backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -224,7 +223,7 @@ class BackupAndRestore(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/api/v1/backup-restore/config/cancel-backup')
+        e_url = ('/api/v1/backup-restore/config/cancel-backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         if with_custom_headers:
@@ -280,7 +279,7 @@ class BackupAndRestore(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/api/v1/backup-restore/config/last-backup-status')
+        e_url = ('/api/v1/backup-restore/config/last-backup-status')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -383,7 +382,7 @@ class BackupAndRestore(object):
             self._request_validator('jsd_e8c83524868d5e36bf55898fe98986d4_v3_5_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/api/v1/backup-restore/config/restore')
+        e_url = ('/api/v1/backup-restore/config/restore')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -542,7 +541,7 @@ class BackupAndRestore(object):
             self._request_validator('jsd_f4986163231d500bb1c95b2970c5f4ba_v3_5_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/api/v1/backup-restore/config/schedule-config-'
+        e_url = ('/api/v1/backup-restore/config/schedule-config-'
                  + 'backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
@@ -703,7 +702,7 @@ class BackupAndRestore(object):
             self._request_validator('jsd_d7464172ff587b97437ffc1ae2bedf_v3_5_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/api/v1/backup-restore/config/schedule-config-'
+        e_url = ('/api/v1/backup-restore/config/schedule-config-'
                  + 'backup')
         endpoint_full_url = apply_path_params(e_url, path_params)
 

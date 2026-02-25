@@ -45,6 +45,14 @@ DEFAULT_WAIT_ON_RATE_LIMIT = True
 #: Controls whether to verify the server's TLS certificate or not.
 DEFAULT_VERIFY = True
 
+#: **client_cert** default value.
+#: Path to the client certificate file for mTLS authentication.
+DEFAULT_CLIENT_CERT = None
+
+#: **client_key** default value.
+#: Path to the client private key file for mTLS authentication.
+DEFAULT_CLIENT_KEY = None
+
 #: **uses_api_gateway** default value.
 #: Controls whether ISE use the gateway or not.
 DEFAULT_USES_API_GATEWAY = True

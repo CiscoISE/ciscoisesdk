@@ -28,7 +28,6 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 from builtins import *
 
 
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -116,7 +115,7 @@ class Repository(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/api/v1/repository')
+        e_url = ('/api/v1/repository')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -207,7 +206,7 @@ class Repository(object):
             self._request_validator('jsd_ed481a14015bc993e550c973f5dc56_v3_5_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/api/v1/repository')
+        e_url = ('/api/v1/repository')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -273,7 +272,7 @@ class Repository(object):
             'repositoryName': repository_name,
         }
 
-        e_url = ('/api/v1/api/v1/repository/{repositoryName}')
+        e_url = ('/api/v1/repository/{repositoryName}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -370,7 +369,7 @@ class Repository(object):
             self._request_validator('jsd_bdaaa4eaf4c5ae9bebbcf3a3e1d5416_v3_5_0')\
                 .validate(_payload)
 
-        e_url = ('/api/v1/api/v1/repository/{repositoryName}')
+        e_url = ('/api/v1/repository/{repositoryName}')
         endpoint_full_url = apply_path_params(e_url, path_params)
 
         request_params = {'data': _payload} if is_xml_payload else {'json': _payload}
@@ -436,7 +435,7 @@ class Repository(object):
             'repositoryName': repository_name,
         }
 
-        e_url = ('/api/v1/api/v1/repository/{repositoryName}')
+        e_url = ('/api/v1/repository/{repositoryName}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.delete(endpoint_full_url, params=_params,
@@ -498,7 +497,7 @@ class Repository(object):
             'repositoryName': repository_name,
         }
 
-        e_url = ('/api/v1/api/v1/repository/{repositoryName}/files')
+        e_url = ('/api/v1/repository/{repositoryName}/files')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,

@@ -6,6 +6,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.2] - 2026-02-25
+### Added
+- Certificate-based authentication (mTLS) support for all API calls.
+  New parameters `client_cert` and `client_key` accepted by
+  `IdentityServicesEngineAPI` and `RestSession`. Supports ISE 3.3+
+  certificate-only API auth mode (no username/password required when a
+  client certificate is provided). Configurable via environment variables
+  `IDENTITY_SERVICES_ENGINE_CLIENT_CERT` and
+  `IDENTITY_SERVICES_ENGINE_CLIENT_KEY`.
+
+### Fixed
+- **ISE 3.5.0** (`v3_5_0`): Corrected duplicate `/api/v1/` prefix in 14
+  endpoint URLs across three modules (closes #82):
+  + `backup_and_restore`: `config_backup`, `cancel_backup`,
+    `get_last_config_backup_status`, `restore_config_backup`,
+    `update_scheduled_config_backup` (GET/PUT)
+  + `tasks`: `get_all_tasks`, `get_task_status`
+  + `repository`: `get_repositories`, `create_repository`,
+    `get_repository`, `update_repository`, `delete_repository`,
+    `get_repository_files`
+
 
 ## [2.4.1] - 2025-10-15
 ### Changed
@@ -523,4 +544,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.3.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.0...v2.3.1
 [2.4.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.1...v2.4.0
 [2.4.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.0...v2.4.1
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.1...develop
+[2.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.1...v2.4.2
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.2...develop

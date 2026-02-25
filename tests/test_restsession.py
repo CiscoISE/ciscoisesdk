@@ -29,6 +29,8 @@ import warnings
 import ciscoisesdk
 import pytest
 
+from ciscoisesdk.restsession import RestSession
+
 logging.captureWarnings(True)
 
 
@@ -60,3 +62,41 @@ def test_rate_limit_retry(api):
                 break
     api.wait_on_rate_limit = original_wait_on_rate_limit
     api.reinitialize()
+
+
+def test_client_cert_and_key(tmp_path):
+    cert_file = tmp_path / 'client.crt'
+    key_file = tmp_path / 'client.key'
+    cert_file.write_text('dummy cert')
+    key_file.write_text('dummy key')
+
+    session = RestSession(
+        get_access_token=lambda: 'token',
+        access_token='token',
+        base_url='https://example.local',
+        verify=True,
+        client_cert=str(cert_file),
+        client_key=str(key_file),
+        version='3.3_patch_1',
+        wait_on_rate_limit=False,
+        uses_csrf_token=False,
+    )
+
+    assert session.cert == (str(cert_file), str(key_file))
+
+
+def test_client_key_without_cert_raises(tmp_path):
+    key_file = tmp_path / 'client.key'
+    key_file.write_text('dummy key')
+
+    with pytest.raises(ValueError):
+        RestSession(
+            get_access_token=lambda: 'token',
+            access_token='token',
+            base_url='https://example.local',
+            verify=True,
+            client_key=str(key_file),
+            version='3.3_patch_1',
+            wait_on_rate_limit=False,
+            uses_csrf_token=False,
+        )

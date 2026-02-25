@@ -78,6 +78,8 @@ With ciscoisesdk, the above Python code can be consolidated to the following:
 
 + Controls whether to verify the server's TLS certificate or not according to the verify parameter.
 
++ Supports client certificate (mTLS) authentication and CA bundle pinning via the client_cert, client_key, and verify parameters.
+
 + Reads your Identity Services Engine debug from environment variable IDENTITY_SERVICES_ENGINE_DEBUG. Boolean, it controls whether to log information about Identity Services Engine APIs' request and response process.
 
 + Wraps and represents all Identity Services Engine API calls as a simple hierarchical tree of

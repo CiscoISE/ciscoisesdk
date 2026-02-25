@@ -28,7 +28,6 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 from builtins import *
 
 
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -166,7 +165,7 @@ class NodeGroup(object):
         "site6","marCache": {"replication-timeout": 5}}
         NOTE 1:  : Node group name and description cannot
         contain any of the following characters: ! % ^ : ; , . ~
-        @ # & [ { ( | ) } ] ` > <  / \ " + = ?  NOTE 2:  :
+        @ # & [ { ( | ) } ] ` > <  / \\ " + = ?  NOTE 2:  :
         Parameter marCache stands for Machine Access Restriction
         (MAR) cache that provides an additional means of
         controlling authorization for Active Directory-

@@ -28,6 +28,7 @@ import logging
 import os
 import re
 import socket
+import stat
 import time
 import urllib.parse
 import warnings
@@ -136,6 +137,8 @@ class RestSession(object):
                  single_request_timeout=DEFAULT_SINGLE_REQUEST_TIMEOUT,
                  wait_on_rate_limit=DEFAULT_WAIT_ON_RATE_LIMIT,
                  verify=DEFAULT_VERIFY,
+                 client_cert=None,
+                 client_key=None,
                  version=None,
                  headers={'Content-type': 'application/json;charset=utf-8',
                           'Accept': 'application/json'},
@@ -158,6 +161,8 @@ class RestSession(object):
             verify(bool,str): Controls whether we verify the server's
                 TLS certificate, or a string, in which case it must be a path
                 to a CA bundle to use.
+            client_cert(str): Path to the client certificate file (.pem/.crt).
+            client_key(str): Path to the client private key file (.key).
             version(str): Controls which version of IDENTITY_SERVICES_ENGINE to use.
                 Defaults to ciscoisesdk.config.IDENTITY_SERVICES_ENGINE_VERSION
             headers(dict): Allows to add headers to RestSession requests.
@@ -173,11 +178,13 @@ class RestSession(object):
             TypeError: If the parameter types are incorrect.
 
         """
-        check_type(access_token, str, may_be_none=False)
+        check_type(access_token, str)
         check_type(base_url, str, may_be_none=False)
         check_type(single_request_timeout, int)
         check_type(wait_on_rate_limit, bool, may_be_none=False)
         check_type(verify, (bool, str), may_be_none=False)
+        check_type(client_cert, str)
+        check_type(client_key, str)
         check_type(version, str, may_be_none=False)
         check_type(debug, (bool), may_be_none=False)
         check_type(uses_csrf_token, (bool), may_be_none=False)
@@ -190,10 +197,13 @@ class RestSession(object):
         self._get_csrf_token = get_csrf_token
         self._csrf_token = None
         self._uses_csrf_token = uses_csrf_token
-        self._access_token = str(access_token)
+        self._access_token = str(access_token) if access_token is not None else None
         self._single_request_timeout = single_request_timeout
         self._wait_on_rate_limit = wait_on_rate_limit
         self._verify = verify
+        self._client_cert = client_cert
+        self._client_key = client_key
+        self._cert = self._build_client_cert()
         self._version = version
         self._debug = debug
 
@@ -210,7 +220,8 @@ class RestSession(object):
         self._req_session = requests.session()
 
         # Update the headers of the `requests` session
-        self.update_headers({'authorization': 'Basic ' + access_token})
+        if self._access_token is not None:
+            self.update_headers({'authorization': 'Basic ' + self._access_token})
         self.update_headers({'User-Agent': f'python-cisco-ise/{version}'})
         if headers and isinstance(headers, dict):
             self.update_headers(headers)
@@ -230,6 +241,62 @@ class RestSession(object):
         """The verify (TLS Certificate) for the API endpoints."""
         check_type(value, (bool, str), may_be_none=False)
         self._verify = value
+
+    @property
+    def client_cert(self):
+        """The client certificate path for mTLS authentication."""
+        return self._client_cert
+
+    @client_cert.setter
+    def client_cert(self, value):
+        """The client certificate path for mTLS authentication."""
+        check_type(value, str)
+        self._client_cert = value
+        self._cert = self._build_client_cert()
+
+    @property
+    def client_key(self):
+        """The client private key path for mTLS authentication."""
+        return self._client_key
+
+    @client_key.setter
+    def client_key(self, value):
+        """The client private key path for mTLS authentication."""
+        check_type(value, str)
+        self._client_key = value
+        self._cert = self._build_client_cert()
+
+    @property
+    def cert(self):
+        """The Requests 'cert' value derived from client cert/key."""
+        return self._cert
+
+    def _validate_cert_path(self, path, name):
+        if path is None:
+            return None
+        if not os.path.isfile(path):
+            raise ValueError('{0} file does not exist: {1}'.format(name, path))
+        if name == 'client_key' and os.name != 'nt':
+            mode = os.stat(path).st_mode
+            group_or_other = stat.S_IRWXG | stat.S_IRWXO
+            if mode & group_or_other:
+                warnings.warn(
+                    'client_key has group/other permissions set: {0}'.format(path),
+                    UserWarning,
+                )
+        return path
+
+    def _build_client_cert(self):
+        if self._client_key and not self._client_cert:
+            raise ValueError('client_key provided without client_cert')
+
+        if self._client_cert:
+            self._validate_cert_path(self._client_cert, 'client_cert')
+            if self._client_key:
+                self._validate_cert_path(self._client_key, 'client_key')
+                return (self._client_cert, self._client_key)
+            return self._client_cert
+        return None
 
     @property
     def base_url(self):
@@ -324,8 +391,11 @@ class RestSession(object):
         """Call the get_access_token method and update the session's
         auth header with the new token.
         """
+        if self._get_access_token is None or not callable(self._get_access_token):
+            return
         self._access_token = self._get_access_token()
-        self.update_headers({'authorization': 'Basic {}'.format(self._access_token)})
+        if self._access_token is not None:
+            self.update_headers({'authorization': 'Basic {}'.format(self._access_token)})
 
     def set_csrf_token(self):
         """Call the get_csrf_token method and update the session's
@@ -468,6 +538,7 @@ class RestSession(object):
         # Update request kwargs with session defaults
         kwargs.setdefault('timeout', self.single_request_timeout)
         kwargs.setdefault('verify', self.verify)
+        kwargs.setdefault('cert', self.cert)
 
         # Fixes requests inconsistent behavior with additional parameters
         if not kwargs.get('json'):
@@ -530,7 +601,12 @@ class RestSession(object):
                     raise
             except ApiError as e:
                 self.reset_csrf_token()
-                if e.status_code == 401 and custom_refresh < 1:
+                can_refresh = (
+                    self._get_access_token is not None
+                    and callable(self._get_access_token)
+                    and self._access_token is not None
+                )
+                if e.status_code == 401 and custom_refresh < 1 and can_refresh:
                     logger.debug(pprint_response_info(response))
                     logger.debug('Refreshing access token')
                     self.refresh_token()

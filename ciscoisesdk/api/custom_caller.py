@@ -146,6 +146,7 @@ class CustomCaller(object):
             headers.update(kwargs.pop('headers'))
 
         verify = kwargs.pop("verify", self._session.verify)
+        cert = kwargs.pop("cert", self._session.cert)
 
         logger.debug(pprint_request_info(abs_url, method,
                                          headers,
@@ -154,6 +155,7 @@ class CustomCaller(object):
                                                       abs_url,
                                                       headers=headers,
                                                       verify=verify,
+                                                      cert=cert,
                                                       **kwargs)
 
         if raise_exception:
