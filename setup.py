@@ -33,18 +33,16 @@ PACKAGE_CLASSIFIERS = [
     'Natural Language :: English',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.9',
-    'Programming Language :: Python :: 3.10',
-    'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
     'Topic :: System',
     'Topic :: System :: Networking',
     'Topic :: Utilities'
 ]
 
 INSTALLATION_REQUIREMENTS = [
-    'requests>=2.27.1',
-    'xmltodict==0.12.0',
+    'requests>=2.32.0',
+    'xmltodict==1.0.2',
     'fastjsonschema>=2.16.2',
     'requests-toolbelt>=1.0.0',
 ]

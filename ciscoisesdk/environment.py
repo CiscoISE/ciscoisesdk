@@ -56,6 +56,12 @@ VERIFY_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_VERIFY'
 #: name of the environment verify variable
 VERIFY_STRING_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_VERIFY_STRING'
 
+#: name of the environment client certificate variable
+CLIENT_CERT_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_CLIENT_CERT'
+
+#: name of the environment client private key variable
+CLIENT_KEY_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_CLIENT_KEY'
+
 #: name of the environment uses_api_gateway variable
 USES_API_GATEWAY_ENVIRONMENT_VARIABLE = 'IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY'
 
@@ -145,6 +151,18 @@ def get_env_verify():
         VERIFY_STRING_ENVIRONMENT_VARIABLE, str, str) or \
         _get_env_value(VERIFY_ENVIRONMENT_VARIABLE, bool, is_bool)
     return IDENTITY_SERVICES_ENGINE_VERIFY
+
+
+def get_env_client_cert():
+    IDENTITY_SERVICES_ENGINE_CLIENT_CERT = _get_env_value(
+        CLIENT_CERT_ENVIRONMENT_VARIABLE, str, str)
+    return IDENTITY_SERVICES_ENGINE_CLIENT_CERT
+
+
+def get_env_client_key():
+    IDENTITY_SERVICES_ENGINE_CLIENT_KEY = _get_env_value(
+        CLIENT_KEY_ENVIRONMENT_VARIABLE, str, str)
+    return IDENTITY_SERVICES_ENGINE_CLIENT_KEY
 
 
 def get_env_uses_api_gateway():

@@ -31,6 +31,8 @@ from ciscoisesdk.config import (
     DEFAULT_SINGLE_REQUEST_TIMEOUT,
     DEFAULT_USES_API_GATEWAY,
     DEFAULT_USES_CSRF_TOKEN,
+    DEFAULT_CLIENT_CERT,
+    DEFAULT_CLIENT_KEY,
     DEFAULT_VERIFY,
     DEFAULT_VERSION,
     DEFAULT_WAIT_ON_RATE_LIMIT,
@@ -2434,6 +2436,8 @@ class IdentityServicesEngineAPI(object):
                  single_request_timeout=None,
                  wait_on_rate_limit=None,
                  verify=None,
+                 client_cert=None,
+                 client_key=None,
                  version=None,
                  debug=None,
                  uses_csrf_token=None,
@@ -2505,6 +2509,14 @@ class IdentityServicesEngineAPI(object):
                 (or IDENTITY_SERVICES_ENGINE_VERIFY_STRING) environment variable or
                 ciscoisesdk.config.DEFAULT_VERIFY if the environment
                 variables are not set.
+            client_cert(str): Path to the client certificate file (.pem/.crt).
+                Defaults to the IDENTITY_SERVICES_ENGINE_CLIENT_CERT environment
+                variable or ciscoisesdk.config.DEFAULT_CLIENT_CERT if the
+                environment variable is not set.
+            client_key(str): Path to the client private key file (.key).
+                Defaults to the IDENTITY_SERVICES_ENGINE_CLIENT_KEY environment
+                variable or ciscoisesdk.config.DEFAULT_CLIENT_KEY if the
+                environment variable is not set.
             version(str): Controls which version of IDENTITY_SERVICES_ENGINE to use.
                 Defaults to the IDENTITY_SERVICES_ENGINE_VERSION environment variable or
                 ciscoisesdk.config.DEFAULT_VERSION
@@ -2560,6 +2572,8 @@ class IdentityServicesEngineAPI(object):
         self._single_request_timeout = single_request_timeout
         self._wait_on_rate_limit = wait_on_rate_limit
         self._verify = verify
+        self._client_cert = client_cert
+        self._client_key = client_key
         self._debug = debug
 
         if uses_api_gateway is None:
@@ -2587,6 +2601,16 @@ class IdentityServicesEngineAPI(object):
             if self._verify is None:
                 self._verify = DEFAULT_VERIFY
 
+        if client_cert is None:
+            self._client_cert = ciscoise_environment.get_env_client_cert()
+            if self._client_cert is None:
+                self._client_cert = DEFAULT_CLIENT_CERT
+
+        if client_key is None:
+            self._client_key = ciscoise_environment.get_env_client_key()
+            if self._client_key is None:
+                self._client_key = DEFAULT_CLIENT_KEY
+
         if debug is None:
             self._debug = ciscoise_environment.get_env_debug()
             if self._debug is None:
@@ -2601,6 +2625,8 @@ class IdentityServicesEngineAPI(object):
         check_type(self._password, str, may_be_none=True)
         check_type(self._encoded_auth, str, may_be_none=True)
         check_type(self._verify, (bool, str), may_be_none=False)
+        check_type(self._client_cert, str)
+        check_type(self._client_key, str)
         check_type(self._version, str, may_be_none=False)
 
         if isinstance(self._uses_api_gateway, str):
@@ -2632,7 +2658,8 @@ class IdentityServicesEngineAPI(object):
             self._debug = 'true' in self._debug.lower()
 
         # Check if the user has provided the required basicAuth parameters
-        if self._encoded_auth is None and (self._username is None or self._password is None):
+        cert_only = self._client_cert is not None
+        if not cert_only and self._encoded_auth is None and (self._username is None or self._password is None):
             raise AccessTokenError(
                 "You need an access token to interact with the Identity Services Engine"
                 " APIs. Identity Services Engine uses HTTP Basic Auth."
@@ -2684,6 +2711,8 @@ class IdentityServicesEngineAPI(object):
         to get the Identity Services Engine access token using the
         username, password, encoded_auth defined.
         """
+        if self._encoded_auth is None and (self._username is None or self._password is None):
+            return None
         if hasattr(self, '_authentication'):
             if hasattr(self._authentication, 'authentication_api'):
                 return self._authentication.authentication_api(
@@ -2705,6 +2734,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 debug=self._debug,
                 uses_csrf_token=self._uses_csrf_token,
@@ -2717,6 +2748,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 debug=self._debug,
                 uses_csrf_token=self._uses_csrf_token,
@@ -2730,6 +2763,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 headers={'Content-type': 'application/xml;charset=utf-8',
                          'Accept': 'application/xml'},
@@ -2744,6 +2779,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 debug=self._debug,
                 uses_csrf_token=self._uses_csrf_token,
@@ -2756,6 +2793,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 debug=self._debug,
                 uses_csrf_token=self._uses_csrf_token,
@@ -2769,6 +2808,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 debug=self._debug,
                 uses_csrf_token=self._uses_csrf_token,
@@ -2781,6 +2822,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 debug=self._debug,
                 uses_csrf_token=self._uses_csrf_token,
@@ -2794,6 +2837,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 headers={'Content-type': 'application/xml;charset=utf-8',
                          'Accept': 'application/xml'},
@@ -2808,6 +2853,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 debug=self._debug,
                 uses_csrf_token=self._uses_csrf_token,
@@ -2820,6 +2867,8 @@ class IdentityServicesEngineAPI(object):
                 single_request_timeout=self._single_request_timeout,
                 wait_on_rate_limit=self._wait_on_rate_limit,
                 verify=self._verify,
+                client_cert=self._client_cert,
+                client_key=self._client_key,
                 version=self._version,
                 debug=self._debug,
                 uses_csrf_token=self._uses_csrf_token,
@@ -6267,6 +6316,16 @@ class IdentityServicesEngineAPI(object):
         return self._verify
 
     @property
+    def client_cert(self):
+        """The client certificate path for mTLS authentication."""
+        return self._client_cert
+
+    @property
+    def client_key(self):
+        """The client private key path for mTLS authentication."""
+        return self._client_key
+
+    @property
     def version(self):
         """The API version of Identity Services Engine."""
         return self._version
@@ -6426,6 +6485,24 @@ class IdentityServicesEngineAPI(object):
         check_type(value, (bool, str), may_be_none=False)
         self._verify = value
         warnings.warn("Changed verify. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
+
+    @client_cert.setter
+    def client_cert(self, value):
+        """The client certificate path for mTLS authentication.
+
+        It may require to call reinitialize to distribute the changes accross the SDK objects."""
+        check_type(value, str)
+        self._client_cert = value
+        warnings.warn("Changed client_cert. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
+
+    @client_key.setter
+    def client_key(self, value):
+        """The client private key path for mTLS authentication.
+
+        It may require to call reinitialize to distribute the changes accross the SDK objects."""
+        check_type(value, str)
+        self._client_key = value
+        warnings.warn("Changed client_key. It requires to call reinitialize to distribute the change accross the SDK objects.", UserWarning)
 
     @version.setter
     def version(self, value):

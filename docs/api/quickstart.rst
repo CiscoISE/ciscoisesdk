@@ -56,6 +56,12 @@ By default, ciscoisesdk will look for the following environment variables to cre
 
     * ``IDENTITY_SERVICES_ENGINE_VERIFY`` - Controls whether to verify the server's TLS certificate or not. Defaults to True.
 
+    * ``IDENTITY_SERVICES_ENGINE_VERIFY_STRING`` - Path to a CA bundle file for TLS verification.
+
+    * ``IDENTITY_SERVICES_ENGINE_CLIENT_CERT`` - Path to the client certificate file for mTLS authentication.
+
+    * ``IDENTITY_SERVICES_ENGINE_CLIENT_KEY`` - Path to the client private key file for mTLS authentication.
+
 __ https://12factor.net/config
 
 
@@ -171,6 +177,85 @@ when creating a new :class:`IdentityServicesEngineAPI` connection object.
     ...                                 base_url="https://dcloud-dna-ise-rtp.cisco.com",
     ...                                 version='3.3_patch_1',
     ...                                 uses_csrf_token=True)
+
+
+  Certificate-based authentication (mTLS)
+  ---------------------------------------
+
+  ISE 3.3+ supports certificate-based API authentication (RFC 8705 mTLS).
+  The client presents a certificate during the TLS handshake; ISE validates
+  it against a trusted CA and grants access without requiring a username or
+  password.
+
+  **Cert-only mode** (recommended for ISE 3.3+ certificate-based API auth):
+
+  .. code-block:: python
+
+    >>> from ciscoisesdk import IdentityServicesEngineAPI
+    >>> api = IdentityServicesEngineAPI(
+    ...     uses_api_gateway=True,
+    ...     base_url='https://ise.example.com',
+    ...     version='3.3_patch_1',
+    ...     verify='/path/to/ca-bundle.pem',
+    ...     client_cert='/path/to/client.crt',
+    ...     client_key='/path/to/client.key',
+    ... )
+
+  When ``username``/``password``/``encoded_auth`` are all omitted (or ``None``)
+  and ``client_cert`` is provided, the SDK will not send an ``Authorization``
+  header — authentication is handled entirely by the mutual TLS handshake.
+
+  .. note::
+      The private key file (``client_key``) should have permissions ``0600``
+      (owner read/write only). The SDK will warn you if the key file has
+      group or other read permissions set.
+
+  **mTLS with additional Basic Auth** (cert + credentials):
+
+  You can also combine mTLS with Basic Auth if your ISE configuration requires
+  both. Provide ``client_cert``/``client_key`` alongside credentials:
+
+  .. code-block:: python
+
+    >>> from ciscoisesdk import IdentityServicesEngineAPI
+    >>> api = IdentityServicesEngineAPI(
+    ...     username='admin',
+    ...     password='C1sco12345',
+    ...     uses_api_gateway=True,
+    ...     base_url='https://ise.example.com',
+    ...     version='3.3_patch_1',
+    ...     verify='/path/to/ca-bundle.pem',
+    ...     client_cert='/path/to/client.crt',
+    ...     client_key='/path/to/client.key',
+    ... )
+
+  **Environment variables** for cert-only mode:
+
+  .. code-block:: bash
+
+    $ export IDENTITY_SERVICES_ENGINE_BASE_URL=https://ise.example.com
+    $ export IDENTITY_SERVICES_ENGINE_VERSION=3.3_patch_1
+    $ export IDENTITY_SERVICES_ENGINE_USES_API_GATEWAY=True
+    $ export IDENTITY_SERVICES_ENGINE_VERIFY=/path/to/ca-bundle.pem
+    $ export IDENTITY_SERVICES_ENGINE_CLIENT_CERT=/path/to/client.crt
+    $ export IDENTITY_SERVICES_ENGINE_CLIENT_KEY=/path/to/client.key
+    $ python myscript.py
+
+  **Ansible module compatibility:**
+
+  When using the ``cisco.ise`` Ansible collection with cert-based auth,
+  pass ``ise_client_cert`` and ``ise_client_key`` as task parameters.
+  The ``ise_username``/``ise_password`` parameters become optional when
+  cert-only mode is configured on your ISE:
+
+  .. code-block:: yaml
+
+    - name: Get allowed protocols
+      cisco.ise.allowed_protocols_info:
+        ise_hostname: ise.example.com
+        ise_verify: /path/to/ca-bundle.pem
+        ise_client_cert: /path/to/client.crt
+        ise_client_key: /path/to/client.key
 
 
 Use the arguments to provide the URLs required depending on the uses_api_gateway value.

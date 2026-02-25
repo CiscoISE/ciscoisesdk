@@ -740,6 +740,56 @@ class TestIdentityServicesEngineSDK:
             DEFAULT_WAIT_ON_RATE_LIMIT
 
     @pytest.mark.ciscoisesdk
+    def test_client_cert_and_key(self, base_url, tmp_path):
+        cert_file = tmp_path / 'client.crt'
+        key_file = tmp_path / 'client.key'
+        cert_file.write_text('dummy cert')
+        key_file.write_text('dummy key')
+
+        connection_object = ciscoisesdk.IdentityServicesEngineAPI(
+            username=IDENTITY_SERVICES_ENGINE_USERNAME,
+            password=IDENTITY_SERVICES_ENGINE_PASSWORD,
+            encoded_auth=IDENTITY_SERVICES_ENGINE_ENCODED_AUTH,
+            base_url=base_url,
+            verify=DEFAULT_VERIFY,
+            version=IDENTITY_SERVICES_ENGINE_VERSION,
+            uses_api_gateway=True,
+            client_cert=str(cert_file),
+            client_key=str(key_file),
+        )
+
+        assert connection_object.client_cert == str(cert_file)
+        assert connection_object.client_key == str(key_file)
+
+    @pytest.mark.ciscoisesdk
+    def test_cert_only_mode(self, base_url, tmp_path, monkeypatch):
+        cert_file = tmp_path / 'client.crt'
+        key_file = tmp_path / 'client.key'
+        cert_file.write_text('dummy cert')
+        key_file.write_text('dummy key')
+
+        for env_var in [
+            'IDENTITY_SERVICES_ENGINE_USERNAME',
+            'IDENTITY_SERVICES_ENGINE_PASSWORD',
+            'IDENTITY_SERVICES_ENGINE_ENCODED_AUTH',
+        ]:
+            monkeypatch.delenv(env_var, raising=False)
+
+        connection_object = ciscoisesdk.IdentityServicesEngineAPI(
+            username=None,
+            password=None,
+            encoded_auth=None,
+            base_url=base_url,
+            verify=DEFAULT_VERIFY,
+            version=IDENTITY_SERVICES_ENGINE_VERSION,
+            uses_api_gateway=True,
+            client_cert=str(cert_file),
+            client_key=str(key_file),
+        )
+
+        assert 'authorization' not in connection_object.session.headers
+
+    @pytest.mark.ciscoisesdk
     def test_api_object_creation(self, api):
         assert isinstance(api.authentication, Authentication)
         assert isinstance(api.custom_caller, CustomCaller)

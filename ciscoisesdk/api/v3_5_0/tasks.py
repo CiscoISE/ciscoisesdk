@@ -28,7 +28,6 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 from builtins import *
 
 
-
 from ...pagination import get_next_page
 from ...restsession import RestSession
 from ...utils import (
@@ -115,7 +114,7 @@ class Tasks(object):
         path_params = {
         }
 
-        e_url = ('/api/v1/api/v1/task')
+        e_url = ('/api/v1/task')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,
@@ -176,7 +175,7 @@ class Tasks(object):
             'taskId': task_id,
         }
 
-        e_url = ('/api/v1/api/v1/task/{taskId}')
+        e_url = ('/api/v1/task/{taskId}')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             _api_response = self._session.get(endpoint_full_url, params=_params,

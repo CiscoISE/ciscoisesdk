@@ -22,9 +22,15 @@ Our goal is to make working with Cisco Identity Services Engine in Python a *nat
                                     base_url='https://198.18.133.27',
                                     version='3.3_patch_1',
                                     verify=True,
+                                    client_cert='/path/to/client.crt',
+                                    client_key='/path/to/client.key',
                                     debug=False,
                                     uses_csrf_token=False)
     # NOTE: This collection assumes that the ERS APIs and OpenAPIs are enabled.
+    # For mTLS, you can also set verify to a CA bundle path:
+    # verify='/path/to/ca-bundle.pem'
+    # If your ISE is configured for certificate-only API auth, you can omit
+    # username/password and encoded_auth when using client_cert/client_key.
 
     # Get allowed protocols (first page)
     search_result = api.allowed_protocols.get_all().response.SearchResult
