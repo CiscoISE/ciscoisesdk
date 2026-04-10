@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.3] - 2026-04-10
+### Fixed
+- **ISE 3.5.0** (`v3_5_0`): Restored snake_case naming for 51 renamed modules with backward-compat aliases (e.g., `internal_user`, `network_device`).
+- **ISE 3.5.0** (`v3_5_0`): Fixed `_info` modules to accept `id` for get-by-id lookups.
+- **ISE 3.5.0** (`v3_5_0`): Renamed 7 generator methods to snake_case (`authorization_profile`, `guest_user`, `portal_theme`, `sponsored_guest_portal`, `portal_global_setting`, `profiler_profile`, `admin_user`).
+- **ISE 3.5.0** (`v3_5_0`): Added `nbar_app` and `virtual_network` family aliases.
+
 ## [2.4.2] - 2026-02-25
 ### Added
 - Certificate-based authentication (mTLS) support for all API calls.
@@ -545,4 +552,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.4.0]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.3.1...v2.4.0
 [2.4.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.0...v2.4.1
 [2.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.1...v2.4.2
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.2...develop
+[2.4.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.2...v2.4.3
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.3...develop

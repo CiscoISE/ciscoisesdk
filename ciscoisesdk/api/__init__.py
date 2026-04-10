@@ -1923,7 +1923,7 @@ from .v3_5_0.aci_connection import (
 from .v3_5_0.aci_data import (
     AciData as AciData_v3_5_0
 )
-from .v3_5_0.a_d_groups import (
+from .v3_5_0.ad_groups import (
     ADGroups as ADGroups_v3_5_0
 )
 from .v3_5_0.active_directories import (
@@ -2076,8 +2076,8 @@ from .v3_5_0.node_deployment import (
 from .v3_5_0.node_group import (
     NodeGroup as NodeGroup_v3_5_0
 )
-from .v3_5_0.nodeservices import (
-    Nodeservices as Nodeservices_v3_5_0
+from .v3_5_0.node_services import (
+    NodeServices as NodeServices_v3_5_0
 )
 from .v3_5_0.outbound_rule import (
     OutboundRule as OutboundRule_v3_5_0
@@ -2151,41 +2151,41 @@ from .v3_5_0.user_equipment import (
 from .v3_5_0.virtual_network_management import (
     VirtualNetworkManagement as VirtualNetworkManagement_v3_5_0
 )
-from .v3_5_0.acibindings import (
-    Acibindings as Acibindings_v3_5_0
+from .v3_5_0.aci_bindings import (
+    AciBindings as AciBindings_v3_5_0
 )
-from .v3_5_0.acisettings import (
-    Acisettings as Acisettings_v3_5_0
+from .v3_5_0.aci_settings import (
+    AciSettings as AciSettings_v3_5_0
 )
-from .v3_5_0.activedirectory import (
-    Activedirectory as Activedirectory_v3_5_0
+from .v3_5_0.active_directory import (
+    ActiveDirectory as ActiveDirectory_v3_5_0
 )
-from .v3_5_0.adminuser import (
-    Adminuser as Adminuser_v3_5_0
+from .v3_5_0.admin_user import (
+    AdminUser as AdminUser_v3_5_0
 )
 from .v3_5_0.adresourcereservation import (
     Adresourcereservation as Adresourcereservation_v3_5_0
 )
-from .v3_5_0.allowedprotocols import (
-    Allowedprotocols as Allowedprotocols_v3_5_0
+from .v3_5_0.allowed_protocols import (
+    AllowedProtocols as AllowedProtocols_v3_5_0
 )
-from .v3_5_0.ancendpoint import (
-    Ancendpoint as Ancendpoint_v3_5_0
+from .v3_5_0.anc_endpoint import (
+    AncEndpoint as AncEndpoint_v3_5_0
 )
-from .v3_5_0.ancpolicy import (
-    Ancpolicy as Ancpolicy_v3_5_0
+from .v3_5_0.anc_policy import (
+    AncPolicy as AncPolicy_v3_5_0
 )
-from .v3_5_0.authorizationprofile import (
-    Authorizationprofile as Authorizationprofile_v3_5_0
+from .v3_5_0.authorization_profile import (
+    AuthorizationProfile as AuthorizationProfile_v3_5_0
 )
-from .v3_5_0.byodportal import (
-    Byodportal as Byodportal_v3_5_0
+from .v3_5_0.byod_portal import (
+    ByodPortal as ByodPortal_v3_5_0
 )
-from .v3_5_0.certificateprofile import (
-    Certificateprofile as Certificateprofile_v3_5_0
+from .v3_5_0.certificate_profile import (
+    CertificateProfile as CertificateProfile_v3_5_0
 )
-from .v3_5_0.certificatetemplate import (
-    Certificatetemplate as Certificatetemplate_v3_5_0
+from .v3_5_0.certificate_template import (
+    CertificateTemplate as CertificateTemplate_v3_5_0
 )
 from .v3_5_0.ctsenvdata import (
     Ctsenvdata as Ctsenvdata_v3_5_0
@@ -2193,19 +2193,19 @@ from .v3_5_0.ctsenvdata import (
 from .v3_5_0.ctsmatrix import (
     Ctsmatrix as Ctsmatrix_v3_5_0
 )
-from .v3_5_0.customattributes import (
-    Customattributes as Customattributes_v3_5_0
+from .v3_5_0.custom_attributes import (
+    CustomAttributes as CustomAttributes_v3_5_0
 )
 from .v3_5_0.deploymentinfo import (
     Deploymentinfo as Deploymentinfo_v3_5_0
 )
-from .v3_5_0.downloadableacl import (
-    Downloadableacl as Downloadableacl_v3_5_0
+from .v3_5_0.downloadable_acl import (
+    DownloadableAcl as DownloadableAcl_v3_5_0
 )
-from .v3_5_0.egressmatrixcell import (
-    Egressmatrixcell as Egressmatrixcell_v3_5_0
+from .v3_5_0.egress_matrix_cell import (
+    EgressMatrixCell as EgressMatrixCell_v3_5_0
 )
-from .v3_5_0.enable_m_f_a import (
+from .v3_5_0.enable_mfa import (
     EnableMFA as EnableMFA_v3_5_0
 )
 from .v3_5_0.endpoint import (
@@ -2220,29 +2220,29 @@ from .v3_5_0.endpointgroup import (
 from .v3_5_0.endpoints import (
     Endpoints as Endpoints_v3_5_0
 )
-from .v3_5_0.externalradiusserver import (
-    Externalradiusserver as Externalradiusserver_v3_5_0
+from .v3_5_0.external_radius_server import (
+    ExternalRadiusServer as ExternalRadiusServer_v3_5_0
 )
-from .v3_5_0.filterpolicy import (
-    Filterpolicy as Filterpolicy_v3_5_0
+from .v3_5_0.filter_policy import (
+    FilterPolicy as FilterPolicy_v3_5_0
 )
-from .v3_5_0.guestlocation import (
-    Guestlocation as Guestlocation_v3_5_0
+from .v3_5_0.guest_location import (
+    GuestLocation as GuestLocation_v3_5_0
 )
 from .v3_5_0.guestsmtpnotificationsettings import (
     Guestsmtpnotificationsettings as Guestsmtpnotificationsettings_v3_5_0
 )
-from .v3_5_0.guestssid import (
-    Guestssid as Guestssid_v3_5_0
+from .v3_5_0.guest_ssid import (
+    GuestSsid as GuestSsid_v3_5_0
 )
-from .v3_5_0.guesttype import (
-    Guesttype as Guesttype_v3_5_0
+from .v3_5_0.guest_type import (
+    GuestType as GuestType_v3_5_0
 )
-from .v3_5_0.guestuser import (
-    Guestuser as Guestuser_v3_5_0
+from .v3_5_0.guest_user import (
+    GuestUser as GuestUser_v3_5_0
 )
-from .v3_5_0.hotspotportal import (
-    Hotspotportal as Hotspotportal_v3_5_0
+from .v3_5_0.hotspot_portal import (
+    HotspotPortal as HotspotPortal_v3_5_0
 )
 from .v3_5_0.identitygroup import (
     Identitygroup as Identitygroup_v3_5_0
@@ -2250,23 +2250,23 @@ from .v3_5_0.identitygroup import (
 from .v3_5_0.idstoresequence import (
     Idstoresequence as Idstoresequence_v3_5_0
 )
-from .v3_5_0.internaluser import (
-    Internaluser as Internaluser_v3_5_0
+from .v3_5_0.internal_user import (
+    InternalUser as InternalUser_v3_5_0
 )
-from .v3_5_0.is_m_f_a_enabled import (
+from .v3_5_0.is_mfa_enabled import (
     IsMFAEnabled as IsMFAEnabled_v3_5_0
 )
 from .v3_5_0.ldap import (
     Ldap as Ldap_v3_5_0
 )
-from .v3_5_0.mydeviceportal import (
-    Mydeviceportal as Mydeviceportal_v3_5_0
+from .v3_5_0.my_device_portal import (
+    MyDevicePortal as MyDevicePortal_v3_5_0
 )
-from .v3_5_0.networkdevice import (
-    Networkdevice as Networkdevice_v3_5_0
+from .v3_5_0.network_device import (
+    NetworkDevice as NetworkDevice_v3_5_0
 )
-from .v3_5_0.networkdevicegroup import (
-    Networkdevicegroup as Networkdevicegroup_v3_5_0
+from .v3_5_0.network_device_group import (
+    NetworkDeviceGroup as NetworkDeviceGroup_v3_5_0
 )
 from .v3_5_0.node import (
     Node as Node_v3_5_0
@@ -2277,14 +2277,14 @@ from .v3_5_0.nspprofile import (
 from .v3_5_0.portal import (
     Portal as Portal_v3_5_0
 )
-from .v3_5_0.portalglobalsetting import (
-    Portalglobalsetting as Portalglobalsetting_v3_5_0
+from .v3_5_0.portal_global_setting import (
+    PortalGlobalSetting as PortalGlobalSetting_v3_5_0
 )
-from .v3_5_0.portaltheme import (
-    Portaltheme as Portaltheme_v3_5_0
+from .v3_5_0.portal_theme import (
+    PortalTheme as PortalTheme_v3_5_0
 )
-from .v3_5_0.profilerprofile import (
-    Profilerprofile as Profilerprofile_v3_5_0
+from .v3_5_0.profiler_profile import (
+    ProfilerProfile as ProfilerProfile_v3_5_0
 )
 from .v3_5_0.proxy import (
     Proxy as Proxy_v3_5_0
@@ -2298,20 +2298,20 @@ from .v3_5_0.px_grid_direct import (
 from .v3_5_0.px_grid_direct_push_apis import (
     PxGridDirectPushApis as PxGridDirectPushApis_v3_5_0
 )
-from .v3_5_0.pxgridnode import (
-    Pxgridnode as Pxgridnode_v3_5_0
+from .v3_5_0.px_grid_node import (
+    PxGridNode as PxGridNode_v3_5_0
 )
-from .v3_5_0.pxgridsettings import (
-    Pxgridsettings as Pxgridsettings_v3_5_0
+from .v3_5_0.px_grid_settings import (
+    PxGridSettings as PxGridSettings_v3_5_0
 )
-from .v3_5_0.radiusserversequence import (
-    Radiusserversequence as Radiusserversequence_v3_5_0
+from .v3_5_0.radius_server_sequence import (
+    RadiusServerSequence as RadiusServerSequence_v3_5_0
 )
 from .v3_5_0.reportconfig import (
     Reportconfig as Reportconfig_v3_5_0
 )
-from .v3_5_0.restidstore import (
-    Restidstore as Restidstore_v3_5_0
+from .v3_5_0.restid_store import (
+    RestidStore as RestidStore_v3_5_0
 )
 from .v3_5_0.restidstoreattribute import (
     Restidstoreattribute as Restidstoreattribute_v3_5_0
@@ -2352,53 +2352,53 @@ from .v3_5_0.sgt import (
 from .v3_5_0.sgtvnvlan import (
     Sgtvnvlan as Sgtvnvlan_v3_5_0
 )
-from .v3_5_0.smsprovider import (
-    Smsprovider as Smsprovider_v3_5_0
+from .v3_5_0.sms_provider import (
+    SmsProvider as SmsProvider_v3_5_0
 )
-from .v3_5_0.sponsoredguestportal import (
-    Sponsoredguestportal as Sponsoredguestportal_v3_5_0
+from .v3_5_0.sponsored_guest_portal import (
+    SponsoredGuestPortal as SponsoredGuestPortal_v3_5_0
 )
-from .v3_5_0.sponsorgroup import (
-    Sponsorgroup as Sponsorgroup_v3_5_0
+from .v3_5_0.sponsor_group import (
+    SponsorGroup as SponsorGroup_v3_5_0
 )
-from .v3_5_0.sponsorgroupmember import (
-    Sponsorgroupmember as Sponsorgroupmember_v3_5_0
+from .v3_5_0.sponsor_group_member import (
+    SponsorGroupMember as SponsorGroupMember_v3_5_0
 )
-from .v3_5_0.sponsorportal import (
-    Sponsorportal as Sponsorportal_v3_5_0
+from .v3_5_0.sponsor_portal import (
+    SponsorPortal as SponsorPortal_v3_5_0
 )
 from .v3_5_0.supportbundle import (
     Supportbundle as Supportbundle_v3_5_0
 )
-from .v3_5_0.supportbundledownload import (
-    Supportbundledownload as Supportbundledownload_v3_5_0
+from .v3_5_0.support_bundle_download import (
+    SupportBundleDownload as SupportBundleDownload_v3_5_0
 )
-from .v3_5_0.supportbundlestatus import (
-    Supportbundlestatus as Supportbundlestatus_v3_5_0
+from .v3_5_0.support_bundle_status import (
+    SupportBundleStatus as SupportBundleStatus_v3_5_0
 )
-from .v3_5_0.sxpconnections import (
-    Sxpconnections as Sxpconnections_v3_5_0
+from .v3_5_0.sxp_connections import (
+    SxpConnections as SxpConnections_v3_5_0
 )
-from .v3_5_0.sxplocalbindings import (
-    Sxplocalbindings as Sxplocalbindings_v3_5_0
+from .v3_5_0.sxp_local_bindings import (
+    SxpLocalBindings as SxpLocalBindings_v3_5_0
 )
-from .v3_5_0.sxpvpns import (
-    Sxpvpns as Sxpvpns_v3_5_0
+from .v3_5_0.sxp_vpns import (
+    SxpVpns as SxpVpns_v3_5_0
 )
-from .v3_5_0.systemcertificate import (
-    Systemcertificate as Systemcertificate_v3_5_0
+from .v3_5_0.system_certificate import (
+    SystemCertificate as SystemCertificate_v3_5_0
 )
-from .v3_5_0.tacacscommandsets import (
-    Tacacscommandsets as Tacacscommandsets_v3_5_0
+from .v3_5_0.tacacs_command_sets import (
+    TacacsCommandSets as TacacsCommandSets_v3_5_0
 )
-from .v3_5_0.tacacsexternalservers import (
-    Tacacsexternalservers as Tacacsexternalservers_v3_5_0
+from .v3_5_0.tacacs_external_servers import (
+    TacacsExternalServers as TacacsExternalServers_v3_5_0
 )
-from .v3_5_0.tacacsprofile import (
-    Tacacsprofile as Tacacsprofile_v3_5_0
+from .v3_5_0.tacacs_profile import (
+    TacacsProfile as TacacsProfile_v3_5_0
 )
-from .v3_5_0.tacacsserversequence import (
-    Tacacsserversequence as Tacacsserversequence_v3_5_0
+from .v3_5_0.tacacs_server_sequence import (
+    TacacsServerSequence as TacacsServerSequence_v3_5_0
 )
 from .v3_5_0.tasks import (
     Tasks as Tasks_v3_5_0
@@ -5392,7 +5392,7 @@ class IdentityServicesEngineAPI(object):
                 AciData_v3_5_0(
                     self._session_main, self.object_factory, self._validator
                 )
-            self.a_d_groups = \
+            self.ad_groups = \
                 ADGroups_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
@@ -5596,8 +5596,8 @@ class IdentityServicesEngineAPI(object):
                 NodeGroup_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
-            self.nodeservices = \
-                Nodeservices_v3_5_0(
+            self.node_services = \
+                NodeServices_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
             self.outbound_rule = \
@@ -5696,52 +5696,52 @@ class IdentityServicesEngineAPI(object):
                 VirtualNetworkManagement_v3_5_0(
                     self._session_main, self.object_factory, self._validator
                 )
-            self.acibindings = \
-                Acibindings_v3_5_0(
+            self.aci_bindings = \
+                AciBindings_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.acisettings = \
-                Acisettings_v3_5_0(
+            self.aci_settings = \
+                AciSettings_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.activedirectory = \
-                Activedirectory_v3_5_0(
+            self.active_directory = \
+                ActiveDirectory_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.adminuser = \
-                Adminuser_v3_5_0(
+            self.admin_user = \
+                AdminUser_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.adresourcereservation = \
                 Adresourcereservation_v3_5_0(
                     self._session_main, self.object_factory, self._validator
                 )
-            self.allowedprotocols = \
-                Allowedprotocols_v3_5_0(
+            self.allowed_protocols = \
+                AllowedProtocols_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.ancendpoint = \
-                Ancendpoint_v3_5_0(
+            self.anc_endpoint = \
+                AncEndpoint_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.ancpolicy = \
-                Ancpolicy_v3_5_0(
+            self.anc_policy = \
+                AncPolicy_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.authorizationprofile = \
-                Authorizationprofile_v3_5_0(
+            self.authorization_profile = \
+                AuthorizationProfile_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.byodportal = \
-                Byodportal_v3_5_0(
+            self.byod_portal = \
+                ByodPortal_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.certificateprofile = \
-                Certificateprofile_v3_5_0(
+            self.certificate_profile = \
+                CertificateProfile_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.certificatetemplate = \
-                Certificatetemplate_v3_5_0(
+            self.certificate_template = \
+                CertificateTemplate_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.ctsenvdata = \
@@ -5752,23 +5752,23 @@ class IdentityServicesEngineAPI(object):
                 Ctsmatrix_v3_5_0(
                     self._session_main, self.object_factory, self._validator
                 )
-            self.customattributes = \
-                Customattributes_v3_5_0(
+            self.custom_attributes = \
+                CustomAttributes_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
             self.deploymentinfo = \
                 Deploymentinfo_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.downloadableacl = \
-                Downloadableacl_v3_5_0(
+            self.downloadable_acl = \
+                DownloadableAcl_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.egressmatrixcell = \
-                Egressmatrixcell_v3_5_0(
+            self.egress_matrix_cell = \
+                EgressMatrixCell_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.enable_m_f_a = \
+            self.enable_mfa = \
                 EnableMFA_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
@@ -5788,36 +5788,36 @@ class IdentityServicesEngineAPI(object):
                 Endpoints_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
-            self.externalradiusserver = \
-                Externalradiusserver_v3_5_0(
+            self.external_radius_server = \
+                ExternalRadiusServer_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.filterpolicy = \
-                Filterpolicy_v3_5_0(
+            self.filter_policy = \
+                FilterPolicy_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.guestlocation = \
-                Guestlocation_v3_5_0(
+            self.guest_location = \
+                GuestLocation_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.guestsmtpnotificationsettings = \
                 Guestsmtpnotificationsettings_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.guestssid = \
-                Guestssid_v3_5_0(
+            self.guest_ssid = \
+                GuestSsid_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.guesttype = \
-                Guesttype_v3_5_0(
+            self.guest_type = \
+                GuestType_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.guestuser = \
-                Guestuser_v3_5_0(
+            self.guest_user = \
+                GuestUser_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.hotspotportal = \
-                Hotspotportal_v3_5_0(
+            self.hotspot_portal = \
+                HotspotPortal_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.identitygroup = \
@@ -5828,11 +5828,11 @@ class IdentityServicesEngineAPI(object):
                 Idstoresequence_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.internaluser = \
-                Internaluser_v3_5_0(
+            self.internal_user = \
+                InternalUser_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.is_m_f_a_enabled = \
+            self.is_mfa_enabled = \
                 IsMFAEnabled_v3_5_0(
                     self._session_ui, self.object_factory, self._validator
                 )
@@ -5840,16 +5840,16 @@ class IdentityServicesEngineAPI(object):
                 Ldap_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.mydeviceportal = \
-                Mydeviceportal_v3_5_0(
+            self.my_device_portal = \
+                MyDevicePortal_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.networkdevice = \
-                Networkdevice_v3_5_0(
+            self.network_device = \
+                NetworkDevice_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.networkdevicegroup = \
-                Networkdevicegroup_v3_5_0(
+            self.network_device_group = \
+                NetworkDeviceGroup_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.node = \
@@ -5864,16 +5864,16 @@ class IdentityServicesEngineAPI(object):
                 Portal_v3_5_0(
                     self._session_main, self.object_factory, self._validator
                 )
-            self.portalglobalsetting = \
-                Portalglobalsetting_v3_5_0(
+            self.portal_global_setting = \
+                PortalGlobalSetting_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.portaltheme = \
-                Portaltheme_v3_5_0(
+            self.portal_theme = \
+                PortalTheme_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.profilerprofile = \
-                Profilerprofile_v3_5_0(
+            self.profiler_profile = \
+                ProfilerProfile_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.proxy = \
@@ -5892,24 +5892,24 @@ class IdentityServicesEngineAPI(object):
                 PxGridDirectPushApis_v3_5_0(
                     self._session_main, self.object_factory, self._validator
                 )
-            self.pxgridnode = \
-                Pxgridnode_v3_5_0(
+            self.px_grid_node = \
+                PxGridNode_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.pxgridsettings = \
-                Pxgridsettings_v3_5_0(
+            self.px_grid_settings = \
+                PxGridSettings_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.radiusserversequence = \
-                Radiusserversequence_v3_5_0(
+            self.radius_server_sequence = \
+                RadiusServerSequence_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.reportconfig = \
                 Reportconfig_v3_5_0(
                     self._session_main, self.object_factory, self._validator
                 )
-            self.restidstore = \
-                Restidstore_v3_5_0(
+            self.restid_store = \
+                RestidStore_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.restidstoreattribute = \
@@ -5964,68 +5964,68 @@ class IdentityServicesEngineAPI(object):
                 Sgtvnvlan_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.smsprovider = \
-                Smsprovider_v3_5_0(
+            self.sms_provider = \
+                SmsProvider_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.sponsoredguestportal = \
-                Sponsoredguestportal_v3_5_0(
+            self.sponsored_guest_portal = \
+                SponsoredGuestPortal_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.sponsorgroup = \
-                Sponsorgroup_v3_5_0(
+            self.sponsor_group = \
+                SponsorGroup_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.sponsorgroupmember = \
-                Sponsorgroupmember_v3_5_0(
+            self.sponsor_group_member = \
+                SponsorGroupMember_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.sponsorportal = \
-                Sponsorportal_v3_5_0(
+            self.sponsor_portal = \
+                SponsorPortal_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.supportbundle = \
                 Supportbundle_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.supportbundledownload = \
-                Supportbundledownload_v3_5_0(
+            self.support_bundle_download = \
+                SupportBundleDownload_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.supportbundlestatus = \
-                Supportbundlestatus_v3_5_0(
+            self.support_bundle_status = \
+                SupportBundleStatus_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.sxpconnections = \
-                Sxpconnections_v3_5_0(
+            self.sxp_connections = \
+                SxpConnections_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.sxplocalbindings = \
-                Sxplocalbindings_v3_5_0(
+            self.sxp_local_bindings = \
+                SxpLocalBindings_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.sxpvpns = \
-                Sxpvpns_v3_5_0(
+            self.sxp_vpns = \
+                SxpVpns_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.systemcertificate = \
-                Systemcertificate_v3_5_0(
+            self.system_certificate = \
+                SystemCertificate_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.tacacscommandsets = \
-                Tacacscommandsets_v3_5_0(
+            self.tacacs_command_sets = \
+                TacacsCommandSets_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.tacacsexternalservers = \
-                Tacacsexternalservers_v3_5_0(
+            self.tacacs_external_servers = \
+                TacacsExternalServers_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.tacacsprofile = \
-                Tacacsprofile_v3_5_0(
+            self.tacacs_profile = \
+                TacacsProfile_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
-            self.tacacsserversequence = \
-                Tacacsserversequence_v3_5_0(
+            self.tacacs_server_sequence = \
+                TacacsServerSequence_v3_5_0(
                     self._session_ers, self.object_factory, self._validator
                 )
             self.tasks = \
@@ -6046,36 +6046,90 @@ class IdentityServicesEngineAPI(object):
                 )
         self.custom_caller = \
             CustomCaller(self._session, self.object_factory)
+        # Backward-compat aliases for renamed modules (smashed → snake_case)
+        self.a_d_groups = self.ad_groups
+        self.acibindings = self.aci_bindings
+        self.acisettings = self.aci_settings
+        self.activedirectory = self.active_directory
+        self.adminuser = self.admin_user
+        self.allowedprotocols = self.allowed_protocols
+        self.ancendpoint = self.anc_endpoint
+        self.ancpolicy = self.anc_policy
+        self.authorizationprofile = self.authorization_profile
+        self.byodportal = self.byod_portal
+        self.certificateprofile = self.certificate_profile
+        self.certificatetemplate = self.certificate_template
+        self.customattributes = self.custom_attributes
+        self.downloadableacl = self.downloadable_acl
+        self.egressmatrixcell = self.egress_matrix_cell
+        self.enable_m_f_a = self.enable_mfa
+        self.externalradiusserver = self.external_radius_server
+        self.filterpolicy = self.filter_policy
+        self.guestlocation = self.guest_location
+        self.guestssid = self.guest_ssid
+        self.guesttype = self.guest_type
+        self.guestuser = self.guest_user
+        self.hotspotportal = self.hotspot_portal
+        self.internaluser = self.internal_user
+        self.is_m_f_a_enabled = self.is_mfa_enabled
+        self.mydeviceportal = self.my_device_portal
+        self.networkdevice = self.network_device
+        self.networkdevicegroup = self.network_device_group
+        self.nodeservices = self.node_services
+        self.portalglobalsetting = self.portal_global_setting
+        self.portaltheme = self.portal_theme
+        self.profilerprofile = self.profiler_profile
+        self.pxgridnode = self.px_grid_node
+        self.pxgridsettings = self.px_grid_settings
+        self.radiusserversequence = self.radius_server_sequence
+        self.restidstore = self.restid_store
+        self.smsprovider = self.sms_provider
+        self.sponsoredguestportal = self.sponsored_guest_portal
+        self.sponsorgroup = self.sponsor_group
+        self.sponsorgroupmember = self.sponsor_group_member
+        self.sponsorportal = self.sponsor_portal
+        self.supportbundledownload = self.support_bundle_download
+        self.supportbundlestatus = self.support_bundle_status
+        self.sxpconnections = self.sxp_connections
+        self.sxplocalbindings = self.sxp_local_bindings
+        self.sxpvpns = self.sxp_vpns
+        self.systemcertificate = self.system_certificate
+        self.tacacscommandsets = self.tacacs_command_sets
+        self.tacacsexternalservers = self.tacacs_external_servers
+        self.tacacsprofile = self.tacacs_profile
+        self.tacacsserversequence = self.tacacs_server_sequence
+        self.nbar_app = self.n_b_a_r_application_management
+        self.virtual_network = self.virtual_network_management
 
     def _not_initialize_api_wrappers(self):
         """Function used when perform_initialize is False in class init.
         Defines the top-level properties as None."""
         self.aci_connection = None
         self.aci_data = None
-        self.acibindings = None
-        self.acisettings = None
+        self.aci_bindings = None
+        self.aci_settings = None
         self.active_directories = None
-        self.activedirectory = None
-        self.a_d_groups = None
+        self.active_directory = None
+        self.ad_groups = None
         self.admin_groups = None
         self.admin_users = None
-        self.adminuser = None
+        self.admin_user = None
         self.adresourcereservation = None
-        self.allowedprotocols = None
-        self.ancendpoint = None
-        self.ancpolicy = None
-        self.authorizationprofile = None
+        self.allowed_protocols = None
+        self.anc_endpoint = None
+        self.anc_policy = None
+        self.authorization_profile = None
         self.backup_and_restore = None
-        self.byodportal = None
-        self.certificateprofile = None
+        self.byod_portal = None
+        self.certificate_profile = None
         self.certificates = None
-        self.certificatetemplate = None
+        self.certificate_template = None
         self.classificationrule = None
         self.configuration = None
         self.ctsenvdata = None
         self.ctsmatrix = None
         self.custom_caller = None
-        self.customattributes = None
+        self.custom_attributes = None
         self.data_access = None
         self.dataconnect_services = None
         self.deploymentinfo = None
@@ -6093,34 +6147,34 @@ class IdentityServicesEngineAPI(object):
         self.device_administration_service_names = None
         self.device_administration_shell_profiles = None
         self.device_administration_time_date_conditions = None
-        self.downloadableacl = None
+        self.downloadable_acl = None
         self.duo_identity_sync = None
         self.duo_mfa = None
-        self.egressmatrixcell = None
-        self.enable_m_f_a = None
+        self.egress_matrix_cell = None
+        self.enable_mfa = None
         self.endpoint = None
         self.endpoint_stop_replication_service = None
         self.endpointcert = None
         self.endpointgroup = None
         self.endpoints = None
-        self.externalradiusserver = None
-        self.filterpolicy = None
-        self.guestlocation = None
+        self.external_radius_server = None
+        self.filter_policy = None
+        self.guest_location = None
         self.guestsmtpnotificationsettings = None
-        self.guestssid = None
-        self.guesttype = None
-        self.guestuser = None
-        self.hotspotportal = None
+        self.guest_ssid = None
+        self.guest_type = None
+        self.guest_user = None
+        self.hotspot_portal = None
         self.identitygroup = None
         self.idstoresequence = None
         self.inbound_rule = None
-        self.internaluser = None
-        self.is_m_f_a_enabled = None
+        self.internal_user = None
+        self.is_mfa_enabled = None
         self.ldap = None
         self.licensing = None
         self.menu_access = None
         self.misc = None
-        self.mydeviceportal = None
+        self.my_device_portal = None
         self.native_ipsec = None
         self.n_b_a_r_application_management = None
         self.network_access_authentication_rules = None
@@ -6139,33 +6193,33 @@ class IdentityServicesEngineAPI(object):
         self.network_access_security_groups = None
         self.network_access_service_names = None
         self.network_access_time_date_conditions = None
-        self.networkdevice = None
-        self.networkdevicegroup = None
+        self.network_device = None
+        self.network_device_group = None
         self.node = None
         self.node_deployment = None
         self.node_group = None
-        self.nodeservices = None
+        self.node_services = None
         self.nspprofile = None
         self.outbound_rule = None
         self.pan_ha = None
         self.patch = None
         self.patching = None
         self.portal = None
-        self.portalglobalsetting = None
-        self.portaltheme = None
-        self.profilerprofile = None
+        self.portal_global_setting = None
+        self.portal_theme = None
+        self.profiler_profile = None
         self.prometheus_alertmanager = None
         self.proxy = None
         self.px_grid_cloud = None
         self.px_grid_direct = None
         self.px_grid_direct_push_apis = None
-        self.pxgridnode = None
-        self.pxgridsettings = None
-        self.radiusserversequence = None
+        self.px_grid_node = None
+        self.px_grid_settings = None
+        self.radius_server_sequence = None
         self.r_b_a_c_policy = None
         self.reportconfig = None
         self.repository = None
-        self.restidstore = None
+        self.restid_store = None
         self.restidstoreattribute = None
         self.restidstoredeviceattribute = None
         self.restidstorepredefinedregex = None
@@ -6181,25 +6235,25 @@ class IdentityServicesEngineAPI(object):
         self.sgt = None
         self.sgt_range_reservation = None
         self.sgtvnvlan = None
-        self.smsprovider = None
-        self.sponsoredguestportal = None
-        self.sponsorgroup = None
-        self.sponsorgroupmember = None
-        self.sponsorportal = None
+        self.sms_provider = None
+        self.sponsored_guest_portal = None
+        self.sponsor_group = None
+        self.sponsor_group_member = None
+        self.sponsor_portal = None
         self.subscriber = None
         self.supportbundle = None
-        self.supportbundledownload = None
-        self.supportbundlestatus = None
+        self.support_bundle_download = None
+        self.support_bundle_status = None
         self.sxp = None
         self.sxp_domainswithmappinganddevicescounts = None
-        self.sxpconnections = None
-        self.sxplocalbindings = None
-        self.sxpvpns = None
-        self.systemcertificate = None
-        self.tacacscommandsets = None
-        self.tacacsexternalservers = None
-        self.tacacsprofile = None
-        self.tacacsserversequence = None
+        self.sxp_connections = None
+        self.sxp_local_bindings = None
+        self.sxp_vpns = None
+        self.system_certificate = None
+        self.tacacs_command_sets = None
+        self.tacacs_external_servers = None
+        self.tacacs_profile = None
+        self.tacacs_server_sequence = None
         self.tasks = None
         self.telemetry = None
         self.telemetryinfo = None
@@ -6216,7 +6270,60 @@ class IdentityServicesEngineAPI(object):
         self.user_equipment = None
         self.virtual_network_management = None
 
-  
+        # Backward compatibility aliases (v3.0.x smashed names -> v3.3+ snake_case names)
+        self.a_d_groups = self.ad_groups
+        self.acibindings = self.aci_bindings
+        self.acisettings = self.aci_settings
+        self.activedirectory = self.active_directory
+        self.adminuser = self.admin_user
+        self.allowedprotocols = self.allowed_protocols
+        self.ancendpoint = self.anc_endpoint
+        self.ancpolicy = self.anc_policy
+        self.authorizationprofile = self.authorization_profile
+        self.byodportal = self.byod_portal
+        self.certificateprofile = self.certificate_profile
+        self.certificatetemplate = self.certificate_template
+        self.customattributes = self.custom_attributes
+        self.downloadableacl = self.downloadable_acl
+        self.egressmatrixcell = self.egress_matrix_cell
+        self.enable_m_f_a = self.enable_mfa
+        self.externalradiusserver = self.external_radius_server
+        self.filterpolicy = self.filter_policy
+        self.guestlocation = self.guest_location
+        self.guestssid = self.guest_ssid
+        self.guesttype = self.guest_type
+        self.guestuser = self.guest_user
+        self.hotspotportal = self.hotspot_portal
+        self.internaluser = self.internal_user
+        self.is_m_f_a_enabled = self.is_mfa_enabled
+        self.mydeviceportal = self.my_device_portal
+        self.networkdevice = self.network_device
+        self.networkdevicegroup = self.network_device_group
+        self.nodeservices = self.node_services
+        self.portalglobalsetting = self.portal_global_setting
+        self.portaltheme = self.portal_theme
+        self.profilerprofile = self.profiler_profile
+        self.pxgridnode = self.px_grid_node
+        self.pxgridsettings = self.px_grid_settings
+        self.radiusserversequence = self.radius_server_sequence
+        self.restidstore = self.restid_store
+        self.smsprovider = self.sms_provider
+        self.sponsoredguestportal = self.sponsored_guest_portal
+        self.sponsorgroup = self.sponsor_group
+        self.sponsorgroupmember = self.sponsor_group_member
+        self.sponsorportal = self.sponsor_portal
+        self.supportbundledownload = self.support_bundle_download
+        self.supportbundlestatus = self.support_bundle_status
+        self.sxpconnections = self.sxp_connections
+        self.sxplocalbindings = self.sxp_local_bindings
+        self.sxpvpns = self.sxp_vpns
+        self.systemcertificate = self.system_certificate
+        self.tacacscommandsets = self.tacacs_command_sets
+        self.tacacsexternalservers = self.tacacs_external_servers
+        self.tacacsprofile = self.tacacs_profile
+        self.tacacsserversequence = self.tacacs_server_sequence
+        self.nbar_app = self.n_b_a_r_application_management
+        self.virtual_network = self.virtual_network_management
 
     def initialize_authentication(self):
         """
