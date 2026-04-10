@@ -7,7 +7,7 @@ name = "pypi"
 python_version = "3.12"
 
 [packages] # Here goes your package requirements for running the application and its versions (which packages you will use when running the application).
-requests = ">=2.32.0, <3.0.0"
+requests = ">=2.33.0, <3.0.0"
 requests-toolbelt = ">=1.0.0"
 fastjsonschema = ">=2.16.2"
 xmltodict = "==1.0.2"
@@ -22,3 +22,4 @@ ipython = "*"
 readthedocs-sphinx-search = ">=0.3.2"
 setuptools_scm = ">=6.0.0"
 setuptools = ">=78.1.1"
+Pygments = ">=2.20.0"
