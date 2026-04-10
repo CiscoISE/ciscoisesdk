@@ -6046,6 +6046,60 @@ class IdentityServicesEngineAPI(object):
                 )
         self.custom_caller = \
             CustomCaller(self._session, self.object_factory)
+        # Backward-compat aliases for renamed modules (smashed → snake_case)
+        self.a_d_groups = self.ad_groups
+        self.acibindings = self.aci_bindings
+        self.acisettings = self.aci_settings
+        self.activedirectory = self.active_directory
+        self.adminuser = self.admin_user
+        self.allowedprotocols = self.allowed_protocols
+        self.ancendpoint = self.anc_endpoint
+        self.ancpolicy = self.anc_policy
+        self.authorizationprofile = self.authorization_profile
+        self.byodportal = self.byod_portal
+        self.certificateprofile = self.certificate_profile
+        self.certificatetemplate = self.certificate_template
+        self.customattributes = self.custom_attributes
+        self.downloadableacl = self.downloadable_acl
+        self.egressmatrixcell = self.egress_matrix_cell
+        self.enable_m_f_a = self.enable_mfa
+        self.externalradiusserver = self.external_radius_server
+        self.filterpolicy = self.filter_policy
+        self.guestlocation = self.guest_location
+        self.guestssid = self.guest_ssid
+        self.guesttype = self.guest_type
+        self.guestuser = self.guest_user
+        self.hotspotportal = self.hotspot_portal
+        self.internaluser = self.internal_user
+        self.is_m_f_a_enabled = self.is_mfa_enabled
+        self.mydeviceportal = self.my_device_portal
+        self.networkdevice = self.network_device
+        self.networkdevicegroup = self.network_device_group
+        self.nodeservices = self.node_services
+        self.portalglobalsetting = self.portal_global_setting
+        self.portaltheme = self.portal_theme
+        self.profilerprofile = self.profiler_profile
+        self.pxgridnode = self.px_grid_node
+        self.pxgridsettings = self.px_grid_settings
+        self.radiusserversequence = self.radius_server_sequence
+        self.restidstore = self.restid_store
+        self.smsprovider = self.sms_provider
+        self.sponsoredguestportal = self.sponsored_guest_portal
+        self.sponsorgroup = self.sponsor_group
+        self.sponsorgroupmember = self.sponsor_group_member
+        self.sponsorportal = self.sponsor_portal
+        self.supportbundledownload = self.support_bundle_download
+        self.supportbundlestatus = self.support_bundle_status
+        self.sxpconnections = self.sxp_connections
+        self.sxplocalbindings = self.sxp_local_bindings
+        self.sxpvpns = self.sxp_vpns
+        self.systemcertificate = self.system_certificate
+        self.tacacscommandsets = self.tacacs_command_sets
+        self.tacacsexternalservers = self.tacacs_external_servers
+        self.tacacsprofile = self.tacacs_profile
+        self.tacacsserversequence = self.tacacs_server_sequence
+        self.nbar_app = self.n_b_a_r_application_management
+        self.virtual_network = self.virtual_network_management
 
     def _not_initialize_api_wrappers(self):
         """Function used when perform_initialize is False in class init.
