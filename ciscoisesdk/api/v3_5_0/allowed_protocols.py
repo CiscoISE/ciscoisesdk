@@ -1031,3 +1031,10 @@ class AllowedProtocols(object):
                                                 **request_params)
 
         return self._object_factory('bpm_da4eb995ac152158f324dfdef5e73d6_v3_5_0', _api_response)
+
+    create_allowed_protocols = create_allowedprotocols
+    get_allowed_protocols_name_by_name = get_allowedprotocols_name_by_name
+    get_allowed_protocols_by_id = get_allowedprotocols_by_id
+    update_allowed_protocols_by_id = update_allowedprotocols_by_id
+    delete_allowed_protocols_by_id = delete_allowedprotocols_by_id
+    patch_allowed_protocols_by_id = patch_allowedprotocols_by_id

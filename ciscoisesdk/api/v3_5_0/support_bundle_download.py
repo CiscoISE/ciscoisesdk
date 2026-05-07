@@ -171,3 +171,5 @@ class SupportBundleDownload(object):
                                               **request_params)
 
         return self._object_factory('bpm_ab531603fcf5cf58e8ddf54114620fe_v3_5_0', _api_response)
+
+    update_support_bundle_download = update_supportbundledownload
