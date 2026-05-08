@@ -426,3 +426,7 @@ class SxpVpns(object):
             _api_response = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a0501930cc9517ea1cb4103db6e0af7_v3_5_0', _api_response)
+
+    create_sxp_vpns = create_sxpvpns
+    get_sxp_vpns_by_id = get_sxpvpns_by_id
+    delete_sxp_vpns_by_id = delete_sxpvpns_by_id

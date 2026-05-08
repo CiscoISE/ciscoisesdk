@@ -479,3 +479,6 @@ class AncEndpoint(object):
             _api_response = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ffbc09a97795b8d872a943895c00345_v3_5_0', _api_response)
+
+    update_anc_endpoint_apply = update_ancendpoint_apply
+    update_anc_endpoint_clear = update_ancendpoint_clear

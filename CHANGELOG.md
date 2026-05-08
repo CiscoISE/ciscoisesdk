@@ -6,6 +6,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.4] - 2026-05-07
+### Fixed
+- **ISE 3.5.0** (`v3_5_0`): Added missing snake_case method aliases in 4 modules where the
+  file was renamed to snake_case but internal method names were not updated, causing
+  `AttributeError` at runtime when Ansible action plugins called these methods:
+  + `allowed_protocols`: `create_allowed_protocols`, `get_allowed_protocols_name_by_name`,
+    `get_allowed_protocols_by_id`, `update_allowed_protocols_by_id`,
+    `delete_allowed_protocols_by_id`, `patch_allowed_protocols_by_id`
+  + `sxp_vpns`: `create_sxp_vpns`, `get_sxp_vpns_by_id`, `delete_sxp_vpns_by_id`
+  + `anc_endpoint`: `update_anc_endpoint_clear`, `update_anc_endpoint_apply`
+  + `support_bundle_download`: `update_support_bundle_download`
+- **ISE 3.5.0** (`v3_5_0`): Fixed `pan_ha` module — ISE 3.3+ consolidated the separate
+  POST `enable` and DELETE `disable` PAN-HA endpoints into a single PUT. Removed incorrect
+  `enable_pan_ha`/`disable_pan_ha` aliases that mapped to `update_pan_ha` (same function,
+  wrong semantics). The Ansible `pan_ha` action plugin now calls `update_pan_ha` directly:
+  `create()` forwards params as-is; `delete()` forces `is_enabled=False`.
+- **ISE 3.5.0** (`v3_5_0`): Registered all 326 JSON schema validators in `schema_validator.py`.
+  Previously, `active_validation=True` silently skipped validation for every ISE 3.5.0
+  request because the `v3_5_0` block was absent; all validator files existed on disk but
+  were never imported or registered.
+
 ## [2.4.3] - 2026-04-10
 ### Fixed
 - **ISE 3.5.0** (`v3_5_0`): Restored snake_case naming for 51 renamed modules with backward-compat aliases (e.g., `internal_user`, `network_device`).
@@ -553,4 +574,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.4.1]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.0...v2.4.1
 [2.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.1...v2.4.2
 [2.4.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.2...v2.4.3
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.3...develop
+[2.4.4]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.3...v2.4.4
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.4...develop
