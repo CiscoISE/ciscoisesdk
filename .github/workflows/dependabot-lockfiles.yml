@@ -1,0 +1,45 @@
+name: Regenerate lock files for Dependabot PRs
+
+on:
+  pull_request_target:
+    branches: [develop, main]
+
+jobs:
+  lockfiles:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Poetry, poetry-plugin-export and Pipenv
+        run: pip install poetry poetry-plugin-export pipenv
+
+      - name: Regenerate Pipfile.lock
+        run: pipenv lock
+
+      - name: Regenerate poetry.lock
+        run: poetry update
+
+      - name: Export requirements.txt
+        run: poetry export -f requirements.txt --output requirements.txt --without-hashes
+
+      - name: Export requirements-dev.txt
+        run: poetry export --with dev -f requirements.txt --output requirements-dev.txt --without-hashes
+
+      - name: Commit regenerated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Pipfile.lock poetry.lock requirements.txt requirements-dev.txt
+          git diff --staged --quiet || git commit -m "chore: regenerate lock files for Dependabot update"
+          git push

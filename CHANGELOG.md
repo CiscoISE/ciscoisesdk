@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.5] - 2026-06-22
+### Fixed
+- Constructor raised `AttributeError` for any ISE version other than 3.5.0 (closes #87).
+  Bidirectional alias pattern applied to all 53 canonical/legacy name pairs in
+  `_initialize_api_wrappers` and `_not_initialize_api_wrappers`; both names always
+  resolve to the same object regardless of version. Also adds `3.5.0` to the
+  `version.setter` valid-versions list.
+
 ## [2.4.4] - 2026-05-07
 ### Fixed
 - **ISE 3.5.0** (`v3_5_0`): Added missing snake_case method aliases in 4 modules where the
@@ -575,4 +583,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.4.2]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.1...v2.4.2
 [2.4.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.2...v2.4.3
 [2.4.4]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.3...v2.4.4
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.4...develop
+[2.4.5]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.4...v2.4.5
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.5...develop

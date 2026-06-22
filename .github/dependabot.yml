@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    target-branch: "develop"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    groups:
+      security-all:
+        applies-to: security-updates
+        patterns: ["*"]
+      non-security-minor-patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
+        patterns: ["*"]
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
