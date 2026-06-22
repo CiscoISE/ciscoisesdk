@@ -2553,7 +2553,7 @@ class IdentityServicesEngineAPI(object):
             VersionError: If the version is not provided via the version
                 argument or an environment variable, or it is not a
                 Identity Services Engine API supported version
-                ['3.1.0', '3.1.1', '3.1_Patch_1', '3.2_beta', '3.3_patch_1'].
+                ['3.1.0', '3.1.1', '3.1_Patch_1', '3.2_beta', '3.3_patch_1', '3.5.0'].
 
         """
         check_type(perform_initialize, bool, may_be_none=True)
@@ -6046,60 +6046,119 @@ class IdentityServicesEngineAPI(object):
                 )
         self.custom_caller = \
             CustomCaller(self._session, self.object_factory)
-        # Backward-compat aliases for renamed modules (smashed → snake_case)
-        self.a_d_groups = self.ad_groups
-        self.acibindings = self.aci_bindings
-        self.acisettings = self.aci_settings
-        self.activedirectory = self.active_directory
-        self.adminuser = self.admin_user
-        self.allowedprotocols = self.allowed_protocols
-        self.ancendpoint = self.anc_endpoint
-        self.ancpolicy = self.anc_policy
-        self.authorizationprofile = self.authorization_profile
-        self.byodportal = self.byod_portal
-        self.certificateprofile = self.certificate_profile
-        self.certificatetemplate = self.certificate_template
-        self.customattributes = self.custom_attributes
-        self.downloadableacl = self.downloadable_acl
-        self.egressmatrixcell = self.egress_matrix_cell
-        self.enable_m_f_a = self.enable_mfa
-        self.externalradiusserver = self.external_radius_server
-        self.filterpolicy = self.filter_policy
-        self.guestlocation = self.guest_location
-        self.guestssid = self.guest_ssid
-        self.guesttype = self.guest_type
-        self.guestuser = self.guest_user
-        self.hotspotportal = self.hotspot_portal
-        self.internaluser = self.internal_user
-        self.is_m_f_a_enabled = self.is_mfa_enabled
-        self.mydeviceportal = self.my_device_portal
-        self.networkdevice = self.network_device
-        self.networkdevicegroup = self.network_device_group
-        self.nodeservices = self.node_services
-        self.portalglobalsetting = self.portal_global_setting
-        self.portaltheme = self.portal_theme
-        self.profilerprofile = self.profiler_profile
-        self.pxgridnode = self.px_grid_node
-        self.pxgridsettings = self.px_grid_settings
-        self.radiusserversequence = self.radius_server_sequence
-        self.restidstore = self.restid_store
-        self.smsprovider = self.sms_provider
-        self.sponsoredguestportal = self.sponsored_guest_portal
-        self.sponsorgroup = self.sponsor_group
-        self.sponsorgroupmember = self.sponsor_group_member
-        self.sponsorportal = self.sponsor_portal
-        self.supportbundledownload = self.support_bundle_download
-        self.supportbundlestatus = self.support_bundle_status
-        self.sxpconnections = self.sxp_connections
-        self.sxplocalbindings = self.sxp_local_bindings
-        self.sxpvpns = self.sxp_vpns
-        self.systemcertificate = self.system_certificate
-        self.tacacscommandsets = self.tacacs_command_sets
-        self.tacacsexternalservers = self.tacacs_external_servers
-        self.tacacsprofile = self.tacacs_profile
-        self.tacacsserversequence = self.tacacs_server_sequence
-        self.nbar_app = self.n_b_a_r_application_management
-        self.virtual_network = self.virtual_network_management
+        # Bidirectional aliases — canonical name preferred over legacy name.
+        # Pattern: resolve value from canonical (fallback to legacy, fallback to None),
+        # then assign both names so either direction works for clients.
+        # Version-conditional canonicals (e.g. n_b_a_r_application_management, only 3.5.0)
+        # resolve to None for versions that don't initialize them.
+        # To add a new pair: _v = getattr(self, 'canonical', getattr(self, 'legacy', None))
+        #                    self.canonical, self.legacy = _v, _v
+        _v = getattr(self, 'ad_groups', getattr(self, 'a_d_groups', None))
+        self.ad_groups, self.a_d_groups = _v, _v
+        _v = getattr(self, 'aci_bindings', getattr(self, 'acibindings', None))
+        self.aci_bindings, self.acibindings = _v, _v
+        _v = getattr(self, 'aci_settings', getattr(self, 'acisettings', None))
+        self.aci_settings, self.acisettings = _v, _v
+        _v = getattr(self, 'active_directory', getattr(self, 'activedirectory', None))
+        self.active_directory, self.activedirectory = _v, _v
+        _v = getattr(self, 'admin_user', getattr(self, 'adminuser', None))
+        self.admin_user, self.adminuser = _v, _v
+        _v = getattr(self, 'allowed_protocols', getattr(self, 'allowedprotocols', None))
+        self.allowed_protocols, self.allowedprotocols = _v, _v
+        _v = getattr(self, 'anc_endpoint', getattr(self, 'ancendpoint', None))
+        self.anc_endpoint, self.ancendpoint = _v, _v
+        _v = getattr(self, 'anc_policy', getattr(self, 'ancpolicy', None))
+        self.anc_policy, self.ancpolicy = _v, _v
+        _v = getattr(self, 'authorization_profile', getattr(self, 'authorizationprofile', None))
+        self.authorization_profile, self.authorizationprofile = _v, _v
+        _v = getattr(self, 'byod_portal', getattr(self, 'byodportal', None))
+        self.byod_portal, self.byodportal = _v, _v
+        _v = getattr(self, 'certificate_profile', getattr(self, 'certificateprofile', None))
+        self.certificate_profile, self.certificateprofile = _v, _v
+        _v = getattr(self, 'certificate_template', getattr(self, 'certificatetemplate', None))
+        self.certificate_template, self.certificatetemplate = _v, _v
+        _v = getattr(self, 'custom_attributes', getattr(self, 'customattributes', None))
+        self.custom_attributes, self.customattributes = _v, _v
+        _v = getattr(self, 'downloadable_acl', getattr(self, 'downloadableacl', None))
+        self.downloadable_acl, self.downloadableacl = _v, _v
+        _v = getattr(self, 'egress_matrix_cell', getattr(self, 'egressmatrixcell', None))
+        self.egress_matrix_cell, self.egressmatrixcell = _v, _v
+        _v = getattr(self, 'enable_mfa', getattr(self, 'enable_m_f_a', None))
+        self.enable_mfa, self.enable_m_f_a = _v, _v
+        _v = getattr(self, 'external_radius_server', getattr(self, 'externalradiusserver', None))
+        self.external_radius_server, self.externalradiusserver = _v, _v
+        _v = getattr(self, 'filter_policy', getattr(self, 'filterpolicy', None))
+        self.filter_policy, self.filterpolicy = _v, _v
+        _v = getattr(self, 'guest_location', getattr(self, 'guestlocation', None))
+        self.guest_location, self.guestlocation = _v, _v
+        _v = getattr(self, 'guest_ssid', getattr(self, 'guestssid', None))
+        self.guest_ssid, self.guestssid = _v, _v
+        _v = getattr(self, 'guest_type', getattr(self, 'guesttype', None))
+        self.guest_type, self.guesttype = _v, _v
+        _v = getattr(self, 'guest_user', getattr(self, 'guestuser', None))
+        self.guest_user, self.guestuser = _v, _v
+        _v = getattr(self, 'hotspot_portal', getattr(self, 'hotspotportal', None))
+        self.hotspot_portal, self.hotspotportal = _v, _v
+        _v = getattr(self, 'internal_user', getattr(self, 'internaluser', None))
+        self.internal_user, self.internaluser = _v, _v
+        _v = getattr(self, 'is_mfa_enabled', getattr(self, 'is_m_f_a_enabled', None))
+        self.is_mfa_enabled, self.is_m_f_a_enabled = _v, _v
+        _v = getattr(self, 'my_device_portal', getattr(self, 'mydeviceportal', None))
+        self.my_device_portal, self.mydeviceportal = _v, _v
+        _v = getattr(self, 'network_device', getattr(self, 'networkdevice', None))
+        self.network_device, self.networkdevice = _v, _v
+        _v = getattr(self, 'network_device_group', getattr(self, 'networkdevicegroup', None))
+        self.network_device_group, self.networkdevicegroup = _v, _v
+        _v = getattr(self, 'node_services', getattr(self, 'nodeservices', None))
+        self.node_services, self.nodeservices = _v, _v
+        _v = getattr(self, 'portal_global_setting', getattr(self, 'portalglobalsetting', None))
+        self.portal_global_setting, self.portalglobalsetting = _v, _v
+        _v = getattr(self, 'portal_theme', getattr(self, 'portaltheme', None))
+        self.portal_theme, self.portaltheme = _v, _v
+        _v = getattr(self, 'profiler_profile', getattr(self, 'profilerprofile', None))
+        self.profiler_profile, self.profilerprofile = _v, _v
+        _v = getattr(self, 'px_grid_node', getattr(self, 'pxgridnode', None))
+        self.px_grid_node, self.pxgridnode = _v, _v
+        _v = getattr(self, 'px_grid_settings', getattr(self, 'pxgridsettings', None))
+        self.px_grid_settings, self.pxgridsettings = _v, _v
+        _v = getattr(self, 'radius_server_sequence', getattr(self, 'radiusserversequence', None))
+        self.radius_server_sequence, self.radiusserversequence = _v, _v
+        _v = getattr(self, 'restid_store', getattr(self, 'restidstore', None))
+        self.restid_store, self.restidstore = _v, _v
+        _v = getattr(self, 'sms_provider', getattr(self, 'smsprovider', None))
+        self.sms_provider, self.smsprovider = _v, _v
+        _v = getattr(self, 'sponsored_guest_portal', getattr(self, 'sponsoredguestportal', None))
+        self.sponsored_guest_portal, self.sponsoredguestportal = _v, _v
+        _v = getattr(self, 'sponsor_group', getattr(self, 'sponsorgroup', None))
+        self.sponsor_group, self.sponsorgroup = _v, _v
+        _v = getattr(self, 'sponsor_group_member', getattr(self, 'sponsorgroupmember', None))
+        self.sponsor_group_member, self.sponsorgroupmember = _v, _v
+        _v = getattr(self, 'sponsor_portal', getattr(self, 'sponsorportal', None))
+        self.sponsor_portal, self.sponsorportal = _v, _v
+        _v = getattr(self, 'support_bundle_download', getattr(self, 'supportbundledownload', None))
+        self.support_bundle_download, self.supportbundledownload = _v, _v
+        _v = getattr(self, 'support_bundle_status', getattr(self, 'supportbundlestatus', None))
+        self.support_bundle_status, self.supportbundlestatus = _v, _v
+        _v = getattr(self, 'sxp_connections', getattr(self, 'sxpconnections', None))
+        self.sxp_connections, self.sxpconnections = _v, _v
+        _v = getattr(self, 'sxp_local_bindings', getattr(self, 'sxplocalbindings', None))
+        self.sxp_local_bindings, self.sxplocalbindings = _v, _v
+        _v = getattr(self, 'sxp_vpns', getattr(self, 'sxpvpns', None))
+        self.sxp_vpns, self.sxpvpns = _v, _v
+        _v = getattr(self, 'system_certificate', getattr(self, 'systemcertificate', None))
+        self.system_certificate, self.systemcertificate = _v, _v
+        _v = getattr(self, 'tacacs_command_sets', getattr(self, 'tacacscommandsets', None))
+        self.tacacs_command_sets, self.tacacscommandsets = _v, _v
+        _v = getattr(self, 'tacacs_external_servers', getattr(self, 'tacacsexternalservers', None))
+        self.tacacs_external_servers, self.tacacsexternalservers = _v, _v
+        _v = getattr(self, 'tacacs_profile', getattr(self, 'tacacsprofile', None))
+        self.tacacs_profile, self.tacacsprofile = _v, _v
+        _v = getattr(self, 'tacacs_server_sequence', getattr(self, 'tacacsserversequence', None))
+        self.tacacs_server_sequence, self.tacacsserversequence = _v, _v
+        _v = getattr(self, 'n_b_a_r_application_management', getattr(self, 'nbar_app', None))
+        self.n_b_a_r_application_management, self.nbar_app = _v, _v
+        _v = getattr(self, 'virtual_network_management', getattr(self, 'virtual_network', None))
+        self.virtual_network_management, self.virtual_network = _v, _v
 
     def _not_initialize_api_wrappers(self):
         """Function used when perform_initialize is False in class init.
@@ -6270,60 +6329,114 @@ class IdentityServicesEngineAPI(object):
         self.user_equipment = None
         self.virtual_network_management = None
 
-        # Backward compatibility aliases (v3.0.x smashed names -> v3.3+ snake_case names)
-        self.a_d_groups = self.ad_groups
-        self.acibindings = self.aci_bindings
-        self.acisettings = self.aci_settings
-        self.activedirectory = self.active_directory
-        self.adminuser = self.admin_user
-        self.allowedprotocols = self.allowed_protocols
-        self.ancendpoint = self.anc_endpoint
-        self.ancpolicy = self.anc_policy
-        self.authorizationprofile = self.authorization_profile
-        self.byodportal = self.byod_portal
-        self.certificateprofile = self.certificate_profile
-        self.certificatetemplate = self.certificate_template
-        self.customattributes = self.custom_attributes
-        self.downloadableacl = self.downloadable_acl
-        self.egressmatrixcell = self.egress_matrix_cell
-        self.enable_m_f_a = self.enable_mfa
-        self.externalradiusserver = self.external_radius_server
-        self.filterpolicy = self.filter_policy
-        self.guestlocation = self.guest_location
-        self.guestssid = self.guest_ssid
-        self.guesttype = self.guest_type
-        self.guestuser = self.guest_user
-        self.hotspotportal = self.hotspot_portal
-        self.internaluser = self.internal_user
-        self.is_m_f_a_enabled = self.is_mfa_enabled
-        self.mydeviceportal = self.my_device_portal
-        self.networkdevice = self.network_device
-        self.networkdevicegroup = self.network_device_group
-        self.nodeservices = self.node_services
-        self.portalglobalsetting = self.portal_global_setting
-        self.portaltheme = self.portal_theme
-        self.profilerprofile = self.profiler_profile
-        self.pxgridnode = self.px_grid_node
-        self.pxgridsettings = self.px_grid_settings
-        self.radiusserversequence = self.radius_server_sequence
-        self.restidstore = self.restid_store
-        self.smsprovider = self.sms_provider
-        self.sponsoredguestportal = self.sponsored_guest_portal
-        self.sponsorgroup = self.sponsor_group
-        self.sponsorgroupmember = self.sponsor_group_member
-        self.sponsorportal = self.sponsor_portal
-        self.supportbundledownload = self.support_bundle_download
-        self.supportbundlestatus = self.support_bundle_status
-        self.sxpconnections = self.sxp_connections
-        self.sxplocalbindings = self.sxp_local_bindings
-        self.sxpvpns = self.sxp_vpns
-        self.systemcertificate = self.system_certificate
-        self.tacacscommandsets = self.tacacs_command_sets
-        self.tacacsexternalservers = self.tacacs_external_servers
-        self.tacacsprofile = self.tacacs_profile
-        self.tacacsserversequence = self.tacacs_server_sequence
-        self.nbar_app = self.n_b_a_r_application_management
-        self.virtual_network = self.virtual_network_management
+        # Bidirectional aliases — same pattern as _initialize_api_wrappers.
+        # All canonicals are already None above, so both names resolve to None here.
+        _v = getattr(self, 'ad_groups', getattr(self, 'a_d_groups', None))
+        self.ad_groups, self.a_d_groups = _v, _v
+        _v = getattr(self, 'aci_bindings', getattr(self, 'acibindings', None))
+        self.aci_bindings, self.acibindings = _v, _v
+        _v = getattr(self, 'aci_settings', getattr(self, 'acisettings', None))
+        self.aci_settings, self.acisettings = _v, _v
+        _v = getattr(self, 'active_directory', getattr(self, 'activedirectory', None))
+        self.active_directory, self.activedirectory = _v, _v
+        _v = getattr(self, 'admin_user', getattr(self, 'adminuser', None))
+        self.admin_user, self.adminuser = _v, _v
+        _v = getattr(self, 'allowed_protocols', getattr(self, 'allowedprotocols', None))
+        self.allowed_protocols, self.allowedprotocols = _v, _v
+        _v = getattr(self, 'anc_endpoint', getattr(self, 'ancendpoint', None))
+        self.anc_endpoint, self.ancendpoint = _v, _v
+        _v = getattr(self, 'anc_policy', getattr(self, 'ancpolicy', None))
+        self.anc_policy, self.ancpolicy = _v, _v
+        _v = getattr(self, 'authorization_profile', getattr(self, 'authorizationprofile', None))
+        self.authorization_profile, self.authorizationprofile = _v, _v
+        _v = getattr(self, 'byod_portal', getattr(self, 'byodportal', None))
+        self.byod_portal, self.byodportal = _v, _v
+        _v = getattr(self, 'certificate_profile', getattr(self, 'certificateprofile', None))
+        self.certificate_profile, self.certificateprofile = _v, _v
+        _v = getattr(self, 'certificate_template', getattr(self, 'certificatetemplate', None))
+        self.certificate_template, self.certificatetemplate = _v, _v
+        _v = getattr(self, 'custom_attributes', getattr(self, 'customattributes', None))
+        self.custom_attributes, self.customattributes = _v, _v
+        _v = getattr(self, 'downloadable_acl', getattr(self, 'downloadableacl', None))
+        self.downloadable_acl, self.downloadableacl = _v, _v
+        _v = getattr(self, 'egress_matrix_cell', getattr(self, 'egressmatrixcell', None))
+        self.egress_matrix_cell, self.egressmatrixcell = _v, _v
+        _v = getattr(self, 'enable_mfa', getattr(self, 'enable_m_f_a', None))
+        self.enable_mfa, self.enable_m_f_a = _v, _v
+        _v = getattr(self, 'external_radius_server', getattr(self, 'externalradiusserver', None))
+        self.external_radius_server, self.externalradiusserver = _v, _v
+        _v = getattr(self, 'filter_policy', getattr(self, 'filterpolicy', None))
+        self.filter_policy, self.filterpolicy = _v, _v
+        _v = getattr(self, 'guest_location', getattr(self, 'guestlocation', None))
+        self.guest_location, self.guestlocation = _v, _v
+        _v = getattr(self, 'guest_ssid', getattr(self, 'guestssid', None))
+        self.guest_ssid, self.guestssid = _v, _v
+        _v = getattr(self, 'guest_type', getattr(self, 'guesttype', None))
+        self.guest_type, self.guesttype = _v, _v
+        _v = getattr(self, 'guest_user', getattr(self, 'guestuser', None))
+        self.guest_user, self.guestuser = _v, _v
+        _v = getattr(self, 'hotspot_portal', getattr(self, 'hotspotportal', None))
+        self.hotspot_portal, self.hotspotportal = _v, _v
+        _v = getattr(self, 'internal_user', getattr(self, 'internaluser', None))
+        self.internal_user, self.internaluser = _v, _v
+        _v = getattr(self, 'is_mfa_enabled', getattr(self, 'is_m_f_a_enabled', None))
+        self.is_mfa_enabled, self.is_m_f_a_enabled = _v, _v
+        _v = getattr(self, 'my_device_portal', getattr(self, 'mydeviceportal', None))
+        self.my_device_portal, self.mydeviceportal = _v, _v
+        _v = getattr(self, 'network_device', getattr(self, 'networkdevice', None))
+        self.network_device, self.networkdevice = _v, _v
+        _v = getattr(self, 'network_device_group', getattr(self, 'networkdevicegroup', None))
+        self.network_device_group, self.networkdevicegroup = _v, _v
+        _v = getattr(self, 'node_services', getattr(self, 'nodeservices', None))
+        self.node_services, self.nodeservices = _v, _v
+        _v = getattr(self, 'portal_global_setting', getattr(self, 'portalglobalsetting', None))
+        self.portal_global_setting, self.portalglobalsetting = _v, _v
+        _v = getattr(self, 'portal_theme', getattr(self, 'portaltheme', None))
+        self.portal_theme, self.portaltheme = _v, _v
+        _v = getattr(self, 'profiler_profile', getattr(self, 'profilerprofile', None))
+        self.profiler_profile, self.profilerprofile = _v, _v
+        _v = getattr(self, 'px_grid_node', getattr(self, 'pxgridnode', None))
+        self.px_grid_node, self.pxgridnode = _v, _v
+        _v = getattr(self, 'px_grid_settings', getattr(self, 'pxgridsettings', None))
+        self.px_grid_settings, self.pxgridsettings = _v, _v
+        _v = getattr(self, 'radius_server_sequence', getattr(self, 'radiusserversequence', None))
+        self.radius_server_sequence, self.radiusserversequence = _v, _v
+        _v = getattr(self, 'restid_store', getattr(self, 'restidstore', None))
+        self.restid_store, self.restidstore = _v, _v
+        _v = getattr(self, 'sms_provider', getattr(self, 'smsprovider', None))
+        self.sms_provider, self.smsprovider = _v, _v
+        _v = getattr(self, 'sponsored_guest_portal', getattr(self, 'sponsoredguestportal', None))
+        self.sponsored_guest_portal, self.sponsoredguestportal = _v, _v
+        _v = getattr(self, 'sponsor_group', getattr(self, 'sponsorgroup', None))
+        self.sponsor_group, self.sponsorgroup = _v, _v
+        _v = getattr(self, 'sponsor_group_member', getattr(self, 'sponsorgroupmember', None))
+        self.sponsor_group_member, self.sponsorgroupmember = _v, _v
+        _v = getattr(self, 'sponsor_portal', getattr(self, 'sponsorportal', None))
+        self.sponsor_portal, self.sponsorportal = _v, _v
+        _v = getattr(self, 'support_bundle_download', getattr(self, 'supportbundledownload', None))
+        self.support_bundle_download, self.supportbundledownload = _v, _v
+        _v = getattr(self, 'support_bundle_status', getattr(self, 'supportbundlestatus', None))
+        self.support_bundle_status, self.supportbundlestatus = _v, _v
+        _v = getattr(self, 'sxp_connections', getattr(self, 'sxpconnections', None))
+        self.sxp_connections, self.sxpconnections = _v, _v
+        _v = getattr(self, 'sxp_local_bindings', getattr(self, 'sxplocalbindings', None))
+        self.sxp_local_bindings, self.sxplocalbindings = _v, _v
+        _v = getattr(self, 'sxp_vpns', getattr(self, 'sxpvpns', None))
+        self.sxp_vpns, self.sxpvpns = _v, _v
+        _v = getattr(self, 'system_certificate', getattr(self, 'systemcertificate', None))
+        self.system_certificate, self.systemcertificate = _v, _v
+        _v = getattr(self, 'tacacs_command_sets', getattr(self, 'tacacscommandsets', None))
+        self.tacacs_command_sets, self.tacacscommandsets = _v, _v
+        _v = getattr(self, 'tacacs_external_servers', getattr(self, 'tacacsexternalservers', None))
+        self.tacacs_external_servers, self.tacacsexternalservers = _v, _v
+        _v = getattr(self, 'tacacs_profile', getattr(self, 'tacacsprofile', None))
+        self.tacacs_profile, self.tacacsprofile = _v, _v
+        _v = getattr(self, 'tacacs_server_sequence', getattr(self, 'tacacsserversequence', None))
+        self.tacacs_server_sequence, self.tacacsserversequence = _v, _v
+        _v = getattr(self, 'n_b_a_r_application_management', getattr(self, 'nbar_app', None))
+        self.n_b_a_r_application_management, self.nbar_app = _v, _v
+        _v = getattr(self, 'virtual_network_management', getattr(self, 'virtual_network', None))
+        self.virtual_network_management, self.virtual_network = _v, _v
 
     def initialize_authentication(self):
         """
@@ -6617,11 +6730,11 @@ class IdentityServicesEngineAPI(object):
 
         It may require to call reinitialize to distribute the changes accross the SDK objects."""
         check_type(value, str, may_be_none=False)
-        if value not in ['3.1.0', '3.1.1', '3.1_Patch_1', '3.2_beta', '3.3_patch_1']:
+        if value not in ['3.1.0', '3.1.1', '3.1_Patch_1', '3.2_beta', '3.3_patch_1', '3.5.0']:
             raise VersionError(
                 'Unknown API version, '
                 + 'known versions are {0}'.format(
-                    '3.1.0, 3.1.1, 3.1_Patch_1, 3.2_beta and 3.3_patch_1.'
+                    '3.1.0, 3.1.1, 3.1_Patch_1, 3.2_beta, 3.3_patch_1 and 3.5.0.'
                 )
             )
         self._version = value
