@@ -10,7 +10,7 @@ python_version = "3.12"
 requests = ">=2.33.0, <3.0.0"
 requests-toolbelt = ">=1.0.0"
 fastjsonschema = ">=2.16.2"
-xmltodict = "==1.0.2"
+xmltodict = "==1.0.4"
 
 [dev-packages] # Here goes your package requirements for developing the application and its versions (which packaes you will use when developing the application)
 sphinx = ">=5.0.0"
