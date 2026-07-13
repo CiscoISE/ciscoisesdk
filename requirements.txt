@@ -1,5 +1,5 @@
 certifi==2026.6.17 ; python_version >= "3.12" and python_version < "4.0"
-charset-normalizer==3.4.7 ; python_version >= "3.12" and python_version < "4.0"
+charset-normalizer==3.4.9 ; python_version >= "3.12" and python_version < "4.0"
 fastjsonschema==2.21.2 ; python_version >= "3.12" and python_version < "4.0"
 idna==3.18 ; python_version >= "3.12" and python_version < "4.0"
 requests-toolbelt==1.0.0 ; python_version >= "3.12" and python_version < "4.0"
