@@ -23,6 +23,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
+import warnings
+
 import ciscoisesdk
 import pytest
 from ciscoisesdk.api.authentication import Authentication
@@ -788,6 +790,27 @@ class TestIdentityServicesEngineSDK:
         )
 
         assert 'authorization' not in connection_object.session.headers
+
+    @pytest.mark.ciscoisesdk
+    @pytest.mark.parametrize('version', ['3.1.0', '3.1.1', '3.1_Patch_1',
+                                         '3.2_beta', '3.3_patch_1', '3.5.0'])
+    def test_api_object_creation_for_every_supported_version(self, base_url, version):
+        """Every supported version must build without AttributeError (issue #87)."""
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', FutureWarning)
+            connection_object = ciscoisesdk.IdentityServicesEngineAPI(
+                username=IDENTITY_SERVICES_ENGINE_USERNAME,
+                password=IDENTITY_SERVICES_ENGINE_PASSWORD,
+                encoded_auth=IDENTITY_SERVICES_ENGINE_ENCODED_AUTH,
+                base_url=base_url,
+                verify=DEFAULT_VERIFY,
+                version=version,
+                uses_api_gateway=True,
+            )
+
+        assert connection_object.version == version
+        # Legacy and canonical family names resolve to the same wrapper.
+        assert connection_object.guest_user is connection_object.guestuser
 
     @pytest.mark.ciscoisesdk
     def test_api_object_creation(self, api):
