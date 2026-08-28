@@ -5,6 +5,39 @@ ciscoisesdk
 **ciscoisesdk** is a *community developed* Python library for working with the Identity Services Engine APIs. 
 Our goal is to make working with Cisco Identity Services Engine in Python a *native* and *natural* experience!
 
+The quickest way to check that your credentials and API settings work is to ask ISE for
+its version and patch level:
+
+.. code-block:: python
+
+    from ciscoisesdk import IdentityServicesEngineAPI
+
+    api = IdentityServicesEngineAPI(username='admin',
+                                    password='C1sco12345',
+                                    uses_api_gateway=True,
+                                    base_url='https://198.18.133.27',
+                                    verify=True,
+                                    uses_csrf_token=False)
+
+    print(api.version_and_patch.get_ise_version_and_patch().response)
+    # {'OperationResult': {'resultValue': [{'value': '3.4.0.608', 'name': 'version'},
+    #                                      {'value': '3', 'name': 'patch information'}]}}
+
+The same check with certificate-based (mTLS) authentication, available since Cisco ISE 3.3:
+
+.. code-block:: python
+
+    api = IdentityServicesEngineAPI(base_url='https://198.18.133.27',
+                                    uses_api_gateway=True,
+                                    client_cert='apiuser-cert.pem',
+                                    client_key='apiuser-key.pem',
+                                    verify=False,
+                                    uses_csrf_token=False)
+
+    print(api.version_and_patch.get_ise_version_and_patch().response)
+
+A more complete example:
+
 .. code-block:: python
 
     from ciscoisesdk import IdentityServicesEngineAPI

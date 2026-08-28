@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.6] - 2026-08-25
+### Added
+- README quick start examples for verifying credentials and API connectivity by
+  querying the ISE version and patch level, using both password-based and
+  certificate-based (mTLS) authentication (closes #81).
+
+### Tests
+- Added `test_api_object_creation_for_every_supported_version`, parametrized over
+  `3.1.0`, `3.1.1`, `3.1_Patch_1`, `3.2_beta`, `3.3_patch_1`, and `3.5.0`, to confirm
+  the constructor builds without `AttributeError` and that legacy/canonical family
+  names resolve to the same wrapper for every supported version (closes #87).
+
 ## [2.4.5] - 2026-06-22
 ### Fixed
 - Constructor raised `AttributeError` for any ISE version other than 3.5.0 (closes #87).
