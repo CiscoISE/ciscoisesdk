@@ -56,10 +56,8 @@ class JSONSchemaValidatorC54A2Ad63F46527DBec140A05F1213B7(object):
                 "items": {
                 "properties": {
                 "actionType": {
-                "type": "object"
                 },
                 "allowedProtocol": {
-                "type": "object"
                 },
                 "certificateTemplateId": {
                 "type": "string"

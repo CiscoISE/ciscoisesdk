@@ -78,7 +78,6 @@ class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
                 "type": "string"
                 },
                 "type": {
-                "type": "object"
                 }
                 }
                 },
@@ -156,7 +155,6 @@ class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
                 "type": "string"
                 },
                 "identityNotInAdBehaviour": {
-                "type": "object"
                 },
                 "jobTitle": {
                 "type": "string"
@@ -190,7 +188,6 @@ class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
                 "type": "array"
                 },
                 "schema": {
-                "type": "object"
                 },
                 "stateOrProvince": {
                 "type": "string"
@@ -202,7 +199,6 @@ class JSONSchemaValidatorF7Bf995F35Dd5Bf5A4BeCe3D60007Fee(object):
                 "type": "string"
                 },
                 "unreachableDomainsBehaviour": {
-                "type": "object"
                 }
                 },
                 "type": "object"

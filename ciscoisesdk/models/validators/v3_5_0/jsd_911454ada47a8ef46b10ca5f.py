@@ -61,7 +61,6 @@ class JSONSchemaValidator911454AdA47A8Ef46B10Ca5F(object):
                 "type": "boolean"
                 },
                 "fromDate": {
-                "type": "object"
                 },
                 "includeCoreFiles": {
                 "type": "boolean"
@@ -82,7 +81,6 @@ class JSONSchemaValidator911454AdA47A8Ef46B10Ca5F(object):
                 "type": "boolean"
                 },
                 "toDate": {
-                "type": "object"
                 }
                 },
                 "required": [

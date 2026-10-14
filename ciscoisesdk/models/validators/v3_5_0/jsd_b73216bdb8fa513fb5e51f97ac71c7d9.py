@@ -47,7 +47,6 @@ class JSONSchemaValidatorB73216BdB8Fa513FB5E51F97Ac71C7D9(object):
                 "type": "string"
                 },
                 "enabled": {
-                "type": "object"
                 },
                 "id": {
                 "type": "string"

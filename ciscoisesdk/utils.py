@@ -278,6 +278,34 @@ def apply_path_params(URL, path_params):
         )
 
 
+SENSITIVE_HEADERS = ("authorization", "x-csrf-token")
+SENSITIVE_KEYS = ("password", "passphrase", "secret", "psk", "token")
+MASK = "********"
+
+
+def is_sensitive_key(key: object) -> bool:
+    """Return True if the key name looks like it holds a secret."""
+    return any(word in str(key).lower() for word in SENSITIVE_KEYS)
+
+
+def mask_sensitive_data(value: object) -> object:
+    """Return a copy of value with secret values replaced by a mask."""
+    if isinstance(value, dict):
+        if "value" in value and is_sensitive_key(value.get("name", "")):
+            return dict(value, value=MASK)
+        return {
+            key: (
+                MASK
+                if is_sensitive_key(key) and isinstance(item, str)
+                else mask_sensitive_data(item)
+            )
+            for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [mask_sensitive_data(item) for item in value]
+    return value
+
+
 def pprint_request_info(url, method, _headers, **kwargs):
     debug_print = (
         "\nRequest"
@@ -286,7 +314,7 @@ def pprint_request_info(url, method, _headers, **kwargs):
         "\n\tHeaders: \n{}"
     )
     _headers.update(kwargs.get('headers', {}))
-    _headers = '\n'.join(['\t\t{}: {}'.format(a, b)
+    _headers = '\n'.join(['\t\t{}: {}'.format(a, MASK if a.lower() in SENSITIVE_HEADERS else b)
                          for a, b in _headers.items()])
     debug_print = debug_print.format(url, method, _headers)
 
@@ -301,7 +329,7 @@ def pprint_request_info(url, method, _headers, **kwargs):
             value = kwargs.get(kw)
             key = kwargs_pprint.get(kw)
             if isinstance(value, list) or isinstance(value, dict):
-                value = json.dumps(value, indent=4)
+                value = json.dumps(mask_sensitive_data(value), indent=4)
                 lines = [' ' * (8 + len(key)) + line
                          for line in value.split('\n')]
                 value = '\n'.join(lines)

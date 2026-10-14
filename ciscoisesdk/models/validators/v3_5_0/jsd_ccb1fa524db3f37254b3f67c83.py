@@ -49,19 +49,15 @@ class JSONSchemaValidatorCcB1Fa524DB3F37254B3F67C83(object):
                 "ersRestIDStoreAdvanceSettings": {
                 "properties": {
                 "deviceQuerySetting": {
-                "type": "object"
                 },
                 "identifyDeviceCertificate": {
-                "type": "object"
                 },
                 "regex": {
                 "type": "string"
                 },
                 "regexType": {
-                "type": "object"
                 },
                 "sanAttribute": {
-                "type": "object"
                 },
                 "sanAttributeValue": {
                 "type": "string"
@@ -88,7 +84,6 @@ class JSONSchemaValidatorCcB1Fa524DB3F37254B3F67C83(object):
                 "type": "array"
                 },
                 "predefined": {
-                "type": "object"
                 },
                 "rootUrl": {
                 "type": "string"

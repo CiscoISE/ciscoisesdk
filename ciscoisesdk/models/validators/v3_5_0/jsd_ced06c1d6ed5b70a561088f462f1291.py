@@ -56,7 +56,6 @@ class JSONSchemaValidatorCed06C1D6Ed5B70A561088F462F1291(object):
                 "type": "number"
                 },
                 "anyJsonObject": {
-                "type": "object"
                 },
                 "anyJsonString": {
                 "type": "string"

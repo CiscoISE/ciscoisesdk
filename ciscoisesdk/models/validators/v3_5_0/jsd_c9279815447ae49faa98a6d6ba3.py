@@ -46,7 +46,6 @@ class JSONSchemaValidatorC9279815447Ae49Faa98A6D6Ba3(object):
                 "type": "boolean"
                 },
                 "certificateAttributeName": {
-                "type": "object"
                 },
                 "description":
                  {
@@ -59,13 +58,11 @@ class JSONSchemaValidatorC9279815447Ae49Faa98A6D6Ba3(object):
                 "type": "string"
                 },
                 "matchMode": {
-                "type": "object"
                 },
                 "name": {
                 "type": "string"
                 },
                 "usernameFrom": {
-                "type": "object"
                 }
                 },
                 "required": [

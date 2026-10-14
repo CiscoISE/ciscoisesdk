@@ -47,7 +47,6 @@ class JSONSchemaValidatorCab8440E21553C3A807D23D05E5E1Aa(object):
                 "type": "string"
                 },
                 "enabled": {
-                "type": "object"
                 },
                 "id": {
                 "type": "string"

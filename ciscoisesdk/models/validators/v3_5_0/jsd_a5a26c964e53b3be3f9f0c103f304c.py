@@ -43,7 +43,6 @@ class JSONSchemaValidatorA5A26C964E53B3Be3F9F0C103F304C(object):
                 "SGMappingGroup": {
                 "properties": {
                 "deployTo": {
-                "type": "object"
                 },
                 "deployType": {
                 "type": "string"
@@ -59,7 +58,6 @@ class JSONSchemaValidatorA5A26C964E53B3Be3F9F0C103F304C(object):
                 "type": "string"
                 },
                 "sgt": {
-                "type": "object"
                 },
                 "sgtDomain": {
                 "type": "string"

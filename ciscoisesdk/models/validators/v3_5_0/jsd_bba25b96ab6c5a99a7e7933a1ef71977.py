@@ -99,7 +99,6 @@ class JSONSchemaValidatorBba25B96Ab6C5A99A7E7933A1Ef71977(object):
                 },
                 "nmap": {
                 "items": {
-                "type": "object"
                 },
                 "maxItems": 0,
                 "minItems": 0,
@@ -107,7 +106,6 @@ class JSONSchemaValidatorBba25B96Ab6C5A99A7E7933A1Ef71977(object):
                 },
                 "pxgrid": {
                 "items": {
-                "type": "object"
                 },
                 "maxItems": 0,
                 "minItems": 0,
@@ -115,7 +113,6 @@ class JSONSchemaValidatorBba25B96Ab6C5A99A7E7933A1Ef71977(object):
                 },
                 "radius": {
                 "items": {
-                "type": "object"
                 },
                 "maxItems": 0,
                 "minItems": 0,

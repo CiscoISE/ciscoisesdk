@@ -65,7 +65,6 @@ class JSONSchemaValidatorCe666E64A958229Cfd8Da70945935E(object):
                 "type": "boolean"
                 },
                 "value": {
-                "type": "object"
                 }
                 },
                 "required": [

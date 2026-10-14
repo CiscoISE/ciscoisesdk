@@ -78,7 +78,6 @@ class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
                 "type": "string"
                 },
                 "type": {
-                "type": "object"
                 }
                 }
                 },
@@ -156,7 +155,6 @@ class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
                 "type": "string"
                 },
                 "identityNotInAdBehaviour": {
-                "type": "object"
                 },
                 "jobTitle": {
                 "type": "string"
@@ -190,7 +188,6 @@ class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
                 "type": "array"
                 },
                 "schema": {
-                "type": "object"
                 },
                 "stateOrProvince": {
                 "type": "string"
@@ -202,7 +199,6 @@ class JSONSchemaValidatorE84705B918955B53Afe61Fc37911Eb8B(object):
                 "type": "string"
                 },
                 "unreachableDomainsBehaviour": {
-                "type": "object"
                 }
                 },
                 "type": "object"

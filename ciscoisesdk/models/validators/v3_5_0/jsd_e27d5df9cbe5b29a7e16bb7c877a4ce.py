@@ -46,7 +46,6 @@ class JSONSchemaValidatorE27D5Df9Cbe5B29A7E16Bb7C877A4Ce(object):
                 "type": "string"
                 },
                 "certificateRequest": {
-                "type": "object"
                 },
                 "description":
                  {

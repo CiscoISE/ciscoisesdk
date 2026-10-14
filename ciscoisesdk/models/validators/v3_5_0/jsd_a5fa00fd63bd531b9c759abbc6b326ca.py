@@ -100,7 +100,6 @@ class JSONSchemaValidatorA5Fa00Fd63Bd531B9C759Abbc6B326Ca(object):
                 "type": "array"
                 },
                 "managePermission": {
-                "type": "object"
                 },
                 "memberGroups": {
                 "items": {

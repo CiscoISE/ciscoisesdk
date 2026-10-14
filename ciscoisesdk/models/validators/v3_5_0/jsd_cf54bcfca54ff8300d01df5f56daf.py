@@ -66,7 +66,6 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "type": "object"
                 },
                 "rightHandSideAttribueValue": {
-                "type": "object"
                 }
                 },
                 "required": [
@@ -75,7 +74,6 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "type": "object"
                 },
                 "agentlessPosture": {
-                "type": "object"
                 },
                 "airespaceACL": {
                 "type": "string"
@@ -103,7 +101,6 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "type": "string"
                 },
                 "easywiredSessionCandidate": {
-                "type": "object"
                 },
                 "id": {
                 "type": "string"
@@ -124,7 +121,6 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "type": "string"
                 },
                 "neat": {
-                "type": "object"
                 },
                 "profileName": {
                 "type": "string"
@@ -144,7 +140,6 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "type": "string"
                 },
                 "timer": {
-                "type": "object"
                 }
                 },
                 "required": [
@@ -155,10 +150,8 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "type": "object"
                 },
                 "serviceTemplate": {
-                "type": "object"
                 },
                 "trackMovement": {
-                "type": "object"
                 },
                 "uniqueIdentifier": {
                 "type": "string"
@@ -179,10 +172,8 @@ class JSONSchemaValidatorCf54BCfca54Ff8300D01Df5F56Daf(object):
                 "type": "object"
                 },
                 "voiceDomainPermission": {
-                "type": "object"
                 },
                 "webAuth": {
-                "type": "object"
                 },
                 "webRedirection": {
                 "properties": {

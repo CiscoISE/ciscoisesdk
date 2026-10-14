@@ -51,7 +51,6 @@ class JSONSchemaValidatorB9Ff772283F758A3Ac5321Da589017F6(object):
                 "items": {
                 "properties": {
                 "dayTimeLimit": {
-                "type": "object"
                 }
                 }
                 },
