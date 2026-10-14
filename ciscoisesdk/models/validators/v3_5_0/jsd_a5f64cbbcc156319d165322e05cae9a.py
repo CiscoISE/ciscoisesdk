@@ -193,7 +193,6 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "type": "string"
                 },
                 "macFormat": {
-                "type": "object"
                 },
                 "prefixSeparator": {
                 "type": "string"
@@ -230,7 +229,6 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "type": "string"
                 },
                 "groupMemberReference": {
-                "type": "object"
                 },
                 "groupNameAttribute": {
                 "type": "string"
@@ -239,7 +237,6 @@ class JSONSchemaValidatorA5F64CbBcc156319D165322E05Cae9A(object):
                 "type": "string"
                 },
                 "schema": {
-                "type": "object"
                 },
                 "userInfoAttributes": {
                 "properties": {

@@ -54,7 +54,6 @@ class JSONSchemaValidatorFfe46F1149C58F4B7F4C8F89B1B9D3D(object):
                 "type": "string"
                 },
                 "grant": {
-                "type": "object"
                 }
                 }
                 },

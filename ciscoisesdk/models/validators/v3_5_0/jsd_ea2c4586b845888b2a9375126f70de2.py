@@ -58,7 +58,6 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "type": "string"
                 },
                 "mask": {
-                "type": "object"
                 }
                 }
                 },
@@ -82,13 +81,11 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "type": "string"
                 },
                 "keyInputFormat": {
-                "type": "object"
                 },
                 "messageAuthenticatorCodeKey": {
                 "type": "string"
                 },
                 "networkProtocol": {
-                "type": "object"
                 },
                 "radiusSharedSecret": {
                 "type": "string"
@@ -145,7 +142,6 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "type": "string"
                 },
                 "pollingInterval": {
-                "type": "object"
                 },
                 "privacyPassword": {
                 "type": "string"
@@ -181,13 +177,11 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "tacacsSettings": {
                 "properties": {
                 "connectModeOptions": {
-                "type": "object"
                 },
                 "previousSharedSecret": {
                 "type": "string"
                 },
                 "previousSharedSecretExpiry": {
-                "type": "object"
                 },
                 "sharedSecret": {
                 "type": "string"
@@ -198,7 +192,6 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "tacacsTlsSettings": {
                 "properties": {
                 "connectModeOptions": {
-                "type": "object"
                 },
                 "enableSanIpValidation": {
                 "type": "boolean"
@@ -256,7 +249,6 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "type": "string"
                 },
                 "includeWhenDeployingSGTUpdates": {
-                "type": "object"
                 }
                 },
                 "type": "object"
@@ -267,22 +259,16 @@ class JSONSchemaValidatorEa2C4586B845888B2A9375126F70De2(object):
                 "type": "string"
                 },
                 "downlaodEnvironmentDataEveryXSeconds": {
-                "type": "object"
                 },
                 "downlaodPeerAuthorizationPolicyEveryXSeconds": {
-                "type": "object"
                 },
                 "downloadSGACLListsEveryXSeconds": {
-                "type": "object"
                 },
                 "otherSGADevicesToTrustThisDevice": {
-                "type": "object"
                 },
                 "reAuthenticationEveryXSeconds": {
-                "type": "object"
                 },
                 "sendConfigurationToDevice": {
-                "type": "object"
                 },
                 "sendConfigurationToDeviceUsing": {
                 "type": "string"

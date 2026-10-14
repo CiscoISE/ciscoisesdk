@@ -46,7 +46,6 @@ class JSONSchemaValidatorB35Ee865Ba205A6A958913154Bf6D59B(object):
                 "items": {
                 "properties": {
                 "action": {
-                "type": "object"
                 }
                 }
                 },

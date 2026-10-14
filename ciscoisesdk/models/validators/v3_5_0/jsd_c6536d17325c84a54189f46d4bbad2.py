@@ -43,10 +43,8 @@ class JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2(object):
                 "ExternalRadiusServer": {
                 "properties": {
                 "accountingPort": {
-                "type": "object"
                 },
                 "authenticationPort": {
-                "type": "object"
                 },
                 "authenticatorKey": {
                 "type": "string"
@@ -77,16 +75,13 @@ class JSONSchemaValidatorC6536D17325C84A54189F46D4Bbad2(object):
                 "type": "string"
                 },
                 "proxyTimeout": {
-                "type": "object"
                 },
                 "retries": {
-                "type": "object"
                 },
                 "sharedSecret": {
                 "type": "string"
                 },
                 "timeout": {
-                "type": "object"
                 }
                 },
                 "required": [

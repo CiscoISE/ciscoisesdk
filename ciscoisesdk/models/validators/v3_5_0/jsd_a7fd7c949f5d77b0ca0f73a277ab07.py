@@ -42,7 +42,6 @@ class JSONSchemaValidatorA7Fd7C949F5D77B0Ca0F73A277Ab07(object):
                 "properties": {
                 "CtsCertificates": {
                 "items": {
-                "type": "object"
                 },
                 "type": "array"
                 },

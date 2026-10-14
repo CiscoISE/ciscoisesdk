@@ -97,7 +97,6 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "allowEapFastEapGtcPwdChangeRetries": {
-                "type": "object"
                 },
                 "allowEapFastEapMsChapV2": {
                 "type": "boolean"
@@ -106,7 +105,6 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "allowEapFastEapMsChapV2PwdChangeRetries": {
-                "type": "object"
                 },
                 "allowEapFastEapTls": {
                 "type": "boolean"
@@ -139,13 +137,11 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "eapFastUsePacsAuthorizationPacTtl": {
-                "type": "object"
                 },
                 "eapFastUsePacsAuthorizationPacTtlUnits": {
                 "type": "string"
                 },
                 "eapFastUsePacsMachinePacTtl": {
-                "type": "object"
                 },
                 "eapFastUsePacsMachinePacTtlUnits": {
                 "type": "string"
@@ -157,13 +153,11 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "eapFastUsePacsTunnelPacTtl": {
-                "type": "object"
                 },
                 "eapFastUsePacsTunnelPacTtlUnits": {
                 "type": "string"
                 },
                 "eapFastUsePacsUseProactivePacUpdatePrecentage": {
-                "type": "object"
                 }
                 },
                 "required": [
@@ -184,13 +178,10 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "eapTlsSessionTicketPrecentage": {
-                "type": "object"
                 },
                 "eapTlsSessionTicketTtl": {
-                "type": "object"
                 },
                 "eapTlsSessionTicketTtlUnits": {
-                "type": "object"
                 }
                 },
                 "required": [
@@ -217,7 +208,6 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "eapTtlsEapMsChapV2PwdChangeRetries": {
-                "type": "object"
                 },
                 "eapTtlsMsChapV1": {
                 "type": "boolean"
@@ -257,7 +247,6 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "allowPeapEapGtcPwdChangeRetries": {
-                "type": "object"
                 },
                 "allowPeapEapMsChapV2": {
                 "type": "boolean"
@@ -266,7 +255,6 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "allowPeapEapMsChapV2PwdChangeRetries": {
-                "type": "object"
                 },
                 "allowPeapEapTls": {
                 "type": "boolean"
@@ -317,7 +305,6 @@ class JSONSchemaValidatorDa4Eb995Ac152158F324Dfdef5E73D6(object):
                 "type": "boolean"
                 },
                 "allowTeapEapMsChapV2PwdChangeRetries": {
-                "type": "object"
                 },
                 "allowTeapEapTls": {
                 "type": "boolean"

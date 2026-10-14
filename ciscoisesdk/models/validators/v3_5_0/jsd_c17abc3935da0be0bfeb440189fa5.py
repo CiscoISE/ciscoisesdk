@@ -83,7 +83,6 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "type": "object"
                 },
                 "language": {
-                "type": "object"
                 },
                 "pageCustomizations": {
                 "properties": {
@@ -373,7 +372,6 @@ class JSONSchemaValidatorC17AbC3935Da0Be0BFeb440189Fa5(object):
                 "type": "boolean"
                 },
                 "autoLoginTimePeriod": {
-                "type": "object"
                 },
                 "credentialNotificationUsingEmail": {
                 "type": "boolean"

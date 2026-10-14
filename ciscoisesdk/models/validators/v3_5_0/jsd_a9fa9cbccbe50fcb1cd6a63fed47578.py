@@ -43,7 +43,6 @@ class JSONSchemaValidatorA9Fa9CbCcbe50FcB1Cd6A63Fed47578(object):
                 "GuestUser": {
                 "properties": {
                 "customFields": {
-                "type": "object"
                 },
                 "description":
                  {
@@ -67,7 +66,6 @@ class JSONSchemaValidatorA9Fa9CbCcbe50FcB1Cd6A63Fed47578(object):
                 "type": "string"
                 },
                 "validDays": {
-                "type": "object"
                 }
                 },
                 "required": [

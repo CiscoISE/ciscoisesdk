@@ -43,7 +43,6 @@ class JSONSchemaValidatorDfaeea899C185169Ae2A3B70B5491008(object):
                 "ERSEndPoint": {
                 "properties": {
                 "customAttributes": {
-                "type": "object"
                 },
                 "description":
                  {
@@ -65,7 +64,6 @@ class JSONSchemaValidatorDfaeea899C185169Ae2A3B70B5491008(object):
                 "type": "string"
                 },
                 "mdmAttributes": {
-                "type": "object"
                 },
                 "name": {
                 "type": "string"

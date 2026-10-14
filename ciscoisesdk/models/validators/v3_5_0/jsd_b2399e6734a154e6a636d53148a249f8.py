@@ -46,7 +46,6 @@ class JSONSchemaValidatorB2399E6734A154E6A636D53148A249F8(object):
                 "items": {
                 "properties": {
                 "AttributeManipulator": {
-                "type": "object"
                 }
                 }
                 },
@@ -56,7 +55,6 @@ class JSONSchemaValidatorB2399E6734A154E6A636D53148A249F8(object):
                 "items": {
                 "properties": {
                 "AttributeManipulator": {
-                "type": "object"
                 }
                 }
                 },

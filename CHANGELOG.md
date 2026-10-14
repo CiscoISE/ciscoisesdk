@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.7] - 2026-10-13
+### Fixed
+- 3.5.0 request validators accept the scalar values that ISE documents (for example
+  `mask: 32` or the SGT `value: -1`) for fields the published schema declares as `object`.
+
+### Security
+- Debug output and request validation errors mask credentials and secret values
+  (CiscoISE/ansible-ise#118).
+
 ## [2.4.6] - 2026-08-25
 ### Added
 - README quick start examples for verifying credentials and API connectivity by
@@ -596,4 +605,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [2.4.3]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.2...v2.4.3
 [2.4.4]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.3...v2.4.4
 [2.4.5]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.4...v2.4.5
-[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.5...develop
+[2.4.6]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.5...v2.4.6
+[2.4.7]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.6...v2.4.7
+[Unreleased]: https://github.com/CiscoISE/ciscoisesdk/compare/v2.4.7...develop

@@ -83,7 +83,6 @@ class JSONSchemaValidatorA308D823115556A98361Fe154Dfbb1D4(object):
                 "type": "object"
                 },
                 "language": {
-                "type": "object"
                 },
                 "pageCustomizations": {
                 "properties": {

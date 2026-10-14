@@ -83,7 +83,6 @@ class JSONSchemaValidatorAefc33A1Cd9559C9A119Fe94346D540A(object):
                 "type": "object"
                 },
                 "language": {
-                "type": "object"
                 },
                 "pageCustomizations": {
                 "properties": {
@@ -373,7 +372,6 @@ class JSONSchemaValidatorAefc33A1Cd9559C9A119Fe94346D540A(object):
                 "type": "boolean"
                 },
                 "autoLoginTimePeriod": {
-                "type": "object"
                 },
                 "credentialNotificationUsingEmail": {
                 "type": "boolean"

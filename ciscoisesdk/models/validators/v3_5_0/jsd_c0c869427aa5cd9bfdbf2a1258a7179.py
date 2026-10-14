@@ -49,7 +49,6 @@ class JSONSchemaValidatorC0C869427Aa5Cd9BfdbF2A1258A7179(object):
                 "properties": {
                 "childPermissions": {
                 "items": {
-                "type": "object"
                 },
                 "type": "array"
                 },

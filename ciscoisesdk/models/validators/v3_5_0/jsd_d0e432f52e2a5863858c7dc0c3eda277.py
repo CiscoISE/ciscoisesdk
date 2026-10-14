@@ -49,19 +49,15 @@ class JSONSchemaValidatorD0E432F52E2A5863858C7Dc0C3Eda277(object):
                 "ersRestIDStoreAdvanceSettings": {
                 "properties": {
                 "deviceQuerySetting": {
-                "type": "object"
                 },
                 "identifyDeviceCertificate": {
-                "type": "object"
                 },
                 "regex": {
                 "type": "string"
                 },
                 "regexType": {
-                "type": "object"
                 },
                 "sanAttribute": {
-                "type": "object"
                 },
                 "sanAttributeValue": {
                 "type": "string"
@@ -88,7 +84,6 @@ class JSONSchemaValidatorD0E432F52E2A5863858C7Dc0C3Eda277(object):
                 "type": "array"
                 },
                 "predefined": {
-                "type": "object"
                 },
                 "rootUrl": {
                 "type": "string"

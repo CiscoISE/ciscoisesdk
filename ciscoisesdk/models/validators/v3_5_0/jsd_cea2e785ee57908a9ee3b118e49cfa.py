@@ -92,10 +92,8 @@ class JSONSchemaValidatorCea2E785Ee57908A9EE3B118E49Cfa(object):
                 "type": "string"
                 },
                 "maxNumIepgFromAci": {
-                "type": "object"
                 },
                 "maxNumSgtToAci": {
-                "type": "object"
                 },
                 "name": {
                 "type": "string"

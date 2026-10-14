@@ -47,7 +47,6 @@ class JSONSchemaValidatorDd7ACd3B54Fa90E435C1666B88Ec(object):
                 "type": "string"
                 },
                 "enableRestIdStore": {
-                "type": "object"
                 },
                 "id": {
                 "type": "string"

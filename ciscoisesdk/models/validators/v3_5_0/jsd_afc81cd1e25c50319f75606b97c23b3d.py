@@ -59,7 +59,6 @@ class JSONSchemaValidatorAfc81Cd1E25C50319F75606B97C23B3D(object):
                 "type": "string"
                 },
                 "modelledContent": {
-                "type": "object"
                 },
                 "name": {
                 "type": "string"

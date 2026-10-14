@@ -33,6 +33,7 @@ from builtins import *
 
 import fastjsonschema
 from ciscoisesdk.exceptions import MalformedRequest
+from ciscoisesdk.utils import mask_sensitive_data
 
 from .validators.v3_1_0.jsd_f2fcf04554db9ea4cdc3a7024322 import (
     JSONSchemaValidatorF2FcF04554Db9Ea4Cdc3A7024322 as JSONSchemaValidatorF2FcF04554Db9Ea4Cdc3A7024322_v3_1_0
@@ -4453,6 +4454,21 @@ class JSONSchemaValidator(object):
             ))
 
 
+class MaskedSchemaValidator(object):
+    """Validates a request and masks secret values in the error message."""
+
+    def __init__(self, validator):
+        self._validator = validator._validator
+
+    def validate(self, request):
+        try:
+            self._validator(request)
+        except fastjsonschema.exceptions.JsonSchemaException as e:
+            raise MalformedRequest('{} is invalid. Reason: {}'.format(
+                mask_sensitive_data(request), e.message
+            ))
+
+
 class SchemaValidator:
     def __init__(self, version):
         self.json_schema_validators = {}
@@ -7413,4 +7429,6 @@ class SchemaValidator:
         Raises:
             MalformedRequest.
         """
-        return self.json_schema_validators.get(model, JSONSchemaValidator())
+        return MaskedSchemaValidator(
+            self.json_schema_validators.get(model, JSONSchemaValidator())
+        )
